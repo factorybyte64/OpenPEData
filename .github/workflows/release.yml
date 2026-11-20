@@ -1,0 +1,118 @@
+# Builds the Velopack setup with ui/scripts/Pack-OpenPEData.ps1 and attaches it to the GitHub release of the tag.
+#
+# Trigger: pushing a tag vX.Y.Z (X.Y.Z must equal <Version> in ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj), or
+# running the workflow by hand for an existing tag. The full CI (ci.yml) runs first; the setup is only built when all
+# tests pass. The release is created if it does not exist yet; an existing setup of the same name is replaced.
+#
+# Code signing: if the repository secret OPENPEDATA_SIGN_PARAMS is set, it is passed to the pack script (signtool
+# arguments, see the script). The certificate itself must then be available to signtool on the runner, which this
+# workflow does not set up; without the secret the setup is unsigned.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to build the setup for (e.g. v0.1.1)'
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+    with:
+      ref: ${{ inputs.tag || github.ref }}
+
+  setup:
+    name: Build setup and publish release
+    needs: tests
+    runs-on: windows-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      DOTNET_NOLOGO: 'true'
+      DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          fetch-depth: 1
+          # the setup needs no samples: skip the ~590 MB
+          sparse-checkout: |
+            /*
+            !/samples/
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+          restore-keys: nuget-${{ runner.os }}-
+
+      - name: Check tag against the viewer version
+        id: version
+        shell: pwsh
+        run: |
+          if ($env:TAG -notmatch '^v(\d+\.\d+\.\d+)$') {
+              throw "Tag '$env:TAG' does not have the form vX.Y.Z"
+          }
+          $tagVersion = $Matches[1]
+          [xml]$proj = Get-Content -LiteralPath ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj
+          $projVersion = ($proj.Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1).Trim()
+          if ($tagVersion -ne $projVersion) {
+              throw "Tag $env:TAG does not match <Version>$projVersion</Version> in OpenPEData.Viewer.csproj"
+          }
+          "version=$tagVersion" >> $env:GITHUB_OUTPUT
+
+      - name: Put .NET global tools on PATH
+        shell: pwsh
+        run: Join-Path $env:USERPROFILE '.dotnet\tools' >> $env:GITHUB_PATH
+
+      - name: Build setup
+        shell: pwsh
+        env:
+          OPENPEDATA_SIGN_PARAMS: ${{ secrets.OPENPEDATA_SIGN_PARAMS }}
+        run: ./ui/scripts/Pack-OpenPEData.ps1 -Configuration Release -Version '${{ steps.version.outputs.version }}'
+
+      - name: Publish release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $label = 'V' + ('${{ steps.version.outputs.version }}' -replace '\.', '-')
+          $setup = "ui/artifacts/Releases/OpenPEData-Setup-$label.exe"
+          if (-not (Test-Path -LiteralPath $setup)) {
+              throw "Setup not found: $setup"
+          }
+          gh release view $env:TAG --repo $env:GITHUB_REPOSITORY *> $null
+          if ($LASTEXITCODE -eq 0) {
+              gh release upload $env:TAG $setup --clobber --repo $env:GITHUB_REPOSITORY
+          }
+          else {
+              gh release create $env:TAG $setup --verify-tag --title "OpenPEData $env:TAG" --generate-notes --repo $env:GITHUB_REPOSITORY
+          }
+          if ($LASTEXITCODE -ne 0) {
+              throw "gh release failed with exit code $LASTEXITCODE"
+          }
+
+      - name: Upload setup as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OpenPEData-Setup-${{ env.TAG }}
+          path: ui/artifacts/Releases/OpenPEData-Setup-*.exe

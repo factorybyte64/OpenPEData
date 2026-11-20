@@ -1,0 +1,109 @@
+# Build and all tests on every push and pull request; also called by release.yml before a setup is built.
+#
+# - dotnet: Release build of the parser solution and the viewer, the .NET test program (dotnet/tests/OpenPEData.Tests)
+#   and the viewer tests (ui/OpenPEData.Viewer.Tests). Windows only: the viewer is WPF and the test program starts
+#   OpenPEData.Cli.exe as a process.
+# - python: the eight Python truth tests in parser/tests (test and analysis only, see parser/README.md).
+#
+# The samples (~590 MB) are part of the repository and needed by both jobs. A shallow checkout (depth 1) is the
+# fastest way to get them: an actions/cache entry of the same size would download as long as the checkout itself.
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: 'Git ref to test (default: the ref of the calling run)'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ inputs.ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_NOLOGO: 'true'
+  DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 'true'
+
+jobs:
+  dotnet:
+    name: .NET build and tests
+    # a pull request from a branch of this repository is already tested by its push run
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 1
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+          restore-keys: nuget-${{ runner.os }}-
+
+      - name: Build parser solution
+        run: dotnet build dotnet/OpenPEData.sln -c Release
+
+      - name: Build viewer
+        run: dotnet build ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj -c Release -p:PackSetup=false
+
+      - name: .NET test program
+        run: dotnet/tests/OpenPEData.Tests/bin/Release/net10.0/OpenPEData.Tests.exe
+
+      - name: Viewer tests
+        run: dotnet run --project ui/OpenPEData.Viewer.Tests -c Release
+
+  python:
+    name: Python truth tests
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Truth tests
+        shell: bash
+        run: |
+          status=0
+          for t in units proginfo plc hardware hmi faceplates library samples; do
+            echo "::group::test_$t.py"
+            if python -I "parser/tests/test_$t.py"; then
+              echo "::endgroup::"
+            else
+              echo "::endgroup::"
+              echo "::error::parser/tests/test_$t.py failed"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Upload result tables
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-truth-results
+          path: parser/tests/RESULTS*.md
+          if-no-files-found: ignore
