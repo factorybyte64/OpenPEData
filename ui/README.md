@@ -90,6 +90,16 @@ tree, the tabs and the content of the selected tab as text and exits the program
 `--snapshot` saves the window as PNG; this only works in a connected Windows session.
 `OPENPEDATA_SOFTWARE_RENDER=1` forces software rendering.
 
+## Tests
+
+```
+dotnet run --project ui\OpenPEData.Viewer.Tests -c Release
+```
+
+`OpenPEData.Viewer.Tests` checks the viewer's drawing logic without a window (template expressions such as
+`Converter.Darker`, in the editor and in the runtime mode); exit code 0 means all checks passed. The parser tests are
+in `dotnet\tests\OpenPEData.Tests` (see `dotnet\README.md`).
+
 ## Installer (Velopack)
 
 Structure as for the TIA MCP server: `OpenPEData.Viewer` with `VelopackApp.Build().Run()` in `Program.cs`, `vpk pack`

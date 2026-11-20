@@ -194,10 +194,10 @@ public static class TemplateExpr
                     var v = (c >> sh) & 255;
                     return (uint)Math.Round(name.EndsWith("Darker") ? v * (1 - f) : v + (255 - v) * f);
                 }
-                // the runtime keeps the alpha (both gradient stops transparent); the TIA screen editor shows the
-                // result opaque
-                var alpha = ScreenRenderer.RuntimeVisibility ? c & 0xFF000000u : 0xFF000000u;
-                return (double)(alpha | (Ch(16) << 16) | (Ch(8) << 8) | Ch(0));
+                // the alpha is kept, in the runtime and in the TIA screen editor alike: a button with BackColor
+                // 0x00F2F4FF is fully transparent (both gradient stops), one with 0x80F2F4FF half transparent
+                // (TIA V21 screen editor, 2026-11-20, docs\spec\hmi-rendering.md)
+                return (double)((c & 0xFF000000u) | (Ch(16) << 16) | (Ch(8) << 8) | Ch(0));
             }
             case "Converter.Max": return a.Count == 0 ? 0.0 : a.Max(Num);
             case "Converter.Min": return a.Count == 0 ? 0.0 : a.Min(Num);
