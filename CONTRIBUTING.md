@@ -28,3 +28,16 @@ object names of a German project language, or umlaut test data) stay as they are
 ## License
 
 By contributing you agree that your contribution is licensed under the Mozilla Public License 2.0 (`LICENSE`).
+
+## Continuous integration
+
+GitHub Actions (`.github/workflows/`):
+
+- `ci.yml` runs on every push and on pull requests from forks: Release build of `dotnet/OpenPEData.sln` and the viewer,
+  the .NET test program, the viewer tests (Windows runner) and the eight Python truth tests in `parser/tests` (Linux
+  runner). All of them must pass.
+- `release.yml` runs when a tag `vX.Y.Z` is pushed (X.Y.Z equal to `<Version>` in
+  `ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj`), or by hand for an existing tag. It runs the full CI first, then
+  builds the setup with `ui/scripts/Pack-OpenPEData.ps1` and attaches `OpenPEData-Setup-V*.exe` to the GitHub release
+  of the tag (created if missing). The setup is unsigned unless the secret `OPENPEDATA_SIGN_PARAMS` is set and the
+  certificate is available on the runner.
