@@ -20,8 +20,21 @@ internal static class ProjectFiles
 {
     static ProjectFiles() => Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-    /// <summary>Entry names as Python's zipfile decodes them (cp437 unless the UTF-8 flag is set).</summary>
-    public static ZipArchive OpenZip(string path) => new(File.OpenRead(path), ZipArchiveMode.Read, false, Encoding.GetEncoding(437));
+    /// <summary>Entry names as Python's zipfile decodes them (cp437 unless the UTF-8 flag is set). If the file is no
+    /// zip archive, the file stream is closed before the exception leaves (ZipArchive does not close it then).</summary>
+    public static ZipArchive OpenZip(string path)
+    {
+        var stream = File.OpenRead(path);
+        try
+        {
+            return new ZipArchive(stream, ZipArchiveMode.Read, false, Encoding.GetEncoding(437));
+        }
+        catch
+        {
+            stream.Dispose();
+            throw;
+        }
+    }
 
     /// <summary>The bytes of an entry; more than ReadLimits.MaxEntryBytes (stated or actual size) is InvalidDataException.</summary>
     public static byte[] ReadEntry(ZipArchiveEntry e)
