@@ -1,0 +1,36 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex058"
+    VAR_INPUT
+        v_req : Bool;
+        v_laddr : HW_IO;
+        v_recnum : Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_busy : Bool;
+    END_VAR
+    VAR_IN_OUT
+        v_record : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            RD_REC(
+                REQ := #v_req,
+                LADDR := #v_laddr,
+                RECNUM := #v_recnum,
+                RET_VAL => #v_ret_val,
+                BUSY => #v_busy,
+                RECORD => #v_record
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

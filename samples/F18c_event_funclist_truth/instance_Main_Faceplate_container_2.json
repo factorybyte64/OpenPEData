@@ -1,0 +1,17 @@
+{
+ "Name": "Faceplate container_2",
+ "ContainedType": "V0.0.7\\FP_Interface",
+ "Left": 19,
+ "Top": 187,
+ "Width": 360,
+ "Height": 260,
+ "events": [
+  {
+   "eventType": "None",
+   "Async": true,
+   "GlobalDefinitionAreaScriptCode": "// [FunctionListModule]\r\n",
+   "ScriptCode": "\r\nHMIRuntime.Tags.SysFct.SetTagValue(\"HmiTag_Ext1\", 1);\r\n\r\nHMIRuntime.UI.SysFct.ChangeScreen(\"FP_Basic\", \".\");\r\n"
+  }
+ ],
+ "source": "TiaHmiUnified(itemGet, screen Main, detail full) on a retrieved copy of F18c_event_funclist.zap21 (<temp>/OpenPEData_F18c), own TIA instance, 2026-10-31; excerpt of the Openness result"
+}

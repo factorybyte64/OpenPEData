@@ -1,0 +1,12 @@
+TYPE "UDT_Inner" : STRUCT
+    Temp : Real := 21.5;
+    { S7_Access := "ReadOnly := External" }
+    Input : Bool;
+    { S7_Setpoint := "True" }
+    Static : Int := 3;
+    { S7_Visibility := "Hidden := External" }
+    Return : DInt;
+    { S7_Visibility := "Unlisted := External" }
+    Arr : Array[1..3] of Int;
+END_STRUCT;
+END_TYPE

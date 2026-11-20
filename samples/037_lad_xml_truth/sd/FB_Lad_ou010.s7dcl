@@ -1,0 +1,41 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ou010"
+    VAR_INPUT
+        v_req : Bool;
+        v_id : CONN_OUC;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_connect : TCON_Param;
+    END_VAR
+    VAR
+        inst : TCON;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.TCON(
+                REQ := #v_req,
+                ID := #v_id,
+                DONE => #v_done,
+                BUSY => #v_busy,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                CONNECT := #v_connect
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

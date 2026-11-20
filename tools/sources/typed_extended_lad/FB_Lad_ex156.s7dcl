@@ -1,0 +1,25 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex156"
+    VAR_INPUT
+        v_laddr : HW_IO;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_piaddr : UDInt;
+        v_picount : UInt;
+        v_pqaddr : UDInt;
+        v_pqcount : UInt;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Rd_Addr( LADDR := #v_laddr, RET_VAL := #v_ret_val, PIADDR => #v_piaddr, PICOUNT => #v_picount, PQADDR => #v_pqaddr, PQCOUNT => #v_pqcount )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

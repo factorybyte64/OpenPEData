@@ -1,0 +1,67 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclMath" : Void
+    VAR_TEMP
+        "i" : Int;
+        j : Int;
+        "d" : DInt;
+        r : Real;
+        r2 : Real;
+        lr : LReal;
+        "b" : Bool;
+        "w" : Word;
+        dw : DWord;
+        "by" : Byte;
+        "t" : Time;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #r := ABS(#r2);
+        #r := SQRT(#r2);
+        #r := SQR(#r2);
+        #r := LN(#r2);
+        #r := EXP(#r2);
+        #r := SIN(#r2);
+        #r := COS(#r2);
+        #r := TAN(#r2);
+        #r := ASIN(#r2);
+        #r := ACOS(#r2);
+        #r := ATAN(#r2);
+        #i := ABS(#j);
+        #i := MIN(IN1 := #i, IN2 := #j);
+        #i := MAX(IN1 := #i, IN2 := #j);
+        #i := LIMIT(MN := 0, IN := #i, MX := 100);
+        #i := MIN(IN1 := #i, IN2 := #j, IN3 := 5);
+        #i := MAX(IN1 := #i, IN2 := #j, IN3 := 5);
+        #i := SEL(G := #b, IN0 := #i, IN1 := #j);
+        #i := MUX(K := #j, IN0 := 1, IN1 := 2, IN2 := 3);
+        #r := INT_TO_REAL(#i);
+        #i := REAL_TO_INT(#r);
+        #d := REAL_TO_DINT(#r);
+        #i := DINT_TO_INT(#d);
+        #d := INT_TO_DINT(#i);
+        #d := TRUNC(#r);
+        #d := ROUND(#r);
+        #d := CEIL(#r);
+        #d := FLOOR(#r);
+        #r := DINT_TO_REAL(#d);
+        #w := INT_TO_WORD(#i);
+        #i := WORD_TO_INT(#w);
+        #dw := SHL(IN := #dw, N := 2);
+        #dw := SHR(IN := #dw, N := 2);
+        #dw := ROL(IN := #dw, N := 1);
+        #dw := ROR(IN := #dw, N := 1);
+        #w := SHL(IN := #w, N := 1);
+        #by := BYTE#16#01;
+        #t := INT_TO_TIME(#i);
+        #r := NORM_X(MIN := 0, VALUE := #i, MAX := 27648);
+        #i := SCALE_X(MIN := 0, VALUE := #r, MAX := 27648);
+        #d := DWORD_TO_DINT(#dw);
+        #dw := DINT_TO_DWORD(#d);
+        #r := FRAC(#r2);
+    END_NETWORK
+END_FUNCTION

@@ -1,0 +1,21 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl039"
+    VAR_INPUT
+        v_src_array : Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Byte;
+    END_VAR
+    VAR_IN_OUT
+        v_dest_variable : Variant;
+        v_pos : DInt;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := Deserialize(SRC_ARRAY := #v_src_array, DEST_VARIABLE := #v_dest_variable, POS := #v_pos);
+    END_NETWORK
+END_FUNCTION_BLOCK

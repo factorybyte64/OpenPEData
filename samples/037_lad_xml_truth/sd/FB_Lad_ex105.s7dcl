@@ -1,0 +1,32 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex105"
+    VAR_INPUT
+        v_ob_nr : OB_TOD;
+        v_sdt : DTL;
+        v_local : Bool;
+        v_period : Word;
+        v_activate : Bool;
+        v_ret_val : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            SET_TINTL(
+                OB_NR := #v_ob_nr,
+                SDT := #v_sdt,
+                LOCAL := #v_local,
+                PERIOD := #v_period,
+                ACTIVATE := #v_activate,
+                RET_VAL => #v_ret_val
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

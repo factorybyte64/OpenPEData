@@ -1,0 +1,25 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex034"
+    VAR_INPUT
+        v_in1 : Int;
+        v_in2 : Int;
+        v_l : Byte;
+        v_p : Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Int;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "str_type := Int" }
+            Replace( IN1 := #v_in1, IN2 := #v_in2, L := #v_l, P := #v_p, OUT => #v_out )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

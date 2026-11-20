@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document><Engineering version="V21"/>
+<SW.Blocks.FB ID="0"><AttributeList>
+<Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+<Section Name="Input"><Member Name="OFF_SQ" Datatype="Bool"/><Member Name="INIT_SQ" Datatype="Bool"/><Member Name="ACK_EF" Datatype="Bool"/><Member Name="go" Datatype="Bool"/><Member Name="a" Datatype="Bool"/><Member Name="b" Datatype="Bool"/><Member Name="sv" Datatype="Bool"/></Section>
+<Section Name="Output"><Member Name="q1" Datatype="Bool"/><Member Name="q2" Datatype="Bool"/><Member Name="q3" Datatype="Bool"/></Section>
+<Section Name="InOut"/><Section Name="Static"/><Section Name="Temp"/><Section Name="Constant"/></Sections></Interface>
+<Name>FB_Graph</Name><Namespace /><Number>74</Number><ProgrammingLanguage>GRAPH</ProgrammingLanguage>
+</AttributeList><ObjectList>
+<SW.Blocks.CompileUnit ID="1" CompositionName="CompileUnits"><AttributeList><NetworkSource><Graph xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/Graph/v6"><PreOperations/><Sequence><Title/><Comment/>
+<Steps><Step Number="1" Init="true" Name="Step1" MaximumStepTime="T#10S" WarningTime="T#7S">
+<Actions><Title/></Actions>
+<Supervisions><Supervision ProgrammingLanguage="LAD"><FlgNet><Parts><Access Scope="LocalVariable" UId="21"><Symbol><Component Name="sv"/></Symbol></Access><Part Name="Contact" UId="22"/><Part Name="SvCoil" UId="23"/></Parts><Wires><Wire UId="24"><Powerrail/><NameCon UId="22" Name="in"/></Wire><Wire UId="25"><IdentCon UId="21"/><NameCon UId="22" Name="operand"/></Wire><Wire UId="26"><NameCon UId="22" Name="out"/><NameCon UId="23" Name="in"/></Wire></Wires></FlgNet></Supervision></Supervisions><Interlocks><Interlock ProgrammingLanguage="LAD"><FlgNet><Parts><Part Name="IlCoil" UId="21"/></Parts><Wires><Wire UId="22"><Powerrail/><NameCon UId="21" Name="in"/></Wire></Wires></FlgNet></Interlock></Interlocks></Step><Step Number="2" Init="false" Name="Step2" MaximumStepTime="T#10S" WarningTime="T#7S">
+<Actions><Title/></Actions>
+<Supervisions><Supervision ProgrammingLanguage="LAD"><FlgNet><Parts><Access Scope="LocalVariable" UId="21"><Symbol><Component Name="sv"/></Symbol></Access><Part Name="Contact" UId="22"/><Part Name="SvCoil" UId="23"/></Parts><Wires><Wire UId="24"><Powerrail/><NameCon UId="22" Name="in"/></Wire><Wire UId="25"><IdentCon UId="21"/><NameCon UId="22" Name="operand"/></Wire><Wire UId="26"><NameCon UId="22" Name="out"/><NameCon UId="23" Name="in"/></Wire></Wires></FlgNet></Supervision></Supervisions><Interlocks><Interlock ProgrammingLanguage="LAD"><FlgNet><Parts><Part Name="IlCoil" UId="21"/></Parts><Wires><Wire UId="22"><Powerrail/><NameCon UId="21" Name="in"/></Wire></Wires></FlgNet></Interlock></Interlocks></Step><Step Number="3" Init="false" Name="Step3" MaximumStepTime="T#10S" WarningTime="T#7S">
+<Actions><Title/></Actions>
+<Supervisions><Supervision ProgrammingLanguage="LAD"><FlgNet><Parts><Access Scope="LocalVariable" UId="21"><Symbol><Component Name="sv"/></Symbol></Access><Part Name="Contact" UId="22"/><Part Name="SvCoil" UId="23"/></Parts><Wires><Wire UId="24"><Powerrail/><NameCon UId="22" Name="in"/></Wire><Wire UId="25"><IdentCon UId="21"/><NameCon UId="22" Name="operand"/></Wire><Wire UId="26"><NameCon UId="22" Name="out"/><NameCon UId="23" Name="in"/></Wire></Wires></FlgNet></Supervision></Supervisions><Interlocks><Interlock ProgrammingLanguage="LAD"><FlgNet><Parts><Part Name="IlCoil" UId="21"/></Parts><Wires><Wire UId="22"><Powerrail/><NameCon UId="21" Name="in"/></Wire></Wires></FlgNet></Interlock></Interlocks></Step></Steps>
+<Transitions><Transition IsMissing="false" Name="T1" Number="1" ProgrammingLanguage="LAD">
+<FlgNet><Parts>
+<Access Scope="LocalVariable" UId="21"><Symbol><Component Name="go"/></Symbol></Access>
+<Part Name="Contact" UId="22"/><Part Name="TrCoil" UId="23"/></Parts>
+<Wires><Wire UId="24"><Powerrail/><NameCon UId="22" Name="in"/></Wire>
+<Wire UId="25"><IdentCon UId="21"/><NameCon UId="22" Name="operand"/></Wire>
+<Wire UId="26"><NameCon UId="22" Name="out"/><NameCon UId="23" Name="in"/></Wire></Wires></FlgNet></Transition><Transition IsMissing="false" Name="T2" Number="2" ProgrammingLanguage="LAD">
+<FlgNet><Parts>
+<Access Scope="LocalVariable" UId="21"><Symbol><Component Name="a"/></Symbol></Access>
+<Part Name="Contact" UId="22"/><Part Name="TrCoil" UId="23"/></Parts>
+<Wires><Wire UId="24"><Powerrail/><NameCon UId="22" Name="in"/></Wire>
+<Wire UId="25"><IdentCon UId="21"/><NameCon UId="22" Name="operand"/></Wire>
+<Wire UId="26"><NameCon UId="22" Name="out"/><NameCon UId="23" Name="in"/></Wire></Wires></FlgNet></Transition><Transition IsMissing="false" Name="T3" Number="3" ProgrammingLanguage="LAD">
+<FlgNet><Parts>
+<Access Scope="LocalVariable" UId="21"><Symbol><Component Name="b"/></Symbol></Access>
+<Part Name="Contact" UId="22"/><Part Name="TrCoil" UId="23"/></Parts>
+<Wires><Wire UId="24"><Powerrail/><NameCon UId="22" Name="in"/></Wire>
+<Wire UId="25"><IdentCon UId="21"/><NameCon UId="22" Name="operand"/></Wire>
+<Wire UId="26"><NameCon UId="22" Name="out"/><NameCon UId="23" Name="in"/></Wire></Wires></FlgNet></Transition></Transitions>
+<Branches/><Connections><Connection><NodeFrom><StepRef Number="1"/></NodeFrom><NodeTo><TransitionRef Number="1"/></NodeTo><LinkType>Direct</LinkType></Connection><Connection><NodeFrom><TransitionRef Number="1"/></NodeFrom><NodeTo><StepRef Number="2"/></NodeTo><LinkType>Direct</LinkType></Connection><Connection><NodeFrom><StepRef Number="2"/></NodeFrom><NodeTo><TransitionRef Number="2"/></NodeTo><LinkType>Direct</LinkType></Connection><Connection><NodeFrom><TransitionRef Number="2"/></NodeFrom><NodeTo><StepRef Number="3"/></NodeTo><LinkType>Direct</LinkType></Connection><Connection><NodeFrom><StepRef Number="3"/></NodeFrom><NodeTo><TransitionRef Number="3"/></NodeTo><LinkType>Direct</LinkType></Connection><Connection><NodeFrom><TransitionRef Number="3"/></NodeFrom><NodeTo><StepRef Number="1"/></NodeTo><LinkType>Jump</LinkType></Connection></Connections></Sequence><PostOperations/>
+<AlarmsSettings><AlarmSupervisionCategories/><AlarmInterlockCategory Id="1"/><AlarmSubcategory1Interlock Id="0"/><AlarmSubcategory2Interlock Id="0"/><AlarmCategorySupervision Id="1"/><AlarmSubcategory1Supervision Id="0"/><AlarmSubcategory2Supervision Id="0"/><AlarmWarningCategory Id="2"/><AlarmSubcategory1Warning Id="0"/><AlarmSubcategory2Warning Id="0"/></AlarmsSettings></Graph></NetworkSource><ProgrammingLanguage>GRAPH</ProgrammingLanguage></AttributeList></SW.Blocks.CompileUnit>
+</ObjectList></SW.Blocks.FB></Document>

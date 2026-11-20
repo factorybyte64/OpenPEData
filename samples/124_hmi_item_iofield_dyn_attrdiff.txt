@@ -1,0 +1,39 @@
+A: 120_hmi_item_iofield  B: 124_hmi_item_iofield_dyn
+CHANGED 1003:00cd:2018 ILScreenItemData name='IOField_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:19:04.398102Z' -> '2026-10-20T16:20:42.678033Z'  (timestamp)
+          ITextAttributes.#2147483669: '<absent>' -> bytes[113] 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+          raw ITextAttributes: 0 -> 356 bytes
+          raw IEventExpandoAttributes: 0 -> 74 bytes
+          raw IPropertyDynamicExpandoAttributes: 60 -> 182 bytes
+          raw <links 1>: 0 -> 52 bytes
+          +link ExpandoReferences -> 1008:00e5:1c12
+          slot table [104, 0, 0, 0, 0, 0, 0, 0, 289, 349, 0, 0, 0, 205, 0] -> [104, 0, 0, 0, 0, 607, 1015, 0, 289, 471, 0, 0, 0, 205, 963]
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1008:00e5:1c12 HmiTagData name='HmiTag_IO'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:18:26.725152Z' -> '2026-10-20T16:20:42.678033Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link ExpandoReferencesInverse -> 1003:00cd:2018
+          slot table [0, 0, 148, 0, 244, 0, 342, 0, 0, 0, 0, 0, 0, 0, 0, 429, 0, 0, 0, 437, 0, 0, 0, 466, 561, 0] -> [0, 0, 148, 0, 244, 0, 342, 0, 0, 0, 0, 0, 0, 0, 0, 429, 0, 0, 0, 437, 0, 0, 0, 466, 561, 661]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:19:10.239252Z' -> '2026-10-20T16:20:47.874112Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:2400, 0014:0007:2420, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 120_hmi_item_iofield vs. 124_hmi_item_iofield_dyn (SHA-256, first 12)
+  GONE   IM/SearchIndex/_14_1.del  e5311eaf8b45 -> -
+  NEW    IM/SearchIndex/_14_3.del  - -> 4135129186d0
+  NEW    IM/SearchIndex/_16_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_17.cfs  - -> 8feca3082e40
+  NEW    IM/SearchIndex/_17_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_18.cfs  - -> b180c965cce5
+  NEW    IM/SearchIndex/_18_1.del  - -> 2b3a4f1e79b6
+  NEW    IM/SearchIndex/_19.cfs  - -> ee506ed8ca9c
+  NEW    IM/SearchIndex/_1a.cfs  - -> b423c70c568d
+  NEW    IM/SearchIndex/_1a_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_1b.cfs  - -> 3473ba81743d
+  CHG    IM/SearchIndex/segments.gen  da357178ce66 -> 347c5ad6d1c8
+  GONE   IM/SearchIndex/segments_s  daf3eb43efdc -> -
+  NEW    IM/SearchIndex/segments_x  - -> d1238b5305d3
+  CHG    System/PEData.idx  2a8b38ff3d82 -> 8c5be0b98516
+  CHG    XRef/XRef.db  f07f63f1c950 -> 54a19e42a5c3
+  name 'HmiTag_IO' found in: System/PEData.plf (utf-8 x2)

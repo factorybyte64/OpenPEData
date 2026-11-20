@@ -1,0 +1,32 @@
+{
+    S7_Optimized := "TRUE"
+}
+DATA_BLOCK "DB_12Opt"
+    VAR
+        x : Bool;
+        i : Int;
+        d : DInt;
+        r : Real;
+        lr : LReal;
+        t : Time;
+        dtl : DTL;
+        s : String[10];
+        ws : WString;
+        a2 : Array[0..1, 0..2] of Int;
+        st : Struct
+            p : Word;
+            q : Array[1..3] of Byte;
+        END_STRUCT;
+        u : "UDT_12";
+        au : Array[0..1] of "UDT_12";
+        tm : IEC_TIMER;
+    END_VAR
+    VAR RETAIN
+        rr : UDInt;
+    END_VAR
+    i := 12;
+    s := 'S7-1200';
+    a2[1, 2] := 7;
+    u.b := 2.5;
+    au[1].a := 9;
+END_DATA_BLOCK

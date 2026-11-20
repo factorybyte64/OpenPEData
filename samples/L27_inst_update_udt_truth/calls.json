@@ -1,0 +1,3 @@
+﻿[{"call":"TiaPlcSoftware(documentWrite block, device=PLC_1, sourceFile=L27_inst_update_udt_truth\input\DB_Motor.s7dcl)","result":{"name":"DB_Motor","created":true,"compile":"Success"},"note":"global DB with tag motor : \"UDT_Motor\", so that updateProject does not remove the UDT as unused (cf. L22)"},
+ {"call":"TiaPlcSoftware(documentWrite block, device=PLC_2, sourceFile=...\DB_Motor.s7dcl)","result":{"name":"DB_Motor","created":true,"compile":"Success"},"afterwards":{"instancesList PLC_2 version 0.0.1":1}},
+ {"call":"TiaProjectLibrary(updateProject, typeNameList=UDT_Motor)","result":{"updated":true,"devices":["PLC_1","PLC_2"],"selectedTypes":1,"deleteUnusedVersions":"DoNotDelete","messages":[]}}]

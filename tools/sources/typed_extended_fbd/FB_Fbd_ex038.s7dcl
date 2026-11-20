@@ -1,0 +1,21 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex038"
+    VAR_INPUT
+        v_size : DInt;
+    END_VAR
+    VAR_OUTPUT
+        v_out : WString;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            GetInstanceName( SIZE := #v_size, OUT => #v_out )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,498 @@
+=== samples/L11_mc_fb_udt: 1 master copies, 19 tombstones
+MC 1016:0002:2848 'FB_Iface' guid=a9cc473ee5667949ac7c932d899d6ee7
+   ICoreAttributes.CreationTime = 2026-10-20T15:58:52.870164Z
+   ICoreAttributes.IsShell = False
+   ICoreAttributes.ModifiedTime = 2026-10-20T15:58:52.870164Z
+   ICoreAttributes.Version = 
+   ICoreAttributes.Author = factorybyte
+   ICoreAttributes.LastModifiedBy = factorybyte
+   ICoreAttributes.Name = FB_Iface
+   ICoreAttributes.Subtype = IECPL
+   ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+   ICoreLibMasterCopyAttributes.BinaryData = bytes[20] 0000000000000000000000000000100100000000
+   ICoreLibMasterCopyAttributes.CoreObjectData = bytes[33] 000000010000000c00000016000000010000000000ffffffff0000000000000000
+   ICoreLibMasterCopyAttributes.NonCoreObjectData = bytes[7] 00000000000000
+   ICoreLibObjectAttributes.IsSystemElement = False
+   ICoreLibObjectAttributes.State = Committed
+   ICoreLibObjectAttributes.OriginalLibrary = None
+   ICoreLibObjectAttributes.OriginalName = None
+   ICoreLibObjectAttributes.DetailHelp = 
+   ICoreLibObjectAttributes.ShortHelp = 
+   ICoreLibObjectAttributes.IconData = bytes[424] 00900100000000000000000000001001000000010100000089504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000000017352474200aece1ce90000000467414d410000
+   ICoreLibObjectAttributes.IconResource = bytes[15] 000000000000000000000000000000
+   CoreObjectData: {'len': 33, 'hex': '000000010000000c00000016000000010000000000ffffffff0000000000000000', 'u32be': [1, 12, 22, 1, 0, 16777215, 4278190080, 0]}
+   NonCoreObjectData: 00000000000000
+   SharedRawData: <?xml version="1.0" encoding="utf-16"?><SharedRawData><ClipboardHeader formatVersion="1.0.0.0" projectId="0425b00e-2872-48c2-a13d-d0adf7fcd1ab"><SourceScopePath><ObjectScope scopeTypeName="Persistence" scopeId="fstore://WIN11-FACTORYBYTE/C:\GitHub\factorybyte\OpenPEData\samples\L11_mc_fb_udt\System\PEData.plf" /><ObjectScope scopeTypeName="Project" scopeId="{135208-1075}" /><ObjectScope scopeTypeName="Target" scopeId="{1052700-2067}" /></SourceScopePath><TypeDescriptor roles="SelectedObject" typeName="Siemens.Simatic.Lang.Model.Blocks.CodeBlockData.FB" soc="1" eoc="0" poc="0" voc="0" /></ClipboardHeader><ClipboardData formatVersion="1.0.0.0"><SelectedIds>0</SelectedIds><ObjectResolvers><Resolver sid="Siemens.Automation.ObjectFrame.CoreObjectClipboardResolver" /></ObjectResolvers></ClipboardData></SharedRawData>
+   link AggregatingFolder      slot10 -> 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   link Environment            slot10 -> 1014:0002:443 LibraryData 'Project library'
+   link EditingCulture         slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link ReferenceCulture       slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link UsedCultures           slot11 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link Devices                slot11 -> 100e:0010:2849 DeviceData 'PLC_1'
+   link VisibleParts           slot11 -> 1001:0022:284a CodeBlockData 'FB_Iface'
+   link Categories             slot11 -> 1029:0022:2856 BlockCommentCategoryData 'BlockCommentCategoryData'
+   link RelatedPackage         slot11 -> 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming CultureIsUsedBy <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsEditingCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsReferenceCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming AggregatedElements <- 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   incoming RelatedObject <- 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming DataContainer <- 1029:0022:2856 BlockCommentCategoryData 'BlockCommentCategoryData'
+   incoming ParentProject <- 100e:0010:2849 DeviceData 'PLC_1'
+   incoming VisiblePartInverse <- 1001:0022:284a CodeBlockData 'FB_Iface'
+   copies (Environment -> MC): 27
+     1001:0022:284a CodeBlockData                    'FB_Iface'                               shell=False size=3194 orig=['1001:0022:2452']
+         IN  AggregatingFolder                        -> 100e:0002:284c FolderData 'ProgramBlocksFolder'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  VisiblePartInverse                       -> 1016:0002:2848 LibraryMasterCopyData 'FB_Iface'
+         IN  LoadableBinaries                         -> 1010:0022:284d LoadablePlusCodeBlockData None
+         IN  InterfaceComments                        -> 160d:0022:2855 InterfaceCommentsPartData None
+         IN  BelongsTo                                -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  CurrentInterface                         -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+         IN  Sources                                  -> 1016:0022:284f CompileUnitData None
+         IN  CoreObject2IdentContainer                -> 1202:0022:2851 IdentContainerData None
+         IN  CodeBlockExtensionDataBags               -> 1805:0022:2854 StandardCodeBlockDataBagData None
+     1003:0022:2861 UserTypeData                     'UDT_Motor'                              shell=False size=368 orig=['1003:0022:1018']
+         IN  TRefParent                               -> 100e:0002:2860 FolderData 'ControllerDataTypeFolder'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  BlockToVersionElements                   -> 160c:0022:285f InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     1007:0022:284e LoadableDependentData            None                                     shell=None size=828 orig=[]
+         IN  FromPLCToLoadablePlusCodeBlockData       -> 1010:0022:284d LoadablePlusCodeBlockData None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     100e:0002:284c FolderData                       'ProgramBlocksFolder'                    shell=False size=287 orig=['100e:0002:916']
+         IN  FolderParent                             -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  AggregatedElements                       -> 1001:0022:284a CodeBlockData 'FB_Iface'
+     100e:0002:2860 FolderData                       'ControllerDataTypeFolder'               shell=False size=289 orig=['100e:0002:919']
+         IN  TRefParent                               -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  TextualReferences                        -> 1003:0022:2861 UserTypeData 'UDT_Motor'
+     100e:0002:2863 FolderData                       'ProgramUnitsFolder'                     shell=False size=233 orig=['100e:0002:834']
+         IN  FolderParent                             -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     100e:0010:2849 DeviceData                       'PLC_1'                                  shell=True size=584 orig=['100e:0010:808']
+         IN  ParentProject                            -> 1016:0002:2848 LibraryMasterCopyData 'FB_Iface'
+         IN  DeviceItems                              -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     1010:0022:284d LoadablePlusCodeBlockData        None                                     shell=None size=2602 orig=[]
+         IN  Parent                                   -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  ToPLC                                    -> 1007:0022:284e LoadableDependentData None
+     1016:0022:284f CompileUnitData                  None                                     shell=False size=940 orig=[]
+         IN  Parent                                   -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  CompileUnitExtensionDataBags             -> 1803:0022:2850 StandardCompileUnitDataBagData None
+     1019:0001:2862 ResourceAllocatorData            None                                     shell=None size=495 orig=[]
+         IN  CoreTarget                               -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     101c:0010:284b S7ControllerTargetData           'PLC_1'                                  shell=False size=25950 orig=['101c:0010:813']
+         IN  Parent                                   -> 100e:0010:2849 DeviceData 'PLC_1'
+         IN  ControllerTargetData2BlockInterfaceContainer -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  ResourceAllocatorData                    -> 1019:0001:2862 ResourceAllocatorData None
+         IN  Folders                                  -> 100e:0002:284c FolderData 'ProgramBlocksFolder'
+         IN  SWObjectsBelongingToMe                   -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData_Inverse -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  TextualReferences                        -> 100e:0002:2860 FolderData 'ControllerDataTypeFolder'
+         IN  Folders                                  -> 100e:0002:2863 FolderData 'ProgramUnitsFolder'
+     1029:0022:2856 BlockCommentCategoryData         'BlockCommentCategoryData'               shell=False size=203 orig=['1029:0022:92b']
+         IN  DataContainer                            -> 1016:0002:2848 LibraryMasterCopyData 'FB_Iface'
+     1201:0022:2852 IdentPartData                    None                                     shell=None size=895 orig=[]
+         IN  IdentPartsInverse                        -> 1202:0022:2851 IdentContainerData None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     1201:0022:2853 IdentPartData                    None                                     shell=None size=744 orig=[]
+         IN  IdentPartsInverse                        -> 1202:0022:2851 IdentContainerData None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     1202:0022:2851 IdentContainerData               None                                     shell=None size=614 orig=[]
+         IN  IdentContainerInverse                    -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  IdentParts                               -> 1201:0022:2852 IdentPartData None
+         IN  IdentParts                               -> 1201:0022:2853 IdentPartData None
+     1607:0022:2857 TargetBlockInterfaceContainer    None                                     shell=None size=281 orig=[]
+         IN  Parent                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  InterfaceParts                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+         IN  InterfaceParts                           -> 160b:0022:2859 InterfacePartData 'BI:InputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#c54421af'
+         IN  InterfaceParts                           -> 160b:0022:285a InterfacePartData 'BI:OutputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#f2ffc193'
+         IN  InterfaceParts                           -> 160b:0022:285b InterfacePartData 'BI:InOutSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#937e7522'
+         IN  InterfaceParts                           -> 160b:0022:285c InterfacePartData 'BI:StaticSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#3df9b487'
+         IN  InterfaceParts                           -> 160b:0022:285d InterfacePartData 'BI:TempSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#a80af7c0'
+         IN  InterfaceParts                           -> 160b:0022:285e InterfacePartData 'BI:Values:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#10c6161'
+         IN  InterfaceParts                           -> 160c:0022:285f InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     160b:0022:2859 InterfacePartData                'BI:InputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#c54421af' shell=False size=927 orig=['160b:0022:2459']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:285a InterfacePartData                'BI:OutputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#f2ffc193' shell=False size=620 orig=['160b:0022:245a']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:285b InterfacePartData                'BI:InOutSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#937e7522' shell=False size=540 orig=['160b:0022:245b']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:285c InterfacePartData                'BI:StaticSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#3df9b487' shell=False size=661 orig=['160b:0022:245c']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:285d InterfacePartData                'BI:TempSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#a80af7c0' shell=False size=559 orig=['160b:0022:245d']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:285e InterfacePartData                'BI:Values:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#10c6161' shell=False size=521 orig=['160b:0022:2458']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160c:0022:2858 InterfaceVersionRootData         'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5' shell=False size=1559 orig=['160c:0022:2454']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  UsedByBlock                              -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  UsedParts                                -> 160b:0022:2859 InterfacePartData 'BI:InputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#c54421af'
+         IN  UsedParts                                -> 160b:0022:285a InterfacePartData 'BI:OutputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#f2ffc193'
+         IN  UsedParts                                -> 160b:0022:285b InterfacePartData 'BI:InOutSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#937e7522'
+         IN  UsedParts                                -> 160b:0022:285c InterfacePartData 'BI:StaticSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#3df9b487'
+         IN  UsedParts                                -> 160b:0022:285d InterfacePartData 'BI:TempSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#a80af7c0'
+         OUT UsedParts                                -> 0000:0000:0 ? None
+         IN  UsedParts                                -> 160b:0022:285e InterfacePartData 'BI:Values:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#10c6161'
+         IN  UsedParts                                -> 160c:0022:285f InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     160c:0022:285f InterfaceVersionRootData         '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c' shell=False size=1191 orig=['160c:0022:101a']
+         IN  Parent                                   -> 1607:0022:2857 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+         IN  VersionElementToBlock                    -> 1003:0022:2861 UserTypeData 'UDT_Motor'
+         IN  UsedByVersions                           -> 160c:0022:2858 InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160d:0022:2855 InterfaceCommentsPartData        None                                     shell=None size=1140 orig=[]
+         IN  InverseInterfaceComments                 -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     1803:0022:2850 StandardCompileUnitDataBagData   None                                     shell=None size=1231 orig=[]
+         IN  Parent                                   -> 1016:0022:284f CompileUnitData None
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+     1805:0022:2854 StandardCodeBlockDataBagData     None                                     shell=None size=723 orig=[]
+         IN  Parent                                   -> 1001:0022:284a CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:284b S7ControllerTargetData 'PLC_1'
+=== samples/L12_mc_two: 2 master copies, 20 tombstones
+MC 1016:0002:2c50 'FC_Iface' guid=d11bf00e2bc1e548a3c39aef803929be
+   ICoreAttributes.CreationTime = 2026-10-20T15:59:11.157732Z
+   ICoreAttributes.IsShell = False
+   ICoreAttributes.ModifiedTime = 2026-10-20T15:59:11.157732Z
+   ICoreAttributes.Version = 
+   ICoreAttributes.Author = factorybyte
+   ICoreAttributes.LastModifiedBy = factorybyte
+   ICoreAttributes.Name = FC_Iface
+   ICoreAttributes.Subtype = IECPL
+   ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+   ICoreLibMasterCopyAttributes.BinaryData = bytes[20] 0000000000000000000000000000100100000000
+   ICoreLibMasterCopyAttributes.CoreObjectData = bytes[33] 000000010000000c00000016000000010000000000ffffffff0000000000000000
+   ICoreLibMasterCopyAttributes.NonCoreObjectData = bytes[7] 00000000000000
+   ICoreLibObjectAttributes.IsSystemElement = False
+   ICoreLibObjectAttributes.State = Committed
+   ICoreLibObjectAttributes.OriginalLibrary = None
+   ICoreLibObjectAttributes.OriginalName = None
+   ICoreLibObjectAttributes.DetailHelp = 
+   ICoreLibObjectAttributes.ShortHelp = 
+   ICoreLibObjectAttributes.IconData = bytes[391] 006f0100000000000000000000001001000000010100000089504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000000017352474200aece1ce90000000467414d410000
+   ICoreLibObjectAttributes.IconResource = bytes[15] 000000000000000000000000000000
+   CoreObjectData: {'len': 33, 'hex': '000000010000000c00000016000000010000000000ffffffff0000000000000000', 'u32be': [1, 12, 22, 1, 0, 16777215, 4278190080, 0]}
+   NonCoreObjectData: 00000000000000
+   SharedRawData: <?xml version="1.0" encoding="utf-16"?><SharedRawData><ClipboardHeader formatVersion="1.0.0.0" projectId="50065a7e-f696-4146-992c-89a4e0b70b46"><SourceScopePath><ObjectScope scopeTypeName="Persistence" scopeId="fstore://WIN11-FACTORYBYTE/C:\GitHub\factorybyte\OpenPEData\samples\L12_mc_two\System\PEData.plf" /><ObjectScope scopeTypeName="Project" scopeId="{135208-1075}" /><ObjectScope scopeTypeName="Target" scopeId="{1052700-2067}" /></SourceScopePath><TypeDescriptor roles="SelectedObject" typeName="Siemens.Simatic.Lang.Model.Blocks.CodeBlockData.FC" soc="1" eoc="0" poc="0" voc="0" /></ClipboardHeader><ClipboardData formatVersion="1.0.0.0"><SelectedIds>0</SelectedIds><ObjectResolvers><Resolver sid="Siemens.Automation.ObjectFrame.CoreObjectClipboardResolver" /></ObjectResolvers></ClipboardData></SharedRawData>
+   link AggregatingFolder      slot10 -> 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   link Environment            slot10 -> 1014:0002:443 LibraryData 'Project library'
+   link EditingCulture         slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link ReferenceCulture       slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link UsedCultures           slot11 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link Devices                slot11 -> 100e:0010:2c51 DeviceData 'PLC_1'
+   link VisibleParts           slot11 -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+   link Categories             slot11 -> 1029:0022:2c5e BlockCommentCategoryData 'BlockCommentCategoryData'
+   link RelatedPackage         slot11 -> 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming CultureIsUsedBy <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsEditingCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsReferenceCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming AggregatedElements <- 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   incoming RelatedObject <- 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming DataContainer <- 1029:0022:2c5e BlockCommentCategoryData 'BlockCommentCategoryData'
+   incoming ParentProject <- 100e:0010:2c51 DeviceData 'PLC_1'
+   incoming VisiblePartInverse <- 1001:0022:2c52 CodeBlockData 'FC_Iface'
+   copies (Environment -> MC): 25
+     1001:0022:2c52 CodeBlockData                    'FC_Iface'                               shell=False size=3181 orig=['1001:0022:2848']
+         IN  AggregatingFolder                        -> 100e:0002:2c54 FolderData 'ProgramBlocksFolder'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  VisiblePartInverse                       -> 1016:0002:2c50 LibraryMasterCopyData 'FC_Iface'
+         IN  LoadableBinaries                         -> 1010:0022:2c55 LoadablePlusCodeBlockData None
+         IN  InterfaceComments                        -> 160d:0022:2c5d InterfaceCommentsPartData None
+         IN  BelongsTo                                -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  CurrentInterface                         -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+         IN  Sources                                  -> 1016:0022:2c57 CompileUnitData None
+         IN  CoreObject2IdentContainer                -> 1202:0022:2c59 IdentContainerData None
+         IN  CodeBlockExtensionDataBags               -> 1805:0022:2c5c StandardCodeBlockDataBagData None
+     1003:0022:2c67 UserTypeData                     'UDT_Motor'                              shell=False size=368 orig=['1003:0022:1018']
+         IN  TRefParent                               -> 100e:0002:2c66 FolderData 'ControllerDataTypeFolder'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  BlockToVersionElements                   -> 160c:0022:2c65 InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     1007:0022:2c56 LoadableDependentData            None                                     shell=None size=813 orig=[]
+         IN  FromPLCToLoadablePlusCodeBlockData       -> 1010:0022:2c55 LoadablePlusCodeBlockData None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     100e:0002:2c54 FolderData                       'ProgramBlocksFolder'                    shell=False size=287 orig=['100e:0002:916']
+         IN  FolderParent                             -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  AggregatedElements                       -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+     100e:0002:2c66 FolderData                       'ControllerDataTypeFolder'               shell=False size=289 orig=['100e:0002:919']
+         IN  TRefParent                               -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  TextualReferences                        -> 1003:0022:2c67 UserTypeData 'UDT_Motor'
+     100e:0002:2c69 FolderData                       'ProgramUnitsFolder'                     shell=False size=233 orig=['100e:0002:834']
+         IN  FolderParent                             -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     100e:0010:2c51 DeviceData                       'PLC_1'                                  shell=True size=584 orig=['100e:0010:808']
+         IN  ParentProject                            -> 1016:0002:2c50 LibraryMasterCopyData 'FC_Iface'
+         IN  DeviceItems                              -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     1010:0022:2c55 LoadablePlusCodeBlockData        None                                     shell=None size=1362 orig=[]
+         IN  Parent                                   -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  ToPLC                                    -> 1007:0022:2c56 LoadableDependentData None
+     1016:0022:2c57 CompileUnitData                  None                                     shell=False size=993 orig=[]
+         IN  Parent                                   -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  CompileUnitExtensionDataBags             -> 1803:0022:2c58 StandardCompileUnitDataBagData None
+     1019:0001:2c68 ResourceAllocatorData            None                                     shell=None size=495 orig=[]
+         IN  CoreTarget                               -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     101c:0010:2c53 S7ControllerTargetData           'PLC_1'                                  shell=False size=25950 orig=['101c:0010:813']
+         IN  Parent                                   -> 100e:0010:2c51 DeviceData 'PLC_1'
+         IN  ControllerTargetData2BlockInterfaceContainer -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  ResourceAllocatorData                    -> 1019:0001:2c68 ResourceAllocatorData None
+         IN  Folders                                  -> 100e:0002:2c54 FolderData 'ProgramBlocksFolder'
+         IN  SWObjectsBelongingToMe                   -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData_Inverse -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  TextualReferences                        -> 100e:0002:2c66 FolderData 'ControllerDataTypeFolder'
+         IN  Folders                                  -> 100e:0002:2c69 FolderData 'ProgramUnitsFolder'
+     1029:0022:2c5e BlockCommentCategoryData         'BlockCommentCategoryData'               shell=False size=203 orig=['1029:0022:92b']
+         IN  DataContainer                            -> 1016:0002:2c50 LibraryMasterCopyData 'FC_Iface'
+     1201:0022:2c5a IdentPartData                    None                                     shell=None size=898 orig=[]
+         IN  IdentPartsInverse                        -> 1202:0022:2c59 IdentContainerData None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     1201:0022:2c5b IdentPartData                    None                                     shell=None size=744 orig=[]
+         IN  IdentPartsInverse                        -> 1202:0022:2c59 IdentContainerData None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     1202:0022:2c59 IdentContainerData               None                                     shell=None size=614 orig=[]
+         IN  IdentContainerInverse                    -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  IdentParts                               -> 1201:0022:2c5a IdentPartData None
+         IN  IdentParts                               -> 1201:0022:2c5b IdentPartData None
+     1607:0022:2c5f TargetBlockInterfaceContainer    None                                     shell=None size=249 orig=[]
+         IN  Parent                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  InterfaceParts                           -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+         IN  InterfaceParts                           -> 160b:0022:2c61 InterfacePartData 'BI:InputSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#7c35a549'
+         IN  InterfaceParts                           -> 160b:0022:2c62 InterfacePartData 'BI:OutputSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#317196ed'
+         IN  InterfaceParts                           -> 160b:0022:2c63 InterfacePartData 'BI:InOutSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#46efae91'
+         IN  InterfaceParts                           -> 160b:0022:2c64 InterfacePartData 'BI:TempSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#f514b256'
+         IN  InterfaceParts                           -> 160c:0022:2c65 InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     160b:0022:2c61 InterfacePartData                'BI:InputSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#7c35a549' shell=False size=894 orig=['160b:0022:284e']
+         IN  Parent                                   -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+     160b:0022:2c62 InterfacePartData                'BI:OutputSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#317196ed' shell=False size=604 orig=['160b:0022:284f']
+         IN  Parent                                   -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+     160b:0022:2c63 InterfacePartData                'BI:InOutSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#46efae91' shell=False size=532 orig=['160b:0022:2850']
+         IN  Parent                                   -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+     160b:0022:2c64 InterfacePartData                'BI:TempSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#f514b256' shell=False size=559 orig=['160b:0022:2851']
+         IN  Parent                                   -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+     160c:0022:2c60 InterfaceVersionRootData         'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e' shell=False size=1804 orig=['160c:0022:284a']
+         IN  Parent                                   -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  UsedByBlock                              -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  UsedParts                                -> 160b:0022:2c61 InterfacePartData 'BI:InputSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#7c35a549'
+         IN  UsedParts                                -> 160b:0022:2c62 InterfacePartData 'BI:OutputSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#317196ed'
+         IN  UsedParts                                -> 160b:0022:2c63 InterfacePartData 'BI:InOutSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#46efae91'
+         IN  UsedParts                                -> 160b:0022:2c64 InterfacePartData 'BI:TempSection:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e#f514b256'
+         OUT UsedParts                                -> 0000:0000:0 ? None
+         OUT UsedParts                                -> 0000:0000:0 ? None
+         IN  UsedParts                                -> 160c:0022:2c65 InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     160c:0022:2c65 InterfaceVersionRootData         '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c' shell=False size=1191 orig=['160c:0022:101a']
+         IN  Parent                                   -> 1607:0022:2c5f TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+         IN  VersionElementToBlock                    -> 1003:0022:2c67 UserTypeData 'UDT_Motor'
+         IN  UsedByVersions                           -> 160c:0022:2c60 InterfaceVersionRootData 'BIVE:FC_Iface/7fce039f-d362-4e31-89df-5ab51276600e'
+     160d:0022:2c5d InterfaceCommentsPartData        None                                     shell=None size=980 orig=[]
+         IN  InverseInterfaceComments                 -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     1803:0022:2c58 StandardCompileUnitDataBagData   None                                     shell=None size=1231 orig=[]
+         IN  Parent                                   -> 1016:0022:2c57 CompileUnitData None
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+     1805:0022:2c5c StandardCodeBlockDataBagData     None                                     shell=None size=684 orig=[]
+         IN  Parent                                   -> 1001:0022:2c52 CodeBlockData 'FC_Iface'
+         IN  Target                                   -> 101c:0010:2c53 S7ControllerTargetData 'PLC_1'
+MC 1016:0002:2c6a 'FB_Iface' guid=deb8dbc6a6f2864d850c3dc82ea47a5b
+   ICoreAttributes.CreationTime = 2026-10-20T15:59:11.670761Z
+   ICoreAttributes.IsShell = False
+   ICoreAttributes.ModifiedTime = 2026-10-20T15:59:11.670761Z
+   ICoreAttributes.Version = 
+   ICoreAttributes.Author = factorybyte
+   ICoreAttributes.LastModifiedBy = factorybyte
+   ICoreAttributes.Name = FB_Iface
+   ICoreAttributes.Subtype = IECPL
+   ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+   ICoreLibMasterCopyAttributes.BinaryData = bytes[20] 0000000000000000000000000000100100000000
+   ICoreLibMasterCopyAttributes.CoreObjectData = bytes[33] 000000010000000c00000016000000010000000000ffffffff0000000000000000
+   ICoreLibMasterCopyAttributes.NonCoreObjectData = bytes[7] 00000000000000
+   ICoreLibObjectAttributes.IsSystemElement = False
+   ICoreLibObjectAttributes.State = Committed
+   ICoreLibObjectAttributes.OriginalLibrary = None
+   ICoreLibObjectAttributes.OriginalName = None
+   ICoreLibObjectAttributes.DetailHelp = 
+   ICoreLibObjectAttributes.ShortHelp = 
+   ICoreLibObjectAttributes.IconData = bytes[424] 00900100000000000000000000001001000000010100000089504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000000017352474200aece1ce90000000467414d410000
+   ICoreLibObjectAttributes.IconResource = bytes[15] 000000000000000000000000000000
+   CoreObjectData: {'len': 33, 'hex': '000000010000000c00000016000000010000000000ffffffff0000000000000000', 'u32be': [1, 12, 22, 1, 0, 16777215, 4278190080, 0]}
+   NonCoreObjectData: 00000000000000
+   SharedRawData: <?xml version="1.0" encoding="utf-16"?><SharedRawData><ClipboardHeader formatVersion="1.0.0.0" projectId="50065a7e-f696-4146-992c-89a4e0b70b46"><SourceScopePath><ObjectScope scopeTypeName="Persistence" scopeId="fstore://WIN11-FACTORYBYTE/C:\GitHub\factorybyte\OpenPEData\samples\L12_mc_two\System\PEData.plf" /><ObjectScope scopeTypeName="Project" scopeId="{135208-1075}" /><ObjectScope scopeTypeName="Target" scopeId="{1052700-2067}" /></SourceScopePath><TypeDescriptor roles="SelectedObject" typeName="Siemens.Simatic.Lang.Model.Blocks.CodeBlockData.FB" soc="1" eoc="0" poc="0" voc="0" /></ClipboardHeader><ClipboardData formatVersion="1.0.0.0"><SelectedIds>0</SelectedIds><ObjectResolvers><Resolver sid="Siemens.Automation.ObjectFrame.CoreObjectClipboardResolver" /></ObjectResolvers></ClipboardData></SharedRawData>
+   link AggregatingFolder      slot10 -> 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   link Environment            slot10 -> 1014:0002:443 LibraryData 'Project library'
+   link EditingCulture         slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link ReferenceCulture       slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link UsedCultures           slot11 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link Devices                slot11 -> 100e:0010:2c6b DeviceData 'PLC_1'
+   link VisibleParts           slot11 -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+   link Categories             slot11 -> 1029:0022:2c78 BlockCommentCategoryData 'BlockCommentCategoryData'
+   link RelatedPackage         slot11 -> 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming CultureIsUsedBy <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsEditingCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsReferenceCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming AggregatedElements <- 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   incoming RelatedObject <- 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming DataContainer <- 1029:0022:2c78 BlockCommentCategoryData 'BlockCommentCategoryData'
+   incoming ParentProject <- 100e:0010:2c6b DeviceData 'PLC_1'
+   incoming VisiblePartInverse <- 1001:0022:2c6c CodeBlockData 'FB_Iface'
+   copies (Environment -> MC): 27
+     1001:0022:2c6c CodeBlockData                    'FB_Iface'                               shell=False size=3197 orig=['1001:0022:2452']
+         IN  AggregatingFolder                        -> 100e:0002:2c6e FolderData 'ProgramBlocksFolder'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  VisiblePartInverse                       -> 1016:0002:2c6a LibraryMasterCopyData 'FB_Iface'
+         IN  LoadableBinaries                         -> 1010:0022:2c6f LoadablePlusCodeBlockData None
+         IN  InterfaceComments                        -> 160d:0022:2c77 InterfaceCommentsPartData None
+         IN  BelongsTo                                -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  CurrentInterface                         -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+         IN  Sources                                  -> 1016:0022:2c71 CompileUnitData None
+         IN  CoreObject2IdentContainer                -> 1202:0022:2c73 IdentContainerData None
+         IN  CodeBlockExtensionDataBags               -> 1805:0022:2c76 StandardCodeBlockDataBagData None
+     1003:0022:2c83 UserTypeData                     'UDT_Motor'                              shell=False size=368 orig=['1003:0022:1018']
+         IN  TRefParent                               -> 100e:0002:2c82 FolderData 'ControllerDataTypeFolder'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  BlockToVersionElements                   -> 160c:0022:2c81 InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     1007:0022:2c70 LoadableDependentData            None                                     shell=None size=828 orig=[]
+         IN  FromPLCToLoadablePlusCodeBlockData       -> 1010:0022:2c6f LoadablePlusCodeBlockData None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     100e:0002:2c6e FolderData                       'ProgramBlocksFolder'                    shell=False size=287 orig=['100e:0002:916']
+         IN  FolderParent                             -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  AggregatedElements                       -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+     100e:0002:2c82 FolderData                       'ControllerDataTypeFolder'               shell=False size=289 orig=['100e:0002:919']
+         IN  TRefParent                               -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  TextualReferences                        -> 1003:0022:2c83 UserTypeData 'UDT_Motor'
+     100e:0002:2c85 FolderData                       'ProgramUnitsFolder'                     shell=False size=233 orig=['100e:0002:834']
+         IN  FolderParent                             -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     100e:0010:2c6b DeviceData                       'PLC_1'                                  shell=True size=584 orig=['100e:0010:808']
+         IN  ParentProject                            -> 1016:0002:2c6a LibraryMasterCopyData 'FB_Iface'
+         IN  DeviceItems                              -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     1010:0022:2c6f LoadablePlusCodeBlockData        None                                     shell=None size=2602 orig=[]
+         IN  Parent                                   -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  ToPLC                                    -> 1007:0022:2c70 LoadableDependentData None
+     1016:0022:2c71 CompileUnitData                  None                                     shell=False size=940 orig=[]
+         IN  Parent                                   -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  CompileUnitExtensionDataBags             -> 1803:0022:2c72 StandardCompileUnitDataBagData None
+     1019:0001:2c84 ResourceAllocatorData            None                                     shell=None size=495 orig=[]
+         IN  CoreTarget                               -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     101c:0010:2c6d S7ControllerTargetData           'PLC_1'                                  shell=False size=25950 orig=['101c:0010:813']
+         IN  Parent                                   -> 100e:0010:2c6b DeviceData 'PLC_1'
+         IN  ControllerTargetData2BlockInterfaceContainer -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  ResourceAllocatorData                    -> 1019:0001:2c84 ResourceAllocatorData None
+         IN  Folders                                  -> 100e:0002:2c6e FolderData 'ProgramBlocksFolder'
+         IN  SWObjectsBelongingToMe                   -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData_Inverse -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  TextualReferences                        -> 100e:0002:2c82 FolderData 'ControllerDataTypeFolder'
+         IN  Folders                                  -> 100e:0002:2c85 FolderData 'ProgramUnitsFolder'
+     1029:0022:2c78 BlockCommentCategoryData         'BlockCommentCategoryData'               shell=False size=203 orig=['1029:0022:92b']
+         IN  DataContainer                            -> 1016:0002:2c6a LibraryMasterCopyData 'FB_Iface'
+     1201:0022:2c74 IdentPartData                    None                                     shell=None size=895 orig=[]
+         IN  IdentPartsInverse                        -> 1202:0022:2c73 IdentContainerData None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     1201:0022:2c75 IdentPartData                    None                                     shell=None size=744 orig=[]
+         IN  IdentPartsInverse                        -> 1202:0022:2c73 IdentContainerData None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     1202:0022:2c73 IdentContainerData               None                                     shell=None size=614 orig=[]
+         IN  IdentContainerInverse                    -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  IdentParts                               -> 1201:0022:2c74 IdentPartData None
+         IN  IdentParts                               -> 1201:0022:2c75 IdentPartData None
+     1607:0022:2c79 TargetBlockInterfaceContainer    None                                     shell=None size=281 orig=[]
+         IN  Parent                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  InterfaceParts                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+         IN  InterfaceParts                           -> 160b:0022:2c7b InterfacePartData 'BI:InputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#c54421af'
+         IN  InterfaceParts                           -> 160b:0022:2c7c InterfacePartData 'BI:OutputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#f2ffc193'
+         IN  InterfaceParts                           -> 160b:0022:2c7d InterfacePartData 'BI:InOutSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#937e7522'
+         IN  InterfaceParts                           -> 160b:0022:2c7e InterfacePartData 'BI:StaticSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#3df9b487'
+         IN  InterfaceParts                           -> 160b:0022:2c7f InterfacePartData 'BI:TempSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#a80af7c0'
+         IN  InterfaceParts                           -> 160b:0022:2c80 InterfacePartData 'BI:Values:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#10c6161'
+         IN  InterfaceParts                           -> 160c:0022:2c81 InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     160b:0022:2c7b InterfacePartData                'BI:InputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#c54421af' shell=False size=927 orig=['160b:0022:2459']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:2c7c InterfacePartData                'BI:OutputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#f2ffc193' shell=False size=620 orig=['160b:0022:245a']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:2c7d InterfacePartData                'BI:InOutSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#937e7522' shell=False size=540 orig=['160b:0022:245b']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:2c7e InterfacePartData                'BI:StaticSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#3df9b487' shell=False size=661 orig=['160b:0022:245c']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:2c7f InterfacePartData                'BI:TempSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#a80af7c0' shell=False size=559 orig=['160b:0022:245d']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160b:0022:2c80 InterfacePartData                'BI:Values:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#10c6161' shell=False size=521 orig=['160b:0022:2458']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160c:0022:2c7a InterfaceVersionRootData         'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5' shell=False size=1559 orig=['160c:0022:2454']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  UsedByBlock                              -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  UsedParts                                -> 160b:0022:2c7b InterfacePartData 'BI:InputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#c54421af'
+         IN  UsedParts                                -> 160b:0022:2c7c InterfacePartData 'BI:OutputSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#f2ffc193'
+         IN  UsedParts                                -> 160b:0022:2c7d InterfacePartData 'BI:InOutSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#937e7522'
+         IN  UsedParts                                -> 160b:0022:2c7e InterfacePartData 'BI:StaticSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#3df9b487'
+         IN  UsedParts                                -> 160b:0022:2c7f InterfacePartData 'BI:TempSection:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#a80af7c0'
+         OUT UsedParts                                -> 0000:0000:0 ? None
+         IN  UsedParts                                -> 160b:0022:2c80 InterfacePartData 'BI:Values:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5#10c6161'
+         IN  UsedParts                                -> 160c:0022:2c81 InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     160c:0022:2c81 InterfaceVersionRootData         '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c' shell=False size=1191 orig=['160c:0022:101a']
+         IN  Parent                                   -> 1607:0022:2c79 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+         IN  VersionElementToBlock                    -> 1003:0022:2c83 UserTypeData 'UDT_Motor'
+         IN  UsedByVersions                           -> 160c:0022:2c7a InterfaceVersionRootData 'BIVE:FB_Iface/64dcd5af-6f17-413f-b279-b5ac737eaba5'
+     160d:0022:2c77 InterfaceCommentsPartData        None                                     shell=None size=1140 orig=[]
+         IN  InverseInterfaceComments                 -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     1803:0022:2c72 StandardCompileUnitDataBagData   None                                     shell=None size=1231 orig=[]
+         IN  Parent                                   -> 1016:0022:2c71 CompileUnitData None
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'
+     1805:0022:2c76 StandardCodeBlockDataBagData     None                                     shell=None size=723 orig=[]
+         IN  Parent                                   -> 1001:0022:2c6c CodeBlockData 'FB_Iface'
+         IN  Target                                   -> 101c:0010:2c6d S7ControllerTargetData 'PLC_1'

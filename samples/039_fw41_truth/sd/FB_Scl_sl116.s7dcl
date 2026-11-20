@@ -1,0 +1,38 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl116"
+    VAR_INPUT
+        v_in_bit0 : Bool;
+        v_in_bit1 : Bool;
+        v_in_bit2 : Bool;
+        v_in_bit3 : Bool;
+        v_in_bit4 : Bool;
+        v_in_bit5 : Bool;
+        v_in_bit6 : Bool;
+        v_in_bit7 : Bool;
+        v_in_bit8 : Bool;
+        v_in_bit9 : Bool;
+        v_in_bit10 : Bool;
+        v_in_bit11 : Bool;
+        v_in_bit12 : Bool;
+        v_in_bit13 : Bool;
+        v_in_bit14 : Bool;
+        v_in_bit15 : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Bool;
+        v_out_step : Byte;
+        v_err_code : Word;
+    END_VAR
+    VAR
+        inst : SMC;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #inst(IN_BIT0 := #v_in_bit0, IN_BIT1 := #v_in_bit1, IN_BIT2 := #v_in_bit2, IN_BIT3 := #v_in_bit3, IN_BIT4 := #v_in_bit4, IN_BIT5 := #v_in_bit5, IN_BIT6 := #v_in_bit6, IN_BIT7 := #v_in_bit7, IN_BIT8 := #v_in_bit8, IN_BIT9 := #v_in_bit9, IN_BIT10 := #v_in_bit10, IN_BIT11 := #v_in_bit11, IN_BIT12 := #v_in_bit12, IN_BIT13 := #v_in_bit13, IN_BIT14 := #v_in_bit14, IN_BIT15 := #v_in_bit15, OUT => #v_out, OUT_STEP => #v_out_step, ERR_CODE => #v_err_code);
+    END_NETWORK
+END_FUNCTION_BLOCK

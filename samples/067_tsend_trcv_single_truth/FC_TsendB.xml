@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-10T19:13:03.1555193Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+          </Section>
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC_TsendB</Name>
+      <Namespace />
+      <Number>4</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Access Scope="GlobalVariable" UId="21">
+                <Symbol UId="22">
+                  <Component Name="DB_TSEND" UId="23">
+                    <BooleanAttribute Name="HasQuotes" UId="24">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text="." UId="25" />
+              <Access Scope="Call" UId="26">
+                <Instruction Name="TSEND" UId="27">
+                  <Token Text="(" UId="28" />
+                  <Parameter Name="REQ" UId="29">
+                    <Blank Num="1" UId="30" />
+                    <Token Text=":=" UId="31" />
+                    <Blank Num="1" UId="32" />
+                    <Access Scope="LiteralConstant" UId="33">
+                      <Constant UId="34">
+                        <ConstantValue UId="36">FALSE</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="37" />
+                  <Blank Num="1" UId="38" />
+                  <Parameter Name="ID" UId="39">
+                    <Blank Num="1" UId="40" />
+                    <Token Text=":=" UId="41" />
+                    <Blank Num="1" UId="42" />
+                    <Access Scope="TypedConstant" UId="43">
+                      <Constant UId="44">
+                        <ConstantValue UId="45">W#16#1</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="46" />
+                  <Blank Num="1" UId="47" />
+                  <Parameter Name="LEN" UId="48">
+                    <Blank Num="1" UId="49" />
+                    <Token Text=":=" UId="50" />
+                    <Blank Num="1" UId="51" />
+                    <Access Scope="LiteralConstant" UId="52">
+                      <Constant UId="53">
+                        <ConstantValue UId="55">0</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="56" />
+                  <Blank Num="1" UId="57" />
+                  <Parameter Name="DATA" UId="58">
+                    <Blank Num="1" UId="59" />
+                    <Token Text=":=" UId="60" />
+                    <Blank Num="1" UId="61" />
+                    <Access Scope="GlobalVariable" UId="62">
+                      <Symbol UId="63">
+                        <Component Name="DB_Buf" UId="64">
+                          <BooleanAttribute Name="HasQuotes" UId="65">true</BooleanAttribute>
+                        </Component>
+                        <Token Text="." UId="66" />
+                        <Component Name="buf" UId="67" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="68" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="69" />
+              <Blank Num="1" UId="70" />
+              <Access Scope="GlobalVariable" UId="71">
+                <Symbol UId="72">
+                  <Component Name="DB_TRCV" UId="73">
+                    <BooleanAttribute Name="HasQuotes" UId="74">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text="." UId="75" />
+              <Access Scope="Call" UId="76">
+                <Instruction Name="TRCV" UId="77">
+                  <Token Text="(" UId="78" />
+                  <Parameter Name="EN_R" UId="79">
+                    <Blank Num="1" UId="80" />
+                    <Token Text=":=" UId="81" />
+                    <Blank Num="1" UId="82" />
+                    <Access Scope="LiteralConstant" UId="83">
+                      <Constant UId="84">
+                        <ConstantValue UId="86">FALSE</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="87" />
+                  <Blank Num="1" UId="88" />
+                  <Parameter Name="ID" UId="89">
+                    <Blank Num="1" UId="90" />
+                    <Token Text=":=" UId="91" />
+                    <Blank Num="1" UId="92" />
+                    <Access Scope="TypedConstant" UId="93">
+                      <Constant UId="94">
+                        <ConstantValue UId="95">W#16#1</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="96" />
+                  <Blank Num="1" UId="97" />
+                  <Parameter Name="LEN" UId="98">
+                    <Blank Num="1" UId="99" />
+                    <Token Text=":=" UId="100" />
+                    <Blank Num="1" UId="101" />
+                    <Access Scope="LiteralConstant" UId="102">
+                      <Constant UId="103">
+                        <ConstantValue UId="105">0</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="106" />
+                  <Blank Num="1" UId="107" />
+                  <Parameter Name="DATA" UId="108">
+                    <Blank Num="1" UId="109" />
+                    <Token Text=":=" UId="110" />
+                    <Blank Num="1" UId="111" />
+                    <Access Scope="GlobalVariable" UId="112">
+                      <Symbol UId="113">
+                        <Component Name="DB_Buf" UId="114">
+                          <BooleanAttribute Name="HasQuotes" UId="115">true</BooleanAttribute>
+                        </Component>
+                        <Token Text="." UId="116" />
+                        <Component Name="buf" UId="117" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="118" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="119" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

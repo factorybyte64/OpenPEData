@@ -1,0 +1,21 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl061"
+    VAR_INPUT
+        v_src_variable : Time_Of_Day;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Time_Of_Day;
+    END_VAR
+    VAR_IN_OUT
+        v_dest_array : Byte;
+        v_pos : DInt;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := WRITE_LITTLE(SRC_VARIABLE := #v_src_variable, DEST_ARRAY := #v_dest_array, POS := #v_pos);
+    END_NETWORK
+END_FUNCTION_BLOCK

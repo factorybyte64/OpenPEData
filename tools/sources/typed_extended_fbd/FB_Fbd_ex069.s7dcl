@@ -1,0 +1,33 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex069"
+    VAR_INPUT
+        v_req : Bool;
+        v_id : HW_;
+        v_cmd : Byte;
+        v_cmd_modifier : Byte;
+        v_cmd_para : Variant;
+        v_cmd_para_len : Int;
+        v_cmd_data_structure_identifier_rq : Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_valid : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : DWord;
+    END_VAR
+    VAR_IN_OUT
+        v_response_data : Variant;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Pe_Cmd( REQ := #v_req, ID := #v_id, CMD := #v_cmd, CMD_MODIFIER := #v_cmd_modifier, CMD_PARA := #v_cmd_para, CMD_PARA_LEN := #v_cmd_para_len, CMD_DATA_STRUCTURE_IDENTIFIER_RQ := #v_cmd_data_structure_identifier_rq, RESPONSE_DATA := #v_response_data, VALID => #v_valid, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

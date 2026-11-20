@@ -1,0 +1,923 @@
+[
+ {
+  "group": "Open User Communication / TSEND_C: Establishing a connection and sending data",
+  "title": "TSEND_C: Send data via Ethernet (S7-1200)",
+  "name": "TSEND_C",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CONT",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "CONNECT",
+    "decl": "InOut",
+    "types": "TCON_Param"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "COM_RST",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / TSEND_C: Establishing a connection and sending data",
+  "title": "TSEND_C: Establishing a connection and sending data (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TSEND_C",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CONT",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "CONNECT",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ADDR",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "COM_RST",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / TRCV_C: Establishing a connection and receiving data",
+  "title": "TRCV_C: Receive data via Ethernet (S7-1200)",
+  "name": "TRCV_C",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CONT",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "CONNECT",
+    "decl": "InOut",
+    "types": "TCON_Param"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "COM_RST",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RCVD_LEN",
+    "decl": "Output",
+    "types": "UINT"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / TRCV_C: Establishing a connection and receiving data",
+  "title": "TRCV_C: Establishing a connection and receiving data (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TRCV_C",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CONT",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "ADHOC",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CONNECT",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ADDR",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "COM_RST",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RCVD_LEN",
+    "decl": "Output",
+    "types": "UDINT"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / TMAIL_C: Transfer email",
+  "title": "Description of TMAIL_C (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Description of TMAIL_C",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TO_S",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "CC",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "SUBJECT",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "TEXT",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "ATTACHMENT",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ATTACHMENT_NAME",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "MAIL_ADDR_PARAM",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / TMAIL_C: Transfer email",
+  "title": "TO_S and CC parameters (S7-1200, S7-1500)",
+  "name": "TO_S and CC parameters",
+  "params": null
+ },
+ {
+  "group": "Open User Communication / TMAIL_C: Transfer email",
+  "title": "MAIL_ADDR_PARAM parameter (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MAIL_ADDR_PARAM parameter",
+  "params": null
+ },
+ {
+  "group": "Open User Communication / TMAIL_C: Transfer email",
+  "title": "DONE, BUSY and ERROR parameters (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DONE, BUSY and ERROR parameters",
+  "params": null
+ },
+ {
+  "group": "Open User Communication / TMAIL_C: Transfer email",
+  "title": "STATUS parameter (S7-1200, S7-1500)",
+  "name": "STATUS parameter",
+  "params": null
+ },
+ {
+  "group": "Open User Communication / Other / TCON: Establishing a communication connection",
+  "title": "TCON: Establish communication connection (S7-1200)",
+  "name": "TCON",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "CONNECT",
+    "decl": "InOut",
+    "types": "TCON_Param"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / TCON: Establishing a communication connection",
+  "title": "TCON: Establish communication connection (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TCON",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "CONNECT",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other",
+  "title": "TDISCON: Terminate communication connection (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TDISCON",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC (WORD)"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / TSEND: Send data via communication connection",
+  "title": "TSEND: Send data via communication connection (S7-1200)",
+  "name": "TSEND",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / TSEND: Send data via communication connection",
+  "title": "TSEND: Send data via communication connection (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TSEND",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / TRCV: Receive data via communication connection",
+  "title": "TRCV: Receive data via communication connection (S7-1200)",
+  "name": "TRCV",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RCVD_LEN",
+    "decl": "Output",
+    "types": "UINT"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / TRCV: Receive data via communication connection",
+  "title": "TRCV: Receive data via communication connection (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TRCV",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "ADHOC",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RCVD_LEN",
+    "decl": "Output",
+    "types": "UDINT"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / Sending and receiving data via Ethernet (UDP) or FDL",
+  "title": "TUSEND: Sending data (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TUSEND",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ADDR",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / Sending and receiving data via Ethernet (UDP) or FDL",
+  "title": "TURCV: Receiving data (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TURCV",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RCVD_LEN",
+    "decl": "Output",
+    "types": "UDINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ADDR",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other",
+  "title": "T_RESET: Resetting the connection (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "T_RESET",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other",
+  "title": "T_DIAG: Checking the connection (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "T_DIAG",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC (WORD)"
+   },
+   {
+    "name": "RESULT",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / T_CONFIG: Configure interface",
+  "title": "Description T_CONFIG (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Description T_CONFIG",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "INTERFACE",
+    "decl": "Input",
+    "types": "HW_INTERFACE"
+   },
+   {
+    "name": "CONF_DATA",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ERR_LOC",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Open User Communication / Other / T_CONFIG: Configure interface",
+  "title": "Parameter CONF_DATA (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter CONF_DATA",
+  "params": null
+ },
+ {
+  "group": "Open User Communication / Other / T_CONFIG: Configure interface",
+  "title": "DONE, BUSY and ERROR parameters (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DONE, BUSY and ERROR parameters",
+  "params": null
+ },
+ {
+  "group": "Open User Communication / Other / T_CONFIG: Configure interface",
+  "title": "Parameter STATUS and ERR_LOC (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter STATUS and ERR_LOC",
+  "params": null
+ }
+]

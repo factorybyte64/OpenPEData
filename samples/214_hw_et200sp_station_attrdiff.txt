@@ -1,0 +1,652 @@
+A: 213_hw_io_system.zap21  B: 214_hw_et200sp_station.zap21
+CHANGED 1001:0004:421 PackageContainerDatas name='Packages'
+          raw <links 1>: 644 -> 724 bytes
+          +link ContainsPackage -> 1002:0004:1421
+          +link ContainsPackage -> 1002:0004:1424
+          +link ContainsPackage -> 1002:0004:142b
+          +link ContainsPackage -> 1002:0004:142d
+          +link ContainsPackage -> 1002:0004:1436
+NEW     1002:0004:1421 PackageContainerData name='HW.ET200SP.DEVICE.MDD_ET200SP-Device_1.0_15.0.0{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.ET200SP.DEVICE.MDD_ET200SP-Device_1.0_15.0.0'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.ET200SP.DEVICE.MDD_ET200SP-Device_1.0_15.0.0{11.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedProduct -> 1004:0004:80a
+          link RelatedProduct -> 1004:0004:80b
+          link RelatedProduct -> 1004:0004:80c
+          link RelatedObject -> 100e:0010:1420
+NEW     1002:0004:1424 PackageContainerData name='HW.ET200SP.RACK.MDD_ET200SP-Rack_1.0_15.0.0{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.ET200SP.RACK.MDD_ET200SP-Rack_1.0_15.0.0'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.ET200SP.RACK.MDD_ET200SP-Rack_1.0_15.0.0{11.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedObject -> 1011:0010:1423
+          link RelatedProduct -> 1004:0004:80a
+          link RelatedProduct -> 1004:0004:80b
+          link RelatedProduct -> 1004:0004:80c
+NEW     1002:0004:142b PackageContainerData name='HW.ET200SP.HM_PN.MDD_6ES7_155_6AU01_0BN0_V4.2_16.0.0{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.ET200SP.HM_PN.MDD_6ES7_155_6AU01_0BN0_V4.2_16.0.0'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.ET200SP.HM_PN.MDD_6ES7_155_6AU01_0BN0_V4.2_16.0.0{11.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedObject -> 1014:0010:1425
+          link RelatedProduct -> 1004:0004:810
+          link RelatedProduct -> 1004:0004:811
+          link RelatedProduct -> 1004:0004:812
+NEW     1002:0004:142d PackageContainerData name='HW.ET200SP.SUBMODULES.ProfinetIO.Adapter.CuAdapter.MDD_6ES7-193-6AR00-0AA0-Sub-Adapter_15.0.10{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.ET200SP.SUBMODULES.ProfinetIO.Adapter.CuAdapter.MDD_6ES7-193-6AR00-0AA0-Sub-...
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.ET200SP.SUBMODULES.ProfinetIO.Adapter.CuAdapter.MDD_6ES7-193-6AR00-0AA0-Sub-...
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedObject -> 1011:0010:142c
+          link RelatedProduct -> 1004:0004:142e
+          link RelatedProduct -> 1004:0004:142f
+          link RelatedProduct -> 1004:0004:1430
+NEW     1002:0004:1436 PackageContainerData name='HW.ET200SP.SUBMODULES.ProfinetIO.Port.MDD_6ES7-155-6AU00-0CN0-Sub-Ports_RJ45_V2.0_15.0.10{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.ET200SP.SUBMODULES.ProfinetIO.Port.MDD_6ES7-155-6AU00-0CN0-Sub-Ports_RJ45_V2...
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.ET200SP.SUBMODULES.ProfinetIO.Port.MDD_6ES7-155-6AU00-0CN0-Sub-Ports_RJ45_V2...
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedProduct -> 1004:0004:142e
+          link RelatedProduct -> 1004:0004:142f
+          link RelatedProduct -> 1004:0004:1430
+          link RelatedObject -> 1011:0010:1435
+          link RelatedObject -> 1011:0010:1437
+CHANGED 1003:0004:420 ProductVersionInfoContainer name='Products'
+          raw <links 1>: 484 -> 532 bytes
+          +link ContainsVersionInfo -> 1004:0004:142e
+          +link ContainsVersionInfo -> 1004:0004:142f
+          +link ContainsVersionInfo -> 1004:0004:1430
+NEW     1004:0004:142e ProductVersionInfoData name='Siemens.Simatic.STEP7.Basic:15.01.00.00'
+          IProductVersionInfoDataAttributes.IsHidden = False
+          IProductVersionInfoDataAttributes.ProductType = 'ServicePack'
+          IProductVersionInfoDataAttributes.DisplayName = 'STEP 7 Basic'
+          IProductVersionInfoDataAttributes.DisplayVersion = 'V15.1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'Siemens.Simatic.STEP7.Basic:15.01.00.00'
+          link Parent -> 1003:0004:420
+          link Environment -> 1003:0004:420
+          link RelatedPackageContainerData -> 1002:0004:142d
+          link RelatedPackageContainerData -> 1002:0004:1436
+NEW     1004:0004:142f ProductVersionInfoData name='Siemens.Simatic.STEP7.SinemaEBasic:15.01.00.00'
+          IProductVersionInfoDataAttributes.IsHidden = True
+          IProductVersionInfoDataAttributes.ProductType = 'ServicePack'
+          IProductVersionInfoDataAttributes.DisplayName = 'SINEMA E Basic'
+          IProductVersionInfoDataAttributes.DisplayVersion = 'V15.1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'Siemens.Simatic.STEP7.SinemaEBasic:15.01.00.00'
+          link Parent -> 1003:0004:420
+          link Environment -> 1003:0004:420
+          link RelatedPackageContainerData -> 1002:0004:142d
+          link RelatedPackageContainerData -> 1002:0004:1436
+NEW     1004:0004:1430 ProductVersionInfoData name='Siemens.Simatic.Hmi.Basic:15.01.00.00'
+          IProductVersionInfoDataAttributes.IsHidden = False
+          IProductVersionInfoDataAttributes.ProductType = 'ServicePack'
+          IProductVersionInfoDataAttributes.DisplayName = 'WinCC Basic'
+          IProductVersionInfoDataAttributes.DisplayVersion = 'V15.1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'Siemens.Simatic.Hmi.Basic:15.01.00.00'
+          link Parent -> 1003:0004:420
+          link Environment -> 1003:0004:420
+          link RelatedPackageContainerData -> 1002:0004:142d
+          link RelatedPackageContainerData -> 1002:0004:1436
+CHANGED 1004:0004:80a ProductVersionInfoData name='Siemens.Simatic.STEP7.Basic:15.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1421
+          +link RelatedPackageContainerData -> 1002:0004:1424
+CHANGED 1004:0004:80b ProductVersionInfoData name='Siemens.Simatic.STEP7.SinemaEBasic:15.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1421
+          +link RelatedPackageContainerData -> 1002:0004:1424
+CHANGED 1004:0004:80c ProductVersionInfoData name='Siemens.Simatic.Hmi.Basic:15.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1421
+          +link RelatedPackageContainerData -> 1002:0004:1424
+CHANGED 1004:0004:810 ProductVersionInfoData name='Siemens.Simatic.STEP7.Basic:16.00.00.00'
+          raw <links 1>: 68 -> 84 bytes
+          +link RelatedPackageContainerData -> 1002:0004:142b
+CHANGED 1004:0004:811 ProductVersionInfoData name='Siemens.Simatic.STEP7.SinemaEBasic:16.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:142b
+CHANGED 1004:0004:812 ProductVersionInfoData name='Siemens.Simatic.Hmi.Basic:16.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:142b
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+NEW     100e:0010:1420 DeviceData name='IO_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.Device'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'IO_1'
+          IBrowsingAttributes.BrowsingParameters = 8589934609
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\DEVICE\\MDD_ET200SP-Device_1.0'
+          IConfigBaseData.ConfigObjectTypeVersion = '15.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[28] 1c0000000c0000001400000008000000000000000800000000000000
+          IDeviceData.IsCentral = False
+          IDeviceData.InvariantTypeName = 'ET 200SP-Station'
+          link RelatedPackage -> 1002:0004:1421
+          link AddressManagers -> 1057:0010:1422
+          link DeviceItems -> 1011:0010:1423
+          link LogicalElements -> 1011:0010:1423
+          link Elements -> 1011:0010:1423
+          link DeviceItems -> 1014:0010:1425
+          link LogicalElements -> 1014:0010:1425
+          link LogicalElements -> 1011:0010:1426
+          link LogicalElements -> 1011:0010:1427
+          link LogicalElements -> 106e:0010:1429
+          link LogicalElements -> 106e:0010:142a
+          link LogicalElements -> 1011:0010:142c
+          link AddressManagers -> 1057:0010:1431
+          link AddressManagers -> 1057:0010:1432
+          link DeviceLocalAddressManagers -> 1060:0010:1433
+          link DeviceLocalAddressManagers -> 1060:0010:1434
+          link LogicalElements -> 1011:0010:1435
+          link LogicalElements -> 1011:0010:1437
+          link DeviceItems -> 1011:0010:142c
+          link ParentProject -> 1028:0002:433
+          link Environment -> 1028:0002:433
+NEW     1011:0010:1423 DeviceItemData name='Rack_0'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.Rack'
+          ICoreAttributes.Name = 'Rack_0'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 549755813905
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\RACK\\MDD_ET200SP-Rack_1.0'
+          IConfigBaseData.ConfigObjectTypeVersion = '15.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[136] 880000000c000000240000001800000004000000030000001e0000001e0000000a00000064000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 1
+          IDeviceItemData.PositionNumber = 0
+          IDeviceItemData.UICapabilities = 9223372036838002945
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = 'Rack'
+          IDeviceItemData.OrderNumber = '6ES5 710-8MAx1'
+          IDiagnosticAttributes.DiagCapabilities = 0
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.SlotGroupCount = 8
+          IPersistentExpandoData.AvailablePositionNumbers = '300;0-33'
+          IPersistentExpandoData.InvisiblePositionNumbers = '100-115'
+          link Parent -> 100e:0010:1420
+          link Environment -> 1028:0002:433
+          link LogicalContainer -> 100e:0010:1420
+          link Container -> 100e:0010:1420
+          link RelatedPackage -> 1002:0004:1424
+          link Elements -> 1014:0010:1425
+          link AddressManagers -> 1057:0010:1431
+          link AddressManagers -> 1057:0010:1432
+NEW     1011:0010:1426 DeviceItemData name='_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.IM.Submodule'
+          ICoreAttributes.Name = '_1'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 0
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\SUBMODULES\\ProfinetIO\\HeadSubmodule\\MDD_6ES7-155-6AU01-0BN0-Sub-Hea...
+          IConfigBaseData.ConfigObjectTypeVersion = '16.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[187] bb0000000c0000002c0000002000000006000000050000003c0000003c0000003c0000008a000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 4
+          IDeviceItemData.PositionNumber = 0
+          IDeviceItemData.UICapabilities = 9223372036837998592
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IDeviceItemData.FwVersion = 'V4.2'
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsAutocreated = True
+          IPersistentExpandoData.BackPackRequired = True
+          IPersistentExpandoData.IsSharedIoAssignmentEnabled = True
+          IPersistentExpandoData.SharedIoAssignment = 0
+          IPersistentExpandoData.IsSharedDeviceCapable = True
+          link Parent -> 1014:0010:1425
+          link Environment -> 1028:0002:433
+          link Container -> 1014:0010:1425
+          link LogicalContainer -> 100e:0010:1420
+          link AddressManagers -> 1057:0010:1431
+          link Heads -> 1014:0010:1425
+NEW     1011:0010:1427 DeviceItemData name='PROFINET interface'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.IM.Interface'
+          ICoreAttributes.Name = 'PROFINET interface'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 69206017
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\SUBMODULES\\ProfinetIO\\Interface\\MDD_6ES7-155-6AU01-0BN0-Sub-Interfa...
+          IConfigBaseData.ConfigObjectTypeVersion = '16.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[365] 6d0100000c00000044000000380000000c0000000b0000003c0000003c000000140000003c000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 8196
+          IDeviceItemData.PositionNumber = 1
+          IDeviceItemData.UICapabilities = 9223372036837998849
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsAutocreated = True
+          IPersistentExpandoData.IsSharedIoAssignmentEnabled = True
+          IPersistentExpandoData.PnLLDPLegacyEnforce = False
+          IPersistentExpandoData.SharedIoAssignment = 0
+          IPersistentExpandoData.PnIsObFilterActivated = True
+          IPersistentExpandoData.BackPackRequired = True
+          IPersistentExpandoData.PnIoInterfaceIsOptional = False
+          IPersistentExpandoData.IsSharedDeviceCapable = True
+          IPersistentExpandoData.PnIoExternalSendClockFactor = bytes[36] 200000000000000000000000000000000000000000000000000000000000000000000000
+          IPersistentExpandoData.InvisiblePositionNumbers = '127;32769;32770'
+          IPersistentExpandoData.PnIoArUuid = bytes[41] 29001000000000000000000000000010010000000101000000a72d7304aa5c1042bc3ae1a8a5dc03
+          link Parent -> 1014:0010:1425
+          link Environment -> 1028:0002:433
+          link Container -> 1014:0010:1425
+          link LogicalContainer -> 100e:0010:1420
+          link DeviceItemNodes -> 101d:0010:1428
+          link DeviceItems -> 106e:0010:1429
+          link DeviceItems -> 106e:0010:142a
+          link AddressManagers -> 1057:0010:1431
+          link AddressRangeConsumers -> 1060:0010:1433
+          link AddressRangeConsumers -> 1060:0010:1434
+          link Elements -> 1011:0010:142c
+          link Ports -> 1011:0010:1435
+          link Ports -> 1011:0010:1437
+          link Elements -> 1011:0010:1435
+          link Elements -> 1011:0010:1437
+          link Heads -> 1014:0010:1425
+NEW     1011:0010:142c DeviceItemData name='BA 2xRJ45'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.IM.Adapter'
+          ICoreAttributes.Name = 'BA 2xRJ45'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 67108865
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\SUBMODULES\\ProfinetIO\\Adapter\\CuAdapter\\MDD_6ES7-193-6AR00-0AA0-Su...
+          IConfigBaseData.ConfigObjectTypeVersion = '15.0.10.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[69] 450000000c0000001c0000001000000002000000010000003c000000290000000200000010000000
+          IDeviceItemData.DeviceItemFeatures = 65536
+          IDeviceItemData.DeviceItemType = 524288
+          IDeviceItemData.PositionNumber = 127
+          IDeviceItemData.UICapabilities = 9223372036837998849
+          IDeviceItemData.FwVersion = 'V0.0'
+          IDeviceItemData.InvariantTypeName = 'BA 2xRJ45'
+          IDeviceItemData.OrderNumber = '6ES7 193-6AR00-0AA0'
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsAutocreated = True
+          link Parent -> 100e:0010:1420
+          link LogicalContainer -> 100e:0010:1420
+          link Container -> 1011:0010:1427
+          link Environment -> 1028:0002:433
+          link RelatedPackage -> 1002:0004:142d
+          link DeviceItems -> 1011:0010:1435
+          link DeviceItems -> 1011:0010:1437
+          link Heads -> 1014:0010:1425
+NEW     1011:0010:1435 DeviceItemData name='Port_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.IM.Port'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'Port_1'
+          IBrowsingAttributes.BrowsingParameters = 67108865
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\SUBMODULES\\ProfinetIO\\Port\\MDD_6ES7-155-6AU00-0CN0-Sub-Ports_RJ45_V...
+          IConfigBaseData.ConfigObjectTypeVersion = '15.0.10.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[282] 1a0100000c000000380000002c00000009000000080000003c0000008a0000003c0000001e000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 540672
+          IDeviceItemData.PositionNumber = 1
+          IDeviceItemData.UICapabilities = 9223372036837998593
+          IDeviceItemData.FwVersion = 'V0.0'
+          IDeviceItemData.OrderNumber = '6ES7 193-6AR00-0AA0'
+          IDeviceItemData.InvariantTypeName = 'X1 P1R'
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsSharedIoAssignmentEnabled = True
+          IPersistentExpandoData.SharedIoAssignment = 0
+          IPersistentExpandoData.PnIsMultipleConnectionEnabled = False
+          IPersistentExpandoData.BackPackRequired = True
+          IPersistentExpandoData.PnIoProgrammablePeer = False
+          IPersistentExpandoData.IsSharedDeviceCapable = True
+          IPersistentExpandoData.IsAutocreated = True
+          IPersistentExpandoData.PnWWInconsistencies = ''
+          link RelatedPackage -> 1002:0004:1436
+          link AddressManagers -> 1057:0010:1431
+          link Heads -> 1014:0010:1425
+          link Parent -> 1011:0010:142c
+          link LogicalContainer -> 100e:0010:1420
+          link Interface -> 1011:0010:1427
+          link Container -> 1011:0010:1427
+          link Environment -> 1028:0002:433
+NEW     1011:0010:1437 DeviceItemData name='Port_2'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.IM.Port'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'Port_2'
+          IBrowsingAttributes.BrowsingParameters = 67108865
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\SUBMODULES\\ProfinetIO\\Port\\MDD_6ES7-155-6AU00-0CN0-Sub-Ports_RJ45_V...
+          IConfigBaseData.ConfigObjectTypeVersion = '15.0.10.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[282] 1a0100000c000000380000002c00000009000000080000003c0000008a0000003c0000001e000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 540672
+          IDeviceItemData.PositionNumber = 2
+          IDeviceItemData.UICapabilities = 9223372036837998593
+          IDeviceItemData.FwVersion = 'V0.0'
+          IDeviceItemData.OrderNumber = '6ES7 193-6AR00-0AA0'
+          IDeviceItemData.InvariantTypeName = 'X1 P2R'
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsSharedIoAssignmentEnabled = True
+          IPersistentExpandoData.SharedIoAssignment = 0
+          IPersistentExpandoData.PnIsMultipleConnectionEnabled = False
+          IPersistentExpandoData.BackPackRequired = True
+          IPersistentExpandoData.PnIoProgrammablePeer = False
+          IPersistentExpandoData.IsSharedDeviceCapable = True
+          IPersistentExpandoData.IsAutocreated = True
+          IPersistentExpandoData.PnWWInconsistencies = ''
+          link RelatedPackage -> 1002:0004:1436
+          link AddressManagers -> 1057:0010:1431
+          link Heads -> 1014:0010:1425
+          link Parent -> 1011:0010:142c
+          link LogicalContainer -> 100e:0010:1420
+          link Interface -> 1011:0010:1427
+          link Container -> 1011:0010:1427
+          link Environment -> 1028:0002:433
+NEW     1014:0010:1425 HeadDeviceItemData name='IM_1'
+          ICompileLoadConfigExpando.LoadTypes4Download = 'BaptizeSDB'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'ET200SP.IM.PN'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'IM_1'
+          IBrowsingAttributes.BrowsingParameters = 4363145489
+          IConfigBaseData.ConfigObjectTypeName = 'ET200SP\\HM_PN\\MDD_6ES7_155_6AU01_0BN0_V4.2'
+          IConfigBaseData.ConfigObjectTypeVersion = '16.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[77] 4d0000000c0000001c0000001000000002000000010000003d000000310000000200000010000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 2050
+          IDeviceItemData.PositionNumber = 0
+          IDeviceItemData.UICapabilities = 9223372036839067921
+          IDeviceItemData.FwVersion = 'V4.2'
+          IDeviceItemData.InvariantTypeName = 'IM 155-6 PN ST'
+          IDeviceItemData.OrderNumber = '6ES7 155-6AU01-0BN0'
+          IDiagnosticAttributes.DiagCapabilities = 360777285764
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsSharedDeviceCapable = True
+          link Parent -> 100e:0010:1420
+          link Environment -> 1028:0002:433
+          link LogicalContainer -> 100e:0010:1420
+          link Container -> 1011:0010:1423
+          link DeviceItems -> 1011:0010:1426
+          link DeviceItems -> 1011:0010:1427
+          link Elements -> 1011:0010:1426
+          link Elements -> 1011:0010:1427
+          link RelatedPackage -> 1002:0004:142b
+          link AddressManagers -> 1057:0010:1431
+          link AddressManagers -> 1057:0010:1432
+          link LogicallyDependentItems -> 1011:0010:1426
+          link LogicallyDependentItems -> 1011:0010:1427
+          link LogicallyDependentItems -> 1011:0010:142c
+          link LogicallyDependentItems -> 1011:0010:1435
+          link LogicallyDependentItems -> 1011:0010:1437
+NEW     101d:0010:1428 NodeData name='IE1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:02.038597Z'
+          ICoreAttributes.Subtype = '3'
+          ICoreAttributes.Name = 'IE1'
+          IConfigBaseData.ConfigObjectTypeName = 'NodeIE'
+          IConfigBaseData.ConfigObjectTypeVersion = '11.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[653] 8d0200000c000000680000005c00000015000000140000003c000000140000001400000014000000
+          INodeData.NodeFeatures = 4
+          INodeData.NodePathID = 0
+          INodeData.NodeType = 3
+          INodeData.NodeID = 'IE1'
+          IPersistentExpandoData.NodeGetsAddressAutomatically = True
+          IPersistentExpandoData.NodeDhcpServerEnableStatus = False
+          IPersistentExpandoData.NodeIPConfiguration = 0
+          IPersistentExpandoData.NodeIPDefaultRouterAddressUsed = False
+          IPersistentExpandoData.NodeIPProtocolUsed = True
+          IPersistentExpandoData.IsAssignDeviceActivated = False
+          IPersistentExpandoData.NodeIPAddresseSetByUser = False
+          IPersistentExpandoData.NodeMacProtocolUsed = False
+          IPersistentExpandoData.PnPnIpSuiteViaOtherPath = False
+          IPersistentExpandoData.PnPnNoSViaOtherPath = False
+          IPersistentExpandoData.PnPnNoSAutoGenerate = True
+          IPersistentExpandoData.PnIoIpSuiteViaOtherPath = False
+          IPersistentExpandoData.NodeIPDefaultRouterIODSync = True
+          IPersistentExpandoData.NodeIPAddress = 3232235521
+          IPersistentExpandoData.NodeIPSubnetMask = 4294967040
+          IPersistentExpandoData.NodeIPDefaultRouterAddress = 3232235521
+          IPersistentExpandoData.NodeDhcpClientId = ''
+          IPersistentExpandoData.NodeMacAddress = 8796193751040
+          IPersistentExpandoData.PnNameOfStation = 'io device_1'
+          IPersistentExpandoData.CorrespondingNetTypesExtension = ''
+          link DeviceItem -> 1011:0010:1427
+          link Environment -> 1028:0002:433
+CHANGED 1024:0010:564 NotAssignedObjectsData name='NotAssignedObjects'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:04:51.432907Z' -> '2026-10-24T15:28:00.624239Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link NotAssignedDeviceItems -> 106e:0010:1429
+          +link NotAssignedDeviceItems -> 106e:0010:142a
+          slot table [64, 0, 0, 123, 0] -> [64, 0, 0, 123, 207]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:25:09.436136Z' -> '2026-10-24T15:28:02.732491Z'  (timestamp)
+          raw <links 1>: 276 -> 292 bytes
+          +link Devices -> 100e:0010:1420
+          slot table [0, 0, 0, 76, 0, 0, 448, 172] -> [0, 0, 0, 76, 0, 0, 464, 172]
+NEW     1057:0010:1422 AddressManagerV2Data name='ET 200SP station_1 LAddressManager of type: Main '
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Subtype = 'Internal.AddressManager'
+          ICoreAttributes.Name = 'ET 200SP station_1 LAddressManager of type: Main '
+          IConfigBaseData.ConfigObjectTypeName = 'AddressManagerV2'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[108] 6c0000000c000000240000001800000004000000030000000a0000000b0000005000000048000000
+          IPersistentExpandoData.IoType = 128
+          IPersistentExpandoData.AddressManagerType = 1
+          IPersistentExpandoData.AddressMap = bytes[75] 3b00220000000000000000000000001001000000010100000001000001080031342e302e302e3001
+          link Parent -> 100e:0010:1420
+          link Environment -> 1028:0002:433
+          link RegisteredDeviceItems -> 0000:0000:0
+NEW     1057:0010:1431 AddressManagerV2Data name='ET 200SP station_1 LAddressManager of type: FixLinked '
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Subtype = 'Internal.AddressManager'
+          ICoreAttributes.Name = 'ET 200SP station_1 LAddressManager of type: FixLinked '
+          IConfigBaseData.ConfigObjectTypeName = 'AddressManagerV2'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[108] 6c0000000c000000240000001800000004000000030000000a0000000b0000005000000048000000
+          IPersistentExpandoData.IoType = 128
+          IPersistentExpandoData.AddressManagerType = 4
+          IPersistentExpandoData.AddressMap = bytes[156] 9c0100820000000000000000000000001001000000010100000001000001080031342e302e302e30
+          link Parent -> 100e:0010:1420
+          link Environment -> 1028:0002:433
+          link AddressManagerOwners -> 106e:0010:1429
+          link RegisteredDeviceItems -> 1011:0010:1423
+          link RegisteredDeviceItems -> 1014:0010:1425
+          link RegisteredDeviceItems -> 1011:0010:1426
+          link RegisteredDeviceItems -> 1011:0010:1427
+          link RegisteredDeviceItems -> 0000:0000:0
+          link RegisteredDeviceItems -> 0000:0000:0
+          link RegisteredDeviceItems -> 1011:0010:1435
+          link RegisteredDeviceItems -> 1011:0010:1437
+NEW     1057:0010:1432 AddressManagerV2Data name='ET 200SP station_1 LAddressManager of type: FixLinked '
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Subtype = 'Internal.AddressManager'
+          ICoreAttributes.Name = 'ET 200SP station_1 LAddressManager of type: FixLinked '
+          IConfigBaseData.ConfigObjectTypeName = 'AddressManagerV2'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[108] 6c0000000c000000240000001800000004000000030000000a0000000b0000005000000048000000
+          IPersistentExpandoData.IoType = 128
+          IPersistentExpandoData.AddressManagerType = 4
+          IPersistentExpandoData.AddressMap = bytes[91] 5b00420000000000000000000000001001000000010100000001000001080031342e302e302e3003
+          link Parent -> 100e:0010:1420
+          link Environment -> 1028:0002:433
+          link AddressManagerOwners -> 106e:0010:142a
+          link RegisteredDeviceItems -> 1011:0010:1423
+          link RegisteredDeviceItems -> 1014:0010:1425
+NEW     1060:0010:1433 AddressManagerNGData name="AddressManagerNG-'IODevice_PROFINET'"
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Name = "AddressManagerNG-'IODevice_PROFINET'"
+          link AddressManagerOwner -> 106e:0010:1429
+          link Environment -> 1028:0002:433
+          link AddressManagerContainingDevice -> 100e:0010:1420
+          link AddressRangeProviders -> 1011:0010:1427
+NEW     1060:0010:1434 AddressManagerNGData name="AddressManagerNG-'IODevice_PROFINET_1'"
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Name = "AddressManagerNG-'IODevice_PROFINET_1'"
+          link AddressManagerOwner -> 106e:0010:142a
+          link Environment -> 1028:0002:433
+          link AddressManagerContainingDevice -> 100e:0010:1420
+          link AddressRangeProviders -> 1011:0010:1427
+NEW     106e:0010:1429 IODeviceModuleData name='IODevice_PROFINET'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'Internal.IODevice'
+          ICoreAttributes.Name = 'IODevice_PROFINET'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 1
+          IConfigBaseData.ConfigObjectTypeName = 'IODevice_PROFINET_ModuleData'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[284] 1c0100000c0000003c000000300000000a000000090000003c0000000a0000001400000032000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 65536
+          IDeviceItemData.PositionNumber = -1
+          IDeviceItemData.UICapabilities = 0
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IPersistentExpandoData.IsSlaveType = True
+          IPersistentExpandoData.PnStationNumber = 0
+          IPersistentExpandoData.PnIrtSyncRole = 0
+          IPersistentExpandoData.PnUpdateTimeMode = 0
+          IPersistentExpandoData.PnIoDeviceLocalReductionRatio = 1
+          IPersistentExpandoData.PnIoWatchdogFactor = 3
+          IPersistentExpandoData.PnIoFrameClass = 1
+          IPersistentExpandoData.PnIoUserAdjustedUpdTime = 32
+          IPersistentExpandoData.PnIoSdbUpdateTime = 0
+          link Parent -> 1011:0010:1427
+          link Environment -> 1028:0002:433
+          link LogicalContainer -> 100e:0010:1420
+          link AnchorOfNotAssignedDeviceItems -> 1024:0010:564
+          link OwnedAddressManagers -> 1057:0010:1431
+          link OwnedAddressManagers -> 1060:0010:1433
+NEW     106e:0010:142a IODeviceModuleData name='IODevice_PROFINET_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:28:00.624239Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'Internal.IODevice'
+          ICoreAttributes.Name = 'IODevice_PROFINET_1'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 1
+          IConfigBaseData.ConfigObjectTypeName = 'IODevice_PROFINET_ModuleData'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[284] 1c0100000c0000003c000000300000000a000000090000003c0000000a0000001400000032000000
+          IDeviceItemData.DeviceItemFeatures = 65536
+          IDeviceItemData.DeviceItemType = 65536
+          IDeviceItemData.PositionNumber = -1
+          IDeviceItemData.UICapabilities = 0
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IPersistentExpandoData.IsSlaveType = True
+          IPersistentExpandoData.PnStationNumber = 0
+          IPersistentExpandoData.PnIrtSyncRole = 0
+          IPersistentExpandoData.PnUpdateTimeMode = 0
+          IPersistentExpandoData.PnIoDeviceLocalReductionRatio = 1
+          IPersistentExpandoData.PnIoWatchdogFactor = 3
+          IPersistentExpandoData.PnIoFrameClass = 1
+          IPersistentExpandoData.PnIoUserAdjustedUpdTime = 32
+          IPersistentExpandoData.PnIoSdbUpdateTime = 0
+          link Parent -> 1011:0010:1427
+          link Environment -> 1028:0002:433
+          link LogicalContainer -> 100e:0010:1420
+          link AnchorOfNotAssignedDeviceItems -> 1024:0010:564
+          link OwnedAddressManagers -> 1057:0010:1432
+          link OwnedAddressManagers -> 1060:0010:1434
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1808, 0011:0007:1809, 0011:0007:bf2, 0011:0007:bf3, 0014:0007:0, 0015:0007:20, 0016:0007:18

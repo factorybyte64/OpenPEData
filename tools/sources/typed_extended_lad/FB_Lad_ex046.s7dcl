@@ -1,0 +1,33 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex046"
+    VAR_INPUT
+        v_req : Bool;
+        v_id : HW_IO;
+        v_index : DInt;
+        v_len : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : DWord;
+    END_VAR
+    VAR_IN_OUT
+        v_record : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Wrrec;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Wrrec( REQ := #v_req, ID := #v_id, INDEX := #v_index, LEN := #v_len, DONE => #v_done, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status, RECORD := #v_record )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

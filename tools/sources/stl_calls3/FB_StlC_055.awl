@@ -1,0 +1,24 @@
+FUNCTION_BLOCK "FB_StlC_055"
+TITLE = STL call BLKMOV
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+   VAR_OUTPUT
+      io : Int;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 055 BLKMOV
+      CALL BLKMOV
+      (  SRCBLK                      := "DB_Arr".a ,
+         RET_VAL                     := #io ,
+         DSTBLK                      := "DB_Arr".b
+      );
+NETWORK
+TITLE = 056 UBLKMOV
+      CALL UBLKMOV
+      (  SRCBLK                      := "DB_Arr".a ,
+         RET_VAL                     := #io ,
+         DSTBLK                      := "DB_Arr".b
+      );
+END_FUNCTION_BLOCK

@@ -1,0 +1,20 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl057"
+    VAR_INPUT
+        v_area : Byte;
+        v_dbnumber : DInt;
+        v_byteoffset : DInt;
+        v_value : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Byte;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := POKE(AREA := #v_area, DBNUMBER := #v_dbnumber, BYTEOFFSET := #v_byteoffset, VALUE := #v_value);
+    END_NETWORK
+END_FUNCTION_BLOCK

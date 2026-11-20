@@ -1,0 +1,42 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_m107"
+    VAR_INPUT
+        vin : Variant;
+        dba : DB_ANY;
+    END_VAR
+    VAR_IN_OUT
+        by8 : Array[0..99] of Byte;
+        arrA : Array[0..9] of Int;
+        arrB : Array[0..9] of Int;
+        barr : Array[0..15] of Bool;
+        va : Array[*] of Int;
+        pos : DInt;
+    END_VAR
+    VAR
+        t1 : TON_TIME;
+        mem : LReal;
+    END_VAR
+    VAR_TEMP
+        i : Int;
+        di : DInt;
+        r : Real;
+        lr : LReal;
+        w : Word;
+        dw : DWord;
+        b : Bool;
+        by : Byte;
+        t : Time;
+        ec : Int;
+        o0 : Int;
+        o1 : Int;
+        v : Variant;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        DEMUX(K := #di, IN := #i, OUT0 => #o0, OUT1 => #o1);
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,48 @@
+A: 003_tagtable  B: 011_tagtable_folder
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+NEW     100e:0002:1018 FolderData name='TagGroup_1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-19T18:11:29.067272Z'
+          ICoreAttributes.Name = 'TagGroup_1'
+          ICoreAttributes.Subtype = 'ControllerTagsFolder.Subfolder'
+          link AggregatingFolder -> 100e:0002:814
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link AggregatedElements -> 1062:0002:1019
+CHANGED 100e:0002:814 FolderData name='ControllerTagsFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:23:06.359293Z' -> '2026-10-19T18:11:28.829923Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link AggregatedElements -> 100e:0002:1018
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:23:06.714383Z' -> '2026-10-19T18:11:29.067272Z'  (timestamp)
+          raw ICoreExpandoAttributes: 20112 -> 20112 bytes
+          raw <links 2>: 36 -> 48 bytes
+          +link typed slot 20 -> 1062:0002:1019
+          slot table [4918, 536, 0, 0, 0, 1662, 7564, 0, 0, 0, 0, 0, 1779, 1791, 2361, 2444, 2460, 0, 3346, 27676, 3886, 28972, 0, 0, 0, 0, 28948, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3478, 3610, 3730, 0, 0, 0, 4894, 3922, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3850, 0, 28996, 0, 0, 28900, 0, 0, 0, 0, 0, 0, 0, 0, 7540, 0, 28648, 7516, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] -> [4930, 536, 0, 0, 0, 1662, 7576, 0, 0, 0, 0, 0, 1779, 1791, 2361, 2444, 2460, 0, 3346, 27688, 3886, 28984, 0, 0, 0, 0, 28960, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3478, 3610, 3730, 0, 0, 0, 4906, 3934, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3850, 0, 29008, 0, 0, 28912, 0, 0, 0, 0, 0, 0, 0, 0, 7552, 0, 28660, 7528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:23:07.638658Z' -> '2026-10-19T18:11:29.227053Z'  (timestamp)
+NEW     1039:0022:101a EAMTZTagTableFingerprintContainer name=None
+          ICommonFingerprintData.DataVersion = 639280302890793215
+          ICommonFingerprintData.ValidState = 0
+          ICommonFingerprintData.DataStore = bytes[382] 01ab05000000000000000000000010010000000101000000e402785eed94416ec2301045e9b652a5
+          link Parent -> 1062:0002:1019
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1062:0002:1019 EAMTZTagTableData name='TagTable_2'
+          IUnitElementAttributes.Access = 'Public'
+          IUnitElementAttributes.ElementAccess = 'Undefined'
+          ICoreAttributes.CreationTime = '2026-10-19T18:11:29.067272Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-19T18:11:29.067272Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Name = 'TagTable_2'
+          link AggregatingFolder -> 100e:0002:1018
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link EAMTZTagTableDataFingerprintContainer -> 1039:0022:101a
+          link EAMTZTagTableData_IUnitElementAttributes_BaseUnitData -> 101c:0010:813
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0014:0007:1400, 0015:0007:20

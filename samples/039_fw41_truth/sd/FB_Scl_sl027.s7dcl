@@ -1,0 +1,20 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl027"
+    VAR_INPUT
+        v_mn : Time;
+        v_in : Time;
+        v_mx : Time;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Time;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := LIMIT(MN := #v_mn, IN := #v_in, MX := #v_mx);
+    END_NETWORK
+END_FUNCTION_BLOCK

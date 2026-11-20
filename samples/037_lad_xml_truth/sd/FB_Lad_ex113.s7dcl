@@ -1,0 +1,32 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex113"
+    VAR_INPUT
+        v_prgflt_reset_mask : DWord;
+        v_accflt_reset_mask : DWord;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_prgflt_masked : DWord;
+        v_accflt_masked : DWord;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            DMSK_FLT(
+                PRGFLT_RESET_MASK := #v_prgflt_reset_mask,
+                ACCFLT_RESET_MASK := #v_accflt_reset_mask,
+                RET_VAL => #v_ret_val,
+                PRGFLT_MASKED => #v_prgflt_masked,
+                ACCFLT_MASKED => #v_accflt_masked
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

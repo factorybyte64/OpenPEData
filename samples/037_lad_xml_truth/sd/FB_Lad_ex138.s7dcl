@@ -1,0 +1,51 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex138"
+    VAR_INPUT
+        v_req : Bool;
+        v_records : UDInt;
+        v_format : UInt;
+        v_timestamp : UInt;
+        v_name : Array[0..99] of Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_id : DWord;
+        v_header : Array[0..99] of Byte;
+        v_data : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : DataLogCreate;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.DataLogCreate(
+                REQ := #v_req,
+                RECORDS := #v_records,
+                FORMAT := #v_format,
+                TIMESTAMP := #v_timestamp,
+                NAME := #v_name,
+                DONE => #v_done,
+                BUSY => #v_busy,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                ID := #v_id,
+                HEADER := #v_header,
+                DATA := #v_data
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

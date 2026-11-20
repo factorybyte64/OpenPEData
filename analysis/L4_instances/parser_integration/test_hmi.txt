@@ -1,0 +1,69 @@
+# HMI tests (openpedata.hmi against Openness ground truth)
+
+| Sample | Source | Checks | Result |
+| --- | --- | --- | --- |
+| 100_hmi_device | folder | 10 | OK |
+| 100_hmi_device | zap21 | 10 | OK |
+| 101_hmi_base | folder | 8 | OK |
+| 101_hmi_base | zap21 | 8 | OK |
+| 102_hmi_tag_int | folder | 8 | OK |
+| 102_hmi_tag_int | zap21 | 8 | OK |
+| 103_hmi_tag_ext | folder | 8 | OK |
+| 103_hmi_tag_ext | zap21 | 8 | OK |
+| 104_hmi_tag_cycle | folder | 8 | OK |
+| 104_hmi_tag_cycle | zap21 | 8 | OK |
+| 105_hmi_tag_comment | folder | 9 | OK |
+| 105_hmi_tag_comment | zap21 | 9 | OK |
+| 106_hmi_tagtable_group | folder | 1 | OK |
+| 106_hmi_tagtable_group | zap21 | 1 | OK |
+| 107_hmi_alarmclass | folder | 8 | OK |
+| 107_hmi_alarmclass | zap21 | 8 | OK |
+| 108_hmi_alarm_discrete | folder | 10 | OK |
+| 108_hmi_alarm_discrete | zap21 | 10 | OK |
+| 109_hmi_alarm_analog | folder | 15 | OK |
+| 109_hmi_alarm_analog | zap21 | 15 | OK |
+| 110_hmi_screen | folder | 5 | OK |
+| 110_hmi_screen | zap21 | 5 | OK |
+| 111_hmi_screen_rename | folder | 5 | OK |
+| 111_hmi_screen_rename | zap21 | 5 | OK |
+| 112_hmi_screen_backcolor | folder | 5 | OK |
+| 112_hmi_screen_backcolor | zap21 | 5 | OK |
+| 113_hmi_screen_group | folder | 5 | OK |
+| 113_hmi_screen_group | zap21 | 5 | OK |
+| 114_hmi_screen2 | folder | 9 | OK |
+| 114_hmi_screen2 | zap21 | 9 | OK |
+| 115_hmi_item_rect | folder | 10 | OK |
+| 115_hmi_item_rect | zap21 | 10 | OK |
+| 116_hmi_item_rect_pos | folder | 11 | OK |
+| 116_hmi_item_rect_pos | zap21 | 11 | OK |
+| 117_hmi_item_rect_color | folder | 12 | OK |
+| 117_hmi_item_rect_color | zap21 | 12 | OK |
+| 118_hmi_item_text | folder | 12 | 1 errors |
+| 118_hmi_item_text | zap21 | 12 | 1 errors |
+| 119_hmi_screen_tag | folder | 9 | OK |
+| 119_hmi_screen_tag | zap21 | 9 | OK |
+| 120_hmi_item_iofield | folder | 10 | OK |
+| 120_hmi_item_iofield | zap21 | 10 | OK |
+| 121_hmi_item_iofield_pvtext | folder | 11 | OK |
+| 121_hmi_item_iofield_pvtext | zap21 | 11 | OK |
+| 122_hmi_item_button | folder | 12 | 1 errors |
+| 122_hmi_item_button | zap21 | 12 | 1 errors |
+| 123_hmi_button_event | folder | 4 | OK |
+| 123_hmi_button_event | zap21 | 4 | OK |
+| 124_hmi_item_iofield_dyn | folder | 3 | OK |
+| 124_hmi_item_iofield_dyn | zap21 | 3 | OK |
+| 126_hmi_subnet | folder | 0 | OK |
+| 126_hmi_subnet | zap21 | 0 | OK |
+| F01_hmi_allobjects | folder | 165 | 3 errors |
+| F01_hmi_allobjects | zap21 | 165 | 3 errors |
+- 118_hmi_item_text folder: item Text_1 Text: parser {'de-DE': 'Text', 'en-US': 'Hello', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'Hello'}
+- 118_hmi_item_text zap21: item Text_1 Text: parser {'de-DE': 'Text', 'en-US': 'Hello', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'Hello'}
+- 122_hmi_item_button folder: item Button_1 Text: parser {'de-DE': 'Text', 'en-US': 'Text', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'Text'}
+- 122_hmi_item_button zap21: item Button_1 Text: parser {'de-DE': 'Text', 'en-US': 'Text', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'Text'}
+- F01_hmi_allobjects folder: item B_Text1 Text: parser {'de-DE': 'Text', 'en-US': 'F01 Basic Text', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'F01 Basic Text'}
+- F01_hmi_allobjects folder: item E_Button1 Text: parser {'de-DE': 'Text', 'en-US': 'F01 Button', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'F01 Button'}
+- F01_hmi_allobjects folder: item E_TextBox1 Text: parser {'de-DE': 'Text box', 'en-US': 'F01 TextBox', 'es-ES': 'Text box', 'fr-FR': 'Text box', 'it-IT': 'Text box', 'zh-CN': 'Text box'}, truth {'en-US': 'F01 TextBox'}
+- F01_hmi_allobjects zap21: item B_Text1 Text: parser {'de-DE': 'Text', 'en-US': 'F01 Basic Text', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'F01 Basic Text'}
+- F01_hmi_allobjects zap21: item E_Button1 Text: parser {'de-DE': 'Text', 'en-US': 'F01 Button', 'es-ES': 'Text', 'fr-FR': 'Text', 'it-IT': 'Text', 'zh-CN': 'Text'}, truth {'en-US': 'F01 Button'}
+- F01_hmi_allobjects zap21: item E_TextBox1 Text: parser {'de-DE': 'Text box', 'en-US': 'F01 TextBox', 'es-ES': 'Text box', 'fr-FR': 'Text box', 'it-IT': 'Text box', 'zh-CN': 'Text box'}, truth {'en-US': 'F01 TextBox'}
+

@@ -1,0 +1,15 @@
+{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_D
+    VAR
+        d_val : LReal;
+        d_time : LTime;
+        d_arr : Array[-2..2] of UDInt;
+    END_VAR
+
+    d_val := 3.25;
+
+END_DATA_BLOCK

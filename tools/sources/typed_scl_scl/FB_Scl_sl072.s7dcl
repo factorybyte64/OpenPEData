@@ -1,0 +1,17 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl072"
+    VAR_INPUT
+        v_in : Date;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Date;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := CONVERT(IN := #v_in);
+    END_NETWORK
+END_FUNCTION_BLOCK

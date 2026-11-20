@@ -1,0 +1,37 @@
+﻿FUNCTION_BLOCK "FB_StlC_039"
+TITLE = STL call ReadFromArrayDBL
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      req : Bool;
+      di1 : DInt;
+      dba : DB_ANY;
+   END_VAR
+
+   VAR_OUTPUT 
+      busy : Bool;
+      done : Bool;
+      err : Int;
+   END_VAR
+
+   VAR 
+      val : Int;
+      inst {InstructionName := 'ReadFromArrayDBL'; LibVersion := '1.2'} : ReadFromArrayDBL;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 039 ReadFromArrayDBL
+      CALL #inst
+      {ptr_type := 'DB_ANY'}
+      (  req                         := #req , 
+         "db"                        := #dba , 
+         index                       := #di1 , 
+         busy                        := #busy , 
+         done                        := #done , 
+         error                       := #err , 
+         value                       := #val
+      );
+END_FUNCTION_BLOCK
+

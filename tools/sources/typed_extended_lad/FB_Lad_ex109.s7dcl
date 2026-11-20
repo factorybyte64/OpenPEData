@@ -1,0 +1,21 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex109"
+    VAR_INPUT
+        v_ob_nr : Int;
+        v_dtime : Time;
+        v_sign : Word;
+        v_ret_val : Int;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Srt_Dint( OB_NR := #v_ob_nr, DTIME := #v_dtime, SIGN := #v_sign, RET_VAL := #v_ret_val )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

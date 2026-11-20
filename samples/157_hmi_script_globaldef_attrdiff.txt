@@ -1,0 +1,98 @@
+A: 156_hmi_script_module.zap21  B: 157_hmi_script_globaldef.zap21
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-29T20:45:16.655414Z' -> '2026-10-29T20:45:37.433579Z'  (timestamp)
+          raw <links 104>: 24 -> 24 bytes
+          +link typed slot 113 -> 1007:00e3:2018
+          -link typed slot 113 -> 1007:00e3:1c10
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-29T20:45:16.655414Z' -> '2026-10-29T20:45:37.433579Z'  (timestamp)
+REMOVED 1007:00e3:1c10 HmiScriptGlobalModuleData name='Utils'
+NEW     1007:00e3:2018 HmiScriptGlobalModuleData name='Utils'
+          ICoreAttributes.CreationTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Utils'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IScriptModuleAttributes.Language = 'JavaScript'
+          IScriptModuleAttributes.Scope = 'Global'
+          link ModuleParent -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link GlobalSection -> 1008:00e3:2019
+          link SimpleScriptChildren -> 1009:00e3:201a
+          link Elements -> 1009:00e3:201a
+          link SimpleScriptChildren -> 1009:00e3:201b
+          link Elements -> 1009:00e3:201b
+REMOVED 1008:00e3:1c11 HmiScriptGlobalSectionData name='Global definition area'
+NEW     1008:00e3:2019 HmiScriptGlobalSectionData name='Global definition area'
+          ICoreAttributes.CreationTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Global definition area'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IScriptAttributes.Language = 'JavaScript'
+          IScriptAttributes.Scope = 'Global'
+          IScriptAttributes.Code = bytes[440] b801000012000000500000005f0000006a0000007a00000085000000900000009b000000a7000000
+          IScriptDataExpandoAttributes.Code = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          link Module -> 1007:00e3:2018
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+REMOVED 1009:00e3:1c12 HmiScriptGlobalData name='Add'
+NEW     1009:00e3:201a HmiScriptGlobalData name='Add'
+          ICoreAttributes.CreationTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Add'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IScriptAttributes.Language = 'JavaScript'
+          IScriptAttributes.Scope = 'Global'
+          IScriptAttributes.Code = bytes[165] a50000000a000000300000003c0000004800000058000000630000006e0000007900000084000000
+          IScriptDataExpandoAttributes.Signature = bytes[62] 00260000000000000000000000001001000000010100000026000000010000001a0000000b000080
+          IScriptDataExpandoAttributes.Code = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IScriptLinkExpandoAttributes.249253310 = bytes[5] 0000000000
+          IScriptSignatureAttributes.HasReturnValue = False
+          IScriptSignatureAttributes.IsAsync = False
+          IScriptSignatureAttributes.IsExported = True
+          IScriptSignatureAttributes.FunctionName = bytes[31] 1f000000010000000c0000001300000009000000010a323439323533333130
+          IScriptSignatureAttributes.ParameterList = bytes[56] 38000000020000001000000024000000140000001000000011000000120000000101026114000000
+          link SimpleScriptParent -> 1007:00e3:2018
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link Module -> 1007:00e3:2018
+          link ExpandoReferences -> 1009:00e3:201a
+          link ExpandoReferencesInverse -> 1009:00e3:201a
+NEW     1009:00e3:201b HmiScriptGlobalData name='Scale'
+          ICoreAttributes.CreationTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:45:37.433579Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Scale'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IScriptAttributes.Language = 'JavaScript'
+          IScriptAttributes.Scope = 'Global'
+          IScriptAttributes.Code = bytes[170] aa0000000a000000300000003c0000004800000058000000630000006e0000007900000084000000
+          IScriptDataExpandoAttributes.Signature = bytes[63] 00270000000000000000000000001001000000010100000027000000010000001b0000000b000080
+          IScriptDataExpandoAttributes.Code = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IScriptLinkExpandoAttributes.2045365066 = bytes[5] 0000000000
+          IScriptSignatureAttributes.HasReturnValue = False
+          IScriptSignatureAttributes.IsAsync = False
+          IScriptSignatureAttributes.IsExported = True
+          IScriptSignatureAttributes.FunctionName = bytes[32] 20000000010000000c0000001400000009000000010b32303435333635303636
+          IScriptSignatureAttributes.ParameterList = bytes[32] 20000000010000000c0000001400000010000000110000001200000001010278
+          link SimpleScriptParent -> 1007:00e3:2018
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link Module -> 1007:00e3:2018
+          link ExpandoReferences -> 1009:00e3:201b
+          link ExpandoReferencesInverse -> 1009:00e3:201b
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[735] 013109000000000000000000000010010000000101000000c505785eed95df6e9b3014c6f728888b -> bytes[769] 01ff0a000000000000000000000010010000000101000000e705785eed96dd4edb3014c7f728512e
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-29T20:45:24.159530Z' -> '2026-10-29T20:45:40.801564Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

@@ -1,0 +1,59 @@
+{
+ "us001": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Overview of USS instructions"
+ },
+ "us002": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Requirements for using the USS protocol"
+ },
+ "us003": {
+  "block": "FB_Lad_us003",
+  "body": [
+   "USS_Port_Scan pins=PORT,BAUD,USS_DB,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "USS_PORT: Edit communication via USS network",
+  "typed": true
+ },
+ "us004": {
+  "block": "FB_Lad_us004",
+  "body": [
+   "USS_Drive_Control pins=RUN,OFF2,OFF3,F_ACK,DIR,DRIVE,PZD_LEN,SPEED_SP,CTRL3,CTRL4,CTRL5,CTRL6,CTRL7,CTRL8,NDR,ERROR,STATUS,RUN_EN,D_DIR,INHIBIT,FAULT,SPEED,STATUS1,STATUS3,STATUS4,STATUS5,STATUS6,STATUS7,STATUS8"
+  ],
+  "ok": true,
+  "title": "USS_DRIVE: Swap data with drive",
+  "typed": true
+ },
+ "us005": {
+  "block": "FB_Lad_us005",
+  "body": [
+   "USS_Read_Param pins=REQ,DRIVE,PARAM,INDEX,USS_DB,DONE,ERROR,STATUS,VALUE"
+  ],
+  "ok": true,
+  "title": "USS_RPM: Readout parameters from the drive",
+  "typed": true
+ },
+ "us006": {
+  "block": "FB_Lad_us006",
+  "body": [
+   "USS_Write_Param pins=REQ,DRIVE,PARAM,INDEX,EEPROM,VALUE,USS_DB,DONE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "USS_WPM: Change parameters in the drive",
+  "typed": true
+ },
+ "us007": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter STATUS of USS instructions"
+ }
+}

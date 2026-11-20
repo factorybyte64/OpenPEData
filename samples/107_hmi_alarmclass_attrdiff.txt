@@ -1,0 +1,1582 @@
+A: 103_hmi_tag_ext  B: 107_hmi_alarmclass
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:19.870830Z' -> '2026-10-20T15:26:15.629185Z'  (timestamp)
+          raw <links 38>: 252 -> 252 bytes
+          +link typed slot 47 -> 1002:00c0:1c16
+NEW     1002:00c0:1c16 HmiAlarmClassData name='AlarmClass_Test'
+          ICoreAttributes.CreationTime = '2026-10-20T15:26:15.629185Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T15:26:15.629185Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'AlarmClass_Test'
+          IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+          IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+          IHmiAlarmClassAttributes.AlarmLogging = False
+          IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+          IHmiAlarmClassAttributes.ComingFlashing = False
+          IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+          IHmiAlarmClassAttributes.ComingGoingFlashing = False
+          IHmiAlarmClassAttributes.Id_ForInstanceFilter = 64
+          IHmiAlarmClassAttributes.UniqueUserComment = False
+          IHmiAlarmClassAttributes.UseComingAlarmComment = False
+          IHmiAlarmClassAttributes.EmailAddress = ''
+          IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+          IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+          IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000ffffffff
+          IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+          IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000ffffffff
+          IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+          IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+          IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+          IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+          IILHmiAlarmClassAttributes.Acknowledgement = False
+          IILHmiAlarmClassAttributes.Id = 19
+          IILHmiAlarmClassAttributes.Priority = 1
+          IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+          IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+          IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+          IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+          IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+          link HmiAlarmClassDataParentRelation -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiOnlyAlarmClassPeAlarmClassRelation -> 1003:0040:1c17
+NEW     1003:0040:1c17 AlarmClassData name='AlarmClass_Test'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'AlarmClass_Test'
+          ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T15:26:15.761989Z'
+          IAlarmClassData.Acknowledgement = True
+          IAlarmClassData.GlobalId = 0
+          IAlarmClassData.Id = 64
+          IAlarmClassData.IsReadOnly = False
+          IAlarmClassData.ModifiedTime = '2026-10-20T15:26:16.761989Z'
+          IAlarmClassData.Priority = 0
+          IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+          link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1c16
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ShortName -> 100b:0001:1c19
+          link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1c1a
+NEW     1005:00c8:1c1a HmiTextData name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextExtendedData.DefaultText = 'AlarmClass_Test'
+          ICoreTextRepository.Text = bytes[79] 4f00000029000000ffffffff01000000ffff160000000f000000416c61726d436c6173735f546573
+          link AlarmClassData_IDisplayNaming_DisplayName_Inverse -> 1003:0040:1c17
+          link Category -> 1009:0040:1348
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:20.616318Z' -> '2026-10-20T15:26:15.629185Z'  (timestamp)
+CHANGED 1009:0040:1348 AlarmTextCategory name='Alarm'
+          raw <links 1>: 308 -> 340 bytes
+          +link CategoryInverse -> 1005:00c8:1c1a
+CHANGED 100a:0040:56b AlarmClassDisplayNameCategory name='AlarmClassDisplayNameCategory'
+          raw <links 1>: 372 -> 388 bytes
+          +link CategoryInverse -> 100b:0001:1c19
+NEW     100b:0001:1c19 CoreText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000000a10400000000000000000000100
+          link ShortName_Inverse -> 1003:0040:1c17
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link Category -> 100a:0040:56b
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[978] 00ba03000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e -> bytes[727] 015007000000000000000000000010010000000101000000bd05785eed55db6ed33018e651225fec
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:29.104844Z' -> '2026-10-20T15:26:22.429357Z'  (timestamp)
+store records changed/new: 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000c:0007:e, 000d:0007:10, 0014:0007:1ff8, 0015:0007:20
+
+DUMP HmiAlarmClassData, AlarmClassData
+OBJECT 1002:00c0:134a HmiAlarmClassData name='Alarm' size=466
+  slot  0 ICoreAttributes                                         88 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'Alarm'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 1
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:134b AlarmClassData name=None
+OBJECT 1002:00c0:134f HmiAlarmClassData name='OperatorInputRequest' size=481
+  slot  0 ICoreAttributes                                         103 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'OperatorInputRequest'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000cd0000ff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 000000cd0000ff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000cd0000ff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 000000cd0000ff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 2
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1350 AlarmClassData name=None
+OBJECT 1002:00c0:1354 HmiAlarmClassData name='OperatorInputInformation' size=485
+  slot  0 ICoreAttributes                                         107 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'OperatorInputInformation'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoGoNoAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 3
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1355 AlarmClassData name=None
+OBJECT 1002:00c0:1359 HmiAlarmClassData name='CriticalWithReset' size=478
+  slot  0 ICoreAttributes                                         100 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'CriticalWithReset'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'DualAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 4
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:135a AlarmClassData name=None
+OBJECT 1002:00c0:135e HmiAlarmClassData name='AlarmWithReset' size=475
+  slot  0 ICoreAttributes                                         97 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'AlarmWithReset'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'DualAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 5
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:135f AlarmClassData name=None
+OBJECT 1002:00c0:1363 HmiAlarmClassData name='Warning' size=468
+  slot  0 ICoreAttributes                                         90 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'Warning'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 6
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1364 AlarmClassData name=None
+OBJECT 1002:00c0:1368 HmiAlarmClassData name='WarningWithReset' size=477
+  slot  0 ICoreAttributes                                         99 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'WarningWithReset'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'DualAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 7
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1369 AlarmClassData name=None
+OBJECT 1002:00c0:136d HmiAlarmClassData name='Critical' size=469
+  slot  0 ICoreAttributes                                         91 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'Critical'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 00000000008bff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 8
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:136e AlarmClassData name=None
+OBJECT 1002:00c0:1372 HmiAlarmClassData name='Notification' size=473
+  slot  0 ICoreAttributes                                         95 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:54:22.741476Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'Notification'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 9
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1373 AlarmClassData name=None
+OBJECT 1002:00c0:1377 HmiAlarmClassData name='Information' size=472
+  slot  0 ICoreAttributes                                         94 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'Information'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoGoNoAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 10
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1378 AlarmClassData name=None
+OBJECT 1002:00c0:137c HmiAlarmClassData name='SystemWarning' size=474
+  slot  0 ICoreAttributes                                         96 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Name = 'SystemWarning'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 11
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:137d AlarmClassData name=None
+OBJECT 1002:00c0:1381 HmiAlarmClassData name='SystemAlarm' size=472
+  slot  0 ICoreAttributes                                         94 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:54:22.741476Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'SystemAlarm'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 12
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1382 AlarmClassData name=None
+OBJECT 1002:00c0:1386 HmiAlarmClassData name='SystemWarningWithoutClearEvent' size=491
+  slot  0 ICoreAttributes                                         113 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'SystemWarningWithoutClearEvent'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoGoSingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 00000000ffffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 13
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1387 AlarmClassData name=None
+OBJECT 1002:00c0:138b HmiAlarmClassData name='SystemAlarmWithoutClearEvent' size=489
+  slot  0 ICoreAttributes                                         111 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'SystemAlarmWithoutClearEvent'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoGoSingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = True
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = True
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 14
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000ffffffff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:138c AlarmClassData name=None
+OBJECT 1002:00c0:1390 HmiAlarmClassData name='SystemInformation' size=478
+  slot  0 ICoreAttributes                                         100 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'SystemInformation'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoGoNoAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 000000dcdcdcff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 15
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1391 AlarmClassData name=None
+OBJECT 1002:00c0:1395 HmiAlarmClassData name='SystemNotification' size=479
+  slot  0 ICoreAttributes                                         101 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:54:22.741476Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'SystemNotification'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 000000e6d8adff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 16
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1396 AlarmClassData name=None
+OBJECT 1002:00c0:1536 HmiAlarmClassData name='Acknowledgement' size=476
+  slot  0 ICoreAttributes                                         98 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'Acknowledgement'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 17
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1537 AlarmClassData name=None
+    link HmiAlarmClassPeAlarmClassRelation        -> 1003:0040:56a AlarmClassData name='Acknowledgement'
+OBJECT 1002:00c0:153a HmiAlarmClassData name='No Acknowledgement' size=479
+  slot  0 ICoreAttributes                                         101 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'No Acknowledgement'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'NoAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 0
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 18
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:153b AlarmClassData name=None
+    link HmiAlarmClassPeAlarmClassRelation        -> 1003:0040:56e AlarmClassData name='No Acknowledgement'
+OBJECT 1002:00c0:1c16 HmiAlarmClassData name='AlarmClass_Test' size=476
+  slot  0 ICoreAttributes                                         98 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IHmiAlarmClassAttributes                                136 bytes
+  slot  4 IILHmiAlarmClassAttributes                              73 bytes
+  slot  5 IAdditionalAttributes                                   -
+  slot  6 ISoftlinkAttributes                                     -
+  slot  7 ITextAttributes                                         -
+  slot  8 <links 0>                                               84 bytes
+  slot  9 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T15:26:15.629185Z'
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = False
+    ICoreAttributes.ModifiedTime = '2026-10-20T15:26:15.629185Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'AlarmClass_Test'
+    IHmiAlarmClassAttributes.AcknowledgementModel = 'SingleAck'
+    IHmiAlarmClassAttributes.AlarmAlertAcknowledgement = 'SeparateKey'
+    IHmiAlarmClassAttributes.AlarmLogging = False
+    IHmiAlarmClassAttributes.ComingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedFlashing = False
+    IHmiAlarmClassAttributes.ComingGoingFlashing = False
+    IHmiAlarmClassAttributes.Id_ForInstanceFilter = 64
+    IHmiAlarmClassAttributes.UniqueUserComment = False
+    IHmiAlarmClassAttributes.UseComingAlarmComment = False
+    IHmiAlarmClassAttributes.EmailAddress = ''
+    IHmiAlarmClassAttributes.AcknowledgedBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.AcknowledgedTextColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.ComingAcknowledgedBackColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.ComingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingGoingAcknowledgedBackColor = bytes[7] 000000ffffffff
+    IHmiAlarmClassAttributes.ComingGoingBackColor = bytes[7] 0000000000ffff
+    IHmiAlarmClassAttributes.ComingTextColor = bytes[7] 000000000000ff
+    IHmiAlarmClassAttributes.GoingBackColor = bytes[7] 00000000000000
+    IHmiAlarmClassAttributes.GoingTextColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.Acknowledgement = False
+    IILHmiAlarmClassAttributes.Id = 19
+    IILHmiAlarmClassAttributes.Priority = 1
+    IILHmiAlarmClassAttributes.ComingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingAcknowledgedTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.ComingGoingTextColor = bytes[7] 000000000000ff
+    IILHmiAlarmClassAttributes.NormalBackColor = bytes[7] 00000000000000
+    IILHmiAlarmClassAttributes.NormalTextColor = bytes[7] 00000000000000
+    link HmiAlarmClassDataParentRelation          -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link HmiOnlyAlarmClassPeAlarmClassRelation    -> 1003:0040:1c17 AlarmClassData name='AlarmClass_Test'
+OBJECT 1003:0040:134b AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.374009Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 53
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:55.374009Z'
+    IAlarmClassData.Priority = 12
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:134a HmiAlarmClassData name='Alarm'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:134d CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:134e HmiTextData name=None
+OBJECT 1003:0040:1350 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.374009Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 31
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.374009Z'
+    IAlarmClassData.Priority = 5
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:134f HmiAlarmClassData name='OperatorInputRequest'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1352 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1353 HmiTextData name=None
+OBJECT 1003:0040:1355 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.374009Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 30
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:55.375055Z'
+    IAlarmClassData.Priority = 1
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1354 HmiAlarmClassData name='OperatorInputInformation'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1357 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1358 HmiTextData name=None
+OBJECT 1003:0040:135a AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.375055Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 57
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.375055Z'
+    IAlarmClassData.Priority = 16
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1359 HmiAlarmClassData name='CriticalWithReset'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:135c CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:135d HmiTextData name=None
+OBJECT 1003:0040:135f AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.375055Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 56
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.375055Z'
+    IAlarmClassData.Priority = 12
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:135e HmiAlarmClassData name='AlarmWithReset'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1361 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1362 HmiTextData name=None
+OBJECT 1003:0040:1364 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.376103Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 52
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.376103Z'
+    IAlarmClassData.Priority = 8
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1363 HmiAlarmClassData name='Warning'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1366 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1367 HmiTextData name=None
+OBJECT 1003:0040:1369 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.376103Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 55
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.376103Z'
+    IAlarmClassData.Priority = 8
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1368 HmiAlarmClassData name='WarningWithReset'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:136b CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:136c HmiTextData name=None
+OBJECT 1003:0040:136e AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.377049Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 54
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:55.377049Z'
+    IAlarmClassData.Priority = 16
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:136d HmiAlarmClassData name='Critical'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1370 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1371 HmiTextData name=None
+OBJECT 1003:0040:1373 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.377049Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 51
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.377049Z'
+    IAlarmClassData.Priority = 4
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1372 HmiAlarmClassData name='Notification'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1375 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1376 HmiTextData name=None
+OBJECT 1003:0040:1378 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.377049Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 50
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.377049Z'
+    IAlarmClassData.Priority = 1
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1377 HmiAlarmClassData name='Information'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:137a CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:137b HmiTextData name=None
+OBJECT 1003:0040:137d AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.378210Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 60
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.378210Z'
+    IAlarmClassData.Priority = 8
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:137c HmiAlarmClassData name='SystemWarning'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:137f CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1380 HmiTextData name=None
+OBJECT 1003:0040:1382 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.378210Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 61
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.378210Z'
+    IAlarmClassData.Priority = 12
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1381 HmiAlarmClassData name='SystemAlarm'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1384 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1385 HmiTextData name=None
+OBJECT 1003:0040:1387 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.379054Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 28
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:55.379054Z'
+    IAlarmClassData.Priority = 8
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1386 HmiAlarmClassData name='SystemWarningWithoutClearEvent'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1389 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:138a HmiTextData name=None
+OBJECT 1003:0040:138c AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.379054Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 29
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.379054Z'
+    IAlarmClassData.Priority = 12
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:138b HmiAlarmClassData name='SystemAlarmWithoutClearEvent'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:138e CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:138f HmiTextData name=None
+OBJECT 1003:0040:1391 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.379054Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 58
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.379054Z'
+    IAlarmClassData.Priority = 1
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1390 HmiAlarmClassData name='SystemInformation'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1393 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1394 HmiTextData name=None
+OBJECT 1003:0040:1396 AlarmClassData name=None size=252
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T14:53:55.380253Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 59
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:56.380253Z'
+    IAlarmClassData.Priority = 4
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1395 HmiAlarmClassData name='SystemNotification'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1398 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1399 HmiTextData name=None
+OBJECT 1003:0040:1537 AlarmClassData name=None size=202
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  -
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 0
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:55.372456Z'
+    IAlarmClassData.Priority = 0
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1536 HmiAlarmClassData name='Acknowledgement'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1538 HmiTextData name=None
+    link ShortName                                -> 100b:0001:1539 CoreText name=None
+OBJECT 1003:0040:153b AlarmClassData name=None size=202
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         -
+  slot  2 ICoreExpandoAttributes                                  -
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 0
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T14:53:55.372456Z'
+    IAlarmClassData.Priority = 0
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:153a HmiAlarmClassData name='No Acknowledgement'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:153c HmiTextData name=None
+    link ShortName                                -> 100b:0001:153d CoreText name=None
+OBJECT 1003:0040:1c17 AlarmClassData name='AlarmClass_Test' size=277
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         25 bytes
+  slot  2 ICoreExpandoAttributes                                  50 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         41 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               -
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.Name = 'AlarmClass_Test'
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-20T15:26:15.761989Z'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 0
+    IAlarmClassData.Id = 64
+    IAlarmClassData.IsReadOnly = False
+    IAlarmClassData.ModifiedTime = '2026-10-20T15:26:16.761989Z'
+    IAlarmClassData.Priority = 0
+    IAlarmClassData.Invalids = bytes[10] 00000003000000010000
+    link HmiOnlyAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1c16 HmiAlarmClassData name='AlarmClass_Test'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ShortName                                -> 100b:0001:1c19 CoreText name=None
+    link AlarmClassData_IDisplayNaming_DisplayName -> 1005:00c8:1c1a HmiTextData name=None
+OBJECT 1003:0040:56a AlarmClassData name='Acknowledgement' size=366
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         25 bytes
+  slot  2 ICoreExpandoAttributes                                  98 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         30 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               52 bytes
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.Name = 'Acknowledgement'
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-19T17:04:55.294095Z'
+    ICoreExpandoAttributes.AlarmServices_Name = 'Acknowledgement'
+    IAlarmClassData.Acknowledgement = True
+    IAlarmClassData.GlobalId = 33
+    IAlarmClassData.Id = 0
+    IAlarmClassData.IsReadOnly = True
+    IAlarmClassData.ModifiedTime = '2026-10-19T17:04:55.295148Z'
+    IAlarmClassData.Priority = 0
+    IAlarmClassData.Invalids = None
+    link Project                                  -> 1028:0002:433 ProjectData name='000_empty'
+    link AlarmClassData_IDisplayNaming_DisplayName -> 100b:0001:56c CoreText name=None
+    link ShortName                                -> 100b:0001:56d CoreText name=None
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link HmiAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:1536 HmiAlarmClassData name='Acknowledgement'
+OBJECT 1003:0040:56e AlarmClassData name='No Acknowledgement' size=407
+  slot  0 IDisplayNaming                                          -
+  slot  1 ICoreAttributes                                         28 bytes
+  slot  2 ICoreExpandoAttributes                                  104 bytes
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAlarmClassData                                         30 bytes
+  slot  5 IShortNaming                                            -
+  slot  6 <links 0>                                               84 bytes
+  slot  7 <links 1>                                               84 bytes
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.Name = 'No Acknowledgement'
+    ICoreExpandoAttributes.AlarmServices_DisplayNameChanged = '2026-10-19T17:04:55.319873Z'
+    ICoreExpandoAttributes.AlarmServices_Name = 'No Acknowledgement'
+    IAlarmClassData.Acknowledgement = False
+    IAlarmClassData.GlobalId = 34
+    IAlarmClassData.Id = 0
+    IAlarmClassData.IsReadOnly = True
+    IAlarmClassData.ModifiedTime = '2026-10-19T17:04:55.319873Z'
+    IAlarmClassData.Priority = 0
+    IAlarmClassData.Invalids = None
+    link Project                                  -> 1028:0002:433 ProjectData name='000_empty'
+    link AlarmClassData_IDisplayNaming_DisplayName -> 100b:0001:56f CoreText name=None
+    link ShortName                                -> 100b:0001:570 CoreText name=None
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link SysDiagAlarmSettings                     -> 100e:0041:572 SysDiagAlarmSettingData name='Fault'
+    link SysDiagAlarmSettings                     -> 100e:0041:573 SysDiagAlarmSettingData name='MaintenanceDemanded'
+    link SysDiagAlarmSettings                     -> 100e:0041:574 SysDiagAlarmSettingData name='MaintenanceRequired'
+    link SysDiagAlarmSettings                     -> 100e:0041:575 SysDiagAlarmSettingData name='Info'
+    link HmiAlarmClassPeAlarmClassRelation_Inverse -> 1002:00c0:153a HmiAlarmClassData name='No Acknowledgement'
+
+H-022: files outside System/PEData.plf, base 103_hmi_tag_ext vs. 107_hmi_alarmclass (SHA-256, first 12)
+  CHG    000_empty.ap21  4de924fd9efb -> 22692646ba50
+  GONE   IM/SearchIndex/_10.cfs  cd64052c1f83 -> -
+  GONE   IM/SearchIndex/_10_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_11.cfs  b70a723c6531 -> -
+  NEW    IM/SearchIndex/_14.fdt  - -> 038e0e0c1b1a
+  NEW    IM/SearchIndex/_14.fdx  - -> 3f54d99be8f5
+  NEW    IM/SearchIndex/_14.fnm  - -> a976911742b7
+  NEW    IM/SearchIndex/_14.frq  - -> 3f0f72fae2e6
+  NEW    IM/SearchIndex/_14.prx  - -> ad3c7d922a02
+  NEW    IM/SearchIndex/_14.tii  - -> 2a376dc481f8
+  NEW    IM/SearchIndex/_14.tis  - -> 3dc0e915c8c6
+  NEW    IM/SearchIndex/_14.tvd  - -> bfc6a3f25465
+  NEW    IM/SearchIndex/_14.tvf  - -> e6f54a1ccb96
+  NEW    IM/SearchIndex/_14.tvx  - -> be92a4995260
+  NEW    IM/SearchIndex/_14_1.del  - -> 54d7a7c4ee90
+  NEW    IM/SearchIndex/_15.cfs  - -> 6f3a749a9e2d
+  GONE   IM/SearchIndex/_u.fdt  8e1d49989356 -> -
+  GONE   IM/SearchIndex/_u.fdx  5a0bb36abb8a -> -
+  GONE   IM/SearchIndex/_u.fnm  f5ea9c41f0be -> -
+  GONE   IM/SearchIndex/_u.frq  8d5c0f9a31b3 -> -
+  GONE   IM/SearchIndex/_u.prx  3686b6f42530 -> -
+  GONE   IM/SearchIndex/_u.tii  1ef5ee846508 -> -
+  GONE   IM/SearchIndex/_u.tis  37cb576d9f13 -> -
+  GONE   IM/SearchIndex/_u.tvd  4ca3d5e4a9ab -> -
+  GONE   IM/SearchIndex/_u.tvf  44b9ccea3613 -> -
+  GONE   IM/SearchIndex/_u.tvx  fe73dab20e4c -> -
+  GONE   IM/SearchIndex/_u_2.del  3a3829f43797 -> -
+  GONE   IM/SearchIndex/_v.cfs  893662e1ab44 -> -
+  GONE   IM/SearchIndex/_v_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_w.cfs  cdce1bd59bd8 -> -
+  GONE   IM/SearchIndex/_x.cfs  bc3b86361159 -> -
+  GONE   IM/SearchIndex/_y.cfs  e5e2e44458d0 -> -
+  GONE   IM/SearchIndex/_z.cfs  4bda6cdf62a1 -> -
+  CHG    IM/SearchIndex/segments.gen  96fc6a8fdefb -> a2d2b48caf51
+  GONE   IM/SearchIndex/segments_j  128ce5c3704d -> -
+  NEW    IM/SearchIndex/segments_o  - -> f7f1f6310b24
+  CHG    System/PEData.idx  beb59e0e12e2 -> aae89804ad59
+  name 'AlarmClass_Test' found in: System/PEData.plf (utf-8 x4)

@@ -1,0 +1,32 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex150"
+    VAR_INPUT
+        v_req : Bool;
+        v_db_number : DB_ANY;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_db_length : UDInt;
+        v_attrib : Byte;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            ATTR_DB(
+                REQ := #v_req,
+                DB_NUMBER := #v_db_number,
+                RET_VAL => #v_ret_val,
+                DB_LENGTH => #v_db_length,
+                ATTRIB => #v_attrib
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

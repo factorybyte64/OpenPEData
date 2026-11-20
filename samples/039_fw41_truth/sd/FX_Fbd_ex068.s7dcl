@@ -1,0 +1,102 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FX_Fbd_ex068"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+        "ib" : Int;
+        ic : Int;
+        da : DInt;
+        "db" : DInt;
+        ra : Real;
+        rb : Real;
+        wa : Word;
+        wb : Word;
+        dwa : DWord;
+        ba : Byte;
+        ta : Time;
+        tb : Time;
+        s1 : String;
+        s2 : String;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+        dout : DInt;
+        rout : Real;
+        wout : Word;
+        dwout : DWord;
+        bout : Byte;
+        tout : Time;
+        sout : String;
+    END_VAR
+    VAR_IN_OUT
+        p_start : Bool;
+        p_end : Bool;
+        p_id : HW_SUBMODULE;
+        p_pause_time : Time;
+        p_valid : Bool;
+        p_busy : Bool;
+        p_error : Bool;
+        p_status : DWord;
+        p_pe_mode_id : Byte;
+        arr : Array[0..9] of Int;
+        barr : Array[0..7] of Bool;
+        iinout : Int;
+    END_VAR
+    VAR
+        { S7_Setpoint := "False" }
+        inst : PE_START_END;
+        ton1 : TON_TIME;
+        tof1 : TOF_TIME;
+        tp1 : TP_TIME;
+        tonr1 : TONR_TIME;
+        ctu1 : CTU_INT;
+        ctd1 : CTD_INT;
+        ctud1 : CTUD_INT;
+        rtrig1 : R_TRIG;
+        ftrig1 : F_TRIG;
+        edge1 : Bool;
+        edge2 : Bool;
+        stat1 : Bool;
+        stat2 : Bool;
+        stati : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Bool;
+        t2 : Bool;
+        ti : Int;
+        td : DInt;
+        tr : Real;
+        tw : Word;
+        tt : Time;
+        var1 : Variant;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_33W"
+    }
+    NETWORK
+        RUNG
+            #inst.PE_START_END(
+                START := #p_start,
+                END := #p_end,
+                ID := #p_id,
+                PAUSE_TIME := #p_pause_time,
+                VALID => #p_valid,
+                BUSY => #p_busy,
+                ERROR => #p_error,
+                STATUS => #p_status,
+                PE_MODE_ID => #p_pe_mode_id
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

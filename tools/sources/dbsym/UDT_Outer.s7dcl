@@ -1,0 +1,10 @@
+TYPE "UDT_Outer" : STRUCT
+    inner : "UDT_Inner";
+    innerArr : Array[0..1] of "UDT_Inner";
+    s : Struct
+        a : Bool;
+        m : Array[0..1, 0..1] of Byte;
+    END_STRUCT;
+    txt : String[20] := 'outer';
+END_STRUCT;
+END_TYPE

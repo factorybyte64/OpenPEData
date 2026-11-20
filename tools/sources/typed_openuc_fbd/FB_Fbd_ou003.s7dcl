@@ -1,0 +1,37 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ou003"
+    VAR_INPUT
+        v_en_r : Bool;
+        v_cont : Bool;
+        v_len : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+        v_rcvd_len : UInt;
+    END_VAR
+    VAR_IN_OUT
+        v_connect : TCON_Param;
+        v_data : Bool;
+        v_com_rst : Bool;
+        v_adhoc : Variant;
+        v_addr : Variant;
+    END_VAR
+    VAR
+        inst : TrcvC;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.TrcvC( EN_R := #v_en_r, CONT := #v_cont, LEN := #v_len, CONNECT := #v_connect, DATA := #v_data, COM_RST := #v_com_rst, DONE => #v_done, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status, RCVD_LEN => #v_rcvd_len, ADHOC := #v_adhoc, ADDR := #v_addr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

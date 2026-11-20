@@ -1,0 +1,103 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FX_Fbd_ex119"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+        "ib" : Int;
+        ic : Int;
+        da : DInt;
+        "db" : DInt;
+        ra : Real;
+        rb : Real;
+        wa : Word;
+        wb : Word;
+        dwa : DWord;
+        ba : Byte;
+        ta : Time;
+        tb : Time;
+        s1 : String;
+        s2 : String;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+        dout : DInt;
+        rout : Real;
+        wout : Word;
+        dwout : DWord;
+        bout : Byte;
+        tout : Time;
+        sout : String;
+    END_VAR
+    VAR_IN_OUT
+        p_sig : Bool;
+        p_timestamp : LDT;
+        p_sd_i : Variant;
+        p_error : Bool;
+        p_status : Word;
+        arr : Array[0..9] of Int;
+        barr : Array[0..7] of Bool;
+        iinout : Int;
+    END_VAR
+    VAR
+        { S7_Setpoint := "False" }
+        inst : Program_Alarm;
+        ton1 : TON_TIME;
+        tof1 : TOF_TIME;
+        tp1 : TP_TIME;
+        tonr1 : TONR_TIME;
+        ctu1 : CTU_INT;
+        ctd1 : CTD_INT;
+        ctud1 : CTUD_INT;
+        rtrig1 : R_TRIG;
+        ftrig1 : F_TRIG;
+        edge1 : Bool;
+        edge2 : Bool;
+        stat1 : Bool;
+        stat2 : Bool;
+        stati : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Bool;
+        t2 : Bool;
+        ti : Int;
+        td : DInt;
+        tr : Real;
+        tw : Word;
+        tt : Time;
+        var1 : Variant;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4Kx"
+    }
+    NETWORK
+        RUNG
+            #inst.Program_Alarm(
+                SIG := #p_sig,
+                TIMESTAMP := #p_timestamp,
+                SD_1 := #"a",
+                SD_2 := #"a",
+                SD_3 := #"a",
+                SD_4 := #"a",
+                SD_5 := #"a",
+                SD_6 := #"a",
+                SD_7 := #"a",
+                SD_8 := #"a",
+                SD_9 := #"a",
+                SD_10 := #"a",
+                Error => #p_error,
+                Status => #p_status
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,23 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex028"
+    VAR_INPUT
+        v_in1 : String;
+        v_in2 : String;
+    END_VAR
+    VAR_OUTPUT
+        v_out : String;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "[str_type := Int, card := Int]" }
+            Concat( IN1 := #v_in1, IN2 := #v_in2, OUT => #v_out )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

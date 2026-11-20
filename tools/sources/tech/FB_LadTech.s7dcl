@@ -1,0 +1,23 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_LadTech"
+    VAR_INPUT
+        sp : Real;
+        pv : Real;
+    END_VAR
+    VAR_OUTPUT
+        outv : Real;
+        err : Bool;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "PID_Comp_2_3"( Setpoint := #sp, Input := #pv, Output => #outv, Error => #err )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

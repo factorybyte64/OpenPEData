@@ -1,0 +1,45 @@
+A: 110_hmi_screen  B: 118_hmi_item_text
+CHANGED 1002:00cd:1808 ILScreenData name='Screen_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:03:53.618946Z' -> '2026-10-20T16:17:59.589819Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link ILScreenItems -> 1003:00cd:1c10
+NEW     1003:00cd:1c10 ILScreenItemData name='Text_1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:17:59.589819Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:18:00.034249Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Text_1'
+          ICoreAttributes.Subtype = 'HmiText'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes."9K = bytes[156] 9c0000005b000000ffffffff030000007f000904ffff220000004a00000053000000240000003536
+          IPropertyDynamicLinkExpandoAttributes.Jk4 = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1808
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:03:53.618946Z' -> '2026-10-20T16:17:59.589819Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[697] 01f6050000000000000000000000100100000001010000009f05785eed544b6edb3010ed51042eb2 -> bytes[761] 01c907000000000000000000000010010000000101000000df05785eed554b6edb3010ed51042db2
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:04:00.999296Z' -> '2026-10-20T16:18:05.111920Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:1ff8, 0014:0007:1ff9, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 110_hmi_screen vs. 118_hmi_item_text (SHA-256, first 12)
+  NEW    IM/SearchIndex/_10.cfs  - -> cc79edc58687
+  NEW    IM/SearchIndex/_10_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_11.cfs  - -> c2d9e2c17bc0
+  GONE   IM/SearchIndex/_u_1.del  10798ce1f02b -> -
+  NEW    IM/SearchIndex/_u_2.del  - -> 312d2cdfa99a
+  NEW    IM/SearchIndex/_w_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_x.cfs  - -> 266d0387b00e
+  NEW    IM/SearchIndex/_y.cfs  - -> 98578ea0b17b
+  NEW    IM/SearchIndex/_y_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_z.cfs  - -> 8bb3e67a3e9e
+  CHG    IM/SearchIndex/segments.gen  96fc6a8fdefb -> a2d2b48caf51
+  GONE   IM/SearchIndex/segments_j  7bdb31c5a885 -> -
+  NEW    IM/SearchIndex/segments_o  - -> 1e5adddf4f63
+  CHG    System/PEData.idx  ad1c045d77f5 -> c498b7a5069d
+  CHG    XRef/XRef.db  da7093d09b04 -> a4d56e8a7786
+  name 'Hello' found in: System/PEData.plf (utf-8 x2)

@@ -1,0 +1,37 @@
+{
+    S7_Optimized := "TRUE";
+    S7_EditorMode := "SCL";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Multi"
+    VAR_INPUT
+        start : Bool;
+        cfg : "UDT_Inner";
+        mat : Array[0..1, 0..1] of Int;
+    END_VAR
+    VAR_OUTPUT
+        done : Bool;
+    END_VAR
+    VAR_IN_OUT
+        io : Real;
+    END_VAR
+    VAR
+        tmr : TON_TIME;
+        tmrs : Array[0..2] of TON_TIME;
+        ctr : CTU_INT;
+        edge : R_TRIG;
+        sub : "FB_Iface";
+        subs : Array[0..1] of "FB_Iface";
+        data : "UDT_Outer";
+        cnt : Int := 4;
+        Temp : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #tmr(IN := #start, PT := T#1S);
+        #done := #tmr.Q;
+    END_NETWORK
+END_FUNCTION_BLOCK

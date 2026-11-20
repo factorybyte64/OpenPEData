@@ -1,0 +1,82 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclLit" : Void
+    VAR_TEMP
+        b : Bool;
+        by : Byte;
+        w : Word;
+        dw : DWord;
+        lw : LWord;
+        si : SInt;
+        i : Int;
+        di : DInt;
+        li : LInt;
+        usi : USInt;
+        ui : UInt;
+        udi : UDInt;
+        uli : ULInt;
+        r : Real;
+        lr : LReal;
+        t : Time;
+        lt : LTime;
+        d : Date;
+        tod : Time_Of_Day;
+        ltod : LTime_Of_Day;
+        dt : DTL;
+        ldt : LDT;
+        c : Char;
+        wc : WChar;
+        s : String;
+        ws : WString;
+        sn : String[10];
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #b := TRUE;
+        #b := FALSE;
+        #by := 16#7F;
+        #w := 16#BEEF;
+        #dw := 16#DEAD_BEEF;
+        #lw := 16#0123_4567_89AB_CDEF;
+        #si := -128;
+        #i := 32767;
+        #di := -2147483648;
+        #li := 9223372036854775807;
+        #usi := 255;
+        #ui := 65535;
+        #udi := 4294967295;
+        #uli := 18446744073709551615;
+        #r := 3.5;
+        #r := 1.0e10;
+        #lr := 2.718281828459045;
+        #t := T#5s;
+        #t := T#1d_2h_3m_4s_5ms;
+        #t := T#-10s;
+        #lt := LT#1d2h3m4s5ms6us7ns;
+        #d := D#2024-02-29;
+        #tod := TOD#12:30:45.123;
+        #ltod := LTOD#23:59:59.999999999;
+        #dt := DTL#2024-02-29-12:30:45.5;
+        #ldt := LDT#2024-02-29-12:30:45;
+        #c := 'A';
+        #c := '$N';
+        #wc := WCHAR#'W';
+        #s := 'Hello';
+        #s := 'It$'s a $$ test';
+        #s := '';
+        #ws := WSTRING#'Wide';
+        #sn := 'abc';
+        #i := INT#5;
+        #di := DINT#-5;
+        #r := REAL#2.5;
+        #w := WORD#16#FF;
+        #by := BYTE#16#0F;
+        #b := BOOL#1;
+        #t := TIME#10s;
+        #lr := LREAL#1.0;
+        #i := 1_000;
+    END_NETWORK
+END_FUNCTION

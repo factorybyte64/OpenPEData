@@ -1,0 +1,23 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl015"
+    VAR_INPUT
+        v_cd : Bool;
+        v_ld : Bool;
+        v_pv : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_q : Bool;
+        v_cv : Char;
+    END_VAR
+    VAR
+        inst : CTD;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #inst(CD := #v_cd, LD := #v_ld, PV := #v_pv, Q => #v_q, CV => #v_cv);
+    END_NETWORK
+END_FUNCTION_BLOCK

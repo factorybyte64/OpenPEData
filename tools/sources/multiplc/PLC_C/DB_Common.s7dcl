@@ -1,0 +1,17 @@
+{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_Common
+    VAR
+        c_onlyC : Word;
+        motors : Array[1..2] of STRUCT
+            isOn : Bool;
+            amps : Real;
+        END_STRUCT;
+    END_VAR
+
+        motors[2].amps := 1.25;
+
+END_DATA_BLOCK

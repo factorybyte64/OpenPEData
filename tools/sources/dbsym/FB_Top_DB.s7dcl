@@ -1,0 +1,10 @@
+{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK FB_Top_DB : FB_Top
+    m.sub.stInt := 55;
+    ms[1].cnt := 9;
+    ms[0].data.txt := 'deep';
+END_DATA_BLOCK

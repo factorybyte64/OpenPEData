@@ -1,0 +1,28 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex019"
+    VAR_INPUT
+        v_in : USInt;
+        v_size : USInt;
+        v_prec : USInt;
+        v_format : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_p : UInt;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "[value_type := Int, str_type := Int]" }
+            Val_Strg( IN := #v_in, SIZE := #v_size, PREC := #v_prec, FORMAT := #v_format, P := #v_p, OUT => #v_out )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,84 @@
+== Records: new/changed/deleted compared to predecessor (latest versions)
+NEW       0014:0007:1400           store                                    len=389    
+NEW       1001:0022:101a           CodeBlockData                            len=2114   FB_Empty
+NEW       100e:0002:101c           FolderData                               len=287    ProgramBlocksFolder
+NEW       100e:0002:1022           FolderData                               len=233    ProgramUnitsFolder
+NEW       100e:0010:1019           DeviceData                               len=584    PLC_1
+NEW       1016:0002:1018           LibraryMasterCopyData                    len=1741   FB_Empty
+NEW       1016:0022:101d           CompileUnitData                          len=469    None
+NEW       1019:0001:1021           ResourceAllocatorData                    len=495    None
+NEW       101c:0010:101b           S7ControllerTargetData                   len=25934  PLC_1
+NEW       1202:0022:101e           IdentContainerData                       len=273    None
+NEW       1607:0022:101f           TargetBlockInterfaceContainer            len=201    None
+NEW       160c:0022:1020           InterfaceVersionRootData                 len=946    BIVE:FB_Empty/7b7e9644-92d4-4457-ad74-cc63e9b2746c
+CHANGED   0003:0007:3              store                                    len=57     
+CHANGED   0004:0007:5              store                                    len=57     
+CHANGED   0005:0007:8              store                                    len=294    
+CHANGED   0006:0007:15             store                                    len=99     
+CHANGED   000c:0007:e              store                                    len=105    
+CHANGED   000d:0007:10             store                                    len=97     
+CHANGED   0011:0007:bf9            store                                    len=365    
+CHANGED   0015:0007:20             store                                    len=101    
+CHANGED   1002:0004:920            PackageContainerData                     len=362    Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}
+CHANGED   1006:0001:449            CorePersistenceInfo                      len=328    None
+CHANGED   1009:0001:442            CoreCulture                              len=341    en-US(1033)
+CHANGED   100e:0002:446            FolderData                               len=307    LibraryMasterCopySystemFolder
+CHANGED   1028:0002:433            ProjectData                              len=533    000_empty
+CHANGED   1b01:0022:915            MddCache                                 len=20195  None
+tombstones in cur: 0 prev: 0
+
+== LibraryMasterCopyData: ['1016:0002:1018']
+GUID e1a017e353d59748bd7e55b0da10f03a slots 12 flags 13 3 sets ['IMasterCopyCustomAttributes', 'IDisplayNaming', 'IFolderElementAttributes', 'IFolderParentAttributes', 'ICoreAttributes', 'ICoreExpandoAttributes', 'ICoreExpandoLinkAttributes', 'ICoreLibIdAttributes', 'ICoreLibMasterCopyAttributes', 'ICoreLibObjectAttributes']
+slot errors: []
+  ICoreAttributes.CreationTime = '2026-10-19T18:19:33.265831Z'
+  ICoreAttributes.IsShell = False
+  ICoreAttributes.ModifiedTime = '2026-10-19T18:19:33.265831Z'
+  ICoreAttributes.Version = ''
+  ICoreAttributes.Author = 'factorybyte'
+  ICoreAttributes.LastModifiedBy = 'factorybyte'
+  ICoreAttributes.Name = 'FB_Empty'
+  ICoreAttributes.Subtype = 'IECPL'
+  ICoreAttributes.Comment = b' \x00\x00\x00\x10\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+  ICoreLibMasterCopyAttributes.BinaryData = b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x01\x00\x00\x00\x00'
+  ICoreLibMasterCopyAttributes.CoreObjectData = b'\x00\x00\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00'
+  ICoreLibMasterCopyAttributes.SharedRawData = '<?xml version="1.0" encoding="utf-16"?><SharedRawData><ClipboardHeader formatVersion="1.0.0.0" projectId="af063a50-1c6c-432d-b262-020aba0a3931"><SourceScopePath><ObjectScope scopeTypeName="Persistence" scopeId="fstore://WIN11-FACTORYBYTE/C:\\GitHub\\factorybyte\\TiaFileFormat\\samples\\021_mastercopy\\ ...(831)
+  ICoreLibMasterCopyAttributes.NonCoreObjectData = b'\x00\x00\x00\x00\x00\x00\x00'
+  ICoreLibObjectAttributes.IsSystemElement = False
+  ICoreLibObjectAttributes.State = 'Committed'
+  ICoreLibObjectAttributes.OriginalLibrary = None
+  ICoreLibObjectAttributes.OriginalName = None
+  ICoreLibObjectAttributes.DetailHelp = ''
+  ICoreLibObjectAttributes.ShortHelp = ''
+  ICoreLibObjectAttributes.IconData = b'\x00\x90\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x01\x00\x00\x00\x01\x01\x00\x00\x00\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x10\x00\x00\x00\x10\x08\x06\x00\x00\x00\x1f\xf3\xffa\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\x04gAMA\x00\x00\xb1\x8f\x0b\xfca\x05\x00\x00\x00\ ...(1307)
+  ICoreLibObjectAttributes.IconResource = b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+  problems: {}
+  outgoing links:
+    AggregatingFolder        -> 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+    Environment              -> 1014:0002:443 LibraryData 'Project library'
+    EditingCulture           -> 1009:0001:442 CoreCulture 'en-US(1033)'
+    ReferenceCulture         -> 1009:0001:442 CoreCulture 'en-US(1033)'
+    UsedCultures             -> 1009:0001:442 CoreCulture 'en-US(1033)'
+    Devices                  -> 100e:0010:1019 DeviceData 'PLC_1'
+    VisibleParts             -> 1001:0022:101a CodeBlockData 'FB_Empty'
+    RelatedPackage           -> 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+  incoming links:
+    1009:0001:442 CoreCulture 'en-US(1033)'  via CultureIsUsedBy
+    1009:0001:442 CoreCulture 'en-US(1033)'  via IsEditingCultureIn
+    1009:0001:442 CoreCulture 'en-US(1033)'  via IsReferenceCultureIn
+    100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'  via AggregatedElements
+    1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'  via RelatedObject
+    100e:0002:101c FolderData 'ProgramBlocksFolder'  via Environment
+    1016:0022:101d CompileUnitData 'None'  via Environment
+    1202:0022:101e IdentContainerData 'None'  via Environment
+    1607:0022:101f TargetBlockInterfaceContainer 'None'  via Environment
+    160c:0022:1020 InterfaceVersionRootData 'BIVE:FB_Empty/7b7e9644-92d4-4457-ad74-cc63e9b2746c'  via Environment
+    100e:0002:1022 FolderData 'ProgramUnitsFolder'  via Environment
+    100e:0010:1019 DeviceData 'PLC_1'  via ParentProject
+    100e:0010:1019 DeviceData 'PLC_1'  via Environment
+    1001:0022:101a CodeBlockData 'FB_Empty'  via Environment
+    1001:0022:101a CodeBlockData 'FB_Empty'  via VisiblePartInverse
+    101c:0010:101b S7ControllerTargetData 'PLC_1'  via Environment
+    1019:0001:1021 ResourceAllocatorData 'None'  via Environment
+  slot 4 ICoreAttributes payload 110 bytes -> 021_mc_slot4_ICoreAttributes.bin
+  slot 8 ICoreLibMasterCopyAttributes payload 903 bytes -> 021_mc_slot8_ICoreLibMasterCopyAttributes.bin
+  slot 9 ICoreLibObjectAttributes payload 471 bytes -> 021_mc_slot9_ICoreLibObjectAttributes.bin

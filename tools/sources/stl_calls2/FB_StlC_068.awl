@@ -1,0 +1,42 @@
+FUNCTION_BLOCK "FB_StlC_068"
+TITLE = STL call GET_ERR_ID
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      i1 : Int;
+      i2 : Int;
+      di1 : DInt;
+      r1 : Real;
+      w1 : Word;
+      dw1 : DWord;
+      b1 : Byte;
+      u1 : UInt;
+      ud1 : UDInt;
+   END_VAR
+   VAR_OUTPUT
+      q : Bool;
+      io : Int;
+      dio : DInt;
+      ro : Real;
+      wo : Word;
+      dwo : DWord;
+      bo : Byte;
+      udo : UDInt;
+   END_VAR
+   VAR
+      src : Array[0..9] of Int;
+      dst : Array[0..9] of Int;
+      bits : Array[0..31] of Bool;
+      bytes : Array[0..9] of Byte;
+      err : ErrorStruct;
+      rt : LReal;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 068 GET_ERR_ID
+      CALL GET_ERR_ID
+      (  RET_VAL := #wo
+      );
+END_FUNCTION_BLOCK

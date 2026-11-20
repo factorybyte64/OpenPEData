@@ -1,0 +1,145 @@
+A: samples/F18_iface_event.zap21
+B: samples/F18b_event_handler.zap21
+objects 2878 -> 2881, tombstones 0 -> 0, records 2935 -> 2938
+
+== 1. object count per type (only differences)
+     3      4     +1  Siemens.Simatic.Hmi.DL.FaceplateLib           Siemens.Simatic.Hmi.DL.FaceplateLib.ILFaceplateContainerData
+    16     17     +1  Siemens.Simatic.Hmi.DL.Scripting              Siemens.Simatic.Hmi.DL.Scripting.HmiScriptEmbeddedData
+     8      9     +1  Siemens.Simatic.Hmi.DL.Scripting              Siemens.Simatic.Hmi.DL.Scripting.HmiScriptModuleContainerData
+
+== 2. new / removed objects
+NEW     1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+NEW     1003:00e3:3132 HmiScriptModuleContainerData name='ScriptModuleContainer'
+NEW     0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+
+== 3. links added / removed (owner -> relation -> target)
+  0003:00d3:30d4 FaceplateLibraryVersionData name=None
+    + IsTypeOf                                 -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+  0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+    + ILScreenItemParent                       -> 1002:00cd:1c15 ILScreenData name='Main'
+    + Environment                              -> 1028:0002:433 ProjectData name='F18_iface_event'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + IsInstanceOf                             -> 0003:00d3:30d4 FaceplateLibraryVersionData name=None
+    + EmbeddedScriptChildren                   -> 1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+    + ExpandoReferencesInverse                 -> 1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+    + ExpandoReferences                        -> 1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+    + ExpandoReferences                        -> 1003:00c8:14e8 HmiImageData name='Left_Arrow'
+    + ExpandoReferences                        -> 0000:0000:0 (no current object)
+    + ExpandoReferences                        -> 1005:00e8:1261 HmiTextListData name='SystemTextList_AllenBradleyDF1AlarmTextListCollection_9'
+  1002:00cd:1c15 ILScreenData name='Main'
+    + ScriptModuleContainer                    -> 1003:00e3:3132 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ILScreenItems                            -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+  1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+    + EmbeddedScriptParent                     -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+    + Environment                              -> 1028:0002:433 ProjectData name='F18_iface_event'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventModule                              -> 1003:00e3:3132 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+    + ExpandoReferencesInverse                 -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+  1003:00c8:14e8 HmiImageData name='Left_Arrow'
+    + ExpandoReferencesInverse                 -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+  1003:00e3:3132 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ScriptContainerParent                    -> 1002:00cd:1c15 ILScreenData name='Main'
+    + Environment                              -> 1028:0002:433 ProjectData name='F18_iface_event'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventElements                            -> 1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+  1005:00e8:1261 HmiTextListData name='SystemTextList_AllenBradleyDF1AlarmTextListCollection_9'
+    + ExpandoReferencesInverse                 -> 0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+
+== 4. attribute diff (tools\attrdiff.py)
+A: C:\GitHub\factorybyte\OpenPEData\samples\F18_iface_event.zap21  B: C:\GitHub\factorybyte\OpenPEData\samples\F18b_event_handler.zap21
+CHANGED 0003:00d3:30d4 FaceplateLibraryVersionData name=None
+          ICoreAttributes.ModifiedTime: '2026-10-23T14:51:59.588360Z' -> '2026-10-23T14:58:02.496211Z'  (timestamp)
+          raw <links 1>: 420 -> 436 bytes
+          +link IsTypeOf -> 0006:00d3:3130
+NEW     0006:00d3:3130 ILFaceplateContainerData name='Faceplate container_2'
+          ICoreAttributes.CreationTime = '2026-10-23T14:58:02.496211Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-23T15:00:24.937895Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Subtype = 'HmiFaceplateContainer'
+          ICoreAttributes.Name = 'Faceplate container_2'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IEventExpandoAttributes.EvTest = bytes[6] 060000000000
+          IPropertyExpandoAttributes. = 260
+          IPropertyExpandoAttributes. = 360
+          IPropertyExpandoAttributes.c = 19
+          IPropertyExpandoAttributes.d = 187
+          IPropertyExpandoAttributes. = '1>u '
+          IPropertyExpandoAttributes.Properties = bytes[257] 810200e700000000000000000000000010010000000101000000e70000000b0000008b0000000b00
+          IReferenceExpandoAttributes.1>u  = '1c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          IReferenceExpandoAttributes.+9 = bytes[5] 0000000100
+          IReferenceExpandoAttributes.;"8 = bytes[148] 9400000057000000ffffffff030000007f000904ffff220000004a00000053000000240000003638
+          IReferenceExpandoAttributes.L:K = bytes[5] 0000000300
+          link ILScreenItemParent -> 1002:00cd:1c15
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link IsInstanceOf -> 0003:00d3:30d4
+          link EmbeddedScriptChildren -> 1002:00e3:3131
+          link ExpandoReferencesInverse -> 1002:00e3:3131
+          link ExpandoReferences -> 1002:00e3:3131
+          link ExpandoReferences -> 1003:00c8:14e8
+          link ExpandoReferences -> 0000:0000:0
+          link ExpandoReferences -> 1005:00e8:1261
+CHANGED 1002:00cd:1c15 ILScreenData name='Main'
+          ICoreAttributes.ModifiedTime: '2026-10-21T04:38:03.085090Z' -> '2026-10-23T14:58:26.644508Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          raw <links 1>: 52 -> 52 bytes
+          +link ILScreenItems -> 0006:00d3:3130
+          +link ScriptModuleContainer -> 1003:00e3:3132
+NEW     1002:00e3:3131 HmiScriptEmbeddedData name='OnEvTest'
+          ICoreAttributes.CreationTime = '2026-10-23T14:58:26.644508Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-23T14:58:33.055620Z'
+          ICoreAttributes.Name = 'OnEvTest'
+          IScriptAttributes.Language = 'JavaScript'
+          IScriptAttributes.Scope = 'Screen.Event'
+          IScriptAttributes.Code = bytes[85] 5500000003000000140000002b0000003a0000001700000009000000000e0d0a484d4952756e7469
+          IScriptDataExpandoAttributes.Signature = bytes[62] 00260000000000000000000000001001000000010100000026000000010000001a0000000b000080
+          IScriptDataExpandoAttributes.Code = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IScriptLinkExpandoAttributes.472936278 = bytes[5] 0000000000
+          IScriptSignatureAttributes.HasReturnValue = False
+          IScriptSignatureAttributes.IsAsync = False
+          IScriptSignatureAttributes.IsExported = True
+          IScriptSignatureAttributes.FunctionName = bytes[54] 360000000200000010000000230000001300000009000000010a3437323933363237381300000009
+          IScriptSignatureAttributes.ParameterList = bytes[115] 73000000030000001400000040000000580000002c00000010000000260000002700000016486d69
+          link EmbeddedScriptParent -> 0006:00d3:3130
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:3132
+          link ExpandoReferences -> 0006:00d3:3130
+          link ExpandoReferencesInverse -> 0006:00d3:3130
+CHANGED 1003:00c8:14e8 HmiImageData name='Left_Arrow'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-23T14:59:24.682529Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link ExpandoReferencesInverse -> 0006:00d3:3130
+NEW     1003:00e3:3132 HmiScriptModuleContainerData name='ScriptModuleContainer'
+          ICoreAttributes.CreationTime = '2026-10-23T14:58:26.644508Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-23T14:58:26.644508Z'
+          ICoreAttributes.Name = 'ScriptModuleContainer'
+          IScriptModuleContainerAttributes.Language = 'JavaScript'
+          IScriptModuleContainerAttributes.Scope = 'Screen'
+          IScriptModuleContainerAttributes.Event_GlobalSectionCode = bytes[62] 3e000000010000000c000000320000000900000000292f2f496e7365727420646566696e6974696f
+          IScriptModuleContainerAttributes.FunctionList_GlobalSectionCode = bytes[47] 2f000000010000000c0000002300000009000000001a2f2f205b46756e6374696f6e4c6973744d6f
+          IScriptModuleContainerAttributes.Trigger_GlobalSectionCode = bytes[76] 4c000000010000000c000000400000000900000000372f2f496e7365727420646566696e6974696f
+          link ScriptContainerParent -> 1002:00cd:1c15
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventElements -> 1002:00e3:3131
+CHANGED 1005:00e8:110e HmiTextListData name='SystemTextList_ConfigErrorAlarmTextLibrary_4'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-23T15:00:13.973401Z'  (timestamp)
+          raw <links 1>: 420 -> 436 bytes
+CHANGED 1005:00e8:1261 HmiTextListData name='SystemTextList_AllenBradleyDF1AlarmTextListCollection_9'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-23T15:00:24.937895Z'  (timestamp)
+          raw <links 1>: 212 -> 228 bytes
+          +link ExpandoReferencesInverse -> 0006:00d3:3130
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[229] e5000000050000001c0000003100000080000000ba000000d0000000150000000000000010000000 -> bytes[229] e5000000050000001c0000003100000080000000ba000000d0000000150000000000000010000000
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-21T04:38:03.085090Z' -> '2026-10-23T14:58:26.644508Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[607] 018d04000000000000000000000010010000000101000000c504785eed53d16eda3014dda7447ee8 -> bytes[860] 01ea09000000000000000000000010010000000101000000c206785eed56db6edb4610eda7102ce0
+CHANGED 1028:0002:433 ProjectData name='F18_iface_event'
+          ICoreAttributes.ModifiedTime: '2026-10-23T14:52:16.260407Z' -> '2026-10-23T15:00:31.082602Z'  (timestamp)
+store records changed/new: 000d:0007:10, 0011:0007:1ffb, 0014:0007:0, 0015:0007:20, 0016:0007:18

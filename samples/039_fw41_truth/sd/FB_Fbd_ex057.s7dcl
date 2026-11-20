@@ -1,0 +1,43 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex057"
+    VAR_INPUT
+        v_req : Bool;
+        v_mode : UInt;
+        v_laddr : HW_INTERFACE;
+        v_ctrlrec : Array[0..99] of Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : DWord;
+        v_err_info : Word;
+    END_VAR
+    VAR
+        inst : ReconfigIOSystem;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.ReconfigIOSystem(
+                REQ := #v_req,
+                MODE := #v_mode,
+                LADDR := #v_laddr,
+                CTRLREC := #v_ctrlrec,
+                STATUS => #v_status,
+                BUSY => #v_busy,
+                DONE => #v_done,
+                ERROR => #v_error,
+                ERR_INFO => #v_err_info
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

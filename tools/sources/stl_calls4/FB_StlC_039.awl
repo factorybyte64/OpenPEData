@@ -1,0 +1,32 @@
+FUNCTION_BLOCK "FB_StlC_039"
+TITLE = STL call ReadFromArrayDBL
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      req : Bool;
+      di1 : DInt;
+      dba : DB_ANY;
+   END_VAR
+   VAR_OUTPUT
+      busy : Bool;
+      done : Bool;
+      err : Int;
+   END_VAR
+   VAR
+      val : Int;
+      inst : ReadFromArrayDBL;
+   END_VAR
+BEGIN
+NETWORK
+TITLE = 039 ReadFromArrayDBL
+      CALL #inst
+      {value_type := 'Int'}
+      (  REQ                         := #req ,
+         DB                          := #dba ,
+         INDEX                       := #di1 ,
+         VALUE                       := #val ,
+         BUSY                        := #busy ,
+         DONE                        := #done ,
+         ERROR                       := #err
+      );
+END_FUNCTION_BLOCK

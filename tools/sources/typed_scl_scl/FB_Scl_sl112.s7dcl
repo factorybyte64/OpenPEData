@@ -1,0 +1,25 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl112"
+    VAR_INPUT
+        v_reset : Bool;
+        v_jog : Bool;
+        v_drum_en : Bool;
+        v_lst_step : Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_q : Bool;
+        v_out_word : Word;
+        v_err_code : Word;
+    END_VAR
+    VAR
+        inst : DRUM;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #inst(RESET := #v_reset, JOG := #v_jog, DRUM_EN := #v_drum_en, LST_STEP := #v_lst_step, Q => #v_q, OUT_WORD => #v_out_word, ERR_CODE => #v_err_code);
+    END_NETWORK
+END_FUNCTION_BLOCK

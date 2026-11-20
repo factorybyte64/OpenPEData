@@ -1,0 +1,19 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl111"
+    VAR_INPUT
+        v_in : Word;
+        v_n : USInt;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Word;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := ROL(IN := #v_in, N := #v_n);
+    END_NETWORK
+END_FUNCTION_BLOCK

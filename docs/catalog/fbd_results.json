@@ -1,0 +1,2043 @@
+{
+ "001": {
+  "block": "FB_Fbd_001",
+  "body": [
+   "RUNG #a\nA( in2 := #b )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "&: AND logic operation"
+ },
+ "002": {
+  "last": {
+   "message": "no candidate"
+  },
+  "ok": false,
+  "title": "AND truth table"
+ },
+ "003": {
+  "block": "FB_Fbd_003",
+  "body": [
+   "RUNG #a\nO( in2 := #b )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": ">=1: OR logic operation"
+ },
+ "004": {
+  "last": {
+   "message": "no candidate"
+  },
+  "ok": false,
+  "title": "OR truth table"
+ },
+ "005": {
+  "block": "FB_Fbd_005",
+  "body": [
+   "RUNG #a\nX( in2 := #b )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "X: EXCLUSIVE OR logic operation"
+ },
+ "006": {
+  "last": {
+   "message": "no candidate"
+  },
+  "ok": false,
+  "title": "EXCLUSIVE OR truth table"
+ },
+ "007": {
+  "block": "FB_Fbd_007",
+  "body": [
+   "RUNG #a\nA( in2 := #b, in3 := #c )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "Insert input"
+ },
+ "008": {
+  "block": "FX_Fbd_008",
+  "ok": true,
+  "title": "Invert RLO",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Inv",
+   "pins": [
+    "in",
+    "out"
+   ],
+   "templates": {
+    "SrcType": "Int"
+   }
+  }
+ },
+ "009": {
+  "block": "FB_Fbd_009",
+  "body": [
+   "RUNG #a\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "=: Assignment"
+ },
+ "010": {
+  "block": "FB_Fbd_010",
+  "body": [
+   "RUNG #a\nI_Coil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "/=: Negate assignment"
+ },
+ "011": {
+  "block": "FB_Fbd_011",
+  "body": [
+   "RUNG #a\nR_Coil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "R: Reset output"
+ },
+ "012": {
+  "block": "FB_Fbd_012",
+  "body": [
+   "RUNG #a\nS_Coil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "S: Set output"
+ },
+ "013": {
+  "block": "FX_Fbd_013",
+  "ok": true,
+  "title": "SET_BF: Set bit field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SBitfield",
+   "pins": [
+    "N",
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "014": {
+  "block": "FX_Fbd_014",
+  "ok": true,
+  "title": "RESET_BF: Reset bit field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RBitfield",
+   "pins": [
+    "N",
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "015": {
+  "block": "FB_Fbd_015",
+  "body": [
+   "RUNG #a\nSr( r1 := #b, operand := #stat1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SR: Set/reset flip-flop"
+ },
+ "016": {
+  "block": "FB_Fbd_016",
+  "body": [
+   "RUNG #a\nRs( s1 := #b, operand := #stat1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "RS: Reset/set flip-flop"
+ },
+ "017": {
+  "block": "FB_Fbd_017",
+  "body": [
+   "RUNG P_Contact( #a, bit := #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "P: Scan operand for positive signal edge"
+ },
+ "018": {
+  "block": "FB_Fbd_018",
+  "body": [
+   "RUNG N_Contact( #a, bit := #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "N: Scan operand for negative signal edge"
+ },
+ "019": {
+  "block": "FX_Fbd_019",
+  "ok": true,
+  "title": "P=: Set operand on positive signal edge",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "PCoil",
+   "pins": [
+    "operand",
+    "bit"
+   ],
+   "templates": {}
+  }
+ },
+ "020": {
+  "block": "FX_Fbd_020",
+  "ok": true,
+  "title": "N=: Set operand on negative signal edge",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "NCoil",
+   "pins": [
+    "operand",
+    "bit"
+   ],
+   "templates": {}
+  }
+ },
+ "021": {
+  "block": "FB_Fbd_021",
+  "body": [
+   "RUNG #a\nP_Trig( #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "P_TRIG: Scan RLO for positive signal edge"
+ },
+ "022": {
+  "block": "FB_Fbd_022",
+  "body": [
+   "RUNG #a\nN_Trig( #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "N_TRIG: Scan RLO for negative signal edge"
+ },
+ "023": {
+  "block": "FB_Fbd_023",
+  "body": [
+   "{R}\n#rtrig1.R_TRIG( clk := #a, q => #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "R_TRIG: Detect positive signal edge"
+ },
+ "024": {
+  "block": "FB_Fbd_024",
+  "body": [
+   "{R}\n#ftrig1.F_TRIG( clk := #a, q => #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "F_TRIG: Detect negative signal edge"
+ },
+ "025": {
+  "block": "FB_Fbd_025",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#tp1.TP( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TP: Generate pulse"
+ },
+ "026": {
+  "block": "FB_Fbd_026",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#ton1.TON( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TON: Generate on-delay"
+ },
+ "027": {
+  "block": "FB_Fbd_027",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#tof1.TOF( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TOF: Generate off-delay"
+ },
+ "028": {
+  "block": "FB_Fbd_028",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#tonr1.TONR( r := #b, pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TONR: Time accumulator"
+ },
+ "029": {
+  "block": "FB_Fbd_029",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#tp1.TP( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TP: Start pulse timer"
+ },
+ "030": {
+  "block": "FB_Fbd_030",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#ton1.TON( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TON: Start on-delay timer"
+ },
+ "031": {
+  "block": "FB_Fbd_031",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#tof1.TOF( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TOF: Start off-delay timer"
+ },
+ "032": {
+  "block": "FB_Fbd_032",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"time_type := Time\" }\n#tonr1.TONR( r := #b, pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TONR: Time accumulator"
+ },
+ "033": {
+  "block": "FX_Fbd_033",
+  "ok": true,
+  "title": "RT: Reset timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "ResetIECTimerCoil",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "034": {
+  "block": "FX_Fbd_034",
+  "ok": true,
+  "title": "PT: Load time duration",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "PtCoil",
+   "pins": [
+    "PT",
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "035": {
+  "block": "FB_Fbd_035",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_PULSE: Assign pulse timer parameters and start"
+ },
+ "036": {
+  "block": "FB_Fbd_036",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_PEXT: Assign extended pulse timer parameters and start"
+ },
+ "037": {
+  "block": "FB_Fbd_037",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_ODT: Assign on-delay timer parameters and start"
+ },
+ "038": {
+  "block": "FB_Fbd_038",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_ODTS: Assign retentive on-delay timer parameters and start"
+ },
+ "039": {
+  "block": "FB_Fbd_039",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_OFFDT: Assign off-delay timer parameters and start"
+ },
+ "040": {
+  "block": "FX_Fbd_040",
+  "ok": true,
+  "title": "SP: Start pulse timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SpCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "041": {
+  "block": "FX_Fbd_041",
+  "ok": true,
+  "title": "SE: Start extended pulse timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SeCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "042": {
+  "block": "FX_Fbd_042",
+  "ok": true,
+  "title": "SD: Start on-delay timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SdCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "043": {
+  "block": "FX_Fbd_043",
+  "ok": true,
+  "title": "SS: Start retentive on-delay timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SsCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "044": {
+  "block": "FX_Fbd_044",
+  "ok": true,
+  "title": "SF: Start off-delay timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SfCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "045": {
+  "block": "FB_Fbd_045",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"value_type := Int\" }\n#ctu1.CTU( r := #b, pv := #ia, cv => #io )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CTU: Count up"
+ },
+ "046": {
+  "block": "FB_Fbd_046",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"value_type := Int\" }\n#ctd1.CTD( ld := #b, pv := #ia, cv => #io )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CTD: Count down"
+ },
+ "047": {
+  "block": "FB_Fbd_047",
+  "body": [
+   "RUNG #a\n{ S7_Templates := \"value_type := Int\" }\n#ctud1.CTUD( cd := #b, r := #c, ld := #q2, pv := #ia, qu => #q, qd => #q2, cv => #io )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "CTUD: Count up and down"
+ },
+ "048": {
+  "block": "FB_Fbd_048",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CU: Assign parameters and count up"
+ },
+ "049": {
+  "block": "FB_Fbd_049",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CD: Assign parameters and count down"
+ },
+ "050": {
+  "block": "FB_Fbd_050",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CUD: Assign parameters and count up / down"
+ },
+ "051": {
+  "block": "FX_Fbd_051",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SC: Set counter value",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "ScCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "052": {
+  "block": "FX_Fbd_052",
+  "ok": true,
+  "title": "CU: Count up",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "CuCoil",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "053": {
+  "block": "FX_Fbd_053",
+  "ok": true,
+  "title": "CD: Count down",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "CdCoil",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "054": {
+  "block": "FB_Fbd_054",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nEQ_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP ==: Equal"
+ },
+ "055": {
+  "block": "FB_Fbd_055",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nNE_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP <>: Not equal"
+ },
+ "056": {
+  "block": "FB_Fbd_056",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nGE_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP >=: Greater or equal"
+ },
+ "057": {
+  "block": "FB_Fbd_057",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nLE_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP <=: Less or equal"
+ },
+ "058": {
+  "block": "FB_Fbd_058",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nGT_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP >: Greater than"
+ },
+ "059": {
+  "block": "FB_Fbd_059",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nLT_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP <: Less than"
+ },
+ "060": {
+  "block": "FB_Fbd_060",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nInRange( min := #ia, in := #ib, max := #ic )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 2,
+  "ok": true,
+  "title": "IN_RANGE: Value within range"
+ },
+ "061": {
+  "block": "FB_Fbd_061",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nOutRange( min := #ia, in := #ib, max := #ic )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 2,
+  "ok": true,
+  "title": "OUT_RANGE: Value outside range"
+ },
+ "062": {
+  "block": "FB_Fbd_062",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "OK: Check validity"
+ },
+ "063": {
+  "block": "FB_Fbd_063",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "NOT_OK: Check invalidity"
+ },
+ "064": {
+  "block": "FB_Fbd_064",
+  "body": [
+   "{R}\nEQ_Type( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "EQ_Type: Compare data type for EQUAL with the data type of a tag"
+ },
+ "065": {
+  "block": "FB_Fbd_065",
+  "body": [
+   "{R}\nNE_Type( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NE_Type: Compare data type for UNEQUAL with the data type of a tag"
+ },
+ "066": {
+  "block": "FB_Fbd_066",
+  "body": [
+   "{R}\nEQ_ElemTypeContact( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "EQ_ElemType: Compare data type of an ARRAY element for EQUAL with the data type of a tag"
+ },
+ "067": {
+  "block": "FB_Fbd_067",
+  "body": [
+   "{R}\nNE_ElemTypeContact( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NE_ElemType: Compare data type of an ARRAY element for UNEQUAL with the data type of a tag"
+ },
+ "068": {
+  "block": "FB_Fbd_068",
+  "body": [
+   "{R}\nIS_NULL( #v1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "IS_NULL: Check for EQUALS NULL pointer"
+ },
+ "069": {
+  "block": "FB_Fbd_069",
+  "body": [
+   "{R}\nNOT_NULL( #v1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NOT_NULL: Check for UNEQUALS NULL pointer"
+ },
+ "070": {
+  "block": "FB_Fbd_070",
+  "body": [
+   "{R}\nIS_ARRAY( #v1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "IS_ARRAY: Check for ARRAY"
+ },
+ "071": {
+  "block": "FB_Fbd_071",
+  "body": [
+   "{R}\nEQ_Type( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "EQ_TypeOfDB: Compare data type of an indirectly addressed DB for EQUAL with a data type"
+ },
+ "072": {
+  "block": "FB_FbdCalc",
+  "errors": [
+   "Network 1: No expression entered.; : Compiling finished (errors: 1; warnings: 1)",
+   "Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; : Compiling finished (errors: 4; warnings: 1)"
+  ],
+  "last": {
+   "candidate": 30,
+   "message": "Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; : Compiling finished (errors: 4; warnings: 1)",
+   "stage": "compile"
+  },
+  "ok": true,
+  "sample": "034_flg_misc",
+  "title": "CALCULATE: Calculate",
+  "tried": 32,
+  "via": "xml",
+  "xmlLast": "Calc: compile: No expression entered."
+ },
+ "073": {
+  "block": "FB_Fbd_073",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nAdd( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "ADD: Add"
+ },
+ "074": {
+  "block": "FB_Fbd_074",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nSub( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SUB: Subtract"
+ },
+ "075": {
+  "block": "FB_Fbd_075",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nMul( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MUL: Multiply"
+ },
+ "076": {
+  "block": "FB_Fbd_076",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nDiv( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "DIV: Divide"
+ },
+ "077": {
+  "block": "FB_Fbd_077",
+  "body": [
+   "{R}\nMod( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MOD: Return remainder of division"
+ },
+ "078": {
+  "block": "FB_Fbd_078",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nNeg( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NEG: Create twos complement"
+ },
+ "079": {
+  "block": "FX_Fbd_079",
+  "ok": true,
+  "title": "INC: Increment",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Inc",
+   "pins": [
+    "operand"
+   ],
+   "templates": {
+    "DestType": "Int"
+   }
+  }
+ },
+ "080": {
+  "block": "FX_Fbd_080",
+  "ok": true,
+  "title": "DEC: Decrement",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Dec",
+   "pins": [
+    "operand"
+   ],
+   "templates": {
+    "DestType": "Int"
+   }
+  }
+ },
+ "081": {
+  "block": "FB_Fbd_081",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nAbs( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "ABS: Form absolute value"
+ },
+ "082": {
+  "block": "FX_Fbd_082",
+  "ok": true,
+  "title": "MIN: Get minimum",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MIN",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "card": "2",
+    "value_type": "Int"
+   }
+  }
+ },
+ "083": {
+  "block": "FX_Fbd_083",
+  "ok": true,
+  "title": "MAX: Get maximum",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MAX",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "card": "2",
+    "value_type": "Int"
+   }
+  }
+ },
+ "084": {
+  "block": "FB_Fbd_084",
+  "body": [
+   "{R}\n{ S7_Templates := \"[value_type := Int]\" }\nLimit( mn := #ia, in := #ib, mx := #ic, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "LIMIT: Set limit value"
+ },
+ "085": {
+  "block": "FB_Fbd_085",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nSqr( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "SQR: Form square"
+ },
+ "086": {
+  "block": "FB_Fbd_086",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nSqrt( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 8,
+  "ok": true,
+  "title": "SQRT: Form square root"
+ },
+ "087": {
+  "block": "FB_Fbd_087",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nLn( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "LN: Form natural logarithm"
+ },
+ "088": {
+  "block": "FB_Fbd_088",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nExp( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "EXP: Form exponential value"
+ },
+ "089": {
+  "block": "FB_Fbd_089",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nSin( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "SIN: Form sine value"
+ },
+ "090": {
+  "block": "FB_Fbd_090",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nCos( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "COS: Form cosine value"
+ },
+ "091": {
+  "block": "FB_Fbd_091",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nTan( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "TAN: Form tangent value"
+ },
+ "092": {
+  "block": "FB_Fbd_092",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nAsin( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 8,
+  "ok": true,
+  "title": "ASIN: Form arcsine value"
+ },
+ "093": {
+  "block": "FB_Fbd_093",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nAcos( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 8,
+  "ok": true,
+  "title": "ACOS: Form arccosine value"
+ },
+ "094": {
+  "block": "FB_Fbd_094",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nAtan( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 8,
+  "ok": true,
+  "title": "ATAN: Form arctangent value"
+ },
+ "095": {
+  "block": "FB_Fbd_095",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nFrac( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 8,
+  "ok": true,
+  "title": "FRAC: Return fraction"
+ },
+ "096": {
+  "block": "FB_Fbd_096",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Int, DestType := Real]\" }\nExpt( in1 := #ra, in2 := #ia, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 4,
+  "ok": true,
+  "title": "EXPT: Exponentiate"
+ },
+ "097": {
+  "block": "FB_Fbd_097",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nMove( in := #ia, out1 => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MOVE: Move value"
+ },
+ "098": {
+  "block": "FX_Fbd_098",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Deserialize: Deserialize",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Deserialize",
+   "pins": [
+    "SRC_ARRAY",
+    "DEST_VARIABLE",
+    "POS",
+    "RET_VAL"
+   ],
+   "templates": {
+    "dest_type": "Variant",
+    "src_type": "Variant"
+   }
+  }
+ },
+ "099": {
+  "block": "FX_Fbd_099",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Serialize: Serialize",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Serialize",
+   "pins": [
+    "SRC_VARIABLE",
+    "DEST_ARRAY",
+    "POS",
+    "RET_VAL"
+   ],
+   "templates": {
+    "dest_type": "Variant",
+    "src_type": "Variant"
+   }
+  }
+ },
+ "100": {
+  "block": "FX_Fbd_100",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MOVE_BLK: Move block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MoveBlockI",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "101": {
+  "block": "FX_Fbd_101",
+  "ok": true,
+  "title": "MOVE_BLK_VARIANT: Move block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MOVE_BLK_VARIANT",
+   "pins": [
+    "COUNT",
+    "SRC_INDEX",
+    "DEST_INDEX",
+    "RET_VAL",
+    "SRC",
+    "DEST"
+   ],
+   "templates": {}
+  }
+ },
+ "102": {
+  "block": "FX_Fbd_102",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "UMOVE_BLK: Move block uninterruptible",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MoveBlockU",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "103": {
+  "block": "FX_Fbd_103",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "FILL_BLK: Fill block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FillBlockI",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "104": {
+  "block": "FX_Fbd_104",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "UFILL_BLK: Fill block uninterruptible",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FillBlockU",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "105": {
+  "block": "FB_Fbd_105",
+  "body": [
+   "{R}\n{ S7_Templates := \"src_type := Word\" }\nSCATTER( in := #wa, out => #bits16 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SCATTER: Parse the bit sequence into individual bits"
+ },
+ "106": {
+  "block": "FX_Fbd_106",
+  "ok": true,
+  "title": "SCATTER_BLK: Parse elements of an ARRAY of bit sequence into individual bits",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SCATTER_BLK",
+   "pins": [
+    "IN",
+    "COUNT_IN",
+    "OUT"
+   ],
+   "templates": {
+    "count_type": "UInt",
+    "dest_type": "Bool",
+    "src_type": "Word"
+   }
+  }
+ },
+ "107": {
+  "block": "FX_Fbd_107",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GATHER: Merge individual bits into a bit sequence",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GATHER",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "Word",
+    "src_type": "Bool"
+   }
+  }
+ },
+ "108": {
+  "block": "FX_Fbd_108",
+  "ok": true,
+  "title": "GATHER_BLK: Merge individual bits into multiple elements of an ARRAY of bit sequence",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GATHER_BLK",
+   "pins": [
+    "IN",
+    "COUNT_OUT",
+    "OUT"
+   ],
+   "templates": {
+    "count_type": "UInt",
+    "dest_type": "Word",
+    "src_type": "Bool"
+   }
+  }
+ },
+ "109": {
+  "block": "FX_Fbd_109",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SWAP: Swap",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Swap",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "SrcType": "Word"
+   }
+  }
+ },
+ "110": {
+  "block": "FX_Fbd_110",
+  "ok": true,
+  "title": "ReadFromArrayDB: Read from ARRAY data block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "ReadFromArrayDB",
+   "pins": [
+    "DB",
+    "INDEX",
+    "RET_VAL",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "111": {
+  "block": "FX_Fbd_111",
+  "ok": true,
+  "title": "WriteToArrayDB: Write to ARRAY data block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "WriteToArrayDB",
+   "pins": [
+    "DB",
+    "INDEX",
+    "VALUE",
+    "RET_VAL"
+   ],
+   "templates": {}
+  }
+ },
+ "112": {
+  "block": "FX_Fbd_112",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ReadFromArrayDBL: Read from ARRAY data block in load memory",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "ReadFromArrayDBL",
+   "pins": [
+    "REQ",
+    "DB",
+    "INDEX",
+    "VALUE",
+    "BUSY",
+    "DONE",
+    "ERROR"
+   ],
+   "templates": {
+    "ptr_type": "DB_ANY"
+   }
+  }
+ },
+ "113": {
+  "block": "FX_Fbd_113",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WriteToArrayDBL: Write to ARRAY data block in load memory",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "WriteToArrayDBL",
+   "pins": [
+    "REQ",
+    "DB",
+    "INDEX",
+    "VALUE",
+    "BUSY",
+    "DONE",
+    "ERROR"
+   ],
+   "templates": {
+    "ptr_type": "DB_ANY"
+   }
+  }
+ },
+ "114": {
+  "block": "FB_Fbd_114",
+  "body": [
+   "{R}\nVariantGet( src := #v1, dst => #ia )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "VariantGet: Read out VARIANT tag value"
+ },
+ "115": {
+  "block": "FB_Fbd_115",
+  "body": [
+   "{R}\nVariantPut( src := #ia, dst => #v1 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "VariantPut: Write VARIANT tag value"
+ },
+ "116": {
+  "block": "FB_Fbd_116",
+  "body": [
+   "{R}\nCountOfElements( in := #v1, ret_val => #udia )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CountOfElements: Get number of ARRAY elements"
+ },
+ "117": {
+  "block": "FB_Fbd_117",
+  "body": [
+   "{R}\nLower_Bound( arr := #arrs, dim := 1, out => #dinout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "LOWER_BOUND: Read out low ARRAY limit"
+ },
+ "118": {
+  "block": "FB_Fbd_118",
+  "body": [
+   "{R}\nUpper_Bound( arr := #arrs, dim := 1, out => #dinout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "UPPER_BOUND: Read out high ARRAY limit"
+ },
+ "119": {
+  "block": "FX_Fbd_119",
+  "ok": true,
+  "title": "FieldRead: Read field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FieldRead",
+   "pins": [
+    "INDEX",
+    "MEMBER",
+    "VALUE"
+   ],
+   "templates": {
+    "SrcType": "Int"
+   }
+  }
+ },
+ "120": {
+  "block": "FX_Fbd_120",
+  "ok": true,
+  "title": "FieldWrite: Write field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FieldWrite",
+   "pins": [
+    "INDEX",
+    "VALUE",
+    "MEMBER"
+   ],
+   "templates": {
+    "SrcType": "Int"
+   }
+  }
+ },
+ "121": {
+  "block": "FB_Fbd_121",
+  "body": [
+   "{R}\nBlkmov( SRCBLK := \"DB_Arr\".a, DSTBLK => \"DB_Arr\".b, RET_VAL => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "BLKMOV: Move block"
+ },
+ "122": {
+  "block": "FB_Fbd_122",
+  "body": [
+   "{R}\nUblkmov( SRCBLK := \"DB_Arr\".a, DSTBLK => \"DB_Arr\".b, RET_VAL => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "UBLKMOV: Move block uninterruptible"
+ },
+ "123": {
+  "block": "FX_Fbd_123",
+  "ok": true,
+  "title": "FILL: Fill block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FILL",
+   "pins": [
+    "BVAL",
+    "RET_VAL",
+    "BLK"
+   ],
+   "templates": {
+    "ptr_type": "Variant"
+   }
+  }
+ },
+ "124": {
+  "block": "FX_Fbd_124",
+  "ok": true,
+  "title": "CONVERT: Convert value",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Convert",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "DestType": "Int",
+    "SrcType": "Int"
+   }
+  }
+ },
+ "125": {
+  "block": "FB_Fbd_125",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nRound( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "ROUND: Round numerical value"
+ },
+ "126": {
+  "block": "FB_Fbd_126",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nCeil( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CEIL: Generate next higher integer from floating-point number"
+ },
+ "127": {
+  "block": "FB_Fbd_127",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nFloor( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "FLOOR: Generate next lower integer from floating-point number"
+ },
+ "128": {
+  "block": "FB_Fbd_128",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nTrunc( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TRUNC: Truncate numerical value"
+ },
+ "129": {
+  "block": "FB_Fbd_129",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := Int]\" }\nScale( min := 0.0, value := #ra, max := 100.0, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SCALE_X: Scale"
+ },
+ "130": {
+  "block": "FB_Fbd_130",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Int, DestType := Real]\" }\nNormalize( min := 0, value := #ia, max := 27648, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NORM_X: Normalize"
+ },
+ "131": {
+  "block": "FB_Fbd_131",
+  "body": [
+   "{R}\nSCALE( in := #ia, hi_lim := #ib, lo_lim := #ic, bipolar := #a, out => #io, ret_val => #wout )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "SCALE: Scale"
+ },
+ "132": {
+  "block": "FB_Fbd_132",
+  "body": [
+   "{R}\nUnscale( in := #ia, hi_lim := #ib, lo_lim := #ic, bipolar := #a, out => #io, ret_val => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "UNSCALE: Unscale"
+ },
+ "133": {
+  "block": "FB_FbdJump",
+  "last": {
+   "message": "no candidate"
+  },
+  "ok": true,
+  "sample": "034_flg_misc",
+  "title": "JMP: Jump if RLO = 1",
+  "via": "xml",
+  "xmlLast": "Jump:  code does not correspond to the scheme: 'The element 'Wires' in namespace 'http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5' has incomplete content. List of possible elements expected: 'Wire' in namespace 'http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5'.'"
+ },
+ "134": {
+  "block": "FX_Fbd_134",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "JMPN: Jump if RLO = 0",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "JumpNot",
+   "pins": [
+    "label"
+   ],
+   "templates": {}
+  }
+ },
+ "135": {
+  "block": "FB_FbdJump",
+  "last": {
+   "message": "no candidate"
+  },
+  "ok": true,
+  "sample": "034_flg_misc",
+  "title": "LABEL: Jump label",
+  "via": "xml"
+ },
+ "136": {
+  "block": "FX_Fbd_136",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "JMP_LIST: Define jump list",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "JmpList",
+   "pins": [
+    "K",
+    "dest0",
+    "dest1"
+   ],
+   "templates": {
+    "Card": "2"
+   }
+  }
+ },
+ "137": {
+  "block": "FX_Fbd_137",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SWITCH: Jump distributor",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Switch",
+   "pins": [
+    "K",
+    "case0",
+    "case1",
+    "else",
+    "dest0",
+    "dest1"
+   ],
+   "templates": {
+    "CASE0": "Eq",
+    "CASE1": "Eq",
+    "Card": "2",
+    "SrcType": "Int"
+   }
+  }
+ },
+ "138": {
+  "block": "FX_Fbd_138",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RET: Return",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "Return",
+   "pins": [],
+   "templates": {}
+  }
+ },
+ "139": {
+  "block": "FB_Fbd_139",
+  "body": [
+   "{R}\nEndis_Pw( req := #a, f_pwd := #b, full_pwd := #c, r_pwd := #c, hmi_pwd := #c, f_pwd_on => #q, full_pwd_on => #q, r_pwd_on => #q, hmi_pwd_on => #q, ret_val => #wout )\nEND_RUNG"
+  ],
+  "candidate": 2,
+  "ok": true,
+  "title": "ENDIS_PW: Locking and unlocking passwords of the CPU access levels"
+ },
+ "140": {
+  "block": "FB_Fbd_140",
+  "body": [
+   "{R}\nRe_Trigr(  )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "RE_TRIGR: Restart cycle monitoring time"
+ },
+ "141": {
+  "block": "FX_Fbd_141",
+  "ok": true,
+  "title": "STP: Exit program",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "STP",
+   "pins": [],
+   "templates": {}
+  }
+ },
+ "142": {
+  "block": "FB_Fbd_142",
+  "body": [
+   "{R}\nGetError( error => #eout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "GET_ERROR: Get error locally"
+ },
+ "143": {
+  "block": "FX_Fbd_143",
+  "ok": true,
+  "title": "GET_ERR_ID: Get error ID locally",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GetErrorID",
+   "pins": [
+    "ID"
+   ],
+   "templates": {}
+  }
+ },
+ "144": {
+  "block": "FB_Fbd_144",
+  "body": [
+   "{R}\nInit_Rd( req := #a, ret_val => #io )\nEND_RUNG"
+  ],
+  "candidate": 2,
+  "ok": true,
+  "title": "INIT_RD: Initialize all retain data"
+ },
+ "145": {
+  "block": "FB_Fbd_145",
+  "body": [
+   "{R}\nWait( wt := #ia )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "WAIT: Configure time delay"
+ },
+ "146": {
+  "block": "FX_Fbd_146",
+  "ok": true,
+  "title": "RUNTIME: Measure program runtime",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RUNTIME",
+   "pins": [
+    "MEM",
+    "RET_VAL"
+   ],
+   "templates": {}
+  }
+ },
+ "147": {
+  "block": "FB_Fbd_147",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nAnd( in1 := #wa, in2 := #wb, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "AND: AND logic operation"
+ },
+ "148": {
+  "block": "FB_Fbd_148",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nOr( in1 := #wa, in2 := #wb, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "OR: OR logic operation"
+ },
+ "149": {
+  "block": "FB_Fbd_149",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nXor( in1 := #wa, in2 := #wb, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "XOR: EXCLUSIVE OR logic operation"
+ },
+ "150": {
+  "block": "FB_Fbd_150",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nInv( in := #ia, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "INVERT: Create ones complement"
+ },
+ "151": {
+  "block": "FX_Fbd_151",
+  "ok": true,
+  "title": "DECO: Decode",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Deco",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "return_type": "Word",
+    "value_type": "UInt"
+   }
+  }
+ },
+ "152": {
+  "block": "FX_Fbd_152",
+  "ok": true,
+  "title": "ENCO: Encode",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Enco",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "src_type": "Word"
+   }
+  }
+ },
+ "153": {
+  "block": "FB_Fbd_153",
+  "body": [
+   "{R}\n{ S7_Templates := \"[value_type := Int]\" }\nSel( g := #a, in0 := #ia, in1 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "SEL: Select"
+ },
+ "154": {
+  "block": "FX_Fbd_154",
+  "ok": true,
+  "title": "MUX: Multiplex",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Mux",
+   "pins": [
+    "k",
+    "in0",
+    "in1",
+    "else",
+    "out"
+   ],
+   "templates": {
+    "Card": "2",
+    "SrcType": "Int"
+   }
+  }
+ },
+ "155": {
+  "block": "FB_Fbd_155",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nDemux( k := #ia, in := #ib, out0 => #io, out1 => #io2, out2 => #io, else => #io2 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "DEMUX: Demultiplex"
+ },
+ "156": {
+  "block": "FB_Fbd_156",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nShr( in := #ia, n := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SHR: Shift right"
+ },
+ "157": {
+  "block": "FB_Fbd_157",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nShl( in := #ia, n := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SHL: Shift left"
+ },
+ "158": {
+  "block": "FX_Fbd_158",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ROR: Rotate right",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Rr",
+   "pins": [
+    "IN",
+    "N",
+    "OUT"
+   ],
+   "templates": {
+    "SrcType": "Word"
+   }
+  }
+ },
+ "159": {
+  "block": "FX_Fbd_159",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ROL: Rotate left",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Rl",
+   "pins": [
+    "IN",
+    "N",
+    "OUT"
+   ],
+   "templates": {
+    "SrcType": "Word"
+   }
+  }
+ },
+ "160": {
+  "block": "FX_Fbd_160",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DRUM: Implement sequencer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "DRUM",
+   "pins": [
+    "RESET",
+    "JOG",
+    "DRUM_EN",
+    "LST_STEP",
+    "Q",
+    "OUT_WORD",
+    "ERR_CODE",
+    "EVENT1",
+    "EVENT2",
+    "EVENT3",
+    "EVENT4",
+    "EVENT5",
+    "EVENT6",
+    "EVENT7",
+    "EVENT8",
+    "EVENT9",
+    "EVENT10",
+    "EVENT11",
+    "EVENT12",
+    "EVENT13",
+    "EVENT14",
+    "EVENT15",
+    "EVENT16",
+    "OUT1",
+    "OUT2",
+    "OUT3",
+    "OUT4",
+    "OUT5",
+    "OUT6",
+    "OUT7",
+    "OUT8",
+    "OUT9",
+    "OUT10",
+    "OUT11",
+    "OUT12",
+    "OUT13",
+    "OUT14",
+    "OUT15",
+    "OUT16"
+   ],
+   "templates": {}
+  }
+ },
+ "161": {
+  "block": "FX_Fbd_161",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DCAT: Discrete control-timer alarm",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "DCAT",
+   "pins": [
+    "CMD",
+    "O_FB",
+    "C_FB",
+    "Q",
+    "OA",
+    "CA"
+   ],
+   "templates": {}
+  }
+ },
+ "162": {
+  "block": "FX_Fbd_162",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MCAT: Motor control-timer alarm",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MCAT",
+   "pins": [
+    "O_CMD",
+    "C_CMD",
+    "S_CMD",
+    "O_FB",
+    "C_FB",
+    "OO",
+    "CO",
+    "OA",
+    "CA",
+    "Q"
+   ],
+   "templates": {}
+  }
+ },
+ "163": {
+  "block": "FX_Fbd_163",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "IMC: Compare input bits with the bits of a mask",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "IMC",
+   "pins": [
+    "IN_BIT0",
+    "IN_BIT1",
+    "IN_BIT2",
+    "IN_BIT3",
+    "IN_BIT4",
+    "IN_BIT5",
+    "IN_BIT6",
+    "IN_BIT7",
+    "IN_BIT8",
+    "IN_BIT9",
+    "IN_BIT10",
+    "IN_BIT11",
+    "IN_BIT12",
+    "IN_BIT13",
+    "IN_BIT14",
+    "IN_BIT15",
+    "CMP_STEP",
+    "OUT",
+    "ERR_CODE"
+   ],
+   "templates": {}
+  }
+ },
+ "164": {
+  "block": "FX_Fbd_164",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SMC: Compare scan matrix",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SMC",
+   "pins": [
+    "IN_BIT0",
+    "IN_BIT1",
+    "IN_BIT2",
+    "IN_BIT3",
+    "IN_BIT4",
+    "IN_BIT5",
+    "IN_BIT6",
+    "IN_BIT7",
+    "IN_BIT8",
+    "IN_BIT9",
+    "IN_BIT10",
+    "IN_BIT11",
+    "IN_BIT12",
+    "IN_BIT13",
+    "IN_BIT14",
+    "IN_BIT15",
+    "OUT",
+    "ERR_CODE",
+    "OUT_STEP"
+   ],
+   "templates": {}
+  }
+ },
+ "165": {
+  "block": "FX_Fbd_165",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LEAD_LAG: Lead and lag algorithm ",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "LEAD_LAG",
+   "pins": [
+    "IN",
+    "SAMPLE_T",
+    "OUT",
+    "ERR_CODE"
+   ],
+   "templates": {}
+  }
+ },
+ "166": {
+  "block": "FB_Fbd_166",
+  "body": [
+   "{R}\nSeg( in := #wa, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SEG: Create bit pattern for seven-segment display"
+ },
+ "167": {
+  "block": "FX_Fbd_167",
+  "ok": true,
+  "title": "BCDCPL: Create tens complement",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "BCDCPL",
+   "pins": [
+    "IN",
+    "ERR_CODE"
+   ],
+   "templates": {}
+  }
+ },
+ "168": {
+  "block": "FB_Fbd_168",
+  "body": [
+   "{R}\nBitsum( in := #wa, ret_val => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "BITSUM: Count number of set bits"
+ }
+}

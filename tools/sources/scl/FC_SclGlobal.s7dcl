@@ -1,0 +1,26 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclGlobal" : Void
+    VAR_TEMP
+        i : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        "DB_Global".iInt := 5;
+        "DB_Global".xBool := NOT "DB_Global".xBool;
+        "DB_Global".aInt[2] := "DB_Global".aInt[1] + 1;
+        "DB_Global".aInt[#i] := 0;
+        "DB_Global".sData.b := "DB_Global".sData.b + 1;
+        "DB_Motor".motor.Speed := "DB_Motor".motor.Speed * 2.0;
+        "FB_Iface_DB".stInt := 3;
+        "FB_Iface_DB".iArr[1] := 4;
+        "FB_Iface_DB".iMotor.Speed := 5.0;
+        "tInt" := "tInt" + 1;
+        "tBool" := "tIn" AND NOT "tBool2";
+        "tOut" := "tBool";
+        "tReal" := "tReal" * 0.5;
+    END_NETWORK
+END_FUNCTION

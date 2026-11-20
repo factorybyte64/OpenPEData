@@ -1,0 +1,138 @@
+A: 122_hmi_item_button  B: 130_hmi_script_multiline
+CHANGED 1002:00cd:1808 ILScreenData name='Screen_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:11.106005Z' -> '2026-10-20T21:16:09.850479Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          +link ScriptModuleContainer -> 1003:00e3:2019
+NEW     1002:00e3:2018 HmiScriptEmbeddedData name='OnTapped'
+          ICoreAttributes.CreationTime = '2026-10-20T21:16:09.850479Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T21:16:10.499340Z'
+          ICoreAttributes.Name = 'OnTapped'
+          IScriptAttributes.Language = 'JavaScript'
+          IScriptAttributes.Scope = 'Screen.Event'
+          IScriptAttributes.Code = bytes[868] 6403000035000000dc000000e8000000ff0000000b01000018010000230100002e01000039010000
+          IScriptDataExpandoAttributes.Signature = bytes[63] 00270000000000000000000000001001000000010100000027000000010000001b0000000b000080
+          IScriptDataExpandoAttributes.Code = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IScriptLinkExpandoAttributes.1540090746 = bytes[5] 0000000000
+          IScriptSignatureAttributes.HasReturnValue = False
+          IScriptSignatureAttributes.IsAsync = False
+          IScriptSignatureAttributes.IsExported = True
+          IScriptSignatureAttributes.FunctionName = bytes[55] 370000000200000010000000240000001400000009000000010b3135343030393037343613000000
+          IScriptSignatureAttributes.ParameterList = bytes[196] c4000000050000001c0000003c000000540000006c0000009b00000020000000100000001a000000
+          link EmbeddedScriptParent -> 1003:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:2019
+          link ExpandoReferences -> 1003:00cd:1c10
+          link ExpandoReferencesInverse -> 1003:00cd:1c10
+CHANGED 1003:00cd:1c10 ILScreenItemData name='Button_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:11.106005Z' -> '2026-10-20T21:16:09.850479Z'  (timestamp)
+          IEventExpandoAttributes.Tapped: '<absent>' -> bytes[6] 060000000000
+          raw IEventExpandoAttributes: 0 -> 46 bytes
+          raw <links 1>: 0 -> 52 bytes
+          +link EmbeddedScriptChildren -> 1002:00e3:2018
+          +link ExpandoReferences -> 1002:00e3:2018
+          +link ExpandoReferencesInverse -> 1002:00e3:2018
+          slot table [104, 0, 0, 0, 0, 0, 0, 0, 287, 347, 0, 0, 0, 203, 0] -> [104, 0, 0, 745, 0, 0, 0, 0, 287, 347, 0, 0, 0, 203, 693]
+NEW     1003:00e3:2019 HmiScriptModuleContainerData name='ScriptModuleContainer'
+          ICoreAttributes.CreationTime = '2026-10-20T21:16:09.850479Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T21:16:09.850479Z'
+          ICoreAttributes.Name = 'ScriptModuleContainer'
+          IScriptModuleContainerAttributes.Language = 'JavaScript'
+          IScriptModuleContainerAttributes.Scope = 'Screen'
+          IScriptModuleContainerAttributes.Event_GlobalSectionCode = bytes[62] 3e000000010000000c000000320000000900000000292f2f496e7365727420646566696e6974696f
+          IScriptModuleContainerAttributes.FunctionList_GlobalSectionCode = bytes[47] 2f000000010000000c0000002300000009000000001a2f2f205b46756e6374696f6e4c6973744d6f
+          IScriptModuleContainerAttributes.Trigger_GlobalSectionCode = bytes[76] 4c000000010000000c000000400000000900000000372f2f496e7365727420646566696e6974696f
+          link ScriptContainerParent -> 1002:00cd:1808
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventElements -> 1002:00e3:2018
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:11.106005Z' -> '2026-10-20T21:16:09.850479Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[762] 01cb07000000000000000000000010010000000101000000e005785eed55dd6e9b3014dea3202e7a -> bytes[886] 01730b000000000000000000000010010000000101000000dc06785eed96cd8edb3610c7fb28820e
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:16.363950Z' -> '2026-10-20T21:16:39.631518Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:1ff8, 0014:0007:2400, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 122_hmi_item_button vs. 130_hmi_script_multiline (SHA-256, first 12)
+  CHG    000_empty.ap21  4de924fd9efb -> 22692646ba50
+  GONE   IM/HMI/I/0/Saved/DownloadTask.xml  0b451dd22a14 -> -
+  GONE   IM/HMI/I/0/Saved/TiaUmcConfig.json  d71fc66fd713 -> -
+  GONE   IM/HMI/I/0/Saved/UMCData.json  4bcfc486ca7f -> -
+  GONE   IM/HMI/I/0/Saved/User.pbb  836b988bbb1b -> -
+  GONE   IM/HMI/I/0/Saved/config/CompileTimestamp.txt  23c3c30c1bb5 -> -
+  GONE   IM/HMI/I/0/Saved/config/config.level  2e7eb5c9592b -> -
+  GONE   IM/HMI/I/0/Saved/device/devicesettings.pbb  9a6934b17c98 -> -
+  GONE   IM/HMI/I/0/Saved/device/networkshare.pbb  102b51b9765a -> -
+  GONE   IM/HMI/I/0/Saved/fonts/SISAN03.ttf  57375fa5fe4e -> -
+  GONE   IM/HMI/I/0/Saved/fonts/SISAN03.woff2  1161623f5074 -> -
+  GONE   IM/HMI/I/0/Saved/general/ChromIdentification.rdf  721677ef264a -> -
+  GONE   IM/HMI/I/0/Saved/general/cds.rdf  56065469bf95 -> -
+  GONE   IM/HMI/I/0/Saved/general/config_AlertClass.rdf  032476cf0551 -> -
+  GONE   IM/HMI/I/0/Saved/general/config_AlertHandler.rdf  eaec7b9a1d1e -> -
+  GONE   IM/HMI/I/0/Saved/general/config_DistributionInfo.rdf  4477f4d5a454 -> -
+  GONE   IM/HMI/I/0/Saved/general/config_DpValue.rdf  80de6ed6af40 -> -
+  GONE   IM/HMI/I/0/Saved/general/config_HmiRuntime.rdf  e16835f42c24 -> -
+  GONE   IM/HMI/I/0/Saved/general/config_InitialValue.rdf  8e4abca2fa61 -> -
+  GONE   IM/HMI/I/0/Saved/general/config_PeripheralAddress.rdf  7d4ab4029d07 -> -
+  GONE   IM/HMI/I/0/Saved/general/dpIdentification.rdf  8e1f56770f92 -> -
+  GONE   IM/HMI/I/0/Saved/general/fontLocatorList.rdf  49df31a1dce8 -> -
+  GONE   IM/HMI/I/0/Saved/general/main.rdf  33fb8d7c3be0 -> -
+  GONE   IM/HMI/I/0/Saved/general/style_167.rdf  e7c48b2e58a3 -> -
+  GONE   IM/HMI/I/0/Saved/general/style_271.rdf  6ada772c834c -> -
+  GONE   IM/HMI/I/0/Saved/general/style_66.rdf  e76c26e0f68d -> -
+  GONE   IM/HMI/I/0/Saved/general/textLibrary_166_1033.rdf  903173a6beb3 -> -
+  GONE   IM/HMI/I/0/Saved/general/textLibrary_2_1033.rdf  f99ea0cbd1ad -> -
+  GONE   IM/HMI/I/0/Saved/general/textListLibrary.rdf  1798ceec3492 -> -
+  GONE   IM/HMI/I/0/Saved/system/ES2RTID.rdf  e333ac6180f0 -> -
+  GONE   IM/HMI/I/0/Saved/system/ProjectCharacteristics.rdf  9047d7a301de -> -
+  GONE   IM/HMI/I/0/Saved/{894AD6A7-6155-424B-AA9D-7E77FD174D24}.zip  fe3d1b5f1da2 -> -
+  GONE   IM/HMI/I/0/Saved/{9BA2ACF0-39B3-465B-8E10-28301ED605C5}.zip  d155a4baa6d1 -> -
+  CHG    IM/HMI/I/AdditionalFiles/0_Chrom_21.0.1.0_Rdf_21.0.1.0/CAI/CAI.bin  63be25996e31 -> 7c9fa136d441
+  CHG    IM/HMI/I/AdditionalFiles/0_Chrom_21.0.1.0_Rdf_21.0.1.0/HIDS/HIDS.bin  6ce36fd5e83e -> f13ee6ed54ea
+  CHG    IM/HMI/I/AdditionalFiles/0_Chrom_21.0.1.0_Rdf_21.0.1.0/LCSI/LCSI.bin  859936e77d66 -> 0d662837e56c
+  GONE   IM/SearchIndex/_10.cfs  daf61327cd8c -> -
+  NEW    IM/SearchIndex/_14.fdt  - -> 3c24cabebeea
+  NEW    IM/SearchIndex/_14.fdx  - -> b35cc531bfa2
+  NEW    IM/SearchIndex/_14.fnm  - -> 1edd37a76bcc
+  NEW    IM/SearchIndex/_14.frq  - -> 18ee147066ad
+  NEW    IM/SearchIndex/_14.prx  - -> ee83761bc856
+  NEW    IM/SearchIndex/_14.tii  - -> 20bae872b256
+  NEW    IM/SearchIndex/_14.tis  - -> e6c7fe51fab6
+  NEW    IM/SearchIndex/_14.tvd  - -> 977e47507686
+  NEW    IM/SearchIndex/_14.tvf  - -> 075f0dbb1e1f
+  NEW    IM/SearchIndex/_14.tvx  - -> 9f4e4334a484
+  NEW    IM/SearchIndex/_14_2.del  - -> 1de32f40e7fd
+  NEW    IM/SearchIndex/_15.cfs  - -> a892fe77be0c
+  NEW    IM/SearchIndex/_16.cfs  - -> 5a800d7fe461
+  NEW    IM/SearchIndex/_17.cfs  - -> 23bd11965017
+  NEW    IM/SearchIndex/_17_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_18.cfs  - -> 5b54be416bbb
+  GONE   IM/SearchIndex/_u.fdt  32670e1ddda7 -> -
+  GONE   IM/SearchIndex/_u.fdx  00a28cde0258 -> -
+  GONE   IM/SearchIndex/_u.fnm  acee8a29fffa -> -
+  GONE   IM/SearchIndex/_u.frq  16ce83da4d3d -> -
+  GONE   IM/SearchIndex/_u.prx  9d2d83c979aa -> -
+  GONE   IM/SearchIndex/_u.tii  b2024debae5c -> -
+  GONE   IM/SearchIndex/_u.tis  a23fb38a071f -> -
+  GONE   IM/SearchIndex/_u.tvd  db7f7dee2342 -> -
+  GONE   IM/SearchIndex/_u.tvf  57ef1071719e -> -
+  GONE   IM/SearchIndex/_u.tvx  14688b893f26 -> -
+  GONE   IM/SearchIndex/_u_2.del  312d2cdfa99a -> -
+  GONE   IM/SearchIndex/_v.cfs  1ed7efc86396 -> -
+  GONE   IM/SearchIndex/_v_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_w.cfs  0ef104f7aa7f -> -
+  GONE   IM/SearchIndex/_w_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_x.cfs  266d0387b00e -> -
+  GONE   IM/SearchIndex/_y.cfs  c8efe6177061 -> -
+  GONE   IM/SearchIndex/_z.cfs  aadc5e00803b -> -
+  GONE   IM/SearchIndex/_z_1.del  c9c60928b8bc -> -
+  CHG    IM/SearchIndex/segments.gen  aad16471c98b -> da357178ce66
+  GONE   IM/SearchIndex/segments_n  e452b64da4b5 -> -
+  NEW    IM/SearchIndex/segments_s  - -> 1dd381a864e9
+  CHG    System/PEData.idx  257e624bf8bc -> 7a2f20e74446
+  CHG    XRef/XRef.db  da7093d09b04 -> 290d17e62b35

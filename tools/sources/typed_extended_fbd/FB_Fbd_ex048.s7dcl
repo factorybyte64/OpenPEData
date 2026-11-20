@@ -1,0 +1,27 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex048"
+    VAR_INPUT
+        v_id : HW_SUBMODULE;
+    END_VAR
+    VAR_OUTPUT
+        v_status : DWord;
+    END_VAR
+    VAR_IN_OUT
+        v_outputs : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Setio;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.Setio( ID := #v_id, STATUS => #v_status, OUTPUTS := #v_outputs )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

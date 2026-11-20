@@ -1,0 +1,21 @@
+A: 223_hw_dp_station.zap21  B: 224_hw_dp_subnet.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 101d:0010:182e NodeData name='PB1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:32:49.113639Z' -> '2026-10-24T15:33:21.267926Z'  (timestamp)
+          INodeData.NodePathID: 0 -> 1
+          IPersistentExpandoData.NodeGetsAddressAutomatically: True -> False
+          IPersistentExpandoData.NodePBMpiAddress: 2 -> 3
+          raw IPersistentExpandoData: 50 -> 50 bytes
+          raw <links 0>: 84 -> 84 bytes
+          +link Subnet -> 101e:0010:1018
+CHANGED 101e:0010:1018 SubnetData name='PROFIBUS_1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:32:15.335366Z' -> '2026-10-24T15:33:21.267926Z'  (timestamp)
+          IPersistentExpandoData.NetLastUsedPBMpiAddress: 2 -> 3
+          raw IPersistentExpandoData: 354 -> 354 bytes
+          raw <links 1>: 52 -> 68 bytes
+          +link SubnetNodes -> 101d:0010:182e
+          slot table [92, 0, 0, 0, 0, 0, 134, 1454, 1808, 0, 1370, 1318] -> [92, 0, 0, 0, 0, 0, 134, 1470, 1824, 0, 1386, 1318]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:32:49.496675Z' -> '2026-10-24T15:33:21.346844Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

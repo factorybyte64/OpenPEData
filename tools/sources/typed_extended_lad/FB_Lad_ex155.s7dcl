@@ -1,0 +1,22 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex155"
+    VAR_INPUT
+        v_addr : Variant;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_laddr : HW_IO;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Io2mod( ADDR := #v_addr, RET_VAL := #v_ret_val, LADDR => #v_laddr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

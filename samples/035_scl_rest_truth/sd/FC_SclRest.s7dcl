@@ -1,0 +1,46 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclRest" : Void
+    VAR_INPUT
+        anyp : Any;
+        ptrp : Pointer;
+        sp : Real;
+    END_VAR
+    VAR_TEMP
+        x : Int;
+        y : Int;
+        "b" : Bool;
+        "by" : Byte;
+        "w" : Word;
+        dw : DWord;
+        rp : REF_TO Int;
+        rd : REF_TO "UDT_Motor";
+        v : Variant;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        // peek and poke variants
+        #by := PEEK(area := 16#84, dbNumber := 1, byteOffset := 0);
+        #w := PEEK_WORD(area := 16#84, dbNumber := 1, byteOffset := 0);
+        #dw := PEEK_DWORD(area := 16#84, dbNumber := 1, byteOffset := 0);
+        #b := PEEK_BOOL(area := 16#84, dbNumber := 1, byteOffset := 0, bitOffset := 1);
+        POKE(area := 16#84, dbNumber := 1, byteOffset := 0, value := #by);
+        POKE(area := 16#84, dbNumber := 1, byteOffset := 0, value := #w);
+        POKE(area := 16#84, dbNumber := 1, byteOffset := 0, value := #dw);
+        POKE_BOOL(area := 16#84, dbNumber := 1, byteOffset := 0, bitOffset := 1, value := #b);
+        // references and dereferencing
+        #rp := REF("DB_Global".iInt);
+        #rp^ := 5;
+        #y := #rp^;
+        #b := #rp = NULL;
+        #b := #rp <> NULL;
+        #rd := REF("DB_Motor".motor);
+        #y := #rd^.Count;
+        // absolute DB address with explicit bit
+        "DB_Std".x := TRUE;
+    END_NETWORK
+END_FUNCTION

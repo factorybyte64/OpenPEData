@@ -1,0 +1,37 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclStr" : Void
+    VAR_TEMP
+        s : String;
+        s2 : String;
+        ws : WString;
+        i : Int;
+        c : Char;
+        b : Bool;
+        r : Real;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #i := LEN(#s);
+        #s := CONCAT(IN1 := #s, IN2 := #s2);
+        #s := LEFT(IN := #s, L := 2);
+        #s := RIGHT(IN := #s, L := 2);
+        #s := MID(IN := #s, L := 2, P := 1);
+        #i := FIND(IN1 := #s, IN2 := #s2);
+        #s := INSERT(IN1 := #s, IN2 := #s2, P := 1);
+        #s := DELETE(IN := #s, L := 1, P := 1);
+        #s := REPLACE(IN1 := #s, IN2 := #s2, L := 1, P := 1);
+        #b := #s = #s2;
+        #b := #s <> #s2;
+        #b := #s < #s2;
+        #c := #s[1];
+        #s[1] := #c;
+        #s := INT_TO_STRING(#i);
+        #i := STRING_TO_INT(#s);
+        #s := REAL_TO_STRING(#r);
+        #ws := STRING_TO_WSTRING(#s);
+    END_NETWORK
+END_FUNCTION

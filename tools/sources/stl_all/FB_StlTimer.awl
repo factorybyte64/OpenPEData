@@ -1,0 +1,107 @@
+FUNCTION_BLOCK "FB_StlTimer"
+TITLE = STL catalog FB_StlTimer
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 024 FR
+      A     #a;
+      FR    %T1;
+NETWORK
+TITLE = 025 L
+      L     %T1;
+      T     #wr;
+NETWORK
+TITLE = 026 LC
+      LC    %T1;
+      T     #wr;
+NETWORK
+TITLE = 027 R
+      A     #a;
+      R     %T1;
+NETWORK
+TITLE = 028 SP
+      A     #a;
+      L     S5T#1S;
+      SP    %T1;
+NETWORK
+TITLE = 029 SE
+      A     #a;
+      L     S5T#2S;
+      SE    %T2;
+NETWORK
+TITLE = 030 SD
+      A     #a;
+      L     S5T#3S;
+      SD    %T3;
+NETWORK
+TITLE = 031 SS
+      A     #a;
+      L     S5T#4S;
+      SS    %T4;
+NETWORK
+TITLE = 032 SF
+      A     #a;
+      L     S5T#5S;
+      SF    %T5;
+NETWORK
+TITLE = 033 FR
+      A     #a;
+      FR    %C1;
+NETWORK
+TITLE = 034 L
+      L     %C1;
+      T     #wr;
+NETWORK
+TITLE = 035 LC
+      LC    %C1;
+      T     #wr;
+NETWORK
+TITLE = 036 R
+      A     #a;
+      R     %C1;
+NETWORK
+TITLE = 037 S
+      A     #a;
+      L     C#5;
+      S     %C1;
+NETWORK
+TITLE = 038 CU
+      A     #a;
+      CU    %C1;
+NETWORK
+TITLE = 039 CD
+      A     #a;
+      CD    %C1;
+END_FUNCTION_BLOCK

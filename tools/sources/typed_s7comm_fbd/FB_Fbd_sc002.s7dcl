@@ -1,0 +1,37 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_sc002"
+    VAR_INPUT
+        v_req : Bool;
+        v_id : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+    END_VAR
+    VAR_IN_OUT
+        v_addr_1 : REMOTE;
+        v_sd_1 : Word;
+        v_status : Variant;
+        v_addr_2 : Variant;
+        v_addr_3 : Variant;
+        v_addr_4 : Variant;
+        v_sd_2 : Variant;
+        v_sd_3 : Variant;
+        v_sd_4 : Variant;
+    END_VAR
+    VAR
+        inst : Put;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.Put( REQ := #v_req, ID := #v_id, DONE => #v_done, ERROR => #v_error, ADDR_1 := #v_addr_1, SD_1 := #v_sd_1, STATUS := #v_status, ADDR_2 := #v_addr_2, ADDR_3 := #v_addr_3, ADDR_4 := #v_addr_4, SD_2 := #v_sd_2, SD_3 := #v_sd_3, SD_4 := #v_sd_4 )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

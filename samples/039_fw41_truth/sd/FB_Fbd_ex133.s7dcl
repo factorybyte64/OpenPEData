@@ -1,0 +1,36 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex133"
+    VAR_INPUT
+        v_mode : UInt;
+        v_laddr : HW_ANY;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_cnt_diag : UInt;
+    END_VAR
+    VAR_IN_OUT
+        v_diag : Variant;
+        v_detail : Variant;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            GET_DIAG(
+                MODE := #v_mode,
+                LADDR := #v_laddr,
+                RET_VAL => #v_ret_val,
+                CNT_DIAG => #v_cnt_diag,
+                DIAG := #v_diag,
+                DETAIL := #v_detail
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

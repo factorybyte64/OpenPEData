@@ -1,0 +1,100 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_111"
+    VAR_INPUT
+        a : Bool;
+        b : Bool;
+        c : Bool;
+        ia : Int;
+        ib : Int;
+        ic : Int;
+        da : DInt;
+        db : DInt;
+        ra : Real;
+        rb : Real;
+        wa : Word;
+        wb : Word;
+        dwa : DWord;
+        ba : Byte;
+        ta : Time;
+        tb : Time;
+        s1 : String;
+        s2 : String;
+        tmr : Timer;
+        cntr : Counter;
+        s5a : S5Time;
+        uia : UInt;
+        udia : UDInt;
+        usia : USInt;
+        lra : LReal;
+        dba : DB_ANY;
+        bytes : Array[0..7] of Byte;
+        v1 : Variant;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+        dout : DInt;
+        rout : Real;
+        wout : Word;
+        dwout : DWord;
+        bout : Byte;
+        tout : Time;
+        sout : String;
+        wout2 : Word;
+        lout : LReal;
+        eout : ErrorStruct;
+    END_VAR
+    VAR_IN_OUT
+        arr : Array[0..9] of Int;
+        barr : Array[0..7] of Bool;
+        iinout : Int;
+        dinout : DInt;
+        bytes2 : Array[0..7] of Byte;
+        reals : Array[0..3] of Real;
+        arrs : Array[*] of Int;
+        lrio : LReal;
+        bits16 : Array[0..15] of Bool;
+        bits32 : Array[0..31] of Bool;
+        wordarr : Array[0..3] of Word;
+    END_VAR
+    VAR
+        ton1 : TON_TIME;
+        tof1 : TOF_TIME;
+        tp1 : TP_TIME;
+        tonr1 : TONR_TIME;
+        ctu1 : CTU_INT;
+        ctd1 : CTD_INT;
+        ctud1 : CTUD_INT;
+        rtrig1 : R_TRIG;
+        ftrig1 : F_TRIG;
+        edge1 : Bool;
+        edge2 : Bool;
+        stat1 : Bool;
+        stat2 : Bool;
+        stati : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Bool;
+        t2 : Bool;
+        ti : Int;
+        td : DInt;
+        tr : Real;
+        tw : Word;
+        tt : Time;
+        var1 : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+        VariantPut( src := #ia, dst => #v1 )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

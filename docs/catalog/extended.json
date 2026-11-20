@@ -1,0 +1,4849 @@
+[
+ {
+  "group": "Extended instructions / Date and time-of-day",
+  "title": "T_COMP: Compare time tags (S7-1500, S7-1200 G2)",
+  "name": "T_COMP",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "DATE, TIME, LTIME, TOD, LTOD, DT, LDT, DTL, S5Time"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "DATE, TIME, LTIME, TOD, LTOD, DT, LDT, DTL, S5Time"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day",
+  "title": "T_CONV: Convert times and extract (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "T_CONV",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Integers, TIME, date and time*"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "Integers, TIME, date and time*"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day",
+  "title": "T_ADD: Add times (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "T_ADD",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "DINT, DWORD, TIME, TOD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day",
+  "title": "T_SUB: Subtract times (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "T_SUB",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "DINT, DWORD, TIME, TOD, UDINT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day",
+  "title": "T_DIFF: Time difference (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "T_DIFF",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "DTL, DATE, TOD"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "DTL, DATE, TOD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "TIME, INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day",
+  "title": "T_COMBINE: Combine times (S7-1500, S7-1200 G2)",
+  "name": "T_COMBINE",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "DATE"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "TOD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "DTL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "WR_SYS_T: Set time-of-day (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "WR_SYS_T",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "DTL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "RD_SYS_T: Read time-of-day (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RD_SYS_T",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DTL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "RD_LOC_T: Read local time (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RD_LOC_T",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DTL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "WR_LOC_T: Write local time (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "WR_LOC_T",
+  "params": [
+   {
+    "name": "LOCTIME",
+    "decl": "Input",
+    "types": "DTL"
+   },
+   {
+    "name": "DST",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "SET_TIMEZONE: Set time zone (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SET_TIMEZONE",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TimeZone",
+    "decl": "Input",
+    "types": "TimeTransformationRule"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "SNC_RTCB: Synchronize slave clocks (S7-1500)",
+  "name": "SNC_RTCB",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "TIME_TCK: Read time counter (S7-1500, S7-1200 G2)",
+  "name": "TIME_TCK",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "TIME"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Date and time-of-day / Time-of-day functions",
+  "title": "RTM: Runtime meters (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RTM",
+  "params": [
+   {
+    "name": "NR",
+    "decl": "Input",
+    "types": "RTM"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "CQ",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "S_MOVE: Move character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "S_MOVE",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "S_COMP: Compare character strings (S7-1500, S7-1200 G2)",
+  "name": "S_COMP",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "STRING, WSTRING*"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "STRING, WSTRING*"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "S_CONV: Convert character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "S_CONV",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "CHAR, WCHAR, USINT, UINT, UDINT, ULINT, SINT, INT, DINT, LINT, REAL, LREAL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "STRG_VAL: Convert character string to numerical value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "STRG_VAL",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "FORMAT",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "P",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "USINT, SINT, UINT, INT, UDINT, DINT, REAL, LREAL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "VAL_STRG: Convert numerical value to character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "VAL_STRG",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "USINT, SINT, UINT, INT, UDINT, DINT, REAL, LREAL"
+   },
+   {
+    "name": "SIZE",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "PREC",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "FORMAT",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "P",
+    "decl": "InOut",
+    "types": "UINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "Strg_TO_Chars: Convert character string to Array of CHAR (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Strg_TO_Chars",
+  "params": [
+   {
+    "name": "STRG",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "PCHARS",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "CHARS",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "CNT",
+    "decl": "Output",
+    "types": "UINT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "Chars_TO_Strg: Convert Array of CHAR to character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Chars_TO_Strg",
+  "params": [
+   {
+    "name": "CHARS",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "PCHARS",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "CNT",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "STRG",
+    "decl": "Output",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "MAX_LEN: Determine the length of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MAX_LEN",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING WSTRING"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "INT DINT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / JOIN: Joining multiple character strings",
+  "title": "JOIN: Join multiple strings (S7-1500)",
+  "name": "JOIN",
+  "params": [
+   {
+    "name": "Mode",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "RecSeparator",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "EndSeparator",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "SrcStruct",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "Count",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "DestArray",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "Position",
+    "decl": "InOut",
+    "types": "UDINT"
+   },
+   {
+    "name": "Ret_Val",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / SPLIT: Splitting a character array into multiple character strings",
+  "title": "SPLIT: Splitting an array of characters into multiple strings (S7-1500)",
+  "name": "SPLIT",
+  "params": [
+   {
+    "name": "Mode",
+    "decl": "Input",
+    "types": "DWord"
+   },
+   {
+    "name": "RecSeparator",
+    "decl": "Input",
+    "types": "Variant"
+   },
+   {
+    "name": "EndSeparator",
+    "decl": "Input",
+    "types": "Variant"
+   },
+   {
+    "name": "SrcArray",
+    "decl": "Input",
+    "types": "Variant"
+   },
+   {
+    "name": "DestStruct",
+    "decl": "InOut",
+    "types": "Variant"
+   },
+   {
+    "name": "Position",
+    "decl": "InOut",
+    "types": "UDInt"
+   },
+   {
+    "name": "Ret_Val",
+    "decl": "Return",
+    "types": "Int"
+   },
+   {
+    "name": "Count",
+    "decl": "Output",
+    "types": "UDInt"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "ATH: Convert ASCII string to hexadecimal number (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ATH",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "HTA: Convert hexadecimal number to ASCII string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "HTA",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "LEN: Determine the length of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LEN",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "CONCAT: Combine character strings (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CONCAT",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "LEFT: Read the left character of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LEFT",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "L",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "RIGHT: Read the right characters of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RIGHT",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "L",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "MID: Read middle characters of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MID",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "L",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "P",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "DELETE: Delete characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DELETE",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "L",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "P",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "INSERT: Insert characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "INSERT",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "P",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "REPLACE: Replace characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "REPLACE",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "L",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "P",
+    "decl": "Input",
+    "types": "BYTE, INT, SINT, USINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "STRING, WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char",
+  "title": "FIND: Find characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "FIND",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "STRING, WSTRING"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / Runtime information",
+  "title": "GetSymbolName: Read out a tag on the input parameter (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GetSymbolName",
+  "params": [
+   {
+    "name": "VARIABLE",
+    "decl": "Input",
+    "types": "PARAMETER"
+   },
+   {
+    "name": "SIZE",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Return",
+    "types": "WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / Runtime information",
+  "title": "Querying GetSymbolPath: actual parameter at beginning of a call path (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Querying GetSymbolPath",
+  "params": [
+   {
+    "name": "VARIABLE",
+    "decl": "Input",
+    "types": "PARAMETER"
+   },
+   {
+    "name": "SIZE",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / Runtime information",
+  "title": "GetInstanceName: Read out name of the read instance (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GetInstanceName",
+  "params": [
+   {
+    "name": "SIZE",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / Runtime information",
+  "title": "GetInstancePath: Query composite global name of the block instance (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GetInstancePath",
+  "params": [
+   {
+    "name": "SIZE",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / String + Char / Runtime information",
+  "title": "GetBlockName: Read out name of the block (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GetBlockName",
+  "params": [
+   {
+    "name": "SIZE",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WSTRING"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Process image",
+  "title": "UPDAT_PI: Update the process image inputs (S7-1500, S7-1200 G2)",
+  "name": "UPDAT_PI",
+  "params": [
+   {
+    "name": "PART",
+    "decl": "Input",
+    "types": "PIP"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "FLADDR",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Process image",
+  "title": "UPDAT_PO: Update the process image outputs (S7-1500, S7-1200 G2)",
+  "name": "UPDAT_PO",
+  "params": [
+   {
+    "name": "PART",
+    "decl": "Input",
+    "types": "PIP"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "FLADDR",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Process image",
+  "title": "SYNC_PI: Synchronize the process image inputs (S7-1500, S7-1200 G2)",
+  "name": "SYNC_PI",
+  "params": [
+   {
+    "name": "PART",
+    "decl": "Input",
+    "types": "PIP"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "FLADDR",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Process image",
+  "title": "SYNC_PO: Synchronize the process image outputs (S7-1500, S7-1200 G2)",
+  "name": "SYNC_PO",
+  "params": [
+   {
+    "name": "PART",
+    "decl": "Input",
+    "types": "PIP"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "FLADDR",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / RDREC: Read data record",
+  "title": "RDREC: Read data record (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RDREC",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "MLEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "VALID",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "LEN",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "RECORD",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / WRREC: Write data record",
+  "title": "WRREC: Write data record (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "WRREC",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "RECORD",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O",
+  "title": "GETIO: Read all inputs of a submodule (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GETIO",
+  "params": [
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "LEN",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "INPUTS",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O",
+  "title": "SETIO: Write all outputs of a submodule (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SETIO",
+  "params": [
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "OUTPUTS",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O",
+  "title": "GETIO_PART: Read inputs of a submodule (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GETIO_PART",
+  "params": [
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "OFFSET",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "INPUTS",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O",
+  "title": "SETIO_PART: Write outputs of a submodule (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SETIO_PART",
+  "params": [
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "OFFSET",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUTPUTS",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / RALRM: Receive interrupt",
+  "title": "Description RALRM (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Description RALRM",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "F_ID",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "MLEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "NEW",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ID",
+    "decl": "Output",
+    "types": "HW_IO"
+   },
+   {
+    "name": "LEN",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "TINFO",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "AINFO",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / RALRM: Receive interrupt",
+  "title": "Parameter STATUS (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter STATUS",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / RALRM: Receive interrupt",
+  "title": "Parameter TINFO (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter TINFO",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / RALRM: Receive interrupt",
+  "title": "Parameter AINFO (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter AINFO",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / RALRM: Receive interrupt",
+  "title": "Destination area TINFO and AINFO (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Destination area TINFO and AINFO",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / Distributed I/O",
+  "title": "D_ACT_DP: Activate/deactivate DP slaves (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "D_ACT_DP",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_DEVICE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / ReconfigIOSystem: Reconfigure IO system",
+  "title": "ReconfigIOSystem: Reconfigure IO system (S7-1500)",
+  "name": "ReconfigIOSystem",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_INTERFACE"
+   },
+   {
+    "name": "CTRLREC",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ERR_INFO",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other",
+  "title": "RD_REC: Read data record from I/O (S7-1500)",
+  "name": "RD_REC",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RECNUM",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other",
+  "title": "WR_REC: Write data record to I/O (S7-1500)",
+  "name": "WR_REC",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RECNUM",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other",
+  "title": "DPRD_DAT: Read consistent data of a DP standard slave (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DPRD_DAT",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other",
+  "title": "DPWR_DAT: Write consistent data of a DP standard slave (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DPWR_DAT",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other / iDevice / iSlave",
+  "title": "RCVREC: Receive data record (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RCVREC",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "F_ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "MLEN",
+    "decl": "Input",
+    "types": "INT*"
+   },
+   {
+    "name": "CODE1",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "CODE2",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "NEW",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "SLOT",
+    "decl": "Output",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "SUBSLOT",
+    "decl": "Output",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "LEN",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "RECORD",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other / iDevice / iSlave",
+  "title": "PRVREC: Make data record available (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PRVREC",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "F_ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "CODE1",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "CODE2",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "NEW",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "SLOT",
+    "decl": "Output",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "SUBSLOT",
+    "decl": "Output",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "RLEN",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "RECORD",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other / PROFIBUS",
+  "title": "DPSYC_FR: Synchronize DP slaves / Freeze inputs (S7-1500)",
+  "name": "DPSYC_FR",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_INTERFACE"
+   },
+   {
+    "name": "GROUP",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other / PROFIBUS",
+  "title": "DPNRM_DG: Read diagnostics data from a DP slave (S7-1200, S7-1500)",
+  "name": "DPNRM_DG",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_DPSLAVE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "DINT, INT, LREAL, REAL"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Output",
+    "types": "VARIANT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Distributed I/O / Other / PROFIBUS",
+  "title": "DP_TOPOL: Determine topology for DP master system (S7-1500)",
+  "name": "DP_TOPOL",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DP_ID",
+    "decl": "Input",
+    "types": "HW_IOSYSTEM"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DPR",
+    "decl": "Output",
+    "types": "BYTE"
+   },
+   {
+    "name": "DPRI",
+    "decl": "Output",
+    "types": "BYTE"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy",
+  "title": "Description of PROFIenergy (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Description of PROFIenergy",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller",
+  "title": "PE_START_END: Start and exit energy-saving mode (S7-1500, S7-1200 G2)",
+  "name": "PE_START_END",
+  "params": [
+   {
+    "name": "START",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "END",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_ SUBMODULE"
+   },
+   {
+    "name": "PAUSE_TIME",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "VALID",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "PE_MODE_ID",
+    "decl": "Output",
+    "types": "BYTE"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller",
+  "title": "PE_CMD: Start and exit energy-saving mode / Read out status information (S7-1500, S7-1200 G2)",
+  "name": "PE_CMD",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_ SUBMODULE"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "CMD_MODIFIER",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "CMD_PARA",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "CMD_PARA_LEN",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "CMD_DATA_STRUCTURE_IDENTIFIER_RQ",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RESPONSE_DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "VALID",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller",
+  "title": "PE_DS3_Write_ET200S: Set power module switching behavior (S7-1500, S7-1200 G2)",
+  "name": "PE_DS3_Write_ET200S",
+  "params": [
+   {
+    "name": "ENABLE",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "SLOT_NO_X",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "FUNC_X",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PE_WOL: Starting and stopping energy-saving mode via WakeOnLan",
+  "title": "Description PE_WOL (S7-1500, S7-1200 G2)",
+  "name": "Description PE_WOL",
+  "params": [
+   {
+    "name": "COM_RST",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "START",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "END",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PENERGY",
+    "decl": "InOut",
+    "types": "PE_PLUS"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PE_WOL: Starting and stopping energy-saving mode via WakeOnLan",
+  "title": "Parameter COM_RST (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter COM_RST",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PE_WOL: Starting and stopping energy-saving mode via WakeOnLan",
+  "title": "Parameter START (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter START",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PE_WOL: Starting and stopping energy-saving mode via WakeOnLan",
+  "title": "Parameter END (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter END",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PE_WOL: Starting and stopping energy-saving mode via WakeOnLan",
+  "title": "PENERGY parameter (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PENERGY parameter",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PE_WOL: Starting and stopping energy-saving mode via WakeOnLan",
+  "title": "Parameter STATUS (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Parameter STATUS",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "Structure of the message frames (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Structure of the message frames",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI Command \"Start_Pause\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI Command \"Start_Pause\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI Command \"End_Pause\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI Command \"End_Pause\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI command \"Query_modes\" - \"List_Energy_Saving_Modes\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI command \"Query_modes\" - \"List_Energy_Saving_Modes\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI command \"Query_modes\" - \"Get_Mode\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI command \"Query_modes\" - \"Get_Mode\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI command \"PEM_Status\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI command \"PEM_Status\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI command \"PE_Identify\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI command \"PE_Identify\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI Command \"Query_Measurement\" - \"Get_Measurement_list\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI Command \"Query_Measurement\" - \"Get_Measurement_list\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / IO controller / PROFIenergy commands",
+  "title": "PI Command \"Query_Measurement\" - \"Get_Measurement_values\" (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PI Command \"Query_Measurement\" - \"Get_Measurement_values\"",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave",
+  "title": "PE_I_DEV: Control PROFIenergy commands in the I-Device (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_I_DEV",
+  "params": [
+   {
+    "name": "RESET",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "VALID",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD_PARA",
+    "decl": "Output",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DATA_ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "CMD",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "CMD_ MODIFIER",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "NEW",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_Error_RSP: Generate negative answer to command (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_Error_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR_CODE",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_Start_RSP: Generate answer to command at start of pause (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_Start_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "PE_MODE_ID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_End_RSP: Generate answer to command at end of pause (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_End_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "Time_to_Operate",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_List_Modes_RSP: Generate queried energy savings modes as answer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_List_Modes_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "CMD_MODIFIER",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "Number_of_PE_ Mode_IDs",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "PE_MODE_ID",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_Get_Mode_RSP: Generate queried energy data as answer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_Get_Mode_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "CMD_MODIFIER",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "PE_Mode_ID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "PE_Mode_Attributes",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "Time_min_Pause",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Time_to_Pause",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Time_to_Operate",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Time_min_Lenght_ of_stay",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Time_max_Lenght_of_stay",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Mode_Power_ Consumption",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Energy_Consum_ to_Pause",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Energy_Consum_ to_operate",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_PEM_Status_RSP: Generate PEM status as answer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_PEM_Status_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "PE_MODE_ID_ Source",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "Time_to_Operate 1",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Remaining_time_ to_destination 1",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Mode_Power_ Consumption 2",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Energy_ Consumption_ to_Destination 2",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "Energy_ Consumption_ to_operate 2",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_Identify_RSP: Generate supported PROFIenergy commands as answer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_Identify_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "Start_Pause",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_Measurement_List_RSP: Generate list of supported measured values as answer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_Measurement_List_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "CMD_MODIFIER",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "Count",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "Measurement_ List",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / PROFIenergy / iDevice / iSlave / Auxiliary blocks of the instruction PE_I_DEV",
+  "title": "PE_Measurement_Value_RSP: Generate queried measured values as answer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PE_Measurement_Value_RSP",
+  "params": [
+   {
+    "name": "PE_I_DEV_NEW",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "CMD_MODIFIER",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "Count",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "Measurement_Values",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALID",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "DATA_ ERRORRSP",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Module parameter assignment",
+  "title": "RD_DPAR: Read module data record (S7-1500, S7-1200 G2)",
+  "name": "RD_DPAR",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "RECORD",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "VALID",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "LEN",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Module parameter assignment",
+  "title": "RD_DPARA: Read module data record asynchronously (S7-1500, S7-1200 G2)",
+  "name": "RD_DPARA",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RECNUM",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Module parameter assignment",
+  "title": "RD_DPARM: Read data record from configured system data (S7-1500, S7-1200 G2)",
+  "name": "RD_DPARM",
+  "params": [
+   {
+    "name": "IOID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RECNUM",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "RECORD",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Module parameter assignment",
+  "title": "WR_DPARM: Transfer data record (S7-1500, S7-1200 G2)",
+  "name": "WR_DPARM",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RECNUM",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts",
+  "title": "ATTACH: Attach an OB to an interrupt event (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ATTACH",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_ATT"
+   },
+   {
+    "name": "EVENT",
+    "decl": "Input",
+    "types": "EVENT_ATT"
+   },
+   {
+    "name": "ADD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts",
+  "title": "DETACH: Detach an OB from an interrupt event (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DETACH",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_ATT"
+   },
+   {
+    "name": "EVENT",
+    "decl": "Input",
+    "types": "EVENT_ATT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Cyclic interrupt",
+  "title": "SET_CINT: Set cyclic interrupt parameters (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SET_CINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_CYCLIC"
+   },
+   {
+    "name": "CYCLE",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "PHASE",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Cyclic interrupt",
+  "title": "QRY_CINT: Query cyclic interrupt parameters (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "QRY_CINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_CYCLIC (INT)"
+   },
+   {
+    "name": "CYCLE",
+    "decl": "Output",
+    "types": "UDINT"
+   },
+   {
+    "name": "PHASE",
+    "decl": "Output",
+    "types": "UDINT"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-of-day interrupt",
+  "title": "SET_TINT: Set time-of-day interrupt (S7-1500, S7-1200 G2)",
+  "name": "SET_TINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_TOD"
+   },
+   {
+    "name": "SDT",
+    "decl": "Input",
+    "types": "DT"
+   },
+   {
+    "name": "PERIOD",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-of-day interrupt",
+  "title": "SET_TINTL: Set time-of-day interrupt (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SET_TINTL",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_TOD"
+   },
+   {
+    "name": "SDT",
+    "decl": "Input",
+    "types": "DTL"
+   },
+   {
+    "name": "LOCAL",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PERIOD",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "ACTIVATE",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-of-day interrupt",
+  "title": "CAN_TINT: Cancel time-of-day interrupt (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CAN_TINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_TOD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-of-day interrupt",
+  "title": "ACT_TINT: Enable time-of-day interrupt (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ACT_TINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_TOD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-of-day interrupt",
+  "title": "QRY_TINT: Query status of time-of-day interrupt (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "QRY_TINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_TOD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-delay interrupt",
+  "title": "SRT_DINT: Start time-delay interrupt (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SRT_DINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_DELAY (INT)"
+   },
+   {
+    "name": "DTIME",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "SIGN",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-delay interrupt",
+  "title": "CAN_DINT: Cancel time-delay interrupt (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CAN_DINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_DELAY (INT)"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Time-delay interrupt",
+  "title": "QRY_DINT: Query time-delay interrupt status (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "QRY_DINT",
+  "params": [
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "OB_DELAY (INT)"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Synchronous errors",
+  "title": "MSK_FLT: Mask synchronous error events (S7-1500, S7-1200 G2)",
+  "name": "MSK_FLT",
+  "params": [
+   {
+    "name": "PRGFLT_SET_MASK",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACCFLT_SET_MASK",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "PRGFLT_MASKED",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACCFLT_MASKED",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Synchronous errors",
+  "title": "DMSK_FLT: Unmask synchronous error events (S7-1500, S7-1200 G2)",
+  "name": "DMSK_FLT",
+  "params": [
+   {
+    "name": "PRGFLT_RESET_MASK",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACCFLT_RESET_MASK",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "PRGFLT_MASKED",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACCFLT_MASKED",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Synchronous errors",
+  "title": "READ_ERR: Read out event status register (S7-1500, S7-1200 G2)",
+  "name": "READ_ERR",
+  "params": [
+   {
+    "name": "PRGFLT_QUERY",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACCFLT_QUERY",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "PRGFLT_CLR",
+    "decl": "Output",
+    "types": "DWORD"
+   },
+   {
+    "name": "ACCFLT_CLR",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Asynchronous error event",
+  "title": "DIS_IRT: Disable interrupt event (S7-1500, S7-1200 G2)",
+  "name": "DIS_IRT",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Asynchronous error event",
+  "title": "EN_IRT: Enable interrupt event (S7-1500, S7-1200 G2)",
+  "name": "EN_IRT",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "OB_NR",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Asynchronous error event",
+  "title": "DIS_AIRT: Delay execution of higher priority interrupts and asynchronous error events (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DIS_AIRT",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Interrupts / Asynchronous error event",
+  "title": "EN_AIRT: Enable execution of higher priority interrupts and asynchronous error events (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EN_AIRT",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Alarms",
+  "title": "Program_Alarm: Generate program alarm with associated values (S7-1500, S7-1200 G2)",
+  "name": "Program_Alarm",
+  "params": [
+   {
+    "name": "SIG",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TIMESTAMP",
+    "decl": "Input",
+    "types": "LDT"
+   },
+   {
+    "name": "SD_i",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "Error",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Status",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Alarms",
+  "title": "Get_AlarmState: Output alarm status (S7-1500, S7-1200 G2)",
+  "name": "Get_AlarmState",
+  "params": [
+   {
+    "name": "Alarm",
+    "decl": "Input",
+    "types": "ALARM_BASE"
+   },
+   {
+    "name": "AlarmState",
+    "decl": "Output",
+    "types": "BYTE"
+   },
+   {
+    "name": "Error",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Alarms",
+  "title": "Gen_UsrMsg: Generate user diagnostic alarms (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Gen_UsrMsg",
+  "params": [
+   {
+    "name": "Mode",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "TextID",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "TextListID",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "Ret_Val",
+    "decl": "Return",
+    "types": "Int"
+   },
+   {
+    "name": "AssocValues",
+    "decl": "InOut",
+    "types": "AssocValues"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Alarms",
+  "title": "Get_Alarm: Read pending alarm (S7-1500, S7-1200 G2)",
+  "name": "Get_Alarm",
+  "params": [
+   {
+    "name": "EN *)",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO *)",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OperateMode",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DataMode",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DispClassNr (Display class number)",
+    "decl": "Input",
+    "types": "ARRAY[0..31] of UINT"
+   },
+   {
+    "name": "Lcid (Local ID)",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "Data",
+    "decl": "InOut",
+    "types": "\"AlarmData\""
+   },
+   {
+    "name": "DataReady",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Busy",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Error",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Init",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Status",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Alarms",
+  "title": "Ack_Alarms: Acknowledge alarms (S7-1500, S7-1200 G2)",
+  "name": "Ack_Alarms",
+  "params": [
+   {
+    "name": "EN *)",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO *)",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "RD_SINFO: Read current OB start information (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RD_SINFO",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "TOP_SI",
+    "decl": "Output",
+    "types": "VARIANT"
+   },
+   {
+    "name": "START_UP_SI",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "RT_INFO: Read out runtime statistics (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RT_INFO",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "OB",
+    "decl": "Input",
+    "types": "OB_ANY"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "INFO",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "LED: Read LED status (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LED",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "LED",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "Get_IM_Data: Reading identification and maintenance data (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Get_IM_Data",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "IM_TYPE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "GET_NAME: Read out name of an IO device or a DP slave (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GET_NAME",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IOSYSTEM"
+   },
+   {
+    "name": "STATION_NR",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "LEN",
+    "decl": "Output",
+    "types": "DINT"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "GetStationInfo: Read information of an IO device (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GetStationInfo",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_DEVICE"
+   },
+   {
+    "name": "DETAIL",
+    "decl": "Input",
+    "types": "HW_SUBMODULE"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "DeviceStates: Read module status information in an IO system (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DeviceStates",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IOSYSTEM"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "STATE",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "ModuleStates: Read module status information of a module (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ModuleStates",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_DEVICE"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "STATE",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "GEN_DIAG: Generate diagnostics information (S7-1500, S7-1200 G2)",
+  "name": "GEN_DIAG",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_ANY"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DiagEvent",
+    "decl": "InOut",
+    "types": "DiagnosticDetail"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Diagnostics",
+  "title": "GET_DIAG: Read diagnostic information (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GET_DIAG",
+  "params": [
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_ANY (UINT)"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "CNT_DIAG",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "DIAG",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DETAIL",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Pulse",
+  "title": "CTRL_PWM: Pulse-width modulation (S7-1200)",
+  "name": "CTRL_PWM",
+  "params": [
+   {
+    "name": "PWM",
+    "decl": "Input",
+    "types": "HW_PWM"
+   },
+   {
+    "name": "ENABLE",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Recipe functions",
+  "title": "RecipeExport: Exporting recipes (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RecipeExport",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECIPE_DB",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Recipe functions",
+  "title": "RecipeImport: Importing recipes (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RecipeImport",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECIPE_DB",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging",
+  "title": "Data logging - Overview (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Data logging - Overview",
+  "params": null
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging",
+  "title": "DataLogCreate: Create data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogCreate",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECORDS",
+    "decl": "Input",
+    "types": "UDInt"
+   },
+   {
+    "name": "FORMAT",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "TIMESTAMP",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "NAME",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "HEADER",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging / DataLogOpen: Open data log",
+  "title": "DataLogOpen: Open data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogOpen",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "NAME",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging / DataLogOpen: Open data log",
+  "title": "DataLogOpen: Open data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogOpen",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "UInt"
+   },
+   {
+    "name": "NAME",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging",
+  "title": "DataLogClear: Empty data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogClear",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging",
+  "title": "DataLogWrite: Write data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogWrite",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging",
+  "title": "DataLogClose: Close data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogClose",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging",
+  "title": "DataLogDelete: Delete data log (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogDelete",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "NAME",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DELFILE",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging / DataLogNewFile: Data log in new file",
+  "title": "DataLogNewFile: Data log in new file (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogNewFile",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECORDS",
+    "decl": "Input",
+    "types": "UDInt"
+   },
+   {
+    "name": "NAME",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Recipes and data logging / Data logging / DataLogNewFile: Data log in new file",
+  "title": "DataLogNewFile: Data log in new file (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DataLogNewFile",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RECORDS",
+    "decl": "Input",
+    "types": "UDInt"
+   },
+   {
+    "name": "NAME",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "ID",
+    "decl": "InOut",
+    "types": "DWORD"
+   },
+   {
+    "name": "DATA",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Data block functions",
+  "title": "CREATE_DB: Create data block (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CREATE_DB",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LOW_LIMIT",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "UP_LIMIT",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "ATTRIB",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB_NUM",
+    "decl": "Output",
+    "types": "DB_DYN (UINT)"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Data block functions",
+  "title": "READ_DBL: Read from data block in the load memory (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "READ_DBL",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DSTBLK",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Data block functions",
+  "title": "WRIT_DBL: Write to data block in the load memory (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "WRIT_DBL",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DSTBLK",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Data block functions",
+  "title": "ATTR_DB: Read data block attribute (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ATTR_DB",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB_NUMBER",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "DB_LENGTH",
+    "decl": "Output",
+    "types": "UDINT"
+   },
+   {
+    "name": "ATTRIB",
+    "decl": "Output",
+    "types": "BYTE"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Data block functions",
+  "title": "DELETE_DB: Delete data block (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DELETE_DB",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB_NUMBER",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing",
+  "title": "GEO2LOG: Determine hardware identifier from slot (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GEO2LOG",
+  "params": [
+   {
+    "name": "GEOADDR",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Output",
+    "types": "UINT / HW_ANY"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing",
+  "title": "LOG2GEO: Determine slot from hardware identifier (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LOG2GEO",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_ANY"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "GEOADDR",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing",
+  "title": "LOG2MOD: Determine the hardware identifier from addressing of STEP 7 V5.5 SPx (S7-1500, S7-1200 G2)",
+  "name": "LOG2MOD",
+  "params": [
+   {
+    "name": "IOID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "ADDR",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "HWID",
+    "decl": "Output",
+    "types": "HW_IO"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing",
+  "title": "IO2MOD: Determine hardware identifier from an IO address (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "IO2MOD",
+  "params": [
+   {
+    "name": "ADDR",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Output",
+    "types": "HW_IO"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing",
+  "title": "RD_ADDR: Determine IO addresses from the hardware identifier (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RD_ADDR",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "PIADDR",
+    "decl": "Output",
+    "types": "UDINT"
+   },
+   {
+    "name": "PICOUNT",
+    "decl": "Output",
+    "types": "UINT"
+   },
+   {
+    "name": "PQADDR",
+    "decl": "Output",
+    "types": "UDINT"
+   },
+   {
+    "name": "PQCOUNT",
+    "decl": "Output",
+    "types": "UINT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing / Legacy",
+  "title": "GEO_LOG: Determine hardware identifier from slot (S7-1500)",
+  "name": "GEO_LOG",
+  "params": [
+   {
+    "name": "MASTER",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "STATION",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "SLOT",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "SUBSLOT",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Output",
+    "types": "HW_IO"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing / Legacy",
+  "title": "LOG_GEO: Determine slot from hardware identifier (S7-1500)",
+  "name": "LOG_GEO",
+  "params": [
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "AREA",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "MASTER",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "STATION",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "SLOT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "SUBSLOT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "OFFSET",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing / Legacy",
+  "title": "RD_LGADR: Determine IO addresses from the hardware identifier (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RD_LGADR",
+  "params": [
+   {
+    "name": "IOID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_ANY"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "PEADDR",
+    "decl": "Output",
+    "types": "ANY"
+   },
+   {
+    "name": "PECOUNT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "PAADDR",
+    "decl": "Output",
+    "types": "ANY"
+   },
+   {
+    "name": "PACOUNT",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing / Legacy",
+  "title": "GADR_LGC: Determine hardware identifier from slot and offset in the user data address area (S7-1500)",
+  "name": "GADR_LGC",
+  "params": [
+   {
+    "name": "SUBNETID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RACK",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "SLOT",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "SUBSLOT",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "SUBADDR",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "IOID",
+    "decl": "Output",
+    "types": "BYTE"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Output",
+    "types": "HW_MODULE"
+   }
+  ]
+ },
+ {
+  "group": "Extended instructions / Addressing / Legacy",
+  "title": "LGC_GADR: Determine slot from hardware identifier (S7-1500)",
+  "name": "LGC_GADR",
+  "params": [
+   {
+    "name": "IOID",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "LADDR",
+    "decl": "Input",
+    "types": "HW_MODULE"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Return",
+    "types": "INT"
+   },
+   {
+    "name": "AREA",
+    "decl": "Output",
+    "types": "BYTE"
+   },
+   {
+    "name": "RACK",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "SLOT",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "SUBADDR",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ }
+]

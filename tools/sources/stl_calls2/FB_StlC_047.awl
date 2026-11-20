@@ -1,0 +1,53 @@
+FUNCTION_BLOCK "FB_StlC_047"
+TITLE = STL call WRITE_LITTLE
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      i1 : Int;
+      i2 : Int;
+      di1 : DInt;
+      r1 : Real;
+      w1 : Word;
+      dw1 : DWord;
+      b1 : Byte;
+      u1 : UInt;
+      ud1 : UDInt;
+   END_VAR
+   VAR_OUTPUT
+      q : Bool;
+      io : Int;
+      dio : DInt;
+      ro : Real;
+      wo : Word;
+      dwo : DWord;
+      bo : Byte;
+      udo : UDInt;
+   END_VAR
+   VAR_IN_OUT
+      v : Variant;
+      arrs : Array[*] of Int;
+      pos : DInt;
+   END_VAR
+   VAR
+      src : Array[0..9] of Int;
+      dst : Array[0..9] of Int;
+      bits : Array[0..31] of Bool;
+      bytes : Array[0..9] of Byte;
+      err : ErrorStruct;
+      rt : LReal;
+      tim : IEC_TIMER;
+      words : Array[0..3] of Word;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 047 WRITE_LITTLE
+      CALL WRITE_LITTLE
+      {value_type := 'Int'}
+      (  SRC_VARIABLE := #i1 ,
+         DEST_ARRAY := #bytes ,
+         POS := #pos ,
+         RET_VAL := #io
+      );
+END_FUNCTION_BLOCK

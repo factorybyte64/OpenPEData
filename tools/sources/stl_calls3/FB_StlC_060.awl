@@ -1,0 +1,30 @@
+FUNCTION_BLOCK "FB_StlC_060"
+TITLE = STL call VARIANT_TO_DB_ANY
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_IN_OUT
+      v : Variant;
+   END_VAR
+   VAR_OUTPUT
+      io : Int;
+   END_VAR
+   VAR_TEMP
+      dba : DB_ANY;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 060 VARIANT_TO_DB_ANY
+      CALL VARIANT_TO_DB_ANY
+      (  IN                          := #v ,
+         ERR                         := #io ,
+         RET_VAL                     := #dba
+      );
+NETWORK
+TITLE = 061 DB_ANY_TO_VARIANT
+      CALL DB_ANY_TO_VARIANT
+      (  IN                          := #dba ,
+         ERR                         := #io ,
+         RET_VAL                     := #v
+      );
+END_FUNCTION_BLOCK

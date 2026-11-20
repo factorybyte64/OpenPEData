@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-10T19:21:32.1837462Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="v_mb_addr" Datatype="USInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="Output">
+            <Member Name="v_ndr" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_dr" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_error" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_status" Datatype="Word" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="InOut">
+            <Member Name="v_mb_hold_reg" Datatype="Variant" Accessibility="Public" />
+          </Section>
+          <Section Name="Static">
+            <Member Name="inst" Datatype="Modbus_Slave" Version="6.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="MB_ADDR" Datatype="UInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="DR" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="MB_HOLD_REG" Datatype="Variant" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="MB_State" Datatype="Word" />
+                  <Member Name="HR_Start_Offset" Datatype="Word" />
+                  <Member Name="QB_Start" Datatype="UInt" />
+                  <Member Name="QB_Count" Datatype="UInt" />
+                  <Member Name="QB_Read_Start" Datatype="UInt" />
+                  <Member Name="QB_Read_Count" Datatype="UInt" />
+                  <Member Name="IB_Read_Start" Datatype="UInt" />
+                  <Member Name="IB_Read_Count" Datatype="UInt" />
+                  <Member Name="Extended_Addressing" Datatype="Bool" />
+                  <Member Name="Request_Count" Datatype="Word" />
+                  <Member Name="Slave_Message_Count" Datatype="Word" />
+                  <Member Name="Bad_CRC_Count" Datatype="Word" />
+                  <Member Name="Broadcast_Count" Datatype="Word" />
+                  <Member Name="Exception_Count" Datatype="Word" />
+                  <Member Name="Success_Count" Datatype="Word" />
+                  <Member Name="MB_DB" Datatype="P2P_MB_BASE" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="S_PORT" Datatype="Word" />
+                        <Member Name="S_RESP_TO" Datatype="Word" />
+                        <Member Name="S_ICHAR_GAP" Datatype="Word" />
+                        <Member Name="S_RETRIES" Datatype="Word" />
+                        <Member Name="S_MB_CRC" Datatype="Byte" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="SEND_PTP" Datatype="Send_P2P" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="PORT" Datatype="PORT" />
+                        <Member Name="BUFFER" Datatype="Variant" />
+                        <Member Name="LENGTH" Datatype="UInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="UNIVERSAL" Datatype="Bool" />
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static">
+                        <Member Name="OldPORT" Datatype="PORT" />
+                        <Member Name="send_length" Datatype="UInt" />
+                        <Member Name="max_record_len" Datatype="UInt" />
+                        <Member Name="max_telegram_len" Datatype="UInt" />
+                        <Member Name="b_e_REQ" Datatype="Bool" />
+                        <Member Name="isClassic" Datatype="Bool" />
+                        <Member Name="first_sent" Datatype="Bool" />
+                        <Member Name="y_state" Datatype="SInt" />
+                        <Member Name="y_nr_rec" Datatype="SInt" />
+                        <Member Name="ser_nr_old" Datatype="USInt" />
+                        <Member Name="ser_nr" Datatype="USInt" />
+                        <Member Name="module_initialized" Datatype="Bool" />
+                        <Member Name="SendBuffer" Datatype="Array[0..1026] of Byte" />
+                        <Member Name="i_addr" Datatype="UDInt" />
+                        <Member Name="o_addr" Datatype="UDInt" />
+                        <Member Name="WRREC" Datatype="WRREC" Version="1.1">
+                          <Sections>
+                            <Section Name="Input">
+                              <Member Name="REQ" Datatype="Bool" />
+                              <Member Name="ID" Datatype="HW_IO" />
+                              <Member Name="INDEX" Datatype="DInt" />
+                              <Member Name="LEN" Datatype="UInt" />
+                            </Section>
+                            <Section Name="Output">
+                              <Member Name="DONE" Datatype="Bool" />
+                              <Member Name="BUSY" Datatype="Bool" />
+                              <Member Name="ERROR" Datatype="Bool" />
+                              <Member Name="STATUS" Datatype="DWord" />
+                            </Section>
+                            <Section Name="InOut">
+                              <Member Name="RECORD" Datatype="Variant" />
+                            </Section>
+                            <Section Name="Static" />
+                          </Sections>
+                        </Member>
+                        <Member Name="PTP_STATUS" Datatype="P2P_SendGetData" Version="1.0">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="header" Datatype="P2P_Header" Version="1.0">
+                                <Sections>
+                                  <Section Name="None">
+                                    <Member Name="block_type" Datatype="Word" />
+                                    <Member Name="block_len" Datatype="Word" />
+                                    <Member Name="block_ver" Datatype="Word" />
+                                    <Member Name="res" Datatype="Word" />
+                                  </Section>
+                                </Sections>
+                              </Member>
+                              <Member Name="V24_seqnr_st" Datatype="DWord" />
+                              <Member Name="b_seq_nr_rcv" Datatype="USInt" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="InitTimeout" Datatype="TON_TIME" Version="1.0">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="PT" Datatype="Time" />
+                              <Member Name="ET" Datatype="Time" />
+                              <Member Name="IN" Datatype="Bool" />
+                              <Member Name="Q" Datatype="Bool" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="RCV_PTP" Datatype="Receive_P2P" Version="4.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="PORT" Datatype="PORT" />
+                        <Member Name="BUFFER" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="UNIVERSAL" Datatype="Bool" />
+                        <Member Name="NDR" Datatype="Bool" />
+                        <Member Name="LENGTH" Datatype="UInt" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static">
+                        <Member Name="OldPORT" Datatype="PORT" />
+                        <Member Name="received_length" Datatype="UInt" />
+                        <Member Name="y_ptp_status" Datatype="SInt" />
+                        <Member Name="y_state" Datatype="SInt" />
+                        <Member Name="y_seq_nr" Datatype="Byte" />
+                        <Member Name="safe_h1" Datatype="Byte" />
+                        <Member Name="safe_h2" Datatype="Byte" />
+                        <Member Name="safe_h3" Datatype="Byte" />
+                        <Member Name="safe_h4" Datatype="Byte" />
+                        <Member Name="isClassic" Datatype="Bool" />
+                        <Member Name="record_nr" Datatype="Int" />
+                        <Member Name="offset" Datatype="UDInt" />
+                        <Member Name="RDREC" Datatype="RDREC" Version="1.0">
+                          <Sections>
+                            <Section Name="Input">
+                              <Member Name="REQ" Datatype="Bool" />
+                              <Member Name="ID" Datatype="HW_IO" />
+                              <Member Name="INDEX" Datatype="DInt" />
+                              <Member Name="MLEN" Datatype="UInt" />
+                            </Section>
+                            <Section Name="Output">
+                              <Member Name="VALID" Datatype="Bool" />
+                              <Member Name="BUSY" Datatype="Bool" />
+                              <Member Name="ERROR" Datatype="Bool" />
+                              <Member Name="STATUS" Datatype="DWord" />
+                              <Member Name="LEN" Datatype="UInt" />
+                            </Section>
+                            <Section Name="InOut">
+                              <Member Name="RECORD" Datatype="Variant" />
+                            </Section>
+                            <Section Name="Static" />
+                          </Sections>
+                        </Member>
+                        <Member Name="ReceiveBuffer" Datatype="Array[0..1027] of Byte" />
+                        <Member Name="i_addr" Datatype="UDInt" />
+                        <Member Name="o_addr" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="w_status" Datatype="Word" />
+                  <Member Name="TEMP_DATA" Datatype="Array[0..255] of Byte" />
+                  <Member Name="Data_Area_Array" Datatype="Array[1..8] of MB_DataArea" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="data_type" Datatype="UInt" />
+                        <Member Name="db" Datatype="UInt" />
+                        <Member Name="start" Datatype="UInt" />
+                        <Member Name="length" Datatype="UInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_Lad_mb008</Name>
+      <Namespace />
+      <Number>8</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="v_mb_addr" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="v_ndr" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="v_dr" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="v_error" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="v_status" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="v_mb_hold_reg" />
+                  </Symbol>
+                </Access>
+                <Part Name="Modbus_Slave" Version="6.0" UId="27">
+                  <Instance Scope="LocalVariable" UId="28">
+                    <Component Name="inst" />
+                  </Instance>
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="29">
+                  <Powerrail />
+                  <NameCon UId="27" Name="en" />
+                </Wire>
+                <Wire UId="30">
+                  <IdentCon UId="21" />
+                  <NameCon UId="27" Name="MB_ADDR" />
+                </Wire>
+                <Wire UId="31">
+                  <NameCon UId="27" Name="NDR" />
+                  <IdentCon UId="22" />
+                </Wire>
+                <Wire UId="32">
+                  <NameCon UId="27" Name="DR" />
+                  <IdentCon UId="23" />
+                </Wire>
+                <Wire UId="33">
+                  <NameCon UId="27" Name="ERROR" />
+                  <IdentCon UId="24" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="27" Name="STATUS" />
+                  <IdentCon UId="25" />
+                </Wire>
+                <Wire UId="35">
+                  <IdentCon UId="26" />
+                  <NameCon UId="27" Name="MB_HOLD_REG" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Description of MB_SLAVE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

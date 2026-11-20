@@ -1,0 +1,150 @@
+[
+ {
+  "group": "Time-based IO",
+  "title": "TIO_SYNC: Synchronizing TIO modules (S7-1500)",
+  "name": "TIO_SYNC",
+  "params": null
+ },
+ {
+  "group": "Time-based IO",
+  "title": "TIO_IOLink_IN: Read process input signals with time stamps (S7-1500)",
+  "name": "TIO_IOLink_IN",
+  "params": [
+   {
+    "name": "HWID*",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "Port*",
+    "decl": "Input",
+    "types": "USInt"
+   },
+   {
+    "name": "TIO_SYNC_Data*",
+    "decl": "Input",
+    "types": "\"TIO_SYNC_Data\""
+   },
+   {
+    "name": "TO*",
+    "decl": "Input",
+    "types": "LTime"
+   },
+   {
+    "name": "SA_Bit0",
+    "decl": "Output",
+    "types": "Bool"
+   },
+   {
+    "name": "SA_Bit1",
+    "decl": "Output",
+    "types": "Bool"
+   },
+   {
+    "name": "SA_Data",
+    "decl": "Output",
+    "types": "DWord"
+   },
+   {
+    "name": "TimeStamp",
+    "decl": "Output",
+    "types": "LTime"
+   },
+   {
+    "name": "EventCount",
+    "decl": "Output",
+    "types": "UInt"
+   },
+   {
+    "name": "Status",
+    "decl": "Output",
+    "types": "DWord"
+   },
+   {
+    "name": "Error",
+    "decl": "Output",
+    "types": "Bool"
+   }
+  ]
+ },
+ {
+  "group": "Time-based IO",
+  "title": "TIO_DI: Reading in edges at digital input and associated time stamps (S7-1500)",
+  "name": "TIO_DI",
+  "params": null
+ },
+ {
+  "group": "Time-based IO",
+  "title": "TIO_IOLink_OUT: Output time-controlled process output signals (S7-1500)",
+  "name": "TIO_IOLink_OUT",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "Bool"
+   },
+   {
+    "name": "HWID*",
+    "decl": "Input",
+    "types": "HW_IO"
+   },
+   {
+    "name": "TO*",
+    "decl": "Input",
+    "types": "LTime"
+   },
+   {
+    "name": "Port*",
+    "decl": "Input",
+    "types": "USInt"
+   },
+   {
+    "name": "TIO_SYNC_Data*",
+    "decl": "Input",
+    "types": "\"TIO_SYNC_Data\""
+   },
+   {
+    "name": "TimeStamp",
+    "decl": "Input",
+    "types": "LTime"
+   },
+   {
+    "name": "AA_Data",
+    "decl": "Input",
+    "types": "Word"
+   },
+   {
+    "name": "Busy",
+    "decl": "Output",
+    "types": "Bool"
+   },
+   {
+    "name": "Done",
+    "decl": "Output",
+    "types": "Bool"
+   },
+   {
+    "name": "Error",
+    "decl": "Output",
+    "types": "Bool"
+   },
+   {
+    "name": "Status",
+    "decl": "Output",
+    "types": "DWord"
+   }
+  ]
+ },
+ {
+  "group": "Time-based IO",
+  "title": "TIO_DQ: Output edges time-controlled at the digital output (S7-1500)",
+  "name": "TIO_DQ",
+  "params": null
+ },
+ {
+  "group": "Time-based IO",
+  "title": "UDT TIO_SYNC_Data (S7-1500)",
+  "name": "UDT TIO_SYNC_Data",
+  "params": null
+ }
+]

@@ -1,0 +1,21 @@
+FUNCTION_BLOCK "FB_CarrierTrig"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR
+      r : R_TRIG;
+      f : F_TRIG;
+      c : IEC_COUNTER;
+      b : Bool;
+   END_VAR
+   VAR_TEMP
+      e : ErrorStruct;
+   END_VAR
+
+BEGIN
+	// carrier for the system blocks R_TRIG and F_TRIG and the system data types IEC_COUNTER and ErrorStruct
+	// (with NREF, CREF) (tools\rebuild sys_blocks, sample 038_comm_hw)
+	#r(CLK := #b);
+	#f(CLK := #b);
+	#c.PV := 1;
+	GET_ERROR(#e);
+END_FUNCTION_BLOCK

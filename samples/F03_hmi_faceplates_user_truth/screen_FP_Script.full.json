@@ -1,0 +1,178 @@
+{
+ "detail": "full",
+ "count": 1,
+ "skipped": [],
+ "objects": [
+  {
+   "name": "FP_Script",
+   "groupPath": "",
+   "itemCount": 2,
+   "attributes": {
+    "AlternateBackColor": "0xFFEBEBEB",
+    "BackColor": "0xFFC0C0C0",
+    "BackFillPattern": "Solid",
+    "BackGraphicStretchMode": "UniformToFill",
+    "BackgroundFillMode": "Window",
+    "Enabled": true,
+    "Height": 480,
+    "HorizontalAlignment": "Left",
+    "ScreenNumber": 0,
+    "VerticalAlignment": "Top",
+    "Width": 800
+   },
+   "events": [
+    {
+     "eventType": "Loaded",
+     "Async": false,
+     "GlobalDefinitionAreaScriptCode": "//Insert definitions for events here\r\n\r\n",
+     "ScriptCode": "// F01 FP_Script Loaded\r\nHMIRuntime.Trace(\"F01 screen loaded\");"
+    }
+   ],
+   "items": [
+    {
+     "name": "S_Button1",
+     "type": "HmiButton",
+     "attributes": {
+      "AlternateBackColor": "0xFF808080",
+      "AlternateBorderColor": "0xFFFFFFFF",
+      "Authorization": "None",
+      "BackColor": "0xFF006699",
+      "BorderColor": "0xFF64646A",
+      "BorderWidth": 1,
+      "Content": {
+       "ContentMode": "GraphicAndText",
+       "GraphicStretchMode": "Uniform",
+       "HorizontalTextAlignment": "Center",
+       "Spacing": 5,
+       "SplitRatio": 0.3,
+       "TextPosition": "Right",
+       "TextTrimming": "None",
+       "VerticalTextAlignment": "Center"
+      },
+      "CurrentQuality": "None",
+      "Enabled": true,
+      "Font": {
+       "Italic": false,
+       "Name": "SiemensSans",
+       "Size": 14,
+       "StrikeOut": false,
+       "Underline": false,
+       "Weight": "Normal"
+      },
+      "ForeColor": "0xFF000000",
+      "Height": 50,
+      "HotKey": 0,
+      "Left": 20,
+      "Opacity": 1,
+      "Padding": {
+       "Bottom": 2,
+       "Left": 2,
+       "Right": 2,
+       "Top": 2
+      },
+      "RequireExplicitUnlock": false,
+      "RotationAngle": 0,
+      "RotationCenterPlacement": "AbsoluteFromCenter",
+      "RotationCenterX": 0,
+      "RotationCenterY": 0,
+      "ShowFocusVisual": true,
+      "StyleItemClass": "HmiButton",
+      "TabIndex": 0,
+      "Text": {
+       "en-US": "F01 Set Tag",
+       "de-DE": "Text",
+       "it-IT": "Text"
+      },
+      "Top": 20,
+      "Visible": true,
+      "VisualizeQuality": true,
+      "Width": 160
+     },
+     "events": [
+      {
+       "eventType": "Tapped",
+       "Async": false,
+       "GlobalDefinitionAreaScriptCode": "//Insert definitions for events here\r\n\r\n",
+       "ScriptCode": "// F01 S_Button1 Tapped\r\nTags(\"HmiTag_Ext1\").Write(true);"
+      },
+      {
+       "eventType": "Down",
+       "Async": false,
+       "GlobalDefinitionAreaScriptCode": "//Insert definitions for events here\r\n\r\n",
+       "ScriptCode": "// F01 S_Button1 Down\r\nHMIRuntime.Trace(\"F01 button down\");"
+      }
+     ]
+    },
+    {
+     "name": "S_IOField1",
+     "type": "HmiIOField",
+     "attributes": {
+      "AlternateBackColor": "0xFF808080",
+      "AlternateBorderColor": "0xFFFFFFFF",
+      "Authorization": "None",
+      "BackColor": "0xFFE0FFE0",
+      "BorderColor": "0xFF64646A",
+      "BorderWidth": 1,
+      "CurrentQuality": "None",
+      "Enabled": true,
+      "Font": {
+       "Italic": false,
+       "Name": "SiemensSans",
+       "Size": 14,
+       "StrikeOut": false,
+       "Underline": false,
+       "Weight": "Normal"
+      },
+      "ForeColor": "0xFF000000",
+      "Height": 40,
+      "HorizontalTextAlignment": "Center",
+      "IOFieldType": "InputOutput",
+      "InputBehavior": {
+       "AcceptOnDeactivated": true,
+       "ClearOnActivate": false,
+       "HiddenInput": false
+      },
+      "Left": 20,
+      "Opacity": 1,
+      "Padding": {
+       "Bottom": 2,
+       "Left": 2,
+       "Right": 2,
+       "Top": 2
+      },
+      "ProcessValue": "HmiTag_Ext1",
+      "RequireExplicitUnlock": false,
+      "RotationAngle": 0,
+      "RotationCenterPlacement": "AbsoluteFromCenter",
+      "RotationCenterX": 0,
+      "RotationCenterY": 0,
+      "ShiftDecimalPlaces": 0,
+      "ShowFocusVisual": true,
+      "ShowInputHint": false,
+      "StyleItemClass": "HmiIOField",
+      "TabIndex": 0,
+      "TextTrimming": "None",
+      "Top": 100,
+      "VerticalTextAlignment": "Center",
+      "Visible": true,
+      "VisualizeQuality": true,
+      "Width": 160
+     },
+     "propertyEvents": [
+      {
+       "propertyName": "ProcessValue",
+       "Async": false,
+       "GlobalDefinitionAreaScriptCode": "//Insert definitions for events here\r\n\r\n",
+       "ScriptCode": "// F01 S_IOField1 ProcessValue Change\r\nHMIRuntime.Trace(\"F01 value changed: \" + value);"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "durationMs": 370,
+ "queueMs": 1,
+ "defaulted": {
+  "path": "000_empty"
+ }
+}

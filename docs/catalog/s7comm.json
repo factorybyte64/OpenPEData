@@ -1,0 +1,259 @@
+[
+ {
+  "group": "S7 communication",
+  "title": "GET: Read data from a remote CPU (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GET",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ADDR_1",
+    "decl": "InOut",
+    "types": "REMOTE"
+   },
+   {
+    "name": "RD_1",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "S7 communication",
+  "title": "PUT: Write data to a remote CPU (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PUT",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ADDR_1",
+    "decl": "InOut",
+    "types": "REMOTE"
+   },
+   {
+    "name": "SD_1",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "S7 communication / Other",
+  "title": "USEND: Send data uncoordinated (S7-1500, S7-1200 G2)",
+  "name": "USEND",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_PRG"
+   },
+   {
+    "name": "R_ID",
+    "decl": "Input",
+    "types": "CONN_R_ID"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "SD_i (1≤ i ≤",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "S7 communication / Other",
+  "title": "URCV: Receive data uncoordinated (S7-1500, S7-1200 G2)",
+  "name": "URCV",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_PRG"
+   },
+   {
+    "name": "R_ID",
+    "decl": "Input",
+    "types": "CONN_R_ID"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RD_i (1≤ i ≤",
+    "decl": "InOut",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "S7 communication / Other",
+  "title": "BSEND: Send data in segments (S7-1500, S7-1200 G2)",
+  "name": "BSEND",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_PRG"
+   },
+   {
+    "name": "R_ID",
+    "decl": "Input",
+    "types": "CONN_R_ID"
+   },
+   {
+    "name": "SD_1",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "LEN",
+    "decl": "InOut",
+    "types": "WORD"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "S7 communication / Other",
+  "title": "BRCV: Receive data in segments (S7-1500, S7-1200 G2)",
+  "name": "BRCV",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_PRG"
+   },
+   {
+    "name": "R_ID",
+    "decl": "Input",
+    "types": "CONN_R_ID"
+   },
+   {
+    "name": "RD_1",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "LEN",
+    "decl": "InOut",
+    "types": "WORD"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ }
+]

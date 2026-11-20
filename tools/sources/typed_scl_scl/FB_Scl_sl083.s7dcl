@@ -1,0 +1,20 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl083"
+    VAR_INPUT
+        v_in : Real;
+        v_hi_lim : Real;
+        v_lo_lim : Real;
+        v_bipolar : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_out := UNSCALE(IN := #v_in, HI_LIM := #v_hi_lim, LO_LIM := #v_lo_lim, BIPOLAR := #v_bipolar);
+    END_NETWORK
+END_FUNCTION_BLOCK

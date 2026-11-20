@@ -1,0 +1,24 @@
+{
+    S7_Optimized := "TRUE";
+    S7_EditorMode := "SCL";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_12"
+    VAR_INPUT
+        en1 : Bool;
+        par : "UDT_12";
+    END_VAR
+    VAR_OUTPUT
+        q : Int;
+    END_VAR
+    VAR
+        cnt : Int := 5;
+        tmr : TON_TIME;
+        edge : R_TRIG;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #tmr(IN := #en1, PT := T#1S);
+        #q := #cnt;
+    END_NETWORK
+END_FUNCTION_BLOCK

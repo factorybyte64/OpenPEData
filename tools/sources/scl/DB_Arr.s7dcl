@@ -1,0 +1,13 @@
+{
+    S7_Optimized := "FALSE"
+}
+DATA_BLOCK "DB_Arr"
+    VAR
+        a : Array[0..9] of Int;
+        b : Array[0..9] of Int;
+        w : Array[0..3] of Word;
+        r : Array[0..3] of Real;
+        by : Array[0..7] of Byte;
+        bits : Array[0..15] of Bool;
+    END_VAR
+END_DATA_BLOCK

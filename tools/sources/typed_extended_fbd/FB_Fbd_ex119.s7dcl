@@ -1,0 +1,35 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex119"
+    VAR_INPUT
+        v_sig : Bool;
+        v_timestamp : LDT;
+    END_VAR
+    VAR_OUTPUT
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_sd_1 : Variant;
+        v_sd_2 : Variant;
+        v_sd_3 : Variant;
+        v_sd_4 : Variant;
+        v_sd_5 : Variant;
+        v_sd_6 : Variant;
+        v_sd_7 : Variant;
+        v_sd_8 : Variant;
+        v_sd_9 : Variant;
+        v_sd_10 : Variant;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Program_Alarm( SIG := #v_sig, TIMESTAMP := #v_timestamp, SD_i := 0, Error => #v_error, Status => #v_status, SD_1 := #v_sd_1, SD_2 := #v_sd_2, SD_3 := #v_sd_3, SD_4 := #v_sd_4, SD_5 := #v_sd_5, SD_6 := #v_sd_6, SD_7 := #v_sd_7, SD_8 := #v_sd_8, SD_9 := #v_sd_9, SD_10 := #v_sd_10 )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

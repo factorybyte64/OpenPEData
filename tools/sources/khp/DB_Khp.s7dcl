@@ -1,0 +1,17 @@
+{
+    S7_Optimized := "TRUE"
+}
+DATA_BLOCK "DB_Khp"
+    VAR
+        a : Int;
+        b : Real;
+        s : Struct
+            x : Bool;
+            y : Array[0..2] of DInt;
+        END_STRUCT;
+        m : "UDT_Motor";
+    END_VAR
+    a := 7;
+    b := 1.5;
+    s.y[1] := 11;
+END_DATA_BLOCK

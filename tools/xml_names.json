@@ -1,0 +1,712 @@
+{
+ "_comment": "SimaticML Part names for catalog items that SD cannot create. Source: name table of Siemens.Simatic.Lang.FLDiagram.dll/PLInterface.dll, each checked with tools/xml_namecheck.py (An instruction with the name X cannot be found). Candidates are tried in order.",
+ "lad": {
+  "008": [
+   "SBitfield"
+  ],
+  "009": [
+   "RBitfield"
+  ],
+  "024": [
+   "TP"
+  ],
+  "025": [
+   "TON"
+  ],
+  "026": [
+   "TOF"
+  ],
+  "027": [
+   "TONR"
+  ],
+  "028": [
+   "ResetIECTimerCoil"
+  ],
+  "029": [
+   "PtCoil"
+  ],
+  "035": [
+   "SpCoil"
+  ],
+  "036": [
+   "SeCoil"
+  ],
+  "037": [
+   "SdCoil"
+  ],
+  "038": [
+   "SsCoil"
+  ],
+  "039": [
+   "SfCoil"
+  ],
+  "046": [
+   "ScCoil"
+  ],
+  "047": [
+   "CuCoil"
+  ],
+  "048": [
+   "CdCoil"
+  ],
+  "057": [
+   "Ok"
+  ],
+  "058": [
+   "NotOk",
+   "NOT_OK"
+  ],
+  "067": [
+   "Calc"
+  ],
+  "074": [
+   "Inc"
+  ],
+  "075": [
+   "Dec"
+  ],
+  "093": [
+   "Deserialize"
+  ],
+  "094": [
+   "Serialize"
+  ],
+  "095": [
+   "MoveBlockI"
+  ],
+  "096": [
+   "MOVE_BLK_VARIANT"
+  ],
+  "097": [
+   "MoveBlockU"
+  ],
+  "098": [
+   {
+    "name": "FillBlockI",
+    "types": {
+     "IN": "Int",
+     "COUNT": "UDInt",
+     "OUT": "@A:Int"
+    }
+   }
+  ],
+  "099": [
+   {
+    "name": "FillBlockU",
+    "types": {
+     "IN": "Int",
+     "COUNT": "UDInt",
+     "OUT": "@A:Int"
+    }
+   }
+  ],
+  "101": [
+   "SCATTER_BLK"
+  ],
+  "102": [
+   "GATHER"
+  ],
+  "103": [
+   "GATHER_BLK"
+  ],
+  "104": [
+   {
+    "name": "AssignmentAttempt",
+    "tv": {
+     "dest_type": "Int"
+    },
+    "types": {
+     "SRC": "Variant",
+     "DST": "Ref_To Int"
+    }
+   }
+  ],
+  "106": [
+   "ReadFromArrayDB"
+  ],
+  "107": [
+   "WriteToArrayDB"
+  ],
+  "108": [
+   "ReadFromArrayDBL"
+  ],
+  "109": [
+   "WriteToArrayDBL"
+  ],
+  "115": [
+   "FieldRead"
+  ],
+  "116": [
+   "FieldWrite"
+  ],
+  "119": [
+   "FILL"
+  ],
+  "129": [
+   "Jump"
+  ],
+  "130": [
+   "JumpNot"
+  ],
+  "132": [
+   "JmpList"
+  ],
+  "133": [
+   "Switch"
+  ],
+  "134": [
+   "Return"
+  ],
+  "139": [
+   "GetErrorID"
+  ],
+  "142": [
+   "RUNTIME"
+  ],
+  "147": [
+   "Deco"
+  ],
+  "148": [
+   "Enco"
+  ],
+  "156": [
+   "DRUM"
+  ],
+  "157": [
+   "DCAT"
+  ],
+  "158": [
+   "MCAT"
+  ],
+  "159": [
+   "IMC"
+  ],
+  "160": [
+   "SMC"
+  ],
+  "161": [
+   "LEAD_LAG"
+  ],
+  "162": [
+   "SEG"
+  ],
+  "163": [
+   "BCDCPL"
+  ],
+  "030": [
+   "Sp"
+  ],
+  "031": [
+   "Se"
+  ],
+  "032": [
+   "Sd"
+  ],
+  "033": [
+   "Ss"
+  ],
+  "034": [
+   "Sf"
+  ],
+  "043": [
+   "Cu"
+  ],
+  "044": [
+   "Cd"
+  ],
+  "045": [
+   "Cud"
+  ]
+ },
+ "fbd": {
+  "013": [
+   "SBitfield"
+  ],
+  "014": [
+   "RBitfield"
+  ],
+  "072": [
+   "Calc"
+  ],
+  "079": [
+   "Inc"
+  ],
+  "080": [
+   "Dec"
+  ],
+  "098": [
+   "Deserialize"
+  ],
+  "099": [
+   "Serialize"
+  ],
+  "100": [
+   "MoveBlockI"
+  ],
+  "101": [
+   "MOVE_BLK_VARIANT"
+  ],
+  "102": [
+   "MoveBlockU"
+  ],
+  "103": [
+   {
+    "name": "FillBlockI",
+    "types": {
+     "IN": "Int",
+     "COUNT": "UDInt",
+     "OUT": "@A:Int"
+    }
+   }
+  ],
+  "104": [
+   {
+    "name": "FillBlockU",
+    "types": {
+     "IN": "Int",
+     "COUNT": "UDInt",
+     "OUT": "@A:Int"
+    }
+   }
+  ],
+  "106": [
+   "SCATTER_BLK"
+  ],
+  "107": [
+   "GATHER"
+  ],
+  "108": [
+   "GATHER_BLK"
+  ],
+  "110": [
+   "ReadFromArrayDB"
+  ],
+  "111": [
+   "WriteToArrayDB"
+  ],
+  "112": [
+   "ReadFromArrayDBL"
+  ],
+  "113": [
+   "WriteToArrayDBL"
+  ],
+  "119": [
+   "FieldRead"
+  ],
+  "120": [
+   "FieldWrite"
+  ],
+  "123": [
+   "FILL"
+  ],
+  "136": [
+   "JmpList"
+  ],
+  "137": [
+   "Switch"
+  ],
+  "143": [
+   "GetErrorID"
+  ],
+  "146": [
+   "RUNTIME"
+  ],
+  "151": [
+   "Deco"
+  ],
+  "152": [
+   "Enco"
+  ],
+  "160": [
+   "DRUM"
+  ],
+  "161": [
+   "DCAT"
+  ],
+  "162": [
+   "MCAT"
+  ],
+  "163": [
+   "IMC"
+  ],
+  "164": [
+   "SMC"
+  ],
+  "165": [
+   "LEAD_LAG"
+  ],
+  "167": [
+   "BCDCPL"
+  ],
+  "008": [
+   "Inv"
+  ],
+  "019": [
+   "PCoil"
+  ],
+  "020": [
+   "NCoil"
+  ],
+  "033": [
+   "ResetIECTimerCoil"
+  ],
+  "034": [
+   "PtCoil"
+  ],
+  "040": [
+   "SpCoil"
+  ],
+  "041": [
+   "SeCoil"
+  ],
+  "042": [
+   "SdCoil"
+  ],
+  "043": [
+   "SsCoil"
+  ],
+  "044": [
+   "SfCoil"
+  ],
+  "051": [
+   "ScCoil"
+  ],
+  "052": [
+   "CuCoil"
+  ],
+  "053": [
+   "CdCoil"
+  ],
+  "062": [
+   "Ok"
+  ],
+  "082": [
+   "MIN"
+  ],
+  "083": [
+   "MAX"
+  ],
+  "109": [
+   "Swap"
+  ],
+  "124": [
+   "Convert"
+  ],
+  "133": [
+   "Jump"
+  ],
+  "134": [
+   "JumpNot"
+  ],
+  "138": [
+   "Return"
+  ],
+  "141": [
+   "STP"
+  ],
+  "154": [
+   "Mux"
+  ],
+  "158": [
+   "Rr"
+  ],
+  "159": [
+   "Rl"
+  ],
+  "035": [
+   "Sp"
+  ],
+  "036": [
+   "Se"
+  ],
+  "037": [
+   "Sd"
+  ],
+  "038": [
+   "Ss"
+  ],
+  "039": [
+   "Sf"
+  ],
+  "048": [
+   "Cu"
+  ],
+  "049": [
+   "Cd"
+  ],
+  "050": [
+   "Cud"
+  ]
+ },
+ "extended": {
+  "001": [
+   {
+    "name": "T_Comp",
+    "tv": {
+     "date_type": "DTL",
+     "relation": "Eq"
+    },
+    "types": {
+     "IN1": "DTL",
+     "IN2": "DTL"
+    },
+    "en": "pre",
+    "post": true
+   }
+  ],
+  "002": [
+   {
+    "name": "T_CONV",
+    "tv": {
+     "src_type": "Time",
+     "dest_type": "DInt"
+    },
+    "types": {
+     "IN": "Time",
+     "OUT": "DInt"
+    }
+   }
+  ],
+  "003": [
+   "T_ADD"
+  ],
+  "004": [
+   "T_SUB"
+  ],
+  "006": [
+   "T_COMBINE"
+  ],
+  "010": [
+   "WR_LOC_T"
+  ],
+  "016": [
+   {
+    "name": "S_Comp",
+    "tv": {
+     "src_type": "String",
+     "relation": "Eq"
+    },
+    "types": {
+     "IN1": "String",
+     "IN2": "String"
+    },
+    "en": "pre",
+    "post": true
+   }
+  ],
+  "017": [
+   {
+    "name": "S_CONV",
+    "tv": {
+     "src_type": "String",
+     "dest_type": "USInt"
+    },
+    "types": {
+     "IN": "String",
+     "OUT": "USInt"
+    }
+   }
+  ],
+  "018": [
+   "STRG_VAL"
+  ],
+  "019": [
+   "VAL_STRG"
+  ],
+  "020": [
+   "Strg_TO_Chars"
+  ],
+  "021": [
+   "Chars_TO_Strg"
+  ],
+  "022": [
+   "MAX_LEN"
+  ],
+  "023": [
+   {
+    "name": "JOIN",
+    "types": {
+     "Mode": "DWord",
+     "RecSeparator": "String",
+     "EndSeparator": "String",
+     "SrcStruct": "Array[0..3] of String",
+     "Count": "UDInt",
+     "Position": "UDInt",
+     "Ret_Val": "Int",
+     "DstArray": "Array[0..99] of Char"
+    }
+   }
+  ],
+  "024": [
+   {
+    "name": "SPLIT",
+    "types": {
+     "Mode": "DWord",
+     "RecSeparator": "String",
+     "EndSeparator": "String",
+     "SrcArray": "Array[0..99] of Char",
+     "Position": "UDInt",
+     "Ret_Val": "Int",
+     "Count": "UDInt",
+     "DstStruct": "Array[0..3] of String"
+    }
+   }
+  ],
+  "027": [
+   "LEN"
+  ],
+  "028": [
+   "CONCAT"
+  ],
+  "029": [
+   "LEFT"
+  ],
+  "030": [
+   "RIGHT"
+  ],
+  "031": [
+   "MID"
+  ],
+  "032": [
+   "DELETE"
+  ],
+  "033": [
+   "INSERT"
+  ],
+  "034": [
+   "REPLACE"
+  ],
+  "035": [
+   "FIND"
+  ],
+  "058": [
+   {
+    "name": "RD_REC",
+    "tv": {
+     "laddr_type": "HW_IO",
+     "card": "1"
+    },
+    "types": {
+     "LADDR": "HW_IO",
+     "RECORD": "Array[0..99] of Byte"
+    }
+   }
+  ],
+  "059": [
+   {
+    "name": "WR_REC",
+    "tv": {
+     "laddr_type": "HW_IO",
+     "card": "1"
+    },
+    "types": {
+     "LADDR": "HW_IO",
+     "RECORD": "Array[0..99] of Byte"
+    }
+   }
+  ],
+  "068": [
+   "PE_START_END"
+  ],
+  "069": [
+   "PE_CMD"
+  ],
+  "070": [
+   "PE_DS3_Write_ET200S"
+  ],
+  "086": [
+   "PE_I_DEV"
+  ],
+  "090": [
+   "PE_List_Modes_RSP"
+  ],
+  "091": [
+   "PE_Get_Mode_RSP"
+  ],
+  "092": [
+   "PE_PEM_Status_RSP"
+  ],
+  "093": [
+   "PE_Identify_RSP"
+  ],
+  "119": [
+   "Program_Alarm"
+  ],
+  "122": [
+   "Get_Alarm"
+  ],
+  "134": [
+   "CTRL_PWM"
+  ],
+  "159": [
+   "RD_LGADR"
+  ],
+  "037": [
+   "GetSymbolPath"
+  ],
+  "051": [
+   "RALRM"
+  ],
+  "071": [
+   "PE_WOL"
+  ]
+ },
+ "openuc": {
+  "003": [
+   "TrcvC"
+  ],
+  "005": [
+   "TMAIL_C"
+  ],
+  "015": [
+   "TRCV"
+  ],
+  "021": [
+   "T_CONFIG"
+  ]
+ },
+ "s7comm": {
+  "001": [
+   "Get"
+  ],
+  "002": [
+   "Put"
+  ]
+ },
+ "ptp": {
+  "001": [
+   "Port_Config"
+  ],
+  "002": [
+   "Send_Config"
+  ],
+  "003": [
+   "Receive_Config"
+  ],
+  "004": [
+   "Send_P2P"
+  ],
+  "005": [
+   "Receive_P2P"
+  ]
+ },
+ "modbustcp": {
+  "001": [
+   "MB_CLIENT"
+  ],
+  "006": [
+   "MB_SERVER"
+  ],
+  "009": [
+   "MB_CLIENT"
+  ],
+  "015": [
+   "MB_SERVER"
+  ]
+ },
+ "teleservice": {
+  "001": [
+   "TMAIL_C"
+  ]
+ }
+}

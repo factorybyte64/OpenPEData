@@ -1,0 +1,55 @@
+FUNCTION_BLOCK "FB_StlC_045"
+TITLE = STL call POKE_BLK
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      i1 : Int;
+      i2 : Int;
+      di1 : DInt;
+      r1 : Real;
+      w1 : Word;
+      dw1 : DWord;
+      b1 : Byte;
+      u1 : UInt;
+      ud1 : UDInt;
+   END_VAR
+   VAR_OUTPUT
+      q : Bool;
+      io : Int;
+      dio : DInt;
+      ro : Real;
+      wo : Word;
+      dwo : DWord;
+      bo : Byte;
+      udo : UDInt;
+   END_VAR
+   VAR_IN_OUT
+      v : Variant;
+      arrs : Array[*] of Int;
+      pos : DInt;
+   END_VAR
+   VAR
+      src : Array[0..9] of Int;
+      dst : Array[0..9] of Int;
+      bits : Array[0..31] of Bool;
+      bytes : Array[0..9] of Byte;
+      err : ErrorStruct;
+      rt : LReal;
+      tim : IEC_TIMER;
+      words : Array[0..3] of Word;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 045 POKE_BLK
+      CALL POKE_BLK
+      (  AREA_SRC := #b1 ,
+         DBNUMBER_SRC := #di1 ,
+         BYTEOFFSET_SRC := #di1 ,
+         AREA_DEST := #b1 ,
+         DBNUMBER_DEST := #di1 ,
+         BYTEOFFSET_DEST := #di1 ,
+         COUNT := #di1
+      );
+END_FUNCTION_BLOCK

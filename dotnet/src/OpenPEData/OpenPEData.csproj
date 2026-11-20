@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>OpenPEData</RootNamespace>
+    <AssemblyName>OpenPEData</AssemblyName>
+    <Version>0.1.0</Version>
+    <Product>OpenPEData</Product>
+    <Description>Reads TIA Portal projects (project folder, .zapNN archive) and global libraries without TIA Portal; supported versions: TiaVersion.Supported.</Description>
+    <!-- nullable warnings on; Model\*.cs files that iterate the dynamic value trees switch off CS8600/8602 per file -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- public surface: TiaProject and its result, option and exception types; the reader itself is internal -->
+    <InternalsVisibleTo Include="OpenPEData.Tests" />
+    <InternalsVisibleTo Include="OpenPEData.Cli" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Openness enum names of Unified style values -->
+    <EmbeddedResource Include="Data\unified_enums.json" LogicalName="OpenPEData.Data.V21.unified_enums.json" />
+  </ItemGroup>
+
+</Project>

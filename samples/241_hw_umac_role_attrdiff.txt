@@ -1,0 +1,27 @@
+A: 239_hw_webserver.zap21  B: 241_hw_umac_role.zap21
+NEW     1003:0214:30020 CustomRole name=None
+          ICommonEditableRoleAttributes.CommentEncrypted = bytes[20] 0000000000000000000000000000100100000000
+          ICommonEditableRoleAttributes.SessionTimeoutEncrypted = bytes[28] 0004000000000000000000000000100100000001010000001e000000
+          IEditableRoleAttributes.AssignedEngineeringFunctionRightsEncrypted = bytes[20] 0000000000000000000000000000100100000000
+          IEditableRoleAttributes.NameEncrypted = bytes[38] 000e000000000000000000000000100100000001010000005700650062004400690061006700
+          link Parent -> 1005:0214:696
+          link Environment -> 1028:0002:433
+          link RoleToDevice -> 101c:0010:583
+          link AssignedDeviceFunctionRight -> 100e:0214:681
+CHANGED 1005:0214:696 UmacRootData name='UmacRootData'
+          raw <links 1>: 68 -> 84 bytes
+          +link AllRoles -> 1003:0214:30020
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 100e:0214:681 SystemDeviceFunctionRightProxy name='PlcDeviceFunctionRights.WebAllowDiagnostics'
+          raw <links 1>: 0 -> 52 bytes
+          +link DeviceFunctionRightAssignedToRole -> 1003:0214:30020
+          slot table [68, 0, 0, 121, 134, 0] -> [68, 0, 0, 121, 134, 218]
+CHANGED 101c:0010:583 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:05:14.708366Z' -> '2026-10-25T19:05:52.549224Z'  (timestamp)
+          raw <links 70>: 0 -> 24 bytes
+          +link typed slot 88 -> 1003:0214:30020
+          slot table [540, 4048, 0, 0, 0, 5159, 18017, 0, 0, 0, 0, 0, 5276, 5288, 5985, 6071, 6087, 0, 16105, 40523, 16949, 56663, 0, 0, 0, 0, 56639, 0, 0, 0, 0, 16253, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16277, 16409, 16661, 0, 0, 0, 17945, 16973, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16913, 0, 64355, 0, 0, 56147, 0, 0, 0, 0, 0, 0, 0, 0, 17993, 0, 55895, 17969, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] -> [540, 4048, 0, 0, 0, 5159, 18017, 0, 0, 0, 0, 0, 5276, 5288, 5985, 6071, 6087, 0, 16105, 40523, 16949, 56663, 0, 0, 0, 0, 56639, 0, 0, 0, 0, 16253, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16277, 16409, 16661, 0, 0, 0, 17945, 16973, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16913, 0, 64355, 0, 0, 56147, 0, 0, 64847, 0, 0, 0, 0, 0, 17993, 0, 55895, 17969, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+CHANGED 1028:0002:433 ProjectData name='039_fw41'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:05:15.367395Z' -> '2026-10-25T19:05:52.953469Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

@@ -1,0 +1,34 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_mb002"
+    VAR_INPUT
+        v_req : Bool;
+        v_mb_addr : UInt;
+        v_mode : USInt;
+        v_data_addr : UDInt;
+        v_data_len : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_data_ptr : Variant;
+    END_VAR
+    VAR
+        inst : Modbus_Master;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Modbus_Master( REQ := #v_req, MB_ADDR := #v_mb_addr, MODE := #v_mode, DATA_ADDR := #v_data_addr, DATA_LEN := #v_data_len, DONE => #v_done, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status, DATA_PTR := #v_data_ptr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

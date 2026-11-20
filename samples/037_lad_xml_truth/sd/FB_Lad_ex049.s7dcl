@@ -1,0 +1,39 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex049"
+    VAR_INPUT
+        v_id : HW_SUBMODULE;
+        v_offset : Int;
+        v_len : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_status : DWord;
+        v_error : Bool;
+    END_VAR
+    VAR_IN_OUT
+        v_inputs : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : GETIO_PART;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.GETIO_PART(
+                ID := #v_id,
+                OFFSET := #v_offset,
+                LEN := #v_len,
+                STATUS => #v_status,
+                ERROR => #v_error,
+                INPUTS := #v_inputs
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

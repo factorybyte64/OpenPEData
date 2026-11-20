@@ -1,0 +1,14 @@
+{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK FB_Multi_DB : FB_Multi
+    cnt := 8;
+    cfg.Temp := 30.0;
+    mat[1, 1] := 11;
+    sub.stInt := 77;
+    subs[1].stInt := 78;
+    data.innerArr[1].Arr[2] := 5;
+    tmrs[2].PT := T#3S;
+END_DATA_BLOCK

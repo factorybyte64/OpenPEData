@@ -1,0 +1,18 @@
+A: 050_plc_unit_b.zap21  B: 051_plc_unit_relation.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:09:28.562909Z' -> '2026-10-25T20:09:35.513746Z'  (timestamp)
+CHANGED 1d01:0022:1828 UnitData name='Unit_A'
+          ICommonFingerprintData.DataStore: bytes[415] 0087010000000000000000000000100100000001010000000010deadbeef01000000000000000000 -> bytes[415] 0087010000000000000000000000100100000001010000000010deadbeef01000000000000000000
+          ICommonFingerprintData.DataVersion: 639285557617270628 -> 639285557753911386
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:09:21.501647Z' -> '2026-10-25T20:09:35.322313Z'  (timestamp)
+          raw <links 1>: 84 -> 100 bytes
+          +link References -> 1d01:0022:1c30
+          slot table [0, 0, 251, 92, 871, 0, 437, 0, 0, 213, 269, 353] -> [0, 0, 251, 92, 887, 0, 453, 0, 0, 213, 269, 353]
+CHANGED 1d01:0022:1c30 UnitData name='Unit_B'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:09:28.309780Z' -> '2026-10-25T20:09:35.322313Z'  (timestamp)
+          raw <links 1>: 84 -> 100 bytes
+          +link ReferencedBy -> 1d01:0022:1828
+          slot table [0, 0, 251, 92, 871, 0, 437, 0, 0, 213, 269, 353] -> [0, 0, 251, 92, 887, 0, 453, 0, 0, 213, 269, 353]
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

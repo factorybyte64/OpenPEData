@@ -1,0 +1,30 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex120"
+    VAR_INPUT
+        v_alarm : ALARM_BASE;
+    END_VAR
+    VAR_OUTPUT
+        v_alarmstate : Byte;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Get_AlarmState(
+                Alarm := #v_alarm,
+                AlarmState => #v_alarmstate,
+                Error => #v_error,
+                STATUS => #v_status
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

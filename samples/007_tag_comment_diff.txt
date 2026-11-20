@@ -1,0 +1,41 @@
+﻿A: samples\003_tagtable  (751 records, 714 keys)
+B: samples\007_tag_comment  (763 records, 716 keys)
+
+CHANGED 0003:0007:3  store:0x00070003  @A676126 @B709308 len 57  versionsInB=5
+        +48 len 2:  A: 08 00 00 00 17 10 00 00 00 00
+                      B: 08 00 00 00 1f 14 00 00 00 00
+
+CHANGED 1028:0002:433  Siemens.Automation.DomainModel.ProjectData [ObjectType]  @A642200 @B677257 len 533 -> 549  versionsInB=4
+        length field differs; common prefix 68, common suffix 107
+        A[+64..+426): 00 00 00 00 b0 01 00 00 ac 00 00 00 60 00 00 00 5f 00 00 00 3e 00 00 00 f5 49 ed 16 03 2e df 48 00 2a 00 00 00 15 03 51 a4 05 2e df 48 34 00 00 00 29 00 00 00 01 0a 44 61 74 61 4c 6f 67 58 45 0a 30 30 30 5f 65 6d 70 74 79 21 20 00 00 00 10 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 04 01 10 00 11 20 02 00 0e 10 02 00 34 04 00 00 00 00 00 00
+        B[+64..+442): 00 00 00 00 c0 01 00 00 ac 00 00 00 60 00 00 00 5f 00 00 00 3e 00 00 00 f5 49 ed 16 03 2e df 48 00 2a 00 00 00 10 89 8b cb 09 2e df 48 34 00 00 00 29 00 00 00 01 0a 44 61 74 61 4c 6f 67 58 45 0a 30 30 30 5f 65 6d 70 74 79 21 20 00 00 00 10 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 14 01 11 00 11 20 02 00 0e 10 02 00 34 04 00 00 00 00 00 00
+        A ascii[000_empty! |factorybyte] utf16[]
+        B ascii[000_empty! |factorybyte] utf16[]
+
+CHANGED 1006:0001:449  Siemens.Automation.ObjectFrame.CorePersistenceInfo [ObjectType]  @A673847 @B708886 len 390  versionsInB=4
+        +295 len 36:  A: 6d 69 74 5f 30 62 63 33 65 61 39 38 2d 34 66 66 62 2d 34 61 63 66 2d 62 32 38 64 2d 66 65 63 30 33 62 30 32 39 64 30 34 3a 00 00 00
+                        B: 6d 69 74 5f 66 62 30 36 37 32 39 63 2d 66 32 63 63 2d 34 37 36 32 2d 61 32 36 35 2d 38 36 36 33 64 32 33 38 64 32 66 36 3a 00 00 00
+
+CHANGED 1039:0022:c11  Siemens.Simatic.Lang.Model.Blocks.EAMTZTagTableFingerprintContainer [ObjectType]  @A672286 @B708242 len 598 -> 612  versionsInB=2
+        length field differs; common prefix 48, common suffix 51
+        A[+44..+547): 00 00 00 00 23 02 00 00 00 00 00 00 98 00 00 00 44 00 00 00 00 00 00 00 54 00 03 00 5d 20 22 00 62 10 02 00 10 0c 00 00 00 00 00 00 0c 20 01 00 28 10 02 00 33 04 00 00 00 00 00 00 03 20 01 00 1c 10 10 00 13 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8b 01 00 00 11 00 00 00 4c 3f 92 a3 05 2e df 08 00 fa 02 01
+        B[+44..+561): 00 00 00 00 31 02 00 00 00 00 00 00 98 00 00 00 44 00 00 00 00 00 00 00 54 00 03 00 5d 20 22 00 62 10 02 00 10 0c 00 00 00 00 00 00 0c 20 01 00 28 10 02 00 33 04 00 00 00 00 00 00 03 20 01 00 1c 10 10 00 13 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 99 01 00 00 11 00 00 00 23 5c 70 cb 09 2e df 08 00 88 03 01
+        A ascii[H?8_|[(&f|\pQoA5|]S"8|`ha0|m%6U|teLL] utf16[]
+        B ascii[%ep,|(UfI|S9)3|b7t=||9es8~] utf16[]
+
+CHANGED 105c:0002:c12  Siemens.Automation.DomainModel.EAMTZTagData [ObjectType]  @A672916 @B677838 len 487 -> 501  versionsInB=2
+        length field differs; common prefix 20, common suffix 174
+        A[+16..+313): 08 00 00 00 03 00 00 00 00 00 0e 02 47 0b 4c 2d 33 8b dd 4c a0 19 5b 95 ed 7b f2 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 44 01 00 00 00 00 00 00 00 00 00 00 83 01 00 00 00 00 00 00 64 00 00 00 02 01 00 00 00 00 00 00 ae 00 00 00 00 00 00 00 4a 00 00 00 29 00 00 00 ff e4 26 a4 05 2e df 48 00 00 ff e4 26 a4 05 2e df 48 1e 00 00 00 0b 54 61 67 5f 42 6f 6f 6c 5f 31 21 20 00
+        B[+16..+327): 08 00 00 00 0b 00 00 00 00 00 0e 02 47 0b 4c 2d 33 8b dd 4c a0 19 5b 95 ed 7b f2 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 52 01 00 00 00 00 00 00 00 00 00 00 91 01 00 00 00 00 00 00 64 00 00 00 10 01 00 00 00 00 00 00 bc 00 00 00 00 00 00 00 58 00 00 00 29 00 00 00 ff e4 26 a4 05 2e df 48 00 00 83 52 6f cb 09 2e df 48 1e 00 00 00 0b 54 61 67 5f 42 6f 6f 6c 5f 31 2f 2e 00
+        A ascii[%M0.0c|Bool%|S71500|Tag_Bool_1! ] utf16[]
+        B ascii[%M0.0c|Bool%|S71500|Tag_Bool_1/.|Testo] utf16[]
+
+NEW     106f:0002:1018  Siemens.Automation.DomainModel.TagCommentCategoryData [ObjectType]  @B677035 len 190  versionsInB=1
+        ascii[TagCommentCategoryData] utf16[]
+        hex: be 00 00 00 6f 10 02 00 18 10 00 00 00 00 00 00 03 00 00 00 03 00 00 00 00 00 06 02 48 5c f2 ed fc 82 29 49 b7 04 f4 07 94 68 a0 72 44 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 69 00 00 00 00 00 00 00 25 00 00 00 00 0d 00 00 00 24 00 00 00 17 54 61 67 43 6f 6d 6d 65 6e 74 43 61 74 65 67 6f 72 79 44 61 74 61 01 54 00 02 00 1b 20 01 00 28 10 02 00 33 04 00 00 00 00 00 00 0c 20 01
+
+NEW     0014:0007:1400  store:0x00070014  @B709663 len 389  versionsInB=1
+        ascii[$$COMMIT$ |(0npK|(kc'K|~@}et] utf16[]
+        hex: 85 01 00 00 14 00 07 00 00 14 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 52 aa 5b 9a 07 26 dd 46 92 38 47 95 c5 24 af d7 54 01 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 16 85 8e cb 09 2e df 08 01 00 ff ff ff ff 0a 24 24 43 4f 4d 4d 49 54 24 20 01 00 00 65 94 f4 bc da b9 fd f7 7d 60 66 d2 f4 34 25 58 cd 5b cc 8f 9c e9 c8 31 c6 20 77 4c f6 d3 05 b0
+
+summary: new 2, removed 0, changed 5, same 707, noise-only 2

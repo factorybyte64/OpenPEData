@@ -1,0 +1,4658 @@
+[
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "&: AND logic operation (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "&",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "AND truth table (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "AND truth table",
+  "params": null
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": ">=1: OR logic operation (S7-1200, S7-1500, S7-1200 G2)",
+  "name": ">=1",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "OR truth table (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "OR truth table",
+  "params": null
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "X: EXCLUSIVE OR logic operation (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "X",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "EXCLUSIVE OR truth table (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EXCLUSIVE OR truth table",
+  "params": null
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "Insert input (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Insert input",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "Invert RLO (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Invert RLO",
+  "params": null
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "=: Assignment (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "=",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "/=: Negate assignment (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "/=",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "R: Reset output (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "R",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "S: Set output (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "S",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "SET_BF: Set bit field (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SET_BF",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "RESET_BF: Reset bit field (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RESET_BF",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "SR: Set/reset flip-flop (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SR",
+  "params": [
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R1",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand>",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "RS: Reset/set flip-flop (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RS",
+  "params": [
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "S1",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand>",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "P: Scan operand for positive signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "P",
+  "params": [
+   {
+    "name": "<Operand1>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand2>",
+    "decl": "InOut",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "N: Scan operand for negative signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "N",
+  "params": [
+   {
+    "name": "<Operand1>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand2>",
+    "decl": "InOut",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "P=: Set operand on positive signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "P=",
+  "params": [
+   {
+    "name": "<Operand2>",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand1>",
+    "decl": "InOut",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "N=: Set operand on negative signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "N=",
+  "params": [
+   {
+    "name": "<Operand1>",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand2>",
+    "decl": "InOut",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "P_TRIG: Scan RLO for positive signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "P_TRIG",
+  "params": [
+   {
+    "name": "CLK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand>",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "N_TRIG: Scan RLO for negative signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "N_TRIG",
+  "params": [
+   {
+    "name": "CLK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "<Operand>",
+    "decl": "InOut",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "R_TRIG: Detect positive signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "R_TRIG",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CLK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Bit logic operations",
+  "title": "F_TRIG: Detect negative signal edge (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "F_TRIG",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CLK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TP: Generate pulse (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TP",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TON: Generate on-delay (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TON",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TOF: Generate off-delay (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TOF",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TONR: Time accumulator (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TONR",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TP: Start pulse timer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TP",
+  "params": [
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "<IEC Timer>",
+    "decl": "InOut",
+    "types": "IEC_TIMER, TP_TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TON: Start on-delay timer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TON",
+  "params": [
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "<IEC Timer>",
+    "decl": "InOut",
+    "types": "IEC_TIMER, TON_TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TOF: Start off-delay timer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TOF",
+  "params": [
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "<IEC Timer>",
+    "decl": "InOut",
+    "types": "IEC_TIMER, TOF_TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "TONR: Time accumulator (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TONR",
+  "params": [
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "<IEC Timer>",
+    "decl": "InOut",
+    "types": "IEC_TIMER, TONR_TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "RT: Reset timer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RT",
+  "params": [
+   {
+    "name": "<IEC Timer>",
+    "decl": "InOut",
+    "types": "IEC_TIMER, TP_TIME, TON_TIME, TOF_TIME, TONR_TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations",
+  "title": "PT: Load time duration (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "PT",
+  "params": [
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME"
+   },
+   {
+    "name": "<IEC Timer>",
+    "decl": "InOut",
+    "types": "IEC_TIMER, TP_TIME, TON_TIME, TOF_TIME, TONR_TIME"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "S_PULSE: Assign pulse timer parameters and start (S7-1500)",
+  "name": "S_PULSE",
+  "params": [
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "BI",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "BCD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "S_PEXT: Assign extended pulse timer parameters and start (S7-1500)",
+  "name": "S_PEXT",
+  "params": [
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "BI",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "BCD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "S_ODT: Assign on-delay timer parameters and start (S7-1500)",
+  "name": "S_ODT",
+  "params": [
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "BI",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "BCD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "S_ODTS: Assign retentive on-delay timer parameters and start (S7-1500)",
+  "name": "S_ODTS",
+  "params": [
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "BI",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "BCD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "S_OFFDT: Assign off-delay timer parameters and start (S7-1500)",
+  "name": "S_OFFDT",
+  "params": [
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "BI",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "BCD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "SP: Start pulse timer (S7-1500)",
+  "name": "SP",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "SE: Start extended pulse timer (S7-1500)",
+  "name": "SE",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "SD: Start on-delay timer (S7-1500)",
+  "name": "SD",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "SS: Start retentive on-delay timer (S7-1500)",
+  "name": "SS",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Timer operations / Legacy",
+  "title": "SF: Start off-delay timer (S7-1500)",
+  "name": "SF",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "TV",
+    "decl": "Input",
+    "types": "S5TIME, WORD"
+   },
+   {
+    "name": "<Timer>",
+    "decl": "Input",
+    "types": "TIMER"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations",
+  "title": "CTU: Count up (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CTU",
+  "params": [
+   {
+    "name": "CU",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "Integers, CHAR, WCHAR, DATE"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations",
+  "title": "CTD: Count down (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CTD",
+  "params": [
+   {
+    "name": "CD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "Integers, CHAR, WCHAR, DATE"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations",
+  "title": "CTUD: Count up and down (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CTUD",
+  "params": [
+   {
+    "name": "CU",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "QU",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "QD",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "Integers, CHAR, WCHAR, DATE"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations / Legacy",
+  "title": "S_CU: Assign parameters and count up (S7-1500)",
+  "name": "S_CU",
+  "params": [
+   {
+    "name": "CU",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "WORD, S5TIME, DATE"
+   },
+   {
+    "name": "CV_BCD",
+    "decl": "Output",
+    "types": "WORD, S5TIME, DATE"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations / Legacy",
+  "title": "S_CD: Assign parameters and count down (S7-1500)",
+  "name": "S_CD",
+  "params": [
+   {
+    "name": "CD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "WORD, S5TIME, DATE"
+   },
+   {
+    "name": "CV_BCD",
+    "decl": "Output",
+    "types": "WORD, S5TIME, DATE"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations / Legacy",
+  "title": "S_CUD: Assign parameters and count up / down (S7-1500)",
+  "name": "S_CUD",
+  "params": [
+   {
+    "name": "CU",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "S",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "WORD, S5TIME, DATE"
+   },
+   {
+    "name": "CV_BCD",
+    "decl": "Output",
+    "types": "WORD, S5TIME, DATE"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations / Legacy",
+  "title": "SC: Set counter value (S7-1500)",
+  "name": "SC",
+  "params": [
+   {
+    "name": "<operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations / Legacy",
+  "title": "CU: Count up (S7-1500)",
+  "name": "CU",
+  "params": [
+   {
+    "name": "<operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Counter operations / Legacy",
+  "title": "CD: Count down (S7-1500)",
+  "name": "CD",
+  "params": [
+   {
+    "name": "<operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "CMP ==: Equal (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CMP ==",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time, ARRAY of <data type> with fixed and variable ARRAY limits, STRUCT, VARIANT, ANY, PLC data type"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time, ARRAY of <data type> with fixed and variable ARRAY limits, STRUCT, VARIANT, ANY, PLC data type"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "CMP <>: Not equal (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CMP <>",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time, ARRAY of <data type> with fixed and variable ARRAY limits, STRUCT, VARIANT, ANY, PLC data type"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time, ARRAY of <data type> with fixed and variable ARRAY limits, STRUCT, VARIANT, ANY, PLC data type"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "CMP >=: Greater or equal (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CMP >=",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "CMP <=: Less or equal (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CMP <=",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "CMP >: Greater than (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CMP >",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "CMP <: Less than (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CMP <",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, character strings, timers, date and time"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "IN_RANGE: Value within range (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "IN_RANGE",
+  "params": [
+   {
+    "name": "MIN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "VAL",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "MAX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "Box output",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "OUT_RANGE: Value outside range (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "OUT_RANGE",
+  "params": [
+   {
+    "name": "MIN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "VAL",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "MAX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "Box output",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "OK: Check validity (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "OK",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations",
+  "title": "NOT_OK: Check invalidity (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "NOT_OK",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "EQ_Type: Compare data type for EQUAL with the data type of a tag (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EQ_Type",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit sequences, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "NE_Type: Compare data type for UNEQUAL with the data type of a tag (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "NE_Type",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit sequences, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "EQ_ElemType: Compare data type of an ARRAY element for EQUAL with the data type of a tag (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EQ_ElemType",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit sequences, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "NE_ElemType: Compare data type of an ARRAY element for UNEQUAL with the data type of a tag (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "NE_ElemType",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit sequences, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "IS_NULL: Check for EQUALS NULL pointer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "IS_NULL",
+  "params": [
+   {
+    "name": "<operand>",
+    "decl": "Input",
+    "types": "VARIANT or REF_TO <data type>"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "NOT_NULL: Check for UNEQUALS NULL pointer (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "NOT_NULL",
+  "params": [
+   {
+    "name": "<operand>",
+    "decl": "Input",
+    "types": "VARIANT or REF_TO <data type>"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "IS_ARRAY: Check for ARRAY (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "IS_ARRAY",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "VARIANT, ResolvedSymbol"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Comparator operations / VARIANT",
+  "title": "EQ_TypeOfDB: Compare data type of an indirectly addressed DB for EQUAL with a data type (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EQ_TypeOfDB",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "TYPE_ID"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "CALCULATE: Calculate (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CALCULATE",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "ADD: Add (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ADD",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "SUB: Subtract (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SUB",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "MUL: Multiply (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MUL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "DIV: Divide (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DIV",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "MOD: Return remainder of division (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MOD",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "NEG: Create twos complement (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "NEG",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "SINT, INT, DINT, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "SINT, INT, DINT, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "INC: Increment (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "INC",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN/OUT",
+    "decl": "InOut",
+    "types": "Integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "DEC: Decrement (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DEC",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN/OUT",
+    "decl": "InOut",
+    "types": "Integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "ABS: Form absolute value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ABS",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "SINT, INT, DINT, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "SINT, INT, DINT, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "MIN: Get minimum (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MIN",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "MAX: Get maximum (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MAX",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers, DTL, DT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "LIMIT: Set limit value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LIMIT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "MN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, TIME, TOD, DATE, DTL, DT"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, TIME, TOD, DATE, DTL, DT"
+   },
+   {
+    "name": "MX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, TIME, TOD, DATE, DTL, DT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers, TIME, TOD, DATE, DTL, DT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "SQR: Form square (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SQR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "SQRT: Form square root (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SQRT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "LN: Form natural logarithm (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LN",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "EXP: Form exponential value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EXP",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "SIN: Form sine value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SIN",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "COS: Form cosine value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "COS",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "TAN: Form tangent value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TAN",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "ASIN: Form arcsine value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ASIN",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "ACOS: Form arccosine value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ACOS",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "ATAN: Form arctangent value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ATAN",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "FRAC: Return fraction (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "FRAC",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Math functions",
+  "title": "EXPT: Exponentiate (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "EXPT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "MOVE: Move value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MOVE",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, CHAR, WCHAR, STRUCT, ARRAY, IEC data types, PLC data type (UDT)"
+   },
+   {
+    "name": "OUT1",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, CHAR, WCHAR, STRUCT, ARRAY, IEC data types, PLC data type (UDT)"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "Deserialize: Deserialize (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Deserialize",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRC_ARRAY",
+    "decl": "Input",
+    "types": "ARRAY[*] of BYTE 1) or ARRAY of CHAR"
+   },
+   {
+    "name": "DEST_VARIABLE",
+    "decl": "InOut",
+    "types": "all data types"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "Serialize: Serialize (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "Serialize",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRC_VARIABLE",
+    "decl": "Input",
+    "types": "all data types"
+   },
+   {
+    "name": "DEST_ARRAY",
+    "decl": "InOut",
+    "types": "ARRAY of BYTE or ARRAY of CHAR"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "MOVE_BLK: Move block (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MOVE_BLK",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, CHAR, WCHAR, TOD"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, CHAR, WCHAR, TOD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "MOVE_BLK_VARIANT: Move block (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MOVE_BLK_VARIANT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "SRC_INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "DEST_INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "UMOVE_BLK: Move block uninterruptible (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "UMOVE_BLK",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, CHAR, WCHAR, TOD"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, CHAR, WCHAR, TOD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "FILL_BLK: Fill block (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "FILL_BLK",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, TOD, CHAR, WCHAR"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, TOD, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "UFILL_BLK: Fill block uninterruptible (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "UFILL_BLK",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, CHAR, WCHAR, TOD"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, CHAR, WCHAR, TOD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "SCATTER: Parse the bit sequence into individual bits (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SCATTER",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BYTE, WORD, DWORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "ARRAY[*] of BOOL, STRUCT or PLC data type *: 8, 16, 32 or 64 elements"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "SCATTER_BLK: Parse elements of an ARRAY of bit sequence into individual bits (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SCATTER_BLK",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Element of an ARRAY[*] of - BYTE - WORD - DWORD"
+   },
+   {
+    "name": "COUNT_IN",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Element of an ARRAY[*] of - BOOL - STRUCT - PLC data type"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "GATHER: Merge individual bits into a bit sequence (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GATHER",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "ARRAY[*] of BOOL, STRUCT or PLC data type *: 8, 16, 32 or 64 elements"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BYTE, WORD, DWORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "GATHER_BLK: Merge individual bits into multiple elements of an ARRAY of bit sequence (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GATHER_BLK",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Element of an ARRAY[*] of - BOOL - STRUCT - PLC data type"
+   },
+   {
+    "name": "COUNT_OUT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Element of an ARRAY[*] of - BYTE - WORD - DWORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations",
+  "title": "SWAP: Swap (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SWAP",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "WORD, DWORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "WORD, DWORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / ARRAY DB",
+  "title": "ReadFromArrayDB: Read from ARRAY data block (S7-1500)",
+  "name": "ReadFromArrayDB",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / ARRAY DB",
+  "title": "WriteToArrayDB: Write to ARRAY data block (S7-1500)",
+  "name": "WriteToArrayDB",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / ARRAY DB",
+  "title": "ReadFromArrayDBL: Read from ARRAY data block in load memory (S7-1500)",
+  "name": "ReadFromArrayDBL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / ARRAY DB",
+  "title": "WriteToArrayDBL: Write to ARRAY data block in load memory (S7-1500)",
+  "name": "WriteToArrayDBL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / VARIANT",
+  "title": "VariantGet: Read out VARIANT tag value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "VariantGet",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRC",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DST",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, character strings, ARRAY elements, PLC data types"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / VARIANT",
+  "title": "VariantPut: Write VARIANT tag value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "VariantPut",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRC",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, character strings, ARRAY elements, PLC data types"
+   },
+   {
+    "name": "DST",
+    "decl": "Input",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / VARIANT",
+  "title": "CountOfElements: Get number of ARRAY elements (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CountOfElements",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "VARIANT, ResolvedSymbol"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "UDINT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / ARRAY[*]",
+  "title": "LOWER_BOUND: Read out low ARRAY limit (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LOWER_BOUND",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ARR",
+    "decl": "Input",
+    "types": "ARRAY​[*]"
+   },
+   {
+    "name": "DIM",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / ARRAY[*]",
+  "title": "UPPER_BOUND: Read out high ARRAY limit (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "UPPER_BOUND",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ARR",
+    "decl": "Input",
+    "types": "ARRAY​[*]"
+   },
+   {
+    "name": "DIM",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / Legacy",
+  "title": "FieldRead: Read field (S7-1500)",
+  "name": "FieldRead",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "MEMBER",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, TOD, CHAR and WCHAR as components of an ARRAY tag"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, TOD, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / Legacy",
+  "title": "FieldWrite: Write field (S7-1500)",
+  "name": "FieldWrite",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, TOD, CHAR, WCHAR"
+   },
+   {
+    "name": "MEMBER",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, DATE, TOD, CHAR and WCHAR as components of an ARRAY tag"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / Legacy",
+  "title": "BLKMOV: Move block (S7-1500)",
+  "name": "BLKMOV",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / Legacy",
+  "title": "UBLKMOV: Move block uninterruptible (S7-1500)",
+  "name": "UBLKMOV",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Move operations / Legacy",
+  "title": "FILL: Fill block (S7-1500)",
+  "name": "FILL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BVAL",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "CONVERT: Convert value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CONVERT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, CHAR, WCHAR, BCD16, BCD32"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, CHAR, WCHAR, BCD16, BCD32"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "ROUND: Round numerical value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ROUND",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "CEIL: Generate next higher integer from floating-point number (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "CEIL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "FLOOR: Generate next lower integer from floating-point number (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "FLOOR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "TRUNC: Truncate numerical value (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "TRUNC",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "SCALE_X: Scale (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SCALE_X",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "MIN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "MAX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations",
+  "title": "NORM_X: Normalize (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "NORM_X",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "MIN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "MAX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations / Legacy",
+  "title": "SCALE: Scale (S7-1500)",
+  "name": "SCALE",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "HI_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "LO_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "BIPOLAR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "REAL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Conversion operations / Legacy",
+  "title": "UNSCALE: Unscale (S7-1500)",
+  "name": "UNSCALE",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "HI_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "LO_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "BIPOLAR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations",
+  "title": "JMP: Jump if RLO = 1 (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "JMP",
+  "params": null
+ },
+ {
+  "group": "FBD / Program control operations",
+  "title": "JMPN: Jump if RLO = 0 (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "JMPN",
+  "params": null
+ },
+ {
+  "group": "FBD / Program control operations",
+  "title": "LABEL: Jump label (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "LABEL",
+  "params": null
+ },
+ {
+  "group": "FBD / Program control operations",
+  "title": "JMP_LIST: Define jump list (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "JMP_LIST",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "K",
+    "decl": "Input",
+    "types": "UINT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations",
+  "title": "SWITCH: Jump distributor (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SWITCH",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "K",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "<Comparison values>",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, TIME, DATE, TOD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations",
+  "title": "RET: Return (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RET",
+  "params": null
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "ENDIS_PW: Locking and unlocking passwords of the CPU access levels (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ENDIS_PW",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "F_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "FULL_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "HMI_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "F_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "FULL_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "R_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "HMI_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "RE_TRIGR: Restart cycle monitoring time (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RE_TRIGR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "STP: Exit program (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "STP",
+  "params": null
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "GET_ERROR: Get error locally (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GET_ERROR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "ErrorStruct"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "GET_ERR_ID: Get error ID locally (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "GET_ERR_ID",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "INIT_RD: Initialize all retain data (S7-1500)",
+  "name": "INIT_RD",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "WAIT: Configure time delay (S7-1500)",
+  "name": "WAIT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "WT",
+    "decl": "Input",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Program control operations / Runtime control",
+  "title": "RUNTIME: Measure program runtime (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "RUNTIME",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "MEM",
+    "decl": "InOut",
+    "types": "LREAL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "LREAL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "AND: AND logic operation (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "AND",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "OR: OR logic operation (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "OR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "XOR: EXCLUSIVE OR logic operation (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "XOR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "INn",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "INVERT: Create ones complement (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "INVERT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "DECO: Decode (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DECO",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "ENCO: Encode (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ENCO",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "SEL: Select (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SEL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "G",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN0",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, TOD, DATE, CHAR, WCHAR"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, TOD, DATE, CHAR, WCHAR"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, TOD, DATE, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "MUX: Multiplex (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "MUX",
+  "params": null
+ },
+ {
+  "group": "FBD / Word logic operations",
+  "title": "DEMUX: Demultiplex (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "DEMUX",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "K",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, DATE"
+   },
+   {
+    "name": "OUT0",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, DATE"
+   },
+   {
+    "name": "OUT1",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, DATE"
+   },
+   {
+    "name": "OUTn",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, DATE"
+   },
+   {
+    "name": "ELSE",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, DATE"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Shift and Rotate",
+  "title": "SHR: Shift right (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SHR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Shift and Rotate",
+  "title": "SHL: Shift left (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "SHL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Shift and Rotate",
+  "title": "ROR: Rotate right (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ROR",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Shift and Rotate",
+  "title": "ROL: Rotate left (S7-1200, S7-1500, S7-1200 G2)",
+  "name": "ROL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers"
+   },
+   {
+    "name": "N",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "DRUM: Implement sequencer (S7-1500)",
+  "name": "DRUM",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RESET",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "JOG",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DRUM_EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LST_STEP",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "EVENT(i), 1 ≤ i ≤ 16",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT(j), 1 ≤ j ≤ 16",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT_WORD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "DCAT: Discrete control-timer alarm (S7-1500)",
+  "name": "DCAT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "O_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "C_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OA",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CA",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "MCAT: Motor control-timer alarm (S7-1500)",
+  "name": "MCAT",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "O_CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "C_CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "S_CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "O_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "C_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OA",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CA",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "IMC: Compare input bits with the bits of a mask (S7-1500)",
+  "name": "IMC",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT0",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT1",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT2",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT3",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT4",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT5",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT6",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT7",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT8",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT9",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT10",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT11",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT12",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT13",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT14",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT15",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMP_STEP",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "SMC: Compare scan matrix (S7-1500)",
+  "name": "SMC",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT0",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT1",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT2",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT3",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT4",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT5",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT6",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT7",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT8",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT9",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT10",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT11",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT12",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT13",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT14",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT15",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT_STEP",
+    "decl": "Output",
+    "types": "BYTE"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "LEAD_LAG: Lead and lag algorithm  (S7-1500)",
+  "name": "LEAD_LAG",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "SAMPLE_T",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "REAL"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "SEG: Create bit pattern for seven-segment display (S7-1500)",
+  "name": "SEG",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "BCDCPL: Create tens complement (S7-1500)",
+  "name": "BCDCPL",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "FBD / Legacy",
+  "title": "BITSUM: Count number of set bits (S7-1500)",
+  "name": "BITSUM",
+  "params": [
+   {
+    "name": "EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ENO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ }
+]

@@ -1,0 +1,91 @@
+A: 047_plc_watch_table.zap21  B: 048_plc_watch_entry.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 100e:0002:91a FolderData name='WatchtablesFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:08:42.595989Z' -> '2026-10-25T20:08:49.607555Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link AggregatedElements -> 1703:0022:1420
+          -link AggregatedElements -> 1703:0022:1018
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:08:42.595989Z' -> '2026-10-25T20:08:49.607555Z'  (timestamp)
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:08:43.384086Z' -> '2026-10-25T20:08:52.640785Z'  (timestamp)
+CHANGED 105c:0002:c12 EAMTZTagData name='Tag_Bool_1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:23:07.362636Z' -> '2026-10-25T20:08:49.607555Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link TagData2SimpleAccessIdentContainerData -> 1202:0022:1423
+          slot table [0, 0, 0, 0, 324, 0, 0, 387, 0, 100, 258, 0, 174, 0] -> [0, 0, 0, 0, 324, 0, 0, 387, 0, 100, 258, 0, 174, 486]
+NEW     1201:0022:1424 IdentPartData name=None
+          ICoreExpandoAttributes.MetaVersion = '19.0.0.0'
+          IIdentPartData.PartID = 0
+          IIdentPartData.PayLoadVersion = '19.0.0.0'
+          IIdentPartData.Meta = bytes[90] 004200000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e
+          IIdentPartData.PayLoad = bytes[489] 00d101000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e
+          link IdentPartsInverse -> 1202:0022:1423
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1201:0022:1425 IdentPartData name=None
+          ICoreExpandoAttributes.MetaVersion = '19.0.0.0'
+          IIdentPartData.PartID = 1
+          IIdentPartData.PayLoadVersion = '19.0.0.0'
+          IIdentPartData.Meta = bytes[90] 004200000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e
+          IIdentPartData.PayLoad = bytes[427] 009301000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e
+          link IdentPartsInverse -> 1202:0022:1423
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+REMOVED 1202:0022:101b IdentContainerData name=None
+NEW     1202:0022:1423 IdentContainerData name=None
+          IIdentContainerData.NextFreePartId = 2
+          IIdentContainerData.ContextProviderGuid = '5A17885B-96B9-4BED-89AA-0F1C3A209109'
+          IIdentContainerData.PartMappingStrategy = 'bytype'
+          IIdentContainerData.PayLoadVersion = '19.0.0.0'
+          IIdentContainerData.FilcMetaPayloadVersion = '19.0.0.0'
+          IIdentContainerData.FilcMetaPayload = bytes[248] 00e000000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e
+          IIdentContainerData.PayLoad = bytes[300] 001401000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e
+          link IdentContainerInverse -> 1703:0022:1420
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link IdentParts -> 1201:0022:1424
+          link SimpleAccessDataToTagData -> 105c:0002:c12
+          link IdentParts -> 1201:0022:1425
+REMOVED 1701:0022:1019 VarItemContainerData name=None
+NEW     1701:0022:1421 VarItemContainerData name=None
+          ICoreAttributes.CreationTime = '2026-10-25T20:08:49.607555Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:08:49.607555Z'
+          IVarItemContainerAttributes.Version = '14.0'
+          link VarItemContainerParent -> 1703:0022:1420
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link AggregatedVarItems -> 1702:0022:1422
+REMOVED 1702:0022:101a VarItemData name=None
+NEW     1702:0022:1422 VarItemData name=None
+          ICoreAttributes.CreationTime = '2026-10-25T20:08:49.607555Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:08:49.607555Z'
+          IVarItemAttributes.PartId = 0
+          IVarItemAttributes.ItemData = bytes[477] 00c501000000000000000000000010010000000101000000efbbbf3c5661724974656d7320566572
+          link VarItemParent -> 1701:0022:1421
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+REMOVED 1703:0022:1018 VarTableData name='WT_Test'
+NEW     1703:0022:1420 VarTableData name='WT_Test'
+          ICoreAttributes.CreationTime = '2026-10-25T20:08:49.810072Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:08:51.674085Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'WT_Test'
+          ICoreAttributes.Culture = 'en-US'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IVarTableAttributeData.MonOptLevel = 'Null'
+          IVarTableAttributeData.PositionCurrentId = 24
+          IVarTableAttributeData.WebServerProperties = 0
+          IVarTableAttributeData.FreeIds = None
+          IVarTableAttributeData.VarTableLayout = bytes[381] 014605000000000000000000000010010000000101000000e302785eed94dd4ac3301886bd949073
+          link AggregatingFolder -> 100e:0002:91a
+          link AggregatedVarItemContainer -> 1701:0022:1421
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link CoreObject2IdentContainer -> 1202:0022:1423
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1808, 0014:0007:0, 0015:0007:20, 0016:0007:18

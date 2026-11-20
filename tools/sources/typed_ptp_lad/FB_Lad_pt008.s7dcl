@@ -1,0 +1,31 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_pt008"
+    VAR_INPUT
+        v_req : Bool;
+        v_port : PORT;
+        v_signal : Byte;
+        v_rts : Bool;
+        v_dtr : Bool;
+        v_dsr : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR
+        inst : Signal_Set;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Signal_Set( REQ := #v_req, PORT := #v_port, SIGNAL := #v_signal, RTS := #v_rts, DTR := #v_dtr, DSR := #v_dsr, DONE => #v_done, ERROR => #v_error, STATUS => #v_status )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,73 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclOps" : Void
+    VAR_TEMP
+        b1 : Bool;
+        b2 : Bool;
+        b3 : Bool;
+        i1 : Int;
+        i2 : Int;
+        i3 : Int;
+        d1 : DInt;
+        r1 : Real;
+        r2 : Real;
+        l1 : LReal;
+        w1 : Word;
+        w2 : Word;
+        dw1 : DWord;
+        by1 : Byte;
+        u1 : UInt;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        // arithmetic
+                #i1 := 1 + 2 - 3 * 4;
+                #i2 := #i1 / 2;
+                #i3 := #i1 MOD 3;
+                #r1 := #r2 ** 2.0;
+                #i1 := -#i2;
+                #i1 := +#i2;
+                #i1 := (#i2 + #i3) * (#i2 - #i3);
+                #d1 := #i1 * #i2;
+                #r1 := #r2 / 3.0;
+                #u1 := 5;
+                // logic
+                #b1 := NOT #b2;
+                #b1 := #b2 AND #b3;
+                #b1 := #b2 OR #b3;
+                #b1 := #b2 XOR #b3;
+                #b1 := #b2 & #b3;
+                #b1 := (#b2 AND #b3) OR NOT (#b2 XOR #b3);
+                #w1 := #w1 AND #w2;
+                #w1 := #w1 OR #w2;
+                #w1 := #w1 XOR #w2;
+                #w1 := NOT #w2;
+                // comparison
+                #b1 := #i1 = #i2;
+                #b1 := #i1 <> #i2;
+                #b1 := #i1 < #i2;
+                #b1 := #i1 <= #i2;
+                #b1 := #i1 > #i2;
+                #b1 := #i1 >= #i2;
+                #b1 := #r1 > 1.5 AND #r2 <= 2.5;
+                // compound assignment
+                #i1 += 1;
+                #i1 -= 1;
+                #i1 *= 2;
+                #i1 /= 2;
+                // mixed types
+                #l1 := #r1 + #d1;
+                #r1 := #i1;
+                #by1 := 16#FF;
+                #dw1 := 16#DEADBEEF;
+                #w1 := 2#1010_1010;
+                #i1 := 8#17;
+                #r1 := 1.0E3;
+                #r2 := 2.5e-3;
+                #l1 := 3.141592653589793;
+    END_NETWORK
+END_FUNCTION

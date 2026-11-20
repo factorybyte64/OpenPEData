@@ -1,0 +1,33 @@
+FUNCTION_BLOCK "FB_StlC_075"
+TITLE = STL call DRUM
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      req : Bool;
+      ev : Bool;
+   END_VAR
+   VAR_OUTPUT
+      b : Bool;
+      q : Bool;
+      ow : Word;
+      ec : Word;
+   END_VAR
+   VAR
+      drm : DRUM;
+   END_VAR
+BEGIN
+NETWORK
+TITLE = 075 DRUM
+      CALL #drm
+      (  RESET                       := #req ,
+         JOG                         := #ev ,
+         DRUM_EN                     := #req ,
+         LST_STEP                    := B#16#10 ,
+         EVENT1                      := #ev ,
+         EVENT2                      := #ev ,
+         OUT1                        := #b ,
+         Q                           := #q ,
+         OUT_WORD                    := #ow ,
+         ERR_CODE                    := #ec
+      );
+END_FUNCTION_BLOCK

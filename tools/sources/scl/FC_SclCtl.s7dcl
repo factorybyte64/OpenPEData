@@ -1,0 +1,105 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclCtl" : Int
+    VAR_INPUT
+        n : Int;
+        flag : Bool;
+    END_VAR
+    VAR_OUTPUT
+        total : Int;
+    END_VAR
+    VAR_TEMP
+        i : Int;
+        j : Int;
+        x : Int;
+        b : Bool;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        (* block comment
+           over two lines *)
+        #total := 0;
+        // IF forms
+        IF #flag THEN
+            #total := 1;
+        END_IF;
+        IF #n > 5 THEN
+            #total := 2;
+        ELSE
+            #total := 3;
+        END_IF;
+        IF #n > 10 THEN
+            #total := 4;
+        ELSIF #n > 5 THEN
+            #total := 5;
+        ELSIF #n > 0 THEN
+            #total := 6;
+        ELSE
+            #total := 7;
+        END_IF;
+        // CASE
+        CASE #n OF
+            0:
+                #total := 10;
+            1, 2:
+                #total := 11;
+            3..5:
+                #total := 12;
+            6, 8..9:
+                #total := 13;
+        ELSE
+            #total := 14;
+        END_CASE;
+        CASE #x OF
+            1:
+                ;
+        END_CASE;
+        // FOR with BY, EXIT, CONTINUE
+        FOR #i := 0 TO 10 DO
+            #total += #i;
+        END_FOR;
+        FOR #i := 10 TO 0 BY -2 DO
+            IF #i = 4 THEN
+                CONTINUE;
+            END_IF;
+            IF #i = 2 THEN
+                EXIT;
+            END_IF;
+            #total += #i;
+        END_FOR;
+        // nested loops
+        FOR #i := 1 TO 3 DO
+            FOR #j := 1 TO 3 DO
+                #total := #total + #i * #j;
+            END_FOR;
+        END_FOR;
+        // WHILE
+        #x := 0;
+        WHILE #x < 5 DO
+            #x := #x + 1;
+        END_WHILE;
+        // REPEAT
+        REPEAT
+            #x := #x - 1;
+        UNTIL #x <= 0
+        END_REPEAT;
+        // REGION
+        REGION Calculation
+            #total := #total * 2;
+        END_REGION;
+        // GOTO and labels
+        IF #flag THEN
+            GOTO done;
+        END_IF;
+        #total := #total + 1;
+        done:
+        #b := TRUE;
+        // empty statement and RETURN
+        ;
+        #FC_SclCtl := #total;
+        RETURN;
+    END_NETWORK
+END_FUNCTION

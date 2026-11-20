@@ -1,0 +1,18 @@
+A: L03_udt_type_v2  B: L04_default_changed
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T15:31:08.577099Z' -> '2026-10-20T15:31:30.264086Z'  (timestamp)
+CHANGED 1408:0022:1426 UserTypeDataByCopyVersionObject name=None
+          ICoreAttributes.ModifiedTime: '2026-10-20T15:30:45.892978Z' -> '2026-10-20T15:31:25.778995Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          +link DefaultVersionToType -> 140b:0022:1425
+CHANGED 1408:0022:1c30 UserTypeDataByCopyVersionObject name=None
+          ICoreAttributes.ModifiedTime: '2026-10-20T15:30:45.892978Z' -> '2026-10-20T15:31:25.778995Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          -link DefaultVersionToType -> 140b:0022:1425
+CHANGED 140b:0022:1425 UserTypeDataByCopyTypeObject name='UDT_Motor'
+          raw <links 0>: 84 -> 84 bytes
+          +link TypeToDefaultVersion -> 1408:0022:1426
+          -link TypeToDefaultVersion -> 1408:0022:1c30
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0014:0007:2038, 0015:0007:20

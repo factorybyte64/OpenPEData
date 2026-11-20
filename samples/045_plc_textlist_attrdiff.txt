@@ -1,0 +1,80 @@
+A: 044_plc_alarm_class.zap21  B: 045_plc_textlist.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:57:57.587483Z' -> '2026-10-25T20:57:08.327835Z'  (timestamp)
+          raw <links 73>: 0 -> 24 bytes
+          +link typed slot 91 -> 106a:0002:1460
+          slot table [4907, 536, 0, 0, 0, 1647, 7553, 0, 0, 0, 0, 0, 1764, 1776, 2346, 2429, 2445, 0, 3331, 27665, 3887, 28961, 0, 0, 0, 0, 28937, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3479, 3611, 3731, 0, 0, 0, 4883, 3911, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3851, 0, 29057, 0, 0, 28889, 0, 0, 0, 0, 0, 0, 0, 0, 7529, 0, 28637, 7505, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] -> [4907, 536, 0, 0, 0, 1647, 7553, 0, 0, 0, 0, 0, 1764, 1776, 2346, 2429, 2445, 0, 3331, 27665, 3887, 28961, 0, 0, 0, 0, 28937, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3479, 3611, 3731, 0, 0, 0, 4883, 3911, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3851, 0, 29057, 0, 0, 28889, 0, 0, 0, 0, 0, 0, 29549, 0, 7529, 0, 28637, 7505, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:59:20.840183Z' -> '2026-10-25T20:57:21.755938Z'  (timestamp)
+          raw <links 1>: 260 -> 292 bytes
+          +link Categories -> 1068:0002:1461
+          +link Categories -> 106e:0002:1462
+          slot table [0, 0, 0, 76, 0, 0, 432, 172] -> [0, 0, 0, 76, 0, 0, 464, 172]
+NEW     102e:0040:1463 TextListFingerprintContainer name=None
+          ICoreExpandoAttributes.Siemens.Simatic.Lang.Model.Blocks.ICommonFingerprintData.DataStoreVersion = 281474976710656
+          ICommonFingerprintData.DataVersion = 639285586108865886
+          ICommonFingerprintData.ValidState = 0
+          ICommonFingerprintData.DataStore = bytes[253] 00e5000000000000000000000000100100000001010000000010deadbeef01000000000000000000
+          link ParentTextList -> 106a:0002:1460
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1068:0002:1461 TextListTextCategoryData name='TextListTextCategoryData'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'TextListTextCategoryData'
+          ICoreAttributes.Subtype = ''
+          link DataContainer -> 1028:0002:433
+          link Environment -> 1028:0002:433
+          link Category2TextRangeList -> 106a:0002:1460
+NEW     1069:0002:1464 UserTextRangeData name='Range 0'
+          IRangeData.RangeFrom = 0
+          IRangeData.RangeTo = 0
+          IRangeData.Text = bytes[45] 2d0000001d000000ffffffff01000000090416000000030000004175736810020000000000000000
+          ICoreAttributes.CreationTime = '2026-10-25T20:57:04.150197Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:57:07.982458Z'
+          ICoreAttributes.Name = 'Range 0'
+          link List -> 106a:0002:1460
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1069:0002:1465 UserTextRangeData name='Range 1'
+          IRangeData.RangeFrom = 1
+          IRangeData.RangeTo = 1
+          IRangeData.Text = bytes[45] 2d0000001d000000ffffffff010000000904160000000300000045696e6810020000000000000000
+          ICoreAttributes.CreationTime = '2026-10-25T20:57:08.327835Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:57:18.597207Z'
+          ICoreAttributes.Name = 'Range 1'
+          link List -> 106a:0002:1460
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     106a:0002:1460 UserTextRangeListData name='TL_Test'
+          IObjectRangeListData.ChangeCounter = 4
+          IObjectRangeListData.Index = 512
+          IObjectRangeListData.ListInfo = 'LastChangedBySystem'
+          IObjectRangeListData.ListRange = 'Decimal'
+          IObjectRangeListData.ListTypeId = 0
+          ICoreAttributes.CreationTime = '2026-10-25T20:56:37.799344Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:57:18.597207Z'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff000000006e100200000000000000000000000000
+          ICoreAttributes.Name = 'TL_Test'
+          ICoreExpandoAttributes.DomainServices_ChangeCounterModifiedTime = '2026-10-25T20:57:18.596612Z'
+          link Target -> 101c:0010:813
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link TextRangeList2Category -> 1068:0002:1461
+          link TextListFingerprintContainer -> 102e:0040:1463
+          link Entries -> 1069:0002:1464
+          link Entries -> 1069:0002:1465
+NEW     106e:0002:1462 MiscellaneousTextCategoryData name='MiscellaneousTextCategoryData'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Name = 'MiscellaneousTextCategoryData'
+          link DataContainer -> 1028:0002:433
+          link Environment -> 1028:0002:433
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1848, 0011:0007:1849, 0014:0007:0, 0015:0007:20, 0016:0007:18

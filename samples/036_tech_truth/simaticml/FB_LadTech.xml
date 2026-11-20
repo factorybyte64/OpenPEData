@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-10T07:27:30.7974892Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="sp" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="pv" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="Output">
+            <Member Name="outv" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="err" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="InOut" />
+          <Section Name="Static" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_LadTech</Name>
+      <Namespace />
+      <Number>5</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="sp" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="pv" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="outv" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="err" />
+                  </Symbol>
+                </Access>
+                <Call UId="25">
+                  <CallInfo Name="PID_Compact" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="26">
+                      <Component Name="PID_Comp_2_3" />
+                    </Instance>
+                    <Parameter Name="Setpoint" Section="Input" Type="Real" />
+                    <Parameter Name="Input" Section="Input" Type="Real" />
+                    <Parameter Name="Input_PER" Section="Input" Type="Int" />
+                    <Parameter Name="Disturbance" Section="Input" Type="Real" />
+                    <Parameter Name="ManualEnable" Section="Input" Type="Bool" />
+                    <Parameter Name="ManualValue" Section="Input" Type="Real" />
+                    <Parameter Name="ErrorAck" Section="Input" Type="Bool" />
+                    <Parameter Name="Reset" Section="Input" Type="Bool" />
+                    <Parameter Name="ModeActivate" Section="Input" Type="Bool" />
+                    <Parameter Name="ScaledInput" Section="Output" Type="Real" />
+                    <Parameter Name="Output" Section="Output" Type="Real" />
+                    <Parameter Name="Output_PER" Section="Output" Type="Int" />
+                    <Parameter Name="Output_PWM" Section="Output" Type="Bool" />
+                    <Parameter Name="SetpointLimit_H" Section="Output" Type="Bool" />
+                    <Parameter Name="SetpointLimit_L" Section="Output" Type="Bool" />
+                    <Parameter Name="InputWarning_H" Section="Output" Type="Bool" />
+                    <Parameter Name="InputWarning_L" Section="Output" Type="Bool" />
+                    <Parameter Name="State" Section="Output" Type="Int" />
+                    <Parameter Name="Error" Section="Output" Type="Bool" />
+                    <Parameter Name="ErrorBits" Section="Output" Type="DWord" />
+                    <Parameter Name="Mode" Section="InOut" Type="Int" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="44">
+                  <Powerrail />
+                  <NameCon UId="25" Name="en" />
+                </Wire>
+                <Wire UId="45">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="Setpoint" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="Input" />
+                </Wire>
+                <Wire UId="47">
+                  <NameCon UId="25" Name="Output" />
+                  <IdentCon UId="23" />
+                </Wire>
+                <Wire UId="48">
+                  <NameCon UId="25" Name="Error" />
+                  <IdentCon UId="24" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="27" />
+                  <NameCon UId="25" Name="Input_PER" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="28" />
+                  <NameCon UId="25" Name="Disturbance" />
+                </Wire>
+                <Wire UId="51">
+                  <OpenCon UId="29" />
+                  <NameCon UId="25" Name="ManualEnable" />
+                </Wire>
+                <Wire UId="52">
+                  <OpenCon UId="30" />
+                  <NameCon UId="25" Name="ManualValue" />
+                </Wire>
+                <Wire UId="53">
+                  <OpenCon UId="31" />
+                  <NameCon UId="25" Name="ErrorAck" />
+                </Wire>
+                <Wire UId="54">
+                  <OpenCon UId="32" />
+                  <NameCon UId="25" Name="Reset" />
+                </Wire>
+                <Wire UId="55">
+                  <OpenCon UId="33" />
+                  <NameCon UId="25" Name="ModeActivate" />
+                </Wire>
+                <Wire UId="56">
+                  <NameCon UId="25" Name="ScaledInput" />
+                  <OpenCon UId="34" />
+                </Wire>
+                <Wire UId="57">
+                  <NameCon UId="25" Name="Output_PER" />
+                  <OpenCon UId="35" />
+                </Wire>
+                <Wire UId="58">
+                  <NameCon UId="25" Name="Output_PWM" />
+                  <OpenCon UId="36" />
+                </Wire>
+                <Wire UId="59">
+                  <NameCon UId="25" Name="SetpointLimit_H" />
+                  <OpenCon UId="37" />
+                </Wire>
+                <Wire UId="60">
+                  <NameCon UId="25" Name="SetpointLimit_L" />
+                  <OpenCon UId="38" />
+                </Wire>
+                <Wire UId="61">
+                  <NameCon UId="25" Name="InputWarning_H" />
+                  <OpenCon UId="39" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="25" Name="InputWarning_L" />
+                  <OpenCon UId="40" />
+                </Wire>
+                <Wire UId="63">
+                  <NameCon UId="25" Name="State" />
+                  <OpenCon UId="41" />
+                </Wire>
+                <Wire UId="64">
+                  <NameCon UId="25" Name="ErrorBits" />
+                  <OpenCon UId="42" />
+                </Wire>
+                <Wire UId="65">
+                  <OpenCon UId="43" />
+                  <NameCon UId="25" Name="Mode" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>PID call</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

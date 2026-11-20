@@ -1,0 +1,34 @@
+A: 214_hw_et200sp_station.zap21  B: 215_hw_io_subnet.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 1011:0010:1427 DeviceItemData name='PROFINET interface'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:28:00.624239Z' -> '2026-10-24T15:28:34.706894Z'  (timestamp)
+          raw <links 1>: 196 -> 228 bytes
+          +link Domains -> 1021:0010:c12
+          +link Domains -> 1021:0010:c13
+CHANGED 101d:0010:1428 NodeData name='IE1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:28:02.038597Z' -> '2026-10-24T15:28:34.706894Z'  (timestamp)
+          INodeData.NodePathID: 0 -> 1
+          IPersistentExpandoData.NodeGetsAddressAutomatically: True -> False
+          IPersistentExpandoData.NodeIPAddress: 3232235521 -> 3232235522
+          raw IPersistentExpandoData: 234 -> 234 bytes
+          raw <links 0>: 84 -> 84 bytes
+          +link Subnet -> 101e:0010:c10
+CHANGED 101e:0010:c10 SubnetData name='PN/IE_1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:25:09.146367Z' -> '2026-10-24T15:28:34.706894Z'  (timestamp)
+          IPersistentExpandoData.NetLastUsedIPAddress: 3232235521 -> 3232235522
+          raw IPersistentExpandoData: 224 -> 224 bytes
+          raw <links 1>: 84 -> 100 bytes
+          +link SubnetNodes -> 101d:0010:1428
+          slot table [92, 0, 0, 0, 0, 0, 131, 737, 961, 0, 653, 569] -> [92, 0, 0, 0, 0, 0, 131, 753, 977, 0, 669, 569]
+CHANGED 1021:0010:c12 DomainData name='Sync-Domain_1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:24:38.887598Z' -> '2026-10-24T15:28:34.706894Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link InterfaceSubmodules -> 1011:0010:1427
+CHANGED 1021:0010:c13 DomainData name='mrpdomain-1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:24:38.887598Z' -> '2026-10-24T15:28:34.706894Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link InterfaceSubmodules -> 1011:0010:1427
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:28:02.732491Z' -> '2026-10-24T15:28:34.975023Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

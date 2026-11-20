@@ -1,0 +1,55 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_Scl" : Void
+    VAR_INPUT
+        { S7_MLC := "MLC_a" }
+        "a" : Int;
+        { S7_MLC := "MLC_b" }
+        "b" : Int;
+    END_VAR
+    VAR_OUTPUT
+        { S7_MLC := "MLC_result" }
+        result : Int;
+        { S7_MLC := "MLC_total" }
+        total : Int;
+    END_VAR
+    VAR_IN_OUT
+        { S7_MLC := "MLC_gain" }
+        gain : Real;
+    END_VAR
+    VAR_TEMP
+        tmp : Int;
+        "i" : Int;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        // Sum of both inputs
+        #tmp := #a + #b;
+        
+        // Limit the result to 0..100
+        #result := 0;
+        IF #tmp > 100 THEN
+            #result := 100;
+        ELSIF #tmp < 0 THEN
+            #result := 0;
+        ELSE
+            #result := #tmp;
+        END_IF;
+        
+        // Accumulate 1..4
+        #total := 0;
+        FOR #i := 1 TO 4 DO
+            #total := #total + #i;
+        END_FOR;
+        
+        // Call the function block with its instance data block
+        "FB_Iface_DB"(iBool := TRUE,
+                      iInt := #result,
+                      iReal := 1.5,
+                      ioReal := #gain);
+    END_NETWORK
+END_FUNCTION

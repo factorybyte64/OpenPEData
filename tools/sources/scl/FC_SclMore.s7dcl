@@ -1,0 +1,98 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclMore" : Void
+    VAR_INPUT
+        "my var" : Int;
+    END_VAR
+    VAR_IN_OUT
+        va : Array[*] of Int;
+    END_VAR
+    VAR_TEMP
+        i : Int;
+        j : Int;
+        d : DInt;
+        t1 : Time;
+        t2 : Time;
+        dt1 : Date;
+        dt2 : Date;
+        tod : Time_Of_Day;
+        r : Real;
+        s : String;
+        ws : WString;
+        b : Bool;
+        w : Word;
+        tcnt : DInt;
+    END_VAR
+    VAR CONSTANT
+        cMax : Int := 10;
+        cText : String := 'const';
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        // quoted identifiers, user constants
+        #i := #"my var" + "MAX_COUNT";
+        #r := "GAIN" * 2.0;
+        #s := "TXT";
+        #i := #cMax;
+        #s := #cText;
+        // several statements per line
+        #i := 1; #j := 2; #d := 3;
+        // trailing and inline comments
+        #i := 1; // trailing comment
+        #j := 1 (* inline *) + 2;
+        (* single line block comment *)
+        (* a *) #i := 3; (* b *)
+        // time and date arithmetic
+        #t1 := #t1 + #t2;
+        #t1 := #t1 - T#1s;
+        #t1 := #t1 * 2;
+        #t1 := #t1 / 2;
+        #tod := #tod + #t1;
+        #b := #t1 > #t2;
+        #b := #dt1 <= #dt2;
+        #tcnt := UPPER_BOUND(ARR := #va, DIM := 1);
+        #tcnt := LOWER_BOUND(ARR := #va, DIM := 1);
+        // arrays of UDT and nested access
+        "DB_Motor".motor.Speed := 1.0;
+        "FB_Iface_DB".iArr[#i] := #j;
+        // peripheral and direct I/O
+        #w := %IW0:P;
+        %QW0:P := #w;
+        #b := %I0.0;
+        // unicode
+        #s := 'äöü ß € ünï';
+        #ws := WSTRING#'äöü €';
+        // long expression
+        #r := (((#r + 1.0) * (#r - 1.0)) / ((#r + 2.0) * (#r - 2.0))) + (((#r + 3.0) * (#r - 3.0)) / ((#r + 4.0) * (#r - 4.0)));
+        // nested structured statements
+        IF #b THEN
+            FOR #i := 0 TO 3 DO
+                WHILE #j < 10 DO
+                    CASE #j OF
+                        1:
+                            #j += 1;
+                        2..4:
+                            REPEAT
+                                #j += 2;
+                            UNTIL #j > 5
+                            END_REPEAT;
+                    ELSE
+                        #j += 3;
+                    END_CASE;
+                END_WHILE;
+            END_FOR;
+        ELSIF NOT #b THEN
+            REGION Outer
+                REGION Inner
+                    #i := 0;
+                END_REGION;
+            END_REGION;
+        END_IF;
+        FOR #i := #j TO #d BY #i DO
+            #j := #i;
+        END_FOR;
+    END_NETWORK
+END_FUNCTION

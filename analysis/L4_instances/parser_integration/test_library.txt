@@ -1,0 +1,223 @@
+# Library tests (openpedata.library against Openness ground truth)
+
+**Overall: all expectations met, no exception** (215 samples)
+
+| Sample | Result | compared values | Master copies | Types | Versions | Instances | of which outdated | Types [Versions, * = default] | Time |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 000_empty | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 000_empty.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 000_empty2 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 000_empty_20261021_0640.zap21 | OK | – | 0 | 5 | 5 | 1 | 0 | FP_Basic [0.0.1 Committed*], FP_Controls [0.0.1 InWork], FP_Elements [0.0.1 Committed*], FP_Interface [0.0.1 Committed*], FP_Script [0.0.1 InWork] | 0.3 s |
+| 000_empty_resave | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 001_devgroup | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 001_devgroup.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 002_cpu | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 002_cpu.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 003_tagtable | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 003_tagtable.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 004_fb | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 004_fb.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 005_tag_int | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 005_tag_int.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 006_tag_addr | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 006_tag_addr.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 007_tag_comment | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 007_tag_comment.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 008_tag_flags | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 008_tag_flags.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 009_tag_rename | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 009_tag_rename.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 010_dev_in_group | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 010_dev_in_group.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 011_tagtable_folder | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 011_tagtable_folder.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 012_tags_multi | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 012_tags_multi.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 013_tag_umlaut | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 013_tag_umlaut.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 014_tag_delete | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 014_tag_delete.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 015_cpu2 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 015_cpu2.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 016_tag_accessible | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 016_tag_accessible.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 017_udt | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 017_udt.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 018_db_global | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 018_db_global.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 019_db_instance | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 019_db_instance.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 020_block_group | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 020_block_group.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 021_mastercopy | OK | – | 1 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| 021_mastercopy.zap21 | OK | – | 1 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| 022_db_udt | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 022_db_udt.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 023_fb_iface | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 023_fb_iface.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 024_fc_iface | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 024_fc_iface.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 025_fb_idb | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 025_fb_idb.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 026_fc_scl | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 026_fc_scl.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 027_fc_lad | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 027_fc_lad.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 028_fc_fbd | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 028_fc_fbd.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 029_fb_idb_value | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 029_fb_idb_value.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| 030_scl_all | OK | – | 0 | 38 | 0 | 0 | 0 | 38 system types | 0.2 s |
+| 030_scl_all.zap21 | OK | – | 0 | 38 | 0 | 0 | 0 | 38 system types | 0.2 s |
+| 031_lad_all | OK | – | 0 | 77 | 0 | 0 | 0 | 77 system types | 1.6 s |
+| 031_lad_all.zap21 | OK | – | 0 | 77 | 0 | 0 | 0 | 77 system types | 0.4 s |
+| 032_fbd_all | OK | – | 0 | 74 | 0 | 0 | 0 | 74 system types | 0.8 s |
+| 032_fbd_all.zap21 | OK | – | 0 | 74 | 0 | 0 | 0 | 74 system types | 0.4 s |
+| 034_flg_misc | OK | – | 0 | 38 | 0 | 0 | 0 | 38 system types | 0.4 s |
+| 034_flg_misc.zap21 | OK | – | 0 | 38 | 0 | 0 | 0 | 38 system types | 0.2 s |
+| 035_scl_rest | OK | – | 0 | 38 | 0 | 0 | 0 | 38 system types | 0.2 s |
+| 035_scl_rest.zap21 | OK | – | 0 | 38 | 0 | 0 | 0 | 38 system types | 0.2 s |
+| 036_tech | OK | – | 0 | 194 | 0 | 0 | 0 | 194 system types | 0.4 s |
+| 036_tech.zap21 | OK | – | 0 | 194 | 0 | 0 | 0 | 194 system types | 0.5 s |
+| 037_lad_xml | OK | – | 0 | 220 | 0 | 0 | 0 | 220 system types | 0.8 s |
+| 037_lad_xml.zap21 | OK | – | 0 | 220 | 0 | 0 | 0 | 220 system types | 0.7 s |
+| 038_comm_hw | OK | – | 0 | 75 | 0 | 0 | 0 | 75 system types | 0.4 s |
+| 038_comm_hw.zap21 | OK | – | 0 | 75 | 0 | 0 | 0 | 75 system types | 0.2 s |
+| 039_fw41 | OK | – | 0 | 307 | 0 | 0 | 0 | 307 system types | 1.3 s |
+| 039_fw41.zap21 | OK | – | 0 | 307 | 0 | 0 | 0 | 307 system types | 1.2 s |
+| 040_s71200 | OK | – | 0 | 1 | 0 | 0 | 0 | 1 system types | 0.2 s |
+| 040_s71200.zap21 | OK | – | 0 | 1 | 0 | 0 | 0 | 1 system types | 0.1 s |
+| 100_hmi_device | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 100_hmi_device.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 101_hmi_base | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 101_hmi_base.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 102_hmi_tag_int | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| 102_hmi_tag_int.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 103_hmi_tag_ext | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 103_hmi_tag_ext.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| 104_hmi_tag_cycle | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 104_hmi_tag_cycle.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 105_hmi_tag_comment | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 105_hmi_tag_comment.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 106_hmi_tagtable_group | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 106_hmi_tagtable_group.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 107_hmi_alarmclass | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 107_hmi_alarmclass.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 108_hmi_alarm_discrete | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 108_hmi_alarm_discrete.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 109_hmi_alarm_analog | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 109_hmi_alarm_analog.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 110_hmi_screen | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.4 s |
+| 110_hmi_screen.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 111_hmi_screen_rename | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 111_hmi_screen_rename.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 112_hmi_screen_backcolor | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 112_hmi_screen_backcolor.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 113_hmi_screen_group | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 113_hmi_screen_group.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 114_hmi_screen2 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 114_hmi_screen2.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 115_hmi_item_rect | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 115_hmi_item_rect.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 116_hmi_item_rect_pos | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 116_hmi_item_rect_pos.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 117_hmi_item_rect_color | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 117_hmi_item_rect_color.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 118_hmi_item_text | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 118_hmi_item_text.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 119_hmi_screen_tag | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 119_hmi_screen_tag.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 120_hmi_item_iofield | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 120_hmi_item_iofield.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 121_hmi_item_iofield_pvtext | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 121_hmi_item_iofield_pvtext.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.4 s |
+| 122_hmi_item_button | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 122_hmi_item_button.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 123_hmi_button_event | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 123_hmi_button_event.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 124_hmi_item_iofield_dyn | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 124_hmi_item_iofield_dyn.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 126_hmi_subnet | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 126_hmi_subnet.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 128_hmi_item_polyline | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 128_hmi_item_polyline.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 129_hmi_item_listbox | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 129_hmi_item_listbox.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 130_hmi_script_multiline | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| 130_hmi_script_multiline.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 131_hmi_event_down | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.4 s |
+| 131_hmi_event_down.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.5 s |
+| 132_hmi_dyn_color | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.4 s |
+| 132_hmi_dyn_color.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 133_hmi_dyn_script | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.4 s |
+| 133_hmi_dyn_script.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 134_hmi_dyn_range3 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.5 s |
+| 134_hmi_dyn_range3.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.4 s |
+| 135_hmi_item_alarmind | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| 135_hmi_item_alarmind.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| F01_hmi_allobjects | OK | – | 0 | 5 | 5 | 1 | 0 | FP_Basic [0.0.1 Committed*], FP_Controls [0.0.1 InWork], FP_Elements [0.0.1 Committed*], FP_Interface [0.0.1 Committed*], FP_Script [0.0.1 InWork] | 0.3 s |
+| F01_hmi_allobjects.zap21 | OK | – | 0 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| F02_hmi_faceplates_crash | OK | – | 0 | 2 | 2 | 0 | 0 | FP_Basic [0.0.1 Committed*], FP_Controls [0.0.1 InWork] | 0.3 s |
+| F03_hmi_faceplates_user | OK | 51 | 0 | 5 | 5 | 0 | 0 | FP_Basic [0.0.1 Committed*], FP_Controls [0.0.1 InWork], FP_Elements [0.0.1 Committed*], FP_Interface [0.0.1 InWork], FP_Script [0.0.1 InWork] | 0.3 s |
+| F04_fp_instance | OK | – | 0 | 5 | 5 | 0 | 0 | FP_Basic [0.0.1 Committed*], FP_Controls [0.0.1 InWork], FP_Elements [0.0.1 Committed*], FP_Interface [0.0.1 InWork], FP_Script [0.0.1 InWork] | 0.3 s |
+| F05_fp_iface_instance.zap21 | OK | – | 0 | 5 | 5 | 1 | 0 | FP_Basic [0.0.1 Committed*], FP_Controls [0.0.1 InWork], FP_Elements [0.0.1 Committed*], FP_Interface [0.0.1 Committed*], FP_Script [0.0.1 InWork] | 0.4 s |
+| L01_udt_type_inwork | OK | 11 | 0 | 1 | 1 | 1 | 0 | UDT_Motor [0.0.1 InWork] | 0.1 s |
+| L01_udt_type_inwork.zap21 | OK | 11 | 0 | 1 | 1 | 1 | 0 | UDT_Motor [0.0.1 InWork] | 0.1 s |
+| L02_udt_type_released | OK | 11 | 0 | 1 | 1 | 1 | 0 | UDT_Motor [0.0.1 Committed*] | 0.1 s |
+| L02_udt_type_released.zap21 | OK | 11 | 0 | 1 | 1 | 1 | 0 | UDT_Motor [0.0.1 Committed*] | 0.1 s |
+| L03_udt_type_v2 | OK | 19 | 0 | 1 | 2 | 1 | 0 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+| L03_udt_type_v2.zap21 | OK | 19 | 0 | 1 | 2 | 1 | 0 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+| L04_default_changed | OK | 17 | 0 | 1 | 2 | 1 | 0 | UDT_Motor [0.0.1 Committed*, 1.0.0 Committed] | 0.1 s |
+| L04_default_changed.zap21 | OK | 17 | 0 | 1 | 2 | 1 | 0 | UDT_Motor [0.0.1 Committed*, 1.0.0 Committed] | 0.1 s |
+| L05_fb_type_inwork | OK | 11 | 0 | 1 | 1 | 1 | 0 | FB_Typed [0.0.1 InWork] | 0.1 s |
+| L05_fb_type_inwork.zap21 | OK | 11 | 0 | 1 | 1 | 1 | 0 | FB_Typed [0.0.1 InWork] | 0.1 s |
+| L06_fb_type_released | OK | 11 | 0 | 1 | 1 | 1 | 0 | FB_Typed [0.0.1 Committed*] | 0.1 s |
+| L06_fb_type_released.zap21 | OK | 11 | 0 | 1 | 1 | 1 | 0 | FB_Typed [0.0.1 Committed*] | 0.1 s |
+| L07_fc_type | OK | 20 | 0 | 2 | 2 | 2 | 0 | FB_Typed [0.0.1 Committed*], FC_Typed [2.3.4 Committed*] | 0.3 s |
+| L07_fc_type.zap21 | OK | 20 | 0 | 2 | 2 | 2 | 0 | FB_Typed [0.0.1 Committed*], FC_Typed [2.3.4 Committed*] | 0.2 s |
+| L08_type_in_folder | OK | 28 | 0 | 2 | 2 | 2 | 0 | UDT_Motor [0.0.1 Committed*], FC_Typed [1.0.0 Committed*] | 0.1 s |
+| L08_type_in_folder.zap21 | OK | 28 | 0 | 2 | 2 | 2 | 0 | UDT_Motor [0.0.1 Committed*], FC_Typed [1.0.0 Committed*] | 0.1 s |
+| L09_type_depends | OK | 21 | 0 | 2 | 2 | 2 | 0 | FB_Motor [1.2.3 Committed*], UDT_Motor [0.0.1 Committed*] | 0.2 s |
+| L09_type_depends.zap21 | OK | 21 | 0 | 2 | 2 | 2 | 0 | FB_Motor [1.2.3 Committed*], UDT_Motor [0.0.1 Committed*] | 0.1 s |
+| L10_mc_fc | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L10_mc_fc.zap21 | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L11_mc_fb_udt | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| L11_mc_fb_udt.zap21 | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.2 s |
+| L12_mc_two | OK | 26 | 2 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L12_mc_two.zap21 | OK | 26 | 2 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L13_mc_instantiate | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| L13_mc_instantiate.zap21 | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.3 s |
+| L14_mc_delete | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L14_mc_delete.zap21 | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L15_mc_db | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L15_mc_db.zap21 | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L16_inst_two_devices | OK | 18 | 0 | 1 | 1 | 2 | 0 | UDT_Motor [0.0.1 Committed*] | 0.2 s |
+| L16_inst_two_devices.zap21 | OK | 18 | 0 | 1 | 1 | 2 | 0 | UDT_Motor [0.0.1 Committed*] | 0.1 s |
+| L17_inst_outdated | OK | 24 | 0 | 1 | 2 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.3 s |
+| L17_inst_outdated.zap21 | OK | 24 | 0 | 1 | 2 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.3 s |
+| L18_inst_edit_outdated | OK | 27 | 0 | 1 | 3 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed, 1.1.0 Committed*] | 0.1 s |
+| L18_inst_edit_outdated.zap21 | OK | 27 | 0 | 1 | 3 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed, 1.1.0 Committed*] | 0.2 s |
+| L19_version_discarded | OK | 25 | 0 | 1 | 3 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed, 1.1.0 Committed*] | 0.1 s |
+| L19_version_discarded.zap21 | OK | 25 | 0 | 1 | 3 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed, 1.1.0 Committed*] | 0.1 s |
+| L20_default_two_devices | OK | 25 | 0 | 1 | 3 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*, 1.1.0 Committed] | 0.1 s |
+| L20_default_two_devices.zap21 | OK | 25 | 0 | 1 | 3 | 2 | 1 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*, 1.1.0 Committed] | 0.1 s |
+| L21_fb_inst_outdated | OK | 22 | 0 | 1 | 2 | 2 | 1 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L21_fb_inst_outdated.zap21 | OK | 22 | 0 | 1 | 2 | 2 | 1 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+| L22_update_removes_unused | OK | 20 | 0 | 1 | 2 | 0 | 0 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+| L22_update_removes_unused.zap21 | OK | 20 | 0 | 1 | 2 | 0 | 0 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L23_inst_called | OK | 22 | 0 | 1 | 2 | 2 | 1 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+| L23_inst_called.zap21 | OK | 22 | 0 | 1 | 2 | 2 | 1 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L24_inst_update_fb | OK | 23 | 0 | 1 | 2 | 2 | 0 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L24_inst_update_fb.zap21 | OK | 23 | 0 | 1 | 2 | 2 | 0 | FB_Typed [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L25_version_deleted | OK | 20 | 0 | 1 | 1 | 2 | 0 | FB_Typed [1.0.0 Committed*] | 0.2 s |
+| L25_version_deleted.zap21 | OK | 20 | 0 | 1 | 1 | 2 | 0 | FB_Typed [1.0.0 Committed*] | 0.1 s |
+| L26_type_obsolete | OK | 20 | 0 | 1 | 1 | 2 | 0 | FB_Typed [1.0.0 Committed*] | 0.1 s |
+| L26_type_obsolete.zap21 | OK | 20 | 0 | 1 | 1 | 2 | 0 | FB_Typed [1.0.0 Committed*] | 0.1 s |
+| L27_inst_update_udt | OK | 25 | 0 | 1 | 2 | 2 | 0 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+| L27_inst_update_udt.zap21 | OK | 25 | 0 | 1 | 2 | 2 | 0 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L28_mc_in_folder | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L28_mc_in_folder.zap21 | OK | 15 | 1 | 0 | 0 | 0 | 0 | – | 0.1 s |
+| L29_version_content | OK | 20 | 0 | 1 | 2 | 1 | 0 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.2 s |
+| L29_version_content.zap21 | OK | 20 | 0 | 1 | 2 | 1 | 0 | UDT_Motor [0.0.1 Committed, 1.0.0 Committed*] | 0.1 s |
+
+

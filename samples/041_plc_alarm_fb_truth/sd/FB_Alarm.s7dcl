@@ -1,0 +1,20 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Alarm"
+    VAR_INPUT
+        Sig : Bool;
+    END_VAR
+    VAR
+        Alarm_1 : Program_Alarm;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        
+         #Alarm_1(SIG := #Sig);
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

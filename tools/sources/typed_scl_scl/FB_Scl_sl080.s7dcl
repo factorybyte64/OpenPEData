@@ -1,0 +1,17 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl080"
+    VAR_INPUT
+        v_in : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_err : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_err := VARIANT_TO_DB_ANY(IN := #v_in);
+    END_NETWORK
+END_FUNCTION_BLOCK

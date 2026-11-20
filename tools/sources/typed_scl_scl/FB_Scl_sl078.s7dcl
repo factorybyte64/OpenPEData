@@ -1,0 +1,19 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl078"
+    VAR_INPUT
+        v_min : Real;
+        v_value : Real;
+        v_max : Real;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Real;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := NORM_X(MIN := #v_min, VALUE := #v_value, MAX := #v_max);
+    END_NETWORK
+END_FUNCTION_BLOCK

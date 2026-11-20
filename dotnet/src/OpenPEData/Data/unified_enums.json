@@ -1,0 +1,837 @@
+{
+    "source":  "Siemens.Engineering.WinCCUnified.dll (TIA Portal V21 Openness), enum metadata by reflection; tools\\unified_enums.ps1",
+    "properties":  {
+                       "AcknowledgmentFlashingRate":  "HmiFlashingRate",
+                       "ActiveAlarmsViewSetup":  "HmiVisibleAlarms",
+                       "Adaption":  "HmiScreenWindowAdaption",
+                       "AggregationMode":  "HmiAggregationMode",
+                       "AlarmBlock":  "HmiAlarmBlock",
+                       "AlarmDefinitionViewSetup":  "HmiVisibleAlarms",
+                       "AlarmSourceType":  "HmiAlarmSourceType",
+                       "AlarmStatisticBlock":  "HmiAlarmStatisticBlock",
+                       "BackFillPattern":  "HmiFillPattern",
+                       "BackGraphicStretchMode":  "HmiGraphicStretchMode",
+                       "BackgroundFillMode":  "HmiBackgroundFillMode",
+                       "BarMode":  "HmiBarMode",
+                       "BitDynamizationType":  "BitDynamizationType",
+                       "CapType":  "HmiCapType",
+                       "ColoringMode":  "HmiGridColoringMode",
+                       "ColumnHeaderType":  "HmiDataGridHeaderType",
+                       "ConditionType":  "ConditionType",
+                       "ContentMode":  "HmiContentMode",
+                       "CriteriaAnalysisBlock":  "HmiProcessDiagnosisCriteriaAnalysisBlock",
+                       "CurrentQuality":  "HmiQuality",
+                       "DashType":  "HmiDashType",
+                       "DefaultSortDirection":  "HmiSortDirection",
+                       "DetailedParameterControlBlock":  "HmiDetailedParameterControlBlock",
+                       "DialMode":  "HmiScaleMode",
+                       "DynamizationType":  "DynamizationType",
+                       "EditMode":  "HmiEditMode",
+                       "EndType":  "HmiLineEndType",
+                       "FillDirection":  "HmiFillDirection",
+                       "FlashingCondition":  "FlashingCondition",
+                       "GraphicStretchMode":  "HmiGraphicStretchMode",
+                       "GraphOverviewControlBlock":  "HmiGraphOverviewBlock",
+                       "GridLines":  "HmiGridLine",
+                       "GridLineVisibility":  "HmiSimpleGridLine",
+                       "GridSelectionMode":  "HmiGridSelectionMode",
+                       "HorizontalAlignment":  "HmiHorizontalAlignment",
+                       "HorizontalScrollBarVisibility":  "HmiScrollBarVisibility",
+                       "HorizontalTextAlignment":  "HmiHorizontalAlignment",
+                       "IOFieldType":  "HmiIOFieldType",
+                       "JoinType":  "HmiLineJoinType",
+                       "MarkerType":  "HmiMarkerType",
+                       "Name":  "HmiFontName",
+                       "Orientation":  "HmiOrientation",
+                       "OverviewParameterControlBlock":  "HmiOverviewParameterControlBlock",
+                       "PeakIndicators":  "HmiPeakIndicator",
+                       "ProcessValueIndicatorMode":  "HmiProcessIndicatorMode",
+                       "ResetFlashingRate":  "HmiFlashingRate",
+                       "RotationCenterPlacement":  "HmiRotationCenterPlacement",
+                       "RowHeaderType":  "HmiDataGridHeaderType",
+                       "ScaleMode":  "HmiScaleMode",
+                       "ScalingType":  "HmiScalingType",
+                       "SelectionMode":  "HmiSelectionMode",
+                       "SelectorPosition":  "HmiHorizontalAlignment",
+                       "SortDirection":  "HmiSortDirection",
+                       "StartType":  "HmiLineEndType",
+                       "SupportedNavigation":  "HmiSupportedNavigation",
+                       "SystemDiagnosisControlBlock":  "HmiSystemDiagnosisControlBlock",
+                       "SystemDiagnosisControlScriptBlock":  "HmiSystemDiagnosisControlScriptBlock",
+                       "SystemDiagnosisMatrixBlock":  "HmiSystemDiagnosisMatrixBlock",
+                       "SystemDiagnosisViewType":  "HmiSystemDiagnosisViewType",
+                       "TextPosition":  "HmiTextPosition",
+                       "TextTrimming":  "HmiTextTrimming",
+                       "TextWrapping":  "HmiTextWrapping",
+                       "ThresholdIndicators":  "HmiThresholdIndicator",
+                       "ThresholdMode":  "HmiThresholdMode",
+                       "TimeRangeBase":  "HmiTimeRangeBase",
+                       "TimeStepSmoothingBase":  "HmiTimeRangeBase",
+                       "TrendCompanionMode":  "HmiTrendCompanionMode",
+                       "TrendInfoBlock":  "HmiTrendInfoBlock",
+                       "TrendMode":  "HmiTrendMode",
+                       "Type":  "TriggerType",
+                       "ValuePosition":  "HmiSimplePosition",
+                       "VerticalAlignment":  "HmiVerticalAlignment",
+                       "VerticalScrollBarVisibility":  "HmiScrollBarVisibility",
+                       "VerticalTextAlignment":  "HmiVerticalAlignment",
+                       "VideoOutput":  "HmiVideoOutput",
+                       "Weight":  "HmiFontWeight",
+                       "WindowFlags":  "HmiWindowFlag"
+                   },
+    "enums":  {
+                  "HmiFlashingRate":  {
+                                          "flags":  false,
+                                          "values":  {
+                                                         "Slow":  0,
+                                                         "Medium":  1,
+                                                         "Fast":  2,
+                                                         "None":  3
+                                                     }
+                                      },
+                  "HmiVisibleAlarms":  {
+                                           "flags":  true,
+                                           "values":  {
+                                                          "None":  0,
+                                                          "UnSuppressed":  1,
+                                                          "Disabled":  2,
+                                                          "SuppressedByDesign":  4,
+                                                          "Shelved":  8
+                                                      }
+                                       },
+                  "HmiScreenWindowAdaption":  {
+                                                  "flags":  false,
+                                                  "values":  {
+                                                                 "None":  0,
+                                                                 "WindowToScreen":  1,
+                                                                 "ScreenToWindow":  2
+                                                             }
+                                              },
+                  "HmiAggregationMode":  {
+                                             "flags":  false,
+                                             "values":  {
+                                                            "None":  0,
+                                                            "TimeAverageStepped":  1,
+                                                            "MinMax":  2
+                                                        }
+                                         },
+                  "HmiAlarmBlock":  {
+                                        "flags":  false,
+                                        "values":  {
+                                                       "Undefined":  0,
+                                                       "ID":  1,
+                                                       "Name":  2,
+                                                       "Class":  3,
+                                                       "Priority":  4,
+                                                       "Group":  5,
+                                                       "Origin":  6,
+                                                       "Area":  7,
+                                                       "Comments":  8,
+                                                       "Information":  9,
+                                                       "LoopInAlarm":  10,
+                                                       "EventText":  11,
+                                                       "AlarmText1":  12,
+                                                       "AlarmText2":  13,
+                                                       "AlarmText3":  14,
+                                                       "AlarmText4":  15,
+                                                       "AlarmText5":  16,
+                                                       "AlarmText6":  17,
+                                                       "AlarmText7":  18,
+                                                       "AlarmText8":  19,
+                                                       "AlarmText9":  20,
+                                                       "AlarmState":  21,
+                                                       "ModificationTime":  22,
+                                                       "RaiseTime":  23,
+                                                       "AcknowledgeTime":  24,
+                                                       "ClearTime":  25,
+                                                       "ResetTime":  26,
+                                                       "SuppresionsState":  27,
+                                                       "EscalationLevel":  28,
+                                                       "Context":  29,
+                                                       "Duration":  30,
+                                                       "AcknowledgmentState":  31,
+                                                       "Value":  32,
+                                                       "ValueQuality":  33,
+                                                       "ValueLimit":  34,
+                                                       "HostName":  35,
+                                                       "UserName":  36,
+                                                       "ProcessValue1":  37,
+                                                       "ProcessValue2":  38,
+                                                       "ProcessValue3":  39,
+                                                       "ProcessValue4":  40,
+                                                       "ProcessValue5":  41,
+                                                       "ProcessValue6":  42,
+                                                       "ProcessValue7":  43,
+                                                       "ProcessValue8":  44,
+                                                       "ProcessValue9":  45,
+                                                       "ProcessValue10":  46,
+                                                       "ClassSymbol":  47,
+                                                       "StateText":  48,
+                                                       "GroupID":  49
+                                                   }
+                                    },
+                  "HmiAlarmSourceType":  {
+                                             "flags":  false,
+                                             "values":  {
+                                                            "NotConfigured":  0,
+                                                            "ActiveAlarms":  1,
+                                                            "LoggedAlarms":  2,
+                                                            "LoggedAlarmsUpdated":  3,
+                                                            "AlarmDefinition":  4,
+                                                            "AlarmStatistics":  5
+                                                        }
+                                         },
+                  "HmiAlarmStatisticBlock":  {
+                                                 "flags":  false,
+                                                 "values":  {
+                                                                "Undefined":  0,
+                                                                "AverageRaisedRaised":  1,
+                                                                "AverageRaisedCleared":  2,
+                                                                "AverageRaisedAcknowledged":  3,
+                                                                "AverageRaisedReset":  4,
+                                                                "Frequency":  5,
+                                                                "SumRaisedRaised":  6,
+                                                                "SumRaisedCleared":  7,
+                                                                "SumRaisedAcknowledged":  8,
+                                                                "SumRaisedReset":  9,
+                                                                "ID":  10,
+                                                                "Name":  11,
+                                                                "Class":  12,
+                                                                "Priority":  13,
+                                                                "Group":  14,
+                                                                "Origin":  15,
+                                                                "Area":  16,
+                                                                "Comments":  17,
+                                                                "Information":  18,
+                                                                "LoopInAlarm":  19,
+                                                                "EventText":  20,
+                                                                "AlarmText1":  21,
+                                                                "AlarmText2":  22,
+                                                                "AlarmText3":  23,
+                                                                "AlarmText4":  24,
+                                                                "AlarmText5":  25,
+                                                                "AlarmText6":  26,
+                                                                "AlarmText7":  27,
+                                                                "AlarmText8":  28,
+                                                                "AlarmText9":  29,
+                                                                "AlarmState":  30,
+                                                                "ModificationTime":  31,
+                                                                "RaiseTime":  32,
+                                                                "AcknowledgeTime":  33,
+                                                                "ClearTime":  34,
+                                                                "ResetTime":  35,
+                                                                "SuppressionState":  36,
+                                                                "EscalationLevel":  37,
+                                                                "Context":  38,
+                                                                "Duration":  39,
+                                                                "AcknowledgmentState":  40,
+                                                                "Value":  41,
+                                                                "ValueQuality":  42,
+                                                                "ValueLimit":  43,
+                                                                "TagName":  44,
+                                                                "Computer":  45,
+                                                                "User":  46,
+                                                                "ProcessValue1":  47,
+                                                                "ProcessValue2":  48,
+                                                                "ProcessValue3":  49,
+                                                                "ProcessValue4":  50,
+                                                                "ProcessValue5":  51,
+                                                                "ProcessValue6":  52,
+                                                                "ProcessValue7":  53,
+                                                                "ProcessValue8":  54,
+                                                                "ProcessValue9":  55,
+                                                                "ProcessValue10":  56,
+                                                                "ClassSymbol":  57,
+                                                                "StateText":  58
+                                                            }
+                                             },
+                  "HmiFillPattern":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "Solid":  0,
+                                                        "Transparent":  1,
+                                                        "BackwardDiagonal":  2,
+                                                        "Cross":  3,
+                                                        "DiagonalCross":  4,
+                                                        "ForwardDiagonal":  5,
+                                                        "Horizontal":  6,
+                                                        "Vertical":  7,
+                                                        "GradientHorizontal":  8,
+                                                        "GradientVertical":  9,
+                                                        "GradientForwardDiagonal":  10,
+                                                        "GradientBackwardDiagonal":  11,
+                                                        "GradientHorizontalTricolor":  12,
+                                                        "GradientVerticalTricolor":  13,
+                                                        "GradientForwardDiagonalTricolor":  14,
+                                                        "GradientBackwardDiagonalTricolor":  15
+                                                    }
+                                     },
+                  "HmiGraphicStretchMode":  {
+                                                "flags":  false,
+                                                "values":  {
+                                                               "None":  0,
+                                                               "Fill":  1,
+                                                               "Uniform":  2,
+                                                               "UniformToFill":  3,
+                                                               "Tiled":  4
+                                                           }
+                                            },
+                  "HmiBackgroundFillMode":  {
+                                                "flags":  false,
+                                                "values":  {
+                                                               "Window":  0,
+                                                               "Screen":  1
+                                                           }
+                                            },
+                  "HmiBarMode":  {
+                                     "flags":  false,
+                                     "values":  {
+                                                    "Segmented":  0,
+                                                    "Unicolor":  1,
+                                                    "SegmentedStatic":  2,
+                                                    "UnicolorStatic":  3
+                                                }
+                                 },
+                  "BitDynamizationType":  {
+                                              "flags":  false,
+                                              "values":  {
+                                                             "SingleBit":  0,
+                                                             "MultiBit":  1
+                                                         }
+                                          },
+                  "HmiCapType":  {
+                                     "flags":  false,
+                                     "values":  {
+                                                    "Square":  0,
+                                                    "Round":  1,
+                                                    "Flat":  2
+                                                }
+                                 },
+                  "HmiGridColoringMode":  {
+                                              "flags":  false,
+                                              "values":  {
+                                                             "None":  0,
+                                                             "Columns":  1,
+                                                             "Rows":  2
+                                                         }
+                                          },
+                  "HmiDataGridHeaderType":  {
+                                                "flags":  false,
+                                                "values":  {
+                                                               "None":  0,
+                                                               "Index":  1,
+                                                               "Content":  2
+                                                           }
+                                            },
+                  "ConditionType":  {
+                                        "flags":  false,
+                                        "values":  {
+                                                       "None":  0,
+                                                       "Range":  1,
+                                                       "Bitmask":  4,
+                                                       "Singlebit":  5,
+                                                       "Expression":  6
+                                                   }
+                                    },
+                  "HmiContentMode":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "GraphicOrText":  0,
+                                                        "GraphicAndText":  1,
+                                                        "Text":  2,
+                                                        "Graphic":  3
+                                                    }
+                                     },
+                  "HmiProcessDiagnosisCriteriaAnalysisBlock":  {
+                                                                   "flags":  false,
+                                                                   "values":  {
+                                                                                  "SymbolName":  0,
+                                                                                  "Address":  1,
+                                                                                  "Value":  2,
+                                                                                  "Comment":  3
+                                                                              }
+                                                               },
+                  "HmiQuality":  {
+                                     "flags":  true,
+                                     "values":  {
+                                                    "Bad":  1,
+                                                    "Uncertain":  2,
+                                                    "Good":  4,
+                                                    "UpperLimitViolation":  8,
+                                                    "LowerLimitViolation":  16,
+                                                    "None":  0
+                                                }
+                                 },
+                  "HmiDashType":  {
+                                      "flags":  false,
+                                      "values":  {
+                                                     "Solid":  0,
+                                                     "Dash":  1,
+                                                     "Dot":  2,
+                                                     "DashDot":  3,
+                                                     "DashDotDot":  4
+                                                 }
+                                  },
+                  "HmiSortDirection":  {
+                                           "flags":  false,
+                                           "values":  {
+                                                          "None":  0,
+                                                          "Ascending":  1,
+                                                          "Descending":  2
+                                                      }
+                                       },
+                  "HmiDetailedParameterControlBlock":  {
+                                                           "flags":  false,
+                                                           "values":  {
+                                                                          "None":  0,
+                                                                          "ParameterSetElementName":  1,
+                                                                          "ParameterSetValue":  2,
+                                                                          "ParameterSetElementUnit":  3
+                                                                      }
+                                                       },
+                  "HmiScaleMode":  {
+                                       "flags":  true,
+                                       "values":  {
+                                                      "None":  0,
+                                                      "Labels":  1,
+                                                      "Ticks":  2
+                                                  }
+                                   },
+                  "DynamizationType":  {
+                                           "flags":  false,
+                                           "values":  {
+                                                          "None":  0,
+                                                          "Tag":  1,
+                                                          "Script":  2,
+                                                          "ResourceList":  3,
+                                                          "Flashing":  6,
+                                                          "Expression":  7,
+                                                          "TagParameter":  8
+                                                      }
+                                       },
+                  "HmiEditMode":  {
+                                      "flags":  true,
+                                      "values":  {
+                                                     "None":  0,
+                                                     "Update":  1,
+                                                     "Create":  2,
+                                                     "Delete":  4
+                                                 }
+                                  },
+                  "HmiLineEndType":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "Line":  0,
+                                                        "EmptyArrow":  1,
+                                                        "Arrow":  2,
+                                                        "ReversedArrow":  3,
+                                                        "EmptyCircle":  4,
+                                                        "Circle":  5
+                                                    }
+                                     },
+                  "HmiFillDirection":  {
+                                           "flags":  false,
+                                           "values":  {
+                                                          "BottomToTop":  0,
+                                                          "TopToBottom":  1,
+                                                          "LeftToRight":  2,
+                                                          "RightToLeft":  3
+                                                      }
+                                       },
+                  "FlashingCondition":  {
+                                            "flags":  false,
+                                            "values":  {
+                                                           "Never":  0,
+                                                           "Always":  1,
+                                                           "RangeViolation":  2
+                                                       }
+                                        },
+                  "HmiGraphOverviewBlock":  {
+                                                "flags":  false,
+                                                "values":  {
+                                                               "Undefined":  0,
+                                                               "Step":  1,
+                                                               "StepName":  2
+                                                           }
+                                            },
+                  "HmiGridLine":  {
+                                      "flags":  true,
+                                      "values":  {
+                                                     "None":  0,
+                                                     "VerticalMajor":  1,
+                                                     "HorizontalMajor":  2,
+                                                     "VerticalMinor":  4,
+                                                     "HorizontalMinor":  8
+                                                 }
+                                  },
+                  "HmiSimpleGridLine":  {
+                                            "flags":  true,
+                                            "values":  {
+                                                           "None":  0,
+                                                           "Vertical":  1,
+                                                           "Horizontal":  2
+                                                       }
+                                        },
+                  "HmiGridSelectionMode":  {
+                                               "flags":  false,
+                                               "values":  {
+                                                              "None":  0,
+                                                              "Single":  1,
+                                                              "Multi":  2
+                                                          }
+                                           },
+                  "HmiHorizontalAlignment":  {
+                                                 "flags":  false,
+                                                 "values":  {
+                                                                "Left":  0,
+                                                                "Center":  1,
+                                                                "Right":  2,
+                                                                "Stretch":  3
+                                                            }
+                                             },
+                  "HmiScrollBarVisibility":  {
+                                                 "flags":  false,
+                                                 "values":  {
+                                                                "Automatic":  0,
+                                                                "Visible":  1,
+                                                                "Collapsed":  2
+                                                            }
+                                             },
+                  "HmiIOFieldType":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "Output":  0,
+                                                        "InputOutput":  1
+                                                    }
+                                     },
+                  "HmiLineJoinType":  {
+                                          "flags":  false,
+                                          "values":  {
+                                                         "Round":  0,
+                                                         "Bevel":  1,
+                                                         "Miter":  2
+                                                     }
+                                      },
+                  "HmiMarkerType":  {
+                                        "flags":  false,
+                                        "values":  {
+                                                       "None":  0,
+                                                       "Point":  1,
+                                                       "Square":  2,
+                                                       "Circle":  3,
+                                                       "Graphic":  4
+                                                   }
+                                    },
+                  "HmiFontName":  {
+                                      "flags":  false,
+                                      "values":  {
+                                                     "Arial":  0,
+                                                     "TimesNewRoman":  1,
+                                                     "SimSun":  2,
+                                                     "SiemensSans":  3
+                                                 }
+                                  },
+                  "HmiOrientation":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "Horizontal":  0,
+                                                        "Vertical":  1
+                                                    }
+                                     },
+                  "HmiOverviewParameterControlBlock":  {
+                                                           "flags":  false,
+                                                           "values":  {
+                                                                          "None":  0,
+                                                                          "ParameterSetID":  1,
+                                                                          "LastUser":  2,
+                                                                          "LastAccess":  3,
+                                                                          "ParameterSetElementOdd":  4,
+                                                                          "ParameterSetElementEven":  5
+                                                                      }
+                                                       },
+                  "HmiPeakIndicator":  {
+                                           "flags":  true,
+                                           "values":  {
+                                                          "None":  0,
+                                                          "Low":  1,
+                                                          "High":  2
+                                                      }
+                                       },
+                  "HmiProcessIndicatorMode":  {
+                                                  "flags":  false,
+                                                  "values":  {
+                                                                 "Bar":  0,
+                                                                 "Indicator":  1,
+                                                                 "DetailedIndicator":  2,
+                                                                 "BarWithDetailedIndicator":  3
+                                                             }
+                                              },
+                  "HmiRotationCenterPlacement":  {
+                                                     "flags":  false,
+                                                     "values":  {
+                                                                    "AbsoluteFromCenter":  0,
+                                                                    "NormedFromCenter":  1,
+                                                                    "AbsoluteToContainer":  2
+                                                                }
+                                                 },
+                  "HmiScalingType":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "Linear":  0,
+                                                        "Logarithmic":  1,
+                                                        "NegativeLogarithmic":  2,
+                                                        "Tangent":  3,
+                                                        "Quadratic":  4,
+                                                        "Cubic":  5
+                                                    }
+                                     },
+                  "HmiSelectionMode":  {
+                                           "flags":  false,
+                                           "values":  {
+                                                          "NonExclusive":  0,
+                                                          "Exclusive":  1
+                                                      }
+                                       },
+                  "HmiSupportedNavigation":  {
+                                                 "flags":  true,
+                                                 "values":  {
+                                                                "None":  0,
+                                                                "Backward":  1,
+                                                                "Foreward":  2
+                                                            }
+                                             },
+                  "HmiSystemDiagnosisControlBlock":  {
+                                                         "flags":  false,
+                                                         "values":  {
+                                                                        "Undefined":  0,
+                                                                        "Number":  1,
+                                                                        "DateTime":  2,
+                                                                        "EventMessage":  3,
+                                                                        "EventType":  4,
+                                                                        "EventState":  5
+                                                                    }
+                                                     },
+                  "HmiSystemDiagnosisControlScriptBlock":  {
+                                                               "flags":  false,
+                                                               "values":  {
+                                                                              "Undefined":  0,
+                                                                              "MessageNumber":  1,
+                                                                              "Application":  2,
+                                                                              "Severity":  3,
+                                                                              "DateTime":  4,
+                                                                              "Message":  5
+                                                                          }
+                                                           },
+                  "HmiSystemDiagnosisMatrixBlock":  {
+                                                        "flags":  false,
+                                                        "values":  {
+                                                                       "Undefined":  0,
+                                                                       "Status":  1,
+                                                                       "Name":  2,
+                                                                       "OperatingState":  3,
+                                                                       "Rack":  4,
+                                                                       "Slot":  5,
+                                                                       "OrderNumber":  6,
+                                                                       "Address":  7,
+                                                                       "PlantDesignation":  8,
+                                                                       "LocationIdentifier":  9,
+                                                                       "Subsystem":  10,
+                                                                       "Station":  11,
+                                                                       "Subslot":  12,
+                                                                       "SubAddress":  13,
+                                                                       "SoftwareVersion":  14,
+                                                                       "Installation":  15,
+                                                                       "AdditionaInformation":  16,
+                                                                       "ErrorDescription":  17,
+                                                                       "ManufacturerID":  18,
+                                                                       "HardwareVersion":  19,
+                                                                       "ProfileID":  20,
+                                                                       "SpecificProfileData":  21,
+                                                                       "IandMDataVersion":  22,
+                                                                       "SerialNumber":  23,
+                                                                       "RevisionCounter":  24
+                                                                   }
+                                                    },
+                  "HmiSystemDiagnosisViewType":  {
+                                                     "flags":  false,
+                                                     "values":  {
+                                                                    "Diagnosis":  0,
+                                                                    "Matrix":  1,
+                                                                    "DistributedIO":  2,
+                                                                    "ScriptDiagnosis":  3
+                                                                }
+                                                 },
+                  "HmiTextPosition":  {
+                                          "flags":  false,
+                                          "values":  {
+                                                         "Left":  0,
+                                                         "Right":  1,
+                                                         "Top":  2,
+                                                         "Bottom":  3,
+                                                         "Behind":  4,
+                                                         "InFront":  5
+                                                     }
+                                      },
+                  "HmiTextTrimming":  {
+                                          "flags":  false,
+                                          "values":  {
+                                                         "None":  0,
+                                                         "CharacterEllipsis":  1
+                                                     }
+                                      },
+                  "HmiTextWrapping":  {
+                                          "flags":  false,
+                                          "values":  {
+                                                         "NoWrap":  0,
+                                                         "WordWrap":  1
+                                                     }
+                                      },
+                  "HmiThresholdIndicator":  {
+                                                "flags":  true,
+                                                "values":  {
+                                                               "None":  0,
+                                                               "Lines":  1,
+                                                               "Markers":  2
+                                                           }
+                                            },
+                  "HmiThresholdMode":  {
+                                           "flags":  false,
+                                           "values":  {
+                                                          "Undefined":  0,
+                                                          "Upper":  1,
+                                                          "Lower":  2,
+                                                          "Normal":  3,
+                                                          "Minimum":  4,
+                                                          "Maximum":  5
+                                                      }
+                                       },
+                  "HmiTimeRangeBase":  {
+                                           "flags":  false,
+                                           "values":  {
+                                                          "Undefined":  0,
+                                                          "Millisecond":  1,
+                                                          "Second":  2,
+                                                          "Minute":  3,
+                                                          "Hour":  4,
+                                                          "Day":  5,
+                                                          "Month":  6,
+                                                          "Year":  7
+                                                      }
+                                       },
+                  "HmiTrendCompanionMode":  {
+                                                "flags":  false,
+                                                "values":  {
+                                                               "Ruler":  0,
+                                                               "StatisticArea":  1,
+                                                               "StatisticResult":  2
+                                                           }
+                                            },
+                  "HmiTrendInfoBlock":  {
+                                            "flags":  false,
+                                            "values":  {
+                                                           "None":  0,
+                                                           "Name":  1,
+                                                           "Index":  2,
+                                                           "Label":  3,
+                                                           "Show":  4,
+                                                           "TagNameY":  5,
+                                                           "TagNameX":  6,
+                                                           "YValue":  7,
+                                                           "XValueOrTimestamp":  8,
+                                                           "YValueLowerLimit":  9,
+                                                           "TimestampLowerLimit":  10,
+                                                           "YValueUpperLimit":  11,
+                                                           "TimestampUpperLimit":  12,
+                                                           "Minimum":  13,
+                                                           "MinimumTimestamp":  14,
+                                                           "Maximum":  15,
+                                                           "MaximumTimestamp":  16,
+                                                           "Average":  17,
+                                                           "StandardDeviation":  18,
+                                                           "Integral":  19,
+                                                           "WeightedAverageValue":  20,
+                                                           "Duration":  21,
+                                                           "NumberOfValues":  22,
+                                                           "AreaName":  23,
+                                                           "AreaNameLL":  24,
+                                                           "AreaNameHL":  25,
+                                                           "Sum":  26
+                                                       }
+                                        },
+                  "HmiTrendMode":  {
+                                       "flags":  false,
+                                       "values":  {
+                                                      "Points":  0,
+                                                      "Interpolated":  1,
+                                                      "Stepped":  2,
+                                                      "Bar":  3,
+                                                      "Value":  4
+                                                  }
+                                   },
+                  "TriggerType":  {
+                                      "flags":  false,
+                                      "values":  {
+                                                     "Disabled":  0,
+                                                     "T1s":  1,
+                                                     "T2s":  2,
+                                                     "CustomCycle":  3,
+                                                     "Tags":  4,
+                                                     "T5s":  5,
+                                                     "AutomaticTags":  6,
+                                                     "T10s":  10,
+                                                     "T100ms":  100,
+                                                     "T250ms":  250,
+                                                     "T500ms":  500
+                                                 }
+                                  },
+                  "HmiSimplePosition":  {
+                                            "flags":  false,
+                                            "values":  {
+                                                           "LeftOrTop":  0,
+                                                           "RightOrBottom":  1
+                                                       }
+                                        },
+                  "HmiVerticalAlignment":  {
+                                               "flags":  false,
+                                               "values":  {
+                                                              "Top":  0,
+                                                              "Center":  1,
+                                                              "Bottom":  2,
+                                                              "Stretch":  3
+                                                          }
+                                           },
+                  "HmiVideoOutput":  {
+                                         "flags":  false,
+                                         "values":  {
+                                                        "Undefined":  0,
+                                                        "Stretch":  1,
+                                                        "PreserveAspectFit":  2,
+                                                        "PreserveAspectCrop":  3
+                                                    }
+                                     },
+                  "HmiFontWeight":  {
+                                        "flags":  false,
+                                        "values":  {
+                                                       "Light":  0,
+                                                       "Normal":  1,
+                                                       "SemiBold":  2,
+                                                       "Bold":  3,
+                                                       "None":  4
+                                                   }
+                                    },
+                  "HmiWindowFlag":  {
+                                        "flags":  true,
+                                        "values":  {
+                                                       "None":  0,
+                                                       "ShowCaption":  1,
+                                                       "ShowBorder":  2,
+                                                       "AlwaysOnTop":  4,
+                                                       "CanSize":  8,
+                                                       "CanMove":  16,
+                                                       "CanMaximize":  32,
+                                                       "CanClose":  64,
+                                                       "AlwaysInParent":  128
+                                                   }
+                                    }
+              }
+}

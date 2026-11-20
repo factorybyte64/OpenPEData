@@ -1,0 +1,44 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex070"
+    VAR_INPUT
+        v_enable : Bool;
+        v_id : HW_SUBMODULE;
+        v_func_x : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_busy : Bool;
+        v_done : Bool;
+        v_error : Bool;
+        v_status : DWord;
+    END_VAR
+    VAR_IN_OUT
+        v_slot_no_1 : Variant;
+        v_func_1 : Variant;
+        v_slot_no_2 : Variant;
+        v_func_2 : Variant;
+        v_slot_no_3 : Variant;
+        v_func_3 : Variant;
+        v_slot_no_4 : Variant;
+        v_func_4 : Variant;
+        v_slot_no_5 : Variant;
+        v_func_5 : Variant;
+        v_slot_no_6 : Variant;
+        v_func_6 : Variant;
+        v_slot_no_7 : Variant;
+        v_func_7 : Variant;
+        v_slot_no_8 : Variant;
+        v_func_8 : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Pe_Ds3_Write_Et200S( ENABLE := #v_enable, ID := #v_id, SLOT_NO_X := 1, FUNC_X := #v_func_x, BUSY => #v_busy, DONE => #v_done, ERROR => #v_error, STATUS => #v_status, Slot_No_1 := #v_slot_no_1, Func_1 := #v_func_1, Slot_No_2 := #v_slot_no_2, Func_2 := #v_func_2, Slot_No_3 := #v_slot_no_3, Func_3 := #v_func_3, Slot_No_4 := #v_slot_no_4, Func_4 := #v_func_4, Slot_No_5 := #v_slot_no_5, Func_5 := #v_func_5, Slot_No_6 := #v_slot_no_6, Func_6 := #v_func_6, Slot_No_7 := #v_slot_no_7, Func_7 := #v_func_7, Slot_No_8 := #v_slot_no_8, Func_8 := #v_func_8 )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,3396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-10T19:11:29.4474563Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <InstanceOfName>FB_SysMulti</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Static">
+            <Member Name="mTON_TIME" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="Time" />
+                  <Member Name="ET" Datatype="Time" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTOF_TIME" Datatype="TOF_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="Time" />
+                  <Member Name="ET" Datatype="Time" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTP_TIME" Datatype="TP_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="Time" />
+                  <Member Name="ET" Datatype="Time" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTONR_TIME" Datatype="TONR_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="Time" />
+                  <Member Name="ET" Datatype="Time" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTON_LTIME" Datatype="TON_LTIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="LTime" />
+                  <Member Name="ET" Datatype="LTime" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTOF_LTIME" Datatype="TOF_LTIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="LTime" />
+                  <Member Name="ET" Datatype="LTime" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTP_LTIME" Datatype="TP_LTIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="LTime" />
+                  <Member Name="ET" Datatype="LTime" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTONR_LTIME" Datatype="TONR_LTIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="LTime" />
+                  <Member Name="ET" Datatype="LTime" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_INT" Datatype="CTU_INT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="Int" />
+                  <Member Name="CV" Datatype="Int" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTD_INT" Datatype="CTD_INT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="Int" />
+                  <Member Name="CV" Datatype="Int" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTUD_INT" Datatype="CTUD_INT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="Int" />
+                  <Member Name="CV" Datatype="Int" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_SINT" Datatype="CTU_SINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="SInt" />
+                  <Member Name="CV" Datatype="SInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_DINT" Datatype="CTU_DINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="DInt" />
+                  <Member Name="CV" Datatype="DInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_LINT" Datatype="CTU_LINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="LInt" />
+                  <Member Name="CV" Datatype="LInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_UINT" Datatype="CTU_UINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="UInt" />
+                  <Member Name="CV" Datatype="UInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_USINT" Datatype="CTU_USINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="USInt" />
+                  <Member Name="CV" Datatype="USInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_UDINT" Datatype="CTU_UDINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="UDInt" />
+                  <Member Name="CV" Datatype="UDInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTU_ULINT" Datatype="CTU_ULINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="ULInt" />
+                  <Member Name="CV" Datatype="ULInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTD_DINT" Datatype="CTD_DINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="DInt" />
+                  <Member Name="CV" Datatype="DInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTUD_DINT" Datatype="CTUD_DINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="DInt" />
+                  <Member Name="CV" Datatype="DInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTUD_LINT" Datatype="CTUD_LINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="LInt" />
+                  <Member Name="CV" Datatype="LInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCTUD_UDINT" Datatype="CTUD_UDINT" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="CU" Datatype="Bool" />
+                  <Member Name="CD" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="LD" Datatype="Bool" />
+                  <Member Name="QU" Datatype="Bool" />
+                  <Member Name="QD" Datatype="Bool" />
+                  <Member Name="PV" Datatype="UDInt" />
+                  <Member Name="CV" Datatype="UDInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mR_TRIG" Datatype="R_TRIG" Version="1.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="CLK" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="Stat_Bit" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mF_TRIG" Datatype="F_TRIG" Version="1.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="CLK" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="Stat_Bit" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTSEND_C" Datatype="TSEND_C" Version="3.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="CONT" Datatype="Bool" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="CONNECT" Datatype="Variant" />
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                  <Member Name="COM_RST" Datatype="Bool" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="s_state" Datatype="Int" />
+                  <Member Name="s_locked" Datatype="Bool" />
+                  <Member Name="s_udp" Datatype="Bool" />
+                  <Member Name="s_configured" Datatype="Bool" />
+                  <Member Name="s_tcon_80A3" Datatype="Bool" />
+                  <Member Name="s_REQ" Datatype="Bool" />
+                  <Member Name="s_ConID" Datatype="CONN_OUC" />
+                  <Member Name="s_TCON" Datatype="TCON" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="CONNECT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDIAG" Datatype="T_DIAG" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="RESULT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDIAG_Status" Datatype="TDiag_Status" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InterfaceId" Datatype="HW_ANY" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="ConnectionType" Datatype="Byte" />
+                        <Member Name="ActiveEstablished" Datatype="Bool" />
+                        <Member Name="State" Datatype="Byte" />
+                        <Member Name="Kind" Datatype="Byte" />
+                        <Member Name="SentBytes" Datatype="UDInt" />
+                        <Member Name="ReceivedBytes" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDISCON" Datatype="TDISCON" Version="2.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TSEND" Datatype="TSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TUSEND" Datatype="TUSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TRESET" Datatype="T_RESET" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTRCV_C" Datatype="TRCV_C" Version="3.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="EN_R" Datatype="Bool" />
+                  <Member Name="CONT" Datatype="Bool" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                  <Member Name="ADHOC" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                  <Member Name="RCVD_LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="CONNECT" Datatype="Variant" />
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                  <Member Name="COM_RST" Datatype="Bool" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="s_state" Datatype="Int" />
+                  <Member Name="s_locked" Datatype="Bool" />
+                  <Member Name="s_udp" Datatype="Bool" />
+                  <Member Name="s_configured" Datatype="Bool" />
+                  <Member Name="s_tcon_80A3" Datatype="Bool" />
+                  <Member Name="s_ConID" Datatype="CONN_OUC" />
+                  <Member Name="s_TCON" Datatype="TCON" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="CONNECT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDIAG" Datatype="T_DIAG" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="RESULT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDIAG_Status" Datatype="TDiag_Status" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InterfaceId" Datatype="HW_ANY" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="ConnectionType" Datatype="Byte" />
+                        <Member Name="ActiveEstablished" Datatype="Bool" />
+                        <Member Name="State" Datatype="Byte" />
+                        <Member Name="Kind" Datatype="Byte" />
+                        <Member Name="SentBytes" Datatype="UDInt" />
+                        <Member Name="ReceivedBytes" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TRCV" Datatype="TRCV" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="EN_R" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                        <Member Name="ADHOC" Datatype="Bool" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="NDR" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                        <Member Name="RCVD_LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TURCV" Datatype="TURCV" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="EN_R" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                        <Member Name="ADHOC" Datatype="Bool" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="NDR" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                        <Member Name="RCVD_LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDISCON" Datatype="TDISCON" Version="2.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TRESET" Datatype="T_RESET" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTCON" Datatype="TCON" Version="4.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_OUC" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="CONNECT" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mTDISCON" Datatype="TDISCON" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_OUC" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mTSEND" Datatype="TSEND" Version="4.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_OUC" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mTRCV" Datatype="TRCV" Version="4.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="EN_R" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_OUC" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                  <Member Name="ADHOC" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                  <Member Name="RCVD_LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mTUSEND" Datatype="TUSEND" Version="4.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_OUC" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mTURCV" Datatype="TURCV" Version="4.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="EN_R" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_OUC" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                  <Member Name="ADHOC" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                  <Member Name="RCVD_LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mTMAIL_C" Datatype="TMAIL_C" Version="6.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="TO_S" Datatype="String[240]" />
+                  <Member Name="CC" Datatype="String[240]" />
+                  <Member Name="SUBJECT" Datatype="String[240]" />
+                  <Member Name="TEXT" Datatype="String[240]" />
+                  <Member Name="ATTACHMENT" Datatype="Variant" />
+                  <Member Name="ATTACHMENT_NAME" Datatype="String[50]" />
+                  <Member Name="MAIL_ADDR_PARAM" Datatype="Variant" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="SFB_STATUS" Datatype="Word" />
+                  <Member Name="PP" Datatype="Int" />
+                  <Member Name="Locked" Datatype="Bool" />
+                  <Member Name="RisingEdge" Datatype="Bool" />
+                  <Member Name="CpuInterface" Datatype="Bool" />
+                  <Member Name="WatchDogTime" Datatype="Time" />
+                  <Member Name="DiagCode" Datatype="Word" />
+                  <Member Name="MailObjectIndex" Datatype="SInt" />
+                  <Member Name="MailObjectCount" Datatype="SInt" />
+                  <Member Name="Byte_1" Datatype="Byte" />
+                  <Member Name="UInt_1" Datatype="UInt" />
+                  <Member Name="UDInt_1" Datatype="UDInt" />
+                  <Member Name="UDInt_2" Datatype="UDInt" />
+                  <Member Name="TMailDataHeader" Datatype="Array[1..7] of TMail_C_Header" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="Key" Datatype="Word" />
+                        <Member Name="Length" Datatype="Word" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="T_MAIL" Datatype="T_MAIL" Version="1.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="TO_S" Datatype="Variant" />
+                        <Member Name="CC" Datatype="Variant" />
+                        <Member Name="Subject" Datatype="Variant" />
+                        <Member Name="Text" Datatype="Variant" />
+                        <Member Name="Attachment" Datatype="Variant" />
+                        <Member Name="AttachmentName" Datatype="Variant" />
+                        <Member Name="MailAddrParam" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="Done" Datatype="Bool" />
+                        <Member Name="Busy" Datatype="Bool" />
+                        <Member Name="Error" Datatype="Bool" />
+                        <Member Name="Status" Datatype="DWord" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TCON" Datatype="TCON" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="CONNECT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TSEND" Datatype="TSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TRCV" Datatype="TRCV" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="EN_R" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                        <Member Name="ADHOC" Datatype="Bool" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="NDR" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                        <Member Name="RCVD_LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDISCON" Datatype="TDISCON" Version="2.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="WatchDogTimer" Datatype="TON_TIME" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="PT" Datatype="Time" />
+                        <Member Name="ET" Datatype="Time" />
+                        <Member Name="IN" Datatype="Bool" />
+                        <Member Name="Q" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mT_CONFIG" Datatype="T_CONFIG" Version="1.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="Req" Datatype="Bool" />
+                  <Member Name="Interface" Datatype="HW_INTERFACE" />
+                  <Member Name="Conf_Data" Datatype="Variant" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="Done" Datatype="Bool" />
+                  <Member Name="Busy" Datatype="Bool" />
+                  <Member Name="Error" Datatype="Bool" />
+                  <Member Name="Status" Datatype="DWord" />
+                  <Member Name="Err_Loc" Datatype="DWord" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mGET" Datatype="GET" Version="1.3" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="Word" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="ADDR_1" Datatype="Remote" />
+                  <Member Name="ADDR_2" Datatype="Remote" />
+                  <Member Name="ADDR_3" Datatype="Remote" />
+                  <Member Name="ADDR_4" Datatype="Remote" />
+                  <Member Name="RD_1" Datatype="Variant" />
+                  <Member Name="RD_2" Datatype="Variant" />
+                  <Member Name="RD_3" Datatype="Variant" />
+                  <Member Name="RD_4" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mPUT" Datatype="PUT" Version="1.3" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="Word" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="ADDR_1" Datatype="Remote" />
+                  <Member Name="ADDR_2" Datatype="Remote" />
+                  <Member Name="ADDR_3" Datatype="Remote" />
+                  <Member Name="ADDR_4" Datatype="Remote" />
+                  <Member Name="SD_1" Datatype="Variant" />
+                  <Member Name="SD_2" Datatype="Variant" />
+                  <Member Name="SD_3" Datatype="Variant" />
+                  <Member Name="SD_4" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mUSEND" Datatype="USEND" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_PRG" />
+                  <Member Name="R_ID" Datatype="CONN_R_ID" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="SD_1" Datatype="Variant" />
+                  <Member Name="SD_2" Datatype="Variant" />
+                  <Member Name="SD_3" Datatype="Variant" />
+                  <Member Name="SD_4" Datatype="Variant" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="INDEX" Datatype="Word" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mURCV" Datatype="URCV" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="EN_R" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_PRG" />
+                  <Member Name="R_ID" Datatype="CONN_R_ID" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="RD_1" Datatype="Variant" />
+                  <Member Name="RD_2" Datatype="Variant" />
+                  <Member Name="RD_3" Datatype="Variant" />
+                  <Member Name="RD_4" Datatype="Variant" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="INDEX" Datatype="Word" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mBSEND" Datatype="BSEND" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="R" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_PRG" />
+                  <Member Name="R_ID" Datatype="CONN_R_ID" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="SD_1" Datatype="Variant" />
+                  <Member Name="LEN" Datatype="Word" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="INDEX" Datatype="Word" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mBRCV" Datatype="BRCV" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="EN_R" Datatype="Bool" />
+                  <Member Name="ID" Datatype="CONN_PRG" />
+                  <Member Name="R_ID" Datatype="CONN_R_ID" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="RD_1" Datatype="Variant" />
+                  <Member Name="LEN" Datatype="Word" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="INDEX" Datatype="Word" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mMB_CLIENT" Datatype="MB_CLIENT" Version="6.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="DISCONNECT" Datatype="Bool" />
+                  <Member Name="MB_MODE" Datatype="USInt" />
+                  <Member Name="MB_DATA_ADDR" Datatype="UDInt" />
+                  <Member Name="MB_DATA_LEN" Datatype="UInt" />
+                  <Member Name="RD_MB_DATA_ADDR" Datatype="UInt" />
+                  <Member Name="RD_MB_DATA_LEN" Datatype="UInt" />
+                  <Member Name="WR_MB_DATA_ADDR" Datatype="UInt" />
+                  <Member Name="WR_MB_DATA_LEN" Datatype="UInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="MB_DATA_PTR" Datatype="Variant" />
+                  <Member Name="CONNECT" Datatype="Variant" />
+                  <Member Name="RD_MB_DATA_PTR" Datatype="Variant" />
+                  <Member Name="WR_MB_DATA_PTR" Datatype="Variant" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="TCON" Datatype="TCON" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="CONNECT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDISCON" Datatype="TDISCON" Version="2.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TSEND" Datatype="TSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TRECEIVE" Datatype="TRCV" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="EN_R" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                        <Member Name="ADHOC" Datatype="Bool" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="NDR" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                        <Member Name="RCVD_LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TRESET" Datatype="T_RESET" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDIAG" Datatype="T_DIAG" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="RESULT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDIAG_Status" Datatype="TDiag_Status" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InterfaceId" Datatype="HW_ANY" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="ConnectionType" Datatype="Byte" />
+                        <Member Name="ActiveEstablished" Datatype="Bool" />
+                        <Member Name="State" Datatype="Byte" />
+                        <Member Name="Kind" Datatype="Byte" />
+                        <Member Name="SentBytes" Datatype="UDInt" />
+                        <Member Name="ReceivedBytes" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Blocked_Proc_Timeout" Datatype="Real" />
+                  <Member Name="Rcv_Timeout" Datatype="Real" />
+                  <Member Name="MB_Unit_ID" Datatype="Byte" />
+                  <Member Name="MB_Transaction_ID" Datatype="Word" />
+                  <Member Name="RD_MB_DATA_PTR_Length" Datatype="UDInt" />
+                  <Member Name="WR_MB_DATA_PTR_Length" Datatype="UDInt" />
+                  <Member Name="MB_State" Datatype="Word" />
+                  <Member Name="SAVED_MB_DATA_ADDR" Datatype="UDInt" />
+                  <Member Name="SAVED_DATA_LEN" Datatype="UInt" />
+                  <Member Name="SAVED_MB_MODE" Datatype="USInt" />
+                  <Member Name="Connection_ID" Datatype="Word" />
+                  <Member Name="Retries" Datatype="Word" />
+                  <Member Name="TEMP_DATA" Datatype="Array[1..263] of Byte" />
+                  <Member Name="rcv_timer" Datatype="TON_TIME" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="PT" Datatype="Time" />
+                        <Member Name="ET" Datatype="Time" />
+                        <Member Name="IN" Datatype="Bool" />
+                        <Member Name="Q" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="wd_timer" Datatype="TON_TIME" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="PT" Datatype="Time" />
+                        <Member Name="ET" Datatype="Time" />
+                        <Member Name="IN" Datatype="Bool" />
+                        <Member Name="Q" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Connected" Datatype="Bool" />
+                  <Member Name="Active" Datatype="Bool" />
+                  <Member Name="BytesReceived" Datatype="UDInt" />
+                  <Member Name="Func_Code_23_saved" Datatype="Struct">
+                    <Member Name="mb_data_addr_read" Datatype="Word" />
+                    <Member Name="mb_data_len_read" Datatype="Word" />
+                    <Member Name="mb_data_addr_write" Datatype="Word" />
+                    <Member Name="mb_data_len_write" Datatype="Word" />
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mMB_SERVER" Datatype="MB_SERVER" Version="5.3" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="DISCONNECT" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NDR" Datatype="Bool" />
+                  <Member Name="DR" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="MB_HOLD_REG" Datatype="Variant" />
+                  <Member Name="CONNECT" Datatype="Variant" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="TCON" Datatype="TCON" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="CONNECT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TSEND" Datatype="TSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TRCV" Datatype="TRCV" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="EN_R" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                        <Member Name="ADHOC" Datatype="Bool" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="NDR" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                        <Member Name="RCVD_LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDIAG" Datatype="T_DIAG" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="RESULT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TRESET" Datatype="T_RESET" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDISCON" Datatype="TDISCON" Version="2.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="TDIAG_Status" Datatype="TDiag_Status" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InterfaceId" Datatype="HW_ANY" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="ConnectionType" Datatype="Byte" />
+                        <Member Name="ActiveEstablished" Datatype="Bool" />
+                        <Member Name="State" Datatype="Byte" />
+                        <Member Name="Kind" Datatype="Byte" />
+                        <Member Name="SentBytes" Datatype="UDInt" />
+                        <Member Name="ReceivedBytes" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="HR_Start_Offset" Datatype="Word" />
+                  <Member Name="QB_Start" Datatype="UInt" />
+                  <Member Name="QB_Count" Datatype="UInt" />
+                  <Member Name="QB_Read_Start" Datatype="UInt" />
+                  <Member Name="QB_Read_Count" Datatype="UInt" />
+                  <Member Name="IB_Read_Start" Datatype="UInt" />
+                  <Member Name="IB_Read_Count" Datatype="UInt" />
+                  <Member Name="Success_Count" Datatype="Word" />
+                  <Member Name="Request_Count" Datatype="Word" />
+                  <Member Name="Xmt_Rcv_Count" Datatype="Word" />
+                  <Member Name="Server_Message_Count" Datatype="Word" />
+                  <Member Name="Exception_Count" Datatype="Word" />
+                  <Member Name="Connected" Datatype="Bool" />
+                  <Member Name="Connection_ID" Datatype="Word" />
+                  <Member Name="MB_State" Datatype="Word" />
+                  <Member Name="TEMP_DATA" Datatype="Array[0..262] of Byte" />
+                  <Member Name="Data_Area_Array" Datatype="Array[1..8] of MB_DataArea" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="data_type" Datatype="UInt" />
+                        <Member Name="db" Datatype="UInt" />
+                        <Member Name="start" Datatype="UInt" />
+                        <Member Name="length" Datatype="UInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="NDR_immediate" Datatype="Bool" />
+                  <Member Name="DR_immediate" Datatype="Bool" />
+                  <Member Name="BytesReceived" Datatype="UDInt" />
+                  <Member Name="overflow_buffer" Datatype="Array[0..262] of Byte" />
+                  <Member Name="overflow_size_bytes" Datatype="UInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mRDREC" Datatype="RDREC" Version="1.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="HW_IO" />
+                  <Member Name="INDEX" Datatype="DInt" />
+                  <Member Name="MLEN" Datatype="UInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="VALID" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="DWord" />
+                  <Member Name="LEN" Datatype="UInt" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="RECORD" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mWRREC" Datatype="WRREC" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="ID" Datatype="HW_IO" />
+                  <Member Name="INDEX" Datatype="DInt" />
+                  <Member Name="LEN" Datatype="UInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="DWord" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="RECORD" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mRALRM" Datatype="RALRM" Version="1.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="MODE" Datatype="Int" />
+                  <Member Name="F_ID" Datatype="HW_IO" />
+                  <Member Name="MLEN" Datatype="UInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="NEW" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="DWord" />
+                  <Member Name="ID" Datatype="HW_IO" />
+                  <Member Name="LEN" Datatype="UInt" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="TINFO" Datatype="Variant" />
+                  <Member Name="AINFO" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mGETIO" Datatype="GETIO" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="ID" Datatype="HW_SUBMODULE" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="STATUS" Datatype="DWord" />
+                  <Member Name="LEN" Datatype="Int" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="INPUTS" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mSETIO" Datatype="SETIO" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="ID" Datatype="HW_SUBMODULE" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="STATUS" Datatype="DWord" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="OUTPUTS" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mGETIO_PART" Datatype="GETIO_PART" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="ID" Datatype="HW_SUBMODULE" />
+                  <Member Name="OFFSET" Datatype="Int" />
+                  <Member Name="LEN" Datatype="Int" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="STATUS" Datatype="DWord" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="INPUTS" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mSETIO_PART" Datatype="SETIO_PART" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="ID" Datatype="HW_SUBMODULE" />
+                  <Member Name="OFFSET" Datatype="Int" />
+                  <Member Name="LEN" Datatype="Int" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="STATUS" Datatype="DWord" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="OUTPUTS" Datatype="Variant" />
+                </Section>
+                <Section Name="Static" />
+              </Sections>
+            </Member>
+            <Member Name="mProgram_Alarm" Datatype="Program_Alarm" Version="1.0" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Base">
+                  <Sections Datatype="ALARM_BASE" Version="1.0">
+                    <Section Name="Input" />
+                    <Section Name="Output" />
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0">
+                        <Sections>
+                          <Section Name="None">
+                            <Member Name="ALID" Datatype="Word" />
+                            <Member Name="ARID" Datatype="Word" />
+                          </Section>
+                        </Sections>
+                      </Member>
+                      <Member Name="HANDLE" Datatype="DWord" />
+                    </Section>
+                  </Sections>
+                </Section>
+                <Section Name="Input">
+                  <Member Name="SIG" Datatype="Bool" />
+                  <Member Name="TIMESTAMP" Datatype="LDT" />
+                  <Member Name="SD_1" Datatype="Variant" />
+                  <Member Name="SD_2" Datatype="Variant" />
+                  <Member Name="SD_3" Datatype="Variant" />
+                  <Member Name="SD_4" Datatype="Variant" />
+                  <Member Name="SD_5" Datatype="Variant" />
+                  <Member Name="SD_6" Datatype="Variant" />
+                  <Member Name="SD_7" Datatype="Variant" />
+                  <Member Name="SD_8" Datatype="Variant" />
+                  <Member Name="SD_9" Datatype="Variant" />
+                  <Member Name="SD_10" Datatype="Variant" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="Error" Datatype="Bool" />
+                  <Member Name="Status" Datatype="Word" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="SD_0" Datatype="AssocValue_0" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="Syntax" Datatype="UInt" />
+                        <Member Name="Aap" Datatype="Byte" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="SIG_Edge_History" Datatype="Bool" />
+                  <Member Name="INIT_FB_State" Datatype="DWord" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mDRUM" Datatype="DRUM" Version="2.6" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="RESET" Datatype="Bool" />
+                  <Member Name="JOG" Datatype="Bool" />
+                  <Member Name="DRUM_EN" Datatype="Bool" />
+                  <Member Name="LST_STEP" Datatype="Byte" />
+                  <Member Name="EVENT1" Datatype="Bool" />
+                  <Member Name="EVENT2" Datatype="Bool" />
+                  <Member Name="EVENT3" Datatype="Bool" />
+                  <Member Name="EVENT4" Datatype="Bool" />
+                  <Member Name="EVENT5" Datatype="Bool" />
+                  <Member Name="EVENT6" Datatype="Bool" />
+                  <Member Name="EVENT7" Datatype="Bool" />
+                  <Member Name="EVENT8" Datatype="Bool" />
+                  <Member Name="EVENT9" Datatype="Bool" />
+                  <Member Name="EVENT10" Datatype="Bool" />
+                  <Member Name="EVENT11" Datatype="Bool" />
+                  <Member Name="EVENT12" Datatype="Bool" />
+                  <Member Name="EVENT13" Datatype="Bool" />
+                  <Member Name="EVENT14" Datatype="Bool" />
+                  <Member Name="EVENT15" Datatype="Bool" />
+                  <Member Name="EVENT16" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="OUT1" Datatype="Bool" />
+                  <Member Name="OUT2" Datatype="Bool" />
+                  <Member Name="OUT3" Datatype="Bool" />
+                  <Member Name="OUT4" Datatype="Bool" />
+                  <Member Name="OUT5" Datatype="Bool" />
+                  <Member Name="OUT6" Datatype="Bool" />
+                  <Member Name="OUT7" Datatype="Bool" />
+                  <Member Name="OUT8" Datatype="Bool" />
+                  <Member Name="OUT9" Datatype="Bool" />
+                  <Member Name="OUT10" Datatype="Bool" />
+                  <Member Name="OUT11" Datatype="Bool" />
+                  <Member Name="OUT12" Datatype="Bool" />
+                  <Member Name="OUT13" Datatype="Bool" />
+                  <Member Name="OUT14" Datatype="Bool" />
+                  <Member Name="OUT15" Datatype="Bool" />
+                  <Member Name="OUT16" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                  <Member Name="OUT_WORD" Datatype="Word" />
+                  <Member Name="ERR_CODE" Datatype="Word" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="JOG_HIS" Datatype="Bool" />
+                  <Member Name="EOD" Datatype="Bool" />
+                  <Member Name="DSP" Datatype="Byte" />
+                  <Member Name="DSC" Datatype="Byte" />
+                  <Member Name="DCC" Datatype="DWord" />
+                  <Member Name="DTBP" Datatype="Word" />
+                  <Member Name="PrevTime" Datatype="Time" />
+                  <Member Name="S_PRESET" Datatype="Array[1..16] of Word" />
+                  <Member Name="OUT_VAL" Datatype="Array[1..16, 0..15] of Bool" />
+                  <Member Name="S_MASK" Datatype="Array[1..16, 0..15] of Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mDCAT" Datatype="DCAT" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="CMD" Datatype="Bool" />
+                  <Member Name="O_FB" Datatype="Bool" />
+                  <Member Name="C_FB" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="Q" Datatype="Bool" />
+                  <Member Name="OA" Datatype="Bool" />
+                  <Member Name="CA" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="ET" Datatype="DInt" />
+                  <Member Name="PT" Datatype="DInt" />
+                  <Member Name="PREV_TIME" Datatype="DWord" />
+                  <Member Name="CMD_HIS" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mMCAT" Datatype="MCAT" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="O_CMD" Datatype="Bool" />
+                  <Member Name="C_CMD" Datatype="Bool" />
+                  <Member Name="S_CMD" Datatype="Bool" />
+                  <Member Name="O_FB" Datatype="Bool" />
+                  <Member Name="C_FB" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="OO" Datatype="Bool" />
+                  <Member Name="CO" Datatype="Bool" />
+                  <Member Name="OA" Datatype="Bool" />
+                  <Member Name="CA" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="ET" Datatype="DInt" />
+                  <Member Name="PT" Datatype="DInt" />
+                  <Member Name="PREV_TIME" Datatype="DWord" />
+                  <Member Name="O_HIS" Datatype="Bool" />
+                  <Member Name="C_HIS" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mIMC" Datatype="IMC" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="IN_BIT0" Datatype="Bool" />
+                  <Member Name="IN_BIT1" Datatype="Bool" />
+                  <Member Name="IN_BIT2" Datatype="Bool" />
+                  <Member Name="IN_BIT3" Datatype="Bool" />
+                  <Member Name="IN_BIT4" Datatype="Bool" />
+                  <Member Name="IN_BIT5" Datatype="Bool" />
+                  <Member Name="IN_BIT6" Datatype="Bool" />
+                  <Member Name="IN_BIT7" Datatype="Bool" />
+                  <Member Name="IN_BIT8" Datatype="Bool" />
+                  <Member Name="IN_BIT9" Datatype="Bool" />
+                  <Member Name="IN_BIT10" Datatype="Bool" />
+                  <Member Name="IN_BIT11" Datatype="Bool" />
+                  <Member Name="IN_BIT12" Datatype="Bool" />
+                  <Member Name="IN_BIT13" Datatype="Bool" />
+                  <Member Name="IN_BIT14" Datatype="Bool" />
+                  <Member Name="IN_BIT15" Datatype="Bool" />
+                  <Member Name="CMP_STEP" Datatype="Byte" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="OUT" Datatype="Bool" />
+                  <Member Name="ERR_CODE" Datatype="Word" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="CMP_VAL" Datatype="Array[0..15, 0..15] of Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mSMC" Datatype="SMC" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="IN_BIT0" Datatype="Bool" />
+                  <Member Name="IN_BIT1" Datatype="Bool" />
+                  <Member Name="IN_BIT2" Datatype="Bool" />
+                  <Member Name="IN_BIT3" Datatype="Bool" />
+                  <Member Name="IN_BIT4" Datatype="Bool" />
+                  <Member Name="IN_BIT5" Datatype="Bool" />
+                  <Member Name="IN_BIT6" Datatype="Bool" />
+                  <Member Name="IN_BIT7" Datatype="Bool" />
+                  <Member Name="IN_BIT8" Datatype="Bool" />
+                  <Member Name="IN_BIT9" Datatype="Bool" />
+                  <Member Name="IN_BIT10" Datatype="Bool" />
+                  <Member Name="IN_BIT11" Datatype="Bool" />
+                  <Member Name="IN_BIT12" Datatype="Bool" />
+                  <Member Name="IN_BIT13" Datatype="Bool" />
+                  <Member Name="IN_BIT14" Datatype="Bool" />
+                  <Member Name="IN_BIT15" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="OUT" Datatype="Bool" />
+                  <Member Name="ERR_CODE" Datatype="Word" />
+                  <Member Name="OUT_STEP" Datatype="Byte" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="LAST" Datatype="Byte" />
+                  <Member Name="CMP_VAL" Datatype="Array[0..15, 0..15] of Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mLEAD_LAG" Datatype="LEAD_LAG" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="IN" Datatype="Real" />
+                  <Member Name="SAMPLE_T" Datatype="Int" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="OUT" Datatype="Real" />
+                  <Member Name="ERR_CODE" Datatype="Word" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="LD_TIME" Datatype="Real" />
+                  <Member Name="GAIN" Datatype="Real" />
+                  <Member Name="PREV_IN" Datatype="Real" />
+                  <Member Name="PREV_OUT" Datatype="Real" />
+                  <Member Name="LG_TIME" Datatype="Real" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mPID_Compact" Datatype="PID_Compact" Version="2.4" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="Setpoint" Datatype="Real" />
+                  <Member Name="Input" Datatype="Real" />
+                  <Member Name="Input_PER" Datatype="Int" />
+                  <Member Name="Disturbance" Datatype="Real" />
+                  <Member Name="ManualEnable" Datatype="Bool" />
+                  <Member Name="ManualValue" Datatype="Real" />
+                  <Member Name="ErrorAck" Datatype="Bool" />
+                  <Member Name="Reset" Datatype="Bool" />
+                  <Member Name="ModeActivate" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="ScaledInput" Datatype="Real" />
+                  <Member Name="Output" Datatype="Real" />
+                  <Member Name="Output_PER" Datatype="Int" />
+                  <Member Name="Output_PWM" Datatype="Bool" />
+                  <Member Name="SetpointLimit_H" Datatype="Bool" />
+                  <Member Name="SetpointLimit_L" Datatype="Bool" />
+                  <Member Name="InputWarning_H" Datatype="Bool" />
+                  <Member Name="InputWarning_L" Datatype="Bool" />
+                  <Member Name="State" Datatype="Int" />
+                  <Member Name="Error" Datatype="Bool" />
+                  <Member Name="ErrorBits" Datatype="DWord" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="Mode" Datatype="Int" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="InternalDiagnostic" Datatype="DWord" />
+                  <Member Name="InternalVersion" Datatype="DWord" />
+                  <Member Name="InternalRTVersion" Datatype="DWord" />
+                  <Member Name="IntegralResetMode" Datatype="Int" />
+                  <Member Name="OverwriteInitialOutputValue" Datatype="Real" />
+                  <Member Name="RunModeByStartup" Datatype="Bool" />
+                  <Member Name="LoadBackUp" Datatype="Bool" />
+                  <Member Name="SetSubstituteOutput" Datatype="Bool" />
+                  <Member Name="PhysicalUnit" Datatype="Int" />
+                  <Member Name="PhysicalQuantity" Datatype="Int" />
+                  <Member Name="ActivateRecoverMode" Datatype="Bool" />
+                  <Member Name="Warning" Datatype="DWord" />
+                  <Member Name="WarningInternal" Datatype="DWord" />
+                  <Member Name="Progress" Datatype="Real" />
+                  <Member Name="CurrentSetpoint" Datatype="Real" />
+                  <Member Name="CancelTuningLevel" Datatype="Real" />
+                  <Member Name="SubstituteOutput" Datatype="Real" />
+                  <Member Name="Config" Datatype="PID_CompactConfig" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InputPerOn" Datatype="Bool" />
+                        <Member Name="InvertControl" Datatype="Bool" />
+                        <Member Name="InputUpperLimit" Datatype="Real" />
+                        <Member Name="InputLowerLimit" Datatype="Real" />
+                        <Member Name="InputUpperWarning" Datatype="Real" />
+                        <Member Name="InputLowerWarning" Datatype="Real" />
+                        <Member Name="OutputUpperLimit" Datatype="Real" />
+                        <Member Name="OutputLowerLimit" Datatype="Real" />
+                        <Member Name="SetpointUpperLimit" Datatype="Real" />
+                        <Member Name="SetpointLowerLimit" Datatype="Real" />
+                        <Member Name="MinimumOnTime" Datatype="Real" />
+                        <Member Name="MinimumOffTime" Datatype="Real" />
+                        <Member Name="InputScaling" Datatype="PID_Scaling" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="UpperPointIn" Datatype="Real" />
+                              <Member Name="LowerPointIn" Datatype="Real" />
+                              <Member Name="UpperPointOut" Datatype="Real" />
+                              <Member Name="LowerPointOut" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="CycleTime" Datatype="PID_CycleTime" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="StartEstimation" Datatype="Bool" />
+                        <Member Name="EnEstimation" Datatype="Bool" />
+                        <Member Name="EnMonitoring" Datatype="Bool" />
+                        <Member Name="Value" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="CtrlParamsBackUp" Datatype="PID_CompactControlParams" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="Gain" Datatype="Real" />
+                        <Member Name="Ti" Datatype="Real" />
+                        <Member Name="Td" Datatype="Real" />
+                        <Member Name="TdFiltRatio" Datatype="Real" />
+                        <Member Name="PWeighting" Datatype="Real" />
+                        <Member Name="DWeighting" Datatype="Real" />
+                        <Member Name="Cycle" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PIDSelfTune" Datatype="PID_CompactSelfTune" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="SUT" Datatype="PID_Compact_SUT" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="CalculateParams" Datatype="Bool" />
+                              <Member Name="TuneRule" Datatype="Int" />
+                              <Member Name="State" Datatype="Int" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="TIR" Datatype="PID_Compact_TIR" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="RunIn" Datatype="Bool" />
+                              <Member Name="CalculateParams" Datatype="Bool" />
+                              <Member Name="TuneRule" Datatype="Int" />
+                              <Member Name="State" Datatype="Int" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PIDCtrl" Datatype="PID_CompactControl" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="PIDInit" Datatype="Bool" />
+                        <Member Name="IntegralSum" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Retain" Datatype="PID_CompactRetain" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="CtrlParams" Datatype="PID_CompactControlParams" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="Gain" Datatype="Real" />
+                              <Member Name="Ti" Datatype="Real" />
+                              <Member Name="Td" Datatype="Real" />
+                              <Member Name="TdFiltRatio" Datatype="Real" />
+                              <Member Name="PWeighting" Datatype="Real" />
+                              <Member Name="DWeighting" Datatype="Real" />
+                              <Member Name="Cycle" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mPID_3Step" Datatype="PID_3Step" Version="2.3" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="Setpoint" Datatype="Real" />
+                  <Member Name="Input" Datatype="Real" />
+                  <Member Name="Input_PER" Datatype="Int" />
+                  <Member Name="Actuator_H" Datatype="Bool" />
+                  <Member Name="Actuator_L" Datatype="Bool" />
+                  <Member Name="Feedback" Datatype="Real" />
+                  <Member Name="Feedback_PER" Datatype="Int" />
+                  <Member Name="Disturbance" Datatype="Real" />
+                  <Member Name="ManualEnable" Datatype="Bool" />
+                  <Member Name="ManualValue" Datatype="Real" />
+                  <Member Name="Manual_UP" Datatype="Bool" />
+                  <Member Name="Manual_DN" Datatype="Bool" />
+                  <Member Name="ErrorAck" Datatype="Bool" />
+                  <Member Name="Reset" Datatype="Bool" />
+                  <Member Name="ModeActivate" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="ScaledInput" Datatype="Real" />
+                  <Member Name="ScaledFeedback" Datatype="Real" />
+                  <Member Name="Output_UP" Datatype="Bool" />
+                  <Member Name="Output_DN" Datatype="Bool" />
+                  <Member Name="Output_PER" Datatype="Int" />
+                  <Member Name="SetpointLimit_H" Datatype="Bool" />
+                  <Member Name="SetpointLimit_L" Datatype="Bool" />
+                  <Member Name="InputWarning_H" Datatype="Bool" />
+                  <Member Name="InputWarning_L" Datatype="Bool" />
+                  <Member Name="State" Datatype="Int" />
+                  <Member Name="Error" Datatype="Bool" />
+                  <Member Name="ErrorBits" Datatype="DWord" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="Mode" Datatype="Int" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="InternalDiagnostic" Datatype="DWord" />
+                  <Member Name="InternalVersion" Datatype="DWord" />
+                  <Member Name="InternalRTVersion" Datatype="DWord" />
+                  <Member Name="ManualUpInternal" Datatype="Bool" />
+                  <Member Name="ManualDnInternal" Datatype="Bool" />
+                  <Member Name="ActivateRecoverMode" Datatype="Bool" />
+                  <Member Name="RunModeByStartup" Datatype="Bool" />
+                  <Member Name="LoadBackUp" Datatype="Bool" />
+                  <Member Name="PhysicalUnit" Datatype="Int" />
+                  <Member Name="PhysicalQuantity" Datatype="Int" />
+                  <Member Name="ErrorBehaviour" Datatype="Bool" />
+                  <Member Name="Warning" Datatype="DWord" />
+                  <Member Name="WarningInternal" Datatype="DWord" />
+                  <Member Name="SavePosition" Datatype="Real" />
+                  <Member Name="CurrentSetpoint" Datatype="Real" />
+                  <Member Name="CancelTuningLevel" Datatype="Real" />
+                  <Member Name="Progress" Datatype="Real" />
+                  <Member Name="Config" Datatype="PID_3StepConfig" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InputPerOn" Datatype="Bool" />
+                        <Member Name="OutputPerOn" Datatype="Bool" />
+                        <Member Name="InvertControl" Datatype="Bool" />
+                        <Member Name="FeedbackOn" Datatype="Bool" />
+                        <Member Name="FeedbackPerOn" Datatype="Bool" />
+                        <Member Name="ActuatorEndStopOn" Datatype="Bool" />
+                        <Member Name="InputUpperLimit" Datatype="Real" />
+                        <Member Name="InputLowerLimit" Datatype="Real" />
+                        <Member Name="InputUpperWarning" Datatype="Real" />
+                        <Member Name="InputLowerWarning" Datatype="Real" />
+                        <Member Name="OutputUpperLimit" Datatype="Real" />
+                        <Member Name="OutputLowerLimit" Datatype="Real" />
+                        <Member Name="SetpointUpperLimit" Datatype="Real" />
+                        <Member Name="SetpointLowerLimit" Datatype="Real" />
+                        <Member Name="MinimumOnTime" Datatype="Real" />
+                        <Member Name="MinimumOffTime" Datatype="Real" />
+                        <Member Name="VirtualActuatorLimit" Datatype="Real" />
+                        <Member Name="InputScaling" Datatype="PID_Scaling" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="UpperPointIn" Datatype="Real" />
+                              <Member Name="LowerPointIn" Datatype="Real" />
+                              <Member Name="UpperPointOut" Datatype="Real" />
+                              <Member Name="LowerPointOut" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="FeedbackScaling" Datatype="PID_Scaling" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="UpperPointIn" Datatype="Real" />
+                              <Member Name="LowerPointIn" Datatype="Real" />
+                              <Member Name="UpperPointOut" Datatype="Real" />
+                              <Member Name="LowerPointOut" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="GetTransitTime" Datatype="PID_3StepGetTransitTime" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InvertDirection" Datatype="Bool" />
+                        <Member Name="SelectFeedback" Datatype="Bool" />
+                        <Member Name="State" Datatype="Int" />
+                        <Member Name="NewOutput" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="CycleTime" Datatype="PID_CycleTime" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="StartEstimation" Datatype="Bool" />
+                        <Member Name="EnEstimation" Datatype="Bool" />
+                        <Member Name="EnMonitoring" Datatype="Bool" />
+                        <Member Name="Value" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="CtrlParamsBackUp" Datatype="PID_3StepControlParams" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="SetByUser" Datatype="Bool" />
+                        <Member Name="Gain" Datatype="Real" />
+                        <Member Name="Ti" Datatype="Real" />
+                        <Member Name="Td" Datatype="Real" />
+                        <Member Name="TdFiltRatio" Datatype="Real" />
+                        <Member Name="PWeighting" Datatype="Real" />
+                        <Member Name="DWeighting" Datatype="Real" />
+                        <Member Name="Cycle" Datatype="Real" />
+                        <Member Name="InputDeadBand" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PIDSelfTune" Datatype="PID_3StepSelfTune" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="SUT" Datatype="PID_3Step_SUT" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="CalculateParams" Datatype="Bool" />
+                              <Member Name="TuneRule" Datatype="Int" />
+                              <Member Name="State" Datatype="Int" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="TIR" Datatype="PID_3Step_TIR" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="RunIn" Datatype="Bool" />
+                              <Member Name="CalculateParams" Datatype="Bool" />
+                              <Member Name="TuneRule" Datatype="Int" />
+                              <Member Name="State" Datatype="Int" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Retain" Datatype="PID_3StepRetain" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="TransitTime" Datatype="Real" />
+                        <Member Name="CtrlParams" Datatype="PID_3StepControlParams" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="SetByUser" Datatype="Bool" />
+                              <Member Name="Gain" Datatype="Real" />
+                              <Member Name="Ti" Datatype="Real" />
+                              <Member Name="Td" Datatype="Real" />
+                              <Member Name="TdFiltRatio" Datatype="Real" />
+                              <Member Name="PWeighting" Datatype="Real" />
+                              <Member Name="DWeighting" Datatype="Real" />
+                              <Member Name="Cycle" Datatype="Real" />
+                              <Member Name="InputDeadBand" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mPID_Temp" Datatype="PID_Temp" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="Setpoint" Datatype="Real" />
+                  <Member Name="Input" Datatype="Real" />
+                  <Member Name="Input_PER" Datatype="Int" />
+                  <Member Name="Disturbance" Datatype="Real" />
+                  <Member Name="ManualEnable" Datatype="Bool" />
+                  <Member Name="ManualValue" Datatype="Real" />
+                  <Member Name="ErrorAck" Datatype="Bool" />
+                  <Member Name="Reset" Datatype="Bool" />
+                  <Member Name="ModeActivate" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="ScaledInput" Datatype="Real" />
+                  <Member Name="OutputHeat" Datatype="Real" />
+                  <Member Name="OutputCool" Datatype="Real" />
+                  <Member Name="OutputHeat_PER" Datatype="Int" />
+                  <Member Name="OutputCool_PER" Datatype="Int" />
+                  <Member Name="OutputHeat_PWM" Datatype="Bool" />
+                  <Member Name="OutputCool_PWM" Datatype="Bool" />
+                  <Member Name="SetpointLimit_H" Datatype="Bool" />
+                  <Member Name="SetpointLimit_L" Datatype="Bool" />
+                  <Member Name="InputWarning_H" Datatype="Bool" />
+                  <Member Name="InputWarning_L" Datatype="Bool" />
+                  <Member Name="State" Datatype="Int" />
+                  <Member Name="Error" Datatype="Bool" />
+                  <Member Name="ErrorBits" Datatype="DWord" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="Mode" Datatype="Int" />
+                  <Member Name="Master" Datatype="DWord" />
+                  <Member Name="Slave" Datatype="DWord" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="InternalDiagnostic" Datatype="DWord" />
+                  <Member Name="InternalVersion" Datatype="DWord" />
+                  <Member Name="InternalRTVersion" Datatype="DWord" />
+                  <Member Name="IntegralResetMode" Datatype="Int" />
+                  <Member Name="OverwriteInitialOutputValue" Datatype="Real" />
+                  <Member Name="RunModeByStartup" Datatype="Bool" />
+                  <Member Name="LoadBackUp" Datatype="Bool" />
+                  <Member Name="SetSubstituteOutput" Datatype="Bool" />
+                  <Member Name="PhysicalUnit" Datatype="Int" />
+                  <Member Name="PhysicalQuantity" Datatype="Int" />
+                  <Member Name="ActivateRecoverMode" Datatype="Bool" />
+                  <Member Name="Warning" Datatype="DWord" />
+                  <Member Name="WarningInternal" Datatype="DWord" />
+                  <Member Name="Progress" Datatype="Real" />
+                  <Member Name="CurrentSetpoint" Datatype="Real" />
+                  <Member Name="CancelTuningLevel" Datatype="Real" />
+                  <Member Name="SubstituteOutput" Datatype="Real" />
+                  <Member Name="PidOutputSum" Datatype="Real" />
+                  <Member Name="PidOutputOffsetHeat" Datatype="Real" />
+                  <Member Name="PidOutputOffsetCool" Datatype="Real" />
+                  <Member Name="SubstituteSetpointOn" Datatype="Bool" />
+                  <Member Name="SubstituteSetpoint" Datatype="Real" />
+                  <Member Name="DisableCooling" Datatype="Bool" />
+                  <Member Name="AllSlaveAutomaticState" Datatype="Bool" />
+                  <Member Name="NoSlaveSubstituteSetpoint" Datatype="Bool" />
+                  <Member Name="Heat" Datatype="PID_TempBasicOutputData" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="EnableTuning" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Cool" Datatype="PID_TempBasicOutputData" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="EnableTuning" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Config" Datatype="PID_TempConfig" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InputPerOn" Datatype="Bool" />
+                        <Member Name="InputUpperLimit" Datatype="Real" />
+                        <Member Name="InputLowerLimit" Datatype="Real" />
+                        <Member Name="InputUpperWarning" Datatype="Real" />
+                        <Member Name="InputLowerWarning" Datatype="Real" />
+                        <Member Name="SetpointUpperLimit" Datatype="Real" />
+                        <Member Name="SetpointLowerLimit" Datatype="Real" />
+                        <Member Name="ActivateCooling" Datatype="Bool" />
+                        <Member Name="AdvancedCooling" Datatype="Bool" />
+                        <Member Name="CoolFactor" Datatype="Real" />
+                        <Member Name="InputScaling" Datatype="PID_Scaling" Version="1.2">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="UpperPointIn" Datatype="Real" />
+                              <Member Name="LowerPointIn" Datatype="Real" />
+                              <Member Name="UpperPointOut" Datatype="Real" />
+                              <Member Name="LowerPointOut" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="Output" Datatype="PID_TempOutput" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="Heat" Datatype="PID_TempSpecConfigData" Version="1.1">
+                                <Sections>
+                                  <Section Name="None">
+                                    <Member Name="Select" Datatype="Int" />
+                                    <Member Name="PwmPeriode" Datatype="Real" />
+                                    <Member Name="PidUpperLimit" Datatype="Real" />
+                                    <Member Name="PidLowerLimit" Datatype="Real" />
+                                    <Member Name="UpperScaling" Datatype="Real" />
+                                    <Member Name="LowerScaling" Datatype="Real" />
+                                    <Member Name="PwmUpperScaling" Datatype="Real" />
+                                    <Member Name="PwmLowerScaling" Datatype="Real" />
+                                    <Member Name="PerUpperScaling" Datatype="Real" />
+                                    <Member Name="PerLowerScaling" Datatype="Real" />
+                                    <Member Name="MinimumOnTime" Datatype="Real" />
+                                    <Member Name="MinimumOffTime" Datatype="Real" />
+                                  </Section>
+                                </Sections>
+                              </Member>
+                              <Member Name="Cool" Datatype="PID_TempSpecConfigData" Version="1.1">
+                                <Sections>
+                                  <Section Name="None">
+                                    <Member Name="Select" Datatype="Int" />
+                                    <Member Name="PwmPeriode" Datatype="Real" />
+                                    <Member Name="PidUpperLimit" Datatype="Real" />
+                                    <Member Name="PidLowerLimit" Datatype="Real" />
+                                    <Member Name="UpperScaling" Datatype="Real" />
+                                    <Member Name="LowerScaling" Datatype="Real" />
+                                    <Member Name="PwmUpperScaling" Datatype="Real" />
+                                    <Member Name="PwmLowerScaling" Datatype="Real" />
+                                    <Member Name="PerUpperScaling" Datatype="Real" />
+                                    <Member Name="PerLowerScaling" Datatype="Real" />
+                                    <Member Name="MinimumOnTime" Datatype="Real" />
+                                    <Member Name="MinimumOffTime" Datatype="Real" />
+                                  </Section>
+                                </Sections>
+                              </Member>
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="Cascade" Datatype="PID_TempCascade" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="IsMaster" Datatype="Bool" />
+                              <Member Name="IsSlave" Datatype="Bool" />
+                              <Member Name="AntiWindUpMode" Datatype="Int" />
+                              <Member Name="CountSlaves" Datatype="Int" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="CycleTime" Datatype="PID_CycleTime" Version="1.2">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="StartEstimation" Datatype="Bool" />
+                        <Member Name="EnEstimation" Datatype="Bool" />
+                        <Member Name="EnMonitoring" Datatype="Bool" />
+                        <Member Name="Value" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="CtrlParamsBackUp" Datatype="PID_TempControlParamsHeatCool" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="SetByUser" Datatype="Bool" />
+                        <Member Name="Heat" Datatype="PID_TempControlParams" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="Gain" Datatype="Real" />
+                              <Member Name="Ti" Datatype="Real" />
+                              <Member Name="Td" Datatype="Real" />
+                              <Member Name="TdFiltRatio" Datatype="Real" />
+                              <Member Name="PWeighting" Datatype="Real" />
+                              <Member Name="DWeighting" Datatype="Real" />
+                              <Member Name="Cycle" Datatype="Real" />
+                              <Member Name="ControlZone" Datatype="Real" />
+                              <Member Name="DeadZone" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="Cool" Datatype="PID_TempControlParams" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="Gain" Datatype="Real" />
+                              <Member Name="Ti" Datatype="Real" />
+                              <Member Name="Td" Datatype="Real" />
+                              <Member Name="TdFiltRatio" Datatype="Real" />
+                              <Member Name="PWeighting" Datatype="Real" />
+                              <Member Name="DWeighting" Datatype="Real" />
+                              <Member Name="Cycle" Datatype="Real" />
+                              <Member Name="ControlZone" Datatype="Real" />
+                              <Member Name="DeadZone" Datatype="Real" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PIDSelfTune" Datatype="PID_TempSelfTune" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="SUT" Datatype="PID_Temp_SUT" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="CalculateParamsHeat" Datatype="Bool" />
+                              <Member Name="CalculateParamsCool" Datatype="Bool" />
+                              <Member Name="TuneRuleHeat" Datatype="Int" />
+                              <Member Name="TuneRuleCool" Datatype="Int" />
+                              <Member Name="State" Datatype="Int" />
+                              <Member Name="ProcParHeatOk" Datatype="Bool" />
+                              <Member Name="ProcParCoolOk" Datatype="Bool" />
+                              <Member Name="AdaptDelayTime" Datatype="Int" />
+                              <Member Name="CoolingMode" Datatype="Int" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="TIR" Datatype="PID_Temp_TIR" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="RunIn" Datatype="Bool" />
+                              <Member Name="CalculateParamsHeat" Datatype="Bool" />
+                              <Member Name="CalculateParamsCool" Datatype="Bool" />
+                              <Member Name="TuneRuleHeat" Datatype="Int" />
+                              <Member Name="TuneRuleCool" Datatype="Int" />
+                              <Member Name="State" Datatype="Int" />
+                              <Member Name="ProcParHeatOk" Datatype="Bool" />
+                              <Member Name="ProcParCoolOk" Datatype="Bool" />
+                              <Member Name="OutputOffsetHeat" Datatype="Real" />
+                              <Member Name="OutputOffsetCool" Datatype="Real" />
+                              <Member Name="WaitForControlIn" Datatype="Bool" />
+                              <Member Name="ControlInReady" Datatype="Bool" />
+                              <Member Name="FinishControlIn" Datatype="Bool" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PIDCtrl" Datatype="PID_TempControl" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="PIDInit" Datatype="Bool" />
+                        <Member Name="IOutputOld" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="Retain" Datatype="PID_TempRetain" Version="1.1">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="CtrlParams" Datatype="PID_TempControlParamsHeatCool" Version="1.1">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="SetByUser" Datatype="Bool" />
+                              <Member Name="Heat" Datatype="PID_TempControlParams" Version="1.1">
+                                <Sections>
+                                  <Section Name="None">
+                                    <Member Name="Gain" Datatype="Real" />
+                                    <Member Name="Ti" Datatype="Real" />
+                                    <Member Name="Td" Datatype="Real" />
+                                    <Member Name="TdFiltRatio" Datatype="Real" />
+                                    <Member Name="PWeighting" Datatype="Real" />
+                                    <Member Name="DWeighting" Datatype="Real" />
+                                    <Member Name="Cycle" Datatype="Real" />
+                                    <Member Name="ControlZone" Datatype="Real" />
+                                    <Member Name="DeadZone" Datatype="Real" />
+                                  </Section>
+                                </Sections>
+                              </Member>
+                              <Member Name="Cool" Datatype="PID_TempControlParams" Version="1.1">
+                                <Sections>
+                                  <Section Name="None">
+                                    <Member Name="Gain" Datatype="Real" />
+                                    <Member Name="Ti" Datatype="Real" />
+                                    <Member Name="Td" Datatype="Real" />
+                                    <Member Name="TdFiltRatio" Datatype="Real" />
+                                    <Member Name="PWeighting" Datatype="Real" />
+                                    <Member Name="DWeighting" Datatype="Real" />
+                                    <Member Name="Cycle" Datatype="Real" />
+                                    <Member Name="ControlZone" Datatype="Real" />
+                                    <Member Name="DeadZone" Datatype="Real" />
+                                  </Section>
+                                </Sections>
+                              </Member>
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCONT_C" Datatype="CONT_C" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="COM_RST" Datatype="Bool" />
+                  <Member Name="MAN_ON" Datatype="Bool" />
+                  <Member Name="PVPER_ON" Datatype="Bool" />
+                  <Member Name="P_SEL" Datatype="Bool" />
+                  <Member Name="I_SEL" Datatype="Bool" />
+                  <Member Name="INT_HOLD" Datatype="Bool" />
+                  <Member Name="I_ITL_ON" Datatype="Bool" />
+                  <Member Name="D_SEL" Datatype="Bool" />
+                  <Member Name="CYCLE" Datatype="Time" />
+                  <Member Name="SP_INT" Datatype="Real" />
+                  <Member Name="PV_IN" Datatype="Real" />
+                  <Member Name="PV_PER" Datatype="Word" />
+                  <Member Name="MAN" Datatype="Real" />
+                  <Member Name="GAIN" Datatype="Real" />
+                  <Member Name="TI" Datatype="Time" />
+                  <Member Name="TD" Datatype="Time" />
+                  <Member Name="TM_LAG" Datatype="Time" />
+                  <Member Name="DEADB_W" Datatype="Real" />
+                  <Member Name="LMN_HLM" Datatype="Real" />
+                  <Member Name="LMN_LLM" Datatype="Real" />
+                  <Member Name="PV_FAC" Datatype="Real" />
+                  <Member Name="PV_OFF" Datatype="Real" />
+                  <Member Name="LMN_FAC" Datatype="Real" />
+                  <Member Name="LMN_OFF" Datatype="Real" />
+                  <Member Name="I_ITLVAL" Datatype="Real" />
+                  <Member Name="DISV" Datatype="Real" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="LMN" Datatype="Real" />
+                  <Member Name="LMN_PER" Datatype="Word" />
+                  <Member Name="QLMN_HLM" Datatype="Bool" />
+                  <Member Name="QLMN_LLM" Datatype="Bool" />
+                  <Member Name="LMN_P" Datatype="Real" />
+                  <Member Name="LMN_I" Datatype="Real" />
+                  <Member Name="LMN_D" Datatype="Real" />
+                  <Member Name="PV" Datatype="Real" />
+                  <Member Name="ER" Datatype="Real" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="sInvAlt" Datatype="Real" />
+                  <Member Name="sIanteilAlt" Datatype="Real" />
+                  <Member Name="sRestInt" Datatype="Real" />
+                  <Member Name="sRestDif" Datatype="Real" />
+                  <Member Name="sRueck" Datatype="Real" />
+                  <Member Name="sLmn" Datatype="Real" />
+                  <Member Name="sbArwHLmOn" Datatype="Bool" />
+                  <Member Name="sbArwLLmOn" Datatype="Bool" />
+                  <Member Name="sbILimOn" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mCONT_S" Datatype="CONT_S" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="COM_RST" Datatype="Bool" />
+                  <Member Name="LMNR_HS" Datatype="Bool" />
+                  <Member Name="LMNR_LS" Datatype="Bool" />
+                  <Member Name="LMNS_ON" Datatype="Bool" />
+                  <Member Name="LMNUP" Datatype="Bool" />
+                  <Member Name="LMNDN" Datatype="Bool" />
+                  <Member Name="PVPER_ON" Datatype="Bool" />
+                  <Member Name="CYCLE" Datatype="Time" />
+                  <Member Name="SP_INT" Datatype="Real" />
+                  <Member Name="PV_IN" Datatype="Real" />
+                  <Member Name="PV_PER" Datatype="Word" />
+                  <Member Name="GAIN" Datatype="Real" />
+                  <Member Name="TI" Datatype="Time" />
+                  <Member Name="DEADB_W" Datatype="Real" />
+                  <Member Name="PV_FAC" Datatype="Real" />
+                  <Member Name="PV_OFF" Datatype="Real" />
+                  <Member Name="PULSE_TM" Datatype="Time" />
+                  <Member Name="BREAK_TM" Datatype="Time" />
+                  <Member Name="MTR_TM" Datatype="Time" />
+                  <Member Name="DISV" Datatype="Real" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="QLMNUP" Datatype="Bool" />
+                  <Member Name="QLMNDN" Datatype="Bool" />
+                  <Member Name="PV" Datatype="Real" />
+                  <Member Name="ER" Datatype="Real" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="LMNRS_ON" Datatype="Bool" />
+                  <Member Name="LMNRSVAL" Datatype="Real" />
+                  <Member Name="LMNR_SIM" Datatype="Real" />
+                  <Member Name="sFbPVal" Datatype="Real" />
+                  <Member Name="sThrOn" Datatype="Real" />
+                  <Member Name="siImpAus" Datatype="Int" />
+                  <Member Name="stImpDauer" Datatype="Time" />
+                  <Member Name="stPausDauer" Datatype="Time" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mPULSEGEN" Datatype="PULSEGEN" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="INV" Datatype="Real" />
+                  <Member Name="PER_TM" Datatype="Time" />
+                  <Member Name="P_B_TM" Datatype="Time" />
+                  <Member Name="RATIOFAC" Datatype="Real" />
+                  <Member Name="STEP3_ON" Datatype="Bool" />
+                  <Member Name="ST2BI_ON" Datatype="Bool" />
+                  <Member Name="MAN_ON" Datatype="Bool" />
+                  <Member Name="POS_P_ON" Datatype="Bool" />
+                  <Member Name="NEG_P_ON" Datatype="Bool" />
+                  <Member Name="SYN_ON" Datatype="Bool" />
+                  <Member Name="COM_RST" Datatype="Bool" />
+                  <Member Name="CYCLE" Datatype="Time" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="QPOS_P" Datatype="Bool" />
+                  <Member Name="QNEG_P" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="sInvAlt" Datatype="Real" />
+                  <Member Name="siZaehlPer" Datatype="Int" />
+                  <Member Name="siZaehlPTm" Datatype="Int" />
+                  <Member Name="sbPosP" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTCONT_CP" Datatype="TCONT_CP" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="PV_IN" Datatype="Real" />
+                  <Member Name="PV_PER" Datatype="Int" />
+                  <Member Name="DISV" Datatype="Real" />
+                  <Member Name="INT_HPOS" Datatype="Bool" />
+                  <Member Name="INT_HNEG" Datatype="Bool" />
+                  <Member Name="SELECT" Datatype="Int" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="PV" Datatype="Real" />
+                  <Member Name="LMN" Datatype="Real" />
+                  <Member Name="LMN_PER" Datatype="Int" />
+                  <Member Name="QPULSE" Datatype="Bool" />
+                  <Member Name="QLMN_HLM" Datatype="Bool" />
+                  <Member Name="QLMN_LLM" Datatype="Bool" />
+                  <Member Name="QC_ACT" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="CYCLE" Datatype="Real" />
+                  <Member Name="CYCLE_P" Datatype="Real" />
+                  <Member Name="SP_INT" Datatype="Real" />
+                  <Member Name="MAN" Datatype="Real" />
+                  <Member Name="COM_RST" Datatype="Bool" />
+                  <Member Name="MAN_ON" Datatype="Bool" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="DEADB_W" Datatype="Real" />
+                  <Member Name="I_ITLVAL" Datatype="Real" />
+                  <Member Name="LMN_HLM" Datatype="Real" />
+                  <Member Name="LMN_LLM" Datatype="Real" />
+                  <Member Name="PV_FAC" Datatype="Real" />
+                  <Member Name="PV_OFFS" Datatype="Real" />
+                  <Member Name="LMN_FAC" Datatype="Real" />
+                  <Member Name="LMN_OFFS" Datatype="Real" />
+                  <Member Name="PER_TM" Datatype="Real" />
+                  <Member Name="P_B_TM" Datatype="Real" />
+                  <Member Name="TUN_DLMN" Datatype="Real" />
+                  <Member Name="PER_MODE" Datatype="Int" />
+                  <Member Name="PVPER_ON" Datatype="Bool" />
+                  <Member Name="I_ITL_ON" Datatype="Bool" />
+                  <Member Name="PULSE_ON" Datatype="Bool" />
+                  <Member Name="TUN_KEEP" Datatype="Bool" />
+                  <Member Name="ER" Datatype="Real" />
+                  <Member Name="LMN_P" Datatype="Real" />
+                  <Member Name="LMN_I" Datatype="Real" />
+                  <Member Name="LMN_D" Datatype="Real" />
+                  <Member Name="PHASE" Datatype="Int" />
+                  <Member Name="STATUS_H" Datatype="Int" />
+                  <Member Name="STATUS_D" Datatype="Int" />
+                  <Member Name="QTUN_RUN" Datatype="Bool" />
+                  <Member Name="PI_CON" Datatype="TCONTCP_PI_CON" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="GAIN" Datatype="Real" />
+                        <Member Name="TI" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PID_CON" Datatype="TCONTCP_PID_CON" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="GAIN" Datatype="Real" />
+                        <Member Name="TI" Datatype="Real" />
+                        <Member Name="TD" Datatype="Real" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PAR_SAVE" Datatype="TCONTCP_PAR_SAVE" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="PFAC_SP" Datatype="Real" />
+                        <Member Name="GAIN" Datatype="Real" />
+                        <Member Name="TI" Datatype="Real" />
+                        <Member Name="TD" Datatype="Real" />
+                        <Member Name="D_F" Datatype="Real" />
+                        <Member Name="CON_ZONE" Datatype="Real" />
+                        <Member Name="CONZ_ON" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="PFAC_SP" Datatype="Real" />
+                  <Member Name="GAIN" Datatype="Real" />
+                  <Member Name="TI" Datatype="Real" />
+                  <Member Name="TD" Datatype="Real" />
+                  <Member Name="D_F" Datatype="Real" />
+                  <Member Name="CON_ZONE" Datatype="Real" />
+                  <Member Name="CONZ_ON" Datatype="Bool" />
+                  <Member Name="TUN_ON" Datatype="Bool" />
+                  <Member Name="TUN_ST" Datatype="Bool" />
+                  <Member Name="UNDO_PAR" Datatype="Bool" />
+                  <Member Name="SAVE_PAR" Datatype="Bool" />
+                  <Member Name="LOAD_PID" Datatype="Bool" />
+                  <Member Name="PID_ON" Datatype="Bool" />
+                  <Member Name="GAIN_P" Datatype="Real" />
+                  <Member Name="TU" Datatype="Real" />
+                  <Member Name="TA" Datatype="Real" />
+                  <Member Name="KIG" Datatype="Real" />
+                  <Member Name="N_PTN" Datatype="Real" />
+                  <Member Name="TM_LAG_P" Datatype="Real" />
+                  <Member Name="T_P_INF" Datatype="Real" />
+                  <Member Name="P_INF" Datatype="Real" />
+                  <Member Name="LMN0" Datatype="Real" />
+                  <Member Name="PV0" Datatype="Real" />
+                  <Member Name="PVDT0" Datatype="Real" />
+                  <Member Name="PVDT" Datatype="Real" />
+                  <Member Name="PVDT_MAX" Datatype="Real" />
+                  <Member Name="NOI_PVDT" Datatype="Real" />
+                  <Member Name="NOISE_PV" Datatype="Real" />
+                  <Member Name="FIL_CYC" Datatype="Int" />
+                  <Member Name="POI_CMAX" Datatype="Int" />
+                  <Member Name="POI_CYCL" Datatype="Int" />
+                  <Member Name="sctFil" Datatype="Int" />
+                  <Member Name="srPv" Datatype="Real" />
+                  <Member Name="srNoise" Datatype="Real" />
+                  <Member Name="srPvdt2" Datatype="Real" />
+                  <Member Name="srPvdtMax2" Datatype="Real" />
+                  <Member Name="srNoise2" Datatype="Real" />
+                  <Member Name="srPvOld2" Datatype="Real" />
+                  <Member Name="siStatus" Datatype="Int" />
+                  <Member Name="siSpDir" Datatype="Int" />
+                  <Member Name="srTime" Datatype="Real" />
+                  <Member Name="sPvOld" Datatype="Real" />
+                  <Member Name="sSpOld" Datatype="Real" />
+                  <Member Name="srPvMin" Datatype="Real" />
+                  <Member Name="srPVsim" Datatype="Real" />
+                  <Member Name="srEffDlmn" Datatype="Real" />
+                  <Member Name="sInvAlt" Datatype="Real" />
+                  <Member Name="sIanteilAlt" Datatype="Real" />
+                  <Member Name="sRestInt" Datatype="Real" />
+                  <Member Name="sRestDif" Datatype="Real" />
+                  <Member Name="sRueck" Datatype="Real" />
+                  <Member Name="sLmn" Datatype="Real" />
+                  <Member Name="spassPTm" Datatype="Real" />
+                  <Member Name="sCycTmPass" Datatype="Real" />
+                  <Member Name="sPTm" Datatype="Real" />
+                  <Member Name="srOptLmn" Datatype="Real" />
+                  <Member Name="sbOptLmn" Datatype="Bool" />
+                  <Member Name="sbConzOn" Datatype="Bool" />
+                  <Member Name="sbSpChange" Datatype="Bool" />
+                  <Member Name="sbReOpt" Datatype="Bool" />
+                  <Member Name="sLmnHlmOld" Datatype="Real" />
+                  <Member Name="sLmnLlmOld" Datatype="Real" />
+                  <Member Name="srDiffSp" Datatype="Real" />
+                  <Member Name="siTime" Datatype="DInt" />
+                  <Member Name="siCycle" Datatype="DInt" />
+                  <Member Name="siCycleP" Datatype="DInt" />
+                  <Member Name="siPulsFil" Datatype="Int" />
+                  <Member Name="srPulsPv" Datatype="Real" />
+                  <Member Name="srDPvdt" Datatype="Real" />
+                  <Member Name="srDPvdt2" Datatype="Real" />
+                  <Member Name="sNpInf" Datatype="Real" />
+                  <Member Name="sCycleM" Datatype="Real" />
+                  <Member Name="sGf11_30" Datatype="Real" />
+                  <Member Name="sGf12_30" Datatype="Real" />
+                  <Member Name="sGf21_30" Datatype="Real" />
+                  <Member Name="sGf22_30" Datatype="Real" />
+                  <Member Name="sPv0Sim_30" Datatype="Real" />
+                  <Member Name="srPVsim3_30" Datatype="Real" />
+                  <Member Name="srPVsim2_30" Datatype="Real" />
+                  <Member Name="srPVsim1_30" Datatype="Real" />
+                  <Member Name="srDelPvsim_30" Datatype="Real" />
+                  <Member Name="sGf11_20" Datatype="Real" />
+                  <Member Name="sGf12_20" Datatype="Real" />
+                  <Member Name="sGf21_20" Datatype="Real" />
+                  <Member Name="sGf22_20" Datatype="Real" />
+                  <Member Name="sPv0Sim_20" Datatype="Real" />
+                  <Member Name="srPVsim2_20" Datatype="Real" />
+                  <Member Name="srPVsim1_20" Datatype="Real" />
+                  <Member Name="srDelPvsim_20" Datatype="Real" />
+                  <Member Name="sGf11_15" Datatype="Real" />
+                  <Member Name="sGf12_15" Datatype="Real" />
+                  <Member Name="sGf21_15" Datatype="Real" />
+                  <Member Name="sGf22_15" Datatype="Real" />
+                  <Member Name="sPv0Sim_15" Datatype="Real" />
+                  <Member Name="srPVsim2_15" Datatype="Real" />
+                  <Member Name="srPVsim1_15" Datatype="Real" />
+                  <Member Name="srDelPvsim_15" Datatype="Real" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="mTCONT_S" Datatype="TCONT_S" Version="1.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="CYCLE" Datatype="Real" />
+                  <Member Name="SP_INT" Datatype="Real" />
+                  <Member Name="PV_IN" Datatype="Real" />
+                  <Member Name="PV_PER" Datatype="Int" />
+                  <Member Name="DISV" Datatype="Real" />
+                  <Member Name="LMNR_HS" Datatype="Bool" />
+                  <Member Name="LMNR_LS" Datatype="Bool" />
+                  <Member Name="LMNS_ON" Datatype="Bool" />
+                  <Member Name="LMNUP" Datatype="Bool" />
+                  <Member Name="LMNDN" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="QLMNUP" Datatype="Bool" />
+                  <Member Name="QLMNDN" Datatype="Bool" />
+                  <Member Name="PV" Datatype="Real" />
+                  <Member Name="ER" Datatype="Real" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="COM_RST" Datatype="Bool" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="PV_FAC" Datatype="Real" />
+                  <Member Name="PV_OFFS" Datatype="Real" />
+                  <Member Name="DEADB_W" Datatype="Real" />
+                  <Member Name="PFAC_SP" Datatype="Real" />
+                  <Member Name="GAIN" Datatype="Real" />
+                  <Member Name="TI" Datatype="Real" />
+                  <Member Name="MTR_TM" Datatype="Real" />
+                  <Member Name="PULSE_TM" Datatype="Real" />
+                  <Member Name="BREAK_TM" Datatype="Real" />
+                  <Member Name="PER_MODE" Datatype="Int" />
+                  <Member Name="PVPER_ON" Datatype="Bool" />
+                  <Member Name="sFbPVal" Datatype="Real" />
+                  <Member Name="sThrOn" Datatype="Real" />
+                  <Member Name="siImpAus" Datatype="Int" />
+                  <Member Name="stImpDauer" Datatype="Real" />
+                  <Member Name="stPausDauer" Datatype="Real" />
+                  <Member Name="srSpOld" Datatype="Real" />
+                  <Member Name="srDiffSp" Datatype="Real" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="aTon" Datatype="Array[0..1] of TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="PT" Datatype="Time" />
+                  <Member Name="ET" Datatype="Time" />
+                  <Member Name="IN" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="aSend" Datatype="Array[0..1] of TSEND_C" Version="3.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="REQ" Datatype="Bool" />
+                  <Member Name="CONT" Datatype="Bool" />
+                  <Member Name="LEN" Datatype="UDInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="DONE" Datatype="Bool" />
+                  <Member Name="BUSY" Datatype="Bool" />
+                  <Member Name="ERROR" Datatype="Bool" />
+                  <Member Name="STATUS" Datatype="Word" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="CONNECT" Datatype="Variant" />
+                  <Member Name="DATA" Datatype="Variant" />
+                  <Member Name="ADDR" Datatype="Variant" />
+                  <Member Name="COM_RST" Datatype="Bool" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="s_state" Datatype="Int" />
+                  <Member Name="s_locked" Datatype="Bool" />
+                  <Member Name="s_udp" Datatype="Bool" />
+                  <Member Name="s_configured" Datatype="Bool" />
+                  <Member Name="s_tcon_80A3" Datatype="Bool" />
+                  <Member Name="s_REQ" Datatype="Bool" />
+                  <Member Name="s_ConID" Datatype="CONN_OUC" />
+                  <Member Name="s_TCON" Datatype="TCON" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="CONNECT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDIAG" Datatype="T_DIAG" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="RESULT" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDIAG_Status" Datatype="TDiag_Status" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="InterfaceId" Datatype="HW_ANY" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="ConnectionType" Datatype="Byte" />
+                        <Member Name="ActiveEstablished" Datatype="Bool" />
+                        <Member Name="State" Datatype="Byte" />
+                        <Member Name="Kind" Datatype="Byte" />
+                        <Member Name="SentBytes" Datatype="UDInt" />
+                        <Member Name="ReceivedBytes" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TDISCON" Datatype="TDISCON" Version="2.1">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TSEND" Datatype="TSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TUSEND" Datatype="TUSEND" Version="4.0">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                        <Member Name="LEN" Datatype="UDInt" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut">
+                        <Member Name="DATA" Datatype="Variant" />
+                        <Member Name="ADDR" Datatype="Variant" />
+                      </Section>
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                  <Member Name="s_TRESET" Datatype="T_RESET" Version="1.2">
+                    <Sections>
+                      <Section Name="Input">
+                        <Member Name="REQ" Datatype="Bool" />
+                        <Member Name="ID" Datatype="CONN_OUC" />
+                      </Section>
+                      <Section Name="Output">
+                        <Member Name="DONE" Datatype="Bool" />
+                        <Member Name="BUSY" Datatype="Bool" />
+                        <Member Name="ERROR" Datatype="Bool" />
+                        <Member Name="STATUS" Datatype="Word" />
+                      </Section>
+                      <Section Name="InOut" />
+                      <Section Name="Static" />
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+        </Sections>
+      </Interface>
+      <Name>FB_SysMulti_DB</Name>
+      <Namespace />
+      <Number>6</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

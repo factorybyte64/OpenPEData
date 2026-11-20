@@ -1,0 +1,69 @@
+A: 119_hmi_screen_tag  B: 120_hmi_item_iofield
+CHANGED 1002:00cd:1808 ILScreenData name='Screen_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:03:53.618946Z' -> '2026-10-20T16:19:04.398102Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link ILScreenItems -> 1003:00cd:2018
+NEW     1003:00cd:2018 ILScreenItemData name='IOField_1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:19:04.398102Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:19:04.398102Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'IOField_1'
+          ICoreAttributes.Subtype = 'HmiIOField'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.36
+E = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1808
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:18:26.725152Z' -> '2026-10-20T16:19:04.398102Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[783] 01b707000000000000000000000010010000000101000000f505785eed55dd6eda3014dea344b9e8 -> bytes[854] 018d09000000000000000000000010010000000101000000bc06785eed56dd6edb3614eea308bae8
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:18:39.449220Z' -> '2026-10-20T16:19:10.239252Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:2400, 0014:0007:2401, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 119_hmi_screen_tag vs. 120_hmi_item_iofield (SHA-256, first 12)
+  GONE   IM/SearchIndex/_10.cfs  3cde0e01acdf -> -
+  GONE   IM/SearchIndex/_10_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_11.cfs  955381a93c3a -> -
+  NEW    IM/SearchIndex/_14.fdt  - -> 1c4b38dd9f4d
+  NEW    IM/SearchIndex/_14.fdx  - -> 7e66d4c3f674
+  NEW    IM/SearchIndex/_14.fnm  - -> fe343240e862
+  NEW    IM/SearchIndex/_14.frq  - -> de6772c2a99a
+  NEW    IM/SearchIndex/_14.prx  - -> b38fdbdbc293
+  NEW    IM/SearchIndex/_14.tii  - -> 42efcc10e7ec
+  NEW    IM/SearchIndex/_14.tis  - -> 403306a0a591
+  NEW    IM/SearchIndex/_14.tvd  - -> 1fff3a3d3766
+  NEW    IM/SearchIndex/_14.tvf  - -> 93f503aa36ca
+  NEW    IM/SearchIndex/_14.tvx  - -> 861df052feef
+  NEW    IM/SearchIndex/_14_1.del  - -> e5311eaf8b45
+  NEW    IM/SearchIndex/_15.cfs  - -> 398cb579b069
+  NEW    IM/SearchIndex/_15_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_16.cfs  - -> 5e215504eb7c
+  GONE   IM/SearchIndex/_u.fdt  32670e1ddda7 -> -
+  GONE   IM/SearchIndex/_u.fdx  00a28cde0258 -> -
+  GONE   IM/SearchIndex/_u.fnm  acee8a29fffa -> -
+  GONE   IM/SearchIndex/_u.frq  16ce83da4d3d -> -
+  GONE   IM/SearchIndex/_u.prx  9d2d83c979aa -> -
+  GONE   IM/SearchIndex/_u.tii  b2024debae5c -> -
+  GONE   IM/SearchIndex/_u.tis  a23fb38a071f -> -
+  GONE   IM/SearchIndex/_u.tvd  db7f7dee2342 -> -
+  GONE   IM/SearchIndex/_u.tvf  57ef1071719e -> -
+  GONE   IM/SearchIndex/_u.tvx  14688b893f26 -> -
+  GONE   IM/SearchIndex/_u_2.del  f5f94e240276 -> -
+  GONE   IM/SearchIndex/_v.cfs  1ed7efc86396 -> -
+  GONE   IM/SearchIndex/_v_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_w.cfs  0ef104f7aa7f -> -
+  GONE   IM/SearchIndex/_w_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_x.cfs  714cdeb0a4ba -> -
+  GONE   IM/SearchIndex/_y.cfs  978f830aeffe -> -
+  GONE   IM/SearchIndex/_z.cfs  4829aec47450 -> -
+  CHG    IM/SearchIndex/segments.gen  aad16471c98b -> da357178ce66
+  GONE   IM/SearchIndex/segments_n  9b35acd3e447 -> -
+  NEW    IM/SearchIndex/segments_s  - -> daf3eb43efdc
+  CHG    System/PEData.idx  800e142681d7 -> 2a8b38ff3d82
+  name 'IOField_1' found in: System/PEData.plf (utf-8 x1)

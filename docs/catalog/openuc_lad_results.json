@@ -1,0 +1,230 @@
+{
+ "ou001": {
+  "block": "FB_Lad_ou001",
+  "body": [
+   "TsendC pins=REQ,CONT,LEN,CONNECT,DATA,COM_RST,DONE,BUSY,ERROR,STATUS,ADDR"
+  ],
+  "ok": true,
+  "title": "TSEND_C: Send data via Ethernet",
+  "typed": true
+ },
+ "ou002": {
+  "block": "FB_Lad_ou002",
+  "body": [
+   "TsendC pins=REQ,CONT,LEN,CONNECT,DATA,ADDR,COM_RST,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "TSEND_C: Establishing a connection and sending data",
+  "typed": true
+ },
+ "ou003": {
+  "block": "FB_Lad_TrcvC",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "TRCV_C: Receive data via Ethernet"
+ },
+ "ou004": {
+  "block": "FB_Lad_ou004",
+  "body": [
+   "TrcvC pins=EN_R,CONT,LEN,ADHOC,CONNECT,DATA,ADDR,COM_RST,DONE,BUSY,ERROR,STATUS,RCVD_LEN"
+  ],
+  "ok": true,
+  "title": "TRCV_C: Establishing a connection and receiving data",
+  "typed": true
+ },
+ "ou005": {
+  "block": "FX_Lad_op005",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Description of TMAIL_C",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "TMAIL_C",
+   "pins": [
+    "REQ",
+    "TO_S",
+    "CC",
+    "SUBJECT",
+    "TEXT",
+    "ATTACHMENT",
+    "ATTACHMENT_NAME",
+    "MAIL_ADDR_PARAM",
+    "DONE",
+    "BUSY",
+    "ERROR",
+    "STATUS"
+   ],
+   "templates": {}
+  }
+ },
+ "ou006": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "TO_S and CC parameters"
+ },
+ "ou007": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "MAIL_ADDR_PARAM parameter"
+ },
+ "ou008": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "DONE, BUSY and ERROR parameters"
+ },
+ "ou009": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "STATUS parameter"
+ },
+ "ou010": {
+  "block": "FB_Lad_ou010",
+  "body": [
+   "Tcon pins=REQ,ID,CONNECT,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "TCON: Establish communication connection",
+  "typed": true
+ },
+ "ou011": {
+  "block": "FB_Lad_ou011",
+  "body": [
+   "Tcon pins=REQ,ID,CONNECT,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "TCON: Establish communication connection",
+  "typed": true
+ },
+ "ou012": {
+  "block": "FB_Lad_ou012",
+  "body": [
+   "Tdiscon pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "TDISCON: Terminate communication connection",
+  "typed": true
+ },
+ "ou013": {
+  "block": "FB_Lad_ou013",
+  "body": [
+   "Tsend pins=REQ,ID,LEN,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "TSEND: Send data via communication connection",
+  "typed": true
+ },
+ "ou014": {
+  "block": "FB_Lad_ou014",
+  "body": [
+   "Tsend pins=REQ,ID,LEN,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "TSEND: Send data via communication connection",
+  "typed": true
+ },
+ "ou015": {
+  "block": "FB_Lad_Trcv",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "TRCV: Receive data via communication connection"
+ },
+ "ou016": {
+  "block": "FB_Lad_ou016",
+  "body": [
+   "Trcv pins=EN_R,ID,LEN,ADHOC,DATA,NDR,BUSY,ERROR,STATUS,RCVD_LEN"
+  ],
+  "ok": true,
+  "title": "TRCV: Receive data via communication connection",
+  "typed": true
+ },
+ "ou017": {
+  "block": "FB_Lad_ou017",
+  "body": [
+   "Tusend pins=REQ,ID,LEN,DONE,BUSY,ERROR,STATUS,DATA,ADDR"
+  ],
+  "ok": true,
+  "title": "TUSEND: Sending data",
+  "typed": true
+ },
+ "ou018": {
+  "block": "FB_Lad_ou018",
+  "body": [
+   "Turcv pins=EN_R,ID,LEN,NDR,ERROR,BUSY,STATUS,RCVD_LEN,DATA,ADDR"
+  ],
+  "ok": true,
+  "title": "TURCV: Receiving data",
+  "typed": true
+ },
+ "ou019": {
+  "block": "FB_Lad_ou019",
+  "body": [
+   "T_Reset pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "T_RESET: Resetting the connection",
+  "typed": true
+ },
+ "ou020": {
+  "block": "FB_Lad_ou020",
+  "body": [
+   "T_Diag pins=REQ,ID,RESULT,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "T_DIAG: Checking the connection",
+  "typed": true
+ },
+ "ou021": {
+  "block": "FX_Lad_op021",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Description T_CONFIG",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_CONFIG",
+   "pins": [
+    "REQ",
+    "INTERFACE",
+    "CONF_DATA",
+    "DONE",
+    "BUSY",
+    "ERROR",
+    "STATUS",
+    "ERR_LOC"
+   ],
+   "templates": {}
+  }
+ },
+ "ou022": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter CONF_DATA"
+ },
+ "ou023": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "DONE, BUSY and ERROR parameters"
+ },
+ "ou024": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter STATUS and ERR_LOC"
+ }
+}

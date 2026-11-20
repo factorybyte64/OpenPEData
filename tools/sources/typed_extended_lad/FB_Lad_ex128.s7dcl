@@ -1,0 +1,32 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex128"
+    VAR_INPUT
+        v_laddr : HW_IOSYSTEM;
+        v_station_nr : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_len : DInt;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_data : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Get_Name;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Get_Name( LADDR := #v_laddr, STATION_NR := #v_station_nr, DATA := #v_data, DONE => #v_done, BUSY => #v_busy, ERROR => #v_error, LEN => #v_len, STATUS => #v_status )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

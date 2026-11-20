@@ -1,0 +1,33 @@
+A: 003_tagtable.zap21  B: 054_plc_opcua_interface.zap21
+NEW     0016:0212:1019 OpcUaServerConfigurationData name='SI_Test'
+          ICoreAttributes.CreationTime = '2026-10-25T20:27:33.872957Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:27:33.872957Z'
+          ICoreAttributes.Name = 'SI_Test'
+          ICoreAttributes.Subtype = 'OpcUa.ServerConfiguration'
+          ICoreAttributes.Author = ''
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff000000004a101000000000000000000000000000
+          link OpcUaServerConfigToParent -> 100e:0002:907
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 100e:0002:907 FolderData name='OpcUaServerFolderData'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-25T20:27:33.872957Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link OpcUaServerConfigRecords -> 0016:0212:1019
+          slot table [0, 146, 0, 0, 80, 0, 0, 154, 0] -> [0, 146, 0, 0, 80, 0, 0, 154, 238]
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:23:06.714383Z' -> '2026-10-25T20:27:33.872957Z'  (timestamp)
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:23:07.638658Z' -> '2026-10-25T20:27:34.048875Z'  (timestamp)
+          raw <links 1>: 260 -> 276 bytes
+          +link Categories -> 104a:0010:1018
+          slot table [0, 0, 0, 76, 0, 0, 432, 172] -> [0, 0, 0, 76, 0, 0, 448, 172]
+NEW     104a:0010:1018 HwcnCommentTextCategoryData name='HwcnCommentTextCategoryData'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HwcnCommentTextCategoryData'
+          ICoreAttributes.Subtype = ''
+          link DataContainer -> 1028:0002:433
+          link Environment -> 1028:0002:433
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

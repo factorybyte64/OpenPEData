@@ -1,0 +1,26 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex161"
+    VAR_INPUT
+        v_ioid : Byte;
+        v_laddr : HW_MODULE;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_area : Byte;
+        v_rack : Word;
+        v_slot : Word;
+        v_subaddr : Word;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Lgc_Gadr( IOID := #v_ioid, LADDR := #v_laddr, RET_VAL => #v_ret_val, AREA => #v_area, RACK => #v_rack, SLOT => #v_slot, SUBADDR => #v_subaddr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

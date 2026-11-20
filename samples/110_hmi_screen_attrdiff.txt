@@ -1,0 +1,104 @@
+A: 101_hmi_base  B: 110_hmi_screen
+NEW     1002:00cd:1808 ILScreenData name=None
+          ICoreAttributes.CreationTime = None
+          ICoreAttributes.IsShell = True
+          ICoreAttributes.ModifiedTime = None
+          ICoreAttributes.Author = 'factorybyte'
+          IPropertyDynamicLinkExpandoAttributes.nd& = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferencesInverse -> 1012:00cb:1071
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:22.741476Z' -> '2026-10-20T16:03:53.618946Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[517] 00ed01000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e -> bytes[697] 01f6050000000000000000000000100100000001010000009f05785eed544b6edb3010ed51042eb2
+CHANGED 100e:0002:106e FolderData name='ILScreenFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T16:03:53.618946Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link AggregatedElements -> 1002:00cd:1808
+          slot table [0, 126, 0, 0, 80, 0, 0, 134, 0] -> [0, 126, 0, 0, 80, 0, 0, 134, 218]
+CHANGED 1012:00cb:1071 HmiGraphXSettingsData name='HmiGraphXSettingsData'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T16:03:53.618946Z'  (timestamp)
+          ICoreExpandoLinkAttributes.IlStartScreen: '<absent>' -> bytes[6] 060000000000
+          raw ICoreExpandoLinkAttributes: 0 -> 46 bytes
+          raw <links 1>: 0 -> 52 bytes
+          +link ExpandoReferences -> 1002:00cd:1808
+          slot table [80, 0, 0, 0, 0, 0, 262, 178, 0] -> [80, 0, 872, 0, 0, 0, 262, 178, 820]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:32.379110Z' -> '2026-10-20T16:04:00.999296Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000c:0007:e, 000d:0007:10, 0011:0007:1bf0, 0011:0007:1bf1, 0014:0007:1bf2, 0015:0007:20
+
+DUMP ILScreenData
+OBJECT 1002:00cd:1808 ILScreenData name=None size=7034
+  slot  0 IFolderElementAttributes                                -
+  slot  1 ICoreAttributes                                         85 bytes
+  slot  2 ICoreExpandoAttributes                                  -
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 IAdditionalAttributes                                   -
+  slot  5 ISoftlinkAttributes                                     -
+  slot  6 ITextAttributes                                         -
+  slot  7 IEventExpandoAttributes                                 -
+  slot  8 IPropertyChangedExpandoAttributes                       -
+  slot  9 IPropertyDynamicExpandoAttributes                       6510 bytes
+  slot 10 IPropertyDynamicLinkExpandoAttributes                   136 bytes
+  slot 11 IQualityChangedExpandoAttributes                        58 bytes
+  slot 12 IPropertyExpandoAttributes                              -
+  slot 13 IReferenceExpandoAttributes                             -
+  slot 14 <links 0>                                               84 bytes
+  slot 15 <links 1>                                               52 bytes
+    ICoreAttributes.CreationTime = None
+    ICoreAttributes.IsShell = True
+    ICoreAttributes.ModifiedTime = None
+    ICoreAttributes.Author = 'factorybyte'
+    IPropertyDynamicLinkExpandoAttributes.nd& = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+    problem ICoreAttributes: ['var Name at 1222586051, expected 43']
+    problem IPropertyDynamicExpandoAttributes: ['simple expando count 4 does not fit used 3285']
+    problem IQualityChangedExpandoAttributes: ['simple expando count 1 does not fit used 38']
+    link AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link ExpandoReferencesInverse                 -> 1012:00cb:1071 HmiGraphXSettingsData name='HmiGraphXSettingsData'
+
+H-022: files outside System/PEData.plf, base 101_hmi_base vs. 110_hmi_screen (SHA-256, first 12)
+  GONE   IM/SearchIndex/_k.fdt  245fdf1fff3a -> -
+  GONE   IM/SearchIndex/_k.fdx  8e4019eefac4 -> -
+  GONE   IM/SearchIndex/_k.fnm  f5ea9c41f0be -> -
+  GONE   IM/SearchIndex/_k.frq  041bb492326c -> -
+  GONE   IM/SearchIndex/_k.prx  ce6f46905390 -> -
+  GONE   IM/SearchIndex/_k.tii  185d192bab24 -> -
+  GONE   IM/SearchIndex/_k.tis  d9f49c87de67 -> -
+  GONE   IM/SearchIndex/_k.tvd  505396d7a8cd -> -
+  GONE   IM/SearchIndex/_k.tvf  05cdbdb42e4a -> -
+  GONE   IM/SearchIndex/_k.tvx  c382128ff031 -> -
+  GONE   IM/SearchIndex/_k_3.del  48829a79ab12 -> -
+  GONE   IM/SearchIndex/_l.cfs  2e406706c934 -> -
+  GONE   IM/SearchIndex/_m.cfs  82dfa4cb8b1b -> -
+  GONE   IM/SearchIndex/_n.cfs  a92aca6f7098 -> -
+  GONE   IM/SearchIndex/_o.cfs  e9235270b9c3 -> -
+  GONE   IM/SearchIndex/_p.cfs  0ca9d81d09ca -> -
+  GONE   IM/SearchIndex/_q.cfs  745bdf6da71a -> -
+  GONE   IM/SearchIndex/_q_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_r.cfs  a36bd588b2ff -> -
+  NEW    IM/SearchIndex/_u.fdt  - -> 32670e1ddda7
+  NEW    IM/SearchIndex/_u.fdx  - -> 00a28cde0258
+  NEW    IM/SearchIndex/_u.fnm  - -> acee8a29fffa
+  NEW    IM/SearchIndex/_u.frq  - -> 16ce83da4d3d
+  NEW    IM/SearchIndex/_u.prx  - -> 9d2d83c979aa
+  NEW    IM/SearchIndex/_u.tii  - -> b2024debae5c
+  NEW    IM/SearchIndex/_u.tis  - -> a23fb38a071f
+  NEW    IM/SearchIndex/_u.tvd  - -> db7f7dee2342
+  NEW    IM/SearchIndex/_u.tvf  - -> 57ef1071719e
+  NEW    IM/SearchIndex/_u.tvx  - -> 14688b893f26
+  NEW    IM/SearchIndex/_u_1.del  - -> 10798ce1f02b
+  NEW    IM/SearchIndex/_v.cfs  - -> 1ed7efc86396
+  NEW    IM/SearchIndex/_v_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_w.cfs  - -> 0ef104f7aa7f
+  CHG    IM/SearchIndex/segments.gen  0b1189306b73 -> 96fc6a8fdefb
+  GONE   IM/SearchIndex/segments_e  11c5d270d2cd -> -
+  NEW    IM/SearchIndex/segments_j  - -> 7bdb31c5a885
+  CHG    System/PEData.idx  1a4448c5231e -> ad1c045d77f5
+  CHG    XRef/XRef.db  79b3cc6370e6 -> da7093d09b04
+  name 'Screen_1' found in: System/PEData.plf (utf-8 x1)

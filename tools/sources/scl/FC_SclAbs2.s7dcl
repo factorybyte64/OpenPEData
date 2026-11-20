@@ -1,0 +1,27 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclAbs2" : Void
+    VAR_TEMP
+        b : Bool;
+        i : Int;
+        d : DInt;
+        r : Real;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        %DB6.DBX0.0 := TRUE;
+        #b := %DB6.DBX0.0;
+        %DB6.DBW2 := 5;
+        #i := %DB6.DBW2;
+        %DB6.DBD4 := 7;
+        #d := %DB6.DBD4;
+        %DB6.DBB8 := 3;
+        "DB_Std".x := #b;
+        "DB_Std".i := #i;
+        "DB_Std".r := #r;
+        #i := "DB_Std".i + 1;
+    END_NETWORK
+END_FUNCTION

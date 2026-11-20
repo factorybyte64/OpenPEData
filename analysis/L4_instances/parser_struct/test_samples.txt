@@ -1,0 +1,604 @@
+| Sample | Source | Devices | Tag tables | Tags | Blocks | UDTs | Tags | Checks | Result |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 000_empty | folder | 0 | 0 | 0 | 0 | 0 | 0 | 5 | OK |
+| 000_empty | zap21 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | OK |
+| 000_empty2 | folder | 0 | 0 | 0 | 0 | 0 | 0 | 5 | OK |
+| 000_empty_resave | folder | 0 | 0 | 0 | 0 | 0 | 0 | 5 | OK |
+| 001_devgroup | folder | 0 | 0 | 0 | 0 | 0 | 0 | 5 | OK |
+| 001_devgroup | zap21 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | OK |
+| 002_cpu | folder | 1 | 1 | 0 | 1 | 0 | 0 | 10 | OK |
+| 002_cpu | zap21 | 1 | 1 | 0 | 1 | 0 | 0 | 10 | OK |
+| 003_tagtable | folder | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 003_tagtable | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 004_fb | folder | 1 | 1 | 0 | 2 | 0 | 0 | 10 | OK |
+| 004_fb | zap21 | 1 | 1 | 0 | 2 | 0 | 0 | 10 | OK |
+| 005_tag_int | folder | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 005_tag_int | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 006_tag_addr | folder | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 006_tag_addr | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 007_tag_comment | folder | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 007_tag_comment | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 008_tag_flags | folder | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 008_tag_flags | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 009_tag_rename | folder | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 009_tag_rename | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 18 | OK |
+| 010_dev_in_group | folder | 1 | 1 | 0 | 1 | 0 | 0 | 10 | OK |
+| 010_dev_in_group | zap21 | 1 | 1 | 0 | 1 | 0 | 0 | 10 | OK |
+| 011_tagtable_folder | folder | 1 | 3 | 1 | 1 | 0 | 0 | 21 | OK |
+| 011_tagtable_folder | zap21 | 1 | 3 | 1 | 1 | 0 | 0 | 21 | OK |
+| 012_tags_multi | folder | 1 | 2 | 9 | 1 | 0 | 0 | 67 | OK |
+| 012_tags_multi | zap21 | 1 | 2 | 9 | 1 | 0 | 0 | 67 | OK |
+| 013_tag_umlaut | folder | 1 | 2 | 1 | 1 | 0 | 0 | 19 | OK |
+| 013_tag_umlaut | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 19 | OK |
+| 014_tag_delete | folder | 1 | 2 | 0 | 1 | 0 | 0 | 13 | OK |
+| 014_tag_delete | zap21 | 1 | 2 | 0 | 1 | 0 | 0 | 13 | OK |
+| 015_cpu2 | folder | 2 | 2 | 0 | 2 | 0 | 0 | 16 | OK |
+| 015_cpu2 | zap21 | 2 | 2 | 0 | 2 | 0 | 0 | 16 | OK |
+| 016_tag_accessible | folder | 1 | 2 | 1 | 1 | 0 | 0 | 19 | OK |
+| 016_tag_accessible | zap21 | 1 | 2 | 1 | 1 | 0 | 0 | 19 | OK |
+| 017_udt | folder | 1 | 1 | 0 | 2 | 1 | 3 | 24 | OK |
+| 017_udt | zap21 | 1 | 1 | 0 | 2 | 1 | 3 | 24 | OK |
+| 018_db_global | folder | 1 | 1 | 0 | 3 | 1 | 10 | 82 | OK |
+| 018_db_global | zap21 | 1 | 1 | 0 | 3 | 1 | 10 | 82 | OK |
+| 019_db_instance | folder | 1 | 1 | 0 | 4 | 1 | 10 | 84 | OK |
+| 019_db_instance | zap21 | 1 | 1 | 0 | 4 | 1 | 10 | 84 | OK |
+| 020_block_group | folder | 1 | 1 | 0 | 5 | 1 | 11 | 94 | OK |
+| 020_block_group | zap21 | 1 | 1 | 0 | 5 | 1 | 11 | 94 | OK |
+| 021_mastercopy | folder | 1 | 1 | 0 | 2 | 0 | 0 | 11 | OK |
+| 021_mastercopy | zap21 | 1 | 1 | 0 | 2 | 0 | 0 | 11 | OK |
+| 022_db_udt | folder | 1 | 1 | 0 | 6 | 1 | 15 | 111 | OK |
+| 022_db_udt | zap21 | 1 | 1 | 0 | 6 | 1 | 15 | 111 | OK |
+
+| Sample (interfaces FB/FC/IDB) | Source | Interface tags | Checks | Result |
+| --- | --- | --- | --- | --- |
+| 023_fb_iface | folder | 32 | 142 | OK |
+| 023_fb_iface | zap21 | 32 | 142 | OK |
+| 024_fc_iface | folder | 30 | 134 | OK |
+| 024_fc_iface | zap21 | 30 | 134 | OK |
+| 025_fb_idb | folder | 26 | 118 | OK |
+| 025_fb_idb | zap21 | 26 | 118 | OK |
+| 026_fc_scl | folder | 18 | 86 | OK |
+| 026_fc_scl | zap21 | 18 | 86 | OK |
+| 027_fc_lad | folder | 22 | 70 | OK |
+| 027_fc_lad | zap21 | 22 | 70 | OK |
+| 028_fc_fbd | folder | 20 | 70 | OK |
+| 028_fc_fbd | zap21 | 20 | 70 | OK |
+| 029_fb_idb_value | folder | 26 | 118 | OK |
+| 029_fb_idb_value | zap21 | 26 | 118 | OK |
+
+Integrity (`--verify`): header hash, record hashes, hash chain and RSA signature of all $$COMMIT$ records; tamper test (5 checks): OK
+
+| Sample | Source | Commits (chain+signature) | Checks | Result |
+| --- | --- | --- | --- | --- |
+| 000_empty | folder | 2 | 2 | OK |
+| 000_empty | zap21 | 1 | 2 | OK |
+| 000_empty2 | folder | 2 | 2 | OK |
+| 000_empty_resave | folder | 2 | 2 | OK |
+| 001_devgroup | folder | 3 | 2 | OK |
+| 001_devgroup | zap21 | 1 | 2 | OK |
+| 002_cpu | folder | 3 | 2 | OK |
+| 002_cpu | zap21 | 1 | 2 | OK |
+| 003_tagtable | folder | 4 | 2 | OK |
+| 003_tagtable | zap21 | 1 | 2 | OK |
+| 004_fb | folder | 4 | 2 | OK |
+| 004_fb | zap21 | 1 | 2 | OK |
+| 005_tag_int | folder | 5 | 2 | OK |
+| 005_tag_int | zap21 | 1 | 2 | OK |
+| 006_tag_addr | folder | 5 | 2 | OK |
+| 006_tag_addr | zap21 | 1 | 2 | OK |
+| 007_tag_comment | folder | 5 | 2 | OK |
+| 007_tag_comment | zap21 | 1 | 2 | OK |
+| 008_tag_flags | folder | 5 | 2 | OK |
+| 008_tag_flags | zap21 | 1 | 2 | OK |
+| 009_tag_rename | folder | 5 | 2 | OK |
+| 009_tag_rename | zap21 | 1 | 2 | OK |
+| 010_dev_in_group | folder | 4 | 2 | OK |
+| 010_dev_in_group | zap21 | 1 | 2 | OK |
+| 011_tagtable_folder | folder | 5 | 2 | OK |
+| 011_tagtable_folder | zap21 | 1 | 2 | OK |
+| 012_tags_multi | folder | 5 | 2 | OK |
+| 012_tags_multi | zap21 | 1 | 2 | OK |
+| 013_tag_umlaut | folder | 5 | 2 | OK |
+| 013_tag_umlaut | zap21 | 1 | 2 | OK |
+| 014_tag_delete | folder | 5 | 2 | OK |
+| 014_tag_delete | zap21 | 1 | 2 | OK |
+| 015_cpu2 | folder | 4 | 2 | OK |
+| 015_cpu2 | zap21 | 1 | 2 | OK |
+| 016_tag_accessible | folder | 5 | 2 | OK |
+| 016_tag_accessible | zap21 | 1 | 2 | OK |
+| 017_udt | folder | 5 | 2 | OK |
+| 017_udt | zap21 | 1 | 2 | OK |
+| 018_db_global | folder | 6 | 2 | OK |
+| 018_db_global | zap21 | 1 | 2 | OK |
+| 019_db_instance | folder | 7 | 2 | OK |
+| 019_db_instance | zap21 | 1 | 2 | OK |
+| 020_block_group | folder | 8 | 2 | OK |
+| 020_block_group | zap21 | 1 | 2 | OK |
+| 021_mastercopy | folder | 5 | 2 | OK |
+| 021_mastercopy | zap21 | 1 | 2 | OK |
+| 022_db_udt | folder | 9 | 2 | OK |
+| 022_db_udt | zap21 | 1 | 2 | OK |
+| 023_fb_iface | folder | 10 | 2 | OK |
+| 023_fb_iface | zap21 | 1 | 2 | OK |
+| 024_fc_iface | folder | 11 | 2 | OK |
+| 024_fc_iface | zap21 | 1 | 2 | OK |
+| 025_fb_idb | folder | 11 | 2 | OK |
+| 025_fb_idb | zap21 | 1 | 2 | OK |
+| 026_fc_scl | folder | 12 | 2 | OK |
+| 026_fc_scl | zap21 | 1 | 2 | OK |
+| 027_fc_lad | folder | 13 | 2 | OK |
+| 027_fc_lad | zap21 | 1 | 2 | OK |
+| 028_fc_fbd | folder | 14 | 2 | OK |
+| 028_fc_fbd | zap21 | 1 | 2 | OK |
+| 029_fb_idb_value | folder | 12 | 2 | OK |
+| 029_fb_idb_value | zap21 | 1 | 2 | OK |
+| 030_scl_all | folder | 14 | 2 | OK |
+| 030_scl_all | zap21 | 1 | 2 | OK |
+| 031_lad_all | folder | 15 | 2 | OK |
+| 031_lad_all | zap21 | 1 | 2 | OK |
+| 032_fbd_all | folder | 15 | 2 | OK |
+| 032_fbd_all | zap21 | 1 | 2 | OK |
+| 034_flg_misc | folder | 15 | 2 | OK |
+| 034_flg_misc | zap21 | 1 | 2 | OK |
+| 035_scl_rest | folder | 15 | 2 | OK |
+| 035_scl_rest | zap21 | 1 | 2 | OK |
+| 036_tech | folder | 15 | 2 | OK |
+| 036_tech | zap21 | 1 | 2 | OK |
+| 037_lad_xml | folder | 14 | 2 | OK |
+| 100_hmi_device | folder | 4 | 2 | OK |
+| 100_hmi_device | zap21 | 1 | 2 | OK |
+| 101_hmi_base | folder | 5 | 2 | OK |
+| 101_hmi_base | zap21 | 1 | 2 | OK |
+| 102_hmi_tag_int | folder | 6 | 2 | OK |
+| 102_hmi_tag_int | zap21 | 1 | 2 | OK |
+| 103_hmi_tag_ext | folder | 6 | 2 | OK |
+| 103_hmi_tag_ext | zap21 | 1 | 2 | OK |
+| 104_hmi_tag_cycle | folder | 7 | 2 | OK |
+| 104_hmi_tag_cycle | zap21 | 1 | 2 | OK |
+| 105_hmi_tag_comment | folder | 7 | 2 | OK |
+| 105_hmi_tag_comment | zap21 | 1 | 2 | OK |
+| 106_hmi_tagtable_group | folder | 6 | 2 | OK |
+| 106_hmi_tagtable_group | zap21 | 1 | 2 | OK |
+| 107_hmi_alarmclass | folder | 7 | 2 | OK |
+| 107_hmi_alarmclass | zap21 | 1 | 2 | OK |
+| 108_hmi_alarm_discrete | folder | 7 | 2 | OK |
+| 108_hmi_alarm_discrete | zap21 | 1 | 2 | OK |
+| 109_hmi_alarm_analog | folder | 7 | 2 | OK |
+| 109_hmi_alarm_analog | zap21 | 1 | 2 | OK |
+| 110_hmi_screen | folder | 6 | 2 | OK |
+| 110_hmi_screen | zap21 | 1 | 2 | OK |
+| 111_hmi_screen_rename | folder | 7 | 2 | OK |
+| 111_hmi_screen_rename | zap21 | 1 | 2 | OK |
+| 112_hmi_screen_backcolor | folder | 7 | 2 | OK |
+| 112_hmi_screen_backcolor | zap21 | 1 | 2 | OK |
+| 113_hmi_screen_group | folder | 6 | 2 | OK |
+| 113_hmi_screen_group | zap21 | 1 | 2 | OK |
+| 114_hmi_screen2 | folder | 7 | 2 | OK |
+| 114_hmi_screen2 | zap21 | 1 | 2 | OK |
+| 115_hmi_item_rect | folder | 7 | 2 | OK |
+| 115_hmi_item_rect | zap21 | 1 | 2 | OK |
+| 116_hmi_item_rect_pos | folder | 8 | 2 | OK |
+| 116_hmi_item_rect_pos | zap21 | 1 | 2 | OK |
+| 117_hmi_item_rect_color | folder | 8 | 2 | OK |
+| 117_hmi_item_rect_color | zap21 | 1 | 2 | OK |
+| 118_hmi_item_text | folder | 7 | 2 | OK |
+| 118_hmi_item_text | zap21 | 1 | 2 | OK |
+| 119_hmi_screen_tag | folder | 7 | 2 | OK |
+| 119_hmi_screen_tag | zap21 | 1 | 2 | OK |
+| 120_hmi_item_iofield | folder | 8 | 2 | OK |
+| 120_hmi_item_iofield | zap21 | 1 | 2 | OK |
+| 121_hmi_item_iofield_pvtext | folder | 9 | 2 | OK |
+| 121_hmi_item_iofield_pvtext | zap21 | 1 | 2 | OK |
+| 122_hmi_item_button | folder | 7 | 2 | OK |
+| 122_hmi_item_button | zap21 | 1 | 2 | OK |
+| 123_hmi_button_event | folder | 8 | 2 | OK |
+| 123_hmi_button_event | zap21 | 1 | 2 | OK |
+| 124_hmi_item_iofield_dyn | folder | 9 | 2 | OK |
+| 124_hmi_item_iofield_dyn | zap21 | 1 | 2 | OK |
+| 126_hmi_subnet | folder | 10 | 2 | OK |
+| 126_hmi_subnet | zap21 | 1 | 2 | OK |
+| F01_hmi_allobjects | folder | 8 | 2 | OK |
+| F01_hmi_allobjects | zap21 | 1 | 2 | OK |
+| L01_udt_type_inwork | folder | 6 | 2 | OK |
+| L01_udt_type_inwork | zap21 | 1 | 2 | OK |
+| L02_udt_type_released | folder | 7 | 2 | OK |
+| L02_udt_type_released | zap21 | 1 | 2 | OK |
+| L03_udt_type_v2 | folder | 8 | 2 | OK |
+| L03_udt_type_v2 | zap21 | 1 | 2 | OK |
+| L04_default_changed | folder | 9 | 2 | OK |
+| L04_default_changed | zap21 | 1 | 2 | OK |
+| L05_fb_type_inwork | folder | 5 | 2 | OK |
+| L05_fb_type_inwork | zap21 | 1 | 2 | OK |
+| L06_fb_type_released | folder | 6 | 2 | OK |
+| L06_fb_type_released | zap21 | 1 | 2 | OK |
+| L07_fc_type | folder | 7 | 2 | OK |
+| L07_fc_type | zap21 | 1 | 2 | OK |
+| L09_type_depends | folder | 8 | 2 | OK |
+| L09_type_depends | zap21 | 1 | 2 | OK |
+| L10_mc_fc | folder | 13 | 2 | OK |
+| L10_mc_fc | zap21 | 1 | 2 | OK |
+| L11_mc_fb_udt | folder | 11 | 2 | OK |
+| L11_mc_fb_udt | zap21 | 1 | 2 | OK |
+| L12_mc_two | folder | 12 | 2 | OK |
+| L12_mc_two | zap21 | 1 | 2 | OK |
+| L13_mc_instantiate | folder | 12 | 2 | OK |
+| L13_mc_instantiate | zap21 | 1 | 2 | OK |
+| L14_mc_delete | folder | 13 | 2 | OK |
+| L14_mc_delete | zap21 | 1 | 2 | OK |
+| L15_mc_db | folder | 10 | 2 | OK |
+| L15_mc_db | zap21 | 1 | 2 | OK |
+| L16_inst_two_devices | folder | 8 | 2 | OK |
+| L16_inst_two_devices | zap21 | 1 | 2 | OK |
+| L17_inst_outdated | folder | 9 | 2 | OK |
+| L17_inst_outdated | zap21 | 1 | 2 | OK |
+| L18_inst_edit_outdated | folder | 10 | 2 | OK |
+| L18_inst_edit_outdated | zap21 | 1 | 2 | OK |
+| L19_version_discarded | folder | 11 | 2 | OK |
+| L19_version_discarded | zap21 | 1 | 2 | OK |
+| L20_default_two_devices | folder | 11 | 2 | OK |
+| L20_default_two_devices | zap21 | 1 | 2 | OK |
+| L21_fb_inst_outdated | folder | 7 | 2 | OK |
+| L21_fb_inst_outdated | zap21 | 1 | 2 | OK |
+
+Derived stores: `PEData.idx` against PEData.plf (folders only), `XRef.db` (parts -> plf keys, relations, tag addresses against LogicalAddress, Savepoint)
+
+| Sample | Source | XRef relations | Checks | Result |
+| --- | --- | --- | --- | --- |
+| 000_empty | folder | 0 | 4 | OK |
+| 000_empty | zap21 | 0 | 2 | OK |
+| 000_empty2 | folder | 0 | 4 | OK |
+| 000_empty_resave | folder | 0 | 4 | OK |
+| 001_devgroup | folder | 0 | 4 | OK |
+| 001_devgroup | zap21 | 0 | 2 | OK |
+| 002_cpu | folder | 0 | 4 | OK |
+| 002_cpu | zap21 | 0 | 2 | OK |
+| 003_tagtable | folder | 0 | 6 | OK |
+| 003_tagtable | zap21 | 0 | 4 | OK |
+| 004_fb | folder | 0 | 4 | OK |
+| 004_fb | zap21 | 0 | 2 | OK |
+| 005_tag_int | folder | 0 | 5 | OK |
+| 005_tag_int | zap21 | 0 | 3 | OK |
+| 006_tag_addr | folder | 0 | 6 | OK |
+| 006_tag_addr | zap21 | 0 | 4 | OK |
+| 007_tag_comment | folder | 0 | 6 | OK |
+| 007_tag_comment | zap21 | 0 | 4 | OK |
+| 008_tag_flags | folder | 0 | 6 | OK |
+| 008_tag_flags | zap21 | 0 | 4 | OK |
+| 009_tag_rename | folder | 0 | 6 | OK |
+| 009_tag_rename | zap21 | 0 | 4 | OK |
+| 010_dev_in_group | folder | 0 | 4 | OK |
+| 010_dev_in_group | zap21 | 0 | 2 | OK |
+| 011_tagtable_folder | folder | 0 | 6 | OK |
+| 011_tagtable_folder | zap21 | 0 | 4 | OK |
+| 012_tags_multi | folder | 0 | 14 | OK |
+| 012_tags_multi | zap21 | 0 | 12 | OK |
+| 013_tag_umlaut | folder | 0 | 6 | OK |
+| 013_tag_umlaut | zap21 | 0 | 4 | OK |
+| 014_tag_delete | folder | 0 | 5 | OK |
+| 014_tag_delete | zap21 | 0 | 3 | OK |
+| 015_cpu2 | folder | 0 | 4 | OK |
+| 015_cpu2 | zap21 | 0 | 2 | OK |
+| 016_tag_accessible | folder | 0 | 6 | OK |
+| 016_tag_accessible | zap21 | 0 | 4 | OK |
+| 017_udt | folder | 0 | 4 | OK |
+| 017_udt | zap21 | 0 | 2 | OK |
+| 018_db_global | folder | 0 | 4 | OK |
+| 018_db_global | zap21 | 0 | 2 | OK |
+| 019_db_instance | folder | 1 | 5 | OK |
+| 019_db_instance | zap21 | 1 | 3 | OK |
+| 020_block_group | folder | 1 | 5 | OK |
+| 020_block_group | zap21 | 1 | 3 | OK |
+| 021_mastercopy | folder | 0 | 4 | OK |
+| 021_mastercopy | zap21 | 0 | 2 | OK |
+| 022_db_udt | folder | 2 | 5 | OK |
+| 022_db_udt | zap21 | 2 | 3 | OK |
+| 023_fb_iface | folder | 16 | 5 | OK |
+| 023_fb_iface | zap21 | 16 | 3 | OK |
+| 024_fc_iface | folder | 32 | 5 | OK |
+| 024_fc_iface | zap21 | 32 | 3 | OK |
+| 025_fb_idb | folder | 17 | 5 | OK |
+| 025_fb_idb | zap21 | 17 | 3 | OK |
+| 026_fc_scl | folder | 36 | 5 | OK |
+| 026_fc_scl | zap21 | 36 | 3 | OK |
+| 027_fc_lad | folder | 41 | 5 | OK |
+| 027_fc_lad | zap21 | 41 | 3 | OK |
+| 028_fc_fbd | folder | 46 | 5 | OK |
+| 028_fc_fbd | zap21 | 46 | 3 | OK |
+| 029_fb_idb_value | folder | 17 | 5 | OK |
+| 029_fb_idb_value | zap21 | 17 | 3 | OK |
+| 030_scl_all | folder | 628 | 25 | OK |
+| 030_scl_all | zap21 | 628 | 23 | OK |
+| 031_lad_all | folder | 23205 | 25 | OK |
+| 031_lad_all | zap21 | 23205 | 23 | OK |
+| 032_fbd_all | folder | 18394 | 25 | OK |
+| 032_fbd_all | zap21 | 18394 | 23 | OK |
+| 034_flg_misc | folder | 833 | 25 | OK |
+| 034_flg_misc | zap21 | 833 | 23 | OK |
+| 035_scl_rest | folder | 657 | 25 | OK |
+| 035_scl_rest | zap21 | 657 | 23 | OK |
+| 036_tech | folder | 850 | 25 | OK |
+| 036_tech | zap21 | 850 | 23 | OK |
+| 037_lad_xml | folder | 628 | 25 | OK |
+| 100_hmi_device | folder | 108 | 5 | OK |
+| 100_hmi_device | zap21 | 108 | 3 | OK |
+| 101_hmi_base | folder | 108 | 6 | OK |
+| 101_hmi_base | zap21 | 108 | 4 | OK |
+| 102_hmi_tag_int | folder | 109 | 6 | OK |
+| 102_hmi_tag_int | zap21 | 109 | 4 | OK |
+| 103_hmi_tag_ext | folder | 111 | 6 | OK |
+| 103_hmi_tag_ext | zap21 | 111 | 4 | OK |
+| 104_hmi_tag_cycle | folder | 111 | 6 | OK |
+| 104_hmi_tag_cycle | zap21 | 111 | 4 | OK |
+| 105_hmi_tag_comment | folder | 111 | 6 | OK |
+| 105_hmi_tag_comment | zap21 | 111 | 4 | OK |
+| 106_hmi_tagtable_group | folder | 108 | 6 | OK |
+| 106_hmi_tagtable_group | zap21 | 108 | 4 | OK |
+| 107_hmi_alarmclass | folder | 111 | 6 | OK |
+| 107_hmi_alarmclass | zap21 | 111 | 4 | OK |
+| 108_hmi_alarm_discrete | folder | 113 | 6 | OK |
+| 108_hmi_alarm_discrete | zap21 | 113 | 4 | OK |
+| 109_hmi_alarm_analog | folder | 114 | 6 | OK |
+| 109_hmi_alarm_analog | zap21 | 114 | 4 | OK |
+| 110_hmi_screen | folder | 108 | 6 | OK |
+| 110_hmi_screen | zap21 | 108 | 4 | OK |
+| 111_hmi_screen_rename | folder | 108 | 6 | OK |
+| 111_hmi_screen_rename | zap21 | 108 | 4 | OK |
+| 112_hmi_screen_backcolor | folder | 108 | 6 | OK |
+| 112_hmi_screen_backcolor | zap21 | 108 | 4 | OK |
+| 113_hmi_screen_group | folder | 108 | 6 | OK |
+| 113_hmi_screen_group | zap21 | 108 | 4 | OK |
+| 114_hmi_screen2 | folder | 108 | 6 | OK |
+| 114_hmi_screen2 | zap21 | 108 | 4 | OK |
+| 115_hmi_item_rect | folder | 108 | 6 | OK |
+| 115_hmi_item_rect | zap21 | 108 | 4 | OK |
+| 116_hmi_item_rect_pos | folder | 108 | 6 | OK |
+| 116_hmi_item_rect_pos | zap21 | 108 | 4 | OK |
+| 117_hmi_item_rect_color | folder | 108 | 6 | OK |
+| 117_hmi_item_rect_color | zap21 | 108 | 4 | OK |
+| 118_hmi_item_text | folder | 108 | 6 | OK |
+| 118_hmi_item_text | zap21 | 108 | 4 | OK |
+| 119_hmi_screen_tag | folder | 109 | 6 | OK |
+| 119_hmi_screen_tag | zap21 | 109 | 4 | OK |
+| 120_hmi_item_iofield | folder | 109 | 6 | OK |
+| 120_hmi_item_iofield | zap21 | 109 | 4 | OK |
+| 121_hmi_item_iofield_pvtext | folder | 109 | 6 | OK |
+| 121_hmi_item_iofield_pvtext | zap21 | 109 | 4 | OK |
+| 122_hmi_item_button | folder | 108 | 6 | OK |
+| 122_hmi_item_button | zap21 | 108 | 4 | OK |
+| 123_hmi_button_event | folder | 109 | 6 | OK |
+| 123_hmi_button_event | zap21 | 109 | 4 | OK |
+| 124_hmi_item_iofield_dyn | folder | 110 | 6 | OK |
+| 124_hmi_item_iofield_dyn | zap21 | 110 | 4 | OK |
+| 126_hmi_subnet | folder | 110 | 6 | OK |
+| 126_hmi_subnet | zap21 | 110 | 4 | OK |
+| F01_hmi_allobjects | folder | 127 | 6 | OK |
+| F01_hmi_allobjects | zap21 | 127 | 4 | OK |
+| L01_udt_type_inwork | folder | 0 | 5 | OK |
+| L01_udt_type_inwork | zap21 | 0 | 3 | OK |
+| L02_udt_type_released | folder | 0 | 5 | OK |
+| L02_udt_type_released | zap21 | 0 | 3 | OK |
+| L03_udt_type_v2 | folder | 0 | 5 | OK |
+| L03_udt_type_v2 | zap21 | 0 | 3 | OK |
+| L04_default_changed | folder | 0 | 5 | OK |
+| L04_default_changed | zap21 | 0 | 3 | OK |
+| L05_fb_type_inwork | folder | 4 | 5 | OK |
+| L05_fb_type_inwork | zap21 | 4 | 3 | OK |
+| L06_fb_type_released | folder | 2 | 5 | OK |
+| L06_fb_type_released | zap21 | 2 | 3 | OK |
+| L07_fc_type | folder | 5 | 5 | OK |
+| L07_fc_type | zap21 | 5 | 3 | OK |
+| L09_type_depends | folder | 6 | 5 | OK |
+| L09_type_depends | zap21 | 6 | 3 | OK |
+| L10_mc_fc | folder | 36 | 5 | OK |
+| L10_mc_fc | zap21 | 36 | 3 | OK |
+| L11_mc_fb_udt | folder | 16 | 5 | OK |
+| L11_mc_fb_udt | zap21 | 16 | 3 | OK |
+| L12_mc_two | folder | 32 | 5 | OK |
+| L12_mc_two | zap21 | 32 | 3 | OK |
+| L13_mc_instantiate | folder | 38 | 5 | OK |
+| L13_mc_instantiate | zap21 | 38 | 3 | OK |
+| L14_mc_delete | folder | 32 | 5 | OK |
+| L14_mc_delete | zap21 | 32 | 3 | OK |
+| L15_mc_db | folder | 2 | 5 | OK |
+| L15_mc_db | zap21 | 2 | 3 | OK |
+| L16_inst_two_devices | folder | 0 | 5 | OK |
+| L16_inst_two_devices | zap21 | 0 | 3 | OK |
+| L17_inst_outdated | folder | 0 | 5 | OK |
+| L17_inst_outdated | zap21 | 0 | 3 | OK |
+| L18_inst_edit_outdated | folder | 0 | 5 | OK |
+| L18_inst_edit_outdated | zap21 | 0 | 3 | OK |
+| L19_version_discarded | folder | 0 | 5 | OK |
+| L19_version_discarded | zap21 | 0 | 3 | OK |
+| L20_default_two_devices | folder | 0 | 5 | OK |
+| L20_default_two_devices | zap21 | 0 | 3 | OK |
+| L21_fb_inst_outdated | folder | 4 | 5 | OK |
+| L21_fb_inst_outdated | zap21 | 4 | 3 | OK |
+
+| Sample (SCL against SD export) | Source | Networks | Checks | Result |
+| --- | --- | --- | --- | --- |
+| 030_scl_all | folder | 15 | 45 | OK |
+| 030_scl_all | zap21 | 15 | 45 | OK |
+| 031_lad_all | folder | 0 | 0 | OK |
+| 031_lad_all | zap21 | 0 | 0 | OK |
+| 032_fbd_all | folder | 0 | 0 | OK |
+| 032_fbd_all | zap21 | 0 | 0 | OK |
+| 034_flg_misc | folder | 4 | 12 | OK |
+| 034_flg_misc | zap21 | 4 | 12 | OK |
+| 035_scl_rest | folder | 1 | 3 | OK |
+| 035_scl_rest | zap21 | 1 | 3 | OK |
+| 036_tech | folder | 1 | 3 | OK |
+| 036_tech | zap21 | 1 | 3 | OK |
+
+SCL tokens in the source text (count over all samples), status: text/attribute/container/special = handled, - = not handled
+
+| Tag | Count | Status |
+| --- | --- | --- |
+| AdMod | 2 | special |
+| BC | 5 | container |
+| BCE | 5 | text |
+| BCL | 6 | attribute |
+| BL | 1545 | special |
+| BoxC | 25 | text |
+| BoxO | 25 | text |
+| BracC | 123 | text |
+| BracO | 123 | text |
+| CaseElem | 7 | container |
+| CaseRange | 9 | container |
+| CaseSRange | 3 | container |
+| Colon | 8 | text |
+| Comma | 128 | text |
+| Const | 308 | attribute |
+| Dot | 75 | text |
+| Expression | 1251 | container |
+| FctCa | 85 | container |
+| FiSt | 367 | text |
+| Fold | 132 | container |
+| InstCa | 17 | container |
+| KwBY | 2 | text |
+| KwDO | 8 | text |
+| KwELSE | 4 | text |
+| KwELSIF | 3 | text |
+| KwENDC | 3 | text |
+| KwENDFOR | 6 | text |
+| KwENDIF | 9 | text |
+| KwENDR | 2 | text |
+| KwENDW | 2 | text |
+| KwEndRegion | 3 | text |
+| KwOF | 3 | text |
+| KwTHEN | 12 | text |
+| KwTO | 6 | text |
+| KwUNTIL | 2 | text |
+| LC | 28 | attribute |
+| LDots | 3 | text |
+| Label | 1 | container |
+| NL | 421 | special |
+| OpAAND | 1 | text |
+| OpAND | 5 | text |
+| OpAs | 471 | text |
+| OpDeref | 3 | text |
+| OpDi | 5 | text |
+| OpDivAs | 1 | text |
+| OpE | 6 | text |
+| OpG | 8 | text |
+| OpGE | 1 | text |
+| OpL | 4 | text |
+| OpLE | 4 | text |
+| OpMOD | 1 | text |
+| OpMi | 9 | text |
+| OpMinAs | 1 | text |
+| OpMu | 13 | text |
+| OpMulAs | 1 | text |
+| OpNOT | 6 | text |
+| OpOR | 3 | text |
+| OpPa | 12 | text |
+| OpPl | 26 | text |
+| OpPlAs | 8 | text |
+| OpPo | 1 | text |
+| OpRef | 3 | text |
+| OpU | 3 | text |
+| OpXOR | 3 | text |
+| Param | 215 | container |
+| RootStatements | 21 | container |
+| Statement | 370 | container |
+| Statements | 36 | container |
+| Sub | 102 | attribute |
+| SymLa | 1 | attribute |
+| SymPa | 215 | attribute |
+| SymVa | 741 | attribute |
+| SymVaP | 2 | container |
+
+| Sample (LAD/FBD against SimaticML) | Source | Wirings | Checks | Result |
+| --- | --- | --- | --- | --- |
+| 030_scl_all | folder | 0 | 0 | OK |
+| 030_scl_all | zap21 | 0 | 0 | OK |
+| 031_lad_all | folder | 511 | 785 | OK |
+| 031_lad_all | zap21 | 511 | 785 | OK |
+| 032_fbd_all | folder | 419 | 708 | OK |
+| 032_fbd_all | zap21 | 419 | 708 | OK |
+| 034_flg_misc | folder | 94 | 186 | OK |
+| 034_flg_misc | zap21 | 94 | 186 | OK |
+| 035_scl_rest | folder | 0 | 0 | OK |
+| 035_scl_rest | zap21 | 0 | 0 | OK |
+| 036_tech | folder | 44 | 14 | OK |
+| 036_tech | zap21 | 44 | 14 | OK |
+
+FlgNet elements in the plf (count over all LAD/FBD samples), status: handled = element and attributes are evaluated
+
+| Element | Count | Attributes (count) | Status |
+| --- | --- | --- | --- |
+| AutomaticTyped | 2 | Name 2 | handled |
+| CRef | 8 | RefId 8, UId 8 | handled |
+| CodeBlock | 8 | RefId 8, UId 8 | handled |
+| Equation | 2 | Valid 2 | handled |
+| FlgNet | 247 | Lang 247, Routed 227, Version 247 | handled |
+| Instance | 28 | RefId 28, UId 28 | handled |
+| LRef | 51 | EN 18, ENO 18, RefId 51, UId 51 | handled |
+| Labels | 2 |  | handled |
+| Negated | 5 | PinName 5 | handled |
+| OCon | 831 | UId 831 | handled |
+| ORef | 833 | RefId 710, UId 833 | handled |
+| PCon | 1179 | PinName 1179, UId 1179 | handled |
+| Part | 297 | DisableENO 98, Gate 297, UId 297 | handled |
+| Parts | 247 |  | handled |
+| Powerrail | 129 |  | handled |
+| TemplateValue | 207 | Name 207, Type 207 | handled |
+| Wire | 1068 | UId 1068 | handled |
+| Wires | 247 |  | handled |
+
+Ident table (IdentXmlPart): object kinds and sub-elements. read = value goes into the output, metadata = timestamps, memory layout or compiler aids (not evaluated)
+
+| Object kind | Count | Status |
+| --- | --- | --- |
+| AufDBBlock | 4 | handled |
+| BlockInterfaceInfo | 6 | handled |
+| DepDBBlock | 10 | handled |
+| FBBlock | 4 | handled |
+| FCBlock | 2 | handled |
+| GlobalAccess | 15 | handled |
+| GlobalConstant | 2 | handled |
+| Instruction | 51 | handled |
+| InterfaceAccess | 626 | handled |
+| Label | 2 | handled |
+| LiteralConstant | 22 | handled |
+| LocalConstant | 2 | handled |
+| MultInstAccess | 6 | handled |
+| SimpleAccess | 10 | handled |
+
+| Sub-element | Count | Status |
+| --- | --- | --- |
+| AO | 665 | read |
+| AOS | 657 | read |
+| ATD | 665 | metadata |
+| BAD | 15 | metadata |
+| BIID | 6 | metadata |
+| BPI | 66 | read |
+| BPIL | 6 | read |
+| C | 828 | read |
+| CB | 26 | read |
+| CBOD | 6 | metadata |
+| CD | 26 | metadata |
+| CS | 762 | read |
+| DBBD | 14 | metadata |
+| FBBD | 4 | metadata |
+| IAD | 632 | metadata |
+| ID | 762 | read |
+| INSTD | 51 | read |
+| IU | 51 | read |
+| IUS | 51 | read |
+| LCD | 2 | metadata |
+| LD | 2 | metadata |
+| LP | 189 | read |
+| LPI | 51 | read |
+| MIAD | 6 | metadata |
+| OD | 703 | read |
+| PBS | 189 | metadata |
+| PIS | 189 | metadata |
+| PSS | 189 | metadata |
+| SAD | 10 | read |
+| SD | 657 | metadata |
+| SSD | 657 | read |
+| TD | 1434 | read |
+| TOD | 20 | read |
+| TP | 34 | metadata |
+| TPI | 51 | metadata |
+| TV | 34 | read |

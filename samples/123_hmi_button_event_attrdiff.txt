@@ -1,0 +1,89 @@
+A: 122_hmi_item_button  B: 123_hmi_button_event
+CHANGED 1002:00cd:1808 ILScreenData name='Screen_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:11.106005Z' -> '2026-10-20T16:21:40.994786Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          +link ScriptModuleContainer -> 1003:00e3:2019
+NEW     1002:00e3:2018 HmiScriptEmbeddedData name='OnTapped'
+          ICoreAttributes.CreationTime = '2026-10-20T16:21:40.994786Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:21:41.599260Z'
+          ICoreAttributes.Name = 'OnTapped'
+          IAdditionalAttributes.#8978432 = bytes[2] 0009
+          IScriptDataExpandoAttributes.1423868556 = bytes[5] 0000000000
+          link EmbeddedScriptParent -> 1003:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:2019
+          link ExpandoReferences -> 1003:00cd:1c10
+          link ExpandoReferencesInverse -> 1003:00cd:1c10
+CHANGED 1003:00cd:1c10 ILScreenItemData name='Button_1'
+          IAdditionalAttributes.Tapped: '<absent>' -> bytes[6] 060000000000
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:11.106005Z' -> '2026-10-20T16:21:40.994786Z'  (timestamp)
+          raw IAdditionalAttributes: 0 -> 46 bytes
+          raw <links 1>: 0 -> 52 bytes
+          +link EmbeddedScriptChildren -> 1002:00e3:2018
+          +link ExpandoReferences -> 1002:00e3:2018
+          +link ExpandoReferencesInverse -> 1002:00e3:2018
+          slot table [104, 0, 0, 0, 0, 0, 0, 0, 287, 347, 0, 0, 0, 203, 0] -> [104, 0, 0, 745, 0, 0, 0, 0, 287, 347, 0, 0, 0, 203, 693]
+NEW     1003:00e3:2019 HmiScriptModuleContainerData name='ScriptModuleContainer'
+          ICoreAttributes.CreationTime = '2026-10-20T16:21:40.994786Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:21:40.994786Z'
+          ICoreAttributes.Name = 'ScriptModuleContainer'
+          link ScriptContainerParent -> 1002:00cd:1808
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventElements -> 1002:00e3:2018
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:11.106005Z' -> '2026-10-20T16:21:40.994786Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[762] 01cb07000000000000000000000010010000000101000000e005785eed55dd6e9b3014dea3202e7a -> bytes[885] 01730b000000000000000000000010010000000101000000db06785eed96db6edb461086fb28042f
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:21:16.363950Z' -> '2026-10-20T16:21:55.052330Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:1ff8, 0014:0007:2400, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 122_hmi_item_button vs. 123_hmi_button_event (SHA-256, first 12)
+  GONE   IM/SearchIndex/_10.cfs  daf61327cd8c -> -
+  NEW    IM/SearchIndex/_14.fdt  - -> 3c24cabebeea
+  NEW    IM/SearchIndex/_14.fdx  - -> b35cc531bfa2
+  NEW    IM/SearchIndex/_14.fnm  - -> 1edd37a76bcc
+  NEW    IM/SearchIndex/_14.frq  - -> 18ee147066ad
+  NEW    IM/SearchIndex/_14.prx  - -> ee83761bc856
+  NEW    IM/SearchIndex/_14.tii  - -> 20bae872b256
+  NEW    IM/SearchIndex/_14.tis  - -> e6c7fe51fab6
+  NEW    IM/SearchIndex/_14.tvd  - -> 977e47507686
+  NEW    IM/SearchIndex/_14.tvf  - -> 075f0dbb1e1f
+  NEW    IM/SearchIndex/_14.tvx  - -> 9f4e4334a484
+  NEW    IM/SearchIndex/_14_2.del  - -> 1de32f40e7fd
+  NEW    IM/SearchIndex/_15.cfs  - -> a892fe77be0c
+  NEW    IM/SearchIndex/_16.cfs  - -> 607e3d360665
+  NEW    IM/SearchIndex/_17.cfs  - -> 8c414109318e
+  NEW    IM/SearchIndex/_17_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_18.cfs  - -> 3f7f2e51024b
+  GONE   IM/SearchIndex/_u.fdt  32670e1ddda7 -> -
+  GONE   IM/SearchIndex/_u.fdx  00a28cde0258 -> -
+  GONE   IM/SearchIndex/_u.fnm  acee8a29fffa -> -
+  GONE   IM/SearchIndex/_u.frq  16ce83da4d3d -> -
+  GONE   IM/SearchIndex/_u.prx  9d2d83c979aa -> -
+  GONE   IM/SearchIndex/_u.tii  b2024debae5c -> -
+  GONE   IM/SearchIndex/_u.tis  a23fb38a071f -> -
+  GONE   IM/SearchIndex/_u.tvd  db7f7dee2342 -> -
+  GONE   IM/SearchIndex/_u.tvf  57ef1071719e -> -
+  GONE   IM/SearchIndex/_u.tvx  14688b893f26 -> -
+  GONE   IM/SearchIndex/_u_2.del  312d2cdfa99a -> -
+  GONE   IM/SearchIndex/_v.cfs  1ed7efc86396 -> -
+  GONE   IM/SearchIndex/_v_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_w.cfs  0ef104f7aa7f -> -
+  GONE   IM/SearchIndex/_w_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_x.cfs  266d0387b00e -> -
+  GONE   IM/SearchIndex/_y.cfs  c8efe6177061 -> -
+  GONE   IM/SearchIndex/_z.cfs  aadc5e00803b -> -
+  GONE   IM/SearchIndex/_z_1.del  c9c60928b8bc -> -
+  CHG    IM/SearchIndex/segments.gen  aad16471c98b -> da357178ce66
+  GONE   IM/SearchIndex/segments_n  e452b64da4b5 -> -
+  NEW    IM/SearchIndex/segments_s  - -> 8ab9445bcf61
+  CHG    System/PEData.idx  257e624bf8bc -> 68efbc1bf80d
+  CHG    XRef/XRef.db  da7093d09b04 -> 627f41f57a6f
+  name 'Button_1 tapped' found in: System/PEData.plf (utf-8 x1)

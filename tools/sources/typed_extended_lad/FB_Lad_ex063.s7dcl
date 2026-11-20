@@ -1,0 +1,36 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex063"
+    VAR_INPUT
+        v_mode : Int;
+        v_f_id : HW_SUBMODULE;
+        v_code1 : Byte;
+        v_code2 : Byte;
+        v_len : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_new : Bool;
+        v_status : DWord;
+        v_slot : HW_SUBMODULE;
+        v_subslot : HW_SUBMODULE;
+        v_index : UInt;
+        v_rlen : UInt;
+    END_VAR
+    VAR_IN_OUT
+        v_record : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Prvrec;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Prvrec( MODE := #v_mode, F_ID := #v_f_id, CODE1 := #v_code1, CODE2 := #v_code2, LEN := #v_len, NEW => #v_new, STATUS => #v_status, SLOT => #v_slot, SUBSLOT => #v_subslot, INDEX => #v_index, RLEN => #v_rlen, RECORD := #v_record )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,49 @@
+A: samples/F20_type_props.zap21
+B: samples/F30_nested.zap21
+objects 3192 -> 3192, tombstones 0 -> 0, records 3250 -> 3250
+
+== 1. object count per type (only differences)
+
+== 2. new / removed objects
+
+== 3. links added / removed (owner -> relation -> target)
+  0002:00d3:207e FaceplateLibraryTypeData name='FP_Controls'
+    + TypeToDefaultVersion                     -> 0003:00d3:207f FaceplateLibraryVersionData name=None
+  0003:00d3:2019 FaceplateLibraryVersionData name=None
+    + IsTypeOf                                 -> 0006:00d3:20dd ILFaceplateContainerData name='C_Faceplate1'
+    + DependsOnInverse                         -> 0003:00d3:207f FaceplateLibraryVersionData name=None
+  0003:00d3:207f FaceplateLibraryVersionData name=None
+    + DefaultVersionToType                     -> 0002:00d3:207e FaceplateLibraryTypeData name='FP_Controls'
+    + DependsOn                                -> 0003:00d3:2019 FaceplateLibraryVersionData name=None
+  0006:00d3:20dd ILFaceplateContainerData name='C_Faceplate1'
+    + IsInstanceOf                             -> 0003:00d3:2019 FaceplateLibraryVersionData name=None
+
+== 4. attribute diff (tools\attrdiff.py)
+A: C:\GitHub\factorybyte\OpenPEData\samples\F20_type_props.zap21  B: C:\GitHub\factorybyte\OpenPEData\samples\F30_nested.zap21
+CHANGED 0002:00d3:207e FaceplateLibraryTypeData name='FP_Controls'
+          raw <links 0>: 84 -> 84 bytes
+          +link TypeToDefaultVersion -> 0003:00d3:207f
+CHANGED 0003:00d3:2019 FaceplateLibraryVersionData name=None
+          ICoreAttributes.ModifiedTime: '2026-10-21T04:38:03.085090Z' -> '2026-10-31T10:57:52.222130Z'  (timestamp)
+          raw <links 1>: 404 -> 436 bytes
+          +link DependsOnInverse -> 0003:00d3:207f
+          +link IsTypeOf -> 0006:00d3:20dd
+CHANGED 0003:00d3:207f FaceplateLibraryVersionData name=None
+          ICoreAttributes.ModifiedTime: '2026-10-20T18:22:18.244405Z' -> '2026-10-31T10:58:02.949243Z'  (timestamp)
+          ICoreLibObjectAttributes.State: 'InWork' -> 'Committed'
+          IVersionInfo.FinalizationTime: '0001-01-01T00:00:00Z' -> '2026-10-31T10:58:05.811756Z'  (timestamp)
+          IVersionInfo.VersionGuid: 'e8d7bd25-705a-49d5-ab87-2a53e946131a' -> 'e004997f-d951-47b4-9cb1-646e9e97d9cd'
+          raw <links 0>: 116 -> 132 bytes
+          raw <links 1>: 420 -> 436 bytes
+          +link DependsOn -> 0003:00d3:2019
+          +link DefaultVersionToType -> 0002:00d3:207e
+          slot table [0, 0, 0, 203, 0, 0, 0, 112, 0, 0, 0, 268, 0, 0, 0, 349, 465] -> [0, 0, 0, 203, 0, 0, 0, 112, 0, 0, 0, 268, 0, 0, 0, 349, 481]
+CHANGED 0006:00d3:20dd ILFaceplateContainerData name='C_Faceplate1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T17:50:11.334595Z' -> '2026-10-31T10:57:52.222130Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          +link IsInstanceOf -> 0003:00d3:2019
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[229] e5000000050000001c0000003100000080000000ba000000d0000000150000000000000010000000 -> bytes[229] e5000000050000001c0000003100000080000000ba000000d0000000150000000000000010000000
+CHANGED 1028:0002:433 ProjectData name='F18_iface_event'
+          ICoreAttributes.ModifiedTime: '2026-10-31T10:57:03.263514Z' -> '2026-10-31T10:58:09.837242Z'  (timestamp)
+store records changed/new: 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

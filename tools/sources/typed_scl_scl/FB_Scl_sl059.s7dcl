@@ -1,0 +1,20 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl059"
+    VAR_INPUT
+        v_area_src : Byte;
+        v_dbnumber_src : DInt;
+        v_byteoffset_src : DInt;
+        v_area_dest : Byte;
+        v_dbnumber_dest : DInt;
+        v_byteoffset_dest : DInt;
+        v_count : DInt;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        POKE_BLK(AREA_SRC := #v_area_src, DBNUMBER_SRC := #v_dbnumber_src, BYTEOFFSET_SRC := #v_byteoffset_src, AREA_DEST := #v_area_dest, DBNUMBER_DEST := #v_dbnumber_dest, BYTEOFFSET_DEST := #v_byteoffset_dest, COUNT := #v_count);
+    END_NETWORK
+END_FUNCTION_BLOCK

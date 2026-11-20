@@ -1,0 +1,1956 @@
+{
+ "001": {
+  "block": "FB_Lad_001",
+  "body": [
+   "{R}\nContact( #a )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "---|   |---: Normally open contact"
+ },
+ "002": {
+  "block": "FB_Lad_002",
+  "body": [
+   "{R}\nI_Contact( #a )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "---| / |---: Normally closed contact"
+ },
+ "003": {
+  "block": "FB_Lad_003",
+  "body": [
+   "{R}\nContact( #a )\nNot()\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "--|NOT|--: Invert RLO"
+ },
+ "004": {
+  "block": "FB_Lad_004",
+  "body": [
+   "{R}\nContact( #a )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "---(   )---: Assignment"
+ },
+ "005": {
+  "block": "FB_Lad_005",
+  "body": [
+   "{R}\nContact( #a )\nI_Coil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "--( / )--: Negate assignment"
+ },
+ "006": {
+  "block": "FB_Lad_006",
+  "body": [
+   "{R}\nContact( #a )\nR_Coil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "---( R )---: Reset output"
+ },
+ "007": {
+  "block": "FB_Lad_007",
+  "body": [
+   "{R}\nContact( #a )\nS_Coil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "---( S )---: Set output"
+ },
+ "008": {
+  "block": "FX_Lad_008",
+  "ok": true,
+  "title": "SET_BF: Set bit field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SBitfield",
+   "pins": [
+    "operand",
+    "n"
+   ],
+   "templates": {}
+  }
+ },
+ "009": {
+  "block": "FX_Lad_009",
+  "ok": true,
+  "title": "RESET_BF: Reset bit field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RBitfield",
+   "pins": [
+    "operand",
+    "n"
+   ],
+   "templates": {}
+  }
+ },
+ "010": {
+  "block": "FB_Lad_010",
+  "body": [
+   "{R}\nContact( #a )\nSr( r1 := #b, operand := #stat1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SR: Set/reset flip-flop"
+ },
+ "011": {
+  "block": "FB_Lad_011",
+  "body": [
+   "{R}\nContact( #a )\nRs( s1 := #b, operand := #stat1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "RS: Reset/set flip-flop"
+ },
+ "012": {
+  "block": "FB_Lad_012",
+  "body": [
+   "{R}\nP_Contact( #a, bit := #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "--|P|--: Scan operand for positive signal edge"
+ },
+ "013": {
+  "block": "FB_Lad_013",
+  "body": [
+   "{R}\nN_Contact( #a, bit := #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "--|N|--: Scan operand for negative signal edge"
+ },
+ "014": {
+  "block": "FB_Lad_014",
+  "body": [
+   "{R}\nContact( #a )\nP_Coil( #q, bit := #edge1 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "--(P)--: Set operand on positive signal edge"
+ },
+ "015": {
+  "block": "FB_Lad_015",
+  "body": [
+   "{R}\nContact( #a )\nN_Coil( #q, bit := #edge1 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "--(N)--: Set operand on negative signal edge"
+ },
+ "016": {
+  "block": "FB_Lad_016",
+  "body": [
+   "{R}\nContact( #a )\nP_Trig( #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "P_TRIG: Scan RLO for positive signal edge"
+ },
+ "017": {
+  "block": "FB_Lad_017",
+  "body": [
+   "{R}\nContact( #a )\nN_Trig( #edge1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "N_TRIG: Scan RLO for negative signal edge"
+ },
+ "018": {
+  "block": "FB_Lad_018",
+  "body": [
+   "{R}\n#rtrig1.R_TRIG( clk := #a, q => #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "R_TRIG: Detect positive signal edge"
+ },
+ "019": {
+  "block": "FB_Lad_019",
+  "body": [
+   "{R}\n#ftrig1.F_TRIG( clk := #a, q => #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "F_TRIG: Detect negative signal edge"
+ },
+ "020": {
+  "block": "FB_Lad_020",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"time_type := Time\" }\n#tp1.TP( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TP: Generate pulse"
+ },
+ "021": {
+  "block": "FB_Lad_021",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"time_type := Time\" }\n#ton1.TON( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TON: Generate on-delay"
+ },
+ "022": {
+  "block": "FB_Lad_022",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"time_type := Time\" }\n#tof1.TOF( pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TOF: Generate off-delay"
+ },
+ "023": {
+  "block": "FB_Lad_023",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"time_type := Time\" }\n#tonr1.TONR( r := #b, pt := #ta, et => #tout )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TONR: Time accumulator"
+ },
+ "024": {
+  "block": "FX_Lad_024",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "---( TP )---: Start pulse timer",
+  "via": "xml",
+  "xml": {
+   "name": "TP",
+   "pins": [
+    "IN",
+    "PT",
+    "ET"
+   ]
+  }
+ },
+ "025": {
+  "block": "FX_Lad_025",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "---( TON )---: Start on-delay timer",
+  "via": "xml",
+  "xml": {
+   "name": "TON",
+   "pins": [
+    "IN",
+    "PT",
+    "ET"
+   ]
+  }
+ },
+ "026": {
+  "block": "FX_Lad_026",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "---( TOF )---: Start off-delay timer",
+  "via": "xml",
+  "xml": {
+   "name": "TOF",
+   "pins": [
+    "IN",
+    "PT",
+    "ET"
+   ]
+  }
+ },
+ "027": {
+  "block": "FX_Lad_027",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "---( TONR )---: Time accumulator",
+  "via": "xml",
+  "xml": {
+   "name": "TONR",
+   "pins": [
+    "IN",
+    "PT",
+    "ET"
+   ]
+  }
+ },
+ "028": {
+  "block": "FX_Lad_028",
+  "ok": true,
+  "title": "---( RT )---: Reset timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "ResetIECTimerCoil",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "029": {
+  "block": "FX_Lad_029",
+  "ok": true,
+  "title": "---( PT )---: Load time duration",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "PtCoil",
+   "pins": [
+    "operand",
+    "pt"
+   ],
+   "templates": {}
+  }
+ },
+ "030": {
+  "block": "FB_Lad_030",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_PULSE: Assign pulse timer parameters and start"
+ },
+ "031": {
+  "block": "FB_Lad_031",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_PEXT: Assign extended pulse timer parameters and start"
+ },
+ "032": {
+  "block": "FB_Lad_032",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_ODT: Assign on-delay timer parameters and start"
+ },
+ "033": {
+  "block": "FB_Lad_033",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_ODTS: Assign retentive on-delay timer parameters and start"
+ },
+ "034": {
+  "block": "FB_Lad_034",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_OFFDT: Assign off-delay timer parameters and start"
+ },
+ "035": {
+  "block": "FX_Lad_035",
+  "ok": true,
+  "title": "---( SP ): Start pulse timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SpCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "036": {
+  "block": "FX_Lad_036",
+  "ok": true,
+  "title": "---( SE ): Start extended pulse timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SeCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "037": {
+  "block": "FX_Lad_037",
+  "ok": true,
+  "title": "---( SD ): Start on-delay timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SdCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "038": {
+  "block": "FX_Lad_038",
+  "ok": true,
+  "title": "---( SS ): Start retentive on-delay timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SsCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "039": {
+  "block": "FX_Lad_039",
+  "ok": true,
+  "title": "---( SF ): Start off-delay timer",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "SfCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "040": {
+  "block": "FB_Lad_040",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"value_type := Int\" }\n#ctu1.CTU( r := #b, pv := #ia, cv => #io )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CTU: Count up"
+ },
+ "041": {
+  "block": "FB_Lad_041",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"value_type := Int\" }\n#ctd1.CTD( ld := #b, pv := #ia, cv => #io )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CTD: Count down"
+ },
+ "042": {
+  "block": "FB_Lad_042",
+  "body": [
+   "{R}\nContact( #a )\n{ S7_Templates := \"value_type := Int\" }\n#ctud1.CTUD( cd := #b, r := #c, ld := #q2, pv := #ia, qu => #q, qd => #q2, cv => #io )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "CTUD: Count up and down"
+ },
+ "043": {
+  "block": "FB_Lad_043",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CU: Assign parameters and count up"
+ },
+ "044": {
+  "block": "FB_Lad_044",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CD: Assign parameters and count down"
+ },
+ "045": {
+  "block": "FB_Lad_045",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CUD: Assign parameters and count up / down"
+ },
+ "046": {
+  "block": "FX_Lad_046",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "---( SC ): Set counter value",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "ScCoil",
+   "pins": [
+    "operand",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "047": {
+  "block": "FX_Lad_047",
+  "ok": true,
+  "title": "---( CU ): Count up",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "CuCoil",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "048": {
+  "block": "FX_Lad_048",
+  "ok": true,
+  "title": "---( CD ): Count down",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "CdCoil",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "049": {
+  "block": "FB_Lad_049",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nEQ_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP ==: Equal"
+ },
+ "050": {
+  "block": "FB_Lad_050",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nNE_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP <>: Not equal"
+ },
+ "051": {
+  "block": "FB_Lad_051",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nGE_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP >=: Greater or equal"
+ },
+ "052": {
+  "block": "FB_Lad_052",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nLE_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP <=: Less or equal"
+ },
+ "053": {
+  "block": "FB_Lad_053",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nGT_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP >: Greater than"
+ },
+ "054": {
+  "block": "FB_Lad_054",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nLT_Contact( in1 := #ia, in2 := #ib )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CMP <: Less than"
+ },
+ "055": {
+  "block": "FB_Lad_055",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nInRange( min := #ia, in := #ib, max := #ic )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 2,
+  "ok": true,
+  "title": "IN_RANGE: Value within range"
+ },
+ "056": {
+  "block": "FB_Lad_056",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nOutRange( min := #ia, in := #ib, max := #ic )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 2,
+  "ok": true,
+  "title": "OUT_RANGE: Value outside range"
+ },
+ "057": {
+  "block": "FX_Lad_057",
+  "ok": true,
+  "title": "----I OK I----: Check validity",
+  "via": "xml",
+  "xml": {
+   "enPin": "pre",
+   "name": "Ok",
+   "pins": [
+    "operand"
+   ],
+   "templates": {}
+  }
+ },
+ "058": {
+  "block": "FB_Lad_058",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "----I NOT_OK I----: Check invalidity"
+ },
+ "059": {
+  "block": "FB_Lad_059",
+  "body": [
+   "{R}\nEQ_Type( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "EQ_Type: Compare data type for EQUAL with the data type of a tag"
+ },
+ "060": {
+  "block": "FB_Lad_060",
+  "body": [
+   "{R}\nNE_Type( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NE_Type: Compare data type for UNEQUAL with the data type of a tag"
+ },
+ "061": {
+  "block": "FB_Lad_061",
+  "body": [
+   "{R}\nEQ_ElemTypeContact( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "EQ_ElemType: Compare data type of an ARRAY element for EQUAL with the data type of a tag"
+ },
+ "062": {
+  "block": "FB_Lad_062",
+  "body": [
+   "{R}\nNE_ElemTypeContact( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NE_ElemType: Compare data type of an ARRAY element for UNEQUAL with the data type of a tag"
+ },
+ "063": {
+  "block": "FB_Lad_063",
+  "body": [
+   "{R}\nIS_NULL( #v1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "IS_NULL: Check for EQUALS NULL pointer"
+ },
+ "064": {
+  "block": "FB_Lad_064",
+  "body": [
+   "{R}\nNOT_NULL( #v1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NOT_NULL: Check for UNEQUALS NULL pointer"
+ },
+ "065": {
+  "block": "FB_Lad_065",
+  "body": [
+   "{R}\nIS_ARRAY( #v1 )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "IS_ARRAY: Check for ARRAY"
+ },
+ "066": {
+  "block": "FB_Lad_066",
+  "body": [
+   "{R}\nEQ_Type( in1 := #v1, in2 := #ia )\nCoil( #q )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "EQ_TypeOfDB: Compare data type of an indirectly addressed DB for EQUAL with a data type"
+ },
+ "067": {
+  "block": "FB_LadCalc",
+  "errors": [
+   "Network 1: No expression entered.; : Compiling finished (errors: 1; warnings: 1)",
+   "Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; : Compiling finished (errors: 4; warnings: 1)"
+  ],
+  "last": {
+   "candidate": 30,
+   "message": "Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; Network 1: Please select a data type.; : Compiling finished (errors: 4; warnings: 1)",
+   "stage": "compile"
+  },
+  "ok": true,
+  "sample": "034_flg_misc",
+  "title": "CALCULATE: Calculate",
+  "tried": 32,
+  "via": "xml",
+  "xmlLast": "Calc: compile: No expression entered."
+ },
+ "068": {
+  "block": "FB_Lad_068",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nAdd( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "ADD: Add"
+ },
+ "069": {
+  "block": "FB_Lad_069",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nSub( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SUB: Subtract"
+ },
+ "070": {
+  "block": "FB_Lad_070",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nMul( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MUL: Multiply"
+ },
+ "071": {
+  "block": "FB_Lad_071",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nDiv( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "DIV: Divide"
+ },
+ "072": {
+  "block": "FB_Lad_072",
+  "body": [
+   "{R}\nMod( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MOD: Return remainder of division"
+ },
+ "073": {
+  "block": "FB_Lad_073",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nNeg( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NEG: Create twos complement"
+ },
+ "074": {
+  "block": "FX_Lad_074",
+  "ok": true,
+  "title": "INC: Increment",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Inc",
+   "pins": [
+    "operand"
+   ],
+   "templates": {
+    "DestType": "Int"
+   }
+  }
+ },
+ "075": {
+  "block": "FX_Lad_075",
+  "ok": true,
+  "title": "DEC: Decrement",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Dec",
+   "pins": [
+    "operand"
+   ],
+   "templates": {
+    "DestType": "Int"
+   }
+  }
+ },
+ "076": {
+  "block": "FB_Lad_076",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nAbs( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "ABS: Form absolute value"
+ },
+ "077": {
+  "block": "FB_Lad_077",
+  "body": [
+   "{R}\n{ S7_Templates := \"value_type := Int\" }\nMin( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 23,
+  "ok": true,
+  "title": "MIN: Get minimum"
+ },
+ "078": {
+  "block": "FB_Lad_078",
+  "body": [
+   "{R}\n{ S7_Templates := \"value_type := Int\" }\nMax( in1 := #ia, in2 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 23,
+  "ok": true,
+  "title": "MAX: Get maximum"
+ },
+ "079": {
+  "block": "FB_Lad_079",
+  "body": [
+   "{R}\n{ S7_Templates := \"value_type := Int\" }\nLimit( mn := #ia, in := #ib, mx := #ic, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 21,
+  "ok": true,
+  "title": "LIMIT: Set limit value"
+ },
+ "080": {
+  "block": "FB_Lad_080",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nSqr( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "SQR: Form square"
+ },
+ "081": {
+  "block": "FB_Lad_081",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nSqrt( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "SQRT: Form square root"
+ },
+ "082": {
+  "block": "FB_Lad_082",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nLn( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "LN: Form natural logarithm"
+ },
+ "083": {
+  "block": "FB_Lad_083",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nExp( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "EXP: Form exponential value"
+ },
+ "084": {
+  "block": "FB_Lad_084",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nSin( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "SIN: Form sine value"
+ },
+ "085": {
+  "block": "FB_Lad_085",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nCos( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "COS: Form cosine value"
+ },
+ "086": {
+  "block": "FB_Lad_086",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nTan( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "TAN: Form tangent value"
+ },
+ "087": {
+  "block": "FB_Lad_087",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nAsin( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "ASIN: Form arcsine value"
+ },
+ "088": {
+  "block": "FB_Lad_088",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nAcos( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "ACOS: Form arccosine value"
+ },
+ "089": {
+  "block": "FB_Lad_089",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nAtan( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "ATAN: Form arctangent value"
+ },
+ "090": {
+  "block": "FB_Lad_090",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Real\" }\nFrac( in := #ra, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "FRAC: Return fraction"
+ },
+ "091": {
+  "block": "FB_Lad_091",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Int, DestType := Real]\" }\nExpt( in1 := #ra, in2 := #ia, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 9,
+  "ok": true,
+  "title": "EXPT: Exponentiate"
+ },
+ "092": {
+  "block": "FB_Lad_092",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nMove( in := #ia, out1 => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MOVE: Move value"
+ },
+ "093": {
+  "block": "FX_Lad_093",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Deserialize: Deserialize",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Deserialize",
+   "pins": [
+    "SRC_ARRAY",
+    "DEST_VARIABLE",
+    "POS",
+    "RET_VAL"
+   ],
+   "templates": {
+    "dest_type": "Variant",
+    "src_type": "Variant"
+   }
+  }
+ },
+ "094": {
+  "block": "FX_Lad_094",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Serialize: Serialize",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Serialize",
+   "pins": [
+    "SRC_VARIABLE",
+    "DEST_ARRAY",
+    "POS",
+    "RET_VAL"
+   ],
+   "templates": {
+    "dest_type": "Variant",
+    "src_type": "Variant"
+   }
+  }
+ },
+ "095": {
+  "block": "FX_Lad_095",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MOVE_BLK: Move block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MoveBlockI",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "096": {
+  "block": "FX_Lad_096",
+  "ok": true,
+  "title": "MOVE_BLK_VARIANT: Move block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MOVE_BLK_VARIANT",
+   "pins": [
+    "COUNT",
+    "SRC_INDEX",
+    "DEST_INDEX",
+    "RET_VAL",
+    "SRC",
+    "DEST"
+   ],
+   "templates": {}
+  }
+ },
+ "097": {
+  "block": "FX_Lad_097",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "UMOVE_BLK: Move block uninterruptible",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MoveBlockU",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "098": {
+  "block": "FX_Lad_098",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "FILL_BLK: Fill block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FillBlockI",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "099": {
+  "block": "FX_Lad_099",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "UFILL_BLK: Fill block uninterruptible",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FillBlockU",
+   "pins": [
+    "IN",
+    "COUNT",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "100": {
+  "block": "FB_Lad_100",
+  "body": [
+   "{R}\n{ S7_Templates := \"src_type := Word\" }\nSCATTER( in := #wa, out => #bits16 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SCATTER: Parse the bit sequence into individual bits"
+ },
+ "101": {
+  "block": "FX_Lad_101",
+  "ok": true,
+  "title": "SCATTER_BLK: Parse elements of an ARRAY of bit sequence into individual bits",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SCATTER_BLK",
+   "pins": [
+    "IN",
+    "COUNT_IN",
+    "OUT"
+   ],
+   "templates": {
+    "count_type": "UInt",
+    "dest_type": "Bool",
+    "src_type": "Word"
+   }
+  }
+ },
+ "102": {
+  "block": "FX_Lad_102",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GATHER: Merge individual bits into a bit sequence",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GATHER",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "Word",
+    "src_type": "Bool"
+   }
+  }
+ },
+ "103": {
+  "block": "FX_Lad_103",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GATHER_BLK: Merge individual bits into multiple elements of an ARRAY of bit sequence",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GATHER_BLK",
+   "pins": [
+    "IN",
+    "COUNT_OUT",
+    "OUT"
+   ],
+   "templates": {
+    "count_type": "UInt",
+    "dest_type": "Word",
+    "src_type": "Bool"
+   }
+  }
+ },
+ "104": {
+  "block": "FB_Lad_104",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "AssignmentAttempt: Attempt assignment to a reference"
+ },
+ "105": {
+  "block": "FB_Lad_105",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nSwap( in := #wa, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 24,
+  "ok": true,
+  "title": "SWAP: Swap"
+ },
+ "106": {
+  "block": "FX_Lad_106",
+  "ok": true,
+  "title": "ReadFromArrayDB: Read from ARRAYdata block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "ReadFromArrayDB",
+   "pins": [
+    "DB",
+    "INDEX",
+    "RET_VAL",
+    "value"
+   ],
+   "templates": {}
+  }
+ },
+ "107": {
+  "block": "FX_Lad_107",
+  "ok": true,
+  "title": "WriteToArrayDB: Write to ARRAY data block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "WriteToArrayDB",
+   "pins": [
+    "DB",
+    "INDEX",
+    "VALUE",
+    "RET_VAL"
+   ],
+   "templates": {}
+  }
+ },
+ "108": {
+  "block": "FX_Lad_108",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ReadFromArrayDBL: Read from ARRAY data block in load memory",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "ReadFromArrayDBL",
+   "pins": [
+    "REQ",
+    "DB",
+    "INDEX",
+    "VALUE",
+    "BUSY",
+    "DONE",
+    "ERROR"
+   ],
+   "templates": {
+    "ptr_type": "DB_ANY"
+   }
+  }
+ },
+ "109": {
+  "block": "FX_Lad_109",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WriteToArrayDBL: Write to ARRAY data block in load memory",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "WriteToArrayDBL",
+   "pins": [
+    "REQ",
+    "DB",
+    "INDEX",
+    "VALUE",
+    "BUSY",
+    "DONE",
+    "ERROR"
+   ],
+   "templates": {
+    "ptr_type": "DB_ANY"
+   }
+  }
+ },
+ "110": {
+  "block": "FB_Lad_110",
+  "body": [
+   "{R}\nVariantGet( src := #v1, dst => #ia )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "VariantGet: Read out VARIANT tag value"
+ },
+ "111": {
+  "block": "FB_Lad_111",
+  "body": [
+   "{R}\nVariantPut( src := #ia, dst => #v1 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "VariantPut: Write VARIANT tag value"
+ },
+ "112": {
+  "block": "FB_Lad_112",
+  "body": [
+   "{R}\nCountOfElements( in := #v1, ret_val => #udia )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CountOfElements: Get number of ARRAY elements"
+ },
+ "113": {
+  "block": "FB_Lad_113",
+  "body": [
+   "{R}\nLower_Bound( arr := #arrs, dim := 1, out => #dinout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "LOWER_BOUND: Read out low ARRAY limit"
+ },
+ "114": {
+  "block": "FB_Lad_114",
+  "body": [
+   "{R}\nUpper_Bound( arr := #arrs, dim := 1, out => #dinout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "UPPER_BOUND: Read out high ARRAY limit"
+ },
+ "115": {
+  "block": "FX_Lad_115",
+  "ok": true,
+  "title": "FieldRead: Read field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FieldRead",
+   "pins": [
+    "INDEX",
+    "MEMBER",
+    "VALUE"
+   ],
+   "templates": {
+    "SrcType": "Int"
+   }
+  }
+ },
+ "116": {
+  "block": "FX_Lad_116",
+  "ok": true,
+  "title": "FieldWrite: Write field",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FieldWrite",
+   "pins": [
+    "INDEX",
+    "VALUE",
+    "MEMBER"
+   ],
+   "templates": {
+    "SrcType": "Int"
+   }
+  }
+ },
+ "117": {
+  "block": "FB_Lad_117",
+  "body": [
+   "{R}\nBlkmov( SRCBLK := \"DB_Arr\".a, DSTBLK => \"DB_Arr\".b, RET_VAL => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "BLKMOV: Move block"
+ },
+ "118": {
+  "block": "FB_Lad_118",
+  "body": [
+   "{R}\nUblkmov( SRCBLK := \"DB_Arr\".a, DSTBLK => \"DB_Arr\".b, RET_VAL => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "UBLKMOV: Move block uninterruptible"
+ },
+ "119": {
+  "block": "FX_Lad_119",
+  "ok": true,
+  "title": "FILL: Fill block",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FILL",
+   "pins": [
+    "BVAL",
+    "RET_VAL",
+    "BLK"
+   ],
+   "templates": {
+    "ptr_type": "Variant"
+   }
+  }
+ },
+ "120": {
+  "block": "FB_Lad_120",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Int, DestType := Int]\" }\nConvert( in := #ia, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 6,
+  "ok": true,
+  "title": "CONVERT: Convert value"
+ },
+ "121": {
+  "block": "FB_Lad_121",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nRound( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "ROUND: Round numerical value"
+ },
+ "122": {
+  "block": "FB_Lad_122",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nCeil( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "CEIL: Generate next higher integer from floating-point number"
+ },
+ "123": {
+  "block": "FB_Lad_123",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nFloor( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "FLOOR: Generate next lower integer from floating-point number"
+ },
+ "124": {
+  "block": "FB_Lad_124",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := DInt]\" }\nTrunc( in := #ra, out => #dout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "TRUNC: Truncate numerical value"
+ },
+ "125": {
+  "block": "FB_Lad_125",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Real, DestType := Int]\" }\nScale( min := 0.0, value := #ra, max := 100.0, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SCALE_X: Scale"
+ },
+ "126": {
+  "block": "FB_Lad_126",
+  "body": [
+   "{R}\n{ S7_Templates := \"[SrcType := Int, DestType := Real]\" }\nNormalize( min := 0, value := #ia, max := 27648, out => #rout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "NORM_X: Normalize"
+ },
+ "127": {
+  "block": "FB_Lad_127",
+  "body": [
+   "{R}\nSCALE( in := #ia, hi_lim := #ib, lo_lim := #ic, bipolar := #a, out => #io, ret_val => #wout )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "SCALE: Scale"
+ },
+ "128": {
+  "block": "FB_Lad_128",
+  "body": [
+   "{R}\nUnscale( in := #ia, hi_lim := #ib, lo_lim := #ic, bipolar := #a, out => #io, ret_val => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "UNSCALE: Unscale"
+ },
+ "129": {
+  "block": "FB_LadJump",
+  "ok": true,
+  "sample": "034_flg_misc",
+  "title": "---( JMP ): Jump if RLO = 1",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "Jump",
+   "pins": [
+    "label"
+   ],
+   "templates": {}
+  },
+  "xmlLast": "Jump:  code does not correspond to the scheme: 'The element 'Wires' in namespace 'http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5' has incomplete content. List of possible elements expected: 'Wire' in namespace 'http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5'.'"
+ },
+ "130": {
+  "block": "FX_Lad_130",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "---( JMPN ): Jump if RLO = 0",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "JumpNot",
+   "pins": [
+    "label"
+   ],
+   "templates": {}
+  }
+ },
+ "131": {
+  "block": "FB_LadJump",
+  "last": {
+   "message": "no candidate"
+  },
+  "ok": true,
+  "sample": "034_flg_misc",
+  "title": "LABEL: Jump label",
+  "via": "xml",
+  "xmlLast": "Label: ion'.  Cannot create the 'SW.Blocks.CompileUnit' object with Simatic ML ID '3' at line number 503 at line position 8.  Error when calling method 'Create' of type 'Siemens.Engineering.SW.Blocks.CompileUnitComposition'.  An instruction with the name 'Label' cannot be found at the object with UID '21'."
+ },
+ "132": {
+  "block": "FX_Lad_132",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "JMP_LIST: Define jump list",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "JmpList",
+   "pins": [
+    "K",
+    "dest0",
+    "dest1"
+   ],
+   "templates": {
+    "Card": "2"
+   }
+  }
+ },
+ "133": {
+  "block": "FX_Lad_133",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SWITCH: Jump distributor",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Switch",
+   "pins": [
+    "K",
+    "case0",
+    "case1",
+    "else",
+    "dest0",
+    "dest1"
+   ],
+   "templates": {
+    "CASE0": "Eq",
+    "CASE1": "Eq",
+    "Card": "2",
+    "SrcType": "Int"
+   }
+  }
+ },
+ "134": {
+  "block": "FX_Lad_134",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "--(RET): Return",
+  "via": "xml",
+  "xml": {
+   "enPin": "in",
+   "name": "Return",
+   "pins": [],
+   "templates": {}
+  }
+ },
+ "135": {
+  "block": "FB_Lad_135",
+  "body": [
+   "{R}\nEndis_Pw( req := #a, f_pwd := #b, full_pwd := #c, r_pwd := #c, hmi_pwd := #c, f_pwd_on => #q, full_pwd_on => #q, r_pwd_on => #q, hmi_pwd_on => #q, ret_val => #wout )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "ENDIS_PW: Locking and unlocking passwords of the CPU access levels"
+ },
+ "136": {
+  "block": "FB_Lad_136",
+  "body": [
+   "{R}\nRe_Trigr(  )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "RE_TRIGR: Restart cycle monitoring time"
+ },
+ "137": {
+  "block": "FB_Lad_137",
+  "body": [
+   "{R}\nStp(  )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "STP: Exit program"
+ },
+ "138": {
+  "block": "FB_Lad_138",
+  "body": [
+   "{R}\nGetError( error => #eout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "GET_ERROR: Get error locally"
+ },
+ "139": {
+  "block": "FX_Lad_139",
+  "ok": true,
+  "title": "GET_ERR_ID: Get error ID locally",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GetErrorID",
+   "pins": [
+    "ID"
+   ],
+   "templates": {}
+  }
+ },
+ "140": {
+  "block": "FB_Lad_140",
+  "body": [
+   "{R}\nInit_Rd( req := #a, ret_val => #io )\nEND_RUNG"
+  ],
+  "candidate": 1,
+  "ok": true,
+  "title": "INIT_RD: Initialize all retain data"
+ },
+ "141": {
+  "block": "FB_Lad_141",
+  "body": [
+   "{R}\nWait( wt := #ia )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "WAIT: Configure time delay"
+ },
+ "142": {
+  "block": "FX_Lad_142",
+  "ok": true,
+  "title": "RUNTIME: Measure program runtime",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RUNTIME",
+   "pins": [
+    "MEM",
+    "RET_VAL"
+   ],
+   "templates": {}
+  }
+ },
+ "143": {
+  "block": "FB_Lad_143",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nAnd( in1 := #wa, in2 := #wb, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "AND: AND logic operation"
+ },
+ "144": {
+  "block": "FB_Lad_144",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nOr( in1 := #wa, in2 := #wb, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "OR: OR logic operation"
+ },
+ "145": {
+  "block": "FB_Lad_145",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nXor( in1 := #wa, in2 := #wb, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "XOR: EXCLUSIVE OR logic operation"
+ },
+ "146": {
+  "block": "FB_Lad_146",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nInv( in := #ia, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 3,
+  "ok": true,
+  "title": "INVERT: Create ones complement"
+ },
+ "147": {
+  "block": "FX_Lad_147",
+  "ok": true,
+  "title": "DECO: Decode",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Deco",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "return_type": "Word",
+    "value_type": "UInt"
+   }
+  }
+ },
+ "148": {
+  "block": "FX_Lad_148",
+  "ok": true,
+  "title": "ENCO: Encode",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Enco",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "src_type": "Word"
+   }
+  }
+ },
+ "149": {
+  "block": "FB_Lad_149",
+  "body": [
+   "{R}\n{ S7_Templates := \"value_type := Int\" }\nSel( g := #a, in0 := #ia, in1 := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 21,
+  "ok": true,
+  "title": "SEL: Select"
+ },
+ "150": {
+  "block": "FB_Lad_150",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nMux( k := #ia, in0 := #ib, in1 := #ic, else := #ic, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "MUX: Multiplex"
+ },
+ "151": {
+  "block": "FB_Lad_151",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nDemux( k := #ia, in := #ib, out0 => #io, out1 => #io2, out2 => #io, else => #io2 )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "DEMUX: Demultiplex"
+ },
+ "152": {
+  "block": "FB_Lad_152",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nShr( in := #ia, n := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SHR: Shift right"
+ },
+ "153": {
+  "block": "FB_Lad_153",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Int\" }\nShl( in := #ia, n := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SHL: Shift left"
+ },
+ "154": {
+  "block": "FB_Lad_154",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nRor( in := #ia, n := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 24,
+  "ok": true,
+  "title": "ROR: Rotate right"
+ },
+ "155": {
+  "block": "FB_Lad_155",
+  "body": [
+   "{R}\n{ S7_Templates := \"SrcType := Word\" }\nRol( in := #ia, n := #ib, out => #io )\nEND_RUNG"
+  ],
+  "candidate": 24,
+  "ok": true,
+  "title": "ROL: Rotate left"
+ },
+ "156": {
+  "block": "FX_Lad_156",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DRUM: Implement sequencer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "DRUM",
+   "pins": [
+    "RESET",
+    "JOG",
+    "DRUM_EN",
+    "LST_STEP",
+    "Q",
+    "OUT_WORD",
+    "ERR_CODE",
+    "EVENT1",
+    "EVENT2",
+    "EVENT3",
+    "EVENT4",
+    "EVENT5",
+    "EVENT6",
+    "EVENT7",
+    "EVENT8",
+    "EVENT9",
+    "EVENT10",
+    "EVENT11",
+    "EVENT12",
+    "EVENT13",
+    "EVENT14",
+    "EVENT15",
+    "EVENT16",
+    "OUT1",
+    "OUT2",
+    "OUT3",
+    "OUT4",
+    "OUT5",
+    "OUT6",
+    "OUT7",
+    "OUT8",
+    "OUT9",
+    "OUT10",
+    "OUT11",
+    "OUT12",
+    "OUT13",
+    "OUT14",
+    "OUT15",
+    "OUT16"
+   ],
+   "templates": {}
+  }
+ },
+ "157": {
+  "block": "FX_Lad_157",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DCAT: Discrete control-timer alarm",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "DCAT",
+   "pins": [
+    "CMD",
+    "O_FB",
+    "C_FB",
+    "Q",
+    "OA",
+    "CA"
+   ],
+   "templates": {}
+  }
+ },
+ "158": {
+  "block": "FX_Lad_158",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MCAT: Motor control-timer alarm",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MCAT",
+   "pins": [
+    "O_CMD",
+    "C_CMD",
+    "S_CMD",
+    "O_FB",
+    "C_FB",
+    "OO",
+    "CO",
+    "OA",
+    "CA",
+    "Q"
+   ],
+   "templates": {}
+  }
+ },
+ "159": {
+  "block": "FX_Lad_159",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "IMC: Compare input bits with the bits of a mask",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "IMC",
+   "pins": [
+    "IN_BIT0",
+    "IN_BIT1",
+    "IN_BIT2",
+    "IN_BIT3",
+    "IN_BIT4",
+    "IN_BIT5",
+    "IN_BIT6",
+    "IN_BIT7",
+    "IN_BIT8",
+    "IN_BIT9",
+    "IN_BIT10",
+    "IN_BIT11",
+    "IN_BIT12",
+    "IN_BIT13",
+    "IN_BIT14",
+    "IN_BIT15",
+    "CMP_STEP",
+    "OUT",
+    "ERR_CODE"
+   ],
+   "templates": {}
+  }
+ },
+ "160": {
+  "block": "FX_Lad_160",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SMC: Compare scan matrix",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SMC",
+   "pins": [
+    "IN_BIT0",
+    "IN_BIT1",
+    "IN_BIT2",
+    "IN_BIT3",
+    "IN_BIT4",
+    "IN_BIT5",
+    "IN_BIT6",
+    "IN_BIT7",
+    "IN_BIT8",
+    "IN_BIT9",
+    "IN_BIT10",
+    "IN_BIT11",
+    "IN_BIT12",
+    "IN_BIT13",
+    "IN_BIT14",
+    "IN_BIT15",
+    "OUT",
+    "ERR_CODE",
+    "OUT_STEP"
+   ],
+   "templates": {}
+  }
+ },
+ "161": {
+  "block": "FX_Lad_161",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LEAD_LAG: Lead and lag algorithm ",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "LEAD_LAG",
+   "pins": [
+    "IN",
+    "SAMPLE_T",
+    "OUT",
+    "ERR_CODE"
+   ],
+   "templates": {}
+  }
+ },
+ "162": {
+  "block": "FB_Lad_162",
+  "body": [
+   "{R}\nSeg( in := #wa, out => #wout )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "SEG: Create bit pattern for seven-segment display"
+ },
+ "163": {
+  "block": "FX_Lad_163",
+  "ok": true,
+  "title": "BCDCPL: Create tens complement",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "BCDCPL",
+   "pins": [
+    "IN",
+    "ERR_CODE"
+   ],
+   "templates": {}
+  }
+ },
+ "164": {
+  "block": "FB_Lad_164",
+  "body": [
+   "{R}\nBitsum( in := #wa, ret_val => #io )\nEND_RUNG"
+  ],
+  "candidate": 0,
+  "ok": true,
+  "title": "BITSUM: Count number of set bits"
+ }
+}

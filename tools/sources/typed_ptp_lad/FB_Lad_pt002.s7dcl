@@ -1,0 +1,35 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_pt002"
+    VAR_INPUT
+        v_req : Bool;
+        v_port : PORT;
+        v_rtsondly : UInt;
+        v_rtsoffdly : UInt;
+        v_break : UInt;
+        v_idleline : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_usr_end : Variant;
+        v_app_end : Variant;
+    END_VAR
+    VAR
+        inst : Send_Config;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Send_Config( REQ := #v_req, PORT := #v_port, RTSONDLY := #v_rtsondly, RTSOFFDLY := #v_rtsoffdly, BREAK := #v_break, IDLELINE := #v_idleline, DONE => #v_done, ERROR => #v_error, STATUS => #v_status, USR_END := #v_usr_end, APP_END := #v_app_end )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

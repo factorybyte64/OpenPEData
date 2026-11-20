@@ -1,0 +1,11 @@
+{
+    S7_Optimized := "TRUE"
+}
+DATA_BLOCK "DB_Buf"
+    VAR
+        buf : Array[0..99] of Byte;
+        b : Bool;
+        w : Word;
+        s : String;
+    END_VAR
+END_DATA_BLOCK

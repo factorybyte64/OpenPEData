@@ -1,0 +1,27 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex160"
+    VAR_INPUT
+        v_subnetid : Byte;
+        v_rack : Word;
+        v_slot : Word;
+        v_subslot : Byte;
+        v_subaddr : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_ioid : Byte;
+        v_laddr : HW_MODULE;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Gadr_Lgc( SUBNETID := #v_subnetid, RACK := #v_rack, SLOT := #v_slot, SUBSLOT := #v_subslot, SUBADDR := #v_subaddr, RET_VAL => #v_ret_val, IOID => #v_ioid, LADDR => #v_laddr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,76 @@
+[
+ {
+  "group": "TeleService / TM_MAIL: Transfer email",
+  "title": "Description of TM_MAIL (S7-1200)",
+  "name": "Description of TM_MAIL",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "ID",
+    "decl": "Input",
+    "types": "CONN_OUC (Word)"
+   },
+   {
+    "name": "TO_S",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "CC",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "SUBJECT",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "TEXT",
+    "decl": "Input",
+    "types": "STRING"
+   },
+   {
+    "name": "ATTACHMENT",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "TeleService / TM_MAIL: Transfer email",
+  "title": "Parameters TO_S, CC, and FROM (S7-1200)",
+  "name": "Parameters TO_S, CC, and FROM",
+  "params": null
+ },
+ {
+  "group": "TeleService / TM_MAIL: Transfer email",
+  "title": "STATUS and SFB_STATUS parameters (S7-1200)",
+  "name": "STATUS and SFB_STATUS parameters",
+  "params": null
+ }
+]

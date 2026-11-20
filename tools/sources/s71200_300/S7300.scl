@@ -1,0 +1,49 @@
+TYPE "UDT_300"
+STRUCT
+    a : INT := 3;
+    b : REAL;
+    c : ARRAY[0..1] OF BOOL;
+END_STRUCT
+END_TYPE
+
+DATA_BLOCK "DB_300"
+STRUCT
+    x : BOOL;
+    i : INT := 30;
+    d : DINT;
+    r : REAL := 1.25;
+    t : TIME;
+    dtv : DATE_AND_TIME;
+    s : STRING[8] := 'S7-300';
+    arr : ARRAY[0..3] OF INT;
+    m : ARRAY[0..1, 0..1] OF WORD;
+    st : STRUCT
+        p : WORD;
+        q : BYTE;
+    END_STRUCT;
+    u : "UDT_300";
+END_STRUCT
+BEGIN
+    arr[2] := 22;
+    m[1,1] := W#16#ABCD;
+END_DATA_BLOCK
+
+FUNCTION_BLOCK "FB_300"
+VAR_INPUT
+    en1 : BOOL;
+END_VAR
+VAR_OUTPUT
+    q : INT;
+END_VAR
+VAR
+    cnt : INT := 5;
+    u : "UDT_300";
+END_VAR
+BEGIN
+    q := cnt;
+END_FUNCTION_BLOCK
+
+DATA_BLOCK "FB_300_DB" "FB_300"
+BEGIN
+    cnt := 8;
+END_DATA_BLOCK

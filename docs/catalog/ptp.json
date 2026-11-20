@@ -1,0 +1,409 @@
+[
+ {
+  "group": "Point-to-point",
+  "title": "PORT_CFG: Configure communication parameters dynamically (S7-1200)",
+  "name": "PORT_CFG",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "PROTOCOL",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "BAUD",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "PARITY",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DATABITS",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "STOPBITS",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "FLOWCTRL",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "XONCHAR",
+    "decl": "Input",
+    "types": "CHAR"
+   },
+   {
+    "name": "XOFFCHAR",
+    "decl": "Input",
+    "types": "CHAR"
+   },
+   {
+    "name": "WAITTIME",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "SEND_CFG: Configure serial transmission parameters dynamically (S7-1200)",
+  "name": "SEND_CFG",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "RTSONDLY",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RTSOFFDLY",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "BREAK",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "IDLELINE",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "RCV_CFG: Configure serial receive parameters dynamically (S7-1200)",
+  "name": "RCV_CFG",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "CONDITIONS",
+    "decl": "Input",
+    "types": "CONDITIONS"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "SEND_PTP: Transmit send buffer data (S7-1200)",
+  "name": "SEND_PTP",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "BUFFER",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "LENGTH",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "PTRCL",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "RCV_PTP: Enable receive messages (S7-1200)",
+  "name": "RCV_PTP",
+  "params": [
+   {
+    "name": "EN_R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "BUFFER",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "LENGTH",
+    "decl": "Output",
+    "types": "UINT"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "RCV_RST: Delete receive buffer (S7-1200)",
+  "name": "RCV_RST",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "SGN_GET: Query RS-232 signals (S7-1200)",
+  "name": "SGN_GET",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DTR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DSR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RTS",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CTS",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DCD",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RING",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "SGN_SET: Set RS-232 signals (S7-1200)",
+  "name": "SGN_SET",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "SIGNAL",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "RTS",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DTR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DSR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "Point-to-point",
+  "title": "General status information of the communications blocks (S7-1200)",
+  "name": "General status information of the communications blocks",
+  "params": null
+ }
+]

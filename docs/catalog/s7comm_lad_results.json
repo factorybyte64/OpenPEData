@@ -1,0 +1,52 @@
+{
+ "sc001": {
+  "block": "FB_Lad_Get",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GET: Read data from a remote CPU"
+ },
+ "sc002": {
+  "block": "FB_Lad_Put",
+  "manual": true,
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PUT: Write data to a remote CPU"
+ },
+ "sc003": {
+  "block": "FB_Lad_sc003",
+  "body": [
+   "Usend pins=REQ,ID,R_ID,DONE,ERROR,STATUS,SD_1,SD_2,SD_3,SD_4"
+  ],
+  "ok": true,
+  "title": "USEND: Send data uncoordinated",
+  "typed": true
+ },
+ "sc004": {
+  "block": "FB_Lad_sc004",
+  "body": [
+   "Urcv pins=EN_R,ID,R_ID,NDR,ERROR,STATUS,RD_1,RD_2,RD_3,RD_4"
+  ],
+  "ok": true,
+  "title": "URCV: Receive data uncoordinated",
+  "typed": true
+ },
+ "sc005": {
+  "block": "FB_Lad_sc005",
+  "body": [
+   "Bsend pins=REQ,R,ID,R_ID,SD_1,LEN,DONE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "BSEND: Send data in segments",
+  "typed": true
+ },
+ "sc006": {
+  "block": "FB_Lad_sc006",
+  "body": [
+   "Brcv pins=EN_R,ID,R_ID,RD_1,LEN,NDR,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "BRCV: Receive data in segments",
+  "typed": true
+ }
+}

@@ -1,0 +1,32 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex025"
+    VAR_INPUT
+        v_n : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_in : Variant;
+        v_out : Variant;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            AsciiToHex(
+                in := #v_in,
+                n := #v_n,
+                ret_val => #v_ret_val,
+                out => #v_out
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

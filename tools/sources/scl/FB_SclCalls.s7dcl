@@ -1,0 +1,52 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_SclCalls"
+    VAR_INPUT
+        start : Bool;
+        pt : Time;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        cnt : Int;
+    END_VAR
+    VAR
+        tonInst : TON_TIME;
+        tofInst : TOF_TIME;
+        tpInst : TP_TIME;
+        ctuInst : CTU_INT;
+        trig : R_TRIG;
+        ftrig : F_TRIG;
+        counter : Int;
+        ifc : "FB_Iface";
+    END_VAR
+    VAR_TEMP
+        r : Real;
+        b : Bool;
+        res : Int;
+        tot : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #tonInst(IN := #start, PT := #pt);
+        #q := #tonInst.Q;
+        #tofInst(IN := #start, PT := T#2s);
+        #tpInst(IN := #start, PT := #pt, Q => #b);
+        #ctuInst(CU := #start, R := FALSE, PV := 10);
+        #cnt := #ctuInst.CV;
+        #trig(CLK := #start);
+        IF #trig.Q THEN
+            #counter := 0;
+        END_IF;
+        #ftrig(CLK := #start);
+        #b := #ftrig.Q;
+        #ifc(iBool := TRUE, iInt := 2, iReal := 1.0, ioReal := #r);
+        #cnt := #ifc.oInt;
+        "FB_Iface_DB"(iBool := #start, iInt := #cnt, iReal := #r, ioReal := #r, oInt => #cnt);
+        "FC_SclOps"();
+        #res := "FC_SclCtl"(n := 5, flag := TRUE, total => #tot);
+        #res := "FC_SclCtl"(n := #res, flag := #b, total => #tot);
+    END_NETWORK
+END_FUNCTION_BLOCK

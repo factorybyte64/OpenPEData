@@ -1,0 +1,23 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex010"
+    VAR_INPUT
+        v_loctime : Int;
+        v_dst : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "loctime_type := Int" }
+            Wr_Loc_T( LOCTIME := #v_loctime, DST := #v_dst, RET_VAL => #v_ret_val )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

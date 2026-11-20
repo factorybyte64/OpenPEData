@@ -1,0 +1,61 @@
+A: 046_plc_textlist_entry.zap21  B: 058_plc_textlist_range.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.History: bytes[651] 8b02000004000000180000008a00000036010000e20100007200000020000000360a431a032edf48 -> bytes[824] 38030000050000001c0000008e0000003a010000e60100008f0200007200000020000000360a431a
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-27T21:23:28.943709Z' -> '2026-10-27T21:23:48.066670Z'  (timestamp)
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-27T21:23:31.038047Z' -> '2026-10-27T21:23:48.384372Z'  (timestamp)
+CHANGED 102e:0040:1463 TextListFingerprintContainer name=None
+          ICommonFingerprintData.DataStore: bytes[253] 00e5000000000000000000000000100100000001010000000010deadbeef01000000000000000000 -> bytes[253] 00e5000000000000000000000000100100000001010000000010deadbeef01000000000000000000
+          ICommonFingerprintData.DataVersion: 639287330099665452 -> 639287330281571629
+REMOVED 1069:0002:1868 UserTextRangeData name='Range 0'
+REMOVED 1069:0002:1869 UserTextRangeData name='Range 1'
+NEW     1069:0002:1c70 UserTextRangeData name='Range 0'
+          IRangeData.RangeFrom = 0
+          IRangeData.RangeTo = 0
+          IRangeData.Text = bytes[45] 2d0000001d000000ffffffff01000000090416000000030000004175736810020000000000000000
+          ICoreAttributes.CreationTime = '2026-10-27T21:23:48.066670Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-27T21:23:48.066670Z'
+          ICoreAttributes.Name = 'Range 0'
+          link List -> 106a:0002:1460
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1069:0002:1c71 UserTextRangeData name='Range 1'
+          IRangeData.RangeFrom = 1
+          IRangeData.RangeTo = 1
+          IRangeData.Text = bytes[44] 2c0000001c000000ffffffff0100000009041600000002000000416e681002000000000000000000
+          ICoreAttributes.CreationTime = '2026-10-27T21:23:48.066670Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-27T21:23:48.066670Z'
+          ICoreAttributes.Name = 'Range 1'
+          link List -> 106a:0002:1460
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1069:0002:1c72 UserTextRangeData name='Range 2 - 5'
+          IRangeData.RangeFrom = 2
+          IRangeData.RangeTo = 5
+          IRangeData.Text = bytes[50] 3200000022000000ffffffff010000000904160000000800000053746f6572756e67681002000000
+          ICoreAttributes.CreationTime = '2026-10-27T21:23:48.066670Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-27T21:23:48.066670Z'
+          ICoreAttributes.Name = 'Range 2 - 5'
+          link List -> 106a:0002:1460
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+CHANGED 106a:0002:1460 UserTextRangeListData name='TL_Test'
+          ICoreAttributes.ModifiedTime: '2026-10-27T21:23:28.943709Z' -> '2026-10-27T21:23:48.066670Z'  (timestamp)
+          ICoreExpandoAttributes.DomainServices_ChangeCounterModifiedTime: '2026-10-27T21:23:29.920689Z' -> '2026-10-27T21:23:48.154008Z'
+          IObjectRangeListData.ChangeCounter: 5 -> 6
+          raw ICoreExpandoAttributes: 50 -> 50 bytes
+          raw <links 1>: 52 -> 52 bytes
+          +link Entries -> 1069:0002:1c70
+          +link Entries -> 1069:0002:1c71
+          +link Entries -> 1069:0002:1c72
+          -link Entries -> 1069:0002:1868
+          -link Entries -> 1069:0002:1869
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

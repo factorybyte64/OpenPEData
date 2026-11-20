@@ -1,0 +1,19 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl040"
+    VAR_OUTPUT
+        v_ret : Array[0..99] of Byte;
+    END_VAR
+    VAR_IN_OUT
+        v_src_variable : Array[0..99] of Byte;
+        v_dest_array : Byte;
+        v_pos : DInt;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := Serialize(SRC_VARIABLE := #v_src_variable, DEST_ARRAY := #v_dest_array, POS := #v_pos);
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,37 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex071"
+    VAR_INPUT
+        v_com_rst : Bool;
+        v_start : Bool;
+        v_end : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_status : DWord;
+    END_VAR
+    VAR_IN_OUT
+        v_penergy : PE_PLUS;
+    END_VAR
+    VAR
+        inst : PE_WOL;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.PE_WOL(
+                COM_RST := #v_com_rst,
+                START := #v_start,
+                END := #v_end,
+                STATUS => #v_status,
+                PENERGY := #v_penergy
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

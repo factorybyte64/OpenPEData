@@ -1,0 +1,43 @@
+﻿FUNCTION_BLOCK "FB_StlBe"
+TITLE = STL catalog FB_StlBe
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR 
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 128 BE
+      L 1;
+      T #ir;
+      BE;
+END_FUNCTION_BLOCK
+

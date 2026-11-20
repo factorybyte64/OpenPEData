@@ -1,0 +1,202 @@
+A: 149_hmi_rt_maxlogin_errors.zap21  B: 150_hmi_rt_prodiag.zap21
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-29T19:54:41.540666Z' -> '2026-10-29T19:55:52.430896Z'  (timestamp)
+          raw <links 44>: 3852 -> 3852 bytes
+          raw <links 98>: 972 -> 972 bytes
+          +link typed slot 107 -> 1607:00e5:2078
+          +link typed slot 107 -> 1607:00e5:207d
+          +link typed slot 53 -> 100c:00c0:207b
+          +link typed slot 53 -> 100c:00c0:207e
+          +link typed slot 53 -> 100c:00c0:207f
+CHANGED 1002:00c0:1381 HmiAlarmClassData name='SystemAlarm'
+          ICoreAttributes.ModifiedTime: '2026-10-29T19:54:41.540666Z' -> '2026-10-29T19:55:52.430896Z'  (timestamp)
+NEW     1005:00c8:207c HmiTextData name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.FormattedDefaultText = None
+          ICoreTextExtendedData.DefaultText = 'Computer1 (@2%s@): Manager (@1%s@) is not connected.'
+          ICoreTextRepository.Text = bytes[156] 9c0000008c000000ffffffff020000000904ffff1c0000005400000034000000436f6d7075746572
+          link ExpandoParent -> 100c:00c0:207b
+          link Category -> 1007:00c8:13a6
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1005:00c8:2080 HmiTextData name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.FormattedDefaultText = None
+          ICoreTextExtendedData.DefaultText = 'Computer1 (@2%s@): Service (@1%s@) is not being executed.'
+          ICoreTextRepository.Text = bytes[166] a600000096000000ffffffff020000000904ffff1c0000005900000039000000436f6d7075746572
+          link ExpandoParent -> 100c:00c0:207f
+          link Category -> 1007:00c8:13a6
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-29T19:54:41.540666Z' -> '2026-10-29T19:55:52.430896Z'  (timestamp)
+CHANGED 1007:00c8:13a6 HMI_system_event name='HMI sytem event'
+          raw <links 21>: 1932 -> 1932 bytes
+          +link typed slot 25 -> 1005:00c8:207c
+          +link typed slot 25 -> 1005:00c8:2080
+NEW     100c:00c0:207b HmiSystemEventData name='ServiceManagerAlarm_3'
+          ICoreAttributes.CreationTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'ServiceManagerAlarm_3'
+          IAlarmData.AlarmId = 536870963
+          IAlarmData.AlarmKind = 'Undefined'
+          IAlarmData.Priority = 0
+          IAlarmData.Range = -1
+          IAlarmData.ReadOnlyForUser = False
+          IAlarmData.Report = -1
+          IAlarmData.SecondaryAlarmId = 182
+          IAlarmData.Version = 0
+          IAlarmData.TextIndexes = None
+          IHmiOnlyAlarmAttributes.StatusBitNumber = 0
+          IHmiScadaAlarmAttributes.UniqueId = 536870963
+          IHmiSystemEventExpandoAttributes.TextLibraryFullId_EventText = 'AlarmTextLibrary.22'
+          IILHmiAlarmAttributes.Origin = ''
+          IILHmiAlarmAttributes.Area = 'System/HMI/RuntimeSystem'
+          IILHmiSystemEventExpandoAttributes.ParentId = 6
+          IILHmiSystemEventExpandoAttributes.SystemSeverity = 132
+          IILHmiSystemEventExpandoAttributes.IlSystemAlarmId = 536870921
+          IILHmiSystemEventExpandoAttributes.SubElementId = 2
+          IILHmiSystemEventExpandoAttributes.SourceType = 'Tag'
+          IILHmiSystemEventExpandoAttributes.DataType = 'Bool'
+          IILHmiSystemEventExpandoAttributes.AlarmType = 'BinaryAlarm'
+          IILHmiSystemEventExpandoAttributes.ConditionPattern = '0'
+          IILHmiSystemEventExpandoAttributes.SystemTemplateId = 'ServiceManagerAlarm'
+          IILHmiSystemEventExpandoAttributes.AlarmParameterTags = bytes[318] be020024010000000000000000000000100100000001010000002401000002000000180000001500
+          ITextAttributes.AlarmText1 = bytes[6] 060000000080
+          link HmiSystemEventDataParentRelation -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiAlarmClassDataRelation -> 1002:00c0:1381
+          link HmiInternalSystemTagRelation -> 1607:00e5:2078
+          link ExpandoChildren -> 1005:00c8:207c
+NEW     100c:00c0:207e HmiSystemEventData name='GoodRange_43'
+          ICoreAttributes.CreationTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'GoodRange_43'
+          IAlarmData.AlarmId = 600044
+          IAlarmData.AlarmKind = 'Undefined'
+          IAlarmData.Priority = 0
+          IAlarmData.Range = -1
+          IAlarmData.ReadOnlyForUser = False
+          IAlarmData.Report = -1
+          IAlarmData.SecondaryAlarmId = 183
+          IAlarmData.Version = 0
+          IAlarmData.TextIndexes = None
+          IHmiOnlyAlarmAttributes.StatusBitNumber = 0
+          IHmiScadaAlarmAttributes.UniqueId = 600044
+          IILHmiSystemEventExpandoAttributes.ParentId = 2
+          IILHmiSystemEventExpandoAttributes.SystemSeverity = 0
+          IILHmiSystemEventExpandoAttributes.SubElementId = 1
+          IILHmiSystemEventExpandoAttributes.SourceType = 'T'
+          IILHmiSystemEventExpandoAttributes.Condition = bytes[2] 6167
+          IILHmiSystemEventExpandoAttributes.DataType = 'DInt'
+          IILHmiSystemEventExpandoAttributes.AlarmType = 'AnalogAlarm'
+          IILHmiSystemEventExpandoAttributes.SystemTemplateId = 'GoodRange'
+          IILHmiSystemEventExpandoAttributes.InitialConditionValue = '0'
+          link HmiSystemEventDataParentRelation -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiInternalSystemTagRelation -> 1607:00e5:207d
+NEW     100c:00c0:207f HmiSystemEventData name='SystemServiceAlarm_7'
+          ICoreAttributes.CreationTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'SystemServiceAlarm_7'
+          IAlarmData.AlarmId = 536870964
+          IAlarmData.AlarmKind = 'Undefined'
+          IAlarmData.Priority = 0
+          IAlarmData.Range = -1
+          IAlarmData.ReadOnlyForUser = False
+          IAlarmData.Report = -1
+          IAlarmData.SecondaryAlarmId = 184
+          IAlarmData.Version = 0
+          IAlarmData.TextIndexes = None
+          IHmiOnlyAlarmAttributes.StatusBitNumber = 0
+          IHmiScadaAlarmAttributes.UniqueId = 536870964
+          IHmiSystemEventExpandoAttributes.TextLibraryFullId_EventText = 'AlarmTextLibrary.16'
+          IILHmiAlarmAttributes.Origin = ''
+          IILHmiAlarmAttributes.Area = 'System/HMI/RuntimeSystem'
+          IILHmiSystemEventExpandoAttributes.ParentId = 2
+          IILHmiSystemEventExpandoAttributes.SystemSeverity = 130
+          IILHmiSystemEventExpandoAttributes.IlSystemAlarmId = 536870922
+          IILHmiSystemEventExpandoAttributes.SubElementId = 2
+          IILHmiSystemEventExpandoAttributes.SourceType = 'Ta'
+          IILHmiSystemEventExpandoAttributes.Condition = bytes[1] 67
+          IILHmiSystemEventExpandoAttributes.DataType = 'DInt'
+          IILHmiSystemEventExpandoAttributes.AlarmType = 'AnalogAlarm'
+          IILHmiSystemEventExpandoAttributes.SystemTemplateId = 'SystemServiceAlarm'
+          IILHmiSystemEventExpandoAttributes.InitialConditionValue = '0'
+          IILHmiSystemEventExpandoAttributes.AlarmParameterTags = bytes[318] be020024010000000000000000000000100100000001010000002401000002000000180000001500
+          ITextAttributes.AlarmText1 = bytes[6] 060000000080
+          link HmiSystemEventDataParentRelation -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiAlarmClassDataRelation -> 1002:00c0:1381
+          link HmiInternalSystemTagRelation -> 1607:00e5:207d
+          link ExpandoChildren -> 1005:00c8:2080
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[8005] 0178bf0000000000000000000000100c0000000cff0f000000000000000000000000000000000000 -> bytes[8718] 016ace0000000000000000000000100d0000000dff1f000000000000000000000000000000000000
+CHANGED 1019:00b5:10a5 HmiILSettingsData name='ProcessDiagnostics'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-29T19:55:52.430896Z'  (timestamp)
+          IHmiILSettingsExpandoAttributes.EnableProcessDiagnostics: '<absent>' -> True
+          raw IHmiILSettingsExpandoAttributes: 34 -> 34 bytes
+CHANGED 1019:00b5:10a6 HmiILSettingsData name='DomainFunctionConfigurations'
+          ICoreAttributes.ModifiedTime: '2026-10-29T19:54:41.540666Z' -> '2026-10-29T19:55:52.430896Z'  (timestamp)
+          IHmiILSettingsExpandoAttributes.DomainFunctionsRecord: bytes[3225] 991901741500000000000000000000001002000000020300000000000000c615785ecd577b3c94f9 -> bytes[3356] 9c1a01601700000000000000000000001002000000020300000000000000c315785ecd57793c54eb
+          raw IHmiILSettingsExpandoAttributes: 22634 -> 22634 bytes
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-29T19:55:43.563181Z' -> '2026-10-29T19:55:55.712948Z'  (timestamp)
+NEW     1607:00e5:2078 HmiInternalSystemTagData name='Conn_event_0_1_to_api_31_1'
+          ICoreAttributes.CreationTime = '2026-10-29T19:55:52.559627Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsInternal = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'Conn_event_0_1_to_api_31_1'
+          IAdditionalAttributes.NamePrefix = 'INTL%'
+          IHmiInternalSystemTagAttributes.StructureTypeId = 1879080963
+          IHmiInternalSystemTagAttributes.DomainFunctionName = ''
+          link HmiInternalSystemTags_ToDevice -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiInternalSystemTagRelation_Inverse -> 100c:00c0:207b
+NEW     1607:00e5:207d HmiInternalSystemTagData name='Service_8BDD2A73-7807-4819-BE3F-C8D75033C36C'
+          ICoreAttributes.CreationTime = '2026-10-29T19:55:52.621524Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsInternal = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T19:55:52.430896Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Service_8BDD2A73-7807-4819-BE3F-C8D75033C36C'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IAdditionalAttributes.NamePrefix = 'INTL%'
+          IHmiInternalSystemTagAttributes.StructureTypeId = 1879080964
+          IHmiInternalSystemTagAttributes.DomainFunctionName = ''
+          link HmiInternalSystemTags_ToDevice -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiInternalSystemTagRelation_Inverse -> 100c:00c0:207e
+          link HmiInternalSystemTagRelation_Inverse -> 100c:00c0:207f
+store records changed/new: 0003:0007:3, 0004:0007:5, 000d:0007:10, 0011:0007:1407, 0014:0007:0, 0015:0007:20, 0016:0007:18

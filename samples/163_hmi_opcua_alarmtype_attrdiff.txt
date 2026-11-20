@@ -1,0 +1,61 @@
+A: 162_hmi_opcua_connection.zap21  B: 163_hmi_opcua_alarmtype.zap21
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-29T21:02:46.282195Z' -> '2026-10-29T21:03:03.869800Z'  (timestamp)
+          raw <links 33>: 24 -> 24 bytes
+          raw <links 96>: 0 -> 24 bytes
+          raw <links 97>: 0 -> 24 bytes
+          +link typed slot 105 -> 1004:00c1:2829
+          +link typed slot 106 -> 1001:00c1:2828
+          slot table [0, 516, 0, 0, 9062, 0, 0, 0, 5481, 609, 885, 0, 0, 0, 0, 5457, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5409, 0, 0, 0, 0, 0, 0, 2397, 0, 0, 0, 0, 2949, 0, 5229, 5253, 0, 0, 3297, 0, 0, 0, 0, 2913, 5433, 5385, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9026, 0, 3201, 0, 0, 0, 0, 0, 0, 0, 0, 1137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2421, 0, 0, 0, 0, 1425, 0, 0, 1389, 0, 0, 0, 0, 0, 0, 0] -> [0, 516, 0, 0, 9062, 0, 0, 0, 5481, 609, 885, 0, 0, 0, 0, 5457, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5409, 0, 0, 0, 0, 0, 0, 2397, 0, 0, 0, 0, 2949, 0, 5229, 5253, 0, 0, 3297, 0, 0, 0, 0, 2913, 5433, 5385, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9026, 0, 3201, 0, 0, 0, 0, 0, 0, 0, 0, 1137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2421, 0, 0, 9152, 9128, 1425, 0, 0, 1389, 0, 0, 0, 0, 0, 0, 0]
+NEW     1001:00c1:2828 ILOpcUaAlarmTypeData name='AT_Test'
+          ICoreAttributes.CreationTime = '2026-10-29T21:03:03.869800Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T21:03:03.869800Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'AT_Test'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IOpcUaAlarmTypeAttributeSet.LastSyncTime = '0001-01-01T00:00:00Z'
+          IOpcUaAlarmTypeAttributeSet.ConditionTypeId = 'ns=0;i=10523'
+          IOpcUaAlarmTypeAttributeSet.Area = 'System/HMI/DriverCommunication'
+          IOpcUaAlarmTypeAttributeSet.NotifyNodeId = 'ns=3;s=MyAlarmType'
+          link ILOpcUaAlarmTypeData_HmiDeviceData -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ILOpcUaAlarmTypeData_HmiAlarmClassData -> 1002:00c0:134a
+          link ILOpcUaAlarmData_ILOpcUaAlarmTypeData_MultiInstance_Inverse -> 1004:00c1:2829
+          link ILOpcUaAlarmTypeData_HmiConnectionData -> 1002:00b2:242e
+CHANGED 1002:00b2:242e HmiConnectionData name='OPCUA_Conn'
+          ICoreAttributes.ModifiedTime: '2026-10-29T21:02:46.282195Z' -> '2026-10-29T21:03:03.869800Z'  (timestamp)
+          raw <links 1>: 292 -> 308 bytes
+          +link ILOpcUaAlarmTypeData_HmiConnectionData_Inverse -> 1001:00c1:2828
+          +link ILControllerAlarmData_HmiConnectionData_Inverse -> 1004:00c1:2829
+CHANGED 1002:00c0:134a HmiAlarmClassData name='Alarm'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-29T21:03:03.869800Z'  (timestamp)
+NEW     1004:00c1:2829 ILOpcUaAlarmData name='AT_Test_MultiInstanceAlarm'
+          ICoreAttributes.CreationTime = '2026-10-29T21:03:03.869800Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T21:03:03.869800Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'AT_Test_MultiInstanceAlarm'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IAlarmAttributeSet.ID = 700000
+          IAlarmAttributeSet.Area = 'System/HMI/DriverCommunication'
+          IOpcUaAlarmTypeAttributeSet.LastSyncTime = '0001-01-01T00:00:00Z'
+          IOpcUaAlarmTypeAttributeSet.Area = ''
+          IOpcUaAlarmTypeAttributeSet.ConditionTypeId = 'ns=0;i=10523'
+          IOpcUaAlarmTypeAttributeSet.NotifyNodeId = 'ns=3;s=MyAlarmType'
+          link ILControllerAlarmData_HmiDeviceData -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ILAlarmData_HmiAlarmClassData -> 1002:00c0:134a
+          link ILOpcUaAlarmData_IILOpcUaAlarmTypeData_MultiInstance -> 1001:00c1:2828
+          link ILControllerAlarmData_HmiConnectionData -> 1002:00b2:242e
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-29T21:02:46.282195Z' -> '2026-10-29T21:03:03.869800Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[2747] 01063600000000000000000000001004000000040f0000000000000000000000000000009006785e -> bytes[2837] 01993900000000000000000000001004000000040f0000000000000000000000000000009006785e
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-29T21:02:48.870329Z' -> '2026-10-29T21:03:07.470687Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-09T01:07:01.046716Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.CodeBlockLibraryTypeVersion ID="0">
+    <AttributeList>
+      <Author>factorybyte</Author>
+      <VersionNumber>0.0.1</VersionNumber>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.FB ID="3" CompositionName="ContentObject">
+        <AttributeList>
+          <AutoNumber>true</AutoNumber>
+          <Interface>
+            <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+              <Section Name="Input">
+                <Member Name="in1" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+                  <AttributeList>
+                    <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                    <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                    <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                  </AttributeList>
+                </Member>
+              </Section>
+              <Section Name="Output">
+                <Member Name="out1" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+                  <AttributeList>
+                    <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                    <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                    <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                  </AttributeList>
+                </Member>
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static" />
+              <Section Name="Temp" />
+              <Section Name="Constant" />
+            </Sections>
+          </Interface>
+          <IsIECCheckEnabled>false</IsIECCheckEnabled>
+          <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+          <MemoryLayout>Optimized</MemoryLayout>
+          <MemoryReserve>100</MemoryReserve>
+          <Name>FB_Typed</Name>
+          <Namespace />
+          <Number>2</Number>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+          <SetENOAutomatically>false</SetENOAutomatically>
+          <UDABlockProperties />
+          <UDAEnableTagReadback>false</UDAEnableTagReadback>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <SW.Blocks.CompileUnit ID="6" CompositionName="CompileUnits">
+            <AttributeList>
+              <NetworkSource>
+                <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+                  <Access Scope="LocalVariable" UId="21">
+                    <Symbol UId="22">
+                      <Component Name="out1" UId="23" />
+                    </Symbol>
+                  </Access>
+                  <Blank Num="1" UId="24" />
+                  <Token Text=":=" UId="25" />
+                  <Blank Num="1" UId="26" />
+                  <Access Scope="LocalVariable" UId="27">
+                    <Symbol UId="28">
+                      <Component Name="in1" UId="29" />
+                    </Symbol>
+                  </Access>
+                  <Blank Num="1" UId="30" />
+                  <Token Text="+" UId="31" />
+                  <Blank Num="1" UId="32" />
+                  <Access Scope="LiteralConstant" UId="33">
+                    <Constant UId="34">
+                      <ConstantValue UId="36">1</ConstantValue>
+                    </Constant>
+                  </Access>
+                  <Token Text=";" UId="37" />
+                </StructuredText>
+              </NetworkSource>
+              <ProgrammingLanguage>SCL</ProgrammingLanguage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="7" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="8" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="9" CompositionName="Title">
+                <ObjectList>
+                  <MultilingualTextItem ID="A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </SW.Blocks.CompileUnit>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.FB>
+    </ObjectList>
+  </SW.Blocks.CodeBlockLibraryTypeVersion>
+</Document>

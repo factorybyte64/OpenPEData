@@ -1,0 +1,12 @@
+FUNCTION "FC_CarrierDtl" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_TEMP
+      d : DTL;
+   END_VAR
+
+BEGIN
+	// carrier for ADD_DTL_T_SFC and SUB_DTL_T_SFC (tools\rebuild sys_blocks, sample 039_fw41)
+	#d := T_ADD(IN1 := #d, IN2 := T#1s);
+	#d := T_SUB(IN1 := #d, IN2 := T#1s);
+END_FUNCTION

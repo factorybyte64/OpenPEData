@@ -1,0 +1,25 @@
+﻿FUNCTION_BLOCK "FB_StlC_012"
+TITLE = STL call CompType
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_OUTPUT 
+      b : Bool;
+   END_VAR
+
+   VAR 
+      a1 : Array[0..3] of Int;
+      a2 : Array[0..3] of Int;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 012 CompType
+      CALL CompType
+      {src_type := 'Variant', relation := 'EQ'}
+      (  IN1                         := #a1 , 
+         IN2                         := #a2 , 
+         OUT                         := #b
+      );
+END_FUNCTION_BLOCK
+

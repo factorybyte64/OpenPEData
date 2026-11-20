@@ -1,0 +1,16 @@
+{
+    S7_Optimized := "TRUE";
+    S7_EditorMode := "SCL";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Top"
+    VAR
+        m : "FB_Multi";
+        ms : Array[0..1] of "FB_Multi";
+        x : Real;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #m(start := TRUE, io := #x);
+    END_NETWORK
+END_FUNCTION_BLOCK

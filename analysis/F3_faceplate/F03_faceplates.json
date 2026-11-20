@@ -1,0 +1,580 @@
+{
+ "project": "samples/F03_hmi_faceplates_user",
+ "faceplateTypes": [
+  {
+   "name": "FP_Basic",
+   "typeGuid": "f10ac243-f6e0-459c-bd54-b3b7d374677f",
+   "folderPath": "",
+   "isObsolete": false,
+   "defaultVersion": "0.0.1",
+   "latestVersion": "0.0.1",
+   "instanceCount": 0,
+   "library": "Project library",
+   "alwaysDownload": null,
+   "key": "0002:00d3:2018",
+   "versions": [
+    {
+     "version": "0.0.1",
+     "state": "Committed",
+     "isDefault": true,
+     "finalizationTime": "2026-10-20T17:49:59.722470Z",
+     "author": "factorybyte",
+     "comment": {},
+     "minimumTargetDeviceVersion": "21.0.1.0",
+     "content": {
+      "width": 750,
+      "height": 300,
+      "items": [
+       {
+        "name": "B_CircArc1",
+        "type": "HmiCircularArc",
+        "left": 310,
+        "top": 250,
+        "width": null,
+        "height": null,
+        "events": [],
+        "key": "1003:00cd:2079"
+       },
+       {
+        "name": "B_Circle1",
+        "type": "HmiCircle",
+        "left": 70,
+        "top": 250,
+        "width": null,
+        "height": null,
+        "events": [],
+        "key": "1003:00cd:2077"
+       },
+       {
+        "name": "B_CircleSeg1",
+        "type": "HmiCircleSegment",
+        "left": 190,
+        "top": 250,
+        "width": null,
+        "height": null,
+        "events": [],
+        "key": "1003:00cd:2078"
+       },
+       {
+        "name": "B_EllArc1",
+        "type": "HmiEllipticalArc",
+        "left": 350,
+        "top": 140,
+        "width": null,
+        "height": null,
+        "events": [],
+        "key": "1003:00cd:2076"
+       },
+       {
+        "name": "B_Ellipse1",
+        "type": "HmiEllipse",
+        "left": 70,
+        "top": 140,
+        "width": null,
+        "height": null,
+        "events": [],
+        "key": "1003:00cd:2074"
+       },
+       {
+        "name": "B_EllipseSeg1",
+        "type": "HmiEllipseSegment",
+        "left": 210,
+        "top": 140,
+        "width": null,
+        "height": null,
+        "events": [],
+        "key": "1003:00cd:2075"
+       },
+       {
+        "name": "B_GraphicView1",
+        "type": "HmiGraphicView",
+        "left": 590,
+        "top": 10,
+        "width": 150,
+        "height": 100,
+        "events": [],
+        "key": "1003:00cd:207d"
+       },
+       {
+        "name": "B_Line1",
+        "type": "HmiLine",
+        "left": 150,
+        "top": 10,
+        "width": 120,
+        "height": 60,
+        "events": [],
+        "key": "1003:00cd:2071"
+       },
+       {
+        "name": "B_Polygon1",
+        "type": "HmiPolygon",
+        "left": 430,
+        "top": 10,
+        "width": 106,
+        "height": 58,
+        "events": [],
+        "key": "1003:00cd:2073"
+       },
+       {
+        "name": "B_Polyline1",
+        "type": "HmiPolyline",
+        "left": 290,
+        "top": 10,
+        "width": 106,
+        "height": 58,
+        "events": [],
+        "key": "1003:00cd:2072"
+       },
+       {
+        "name": "B_Rect1",
+        "type": "HmiRectangle",
+        "left": 10,
+        "top": 10,
+        "width": 120,
+        "height": 60,
+        "events": [],
+        "key": "1003:00cd:2070"
+       },
+       {
+        "name": "B_Text1",
+        "type": "HmiText",
+        "left": 390,
+        "top": 220,
+        "width": 160,
+        "height": 40,
+        "events": [],
+        "key": "1003:00cd:207a"
+       }
+      ],
+      "interface": {
+       "present": false,
+       "tags": [],
+       "properties": [],
+       "events": []
+      },
+      "key": "1004:00cd:206d"
+     },
+     "unresolvedTags": [],
+     "scripts": 0,
+     "environmentObjects": 92,
+     "instances": [],
+     "key": "0003:00d3:2019"
+    }
+   ]
+  },
+  {
+   "name": "FP_Controls",
+   "typeGuid": "cb3ad79d-2036-4097-b6a3-f8ac40771bec",
+   "folderPath": "",
+   "isObsolete": false,
+   "defaultVersion": null,
+   "latestVersion": null,
+   "instanceCount": 0,
+   "library": "Project library",
+   "alwaysDownload": null,
+   "key": "0002:00d3:207e",
+   "versions": [
+    {
+     "version": "0.0.1",
+     "state": "InWork",
+     "isDefault": false,
+     "finalizationTime": null,
+     "author": "factorybyte",
+     "comment": {},
+     "minimumTargetDeviceVersion": "21.0.1.0",
+     "content": {
+      "width": 810,
+      "height": 880,
+      "items": [
+       {
+        "name": "C_AlarmControl1",
+        "type": "HmiAlarmControl",
+        "left": 10,
+        "top": 10,
+        "width": 380,
+        "height": 200,
+        "events": [],
+        "key": "1003:00cd:20d4"
+       },
+       {
+        "name": "C_DetParam1",
+        "type": "HmiDetailedParameterControl",
+        "left": 400,
+        "top": 350,
+        "width": 190,
+        "height": 120,
+        "events": [],
+        "key": "1003:00cd:20da"
+       },
+       {
+        "name": "C_Faceplate1",
+        "type": "HmiFaceplateContainer",
+        "left": 10,
+        "top": 750,
+        "width": 190,
+        "height": 120,
+        "events": [],
+        "key": "0006:00d3:20dd"
+       },
+       {
+        "name": "C_Trend1",
+        "type": "HmiTrendControl",
+        "left": 400,
+        "top": 10,
+        "width": 380,
+        "height": 200,
+        "events": [],
+        "key": "1003:00cd:20d7"
+       }
+      ],
+      "interface": {
+       "present": false,
+       "tags": [],
+       "properties": [],
+       "events": []
+      },
+      "key": "1004:00cd:20d3"
+     },
+     "unresolvedTags": [],
+     "scripts": 0,
+     "environmentObjects": 88,
+     "instances": [],
+     "key": "0003:00d3:207f"
+    }
+   ]
+  },
+  {
+   "name": "FP_Elements",
+   "typeGuid": "b97a64fc-3cf5-46f4-8040-af01de06aadc",
+   "folderPath": "",
+   "isObsolete": false,
+   "defaultVersion": "0.0.1",
+   "latestVersion": "0.0.1",
+   "instanceCount": 0,
+   "library": "Project library",
+   "alwaysDownload": null,
+   "key": "0002:00d3:2420",
+   "versions": [
+    {
+     "version": "0.0.1",
+     "state": "Committed",
+     "isDefault": true,
+     "finalizationTime": "2026-10-20T17:57:01.748150Z",
+     "author": "factorybyte",
+     "comment": {},
+     "minimumTargetDeviceVersion": "21.0.1.0",
+     "content": {
+      "width": 800,
+      "height": 400,
+      "items": [
+       {
+        "name": "E_Bar1",
+        "type": "HmiBar",
+        "left": 10,
+        "top": 90,
+        "width": 60,
+        "height": 180,
+        "events": [],
+        "key": "1003:00cd:247c"
+       },
+       {
+        "name": "E_Button1",
+        "type": "HmiButton",
+        "left": 10,
+        "top": 10,
+        "width": 140,
+        "height": 50,
+        "events": [],
+        "key": "1003:00cd:2476"
+       },
+       {
+        "name": "E_CheckBox1",
+        "type": "HmiCheckBoxGroup",
+        "left": 10,
+        "top": 290,
+        "width": 160,
+        "height": 100,
+        "events": [],
+        "key": "1003:00cd:2485"
+       },
+       {
+        "name": "E_Clock1",
+        "type": "HmiClock",
+        "left": 390,
+        "top": 90,
+        "width": 160,
+        "height": 160,
+        "events": [],
+        "key": "1003:00cd:2481"
+       },
+       {
+        "name": "E_Gauge1",
+        "type": "HmiGauge",
+        "left": 190,
+        "top": 90,
+        "width": 180,
+        "height": 180,
+        "events": [],
+        "key": "1003:00cd:247f"
+       },
+       {
+        "name": "E_IOField1",
+        "type": "HmiIOField",
+        "left": 170,
+        "top": 10,
+        "width": 140,
+        "height": 40,
+        "events": [],
+        "key": "1003:00cd:2479"
+       },
+       {
+        "name": "E_ListBox1",
+        "type": "HmiListBox",
+        "left": 370,
+        "top": 290,
+        "width": 160,
+        "height": 100,
+        "events": [],
+        "key": "1003:00cd:2487"
+       },
+       {
+        "name": "E_Radio1",
+        "type": "HmiRadioButtonGroup",
+        "left": 190,
+        "top": 290,
+        "width": 160,
+        "height": 100,
+        "events": [],
+        "key": "1003:00cd:2486"
+       },
+       {
+        "name": "E_Slider1",
+        "type": "HmiSlider",
+        "left": 90,
+        "top": 90,
+        "width": 80,
+        "height": 180,
+        "events": [],
+        "key": "1003:00cd:247e"
+       },
+       {
+        "name": "E_Switch1",
+        "type": "HmiToggleSwitch",
+        "left": 570,
+        "top": 90,
+        "width": 120,
+        "height": 50,
+        "events": [],
+        "key": "1003:00cd:2483"
+       },
+       {
+        "name": "E_SymIOField1",
+        "type": "HmiSymbolicIOField",
+        "left": 330,
+        "top": 10,
+        "width": 140,
+        "height": 40,
+        "events": [],
+        "key": "1003:00cd:247a"
+       },
+       {
+        "name": "E_TextBox1",
+        "type": "HmiTextBox",
+        "left": 490,
+        "top": 10,
+        "width": 160,
+        "height": 60,
+        "events": [],
+        "key": "1003:00cd:247b"
+       },
+       {
+        "name": "E_TouchArea1",
+        "type": "HmiTouchArea",
+        "left": 550,
+        "top": 290,
+        "width": 140,
+        "height": 100,
+        "events": [],
+        "key": "1003:00cd:2488"
+       }
+      ],
+      "interface": {
+       "present": false,
+       "tags": [],
+       "properties": [],
+       "events": []
+      },
+      "key": "1004:00cd:2475"
+     },
+     "unresolvedTags": [],
+     "scripts": 0,
+     "environmentObjects": 97,
+     "instances": [],
+     "key": "0003:00d3:2421"
+    }
+   ]
+  },
+  {
+   "name": "FP_Interface",
+   "typeGuid": "34f8de41-c791-40c1-80b8-95ee32a6d1ba",
+   "folderPath": "",
+   "isObsolete": false,
+   "defaultVersion": null,
+   "latestVersion": null,
+   "instanceCount": 0,
+   "library": "Project library",
+   "alwaysDownload": null,
+   "key": "0002:00d3:2489",
+   "versions": [
+    {
+     "version": "0.0.1",
+     "state": "InWork",
+     "isDefault": false,
+     "finalizationTime": null,
+     "author": "factorybyte",
+     "comment": {},
+     "minimumTargetDeviceVersion": "21.0.1.0",
+     "content": {
+      "width": 360,
+      "height": 260,
+      "items": [
+       {
+        "name": "I_Bar1",
+        "type": "HmiBar",
+        "left": 190,
+        "top": 90,
+        "width": 60,
+        "height": 160,
+        "events": [],
+        "key": "1003:00cd:24e7"
+       },
+       {
+        "name": "I_IOField1",
+        "type": "HmiIOField",
+        "left": 10,
+        "top": 110,
+        "width": 140,
+        "height": 40,
+        "events": [],
+        "key": "1003:00cd:24e6"
+       },
+       {
+        "name": "I_Rect1",
+        "type": "HmiRectangle",
+        "left": 10,
+        "top": 10,
+        "width": 120,
+        "height": 80,
+        "events": [],
+        "key": "1003:00cd:24df"
+       },
+       {
+        "name": "I_Text1",
+        "type": "HmiText",
+        "left": 150,
+        "top": 10,
+        "width": 200,
+        "height": 40,
+        "events": [
+         "ForeColorTrigger"
+        ],
+        "key": "1003:00cd:24e1"
+       }
+      ],
+      "interface": {
+       "present": false,
+       "tags": [],
+       "properties": [],
+       "events": []
+      },
+      "key": "1004:00cd:24de"
+     },
+     "unresolvedTags": [
+      "HmiTag_Ext1"
+     ],
+     "scripts": 1,
+     "environmentObjects": 88,
+     "instances": [],
+     "key": "0003:00d3:248a"
+    }
+   ]
+  },
+  {
+   "name": "FP_Script",
+   "typeGuid": "73628c9d-31e9-49e6-877b-5d12fcb7b00d",
+   "folderPath": "",
+   "isObsolete": false,
+   "defaultVersion": null,
+   "latestVersion": null,
+   "instanceCount": 0,
+   "library": "Project library",
+   "alwaysDownload": null,
+   "key": "0002:00d3:24e9",
+   "versions": [
+    {
+     "version": "0.0.1",
+     "state": "InWork",
+     "isDefault": false,
+     "finalizationTime": null,
+     "author": "factorybyte",
+     "comment": {},
+     "minimumTargetDeviceVersion": "21.0.1.0",
+     "content": {
+      "width": 180,
+      "height": 140,
+      "items": [
+       {
+        "name": "S_Button1",
+        "type": "HmiButton",
+        "left": 10,
+        "top": 10,
+        "width": 160,
+        "height": 50,
+        "events": [
+         "OnTapped",
+         "OnDown"
+        ],
+        "key": "1003:00cd:253f"
+       },
+       {
+        "name": "S_IOField1",
+        "type": "HmiIOField",
+        "left": 10,
+        "top": 90,
+        "width": 160,
+        "height": 40,
+        "events": [
+         "ProcessValueOnPropertyChanged"
+        ],
+        "key": "1003:00cd:2546"
+       }
+      ],
+      "interface": {
+       "present": false,
+       "tags": [],
+       "properties": [],
+       "events": []
+      },
+      "key": "1004:00cd:253e"
+     },
+     "unresolvedTags": [
+      "HmiTag_Ext1"
+     ],
+     "scripts": 3,
+     "environmentObjects": 87,
+     "instances": [],
+     "key": "0003:00d3:24ea"
+    }
+   ]
+  }
+ ],
+ "instances": [
+  {
+   "name": "C_Faceplate1",
+   "screen": "FP_Controls",
+   "instanceOf": null,
+   "versionState": null,
+   "key": "0006:00d3:1c3e"
+  }
+ ]
+}

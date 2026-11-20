@@ -1,0 +1,97 @@
+A: 002_cpu.zap21  B: 212_hw_subnet.zap21
+CHANGED 1001:0004:421 PackageContainerDatas name='Packages'
+          raw <links 1>: 628 -> 644 bytes
+          +link ContainsPackage -> 1002:0004:c11
+NEW     1002:0004:c11 PackageContainerData name='HW.SubnetIE{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.SubnetIE'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.SubnetIE{11.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedProduct -> 1004:0004:423
+          link RelatedProduct -> 1004:0004:42f
+          link RelatedObject -> 101e:0010:c10
+CHANGED 1004:0004:423 ProductVersionInfoData name='Siemens.Simatic.Portal:14.00.00.00'
+          raw <links 1>: 404 -> 420 bytes
+          +link RelatedPackageContainerData -> 1002:0004:c11
+CHANGED 1004:0004:42f ProductVersionInfoData name='Siemens.Simatic.STEP7.SinemaEBasic:12.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:c11
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 1011:0010:826 DeviceItemData name='PROFINET interface_1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:24:38.887598Z'  (timestamp)
+          raw <links 1>: 164 -> 196 bytes
+          +link Domains -> 1021:0010:c12
+          +link Domains -> 1021:0010:c13
+CHANGED 101d:0010:827 NodeData name='X1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:29.093949Z' -> '2026-10-24T15:24:38.887598Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          +link Subnet -> 101e:0010:c10
+NEW     101e:0010:c10 SubnetData name='PN/IE_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:24:38.887598Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:24:38.887598Z'
+          ICoreAttributes.Subtype = '3'
+          ICoreAttributes.Name = 'PN/IE_1'
+          IConfigBaseData.ConfigObjectTypeName = 'SubnetIE'
+          IConfigBaseData.ConfigObjectTypeVersion = '11.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[306] 320100000c000000380000002c000000090000000800000014000000140000001400000014000000
+          IPersistentExpandoData.NetDefaultSubnetIE = True
+          IPersistentExpandoData.NetParticipantsBeforeUpload = -1
+          IPersistentExpandoData.NetCheckUniqueIpAddress = True
+          IPersistentExpandoData.NetLastUsedMacAddress = 8796193751040
+          IPersistentExpandoData.NetLastUsedIPAddress = 3232235521
+          IPersistentExpandoData.NetLastUsedIPSubnetMask = 4294967040
+          IPersistentExpandoData.NetLastUsedIPDefaultRouterAddress = 3232235521
+          IPersistentExpandoData.NetLastUsedIPv6Address = bytes[47] 2f001600000000000000000000000010010000000101000000080031322e302e302e300100000600
+          ISubnetData.NetSubnetId = 222243082731521
+          ISubnetData.NetType = 3
+          link RelatedPackage -> 1002:0004:c11
+          link Domains -> 1021:0010:c12
+          link Domains -> 1021:0010:c13
+          link SubnetNodes -> 101d:0010:827
+          link ParentProject -> 1028:0002:433
+          link Environment -> 1028:0002:433
+NEW     1021:0010:c12 DomainData name='Sync-Domain_1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:24:38.887598Z'
+          ICoreAttributes.Subtype = 'Internal.SyncDomain'
+          ICoreAttributes.Name = 'Sync-Domain_1'
+          IConfigBaseData.ConfigObjectTypeName = 'SyncDomain'
+          IConfigBaseData.ConfigObjectTypeVersion = '10.5.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[243] f30000000c000000340000002800000008000000070000001e000000140000003c0000003c000000
+          IPersistentExpandoData.PnIrtMrpdDiagnosis = False
+          IPersistentExpandoData.PnIrtSyncDomainExpertMode = False
+          IPersistentExpandoData.PnIrtSyncDomainFFW = False
+          IPersistentExpandoData.PnIrtBandwidthLevel = 0
+          IPersistentExpandoData.PnIsDefaultDomain = True
+          IPersistentExpandoData.PnSyncDomainUuid = ''
+          IPersistentExpandoData.PnResSyncCyclicRatio = 30
+          link Subnet -> 101e:0010:c10
+          link Environment -> 1028:0002:433
+          link InterfaceSubmodules -> 1011:0010:826
+NEW     1021:0010:c13 DomainData name='mrpdomain-1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:24:38.887598Z'
+          ICoreAttributes.Subtype = 'Internal.MediaRedDomain'
+          ICoreAttributes.Name = 'mrpdomain-1'
+          IConfigBaseData.ConfigObjectTypeName = 'MediaRedDomain'
+          IConfigBaseData.ConfigObjectTypeVersion = '10.5.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[108] 6c0000000c000000200000001400000003000000020000003c0000003c0000004c00000003000000
+          IPersistentExpandoData.PnMrpManagerOutsideProject = False
+          IPersistentExpandoData.PnIsDefaultDomain = True
+          link Subnet -> 101e:0010:c10
+          link Environment -> 1028:0002:433
+          link InterfaceSubmodules -> 1011:0010:826
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:41.521779Z' -> '2026-10-24T15:24:39.272105Z'  (timestamp)
+          raw <links 1>: 260 -> 276 bytes
+          +link ProjectSubnets -> 101e:0010:c10
+          slot table [0, 0, 0, 76, 0, 0, 432, 172] -> [0, 0, 0, 76, 0, 0, 448, 172]
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:ff8, 0011:0007:ff9, 0014:0007:0, 0015:0007:20, 0016:0007:18

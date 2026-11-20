@@ -1,0 +1,33 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ts001"
+    VAR_INPUT
+        v_req : Bool;
+        v_to_s : String;
+        v_cc : String;
+        v_subject : String;
+        v_text : String;
+        v_attachment : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_attachment_name : Variant;
+        v_mail_addr_param : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            TMAIL_C( REQ := #v_req, ID := W#16#1, TO_S := #v_to_s, CC := #v_cc, SUBJECT := #v_subject, TEXT := #v_text, ATTACHMENT := #v_attachment, DONE => #v_done, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status, ATTACHMENT_NAME := #v_attachment_name, MAIL_ADDR_PARAM := #v_mail_addr_param )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

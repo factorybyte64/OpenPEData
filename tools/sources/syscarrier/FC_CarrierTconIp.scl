@@ -1,0 +1,11 @@
+FUNCTION "FC_CarrierTconIp" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_TEMP
+      c : TCON_IP_v4;
+   END_VAR
+
+BEGIN
+	// carrier for the system data types TCON_IP_v4 and IP_V4 (tools\rebuild sys_blocks, sample 037_lad_xml)
+	#c.InterfaceId := 64;
+END_FUNCTION

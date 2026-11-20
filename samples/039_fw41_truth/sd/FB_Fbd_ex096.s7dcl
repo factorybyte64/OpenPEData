@@ -1,0 +1,45 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex096"
+    VAR_INPUT
+        v_req : Bool;
+        v_laddr : HW_IO;
+        v_index : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_valid : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : DWord;
+        v_len : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_record : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : RD_DPAR;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.RD_DPAR(
+                REQ := #v_req,
+                LADDR := #v_laddr,
+                INDEX := #v_index,
+                VALID => #v_valid,
+                BUSY => #v_busy,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                LEN => #v_len,
+                RECORD := #v_record
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

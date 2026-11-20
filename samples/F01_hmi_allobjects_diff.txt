@@ -1,0 +1,172 @@
+F01_hmi_allobjects vs. 103_hmi_tag_ext (generated 2026-10-20, F1b)
+Tools: parser/OpenPEData.py (text + --verify), tools/unified_typecount.py (object count per metamodel type, latest version per key, without store records), probe via openpedata.project (subtype, problem sets, sizes).
+
+== Part 1: parser run
+Folder and .zap21: exit 0, text output identical; --verify (.zap21): OK, 2104 records, chain and signature ok.
+Parser shows HMI_1 with 7 screens (FP_Basic, FP_Controls, FP_Elements, FP_Flash, FP_Interface, FP_Script, Main, each 800x480), but no screen items, dynamizations or scripts.
+
+== Part 2a: type count, folder
+samples/103_hmi_tag_ext -> samples/F01_hmi_allobjects
+objects 1985 -> 2048, deleted 16 -> 19, records 2155 -> 2250
+metamodel types 1785 -> 1785, packages 100 -> 100
+
+== types with different object count (base, sample, delta, package)
+0      1          +1  Siemens.Simatic.Hmi.DL.FaceplateLib           Siemens.Simatic.Hmi.DL.FaceplateLib.ILFaceplateContainerData
+0      7          +7  Siemens.Simatic.Hmi.DL.ModernUI               Siemens.Simatic.Hmi.DL.ModernUI.ILScreenData
+0      47        +47  Siemens.Simatic.Hmi.DL.ModernUI               Siemens.Simatic.Hmi.DL.ModernUI.ILScreenItemData
+0      6          +6  Siemens.Simatic.Hmi.DL.Scripting              Siemens.Simatic.Hmi.DL.Scripting.HmiScriptEmbeddedData
+0      2          +2  Siemens.Simatic.Hmi.DL.Scripting              Siemens.Simatic.Hmi.DL.Scripting.HmiScriptModuleContainerData
+
+== focus DL.ModernUI: 9 types (base, sample)
+32     32     Siemens.Simatic.Hmi.DL.ModernUI.ILDeviceLayerData
+1      1      Siemens.Simatic.Hmi.DL.ModernUI.ILDeviceLayerSettingsData
+0      7      Siemens.Simatic.Hmi.DL.ModernUI.ILScreenData
+0      47     Siemens.Simatic.Hmi.DL.ModernUI.ILScreenItemData
+   (types with 0 objects on both sides: 5)
+
+== focus Dynamics: 1 types (base, sample)
+   (types with 0 objects on both sides: 1)
+
+== focus Scripting: 22 types (base, sample)
+0      6      Siemens.Simatic.Hmi.DL.Scripting.HmiScriptEmbeddedData
+0      2      Siemens.Simatic.Hmi.DL.Scripting.HmiScriptModuleContainerData
+   (types with 0 objects on both sides: 20)
+
+== focus ScreenModules: 10 types (base, sample)
+   (types with 0 objects on both sides: 10)
+
+== focus Controls: 20 types (base, sample)
+   (types with 0 objects on both sides: 20)
+
+== focus GraphX: 18 types (base, sample)
+1      1      Siemens.Simatic.Hmi.Utah.GraphX.HmiGraphXSettingsData
+   (types with 0 objects on both sides: 17)
+
+
+== Part 2b: type count, .zap21 (103_hmi_tag_ext.zap21 -> F01_hmi_allobjects.zap21; only the header line differs, rest identical)
+  samples/103_hmi_tag_ext.zap21 -> samples/F01_hmi_allobjects.zap21
+objects 1985 -> 2048, deleted 0 -> 0, records 2037 -> 2104
+metamodel types 1785 -> 1785, packages 100 -> 100
+
+== Part 3: new objects in detail (folder)
+-- count per type and ICoreAttributes.Subtype
+  6  HmiScriptEmbeddedData          
+  2  HmiScriptModuleContainerData   
+  1  ILFaceplateContainerData       HmiFaceplateContainer
+  7  ILScreenData                   
+  1  ILScreenItemData               HmiAlarmControl
+  1  ILScreenItemData               HmiAlarmIndicator
+  1  ILScreenItemData               HmiAlarmLineControl
+  2  ILScreenItemData               HmiBar
+  2  ILScreenItemData               HmiButton
+  1  ILScreenItemData               HmiCheckBoxGroup
+  1  ILScreenItemData               HmiCircle
+  1  ILScreenItemData               HmiCircleSegment
+  1  ILScreenItemData               HmiCircularArc
+  1  ILScreenItemData               HmiClock
+  1  ILScreenItemData               HmiDetailedParameterControl
+  1  ILScreenItemData               HmiEllipse
+  1  ILScreenItemData               HmiEllipseSegment
+  1  ILScreenItemData               HmiEllipticalArc
+  1  ILScreenItemData               HmiFunctionTrendControl
+  1  ILScreenItemData               HmiGauge
+  1  ILScreenItemData               HmiGraphicView
+  3  ILScreenItemData               HmiIOField
+  1  ILScreenItemData               HmiLine
+  1  ILScreenItemData               HmiListBox
+  1  ILScreenItemData               HmiMediaControl
+  1  ILScreenItemData               HmiPolygon
+  1  ILScreenItemData               HmiPolyline
+  1  ILScreenItemData               HmiProcessDiagnosisCriteriaAnalysisControl
+  1  ILScreenItemData               HmiProcessDiagnosisGraphOverviewControl
+  1  ILScreenItemData               HmiProcessDiagnosisOverviewControl
+  1  ILScreenItemData               HmiProcessDiagnosisPlcCodeViewerControl
+  1  ILScreenItemData               HmiRadioButtonGroup
+  3  ILScreenItemData               HmiRectangle
+  1  ILScreenItemData               HmiScreenWindow
+  1  ILScreenItemData               HmiSlider
+  1  ILScreenItemData               HmiSymbolicIOField
+  1  ILScreenItemData               HmiSystemDiagnosisControl
+  2  ILScreenItemData               HmiText
+  1  ILScreenItemData               HmiTextBox
+  1  ILScreenItemData               HmiToggleSwitch
+  1  ILScreenItemData               HmiTouchArea
+  1  ILScreenItemData               HmiTrendCompanion
+  1  ILScreenItemData               HmiTrendControl
+  1  ILScreenItemData               HmiWebControl
+-- per object: type, subtype, name, size in bytes, attribute sets with decoding problem, IAdditionalAttributes keys
+  HmiScriptEmbeddedData                                                     BackColorTrigger     1227  probl=[IAdditionalAttributes,IScriptAttributes,IScriptLinkExpandoAttributes]  add=[(7 expando)]
+  HmiScriptEmbeddedData                                                     ForeColorTrigger     1363  probl=[IAdditionalAttributes,IScriptAttributes,IScriptLinkExpandoAttributes]  add=[(14 expando)]
+  HmiScriptEmbeddedData                                                     OnDown               1100  probl=[IAdditionalAttributes,IScriptAttributes,IScriptLinkExpandoAttributes]  add=[(0 expando)]
+  HmiScriptEmbeddedData                                                     OnLoaded              942  probl=[IAdditionalAttributes,IScriptAttributes,IScriptLinkExpandoAttributes]  add=[(0 expando)]
+  HmiScriptEmbeddedData                                                     OnTapped             1142  probl=[IAdditionalAttributes,IScriptAttributes,IScriptLinkExpandoAttributes]  add=[(0 expando)]
+  HmiScriptEmbeddedData                                                     ProcessValueOnPropertyChanged   1101  probl=[IAdditionalAttributes,IScriptAttributes,IScriptLinkExpandoAttributes]  add=[(0 expando)]
+  HmiScriptModuleContainerData                                              ScriptModuleContainer    651  probl=[IScriptLinkExpandoAttributes]  add=[#2147483669]
+  HmiScriptModuleContainerData                                              ScriptModuleContainer    507  probl=[IScriptLinkExpandoAttributes]  add=[]
+  ILFaceplateContainerData     HmiFaceplateContainer                        C_Faceplate1          548  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenData                                                              FP_Basic             7194  probl=[IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[]
+  ILScreenData                                                              FP_Controls          7229  probl=[IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[]
+  ILScreenData                                                              FP_Elements          7213  probl=[IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[]
+  ILScreenData                                                              FP_Flash             7034  probl=[IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[]
+  ILScreenData                                                              FP_Interface         8080  probl=[IEventExpandoAttributes,IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[]
+  ILScreenData                                                              FP_Script            7129  probl=[IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[Loaded]
+  ILScreenData                                                              Main                 7030  probl=[IPropertyDynamicExpandoAttributes,IQualityChangedExpandoAttributes]  add=[]
+  ILScreenItemData             HmiCircularArc                               B_CircArc1            539  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiCircle                                    B_Circle1             501  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiCircleSegment                             B_CircleSeg1          527  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiEllipticalArc                             B_EllArc1             540  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiEllipse                                   B_Ellipse1            535  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiEllipseSegment                            B_EllipseSeg1         545  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiGraphicView                               B_GraphicView1        543  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiLine                                      B_Line1               545  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiPolygon                                   B_Polygon1            749  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiPolyline                                  B_Polyline1           751  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiRectangle                                 B_Rect1               534  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiText                                      B_Text1              1135  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiAlarmControl                              C_AlarmControl1     35591  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiAlarmLineControl                          C_AlarmLine1         4544  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiProcessDiagnosisCriteriaAnalysisControl   C_CritAnalysis1      5120  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiDetailedParameterControl                  C_DetParam1          7333  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiFunctionTrendControl                      C_FTrend1            2749  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiProcessDiagnosisGraphOverviewControl      C_GraphOv1           4558  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiMediaControl                              C_Media1             1866  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiProcessDiagnosisPlcCodeViewerControl      C_PlcCode1           2090  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiProcessDiagnosisOverviewControl           C_ProDiagOv1        13977  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiScreenWindow                              C_ScreenWin1          594  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiSystemDiagnosisControl                    C_SysDiag1           8826  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiTrendControl                              C_Trend1             3468  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiTrendCompanion                            C_TrendCompanion1   28404  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiWebControl                                C_Web1               1268  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiAlarmIndicator                            E_AlarmInd1           727  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiBar                                       E_Bar1                527  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiButton                                    E_Button1            1123  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiCheckBoxGroup                             E_CheckBox1          2866  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiClock                                     E_Clock1              531  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiGauge                                     E_Gauge1              531  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiIOField                                   E_IOField1            535  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiListBox                                   E_ListBox1           1707  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiRadioButtonGroup                          E_Radio1             1714  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiSlider                                    E_Slider1             533  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiToggleSwitch                              E_Switch1             539  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiSymbolicIOField                           E_SymIOField1         546  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiTextBox                                   E_TextBox1           1179  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiTouchArea                                 E_TouchArea1          539  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiBar                                       I_Bar1               1131  probl=[IEventExpandoAttributes,IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiIOField                                   I_IOField1            575  probl=[IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiRectangle                                 I_Rect1              3218  probl=[IEventExpandoAttributes,IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiText                                      I_Text1              2303  probl=[IEventExpandoAttributes,IPropertyDynamicExpandoAttributes]  add=[]
+  ILScreenItemData             HmiButton                                    S_Button1            1273  probl=[IPropertyDynamicExpandoAttributes]  add=[Down,Tapped]
+  ILScreenItemData             HmiIOField                                   S_IOField1            783  probl=[IPropertyDynamicExpandoAttributes,ISoftlinkAttributes]  add=[]
+  ILScreenItemData             HmiRectangle                                 X_Rect1              1206  probl=[IEventExpandoAttributes,IPropertyDynamicExpandoAttributes]  add=[]
+
+== Findings (reported only, no spec)
+- All 47 screen items (except the faceplate container) are ILScreenItemData (DL.ModernUI); the Openness type is in ICoreAttributes.Subtype (e.g. HmiRectangle, HmiAlarmControl). The faceplate container has its own type ILFaceplateContainerData (DL.FaceplateLib).
+- Screens: ILScreenData, 7 of them (6 FP_*/Main + FP_Flash).
+- Property values (position, colors, texts) are in IPropertyDynamicExpandoAttributes; the parser reports a decoding problem there throughout.
+- Dynamizations (tag: direct/SingleBit/Range, ProcessValue, Flashing) create NO objects of their own (Dynamics/DL.Dynamics stay 0); they are contained in the expando data of the screen item (I_Rect1: 3218 bytes vs. B_Rect1 534 bytes, plus IEventExpandoAttributes).
+- Scripts: 6 HmiScriptEmbeddedData = exactly the 6 created scripts (I_Text1 ForeColor dynamization, FP_Interface BackColor dynamization, S_Button1 Tapped and Down, S_IOField1 ProcessValue Change, FP_Script Loaded); 2 HmiScriptModuleContainerData (one per screen with scripts: FP_Interface, FP_Script).
+- Events appear as IAdditionalAttributes keys with the event name (S_Button1: Tapped, Down; FP_Script: Loaded).
+- The property event S_IOField1 ProcessValue/Change does not appear in IAdditionalAttributes; S_IOField1 is the only object with a problem in ISoftlinkAttributes.
+- Tag dynamizations (I_Rect1, I_Bar1, X_Rect1) go along with problems in IEventExpandoAttributes; the plain ProcessValue binding on the I/O field (I_IOField1) does not.
+- Largest object: C_AlarmControl1 (35591 bytes, default columns/views of the alarm control).
+- Tombstones in the folder 16 -> 19 (among others the deleted S_Switch1); none in the .zap21.

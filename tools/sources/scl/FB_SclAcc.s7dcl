@@ -1,0 +1,110 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_SclAcc"
+    VAR_INPUT
+        start : Bool;
+        pt : Time;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        cnt : Int;
+    END_VAR
+    VAR_IN_OUT
+        io : Int;
+    END_VAR
+    VAR
+        tonInst : TON_TIME;
+        tofInst : TOF_TIME;
+        tpInst : TP_TIME;
+        ctuInst : CTU_INT;
+        trig : R_TRIG;
+        ftrig : F_TRIG;
+        counter : Int;
+        arr : Array[0..9] of Int;
+        arr2 : Array[1..3, 1..4] of Real;
+        mot : "UDT_Motor";
+        ifc : "FB_Iface";
+        st : Struct
+            a : Int;
+            b : Real;
+            c : Array[0..2] of Bool;
+        END_STRUCT;
+    END_VAR
+    VAR_TEMP
+        i : Int;
+        r : Real;
+        w : Word;
+        dw : DWord;
+        b : Bool;
+        by : Byte;
+        s : String;
+        s2 : String;
+        d : DInt;
+        lr : LReal;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        // local, static, in/out access
+        #arr[0] := 1;
+        #arr[#i] := #arr[#i + 1] + #io;
+        #arr2[2, 3] := 1.5;
+        #arr2[#i, 1] := #arr2[1, #i];
+        #st.a := 10;
+        #st.b := #st.a;
+        #st.c[1] := TRUE;
+        #mot.Speed := 100.0;
+        #mot.Running := #st.c[0];
+        #counter += 1;
+        #io := #counter;
+        // global DB and UDT members
+        "DB_Global".iInt := 5;
+        "DB_Global".xBool := NOT "DB_Global".xBool;
+        "DB_Global".aInt[2] := "DB_Global".aInt[1] + 1;
+        "DB_Global".aInt[#i] := 0;
+        "DB_Global".sData.b := "DB_Global".sData.b + 1;
+        "DB_Motor".motor.Speed := "DB_Motor".motor.Speed * 2.0;
+        // PLC tags and absolute addresses
+        "tInt" := "tInt" + 1;
+        "tBool" := "tIn" AND NOT "tBool2";
+        "tOut" := "tBool";
+        "tReal" := "tReal" * 0.5;
+        %MW100 := 5;
+        %M10.3 := TRUE;
+        %Q1.0 := %I1.0;
+        %MD104 := 100;
+        // slice access
+        #b := #w.%X3;
+        #w.%X0 := TRUE;
+        #by := #w.%B1;
+        #w.%B0 := #by;
+        #dw.%W1 := #w;
+        #b := #dw.%X31;
+        #w := #dw.%W0;
+        "tWord".%X5 := #b;
+        // instance data block of FB_Iface
+        "FB_Iface_DB".stInt := 3;
+        "FB_Iface_DB".iArr[1] := 4;
+        "FB_Iface_DB".iMotor.Speed := 5.0;
+        // timer and counter instances (multi-instance)
+        #tonInst(IN := #start, PT := #pt);
+        #q := #tonInst.Q;
+        #tofInst(IN := #start, PT := T#2s);
+        #tpInst(IN := #start, PT := #pt, Q => #b);
+        #ctuInst(CU := #start, R := FALSE, PV := 10);
+        #cnt := #ctuInst.CV;
+        #trig(CLK := #start);
+        IF #trig.Q THEN
+            #counter := 0;
+        END_IF;
+        #ftrig(CLK := #start);
+        #b := #ftrig.Q;
+        // multi-instance FB call, with outputs
+        #ifc(iBool := TRUE, iInt := 2, iReal := 1.0, ioReal := #r);
+        #cnt := #ifc.oInt;
+        // call of an instance DB by name
+        "FB_Iface_DB"(iBool := #start, iInt := #io, iReal := #r, ioReal := #r, oInt => #cnt);
+    END_NETWORK
+END_FUNCTION_BLOCK

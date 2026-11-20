@@ -1,0 +1,30 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex151"
+    VAR_INPUT
+        v_req : Bool;
+        v_db_number : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_busy : Bool;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            DELETE_DB(
+                REQ := #v_req,
+                DB_NUMBER := #v_db_number,
+                Ret_Val => #v_ret_val,
+                BUSY => #v_busy
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

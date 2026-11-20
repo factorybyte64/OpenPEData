@@ -1,0 +1,20 @@
+FUNCTION_BLOCK "FB_StlC_020"
+TITLE = STL call EQ_TypeOfDB
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      dba : DB_ANY;
+   END_VAR
+   VAR_OUTPUT
+      b : Bool;
+   END_VAR
+BEGIN
+NETWORK
+TITLE = 020 EQ_TypeOfDB
+      CALL EQ_TypeOfDB
+      {in2_type := 'TYPE_ID'}
+      (  IN1                         := #dba ,
+         IN2                         := IEC_TIMER ,
+         Ret_Val                     := #b
+      );
+END_FUNCTION_BLOCK

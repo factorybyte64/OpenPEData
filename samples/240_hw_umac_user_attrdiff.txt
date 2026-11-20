@@ -1,0 +1,27 @@
+A: 238_hw_certificate.zap21  B: 240_hw_umac_user.zap21
+CHANGED 1005:0214:696 UmacRootData name='UmacRootData'
+          raw <links 1>: 52 -> 68 bytes
+          +link AllUsers -> 1009:0214:2fbf8
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+NEW     1009:0214:2fbf8 CustomProjectUser name=None
+          IProjectUserAttributes.ESUser = True
+          IProjectUserAttributes.PasswordCreationTimeStamp = '2026-10-25T19:04:36.157415Z'
+          IProjectUserAttributes.RuntimeTimeoutActiveState = True
+          IProjectUserAttributes.PasswordsHashesBlockedForReuse = None
+          IProjectUserAttributes.PasswordHash = ''
+          IProjectUserAttributes.AuthenticationTypeEncrypted = bytes[28] 00040000000000000000000000001001000000010100000000000000
+          IProjectUserAttributes.CommentEncrypted = bytes[20] 0000000000000000000000000000100100000000
+          IProjectUserAttributes.PasswordEncrypted = bytes[20] 0000000000000000000000000000100100000000
+          IProjectUserAttributes.PasswordsBlockedForReuseEncrypted = bytes[849] 51030000010000000c000000002d030000000000000000000000100100000001010000000050424b
+          IProjectUserAttributes.SessionTimeoutEncrypted = bytes[28] 0004000000000000000000000000100100000001010000001e000000
+          IUserAttributes.NameHash = ''
+          IUserAttributes.ApplicationKeysEncrypted = bytes[20] 0000000000000000000000000000100100000000
+          IUserAttributes.NameEncrypted = bytes[40] 00100000000000000000000000001001000000010100000074006500730074007500730065007200
+          IUserAttributes.NameEncryptedWithSecurityLevel = bytes[40] 00100000000000000000000000001001000000010100000074006500730074007500730065007200
+          IUserExtendedAttributes.Alias = ''
+          link Parent -> 1005:0214:696
+          link Environment -> 1028:0002:433
+CHANGED 1028:0002:433 ProjectData name='039_fw41'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:04:03.835409Z' -> '2026-10-25T19:04:36.568939Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:2ffe0, 0014:0007:0, 0015:0007:20, 0016:0007:18

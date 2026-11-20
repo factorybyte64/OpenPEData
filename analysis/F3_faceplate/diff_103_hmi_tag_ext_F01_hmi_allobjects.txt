@@ -1,0 +1,1570 @@
+A: samples/103_hmi_tag_ext.zap21
+B: samples/F01_hmi_allobjects.zap21
+objects 1985 -> 2048, tombstones 0 -> 0, records 2037 -> 2104
+
+== 1. object count per type (only differences)
+     0      1     +1  Siemens.Simatic.Hmi.DL.FaceplateLib           Siemens.Simatic.Hmi.DL.FaceplateLib.ILFaceplateContainerData
+     0      7     +7  Siemens.Simatic.Hmi.DL.ModernUI               Siemens.Simatic.Hmi.DL.ModernUI.ILScreenData
+     0     47    +47  Siemens.Simatic.Hmi.DL.ModernUI               Siemens.Simatic.Hmi.DL.ModernUI.ILScreenItemData
+     0      6     +6  Siemens.Simatic.Hmi.DL.Scripting              Siemens.Simatic.Hmi.DL.Scripting.HmiScriptEmbeddedData
+     0      2     +2  Siemens.Simatic.Hmi.DL.Scripting              Siemens.Simatic.Hmi.DL.Scripting.HmiScriptModuleContainerData
+
+== 2. new / removed objects
+NEW     1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+NEW     1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+NEW     1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+NEW     1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+NEW     1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+NEW     1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+NEW     1003:00e3:1c44 HmiScriptModuleContainerData name='ScriptModuleContainer'
+NEW     1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+NEW     0006:00d3:1c3e ILFaceplateContainerData name='C_Faceplate1'
+NEW     1002:00cd:1c10 ILScreenData name='FP_Basic'
+NEW     1002:00cd:1c12 ILScreenData name='FP_Controls'
+NEW     1002:00cd:1c11 ILScreenData name='FP_Elements'
+NEW     1002:00cd:1c50 ILScreenData name='FP_Flash'
+NEW     1002:00cd:1c13 ILScreenData name='FP_Interface'
+NEW     1002:00cd:1c14 ILScreenData name='FP_Script'
+NEW     1002:00cd:1c15 ILScreenData name='Main'
+NEW     1003:00cd:1c1f ILScreenItemData name='B_CircArc1'
+NEW     1003:00cd:1c1d ILScreenItemData name='B_Circle1'
+NEW     1003:00cd:1c1e ILScreenItemData name='B_CircleSeg1'
+NEW     1003:00cd:1c1c ILScreenItemData name='B_EllArc1'
+NEW     1003:00cd:1c1a ILScreenItemData name='B_Ellipse1'
+NEW     1003:00cd:1c1b ILScreenItemData name='B_EllipseSeg1'
+NEW     1003:00cd:1c21 ILScreenItemData name='B_GraphicView1'
+NEW     1003:00cd:1c17 ILScreenItemData name='B_Line1'
+NEW     1003:00cd:1c19 ILScreenItemData name='B_Polygon1'
+NEW     1003:00cd:1c18 ILScreenItemData name='B_Polyline1'
+NEW     1003:00cd:1c16 ILScreenItemData name='B_Rect1'
+NEW     1003:00cd:1c20 ILScreenItemData name='B_Text1'
+NEW     1003:00cd:1c30 ILScreenItemData name='C_AlarmControl1'
+NEW     1003:00cd:1c31 ILScreenItemData name='C_AlarmLine1'
+NEW     1003:00cd:1c3b ILScreenItemData name='C_CritAnalysis1'
+NEW     1003:00cd:1c35 ILScreenItemData name='C_DetParam1'
+NEW     1003:00cd:1c34 ILScreenItemData name='C_FTrend1'
+NEW     1003:00cd:1c3a ILScreenItemData name='C_GraphOv1'
+NEW     1003:00cd:1c37 ILScreenItemData name='C_Media1'
+NEW     1003:00cd:1c3c ILScreenItemData name='C_PlcCode1'
+NEW     1003:00cd:1c39 ILScreenItemData name='C_ProDiagOv1'
+NEW     1003:00cd:1c3d ILScreenItemData name='C_ScreenWin1'
+NEW     1003:00cd:1c38 ILScreenItemData name='C_SysDiag1'
+NEW     1003:00cd:1c32 ILScreenItemData name='C_Trend1'
+NEW     1003:00cd:1c33 ILScreenItemData name='C_TrendCompanion1'
+NEW     1003:00cd:1c36 ILScreenItemData name='C_Web1'
+NEW     1003:00cd:1c2f ILScreenItemData name='E_AlarmInd1'
+NEW     1003:00cd:1c26 ILScreenItemData name='E_Bar1'
+NEW     1003:00cd:1c22 ILScreenItemData name='E_Button1'
+NEW     1003:00cd:1c2b ILScreenItemData name='E_CheckBox1'
+NEW     1003:00cd:1c29 ILScreenItemData name='E_Clock1'
+NEW     1003:00cd:1c28 ILScreenItemData name='E_Gauge1'
+NEW     1003:00cd:1c23 ILScreenItemData name='E_IOField1'
+NEW     1003:00cd:1c2d ILScreenItemData name='E_ListBox1'
+NEW     1003:00cd:1c2c ILScreenItemData name='E_Radio1'
+NEW     1003:00cd:1c27 ILScreenItemData name='E_Slider1'
+NEW     1003:00cd:1c2a ILScreenItemData name='E_Switch1'
+NEW     1003:00cd:1c24 ILScreenItemData name='E_SymIOField1'
+NEW     1003:00cd:1c25 ILScreenItemData name='E_TextBox1'
+NEW     1003:00cd:1c2e ILScreenItemData name='E_TouchArea1'
+NEW     1003:00cd:1c42 ILScreenItemData name='I_Bar1'
+NEW     1003:00cd:1c41 ILScreenItemData name='I_IOField1'
+NEW     1003:00cd:1c3f ILScreenItemData name='I_Rect1'
+NEW     1003:00cd:1c40 ILScreenItemData name='I_Text1'
+NEW     1003:00cd:1c46 ILScreenItemData name='S_Button1'
+NEW     1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+NEW     1003:00cd:1c51 ILScreenItemData name='X_Rect1'
+
+== 3. links added / removed (owner -> relation -> target)
+  0006:00d3:1c3e ILFaceplateContainerData name='C_Faceplate1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ExpandoReferencesInverse                 -> 1012:00cb:1071 HmiGraphXSettingsData name='HmiGraphXSettingsData'
+    + ILScreenItems                            -> 1003:00cd:1c16 ILScreenItemData name='B_Rect1'
+    + ILScreenItems                            -> 1003:00cd:1c17 ILScreenItemData name='B_Line1'
+    + ILScreenItems                            -> 1003:00cd:1c18 ILScreenItemData name='B_Polyline1'
+    + ILScreenItems                            -> 1003:00cd:1c19 ILScreenItemData name='B_Polygon1'
+    + ILScreenItems                            -> 1003:00cd:1c1a ILScreenItemData name='B_Ellipse1'
+    + ILScreenItems                            -> 1003:00cd:1c1b ILScreenItemData name='B_EllipseSeg1'
+    + ILScreenItems                            -> 1003:00cd:1c1c ILScreenItemData name='B_EllArc1'
+    + ILScreenItems                            -> 1003:00cd:1c1d ILScreenItemData name='B_Circle1'
+    + ILScreenItems                            -> 1003:00cd:1c1e ILScreenItemData name='B_CircleSeg1'
+    + ILScreenItems                            -> 1003:00cd:1c1f ILScreenItemData name='B_CircArc1'
+    + ILScreenItems                            -> 1003:00cd:1c20 ILScreenItemData name='B_Text1'
+    + ILScreenItems                            -> 1003:00cd:1c21 ILScreenItemData name='B_GraphicView1'
+  1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ILScreenItems                            -> 1003:00cd:1c22 ILScreenItemData name='E_Button1'
+    + ILScreenItems                            -> 1003:00cd:1c23 ILScreenItemData name='E_IOField1'
+    + ILScreenItems                            -> 1003:00cd:1c24 ILScreenItemData name='E_SymIOField1'
+    + ILScreenItems                            -> 1003:00cd:1c25 ILScreenItemData name='E_TextBox1'
+    + ILScreenItems                            -> 1003:00cd:1c26 ILScreenItemData name='E_Bar1'
+    + ILScreenItems                            -> 1003:00cd:1c27 ILScreenItemData name='E_Slider1'
+    + ILScreenItems                            -> 1003:00cd:1c28 ILScreenItemData name='E_Gauge1'
+    + ILScreenItems                            -> 1003:00cd:1c29 ILScreenItemData name='E_Clock1'
+    + ILScreenItems                            -> 1003:00cd:1c2a ILScreenItemData name='E_Switch1'
+    + ILScreenItems                            -> 1003:00cd:1c2b ILScreenItemData name='E_CheckBox1'
+    + ILScreenItems                            -> 1003:00cd:1c2c ILScreenItemData name='E_Radio1'
+    + ILScreenItems                            -> 1003:00cd:1c2d ILScreenItemData name='E_ListBox1'
+    + ILScreenItems                            -> 1003:00cd:1c2e ILScreenItemData name='E_TouchArea1'
+    + ILScreenItems                            -> 1003:00cd:1c2f ILScreenItemData name='E_AlarmInd1'
+  1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ILScreenItems                            -> 1003:00cd:1c30 ILScreenItemData name='C_AlarmControl1'
+    + ILScreenItems                            -> 1003:00cd:1c31 ILScreenItemData name='C_AlarmLine1'
+    + ILScreenItems                            -> 1003:00cd:1c32 ILScreenItemData name='C_Trend1'
+    + ILScreenItems                            -> 1003:00cd:1c33 ILScreenItemData name='C_TrendCompanion1'
+    + ILScreenItems                            -> 1003:00cd:1c34 ILScreenItemData name='C_FTrend1'
+    + ILScreenItems                            -> 1003:00cd:1c35 ILScreenItemData name='C_DetParam1'
+    + ILScreenItems                            -> 1003:00cd:1c36 ILScreenItemData name='C_Web1'
+    + ILScreenItems                            -> 1003:00cd:1c37 ILScreenItemData name='C_Media1'
+    + ILScreenItems                            -> 1003:00cd:1c38 ILScreenItemData name='C_SysDiag1'
+    + ILScreenItems                            -> 1003:00cd:1c39 ILScreenItemData name='C_ProDiagOv1'
+    + ILScreenItems                            -> 1003:00cd:1c3a ILScreenItemData name='C_GraphOv1'
+    + ILScreenItems                            -> 1003:00cd:1c3b ILScreenItemData name='C_CritAnalysis1'
+    + ILScreenItems                            -> 1003:00cd:1c3c ILScreenItemData name='C_PlcCode1'
+    + ILScreenItems                            -> 1003:00cd:1c3d ILScreenItemData name='C_ScreenWin1'
+    + ILScreenItems                            -> 0006:00d3:1c3e ILFaceplateContainerData name='C_Faceplate1'
+  1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ScriptModuleContainer                    -> 1003:00e3:1c44 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ILScreenItems                            -> 1003:00cd:1c3f ILScreenItemData name='I_Rect1'
+    + ILScreenItems                            -> 1003:00cd:1c40 ILScreenItemData name='I_Text1'
+    + ILScreenItems                            -> 1003:00cd:1c41 ILScreenItemData name='I_IOField1'
+    + ILScreenItems                            -> 1003:00cd:1c42 ILScreenItemData name='I_Bar1'
+    + EmbeddedScriptChildren                   -> 1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+    + ExpandoReferences                        -> 1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1002:00cd:1c14 ILScreenData name='FP_Script'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ScriptModuleContainer                    -> 1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ILScreenItems                            -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + ILScreenItems                            -> 1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+    + EmbeddedScriptChildren                   -> 1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+    + ExpandoReferences                        -> 1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+  1002:00cd:1c15 ILScreenData name='Main'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c3d ILScreenItemData name='C_ScreenWin1'
+  1002:00cd:1c50 ILScreenData name='FP_Flash'
+    + AggregatingFolder                        -> 100e:0002:106e FolderData name='ILScreenFolder'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ILScreenItems                            -> 1003:00cd:1c51 ILScreenItemData name='X_Rect1'
+  1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+    + EmbeddedScriptParent                     -> 1003:00cd:1c40 ILScreenItemData name='I_Text1'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + TriggerModule                            -> 1003:00e3:1c44 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 1003:00cd:1c40 ILScreenItemData name='I_Text1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c40 ILScreenItemData name='I_Text1'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+    + EmbeddedScriptParent                     -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + TriggerModule                            -> 1003:00e3:1c44 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + ExpandoReferencesInverse                 -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+    + EmbeddedScriptParent                     -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventModule                              -> 1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+    + EmbeddedScriptParent                     -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventModule                              -> 1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c46 ILScreenItemData name='S_Button1'
+  1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+    + EmbeddedScriptParent                     -> 1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventModule                              -> 1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+  1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+    + EmbeddedScriptParent                     -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventModule                              -> 1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ExpandoReferences                        -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+    + ExpandoReferencesInverse                 -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+  1003:00cd:1c16 ILScreenItemData name='B_Rect1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c17 ILScreenItemData name='B_Line1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c18 ILScreenItemData name='B_Polyline1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c19 ILScreenItemData name='B_Polygon1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c1a ILScreenItemData name='B_Ellipse1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c1b ILScreenItemData name='B_EllipseSeg1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c1c ILScreenItemData name='B_EllArc1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c1d ILScreenItemData name='B_Circle1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c1e ILScreenItemData name='B_CircleSeg1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c1f ILScreenItemData name='B_CircArc1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c20 ILScreenItemData name='B_Text1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c21 ILScreenItemData name='B_GraphicView1'
+    + ILScreenItemParent                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c22 ILScreenItemData name='E_Button1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c23 ILScreenItemData name='E_IOField1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c24 ILScreenItemData name='E_SymIOField1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c25 ILScreenItemData name='E_TextBox1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c26 ILScreenItemData name='E_Bar1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c27 ILScreenItemData name='E_Slider1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c28 ILScreenItemData name='E_Gauge1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c29 ILScreenItemData name='E_Clock1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c2a ILScreenItemData name='E_Switch1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c2b ILScreenItemData name='E_CheckBox1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c2c ILScreenItemData name='E_Radio1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c2d ILScreenItemData name='E_ListBox1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c2e ILScreenItemData name='E_TouchArea1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c2f ILScreenItemData name='E_AlarmInd1'
+    + ILScreenItemParent                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c30 ILScreenItemData name='C_AlarmControl1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c31 ILScreenItemData name='C_AlarmLine1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c32 ILScreenItemData name='C_Trend1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c33 ILScreenItemData name='C_TrendCompanion1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c34 ILScreenItemData name='C_FTrend1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c35 ILScreenItemData name='C_DetParam1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c36 ILScreenItemData name='C_Web1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c37 ILScreenItemData name='C_Media1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c38 ILScreenItemData name='C_SysDiag1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c39 ILScreenItemData name='C_ProDiagOv1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c3a ILScreenItemData name='C_GraphOv1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c3b ILScreenItemData name='C_CritAnalysis1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c3c ILScreenItemData name='C_PlcCode1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c3d ILScreenItemData name='C_ScreenWin1'
+    + ILScreenItemParent                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ExpandoReferences                        -> 1002:00cd:1c15 ILScreenData name='Main'
+  1003:00cd:1c3f ILScreenItemData name='I_Rect1'
+    + ILScreenItemParent                       -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1003:00cd:1c40 ILScreenItemData name='I_Text1'
+    + ILScreenItemParent                       -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EmbeddedScriptChildren                   -> 1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+    + ExpandoReferences                        -> 1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1003:00cd:1c41 ILScreenItemData name='I_IOField1'
+    + ILScreenItemParent                       -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+  1003:00cd:1c42 ILScreenItemData name='I_Bar1'
+    + ILScreenItemParent                       -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1003:00cd:1c46 ILScreenItemData name='S_Button1'
+    + ILScreenItemParent                       -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EmbeddedScriptChildren                   -> 1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+    + ExpandoReferences                        -> 1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+    + EmbeddedScriptChildren                   -> 1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+    + ExpandoReferences                        -> 1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+  1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+    + ILScreenItemParent                       -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EmbeddedScriptChildren                   -> 1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+    + ExpandoReferences                        -> 1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+  1003:00cd:1c51 ILScreenItemData name='X_Rect1'
+    + ILScreenItemParent                       -> 1002:00cd:1c50 ILScreenData name='FP_Flash'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + ExpandoReferences                        -> 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+  1003:00e3:1c44 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ScriptContainerParent                    -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + TriggerElements                          -> 1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+    + TriggerElements                          -> 1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+  1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+    + ScriptContainerParent                    -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+    + Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    + Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    + EventElements                            -> 1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+    + EventElements                            -> 1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+    + EventElements                            -> 1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+    + EventElements                            -> 1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+  1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c42 ILScreenItemData name='I_Bar1'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c3f ILScreenItemData name='I_Rect1'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c40 ILScreenItemData name='I_Text1'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+    + ExpandoReferencesInverse                 -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + ExpandoReferencesInverse                 -> 1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+    + ExpandoReferencesInverse                 -> 1003:00cd:1c51 ILScreenItemData name='X_Rect1'
+  100e:0002:106e FolderData name='ILScreenFolder'
+    + AggregatedElements                       -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+    + AggregatedElements                       -> 1002:00cd:1c11 ILScreenData name='FP_Elements'
+    + AggregatedElements                       -> 1002:00cd:1c12 ILScreenData name='FP_Controls'
+    + AggregatedElements                       -> 1002:00cd:1c13 ILScreenData name='FP_Interface'
+    + AggregatedElements                       -> 1002:00cd:1c14 ILScreenData name='FP_Script'
+    + AggregatedElements                       -> 1002:00cd:1c15 ILScreenData name='Main'
+    + AggregatedElements                       -> 1002:00cd:1c50 ILScreenData name='FP_Flash'
+  1012:00cb:1071 HmiGraphXSettingsData name='HmiGraphXSettingsData'
+    + ExpandoReferences                        -> 1002:00cd:1c10 ILScreenData name='FP_Basic'
+
+== 4. attribute diff (tools\attrdiff.py)
+A: C:\GitHub\factorybyte\OpenPEData\samples\103_hmi_tag_ext.zap21  B: C:\GitHub\factorybyte\OpenPEData\samples\F01_hmi_allobjects.zap21
+NEW     0006:00d3:1c3e ILFaceplateContainerData name='C_Faceplate1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:14:06.390305Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:14:15.876353Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_Faceplate1'
+          ICoreAttributes.Subtype = 'HmiFaceplateContainer'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.yvr = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1002:00cd:1c10 ILScreenData name='FP_Basic'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:24.772945Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:04.183905Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'FP_Basic'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.d!> = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferencesInverse -> 1012:00cb:1071
+          link ILScreenItems -> 1003:00cd:1c16
+          link ILScreenItems -> 1003:00cd:1c17
+          link ILScreenItems -> 1003:00cd:1c18
+          link ILScreenItems -> 1003:00cd:1c19
+          link ILScreenItems -> 1003:00cd:1c1a
+          link ILScreenItems -> 1003:00cd:1c1b
+          link ILScreenItems -> 1003:00cd:1c1c
+          link ILScreenItems -> 1003:00cd:1c1d
+          link ILScreenItems -> 1003:00cd:1c1e
+          link ILScreenItems -> 1003:00cd:1c1f
+          link ILScreenItems -> 1003:00cd:1c20
+          link ILScreenItems -> 1003:00cd:1c21
+NEW     1002:00cd:1c11 ILScreenData name='FP_Elements'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:31.762376Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:27.901562Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'FP_Elements'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.j = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ILScreenItems -> 1003:00cd:1c22
+          link ILScreenItems -> 1003:00cd:1c23
+          link ILScreenItems -> 1003:00cd:1c24
+          link ILScreenItems -> 1003:00cd:1c25
+          link ILScreenItems -> 1003:00cd:1c26
+          link ILScreenItems -> 1003:00cd:1c27
+          link ILScreenItems -> 1003:00cd:1c28
+          link ILScreenItems -> 1003:00cd:1c29
+          link ILScreenItems -> 1003:00cd:1c2a
+          link ILScreenItems -> 1003:00cd:1c2b
+          link ILScreenItems -> 1003:00cd:1c2c
+          link ILScreenItems -> 1003:00cd:1c2d
+          link ILScreenItems -> 1003:00cd:1c2e
+          link ILScreenItems -> 1003:00cd:1c2f
+NEW     1002:00cd:1c12 ILScreenData name='FP_Controls'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:34.932683Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:14:06.390305Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'FP_Controls'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.[~ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ILScreenItems -> 1003:00cd:1c30
+          link ILScreenItems -> 1003:00cd:1c31
+          link ILScreenItems -> 1003:00cd:1c32
+          link ILScreenItems -> 1003:00cd:1c33
+          link ILScreenItems -> 1003:00cd:1c34
+          link ILScreenItems -> 1003:00cd:1c35
+          link ILScreenItems -> 1003:00cd:1c36
+          link ILScreenItems -> 1003:00cd:1c37
+          link ILScreenItems -> 1003:00cd:1c38
+          link ILScreenItems -> 1003:00cd:1c39
+          link ILScreenItems -> 1003:00cd:1c3a
+          link ILScreenItems -> 1003:00cd:1c3b
+          link ILScreenItems -> 1003:00cd:1c3c
+          link ILScreenItems -> 1003:00cd:1c3d
+          link ILScreenItems -> 0006:00d3:1c3e
+NEW     1002:00cd:1c13 ILScreenData name='FP_Interface'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:38.167794Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:15.799127Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'FP_Interface'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ITextAttributes.#2147483669 = bytes[379] 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.+aw = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ScriptModuleContainer -> 1003:00e3:1c44
+          link ILScreenItems -> 1003:00cd:1c3f
+          link ILScreenItems -> 1003:00cd:1c40
+          link ILScreenItems -> 1003:00cd:1c41
+          link ILScreenItems -> 1003:00cd:1c42
+          link EmbeddedScriptChildren -> 1002:00e3:1c45
+          link ExpandoReferencesInverse -> 1002:00e3:1c45
+          link ExpandoReferences -> 1002:00e3:1c45
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1002:00cd:1c14 ILScreenData name='FP_Script'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:42.630893Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:20:01.708419Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'FP_Script'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IAdditionalAttributes.Loaded = bytes[6] 060000000000
+          IPropertyDynamicLinkExpandoAttributes.#j- = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ScriptModuleContainer -> 1003:00e3:1c48
+          link ILScreenItems -> 1003:00cd:1c46
+          link ILScreenItems -> 1003:00cd:1c4a
+          link EmbeddedScriptChildren -> 1002:00e3:1c4c
+          link ExpandoReferencesInverse -> 1002:00e3:1c4c
+          link ExpandoReferences -> 1002:00e3:1c4c
+NEW     1002:00cd:1c15 ILScreenData name='Main'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:45.883601Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:58.577237Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Main'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.YW94 = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferencesInverse -> 1003:00cd:1c3d
+NEW     1002:00cd:1c50 ILScreenData name='FP_Flash'
+          ICoreAttributes.CreationTime = '2026-10-20T16:17:52.307938Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:17:52.307938Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'FP_Flash'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.4=, = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link AggregatingFolder -> 100e:0002:106e
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ILScreenItems -> 1003:00cd:1c51
+NEW     1002:00e3:1c43 HmiScriptEmbeddedData name='ForeColorTrigger'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:09.387430Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:10.084451Z'
+          ICoreAttributes.Name = 'ForeColorTrigger'
+          IAdditionalAttributes.#1398896225 = bytes[11] 0900000000023b0c000000
+          IAdditionalAttributes.#1885958755 = bytes[20] 0900000000030d0a100000000900000000077265
+          IAdditionalAttributes.#1666387828 = bytes[11] 7475726e0b000000090000
+          IAdditionalAttributes.#1852138866 = bytes[11] 000002200b000000090000
+          IAdditionalAttributes.#1769100334 = bytes[11] 000002760b000000090000
+          IAdditionalAttributes.#1919248231 = bytes[14] 000002200b000000090000000002
+          IAdditionalAttributes.#499 = bytes[11] 3f0b000000090000000002
+          IAdditionalAttributes.#30 = bytes[11] 201400000009000000000b
+          IAdditionalAttributes.#128 = bytes[11] 307846464646303030300b
+          IAdditionalAttributes.#141 = bytes[12] 000000090000000002200b00
+          IAdditionalAttributes.#152 = bytes[16] 00000900000000023a0b000000090000
+          IAdditionalAttributes.#163 = bytes[11] 0000022014000000090000
+          IAdditionalAttributes.#174 = bytes[11] 00000b3078464630303636
+          IAdditionalAttributes.#185 = bytes[11] 30300b0000000900000000
+          IScriptDataExpandoAttributes.282954790 = bytes[5] 0000000000
+          IScriptDataExpandoAttributes.1285367001 = bytes[5] 0000000100
+          link EmbeddedScriptParent -> 1003:00cd:1c40
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link TriggerModule -> 1003:00e3:1c44
+          link ExpandoReferences -> 1003:00cd:1c40
+          link ExpandoReferencesInverse -> 1003:00cd:1c40
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1002:00e3:1c45 HmiScriptEmbeddedData name='BackColorTrigger'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:15.766389Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:15.799127Z'
+          ICoreAttributes.Name = 'BackColorTrigger'
+          IAdditionalAttributes.#175 = bytes[7] 0000000002200e
+          IAdditionalAttributes.#155 = bytes[181] 000000090000000005546167730b000000090000000002280b000000090000000002221400000009
+          IAdditionalAttributes.#1398896225 = bytes[11] 090000000002200b000000
+          IAdditionalAttributes.#1885958755 = bytes[14] 0900000000023a0b000000090000
+          IAdditionalAttributes.#1666387828 = bytes[11] 0000022014000000090000
+          IAdditionalAttributes.#1852138866 = bytes[11] 00000b3078464646304630
+          IAdditionalAttributes.#1769100334 = bytes[11] 46460b0000000900000000
+          IScriptDataExpandoAttributes.854600368 = bytes[5] 0000000000
+          IScriptDataExpandoAttributes.1379573891 = bytes[5] 0000000100
+          link EmbeddedScriptParent -> 1002:00cd:1c13
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link TriggerModule -> 1003:00e3:1c44
+          link ExpandoReferences -> 1002:00cd:1c13
+          link ExpandoReferencesInverse -> 1002:00cd:1c13
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1002:00e3:1c47 HmiScriptEmbeddedData name='OnTapped'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:26.196235Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:26.239281Z'
+          ICoreAttributes.Name = 'OnTapped'
+          IScriptDataExpandoAttributes.1016583999 = bytes[5] 0000000000
+          IScriptDataExpandoAttributes.742910284 = bytes[5] 0000000100
+          link EmbeddedScriptParent -> 1003:00cd:1c46
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:1c48
+          link ExpandoReferences -> 1003:00cd:1c46
+          link ExpandoReferencesInverse -> 1003:00cd:1c46
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1002:00e3:1c49 HmiScriptEmbeddedData name='OnDown'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:30.160543Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:30.179609Z'
+          ICoreAttributes.Name = 'OnDown'
+          IScriptDataExpandoAttributes.1332837451 = bytes[5] 0000000000
+          link EmbeddedScriptParent -> 1003:00cd:1c46
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:1c48
+          link ExpandoReferences -> 1003:00cd:1c46
+          link ExpandoReferencesInverse -> 1003:00cd:1c46
+NEW     1002:00e3:1c4b HmiScriptEmbeddedData name='ProcessValueOnPropertyChanged'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:42.780806Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:42.808481Z'
+          ICoreAttributes.Name = 'ProcessValueOnPropertyChanged'
+          IScriptDataExpandoAttributes.515916714 = bytes[5] 0000000000
+          link EmbeddedScriptParent -> 1003:00cd:1c4a
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:1c48
+          link ExpandoReferences -> 1003:00cd:1c4a
+          link ExpandoReferencesInverse -> 1003:00cd:1c4a
+NEW     1002:00e3:1c4c HmiScriptEmbeddedData name='OnLoaded'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:47.774574Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:47.800057Z'
+          ICoreAttributes.Name = 'OnLoaded'
+          IScriptDataExpandoAttributes.17197822 = bytes[5] 0000000000
+          link EmbeddedScriptParent -> 1002:00cd:1c14
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventModule -> 1003:00e3:1c48
+          link ExpandoReferences -> 1002:00cd:1c14
+          link ExpandoReferencesInverse -> 1002:00cd:1c14
+NEW     1003:00cd:1c16 ILScreenItemData name='B_Rect1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:51.557554Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:09:51.830668Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Rect1'
+          ICoreAttributes.Subtype = 'HmiRectangle'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.O)c = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c17 ILScreenItemData name='B_Line1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:09:55.928629Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:09:56.068683Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Line1'
+          ICoreAttributes.Subtype = 'HmiLine'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.$#3X = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c18 ILScreenItemData name='B_Polyline1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:00.968808Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:12.765239Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Polyline1'
+          ICoreAttributes.Subtype = 'HmiPolyline'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.:'<c = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c19 ILScreenItemData name='B_Polygon1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:17.505799Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:21.557322Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Polygon1'
+          ICoreAttributes.Subtype = 'HmiPolygon'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.xATG = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c1a ILScreenItemData name='B_Ellipse1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:26.730452Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:34.732176Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Ellipse1'
+          ICoreAttributes.Subtype = 'HmiEllipse'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.}DX = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c1b ILScreenItemData name='B_EllipseSeg1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:39.511154Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:39.646343Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_EllipseSeg1'
+          ICoreAttributes.Subtype = 'HmiEllipseSegment'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.dx%C = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c1c ILScreenItemData name='B_EllArc1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:43.893617Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:44.016114Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_EllArc1'
+          ICoreAttributes.Subtype = 'HmiEllipticalArc'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.RL}$ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c1d ILScreenItemData name='B_Circle1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:52.661731Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:52.766201Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Circle1'
+          ICoreAttributes.Subtype = 'HmiCircle'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.8 = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c1e ILScreenItemData name='B_CircleSeg1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:53.099328Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:53.238175Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_CircleSeg1'
+          ICoreAttributes.Subtype = 'HmiCircleSegment'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.qK = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c1f ILScreenItemData name='B_CircArc1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:53.482072Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:53.623568Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_CircArc1'
+          ICoreAttributes.Subtype = 'HmiCircularArc'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.Pq$j = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c20 ILScreenItemData name='B_Text1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:10:59.168077Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:10:59.436085Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_Text1'
+          ICoreAttributes.Subtype = 'HmiText'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.F7V = bytes[174] ae00000064000000ffffffff030000007f000904ffff220000004a0000005c000000240000006664
+          IPropertyDynamicLinkExpandoAttributes.G$ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c21 ILScreenItemData name='B_GraphicView1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:04.183905Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:04.281112Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'B_GraphicView1'
+          ICoreAttributes.Subtype = 'HmiGraphicView'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.O_|g = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c10
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c22 ILScreenItemData name='E_Button1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:10.468066Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:10.652015Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Button1'
+          ICoreAttributes.Subtype = 'HmiButton'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.8sO = bytes[166] a600000060000000ffffffff030000007f000904ffff220000004a00000058000000240000003733
+          IPropertyDynamicLinkExpandoAttributes.t$? = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c23 ILScreenItemData name='E_IOField1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:15.323351Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:15.438275Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_IOField1'
+          ICoreAttributes.Subtype = 'HmiIOField'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.sTM = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c24 ILScreenItemData name='E_SymIOField1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:20.060496Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:20.131231Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_SymIOField1'
+          ICoreAttributes.Subtype = 'HmiSymbolicIOField'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.[zR = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c25 ILScreenItemData name='E_TextBox1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:24.830436Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:24.965480Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_TextBox1'
+          ICoreAttributes.Subtype = 'HmiTextBox'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.i=
+C = bytes[176] b000000065000000ffffffff030000007f000904ffff220000004a00000059000000240000003836
+          IPropertyDynamicLinkExpandoAttributes.-R. = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c26 ILScreenItemData name='E_Bar1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:33.765278Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:33.871838Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Bar1'
+          ICoreAttributes.Subtype = 'HmiBar'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.dsJ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c27 ILScreenItemData name='E_Slider1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:38.758693Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:38.882847Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Slider1'
+          ICoreAttributes.Subtype = 'HmiSlider'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.KJ( = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c28 ILScreenItemData name='E_Gauge1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:43.315304Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:43.406188Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Gauge1'
+          ICoreAttributes.Subtype = 'HmiGauge'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.Tj = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c29 ILScreenItemData name='E_Clock1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:47.579513Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:47.726629Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Clock1'
+          ICoreAttributes.Subtype = 'HmiClock'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.JBB
+ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c2a ILScreenItemData name='E_Switch1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:52.138220Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:11:52.246228Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Switch1'
+          ICoreAttributes.Subtype = 'HmiToggleSwitch'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.vZ< = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c2b ILScreenItemData name='E_CheckBox1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:11:56.704129Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:09.111467Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_CheckBox1'
+          ICoreAttributes.Subtype = 'HmiCheckBoxGroup'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.{$DB = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003762653331356130
+          IPropertyDynamicLinkExpandoAttributes.tNt = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000006330363637636565
+          IPropertyDynamicLinkExpandoAttributes.@S8 = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003934623039306466
+          IPropertyDynamicLinkExpandoAttributes.iq>c = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          IPropertyDynamicLinkExpandoAttributes.&7- = bytes[160] a00000005d000000ffffffff030000007f000904ffff220000004a00000059000000240000003133
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c2c ILScreenItemData name='E_Radio1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:12:13.130814Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:13.206078Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_Radio1'
+          ICoreAttributes.Subtype = 'HmiRadioButtonGroup'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.k,X> = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003236306161333536
+          IPropertyDynamicLinkExpandoAttributes.Sr8; = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003463343031316532
+          IPropertyDynamicLinkExpandoAttributes.eyo1 = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003566323131363932
+          IPropertyDynamicLinkExpandoAttributes.'P  = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c2d ILScreenItemData name='E_ListBox1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:12:17.364666Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:17.449047Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_ListBox1'
+          ICoreAttributes.Subtype = 'HmiListBox'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.WWks = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000006530316363633562
+          IPropertyDynamicLinkExpandoAttributes.&J`^ = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003634643666613530
+          IPropertyDynamicLinkExpandoAttributes.aXW? = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000006362316266616333
+          IPropertyDynamicLinkExpandoAttributes.:b = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c2e ILScreenItemData name='E_TouchArea1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:12:22.762890Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:47.308658Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_TouchArea1'
+          ICoreAttributes.Subtype = 'HmiTouchArea'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.'eF = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c2f ILScreenItemData name='E_AlarmInd1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:12:27.901562Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:35.632508Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'E_AlarmInd1'
+          ICoreAttributes.Subtype = 'HmiAlarmIndicator'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.5h = '9a85474-b1b5-413d-bf9a-464433e1210e'
+          link ILScreenItemParent -> 1002:00cd:1c11
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c30 ILScreenItemData name='C_AlarmControl1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:12:56.324654Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:12:56.594155Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_AlarmControl1'
+          ICoreAttributes.Subtype = 'HmiAlarmControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.0b:6 = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000006162323264373765
+          IPropertyDynamicLinkExpandoAttributes.vl{ = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000003333356431626261
+          IPropertyDynamicLinkExpandoAttributes.N = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003139656163366233
+          IPropertyDynamicLinkExpandoAttributes.d_B = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003566626139626633
+          IPropertyDynamicLinkExpandoAttributes.Vp = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003163386135656239
+          IPropertyDynamicLinkExpandoAttributes.<r+ = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000003565313738643564
+          IPropertyDynamicLinkExpandoAttributes.PW  = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000003931653837613833
+          IPropertyDynamicLinkExpandoAttributes.ul2 = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000006461386239643035
+          IPropertyDynamicLinkExpandoAttributes.GMp = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003130636339623734
+          IPropertyDynamicLinkExpandoAttributes.bKD = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003632613531333932
+          IPropertyDynamicLinkExpandoAttributes.BQW5 = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000006637646666613833
+          IPropertyDynamicLinkExpandoAttributes.WP< = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006633643833313834
+          IPropertyDynamicLinkExpandoAttributes.GsEi = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003237333761303664
+          IPropertyDynamicLinkExpandoAttributes.7^E; = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003661383761613566
+          IPropertyDynamicLinkExpandoAttributes.OIV = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003566623236653166
+          IPropertyDynamicLinkExpandoAttributes.pdyY = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006361663533663538
+          IPropertyDynamicLinkExpandoAttributes.gI = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003836636437323463
+          IPropertyDynamicLinkExpandoAttributes.c = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006434316338363832
+          IPropertyDynamicLinkExpandoAttributes.V3 = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003365366461373465
+          IPropertyDynamicLinkExpandoAttributes.@X/0 = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006337353365383037
+          IPropertyDynamicLinkExpandoAttributes.G@a = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003739626530363966
+          IPropertyDynamicLinkExpandoAttributes.Ah = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000003735626333343362
+          IPropertyDynamicLinkExpandoAttributes.*`m= = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003638383966333261
+          IPropertyDynamicLinkExpandoAttributes.Zd^ = bytes[176] b000000058000000ffffffff020000007f00ffff1c00000044000000240000003965626532633263
+          IPropertyDynamicLinkExpandoAttributes./Tkc = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003964343139326431
+          IPropertyDynamicLinkExpandoAttributes.je7 = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003264653637653834
+          IPropertyDynamicLinkExpandoAttributes.;S1 = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000006330373530663836
+          IPropertyDynamicLinkExpandoAttributes.A8K = bytes[176] b000000058000000ffffffff020000007f00ffff1c00000044000000240000006334353838316533
+          IPropertyDynamicLinkExpandoAttributes.MSsn = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003139363564333137
+          IPropertyDynamicLinkExpandoAttributes.z"7 = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003534323466373532
+          IPropertyDynamicLinkExpandoAttributes.f%| = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000003135373066653039
+          IPropertyDynamicLinkExpandoAttributes.a: = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000006335613862663836
+          IPropertyDynamicLinkExpandoAttributes. 4^, = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003136323039353535
+          IPropertyDynamicLinkExpandoAttributes.9:Tz = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006230306264303762
+          IPropertyDynamicLinkExpandoAttributes.d/cG = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006639363733396663
+          IPropertyDynamicLinkExpandoAttributes.WyK = bytes[155] 9b00000051000000ffffffff020000007f00ffff1c00000044000000240000003730643633303032
+          IPropertyDynamicLinkExpandoAttributes.@2? = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003765613533643661
+          IPropertyDynamicLinkExpandoAttributes.>V = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003666393765363533
+          IPropertyDynamicLinkExpandoAttributes.V = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003033646438363637
+          IPropertyDynamicLinkExpandoAttributes.#WH = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006538653732613536
+          IPropertyDynamicLinkExpandoAttributes./Nb' = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003034353733666162
+          IPropertyDynamicLinkExpandoAttributes.Cukh = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003535303233633064
+          IPropertyDynamicLinkExpandoAttributes.|"|# = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003338646662313264
+          IPropertyDynamicLinkExpandoAttributes.+H = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003534383139373764
+          IPropertyDynamicLinkExpandoAttributes.nqZc = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006465623634386336
+          IPropertyDynamicLinkExpandoAttributes.	=# = bytes[176] b000000058000000ffffffff020000007f00ffff1c00000044000000240000006138643232623763
+          IPropertyDynamicLinkExpandoAttributes.5ef = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003261323730656465
+          IPropertyDynamicLinkExpandoAttributes.^q4 = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006232663736303562
+          IPropertyDynamicLinkExpandoAttributes.7q = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000006262366162366535
+          IPropertyDynamicLinkExpandoAttributes.,
+38 = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000003830303632666435
+          IPropertyDynamicLinkExpandoAttributes.t3W8 = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000003936373133386566
+          IPropertyDynamicLinkExpandoAttributes.hHzT = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003363343565333063
+          IPropertyDynamicLinkExpandoAttributes.o, = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000006662393365373962
+          IPropertyDynamicLinkExpandoAttributes.pm(J = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003865343836333931
+          IPropertyDynamicLinkExpandoAttributes./+ = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000006663333830383561
+          IPropertyDynamicLinkExpandoAttributes.o' = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000006562343432346434
+          IPropertyDynamicLinkExpandoAttributes.QM = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003139303137393238
+          IPropertyDynamicLinkExpandoAttributes.=Ko = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006361616130623065
+          IPropertyDynamicLinkExpandoAttributes.X,zS = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003662343163393536
+          IPropertyDynamicLinkExpandoAttributes.OsY = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003865656132646238
+          IPropertyDynamicLinkExpandoAttributes.@&* = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006531373039353966
+          IPropertyDynamicLinkExpandoAttributes.z?$ = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003636393333313132
+          IPropertyDynamicLinkExpandoAttributes.Z:39 = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006237353236343562
+          IPropertyDynamicLinkExpandoAttributes.^
+j = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006464613564373836
+          IPropertyDynamicLinkExpandoAttributes.fqU = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003034343962616234
+          IPropertyDynamicLinkExpandoAttributes.+g = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003661316561383265
+          IPropertyDynamicLinkExpandoAttributes.6 = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006334373265653564
+          IPropertyDynamicLinkExpandoAttributes.+bP@ = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006337656634363534
+          IPropertyDynamicLinkExpandoAttributes.B1gW = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003135323431346235
+          IPropertyDynamicLinkExpandoAttributes.Gz = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003631373733303331
+          IPropertyDynamicLinkExpandoAttributes.$QZ = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000006563383066333561
+          IPropertyDynamicLinkExpandoAttributes.$C: = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003039633930303431
+          IPropertyDynamicLinkExpandoAttributes.XE^A = bytes[176] b000000058000000ffffffff020000007f00ffff1c00000044000000240000003765643634616263
+          IPropertyDynamicLinkExpandoAttributes.fjU = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003834663634663261
+          IPropertyDynamicLinkExpandoAttributes.0
+^ = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000006637666662653938
+          IPropertyDynamicLinkExpandoAttributes.22o@ = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000003133663463636364
+          IPropertyDynamicLinkExpandoAttributes.L_bn = bytes[176] b000000058000000ffffffff020000007f00ffff1c00000044000000240000003961363236346430
+          IPropertyDynamicLinkExpandoAttributes.#IxM = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003164356634623032
+          IPropertyDynamicLinkExpandoAttributes.nj = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003936346363366136
+          IPropertyDynamicLinkExpandoAttributes.1)_ = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000003662366630323166
+          IPropertyDynamicLinkExpandoAttributes.;rD = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003739346331623934
+          IPropertyDynamicLinkExpandoAttributes.Qu = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003231343564303162
+          IPropertyDynamicLinkExpandoAttributes.x9?@ = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006164306336653461
+          IPropertyDynamicLinkExpandoAttributes.103 = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003761343138613838
+          IPropertyDynamicLinkExpandoAttributes.IL,1 = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003864613163366262
+          IPropertyDynamicLinkExpandoAttributes.Yc = bytes[155] 9b00000051000000ffffffff020000007f00ffff1c00000044000000240000003033323865636265
+          IPropertyDynamicLinkExpandoAttributes.gS? = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003236353534396133
+          IPropertyDynamicLinkExpandoAttributes.m%zq = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006465306437346237
+          IPropertyDynamicLinkExpandoAttributes.& = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003662663264643865
+          IPropertyDynamicLinkExpandoAttributes.Tc,F = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006636333361343033
+          IPropertyDynamicLinkExpandoAttributes.nL=} = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006430633634323162
+          IPropertyDynamicLinkExpandoAttributes.I6HW = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006234393964306237
+          IPropertyDynamicLinkExpandoAttributes.O!NP = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000003836353039306137
+          IPropertyDynamicLinkExpandoAttributes.h9 = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006364623538356464
+          IPropertyDynamicLinkExpandoAttributes.6s = bytes[173] ad00000057000000ffffffff020000007f00ffff1c00000044000000240000006331306666313534
+          IPropertyDynamicLinkExpandoAttributes.XGsT = bytes[176] b000000058000000ffffffff020000007f00ffff1c00000044000000240000003235393563663362
+          IPropertyDynamicLinkExpandoAttributes.(0Pr = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003030613361656236
+          IPropertyDynamicLinkExpandoAttributes.3>s = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003561633838356461
+          IPropertyDynamicLinkExpandoAttributes.uN4 = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000003534373133333064
+          IPropertyDynamicLinkExpandoAttributes.C> = bytes[197] c50000005f000000ffffffff020000007f00ffff1c00000044000000240000003837353439633861
+          IPropertyDynamicLinkExpandoAttributes.PbD^ = bytes[209] d100000063000000ffffffff020000007f00ffff1c00000044000000240000003133653331316364
+          IPropertyDynamicLinkExpandoAttributes.DA; = bytes[155] 9b00000051000000ffffffff020000007f00ffff1c00000044000000240000006366343638303136
+          IPropertyDynamicLinkExpandoAttributes.?MR = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000003137316663636266
+          IPropertyDynamicLinkExpandoAttributes.	'u = bytes[185] b90000005b000000ffffffff020000007f00ffff1c00000044000000240000006462386234633562
+          IPropertyDynamicLinkExpandoAttributes.<P7L = bytes[197] c50000005f000000ffffffff020000007f00ffff1c00000044000000240000006664336135356165
+          IPropertyDynamicLinkExpandoAttributes..<^ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c31 ILScreenItemData name='C_AlarmLine1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:00.938036Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:01.106779Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_AlarmLine1'
+          ICoreAttributes.Subtype = 'HmiAlarmLineControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes." = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c32 ILScreenItemData name='C_Trend1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:05.072950Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:05.211096Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_Trend1'
+          ICoreAttributes.Subtype = 'HmiTrendControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.D(e& = '1edb709-c7a8-401d-ad77-598e8a4762f1'
+          IPropertyDynamicLinkExpandoAttributes.6M = '26ba101-115b-485a-9f1a-2e6a043b0923'
+          IPropertyDynamicLinkExpandoAttributes.$Q|J = '0c85386-5ef4-4b2a-b12a-9de1550fa5fe'
+          IPropertyDynamicLinkExpandoAttributes.JbP = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c33 ILScreenItemData name='C_TrendCompanion1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:09.245060Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:09.398405Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_TrendCompanion1'
+          ICoreAttributes.Subtype = 'HmiTrendCompanion'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.-At = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000003362373536663238
+          IPropertyDynamicLinkExpandoAttributes.m8M = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003336336465623165
+          IPropertyDynamicLinkExpandoAttributes.ez4v = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003761663164646364
+          IPropertyDynamicLinkExpandoAttributes.LI+ = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003230656466343237
+          IPropertyDynamicLinkExpandoAttributes.254u = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003834643466383439
+          IPropertyDynamicLinkExpandoAttributes.C_} = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000006437353161316331
+          IPropertyDynamicLinkExpandoAttributes.Sme = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003032313636613961
+          IPropertyDynamicLinkExpandoAttributes.<~T = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000006132343236306662
+          IPropertyDynamicLinkExpandoAttributes.`upW = bytes[155] 9b00000051000000ffffffff020000007f00ffff1c00000044000000240000006330333336633731
+          IPropertyDynamicLinkExpandoAttributes.O_T = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000003962613131306530
+          IPropertyDynamicLinkExpandoAttributes.hx!D = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003433633138613764
+          IPropertyDynamicLinkExpandoAttributes.5:} = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003839363337363833
+          IPropertyDynamicLinkExpandoAttributes.`h? = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003830343961633832
+          IPropertyDynamicLinkExpandoAttributes. = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003462393430353361
+          IPropertyDynamicLinkExpandoAttributes.KD{ = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003862303837663364
+          IPropertyDynamicLinkExpandoAttributes.Iy = bytes[185] b90000005b000000ffffffff020000007f00ffff1c00000044000000240000006136313730626531
+          IPropertyDynamicLinkExpandoAttributes.!)gk = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000006635666665303330
+          IPropertyDynamicLinkExpandoAttributes.o>=w = bytes[185] b90000005b000000ffffffff020000007f00ffff1c00000044000000240000003763303336363032
+          IPropertyDynamicLinkExpandoAttributes.g!kk = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000006261613838376366
+          IPropertyDynamicLinkExpandoAttributes.:X( = bytes[170] aa00000056000000ffffffff020000007f00ffff1c00000044000000240000003130663839303830
+          IPropertyDynamicLinkExpandoAttributes.(KV = bytes[170] aa00000056000000ffffffff020000007f00ffff1c00000044000000240000003034396334303430
+          IPropertyDynamicLinkExpandoAttributes.11 = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000006235313238326439
+          IPropertyDynamicLinkExpandoAttributes.54~ = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003766323837646133
+          IPropertyDynamicLinkExpandoAttributes.qeF = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003962313834343037
+          IPropertyDynamicLinkExpandoAttributes.?I< = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000006135646633346565
+          IPropertyDynamicLinkExpandoAttributes.+3s = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000006665303236356236
+          IPropertyDynamicLinkExpandoAttributes.iw> = bytes[158] 9e00000052000000ffffffff020000007f00ffff1c00000044000000240000003033363138306562
+          IPropertyDynamicLinkExpandoAttributes.e	 = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000006530316135633561
+          IPropertyDynamicLinkExpandoAttributes.K{@3 = bytes[191] bf0000005d000000ffffffff020000007f00ffff1c00000044000000240000003134306632396162
+          IPropertyDynamicLinkExpandoAttributes.~S0 = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003334366135633936
+          IPropertyDynamicLinkExpandoAttributes.?"%E = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000003237653661383936
+          IPropertyDynamicLinkExpandoAttributes.qL?^ = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000006431653531653531
+          IPropertyDynamicLinkExpandoAttributes.&Ge = bytes[179] b300000059000000ffffffff020000007f00ffff1c00000044000000240000003532396538646638
+          IPropertyDynamicLinkExpandoAttributes.tz} = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003738323630366637
+          IPropertyDynamicLinkExpandoAttributes.o0@r = bytes[182] b60000005a000000ffffffff020000007f00ffff1c00000044000000240000003132376661313766
+          IPropertyDynamicLinkExpandoAttributes."CG4 = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003666653832353661
+          IPropertyDynamicLinkExpandoAttributes.zi = bytes[194] c20000005e000000ffffffff020000007f00ffff1c00000044000000240000006537663232323437
+          IPropertyDynamicLinkExpandoAttributes.olS = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003030383861613766
+          IPropertyDynamicLinkExpandoAttributes.t&3g = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003031363337323231
+          IPropertyDynamicLinkExpandoAttributes./F, = bytes[137] 890000004b000000ffffffff020000007f00ffff1c00000044000000240000003933303062346134
+          IPropertyDynamicLinkExpandoAttributes.kNlw = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c34 ILScreenItemData name='C_FTrend1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:13.548888Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:13.679615Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_FTrend1'
+          ICoreAttributes.Subtype = 'HmiFunctionTrendControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.y<] = 'b3f43da-b852-413e-8afd-b1d2079c4f78'
+          IPropertyDynamicLinkExpandoAttributes.&70E = '8618af6-baf7-405b-8282-af5e7079c860'
+          IPropertyDynamicLinkExpandoAttributes.obwb = '16f98d8-6904-498a-9f91-eb06a423a696'
+          IPropertyDynamicLinkExpandoAttributes.P) = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c35 ILScreenItemData name='C_DetParam1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:23.633159Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:23.765247Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_DetParam1'
+          ICoreAttributes.Subtype = 'HmiDetailedParameterControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes."}: = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000006232393739363735
+          IPropertyDynamicLinkExpandoAttributes.FG! = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000006433393236623066
+          IPropertyDynamicLinkExpandoAttributes.;0_ = bytes[185] b90000005b000000ffffffff020000007f00ffff1c00000044000000240000003539636434346431
+          IPropertyDynamicLinkExpandoAttributes.T@( = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003034393264333530
+          IPropertyDynamicLinkExpandoAttributes.vajm = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000006266616362346134
+          IPropertyDynamicLinkExpandoAttributes.9O = bytes[146] 920000004e000000ffffffff020000007f00ffff1c00000044000000240000006130626339356538
+          IPropertyDynamicLinkExpandoAttributes.M
+O0 = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000003538623166363334
+          IPropertyDynamicLinkExpandoAttributes.LCo = bytes[182] b60000005a000000ffffffff020000007f00ffff1c00000044000000240000003738353438383630
+          IPropertyDynamicLinkExpandoAttributes.4Yss = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c36 ILScreenItemData name='C_Web1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:28.058432Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:28.135820Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_Web1'
+          ICoreAttributes.Subtype = 'HmiWebControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.-b = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c37 ILScreenItemData name='C_Media1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:32.084882Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:32.211523Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_Media1'
+          ICoreAttributes.Subtype = 'HmiMediaControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.i/R = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c38 ILScreenItemData name='C_SysDiag1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:36.245809Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:36.431832Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_SysDiag1'
+          ICoreAttributes.Subtype = 'HmiSystemDiagnosisControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.23qP = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000006530376532626435
+          IPropertyDynamicLinkExpandoAttributes.aB4{ = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006566663136303965
+          IPropertyDynamicLinkExpandoAttributes.1/& = bytes[167] a700000055000000ffffffff020000007f00ffff1c00000044000000240000006231623134666633
+          IPropertyDynamicLinkExpandoAttributes.}` = bytes[170] aa00000056000000ffffffff020000007f00ffff1c00000044000000240000006337303739333135
+          IPropertyDynamicLinkExpandoAttributes.a
+v = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000003764353137623761
+          IPropertyDynamicLinkExpandoAttributes.0tc = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006535373966633661
+          IPropertyDynamicLinkExpandoAttributes.VwbB = bytes[164] a400000054000000ffffffff020000007f00ffff1c00000044000000240000003362323535623037
+          IPropertyDynamicLinkExpandoAttributes.Lnr = bytes[188] bc0000005c000000ffffffff020000007f00ffff1c00000044000000240000003266393164313363
+          IPropertyDynamicLinkExpandoAttributes.X5F = bytes[203] cb00000061000000ffffffff020000007f00ffff1c00000044000000240000003265313261346436
+          IPropertyDynamicLinkExpandoAttributes.{aU = bytes[209] d100000063000000ffffffff020000007f00ffff1c00000044000000240000006265303032333439
+          IPropertyDynamicLinkExpandoAttributes.yC!z = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c39 ILScreenItemData name='C_ProDiagOv1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:40.845635Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:40.958576Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_ProDiagOv1'
+          ICoreAttributes.Subtype = 'HmiProcessDiagnosisOverviewControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.vp+y = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000006437663934353932
+          IPropertyDynamicLinkExpandoAttributes.Lt = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000003035623361303232
+          IPropertyDynamicLinkExpandoAttributes.,D9 = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000003061336436346530
+          IPropertyDynamicLinkExpandoAttributes.BD9 = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000006532363862646361
+          IPropertyDynamicLinkExpandoAttributes.?L = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000003939626135636231
+          IPropertyDynamicLinkExpandoAttributes.j+:8 = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000006433343338643163
+          IPropertyDynamicLinkExpandoAttributes.RzD = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000006234353863363765
+          IPropertyDynamicLinkExpandoAttributes.yG1 = bytes[134] 860000004a000000ffffffff020000007f00ffff1c00000044000000240000006561303063616235
+          IPropertyDynamicLinkExpandoAttributes.XP = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000006363383862623733
+          IPropertyDynamicLinkExpandoAttributes.L/T = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000003465613931663162
+          IPropertyDynamicLinkExpandoAttributes.no_ = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000006334386361353530
+          IPropertyDynamicLinkExpandoAttributes.8#n = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000003765356664323063
+          IPropertyDynamicLinkExpandoAttributes.XO = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000006532393766306265
+          IPropertyDynamicLinkExpandoAttributes.{"( = bytes[131] 8300000049000000ffffffff020000007f00ffff1c00000044000000240000003737376461313465
+          IPropertyDynamicLinkExpandoAttributes.A")
+ = bytes[152] 9800000050000000ffffffff020000007f00ffff1c00000044000000240000003339613939346438
+          IPropertyDynamicLinkExpandoAttributes.Y^d = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000006638393664666365
+          IPropertyDynamicLinkExpandoAttributes.8/b = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c3a ILScreenItemData name='C_GraphOv1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:45.022009Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:45.166034Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_GraphOv1'
+          ICoreAttributes.Subtype = 'HmiProcessDiagnosisGraphOverviewControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.IT, = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000006462653837663039
+          IPropertyDynamicLinkExpandoAttributes.+  = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006237633232386663
+          IPropertyDynamicLinkExpandoAttributes.D%B = bytes[140] 8c0000004c000000ffffffff020000007f00ffff1c00000044000000240000006565346237376664
+          IPropertyDynamicLinkExpandoAttributes.IK} = bytes[137] 890000004b000000ffffffff020000007f00ffff1c00000044000000240000003666366637633532
+          IPropertyDynamicLinkExpandoAttributes.Nmb = bytes[137] 890000004b000000ffffffff020000007f00ffff1c00000044000000240000006230626432613531
+          IPropertyDynamicLinkExpandoAttributes.IHz = bytes[137] 890000004b000000ffffffff020000007f00ffff1c00000044000000240000006537376237333735
+          IPropertyDynamicLinkExpandoAttributes.P?M = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c3b ILScreenItemData name='C_CritAnalysis1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:49.715139Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:49.851878Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_CritAnalysis1'
+          ICoreAttributes.Subtype = 'HmiProcessDiagnosisCriteriaAnalysisControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.$tF = bytes[161] a100000053000000ffffffff020000007f00ffff1c00000044000000240000006335396435623662
+          IPropertyDynamicLinkExpandoAttributes.xK@ = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003632316533383230
+          IPropertyDynamicLinkExpandoAttributes.%|e = bytes[143] 8f0000004d000000ffffffff020000007f00ffff1c00000044000000240000003663636264363166
+          IPropertyDynamicLinkExpandoAttributes.Ko& = bytes[149] 950000004f000000ffffffff020000007f00ffff1c00000044000000240000003536313936333436
+          IPropertyDynamicLinkExpandoAttributes.C?fe = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c3c ILScreenItemData name='C_PlcCode1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:54.090842Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:13:54.201585Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_PlcCode1'
+          ICoreAttributes.Subtype = 'HmiProcessDiagnosisPlcCodeViewerControl'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.w04 = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c3d ILScreenItemData name='C_ScreenWin1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:13:58.500946Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:14:02.323334Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'C_ScreenWin1'
+          ICoreAttributes.Subtype = 'HmiScreenWindow'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.K2P = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          IPropertyDynamicLinkExpandoAttributes.i~L = bytes[5] 0000000000
+          link ILScreenItemParent -> 1002:00cd:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferences -> 1002:00cd:1c15
+NEW     1003:00cd:1c3f ILScreenItemData name='I_Rect1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:14:34.680699Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:04.621705Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'I_Rect1'
+          ICoreAttributes.Subtype = 'HmiRectangle'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ITextAttributes.#2147483669 = bytes[1908] 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.a^x = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c13
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1003:00cd:1c40 ILScreenItemData name='I_Text1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:14:43.256637Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:10.084451Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'I_Text1'
+          ICoreAttributes.Subtype = 'HmiText'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ITextAttributes.#2147483669 = bytes[379] 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.;Q*, = bytes[182] b600000068000000ffffffff030000007f000904ffff220000004a00000060000000240000006632
+          IPropertyDynamicLinkExpandoAttributes.0:FO = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c13
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EmbeddedScriptChildren -> 1002:00e3:1c43
+          link ExpandoReferencesInverse -> 1002:00e3:1c43
+          link ExpandoReferences -> 1002:00e3:1c43
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1003:00cd:1c41 ILScreenItemData name='I_IOField1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:14:43.684160Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:14:48.756041Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'I_IOField1'
+          ICoreAttributes.Subtype = 'HmiIOField'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.1v_ = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c13
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1003:00cd:1c42 ILScreenItemData name='I_Bar1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:14:44.059781Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:14:53.238274Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'I_Bar1'
+          ICoreAttributes.Subtype = 'HmiBar'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ITextAttributes.#2147483669 = bytes[113] 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.o~g! = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c13
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1003:00cd:1c46 ILScreenItemData name='S_Button1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:22.043773Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:30.160543Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'S_Button1'
+          ICoreAttributes.Subtype = 'HmiButton'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IAdditionalAttributes.Tapped = bytes[6] 060000000000
+          IAdditionalAttributes.Down = bytes[6] 060000000100
+          IPropertyDynamicLinkExpandoAttributes.9"xp = bytes[168] a800000061000000ffffffff030000007f000904ffff220000004a00000059000000240000003035
+          IPropertyDynamicLinkExpandoAttributes.mM = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c14
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EmbeddedScriptChildren -> 1002:00e3:1c47
+          link ExpandoReferencesInverse -> 1002:00e3:1c47
+          link ExpandoReferences -> 1002:00e3:1c47
+          link EmbeddedScriptChildren -> 1002:00e3:1c49
+          link ExpandoReferencesInverse -> 1002:00e3:1c49
+          link ExpandoReferences -> 1002:00e3:1c49
+NEW     1003:00cd:1c4a ILScreenItemData name='S_IOField1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:34.247607Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:42.780806Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'S_IOField1'
+          ICoreAttributes.Subtype = 'HmiIOField'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.`x = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1c14
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EmbeddedScriptChildren -> 1002:00e3:1c4b
+          link ExpandoReferencesInverse -> 1002:00e3:1c4b
+          link ExpandoReferences -> 1002:00e3:1c4b
+NEW     1003:00cd:1c51 ILScreenItemData name='X_Rect1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:17:52.307938Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:17:52.307938Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'X_Rect1'
+          ICoreAttributes.Subtype = 'HmiRectangle'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ITextAttributes.#2147483669 = bytes[388] 10010000000101000000de000000040000003b0000000b0000800b00008001000080150000800454
+          link ILScreenItemParent -> 1002:00cd:1c50
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoReferences -> 1008:00e5:180a
+NEW     1003:00e3:1c44 HmiScriptModuleContainerData name='ScriptModuleContainer'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:09.387430Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:15.766389Z'
+          ICoreAttributes.Name = 'ScriptModuleContainer'
+          IAdditionalAttributes.#2147483669 = bytes[41] 0000000025000c000000000000000000000000100100000001010000000c000000000000000c0000
+          link ScriptContainerParent -> 1002:00cd:1c13
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link TriggerElements -> 1002:00e3:1c43
+          link TriggerElements -> 1002:00e3:1c45
+NEW     1003:00e3:1c48 HmiScriptModuleContainerData name='ScriptModuleContainer'
+          ICoreAttributes.CreationTime = '2026-10-20T16:15:26.196235Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:15:47.774574Z'
+          ICoreAttributes.Name = 'ScriptModuleContainer'
+          link ScriptContainerParent -> 1002:00cd:1c14
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link EventElements -> 1002:00e3:1c47
+          link EventElements -> 1002:00e3:1c49
+          link EventElements -> 1002:00e3:1c4b
+          link EventElements -> 1002:00e3:1c4c
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:20.616318Z' -> '2026-10-20T16:20:01.708419Z'  (timestamp)
+CHANGED 1008:00e5:180a HmiTagData name='HmiTag_Ext1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:20.616318Z' -> '2026-10-20T16:17:52.307938Z'  (timestamp)
+          raw <links 1>: 52 -> 148 bytes
+          +link ExpandoReferencesInverse -> 1002:00cd:1c13
+          +link ExpandoReferencesInverse -> 1002:00e3:1c43
+          +link ExpandoReferencesInverse -> 1002:00e3:1c45
+          +link ExpandoReferencesInverse -> 1002:00e3:1c47
+          +link ExpandoReferencesInverse -> 1003:00cd:1c3f
+          +link ExpandoReferencesInverse -> 1003:00cd:1c40
+          +link ExpandoReferencesInverse -> 1003:00cd:1c42
+          +link ExpandoReferencesInverse -> 1003:00cd:1c51
+          slot table [0, 0, 148, 0, 247, 0, 346, 0, 0, 794, 0, 0, 735, 0, 785, 435, 0, 0, 0, 443, 0, 0, 0, 472, 567, 683] -> [0, 0, 148, 0, 247, 0, 346, 0, 0, 890, 0, 0, 831, 0, 881, 435, 0, 0, 0, 443, 0, 0, 0, 472, 567, 683]
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[978] 00ba03000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e -> bytes[746] 018f09000000000000000000000010010000000101000000d005785eed96dd6eda3014c7f728912f
+CHANGED 100e:0002:106e FolderData name='ILScreenFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T16:17:52.307938Z'  (timestamp)
+          raw <links 1>: 0 -> 116 bytes
+          +link AggregatedElements -> 1002:00cd:1c10
+          +link AggregatedElements -> 1002:00cd:1c11
+          +link AggregatedElements -> 1002:00cd:1c12
+          +link AggregatedElements -> 1002:00cd:1c13
+          +link AggregatedElements -> 1002:00cd:1c14
+          +link AggregatedElements -> 1002:00cd:1c15
+          +link AggregatedElements -> 1002:00cd:1c50
+          slot table [0, 126, 0, 0, 80, 0, 0, 134, 0] -> [0, 126, 0, 0, 80, 0, 0, 134, 218]
+CHANGED 1012:00cb:1071 HmiGraphXSettingsData name='HmiGraphXSettingsData'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T16:09:24.772945Z'  (timestamp)
+          ICoreExpandoLinkAttributes.IlStartScreen: '<absent>' -> bytes[6] 060000000000
+          raw ICoreExpandoLinkAttributes: 0 -> 46 bytes
+          raw <links 1>: 0 -> 52 bytes
+          +link ExpandoReferences -> 1002:00cd:1c10
+          slot table [80, 0, 0, 0, 0, 0, 262, 178, 0] -> [80, 0, 872, 0, 0, 0, 262, 178, 820]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:29.104844Z' -> '2026-10-20T16:20:05.022810Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000d:0007:10, 0011:0007:1ff8, 0011:0007:1ff9, 0011:0007:1ffa, 0011:0007:1ffb, 0014:0007:0, 0015:0007:20, 0016:0007:18

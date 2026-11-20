@@ -1,0 +1,30 @@
+﻿A: samples\000_empty  (370 records, 363 keys)
+B: samples\001_devgroup  (378 records, 365 keys)
+
+CHANGED 0003:0007:3  store:0x00070003  @A242814 @B248181 len 57  versionsInB=3
+        +48 len 2:  A: 08 00 00 00 07 08 00 00 00 00
+                      B: 08 00 00 00 0f 0c 00 00 00 00
+
+CHANGED 1028:0002:433  Siemens.Automation.DomainModel.ProjectData [ObjectType]  @A162147 @B247288 len 485 -> 501  versionsInB=2
+        length field differs; common prefix 68, common suffix 91
+        A[+64..+394): 00 00 00 00 90 01 00 00 ac 00 00 00 60 00 00 00 5f 00 00 00 3e 00 00 00 f5 49 ed 16 03 2e df 48 00 2a 00 00 00 18 1e 01 1b 03 2e df 48 34 00 00 00 29 00 00 00 01 0a 44 61 74 61 4c 6f 67 58 45 0a 30 30 30 5f 65 6d 70 74 79 21 20 00 00 00 10 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 e4 00 0e 00 11 20 02 00 0e 10 02 00 34 04 00 00 00 00 00 00
+        B[+64..+410): 00 00 00 00 a0 01 00 00 ac 00 00 00 60 00 00 00 5f 00 00 00 3e 00 00 00 f5 49 ed 16 03 2e df 48 00 2a 00 00 00 b0 6c 39 66 05 2e df 48 34 00 00 00 29 00 00 00 01 0a 44 61 74 61 4c 6f 67 58 45 0a 30 30 30 5f 65 6d 70 74 79 21 20 00 00 00 10 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 f4 00 0f 00 11 20 02 00 0e 10 02 00 34 04 00 00 00 00 00 00
+        A ascii[000_empty! |factorybyte] utf16[]
+        B ascii[000_empty! |factorybyte] utf16[]
+
+CHANGED 1006:0001:449  Siemens.Automation.ObjectFrame.CorePersistenceInfo [ObjectType]  @A163675 @B247821 len 245 -> 328  versionsInB=2
+        length field differs; common prefix 73, common suffix 1
+        A[+69..+244): 00 00 00 00 ab 00 00 00 0c 00 00 00 8a 00 00 00 7e 00 00 00 01 00 00 00 0c 00 00 00 72 00 00 00 20 00 00 00 36 0a 43 1a 03 2e df 48 2d 00 00 00 00 00 00 00 00 00 00 00 49 00 00 00 0d 56 32 31 20 55 70 64 61 74 65 20 33 1c 50 72 6f 6a 65 63 74 48 69 73 74 6f 72 79 53 63 72 69 70 74 43 72 65 61 74 65 64 29 41 75 74 6f 6d 61 74 69 6f 6e 2d 43 6f 6d 6d 6f 6e 53 65 72 76 69 63 65 73 2d
+        B[+69..+327): 00 00 00 00 fe 00 00 00 0c 00 00 00 8a 00 00 00 7e 00 00 00 01 00 00 00 0c 00 00 00 72 00 00 00 20 00 00 00 36 0a 43 1a 03 2e df 48 2d 00 00 00 00 00 00 00 00 00 00 00 49 00 00 00 0d 56 32 31 20 55 70 64 61 74 65 20 33 1c 50 72 6f 6a 65 63 74 48 69 73 74 6f 72 79 53 63 72 69 70 74 43 72 65 61 74 65 64 29 41 75 74 6f 6d 61 74 69 6f 6e 2d 43 6f 6d 6d 6f 6e 53 65 72 76 69 63 65 73 2d
+        A ascii[ProjectHistoryScriptCreated)Automation-CommonServices-ProjectManager!|V21 Update 3] utf16[]
+        B ascii[IM\SearchIndex0SaveCommit_bab30361-9b7c-4f30-8434-14476b394ba4|ProjectHistoryScriptCreated)Automation-CommonServices-ProjectManagert|V21 Update 3] utf16[]
+
+NEW     100e:0002:808  Siemens.Automation.DomainModel.FolderData [ObjectType]  @B247043 len 213  versionsInB=1
+        ascii[DeviceGroupFolderT|Group_1] utf16[]
+        hex: d5 00 00 00 0e 10 02 00 08 08 00 00 00 00 00 00 03 00 00 00 03 00 00 00 00 00 09 01 6d cf b7 00 30 1e 3c 47 ad 9e d2 4b e2 69 fb e7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 50 00 00 00 00 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 30 00 00 00 00 00 73 ed 08 66 05 2e df 48 16 00 00 00 1e 00 00 00 08 47 72 6f 75 70 5f 31 12 44 65 76 69 63 65 47 72 6f 75 70 46 6f 6c 64 65 72
+
+NEW     0014:0007:bf0  store:0x00070014  @B248536 len 389  versionsInB=1
+        ascii[$$COMMIT$ |XncR|um>f|ut9AO] utf16[]
+        hex: 85 01 00 00 14 00 07 00 f0 0b 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 d1 98 bb 83 e1 cf 1f 4f 93 98 e7 1a db 48 c2 8f 54 01 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 75 6d 3e 66 05 2e df 08 01 00 ff ff ff ff 0a 24 24 43 4f 4d 4d 49 54 24 20 01 00 00 ef 2f da 46 0e c7 ca d3 35 34 fe ff 5d de 49 fe cf e3 82 ea 7b 2c 5a 0c 40 39 68 bb 86 d1 a5 a6
+
+summary: new 2, removed 0, changed 3, same 358, noise-only 2

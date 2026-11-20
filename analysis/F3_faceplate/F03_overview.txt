@@ -1,0 +1,81 @@
+TYPE FP_Basic       0002:00d3:2018 guid f10ac243-f6e0-459c-bd54-b3b7d374677f AlwaysDownload=None IsObsolete=False default=0003:00d3:2019
+  VERSION 0003:00d3:2019 0.0.1 Committed fin=2026-10-20T17:49:59.722470Z author=factorybyte
+    CONTENT 1004:00cd:206d props={'Width': 750, 'Height': 300} IFaceplateInterface=False
+      link AggregatingFolder            -> 100e:0002:202b FolderData 'ILFaceplateTypeFolder'
+      link Environment                  -> 0003:00d3:2019 FaceplateLibraryVersionData None
+      link Target                       -> 1006:0010:201d HmiApplicationData 'HiddenHmiRTDeviceFaceplateTypes'
+      link ContentToVersion             -> 0003:00d3:2019 FaceplateLibraryVersionData None
+      item B_Rect1          HmiRectangle             {'Height': 60, 'Width': 120, 'Top': 10, 'Left': 10}
+      item B_Line1          HmiLine                  {'Height': 60, 'Width': 120, 'Top': 10, 'Left': 150}
+      item B_Polyline1      HmiPolyline              {'Height': 58, 'Width': 106, 'Top': 10, 'Left': 290}
+      item B_Polygon1       HmiPolygon               {'Height': 58, 'Width': 106, 'Top': 10, 'Left': 430}
+      item B_Ellipse1       HmiEllipse               {}
+      item B_EllipseSeg1    HmiEllipseSegment        {}
+      item B_EllArc1        HmiEllipticalArc         {}
+      item B_Circle1        HmiCircle                {}
+      item B_CircleSeg1     HmiCircleSegment         {}
+      item B_CircArc1       HmiCircularArc           {}
+      item B_Text1          HmiText                  {'Height': 40, 'Width': 160, 'Top': 220, 'Left': 390}
+      item B_GraphicView1   HmiGraphicView           {'Height': 100, 'Width': 150, 'Top': 10, 'Left': 590}
+    hidden device 100e:0010:201a
+TYPE FP_Controls    0002:00d3:207e guid cb3ad79d-2036-4097-b6a3-f8ac40771bec AlwaysDownload=None IsObsolete=False default=None
+  VERSION 0003:00d3:207f 0.0.1 InWork fin=0001-01-01T00:00:00Z author=factorybyte
+    CONTENT 1004:00cd:20d3 props={'Width': 810, 'Height': 880} IFaceplateInterface=False
+      link AggregatingFolder            -> 100e:0002:2091 FolderData 'ILFaceplateTypeFolder'
+      link Environment                  -> 0003:00d3:207f FaceplateLibraryVersionData None
+      link Target                       -> 1006:0010:2083 HmiApplicationData 'HiddenHmiRTDeviceFaceplateTypes'
+      link ContentToVersion             -> 0003:00d3:207f FaceplateLibraryVersionData None
+      item C_AlarmControl1  HmiAlarmControl          {'Height': 200, 'Width': 380, 'Top': 10, 'Left': 10}
+      item C_Trend1         HmiTrendControl          {'Height': 200, 'Width': 380, 'Top': 10, 'Left': 400}
+      item C_DetParam1      HmiDetailedParameterControl {'Height': 120, 'Width': 190, 'Top': 350, 'Left': 400}
+      item C_Faceplate1     HmiFaceplateContainer    {'Height': 120, 'Width': 190, 'Top': 750, 'Left': 10}
+    hidden device 100e:0010:2080
+TYPE FP_Elements    0002:00d3:2420 guid b97a64fc-3cf5-46f4-8040-af01de06aadc AlwaysDownload=None IsObsolete=False default=0003:00d3:2421
+  VERSION 0003:00d3:2421 0.0.1 Committed fin=2026-10-20T17:57:01.748150Z author=factorybyte
+    CONTENT 1004:00cd:2475 props={'Width': 800, 'Height': 400} IFaceplateInterface=False
+      link AggregatingFolder            -> 100e:0002:2433 FolderData 'ILFaceplateTypeFolder'
+      link Environment                  -> 0003:00d3:2421 FaceplateLibraryVersionData None
+      link Target                       -> 1006:0010:2425 HmiApplicationData 'HiddenHmiRTDeviceFaceplateTypes'
+      link ContentToVersion             -> 0003:00d3:2421 FaceplateLibraryVersionData None
+      item E_Button1        HmiButton                {'Height': 50, 'Width': 140, 'Top': 10, 'Left': 10}
+      item E_IOField1       HmiIOField               {'Height': 40, 'Width': 140, 'Top': 10, 'Left': 170}
+      item E_SymIOField1    HmiSymbolicIOField       {'Height': 40, 'Width': 140, 'Top': 10, 'Left': 330}
+      item E_TextBox1       HmiTextBox               {'Height': 60, 'Width': 160, 'Top': 10, 'Left': 490}
+      item E_Bar1           HmiBar                   {'Height': 180, 'Width': 60, 'Top': 90, 'Left': 10}
+      item E_Slider1        HmiSlider                {'Height': 180, 'Width': 80, 'Top': 90, 'Left': 90}
+      item E_Gauge1         HmiGauge                 {'Height': 180, 'Width': 180, 'Top': 90, 'Left': 190}
+      item E_Clock1         HmiClock                 {'Height': 160, 'Width': 160, 'Top': 90, 'Left': 390}
+      item E_Switch1        HmiToggleSwitch          {'Height': 50, 'Width': 120, 'Top': 90, 'Left': 570}
+      item E_CheckBox1      HmiCheckBoxGroup         {'Height': 100, 'Width': 160, 'Top': 290, 'Left': 10}
+      item E_Radio1         HmiRadioButtonGroup      {'Height': 100, 'Width': 160, 'Top': 290, 'Left': 190}
+      item E_ListBox1       HmiListBox               {'Height': 100, 'Width': 160, 'Top': 290, 'Left': 370}
+      item E_TouchArea1     HmiTouchArea             {'Height': 100, 'Width': 140, 'Top': 290, 'Left': 550}
+    hidden device 100e:0010:2422
+TYPE FP_Interface   0002:00d3:2489 guid 34f8de41-c791-40c1-80b8-95ee32a6d1ba AlwaysDownload=None IsObsolete=False default=None
+  VERSION 0003:00d3:248a 0.0.1 InWork fin=0001-01-01T00:00:00Z author=factorybyte
+    CONTENT 1004:00cd:24de props={'Width': 360, 'Height': 260} IFaceplateInterface=False
+      link AggregatingFolder            -> 100e:0002:249c FolderData 'ILFaceplateTypeFolder'
+      link Environment                  -> 0003:00d3:248a FaceplateLibraryVersionData None
+      link Target                       -> 1006:0010:248e HmiApplicationData 'HiddenHmiRTDeviceFaceplateTypes'
+      link ContentToVersion             -> 0003:00d3:248a FaceplateLibraryVersionData None
+      link ScriptModuleContainer        -> 1003:00e3:24e5 HmiScriptModuleContainerData 'ScriptModuleContainer'
+      item I_Rect1          HmiRectangle             {'Height': 80, 'Width': 120, 'Top': 10, 'Left': 10}
+      item I_Text1          HmiText                  {'Height': 40, 'Width': 200, 'Top': 10, 'Left': 150}  events ForeColorTrigger
+      item I_IOField1       HmiIOField               {'Height': 40, 'Width': 140, 'Top': 110, 'Left': 10}
+      item I_Bar1           HmiBar                   {'Height': 160, 'Width': 60, 'Top': 90, 'Left': 190}
+    hidden device 100e:0010:248b
+TYPE FP_Script      0002:00d3:24e9 guid 73628c9d-31e9-49e6-877b-5d12fcb7b00d AlwaysDownload=None IsObsolete=False default=None
+  VERSION 0003:00d3:24ea 0.0.1 InWork fin=0001-01-01T00:00:00Z author=factorybyte
+    CONTENT 1004:00cd:253e props={'Width': 180, 'Height': 140} IFaceplateInterface=False
+      link AggregatingFolder            -> 100e:0002:24fc FolderData 'ILFaceplateTypeFolder'
+      link Environment                  -> 0003:00d3:24ea FaceplateLibraryVersionData None
+      link Target                       -> 1006:0010:24ee HmiApplicationData 'HiddenHmiRTDeviceFaceplateTypes'
+      link ContentToVersion             -> 0003:00d3:24ea FaceplateLibraryVersionData None
+      link ScriptModuleContainer        -> 1003:00e3:2543 HmiScriptModuleContainerData 'ScriptModuleContainer'
+      item S_Button1        HmiButton                {'Height': 50, 'Width': 160, 'Top': 10, 'Left': 10}  events OnTapped,OnDown
+      item S_IOField1       HmiIOField               {'Height': 40, 'Width': 160, 'Top': 90, 'Left': 10}  events ProcessValueOnPropertyChanged
+    hidden device 100e:0010:24eb
+--- HmiTagData
+   1008:00e5:180a HmiTag_Ext1 Bool table Default tag table app HMI_1
+   1008:00e5:24e0 HmiTag_Ext1 None table None app None
+   1008:00e5:2544 HmiTag_Ext1 None table None app None

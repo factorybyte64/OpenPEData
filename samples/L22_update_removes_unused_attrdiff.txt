@@ -1,0 +1,81 @@
+A: L21_fb_inst_outdated  B: L22_update_removes_unused
+REMOVED 1001:0022:1018 CodeBlockData name='FB_Typed'
+REMOVED 1001:0022:18f7 CodeBlockData name='FB_Typed'
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.History: bytes[126] 7e000000010000000c0000007200000020000000360a431a032edf482d0000000000000000000000 -> bytes[262] 060100000200000010000000820000007200000020000000360a431a032edf482d00000000000000
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+REMOVED 1007:0022:1421 LoadableDependentData name=None
+REMOVED 1007:0022:18f9 LoadableDependentData name=None
+CHANGED 100e:0002:18ba FolderData name='ProgramBlocksFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:28:29.511984Z' -> '2026-10-21T04:33:46.126034Z'  (timestamp)
+          raw <links 1>: 68 -> 68 bytes
+          -link AggregatedElements -> 1001:0022:18f7
+CHANGED 100e:0002:916 FolderData name='ProgramBlocksFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-20T15:32:18.196793Z' -> '2026-10-21T04:33:46.126034Z'  (timestamp)
+          raw <links 1>: 68 -> 84 bytes
+          -link AggregatedElements -> 1001:0022:1018
+REMOVED 1010:0022:1420 LoadablePlusCodeBlockData name=None
+REMOVED 1010:0022:18f8 LoadablePlusCodeBlockData name=None
+REMOVED 1016:0022:101f CompileUnitData name=None
+REMOVED 1016:0022:18fa CompileUnitData name=None
+CHANGED 101c:0010:182b S7ControllerTargetData name='PLC_2'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:28:29.511984Z' -> '2026-10-21T04:33:46.126034Z'  (timestamp)
+          raw <links 1>: 972 -> 972 bytes
+          raw <links 3>: 48 -> 48 bytes
+          -link typed slot 19 -> 1001:0022:18f7
+          -link typed slot 21 -> 1001:0022:18f7
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T15:32:56.282578Z' -> '2026-10-21T04:33:46.126034Z'  (timestamp)
+          raw <links 1>: 972 -> 972 bytes
+          raw <links 3>: 48 -> 48 bytes
+          -link typed slot 19 -> 1001:0022:1018
+          -link typed slot 21 -> 1001:0022:1018
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:28:51.330053Z' -> '2026-10-21T04:33:57.716491Z'  (timestamp)
+CHANGED 1032:0022:18c3 ProgramInformationSourceData name=None
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataStore: bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000 -> bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataVersion: 639281105035154058 -> 639281540285289438
+          raw IExpandoInformationData: 2524 -> 2524 bytes
+CHANGED 1032:0022:91f ProgramInformationSourceData name=None
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataStore: bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000 -> bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataVersion: 639281105035154064 -> 639281540285289435
+          raw IExpandoInformationData: 2524 -> 2524 bytes
+REMOVED 1201:0022:1020 IdentPartData name=None
+REMOVED 1201:0022:18fd IdentPartData name=None
+REMOVED 1202:0022:1019 IdentContainerData name=None
+REMOVED 1202:0022:18fc IdentContainerData name=None
+CHANGED 1407:0022:1023 CodeBlockDataByCopyVersionObject name=None
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:28:44.219348Z' -> '2026-10-21T04:33:46.126034Z'  (timestamp)
+          raw <links 1>: 116 -> 116 bytes
+          -link IsTypeOf -> 1001:0022:18f7
+CHANGED 1407:0022:1902 CodeBlockDataByCopyVersionObject name=None
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:28:44.219348Z' -> '2026-10-21T04:33:46.126034Z'  (timestamp)
+          raw <links 1>: 100 -> 100 bytes
+          -link IsTypeOf -> 1001:0022:1018
+CHANGED 1607:0022:18ca TargetBlockInterfaceContainer name=None
+          raw <links 1>: 132 -> 132 bytes
+          -link InterfaceParts -> 160b:0022:1900
+          -link InterfaceParts -> 160b:0022:1901
+          -link InterfaceParts -> 160c:0022:18ff
+CHANGED 1607:0022:930 TargetBlockInterfaceContainer name=None
+          raw <links 1>: 100 -> 100 bytes
+          -link InterfaceParts -> 160b:0022:101d
+          -link InterfaceParts -> 160b:0022:101e
+          -link InterfaceParts -> 160c:0022:101a
+REMOVED 160b:0022:101d InterfacePartData name='BI:InputSection:FB_Typed/bf6a65bd-6b02-4a66-9b50-39e0556e7d83#83f0a2c4'
+REMOVED 160b:0022:101e InterfacePartData name='BI:OutputSection:FB_Typed/bf6a65bd-6b02-4a66-9b50-39e0556e7d83#6181190e'
+REMOVED 160b:0022:1900 InterfacePartData name='BI:InputSection:FB_Typed/6e3c4c8b-b807-4972-81fc-f6fca0b8a18f#83f0a2c4'
+REMOVED 160b:0022:1901 InterfacePartData name='BI:OutputSection:FB_Typed/6e3c4c8b-b807-4972-81fc-f6fca0b8a18f#6181190e'
+REMOVED 160c:0022:101a InterfaceVersionRootData name='_BIVE:FB_Typed/bf6a65bd-6b02-4a66-9b50-39e0556e7d83'
+CHANGED 160c:0022:1423 InterfaceVersionRootData name='_BIVE:FB_Typed/6e3c4c8b-b807-4972-81fc-f6fca0b8a18f'
+          raw <links 1>: 84 -> 84 bytes
+          -link UsedByLibraryBlocks -> 1001:0022:18f7
+REMOVED 160c:0022:18ff InterfaceVersionRootData name='BIVE:FB_Typed/93c71682-7182-4183-8d99-22a5da7dbf93'
+CHANGED 160c:0022:1904 InterfaceVersionRootData name='_BIVE:FB_Typed/e9197cb2-8470-4ad0-89c4-d761c72c3c9f'
+          raw <links 1>: 68 -> 68 bytes
+          -link UsedByLibraryBlocks -> 1001:0022:1018
+REMOVED 160d:0022:101c InterfaceCommentsPartData name=None
+REMOVED 160d:0022:18fe InterfaceCommentsPartData name=None
+REMOVED 1803:0022:1021 StandardCompileUnitDataBagData name=None
+REMOVED 1803:0022:18fb StandardCompileUnitDataBagData name=None
+store records changed/new: 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000c:0007:e, 000d:0007:10, 0014:0007:2018, 0015:0007:20

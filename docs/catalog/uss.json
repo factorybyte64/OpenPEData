@@ -1,0 +1,313 @@
+[
+ {
+  "group": "USS",
+  "title": "Overview of USS instructions (S7-1200)",
+  "name": "Overview of USS instructions",
+  "params": null
+ },
+ {
+  "group": "USS",
+  "title": "Requirements for using the USS protocol (S7-1200)",
+  "name": "Requirements for using the USS protocol",
+  "params": null
+ },
+ {
+  "group": "USS",
+  "title": "USS_PORT: Edit communication via USS network (S7-1200)",
+  "name": "USS_PORT",
+  "params": [
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "BAUD",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "USS_DB",
+    "decl": "InOut",
+    "types": "USS_BASE"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "USS",
+  "title": "USS_DRIVE: Swap data with drive (S7-1200)",
+  "name": "USS_DRIVE",
+  "params": [
+   {
+    "name": "RUN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OFF2",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OFF3",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "F_ACK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DIR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DRIVE",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "PZD_LEN",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "SPEED_SP",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "CTRL3",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "CTRL4",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "CTRL5",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "CTRL6",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "CTRL7",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "CTRL8",
+    "decl": "Input",
+    "types": "WORD"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "RUN_EN",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "D_DIR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "INHIBIT",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "FAULT",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "SPEED",
+    "decl": "Output",
+    "types": "REAL"
+   },
+   {
+    "name": "STATUS1",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "STATUS3",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "STATUS4",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "STATUS5",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "STATUS6",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "STATUS7",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "STATUS8",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "USS",
+  "title": "USS_RPM: Readout parameters from the drive (S7-1200)",
+  "name": "USS_RPM",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DRIVE",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "PARAM",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "USS_DB",
+    "decl": "InOut",
+    "types": "USS_BASE"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Output",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "USS",
+  "title": "USS_WPM: Change parameters in the drive (S7-1200)",
+  "name": "USS_WPM",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DRIVE",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "PARAM",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "EEPROM",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "USS_DB",
+    "decl": "InOut",
+    "types": "USS_BASE"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "USS",
+  "title": "Parameter STATUS of USS instructions (S7-1200)",
+  "name": "Parameter STATUS of USS instructions",
+  "params": null
+ }
+]

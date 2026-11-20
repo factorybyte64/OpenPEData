@@ -1,0 +1,30 @@
+{
+ "source": "TIA V21 DB editor of mTO_LeadingAxisProxy (screenshots in this folder), 2026-11-07; the TO cannot be compiled without a leading CPU (I-device transfer area), so Openness cannot export it. Start values are the type defaults (null); flags: A accessible, W writable, V visible, S setpoint. Base TO_Axis : TO_Object has no members.",
+ "mTO_LeadingAxisProxy": {"Static": [
+   ["Position", "LReal", null, "AV"],
+   ["Velocity", "LReal", null, "AV"],
+   ["Acceleration", "LReal", null, "AV"],
+   ["Interface", "TO_Struct_LeadingAxisProxy_Interface", null, "AVS"],
+   ["Interface.AddressIn", "VREF", null, "S"],
+   ["Interface.AddressIn.RID", "DWord", null, ""],
+   ["Interface.AddressIn.AREA", "Byte", null, ""],
+   ["Interface.AddressIn.DB_NUMBER", "UInt", null, ""],
+   ["Interface.AddressIn.OFFSET", "UDInt", null, ""],
+   ["Parameter", "TO_Struct_LeadingAxisProxy_Parameter", null, "AWVS"],
+   ["Parameter.LocalLeadingValueDelayTime", "LReal", null, "AWVS"],
+   ["Parameter.ToleranceTimeExternalLeadingValueInvalid", "LReal", null, "AWVS"],
+   ["StatusExternalLeadingValue", "TO_Struct_LeadingAxisProxy_StatusData", null, "AVS"],
+   ["StatusExternalLeadingValue.ModuloLength", "LReal", null, "AV"],
+   ["StatusExternalLeadingValue.ModuloStartValue", "LReal", null, "AV"],
+   ["StatusExternalLeadingValue.AdjustmentTime", "LReal", null, "AV"],
+   ["StatusWord", "DWord", null, "AV"],
+   ["ErrorWord", "DWord", null, "AV"],
+   ["ErrorDetail", "TO_Struct_ErrorDetail", null, "AVS"],
+   ["ErrorDetail.Number", "UDInt", null, "AV"],
+   ["ErrorDetail.Reaction", "DInt", null, "AV"],
+   ["WarningWord", "DWord", null, "AV"],
+   ["InternalToTrace", "Array[1..4] of TO_Struct_Internal", null, "AWVS"],
+   ["InternalToTrace.Id", "DInt", null, "AWV"],
+   ["InternalToTrace.Value", "LReal", null, "AWV"]
+ ]}
+}

@@ -1,0 +1,130 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_LadStruct"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+    END_VAR
+    VAR
+        ifc1 : _.FB_Iface;
+        ton1 : TON_TIME;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_C1";
+        S7_NetworkTitle := "MLC_T1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #"a" )
+            wire#w1
+            Coil( #q )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #"b" )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T2"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #"a" )
+            wire#w1
+            Contact( #"b" )
+            wire#w2
+            Coil( #q )
+        END_RUNG
+        RUNG wire#w1
+            I_Contact( #"c" )
+        END_RUNG wire#w2
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T3"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #"a" )
+            "FC_SclCtl"(
+                n := #ia,
+                flag := #"b",
+                Ret_Val => #io2,
+                total => #io
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T4"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FB_Iface_DB"(
+                iBool := #"a",
+                iInt := #ia,
+                iReal :=  ,
+                iArr :=  ,
+                iMotor :=  ,
+                ioReal :=  ,
+                oBool =>  ,
+                oInt => #io
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T5"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #ifc1(
+                iBool := #"a",
+                iInt := #ia,
+                iReal :=  ,
+                iArr :=  ,
+                iMotor :=  ,
+                ioReal :=  ,
+                oBool =>  ,
+                oInt => #io
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T6"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #"a" )
+            Return()
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T7"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "tIn" )
+            Coil( "tOut" )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( "DB_Global".xBool )
+            Coil( "DB_Global".sData."a" )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

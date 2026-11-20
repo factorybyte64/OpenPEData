@@ -1,0 +1,34 @@
+FUNCTION_BLOCK "FB_StlC_037"
+TITLE = STL call ReadFromArrayDB
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      di1 : DInt;
+   END_VAR
+   VAR_OUTPUT
+      io : Int;
+   END_VAR
+   VAR
+      val : Int;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 037 ReadFromArrayDB
+      CALL ReadFromArrayDB
+      {value_type := 'Int'}
+      (  DB                          := "ArrDB" ,
+         INDEX                       := #di1 ,
+         RET_VAL                     := #io ,
+         VALUE                       := #val
+      );
+NETWORK
+TITLE = 038 WriteToArrayDB
+      CALL WriteToArrayDB
+      {value_type := 'Int'}
+      (  DB                          := "ArrDB" ,
+         INDEX                       := #di1 ,
+         VALUE                       := #val ,
+         RET_VAL                     := #io
+      );
+END_FUNCTION_BLOCK

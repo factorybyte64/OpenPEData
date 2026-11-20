@@ -1,0 +1,39 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex091"
+    VAR_INPUT
+        v_pe_i_dev_new : Bool;
+        v_cmd : Int;
+        v_cmd_modifier : Int;
+        v_pe_mode_id : Byte;
+        v_pe_mode_attributes : Byte;
+        v_time_min_pause : DWord;
+        v_time_to_pause : DWord;
+        v_time_to_operate : DWord;
+    END_VAR
+    VAR_OUTPUT
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_activate : Bool;
+        v_valid : Bool;
+        v_time_min_length_of_stay : Variant;
+        v_time_max_length_of_stay : Variant;
+        v_mode_power_consumption : Variant;
+        v_energy_consum_to_pause : Variant;
+        v_energy_consum_to_operate : Variant;
+        v_data_errorrsp : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Pe_Get_Mode_Rsp( PE_I_DEV_NEW := #v_pe_i_dev_new, CMD := #v_cmd, CMD_MODIFIER := #v_cmd_modifier, PE_Mode_ID := #v_pe_mode_id, PE_Mode_Attributes := #v_pe_mode_attributes, Time_min_Pause := #v_time_min_pause, Time_to_Pause := #v_time_to_pause, Time_to_Operate := #v_time_to_operate, Time_max_Lenght_of_stay := DW#16#1, ACTIVATE := #v_activate, VALID := #v_valid, ERROR => #v_error, STATUS => #v_status, Time_min_Length_of_stay := #v_time_min_length_of_stay, Time_max_length_of_stay := #v_time_max_length_of_stay, Mode_Power_Consumption := #v_mode_power_consumption, Energy_Consum_to_Pause := #v_energy_consum_to_pause, Energy_Consum_to_operate := #v_energy_consum_to_operate, DATA_ERRORRSP := #v_data_errorrsp )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

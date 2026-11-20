@@ -1,0 +1,16 @@
+FUNCTION_BLOCK "FB_CarrierMcPower"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR
+      p : MC_POWER;
+   END_VAR
+   VAR_TEMP
+      e : ErrorStruct;
+   END_VAR
+
+BEGIN
+	// carrier for the system block MC_POWER and the system data types of GET_ERROR (tools\rebuild sys_blocks,
+	// sample 036_tech)
+	#p(Axis := "TO_Speed_5_0", Enable := FALSE);
+	GET_ERROR(#e);
+END_FUNCTION_BLOCK

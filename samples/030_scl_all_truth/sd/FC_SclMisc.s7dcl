@@ -1,0 +1,35 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclMisc" : Void
+    VAR_IN_OUT
+        arr : Array[1..2, 1..2] of Int;
+        arr3 : Array[0..1, 0..1, 0..1] of Int;
+    END_VAR
+    VAR_TEMP
+        "i" : Int;
+        "d" : DInt;
+        "b" : Bool;
+        v : Variant;
+        "by" : Byte;
+        "w" : Word;
+        "p" : Int;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #by := PEEK(area := 16#84, dbNumber := 1, byteOffset := 0);
+        POKE(area := 16#84, dbNumber := 1, byteOffset := 0, value := #by);
+        #w := PEEK_WORD(area := 16#84, dbNumber := 1, byteOffset := 0);
+        POKE(area := 16#84, dbNumber := 1, byteOffset := 0, value := #w);
+        #b := PEEK_BOOL(area := 16#84, dbNumber := 1, byteOffset := 0, bitOffset := 1);
+        #v := REF("DB_Global".iInt);
+        #arr[1, 1] := 1;
+        #arr3[0, 1, 0] := 3;
+        #b := IS_ARRAY(#v);
+        #i := CountOfElements(#v);
+        #d := #i;
+    END_NETWORK
+END_FUNCTION

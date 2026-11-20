@@ -1,0 +1,2043 @@
+{
+ "ex001": {
+  "block": "FX_Lad_ex001",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_COMP: Compare time tags",
+  "via": "xml",
+  "xml": {
+   "name": "T_Comp",
+   "templates": {
+    "date_type": "DTL",
+    "relation": "EQ"
+   }
+  }
+ },
+ "ex002": {
+  "block": "FX_Lad_ex002",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_CONV: Convert times and extract",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_CONV",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "DInt",
+    "src_type": "Time"
+   }
+  }
+ },
+ "ex003": {
+  "block": "FX_Lad_ex003",
+  "errors": [
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'T_ADD'. Allowed Template Names: 'date_type, time_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\1c80049e22a94cfe8c7547a61",
+   "The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; The data type DInt of the actual parameter does not match the data type DTL of the formal parameter.; Compiling finished (errors: 2; warnings: 0)",
+   "The data type DTL of the actual parameter does not match the data type Time of the formal parameter.; Compiling finished (errors: 1; warnings: 0)",
+   "The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; Compiling finished (errors: 2; warnings: 0)"
+  ],
+  "last": {
+   "message": "The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; Compiling finished (errors: 2; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_ADD: Add times (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_ADD",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "date_type": "Time",
+    "time_type": "Time"
+   }
+  }
+ },
+ "ex004": {
+  "block": "FX_Lad_ex004",
+  "errors": [
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'T_SUB'. Allowed Template Names: 'date_type, time_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\ddddf7c6e164466f9c1f29901",
+   "The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; The data type DInt of the actual parameter does not match the data type DTL of the formal parameter.; Compiling finished (errors: 2; warnings: 0)",
+   "The data type DTL of the actual parameter does not match the data type Time of the formal parameter.; Compiling finished (errors: 1; warnings: 0)",
+   "The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; Compiling finished (errors: 2; warnings: 0)"
+  ],
+  "last": {
+   "message": "The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; The data type Time of the actual parameter does not match the data type DTL of the formal parameter.; Compiling finished (errors: 2; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_SUB: Subtract times (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_SUB",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "date_type": "Time",
+    "time_type": "Time"
+   }
+  }
+ },
+ "ex005": {
+  "block": "FB_Lad_ex005",
+  "body": [
+   "T_Diff pins=IN1,IN2,OUT"
+  ],
+  "ok": true,
+  "title": "T_DIFF: Time difference",
+  "typed": true
+ },
+ "ex006": {
+  "block": "FX_Lad_ex006",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_COMBINE: Combine times",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_COMBINE",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "date_type": "DTL",
+    "time_type": "Time_Of_Day"
+   }
+  }
+ },
+ "ex007": {
+  "block": "FB_Lad_ex007",
+  "body": [
+   "Wr_Sys_T pins=IN,RET_VAL"
+  ],
+  "ok": true,
+  "title": "WR_SYS_T: Set time-of-day",
+  "typed": true
+ },
+ "ex008": {
+  "block": "FB_Lad_ex008",
+  "body": [
+   "Rd_Sys_T pins=RET_VAL,OUT"
+  ],
+  "ok": true,
+  "title": "RD_SYS_T: Read time-of-day",
+  "typed": true
+ },
+ "ex009": {
+  "block": "FB_Lad_ex009",
+  "body": [
+   "Rd_Loc_T pins=RET_VAL,OUT"
+  ],
+  "ok": true,
+  "title": "RD_LOC_T: Read local time",
+  "typed": true
+ },
+ "ex010": {
+  "block": "FX_Lad_ex010",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WR_LOC_T: Write local time",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "WR_LOC_T",
+   "pins": [
+    "LOCTIME",
+    "DST",
+    "RET_VAL"
+   ],
+   "templates": {
+    "loctime_type": "DTL"
+   }
+  }
+ },
+ "ex011": {
+  "block": "FB_Lad_ex011",
+  "body": [
+   "Set_Timezone pins=REQ,TimeZone,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "SET_TIMEZONE: Set time zone",
+  "typed": true
+ },
+ "ex012": {
+  "block": "FB_Lad_ex012",
+  "body": [
+   "Snc_Rtcb pins=RET_VAL"
+  ],
+  "ok": true,
+  "title": "SNC_RTCB: Synchronize slave clocks",
+  "typed": true
+ },
+ "ex013": {
+  "block": "FB_Lad_ex013",
+  "body": [
+   "Time_Tck pins=RET_VAL"
+  ],
+  "ok": true,
+  "title": "TIME_TCK: Read time counter",
+  "typed": true
+ },
+ "ex014": {
+  "block": "FB_Lad_ex014",
+  "body": [
+   "Rtm pins=NR,MODE,PV,RET_VAL,CQ,CV"
+  ],
+  "ok": true,
+  "title": "RTM: Runtime meters",
+  "typed": true
+ },
+ "ex015": {
+  "block": "FB_Lad_ex015",
+  "body": [
+   "S_Move pins=IN,OUT"
+  ],
+  "ok": true,
+  "title": "S_MOVE: Move character string",
+  "typed": true
+ },
+ "ex016": {
+  "block": "FX_Lad_ex016",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_COMP: Compare character strings",
+  "via": "xml",
+  "xml": {
+   "name": "S_Comp",
+   "templates": {
+    "relation": "EQ",
+    "src_type": "String"
+   }
+  }
+ },
+ "ex017": {
+  "block": "FX_Lad_ex017",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CONV: Convert character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "S_CONV",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "USInt",
+    "src_type": "String"
+   }
+  }
+ },
+ "ex018": {
+  "block": "FX_Lad_ex018",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'STRG_VAL'. Allowed Template Names: 'src_type, dest_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\9e566922fe264f739ca19c0",
+   "The data type String of the actual parameter does not match the data type Time of the formal parameter.; The data type USInt of the actual parameter does not match the data type Time of the formal parameter.; This conversion is not supported because both data types are the same.; Compiling finished ",
+   "This conversion is not supported because both data types are the same.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "This conversion is not supported because both data types are the same.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "STRG_VAL: Convert character string to numerical value (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "STRG_VAL",
+   "pins": [
+    "IN",
+    "FORMAT",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "Int",
+    "src_type": "String"
+   }
+  }
+ },
+ "ex019": {
+  "block": "FX_Lad_ex019",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'VAL_STRG'. Allowed Template Names: 'value_type, str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\0328125851024cfc878059",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; This conversion is not supported because both data types are the same.; Compiling finished (errors: 2; warnings: 0)",
+   "This conversion is not supported because both data types are the same.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "This conversion is not supported because both data types are the same.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "VAL_STRG: Convert numerical value to character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "VAL_STRG",
+   "pins": [
+    "IN",
+    "SIZE",
+    "PREC",
+    "FORMAT",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String",
+    "value_type": "Int"
+   }
+  }
+ },
+ "ex020": {
+  "block": "FX_Lad_ex020",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Strg_TO_Chars: Convert character string to Array of CHAR",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Strg_TO_Chars",
+   "pins": [
+    "STRG",
+    "PCHARS",
+    "CHARS",
+    "CNT"
+   ],
+   "templates": {
+    "ptr_type": "Variant",
+    "strg_type": "String"
+   }
+  }
+ },
+ "ex021": {
+  "block": "FX_Lad_ex021",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Compiling finished (errors: 2; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'Chars_TO_Strg'. Allowed Template Names: 'ptr_type, str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\9f9065ea472b4a188cf",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; Data type Variant cannot be implicitly converted to data type Int.; Compiling finished (errors: 2; warnings: 0)",
+   "Data type Variant cannot be implicitly converted to data type Int.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Data type Variant cannot be implicitly converted to data type Int.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Chars_TO_Strg: Convert Array of CHAR to character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Chars_TO_Strg",
+   "pins": [
+    "CHARS",
+    "PCHARS",
+    "CNT",
+    "STRG"
+   ],
+   "templates": {
+    "ptr_type": "Variant",
+    "str_type": "String"
+   }
+  }
+ },
+ "ex022": {
+  "block": "FX_Lad_ex022",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MAX_LEN: Determine the length of a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MAX_LEN",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "SrcType": "String"
+   }
+  }
+ },
+ "ex023": {
+  "block": "FX_Lad_ex023",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "JOIN: Join multiple strings",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "JOIN",
+   "pins": [
+    "Mode",
+    "RecSeparator",
+    "EndSeparator",
+    "SrcStruct",
+    "Count",
+    "Position",
+    "Ret_Val",
+    "DstArray"
+   ],
+   "templates": {}
+  }
+ },
+ "ex024": {
+  "block": "FX_Lad_ex024",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SPLIT: Splitting an array of characters into multiple strings",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SPLIT",
+   "pins": [
+    "Mode",
+    "RecSeparator",
+    "EndSeparator",
+    "SrcArray",
+    "Position",
+    "Ret_Val",
+    "Count",
+    "DstStruct"
+   ],
+   "templates": {}
+  }
+ },
+ "ex025": {
+  "block": "FB_Lad_ex025",
+  "body": [
+   "Ath pins=IN,N,RET_VAL,OUT"
+  ],
+  "ok": true,
+  "title": "ATH: Convert ASCII string to hexadecimal number",
+  "typed": true
+ },
+ "ex026": {
+  "block": "FB_Lad_ex026",
+  "body": [
+   "Hta pins=IN,N,RET_VAL,OUT"
+  ],
+  "ok": true,
+  "title": "HTA: Convert hexadecimal number to ASCII string",
+  "typed": true
+ },
+ "ex027": {
+  "block": "FX_Lad_ex027",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Compiling finished (errors: 2; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'LEN'. Allowed Template Names: 'str_type, return_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\2ba33bea366b45beb5fbfacb9b",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; This conversion is not supported because both data types are the same.; Compiling finished (errors: 2; warnings: 0)",
+   "This conversion is not supported because both data types are the same.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "This conversion is not supported because both data types are the same.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LEN: Determine the length of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "LEN",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "return_type": "Int",
+    "str_type": "String"
+   }
+  }
+ },
+ "ex028": {
+  "block": "FX_Lad_ex028",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 4; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'CONCAT'. Allowed Template Names: 'str_type, card'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\3eb14f99ff1d46bbb6c0cc8205004b",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Cardinality value 'Int' in the pragma 'card := Int' is not valid.. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\7efa8bdfb9a047c18d49332591050be3\\\\FB_Lad_ex028.s7dcl'... | 1 err"
+  ],
+  "last": {
+   "message": "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Cardinality value 'Int' in the pragma 'card := Int' is not valid.. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\7efa8bdfb9a047c18d49332591050be3\\\\FB_Lad_ex028.s7dcl'... | 1 err"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "CONCAT: Combine character strings (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "CONCAT",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "card": "2",
+    "str_type": "String"
+   }
+  }
+ },
+ "ex029": {
+  "block": "FX_Lad_ex029",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'LEFT'. Allowed Template Names: 'str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\7e378abbb0fb4515a5864ed4497f6852\\\\FB_L",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; Block 'LEFT' is not supported by the CPU or library version you are using.; Compiling finish",
+   "Block 'LEFT' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'LEFT' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LEFT: Read the left character of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "LEFT",
+   "pins": [
+    "IN",
+    "L",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex030": {
+  "block": "FX_Lad_ex030",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'RIGHT'. Allowed Template Names: 'str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\8184f6ce71304ae0b15f2763aa9fae75\\\\FB_",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; Block 'RIGHT' is not supported by the CPU or library version you are using.; Compiling finis",
+   "Block 'RIGHT' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'RIGHT' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RIGHT: Read the right characters of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RIGHT",
+   "pins": [
+    "IN",
+    "L",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex031": {
+  "block": "FX_Lad_ex031",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'MID'. Allowed Template Names: 'value_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\28c4693146154aa4a7ab4a343684f5e7\\\\FB_",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; Block 'MID' is not supported by the CPU or library version you are using.; Compiling finishe",
+   "Block 'MID' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'MID' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MID: Read middle characters of a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MID",
+   "pins": [
+    "IN",
+    "L",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "value_type": "String"
+   }
+  }
+ },
+ "ex032": {
+  "block": "FX_Lad_ex032",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'DELETE'. Allowed Template Names: 'str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\005e021f71294c0d9963832cd09b0a9d\\\\FB",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; Block 'DELETE' is not supported by the CPU or library version you are using.; Compiling fini",
+   "Block 'DELETE' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'DELETE' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DELETE: Delete characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "DELETE",
+   "pins": [
+    "IN",
+    "L",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex033": {
+  "block": "FX_Lad_ex033",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 4; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'INSERT'. Allowed Template Names: 'str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\976ae5938f9047d486b9c1df513ca35c\\\\FB",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal ",
+   "Block 'INSERT' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'INSERT' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "INSERT: Insert characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "INSERT",
+   "pins": [
+    "IN1",
+    "IN2",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex034": {
+  "block": "FX_Lad_ex034",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 4; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'REPLACE'. Allowed Template Names: 'str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\743040ef0f044ac2b66812f4b047de58\\\\F",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal ",
+   "Block 'REPLACE' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'REPLACE' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "REPLACE: Replace characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "REPLACE",
+   "pins": [
+    "IN1",
+    "IN2",
+    "L",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex035": {
+  "block": "FX_Lad_ex035",
+  "errors": [
+   "Please select a data type.; Please select a data type.; Please select a data type.; Compiling finished (errors: 3; warnings: 0)",
+   "{\"errorCode\": \"IMPORT_FAILED\", \"message\": \"Error: \"Invalid Template Types found for the instruction 'FIND'. Allowed Template Names: 'str_type'. | from file '%TEMP%\\\\TiaMcpXE\\\\documents\\\\1bc0c0cb33ed45dba06bf8b201ec1c57\\\\FB_L",
+   "The data type String of the actual parameter does not match the data type Int of the formal parameter.; The data type String of the actual parameter does not match the data type Int of the formal parameter.; Block 'FIND' is not supported by the CPU or library version you are using.; Compiling finish",
+   "Block 'FIND' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  ],
+  "last": {
+   "message": "Block 'FIND' is not supported by the CPU or library version you are using.; Compiling finished (errors: 1; warnings: 0)"
+  },
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "FIND: Find characters in a character string (S7-1200, S7-1500, S7-1200 G2)",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FIND",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex036": {
+  "block": "FB_Lad_ex036",
+  "body": [
+   "GetSymbolName pins=VARIABLE,SIZE,OUT"
+  ],
+  "ok": true,
+  "title": "GetSymbolName: Read out a tag on the input parameter",
+  "typed": true
+ },
+ "ex037": {
+  "block": "FX_Lad_ex037",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Querying GetSymbolPath: actual parameter at beginning of a call path",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "GetSymbolPath",
+   "pins": [
+    "VARIABLE",
+    "SIZE",
+    "OUT"
+   ],
+   "templates": {}
+  }
+ },
+ "ex038": {
+  "block": "FB_Lad_ex038",
+  "body": [
+   "GetInstanceName pins=SIZE,OUT"
+  ],
+  "ok": true,
+  "title": "GetInstanceName: Read out name of the read instance",
+  "typed": true
+ },
+ "ex039": {
+  "block": "FB_Lad_ex039",
+  "body": [
+   "GetInstancePath pins=SIZE,OUT"
+  ],
+  "ok": true,
+  "title": "GetInstancePath: Query composite global name of the block instance",
+  "typed": true
+ },
+ "ex040": {
+  "block": "FB_Lad_ex040",
+  "body": [
+   "GetBlockName pins=SIZE,RET_VAL"
+  ],
+  "ok": true,
+  "title": "GetBlockName: Read out name of the block",
+  "typed": true
+ },
+ "ex041": {
+  "block": "FB_Lad_ex041",
+  "body": [
+   "Updat_Pi pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "title": "UPDAT_PI: Update the process image inputs",
+  "typed": true
+ },
+ "ex042": {
+  "block": "FB_Lad_ex042",
+  "body": [
+   "Updat_Po pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "title": "UPDAT_PO: Update the process image outputs",
+  "typed": true
+ },
+ "ex043": {
+  "block": "FB_Lad_ex043",
+  "body": [
+   "Sync_Pi pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "title": "SYNC_PI: Synchronize the process image inputs",
+  "typed": true
+ },
+ "ex044": {
+  "block": "FB_Lad_ex044",
+  "body": [
+   "Sync_Po pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "title": "SYNC_PO: Synchronize the process image outputs",
+  "typed": true
+ },
+ "ex045": {
+  "block": "FB_Lad_ex045",
+  "body": [
+   "Rdrec pins=REQ,ID,INDEX,MLEN,VALID,BUSY,ERROR,STATUS,LEN,RECORD"
+  ],
+  "ok": true,
+  "title": "RDREC: Read data record",
+  "typed": true
+ },
+ "ex046": {
+  "block": "FB_Lad_ex046",
+  "body": [
+   "Wrrec pins=REQ,ID,INDEX,LEN,DONE,BUSY,ERROR,STATUS,RECORD"
+  ],
+  "ok": true,
+  "title": "WRREC: Write data record",
+  "typed": true
+ },
+ "ex047": {
+  "block": "FB_Lad_ex047",
+  "body": [
+   "Getio pins=ID,STATUS,LEN,INPUTS"
+  ],
+  "ok": true,
+  "title": "GETIO: Read all inputs of a submodule",
+  "typed": true
+ },
+ "ex048": {
+  "block": "FB_Lad_ex048",
+  "body": [
+   "Setio pins=ID,STATUS,OUTPUTS"
+  ],
+  "ok": true,
+  "title": "SETIO: Write all outputs of a submodule",
+  "typed": true
+ },
+ "ex049": {
+  "block": "FB_Lad_ex049",
+  "body": [
+   "Getio_Part pins=ID,OFFSET,LEN,STATUS,ERROR,INPUTS"
+  ],
+  "ok": true,
+  "title": "GETIO_PART: Read inputs of a submodule",
+  "typed": true
+ },
+ "ex050": {
+  "block": "FB_Lad_ex050",
+  "body": [
+   "Setio_Part pins=ID,OFFSET,LEN,STATUS,ERROR,OUTPUTS"
+  ],
+  "ok": true,
+  "title": "SETIO_PART: Write outputs of a submodule",
+  "typed": true
+ },
+ "ex051": {
+  "block": "FX_Lad_ex051",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Description RALRM",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RALRM",
+   "pins": [
+    "MODE",
+    "F_ID",
+    "MLEN",
+    "NEW",
+    "STATUS",
+    "ID",
+    "LEN",
+    "TINFO",
+    "AINFO"
+   ],
+   "templates": {
+    "id_type": "HW_IO",
+    "len_type": "UInt",
+    "ptr_type": "Variant"
+   }
+  }
+ },
+ "ex052": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter STATUS"
+ },
+ "ex053": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter TINFO"
+ },
+ "ex054": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter AINFO"
+ },
+ "ex055": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Destination area TINFO and AINFO"
+ },
+ "ex056": {
+  "block": "FB_Lad_ex056",
+  "body": [
+   "D_Act_Dp pins=REQ,MODE,LADDR,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "title": "D_ACT_DP: Activate/deactivate DP slaves",
+  "typed": true
+ },
+ "ex057": {
+  "block": "FB_Lad_ex057",
+  "body": [
+   "ReconfigIOSystem pins=REQ,MODE,LADDR,CTRLREC,DONE,BUSY,ERROR,STATUS,ERR_INFO"
+  ],
+  "ok": true,
+  "title": "ReconfigIOSystem: Reconfigure IO system",
+  "typed": true
+ },
+ "ex058": {
+  "block": "FB_Lad_ex058",
+  "body": [
+   "RD_REC pins=REQ,LADDR,RECNUM,RET_VAL,BUSY,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_REC: Read data record from I/O",
+  "typed": true
+ },
+ "ex059": {
+  "block": "FB_Lad_ex059",
+  "body": [
+   "WR_REC pins=REQ,LADDR,RECNUM,RECORD,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WR_REC: Write data record to I/O",
+  "typed": true
+ },
+ "ex060": {
+  "block": "FB_Lad_ex060",
+  "body": [
+   "Dprd_Dat pins=LADDR,RET_VAL,RECORD"
+  ],
+  "ok": true,
+  "title": "DPRD_DAT: Read consistent data of a DP standard slave",
+  "typed": true
+ },
+ "ex061": {
+  "block": "FB_Lad_ex061",
+  "body": [
+   "Dpwr_Dat pins=LADDR,RECORD,RET_VAL"
+  ],
+  "ok": true,
+  "title": "DPWR_DAT: Write consistent data of a DP standard slave",
+  "typed": true
+ },
+ "ex062": {
+  "block": "FB_Lad_ex062",
+  "body": [
+   "Rcvrec pins=MODE,F_ID,MLEN,CODE1,CODE2,NEW,STATUS,SLOT,SUBSLOT,INDEX,LEN,RECORD"
+  ],
+  "ok": true,
+  "title": "RCVREC: Receive data record",
+  "typed": true
+ },
+ "ex063": {
+  "block": "FB_Lad_ex063",
+  "body": [
+   "Prvrec pins=MODE,F_ID,CODE1,CODE2,LEN,NEW,STATUS,SLOT,SUBSLOT,INDEX,RLEN,RECORD"
+  ],
+  "ok": true,
+  "title": "PRVREC: Make data record available",
+  "typed": true
+ },
+ "ex064": {
+  "block": "FB_Lad_ex064",
+  "body": [
+   "Dpsyc_Fr pins=REQ,LADDR,GROUP,MODE,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "title": "DPSYC_FR: Synchronize DP slaves / Freeze inputs",
+  "typed": true
+ },
+ "ex065": {
+  "block": "FB_Lad_ex065",
+  "body": [
+   "Dpnrm_Dg pins=REQ,LADDR,RET_VAL,RECORD,BUSY"
+  ],
+  "ok": true,
+  "title": "DPNRM_DG: Read diagnostics data from a DP slave",
+  "typed": true
+ },
+ "ex066": {
+  "block": "FB_Lad_ex066",
+  "body": [
+   "Dp_Topol pins=REQ,R,DP_ID,RET_VAL,BUSY,DPR,DPRI"
+  ],
+  "ok": true,
+  "title": "DP_TOPOL: Determine topology for DP master system",
+  "typed": true
+ },
+ "ex067": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Description of PROFIenergy"
+ },
+ "ex068": {
+  "block": "FX_Lad_ex068",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_START_END: Start and exit energy-saving mode",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_START_END",
+   "pins": [
+    "START",
+    "END",
+    "ID",
+    "PAUSE_TIME",
+    "VALID",
+    "BUSY",
+    "ERROR",
+    "STATUS",
+    "PE_MODE_ID"
+   ],
+   "templates": {
+    "id_type": "HW_SUBMODULE"
+   }
+  }
+ },
+ "ex069": {
+  "block": "FX_Lad_ex069",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_CMD: Start and exit energy-saving mode / Read out status information",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_CMD",
+   "pins": [
+    "REQ",
+    "ID",
+    "CMD",
+    "CMD_MODIFIER",
+    "CMD_PARA",
+    "CMD_PARA_LEN",
+    "RESPONSE_DATA",
+    "VALID",
+    "BUSY",
+    "ERROR",
+    "STATUS",
+    "CMD_DSID_RQ"
+   ],
+   "templates": {
+    "card": "1",
+    "cmd_para_type": "Variant",
+    "id_type": "HW_SUBMODULE",
+    "response_data_type": "Variant"
+   }
+  }
+ },
+ "ex070": {
+  "block": "FX_Lad_ex070",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_DS3_Write_ET200S: Set power module switching behavior",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_DS3_Write_ET200S",
+   "pins": [
+    "ENABLE",
+    "ID",
+    "BUSY",
+    "DONE",
+    "ERROR",
+    "STATUS",
+    "Slot_No_1",
+    "Func_1",
+    "Slot_No_2",
+    "Func_2",
+    "Slot_No_3",
+    "Func_3",
+    "Slot_No_4",
+    "Func_4",
+    "Slot_No_5",
+    "Func_5",
+    "Slot_No_6",
+    "Func_6",
+    "Slot_No_7",
+    "Func_7",
+    "Slot_No_8",
+    "Func_8"
+   ],
+   "templates": {
+    "id_type": "HW_SUBMODULE"
+   }
+  }
+ },
+ "ex071": {
+  "block": "FB_Lad_ex071",
+  "body": [
+   "PE_WOL pins=COM_RST,START,END,PENERGY,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Description PE_WOL",
+  "typed": true,
+  "xmlLast": "PE_WOL: Simatic ML ID '3' at line number 503 at line position 8.  Error when calling method 'Create' of type 'Siemens.Engineering.SW.Blocks.CompileUnitComposition'.  The node 'TemplateValue' with the name 'PENERGY_type' and the type 'type' has an invalid value 'DB_ANY' at the element 'PE_WOL' with UID '26'."
+ },
+ "ex072": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter COM_RST"
+ },
+ "ex073": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter START"
+ },
+ "ex074": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter END"
+ },
+ "ex075": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PENERGY parameter"
+ },
+ "ex076": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter STATUS"
+ },
+ "ex077": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Structure of the message frames"
+ },
+ "ex078": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"Start_Pause\""
+ },
+ "ex079": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"End_Pause\""
+ },
+ "ex080": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"Query_modes\" - \"List_Energy_Saving_Modes\""
+ },
+ "ex081": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"Query_modes\" - \"Get_Mode\""
+ },
+ "ex082": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"PEM_Status\""
+ },
+ "ex083": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"PE_Identify\""
+ },
+ "ex084": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"Query_Measurement\" - \"Get_Measurement_list\""
+ },
+ "ex085": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"Query_Measurement\" - \"Get_Measurement_values\""
+ },
+ "ex086": {
+  "block": "FX_Lad_ex086",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_I_DEV: Control PROFIenergy commands in the I-Device",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_I_DEV",
+   "pins": [
+    "RESET",
+    "ID",
+    "VALID",
+    "CMD_PARA",
+    "DATA_ERRORRSP",
+    "INDEX",
+    "CMD",
+    "CMD_MODIFIER",
+    "NEW",
+    "ERROR",
+    "STATUS"
+   ],
+   "templates": {
+    "any_variant_type": "Variant",
+    "id_type": "HW_SUBMODULE"
+   }
+  }
+ },
+ "ex087": {
+  "block": "FB_Lad_ex087",
+  "body": [
+   "Pe_Error_Rsp pins=PE_I_DEV_NEW,ERROR_CODE,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "title": "PE_Error_RSP: Generate negative answer to command",
+  "typed": true
+ },
+ "ex088": {
+  "block": "FB_Lad_ex088",
+  "body": [
+   "Pe_Start_Rsp pins=PE_I_DEV_NEW,CMD,PE_MODE_ID,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "title": "PE_Start_RSP: Generate answer to command at start of pause",
+  "typed": true
+ },
+ "ex089": {
+  "block": "FB_Lad_ex089",
+  "body": [
+   "Pe_End_Rsp pins=PE_I_DEV_NEW,CMD,Time_to_Operate,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "title": "PE_End_RSP: Generate answer to command at end of pause",
+  "typed": true
+ },
+ "ex090": {
+  "block": "FX_Lad_ex090",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_List_Modes_RSP: Generate queried energy savings modes as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_List_Modes_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "CMD_MODIFIER",
+    "Number_of_PE_Mode_IDs",
+    "PE_MODE_ID",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant",
+    "pe_mode_id_type": "Variant"
+   }
+  }
+ },
+ "ex091": {
+  "block": "FX_Lad_ex091",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Get_Mode_RSP: Generate queried energy data as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_Get_Mode_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "CMD_MODIFIER",
+    "PE_Mode_ID",
+    "PE_Mode_Attributes",
+    "Time_min_Pause",
+    "Time_to_Pause",
+    "Time_to_Operate",
+    "Mode_Power_Consumption",
+    "Energy_Consum_to_Pause",
+    "Energy_Consum_to_operate",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS",
+    "Time_min_Length_of_stay",
+    "Time_max_length_of_stay"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant"
+   }
+  }
+ },
+ "ex092": {
+  "block": "FX_Lad_ex092",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_PEM_Status_RSP: Generate PEM status as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_PEM_Status_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "PE_MODE_ID_Source",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS",
+    "PE_MODE_ID_Destination",
+    "Time_to_Operate",
+    "Remaining_time_to_dest",
+    "Mode_Power_Consumption",
+    "Energy_Cons_to_dest",
+    "Energy_Cons_to_operate"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant"
+   }
+  }
+ },
+ "ex093": {
+  "block": "FX_Lad_ex093",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Identify_RSP: Generate supported PROFIenergy commands as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_Identify_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "Start_Pause",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS",
+    "End_Pause",
+    "Query_Modes",
+    "PEM_Status",
+    "PE_Identify",
+    "Query_Measurement"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant"
+   }
+  }
+ },
+ "ex094": {
+  "block": "FB_Lad_ex094",
+  "body": [
+   "Pe_Measurement_List_Rsp pins=PE_I_DEV_NEW,CMD,CMD_MODIFIER,Count,ACTIVATE,VALID,ERROR,STATUS,Measurement_List,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "title": "PE_Measurement_List_RSP: Generate list of supported measured values as answer",
+  "typed": true
+ },
+ "ex095": {
+  "block": "FB_Lad_ex095",
+  "body": [
+   "Pe_Measurement_Value_Rsp pins=PE_I_DEV_NEW,CMD,CMD_MODIFIER,Count,Measurement_Values,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "title": "PE_Measurement_Value_RSP: Generate queried measured values as answer",
+  "typed": true
+ },
+ "ex096": {
+  "block": "FB_Lad_ex096",
+  "body": [
+   "Rd_Dpar pins=REQ,LADDR,INDEX,RECORD,VALID,BUSY,ERROR,STATUS,LEN"
+  ],
+  "ok": true,
+  "title": "RD_DPAR: Read module data record",
+  "typed": true
+ },
+ "ex097": {
+  "block": "FB_Lad_ex097",
+  "body": [
+   "Rd_Dpara pins=REQ,LADDR,RECNUM,RET_VAL,BUSY,RECORD"
+  ],
+  "ok": true,
+  "title": "RD_DPARA: Read module data record asynchronously",
+  "typed": true
+ },
+ "ex098": {
+  "block": "FB_Lad_ex098",
+  "body": [
+   "Rd_Dparm pins=IOID,LADDR,RECNUM,RET_VAL,RECORD"
+  ],
+  "ok": true,
+  "title": "RD_DPARM: Read data record from configured system data",
+  "typed": true
+ },
+ "ex099": {
+  "block": "FB_Lad_ex099",
+  "body": [
+   "Wr_Dparm pins=REQ,LADDR,RECNUM,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "title": "WR_DPARM: Transfer data record",
+  "typed": true
+ },
+ "ex100": {
+  "block": "FB_Lad_ex100",
+  "body": [
+   "Attach pins=OB_NR,EVENT,ADD,RET_VAL"
+  ],
+  "ok": true,
+  "title": "ATTACH: Attach an OB to an interrupt event",
+  "typed": true
+ },
+ "ex101": {
+  "block": "FB_Lad_ex101",
+  "body": [
+   "Detach pins=OB_NR,EVENT,RET_VAL"
+  ],
+  "ok": true,
+  "title": "DETACH: Detach an OB from an interrupt event",
+  "typed": true
+ },
+ "ex102": {
+  "block": "FB_Lad_ex102",
+  "body": [
+   "Set_Cint pins=OB_NR,CYCLE,PHASE,RET_VAL"
+  ],
+  "ok": true,
+  "title": "SET_CINT: Set cyclic interrupt parameters",
+  "typed": true
+ },
+ "ex103": {
+  "block": "FB_Lad_ex103",
+  "body": [
+   "Qry_Cint pins=OB_NR,CYCLE,PHASE,STATUS,RET_VAL"
+  ],
+  "ok": true,
+  "title": "QRY_CINT: Query cyclic interrupt parameters",
+  "typed": true
+ },
+ "ex104": {
+  "block": "FB_Lad_ex104",
+  "body": [
+   "Set_Tint pins=OB_NR,SDT,PERIOD,RET_VAL"
+  ],
+  "ok": true,
+  "title": "SET_TINT: Set time-of-day interrupt",
+  "typed": true
+ },
+ "ex105": {
+  "block": "FB_Lad_ex105",
+  "body": [
+   "Set_Tintl pins=OB_NR,SDT,LOCAL,PERIOD,ACTIVATE,RET_VAL"
+  ],
+  "ok": true,
+  "title": "SET_TINTL: Set time-of-day interrupt",
+  "typed": true
+ },
+ "ex106": {
+  "block": "FB_Lad_ex106",
+  "body": [
+   "Can_Tint pins=OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "title": "CAN_TINT: Cancel time-of-day interrupt",
+  "typed": true
+ },
+ "ex107": {
+  "block": "FB_Lad_ex107",
+  "body": [
+   "Act_Tint pins=OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "title": "ACT_TINT: Enable time-of-day interrupt",
+  "typed": true
+ },
+ "ex108": {
+  "block": "FB_Lad_ex108",
+  "body": [
+   "Qry_Tint pins=OB_NR,RET_VAL,STATUS"
+  ],
+  "ok": true,
+  "title": "QRY_TINT: Query status of time-of-day interrupt",
+  "typed": true
+ },
+ "ex109": {
+  "block": "FB_Lad_ex109",
+  "body": [
+   "Srt_Dint pins=OB_NR,DTIME,SIGN,RET_VAL"
+  ],
+  "ok": true,
+  "title": "SRT_DINT: Start time-delay interrupt",
+  "typed": true
+ },
+ "ex110": {
+  "block": "FB_Lad_ex110",
+  "body": [
+   "Can_Dint pins=OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "title": "CAN_DINT: Cancel time-delay interrupt",
+  "typed": true
+ },
+ "ex111": {
+  "block": "FB_Lad_ex111",
+  "body": [
+   "Qry_Dint pins=OB_NR,RET_VAL,STATUS"
+  ],
+  "ok": true,
+  "title": "QRY_DINT: Query time-delay interrupt status",
+  "typed": true
+ },
+ "ex112": {
+  "block": "FB_Lad_ex112",
+  "body": [
+   "Msk_Flt pins=PRGFLT_SET_MASK,ACCFLT_SET_MASK,RET_VAL,PRGFLT_MASKED,ACCFLT_MASKED"
+  ],
+  "ok": true,
+  "title": "MSK_FLT: Mask synchronous error events",
+  "typed": true
+ },
+ "ex113": {
+  "block": "FB_Lad_ex113",
+  "body": [
+   "Dmsk_Flt pins=PRGFLT_RESET_MASK,ACCFLT_RESET_MASK,RET_VAL,PRGFLT_MASKED,ACCFLT_MASKED"
+  ],
+  "ok": true,
+  "title": "DMSK_FLT: Unmask synchronous error events",
+  "typed": true
+ },
+ "ex114": {
+  "block": "FB_Lad_ex114",
+  "body": [
+   "Read_Err pins=PRGFLT_QUERY,ACCFLT_QUERY,RET_VAL,PRGFLT_CLR,ACCFLT_CLR"
+  ],
+  "ok": true,
+  "title": "READ_ERR: Read out event status register",
+  "typed": true
+ },
+ "ex115": {
+  "block": "FB_Lad_ex115",
+  "body": [
+   "Dis_Irt pins=MODE,OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "title": "DIS_IRT: Disable interrupt event",
+  "typed": true
+ },
+ "ex116": {
+  "block": "FB_Lad_ex116",
+  "body": [
+   "En_Irt pins=MODE,OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "title": "EN_IRT: Enable interrupt event",
+  "typed": true
+ },
+ "ex117": {
+  "block": "FB_Lad_ex117",
+  "body": [
+   "Dis_Airt pins=RET_VAL"
+  ],
+  "ok": true,
+  "title": "DIS_AIRT: Delay execution of higher priority interrupts and asynchronous error events",
+  "typed": true
+ },
+ "ex118": {
+  "block": "FB_Lad_ex118",
+  "body": [
+   "En_Airt pins=RET_VAL"
+  ],
+  "ok": true,
+  "title": "EN_AIRT: Enable execution of higher priority interrupts and asynchronous error events",
+  "typed": true
+ },
+ "ex119": {
+  "block": "FX_Lad_ex119",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Program_Alarm: Generate program alarm with associated values",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Program_Alarm",
+   "pins": [
+    "SIG",
+    "TIMESTAMP",
+    "Error",
+    "Status",
+    "SD_1",
+    "SD_2",
+    "SD_3",
+    "SD_4",
+    "SD_5",
+    "SD_6",
+    "SD_7",
+    "SD_8",
+    "SD_9",
+    "SD_10"
+   ],
+   "templates": {}
+  }
+ },
+ "ex120": {
+  "block": "FB_Lad_ex120",
+  "body": [
+   "Get_Alarmstate pins=Alarm,AlarmState,Error,STATUS"
+  ],
+  "ok": true,
+  "title": "Get_AlarmState: Output alarm status",
+  "typed": true
+ },
+ "ex121": {
+  "block": "FB_Lad_ex121",
+  "body": [
+   "Gen_Usrmsg pins=Mode,TextID,TextListID,Ret_Val,AssocValues"
+  ],
+  "ok": true,
+  "title": "Gen_UsrMsg: Generate user diagnostic alarms",
+  "typed": true
+ },
+ "ex122": {
+  "block": "FB_Lad_ex122",
+  "body": [
+   "Get_Alarm pins=OperateMode,DataMode,DispClassNr,Lcid,Data,DataReady,Busy,Error,Init,Status"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Get_Alarm: Read pending alarm",
+  "typed": true
+ },
+ "ex123": {
+  "block": "FB_Lad_ex123",
+  "body": [
+   "Ack_Alarms pins=MODE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "Ack_Alarms: Acknowledge alarms",
+  "typed": true
+ },
+ "ex124": {
+  "block": "FB_Lad_ex124",
+  "body": [
+   "Rd_Sinfo pins=RET_VAL,TOP_SI,START_UP_SI"
+  ],
+  "ok": true,
+  "title": "RD_SINFO: Read current OB start information",
+  "typed": true
+ },
+ "ex125": {
+  "block": "FB_Lad_ex125",
+  "body": [
+   "Rt_Info pins=MODE,OB,RET_VAL,INFO"
+  ],
+  "ok": true,
+  "title": "RT_INFO: Read out runtime statistics",
+  "typed": true
+ },
+ "ex126": {
+  "block": "FB_Lad_ex126",
+  "body": [
+   "Led pins=LADDR,LED,RET_VAL"
+  ],
+  "ok": true,
+  "title": "LED: Read LED status",
+  "typed": true
+ },
+ "ex127": {
+  "block": "FB_Lad_ex127",
+  "body": [
+   "Get_Im_Data pins=LADDR,IM_TYPE,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "Get_IM_Data: Reading identification and maintenance data",
+  "typed": true
+ },
+ "ex128": {
+  "block": "FB_Lad_ex128",
+  "body": [
+   "Get_Name pins=LADDR,STATION_NR,DATA,DONE,BUSY,ERROR,LEN,STATUS"
+  ],
+  "ok": true,
+  "title": "GET_NAME: Read out name of an IO device or a DP slave",
+  "typed": true
+ },
+ "ex129": {
+  "block": "FB_Lad_ex129",
+  "body": [
+   "GetStationInfo pins=REQ,LADDR,DETAIL,MODE,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "GetStationInfo: Read information of an IO device",
+  "typed": true
+ },
+ "ex130": {
+  "block": "FB_Lad_ex130",
+  "body": [
+   "DeviceStates pins=LADDR,MODE,RET_VAL,STATE"
+  ],
+  "ok": true,
+  "title": "DeviceStates: Read module status information in an IO system",
+  "typed": true
+ },
+ "ex131": {
+  "block": "FB_Lad_ex131",
+  "body": [
+   "ModuleStates pins=LADDR,MODE,RET_VAL,STATE"
+  ],
+  "ok": true,
+  "title": "ModuleStates: Read module status information of a module",
+  "typed": true
+ },
+ "ex132": {
+  "block": "FB_Lad_ex132",
+  "body": [
+   "Gen_Diag pins=LADDR,MODE,DiagEvent,RET_VAL"
+  ],
+  "ok": true,
+  "title": "GEN_DIAG: Generate diagnostics information",
+  "typed": true
+ },
+ "ex133": {
+  "block": "FB_Lad_ex133",
+  "body": [
+   "Get_Diag pins=MODE,LADDR,RET_VAL,CNT_DIAG,DIAG,DETAIL"
+  ],
+  "ok": true,
+  "title": "GET_DIAG: Read diagnostic information",
+  "typed": true
+ },
+ "ex134": {
+  "block": "FB_Lad_ex134",
+  "body": [
+   "CTRL_PWM pins=PWM,ENABLE,BUSY,STATUS"
+  ],
+  "ok": true,
+  "sample": "040_s71200",
+  "title": "CTRL_PWM: Pulse-width modulation",
+  "typed": true
+ },
+ "ex135": {
+  "block": "FB_Lad_ex135",
+  "body": [
+   "RecipeExport pins=REQ,RECIPE_DB,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "RecipeExport: Exporting recipes",
+  "typed": true
+ },
+ "ex136": {
+  "block": "FB_Lad_ex136",
+  "body": [
+   "RecipeImport pins=REQ,RECIPE_DB,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "RecipeImport: Importing recipes",
+  "typed": true
+ },
+ "ex137": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Data logging - Overview"
+ },
+ "ex138": {
+  "block": "FB_Lad_ex138",
+  "body": [
+   "DataLogCreate pins=REQ,RECORDS,FORMAT,TIMESTAMP,NAME,ID,HEADER,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogCreate: Create data log",
+  "typed": true
+ },
+ "ex139": {
+  "block": "FB_Lad_ex139",
+  "body": [
+   "DataLogOpen pins=REQ,MODE,NAME,ID,DONE,BUSY,ERROR,STATUS,Data"
+  ],
+  "ok": true,
+  "title": "DataLogOpen: Open data log",
+  "typed": true
+ },
+ "ex140": {
+  "block": "FB_Lad_ex140",
+  "body": [
+   "DataLogOpen pins=REQ,MODE,NAME,ID,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogOpen: Open data log",
+  "typed": true
+ },
+ "ex141": {
+  "block": "FB_Lad_ex141",
+  "body": [
+   "DataLogClear pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogClear: Empty data log",
+  "typed": true
+ },
+ "ex142": {
+  "block": "FB_Lad_ex142",
+  "body": [
+   "DataLogWrite pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogWrite: Write data log",
+  "typed": true
+ },
+ "ex143": {
+  "block": "FB_Lad_ex143",
+  "body": [
+   "DataLogClose pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogClose: Close data log",
+  "typed": true
+ },
+ "ex144": {
+  "block": "FB_Lad_ex144",
+  "body": [
+   "DataLogDelete pins=REQ,NAME,DELFILE,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogDelete: Delete data log",
+  "typed": true
+ },
+ "ex145": {
+  "block": "FB_Lad_ex145",
+  "body": [
+   "DataLogNewFile pins=REQ,RECORDS,NAME,ID,DONE,BUSY,ERROR,STATUS,Data"
+  ],
+  "ok": true,
+  "title": "DataLogNewFile: Data log in new file",
+  "typed": true
+ },
+ "ex146": {
+  "block": "FB_Lad_ex146",
+  "body": [
+   "DataLogNewFile pins=REQ,RECORDS,NAME,ID,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "DataLogNewFile: Data log in new file",
+  "typed": true
+ },
+ "ex147": {
+  "block": "FB_Lad_ex147",
+  "body": [
+   "Create_Db pins=REQ,LOW_LIMIT,UP_LIMIT,COUNT,ATTRIB,SRCBLK,RET_VAL,BUSY,DB_NUM"
+  ],
+  "ok": true,
+  "title": "CREATE_DB: Create data block",
+  "typed": true
+ },
+ "ex148": {
+  "block": "FB_Lad_ex148",
+  "body": [
+   "Read_Dbl pins=REQ,SRCBLK,RET_VAL,BUSY,DSTBLK"
+  ],
+  "ok": true,
+  "title": "READ_DBL: Read from data block in the load memory",
+  "typed": true
+ },
+ "ex149": {
+  "block": "FB_Lad_ex149",
+  "body": [
+   "Writ_Dbl pins=REQ,SRCBLK,RET_VAL,BUSY,DSTBLK"
+  ],
+  "ok": true,
+  "title": "WRIT_DBL: Write to data block in the load memory",
+  "typed": true
+ },
+ "ex150": {
+  "block": "FB_Lad_ex150",
+  "body": [
+   "Attr_Db pins=REQ,DB_NUMBER,RET_VAL,DB_LENGTH,ATTRIB"
+  ],
+  "ok": true,
+  "title": "ATTR_DB: Read data block attribute",
+  "typed": true
+ },
+ "ex151": {
+  "block": "FB_Lad_ex151",
+  "body": [
+   "Delete_Db pins=REQ,DB_NUMBER,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "title": "DELETE_DB: Delete data block",
+  "typed": true
+ },
+ "ex152": {
+  "block": "FB_Lad_ex152",
+  "body": [
+   "Geo2log pins=GEOADDR,RET_VAL,LADDR"
+  ],
+  "ok": true,
+  "title": "GEO2LOG: Determine hardware identifier from slot",
+  "typed": true
+ },
+ "ex153": {
+  "block": "FB_Lad_ex153",
+  "body": [
+   "Log2geo pins=LADDR,RET_VAL,GEOADDR"
+  ],
+  "ok": true,
+  "title": "LOG2GEO: Determine slot from hardware identifier",
+  "typed": true
+ },
+ "ex154": {
+  "block": "FB_Lad_ex154",
+  "body": [
+   "Log2mod pins=IOID,ADDR,RET_VAL,HWID"
+  ],
+  "ok": true,
+  "title": "LOG2MOD: Determine the hardware identifier from addressing of STEP 7 V5.5 SPx",
+  "typed": true
+ },
+ "ex155": {
+  "block": "FB_Lad_ex155",
+  "body": [
+   "Io2mod pins=ADDR,RET_VAL,LADDR"
+  ],
+  "ok": true,
+  "title": "IO2MOD: Determine hardware identifier from an IO address",
+  "typed": true
+ },
+ "ex156": {
+  "block": "FB_Lad_ex156",
+  "body": [
+   "Rd_Addr pins=LADDR,RET_VAL,PIADDR,PICOUNT,PQADDR,PQCOUNT"
+  ],
+  "ok": true,
+  "title": "RD_ADDR: Determine IO addresses from the hardware identifier",
+  "typed": true
+ },
+ "ex157": {
+  "block": "FB_Lad_ex157",
+  "body": [
+   "Geo_Log pins=MASTER,STATION,SLOT,SUBSLOT,RET_VAL,LADDR"
+  ],
+  "ok": true,
+  "title": "GEO_LOG: Determine hardware identifier from slot",
+  "typed": true
+ },
+ "ex158": {
+  "block": "FB_Lad_ex158",
+  "body": [
+   "Log_Geo pins=LADDR,RET_VAL,AREA,MASTER,STATION,SLOT,SUBSLOT,OFFSET"
+  ],
+  "ok": true,
+  "title": "LOG_GEO: Determine slot from hardware identifier",
+  "typed": true
+ },
+ "ex159": {
+  "block": "FX_Lad_ex159",
+  "body": [
+   "Rd_Lgadr pins=IOID,LADDR,RET_VAL,PEADDR,PECOUNT,PAADDR,PACOUNT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_LGADR: Determine IO addresses from the hardware identifier",
+  "typed": true,
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RD_LGADR",
+   "pins": [
+    "IOID",
+    "LADDR",
+    "RET_VAL",
+    "PEADDR",
+    "PECOUNT",
+    "PAADDR",
+    "PACOUNT"
+   ],
+   "templates": {
+    "laddr_type": "HW_ANY"
+   }
+  }
+ },
+ "ex160": {
+  "block": "FB_Lad_ex160",
+  "body": [
+   "Gadr_Lgc pins=SUBNETID,RACK,SLOT,SUBSLOT,SUBADDR,RET_VAL,IOID,LADDR"
+  ],
+  "ok": true,
+  "title": "GADR_LGC: Determine hardware identifier from slot and offset in the user data address area",
+  "typed": true
+ },
+ "ex161": {
+  "block": "FB_Lad_ex161",
+  "body": [
+   "Lgc_Gadr pins=IOID,LADDR,RET_VAL,AREA,RACK,SLOT,SUBADDR"
+  ],
+  "ok": true,
+  "title": "LGC_GADR: Determine slot from hardware identifier",
+  "typed": true
+ }
+}

@@ -1,0 +1,44 @@
+FUNCTION_BLOCK "FB_StlC_028"
+TITLE = STL call MOVE_BLK
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      i1 : Int;
+      i2 : Int;
+      di1 : DInt;
+      r1 : Real;
+      w1 : Word;
+      dw1 : DWord;
+      b1 : Byte;
+      u1 : UInt;
+      ud1 : UDInt;
+   END_VAR
+   VAR_OUTPUT
+      q : Bool;
+      io : Int;
+      dio : DInt;
+      ro : Real;
+      wo : Word;
+      dwo : DWord;
+      bo : Byte;
+      udo : UDInt;
+   END_VAR
+   VAR
+      src : Array[0..9] of Int;
+      dst : Array[0..9] of Int;
+      bits : Array[0..31] of Bool;
+      bytes : Array[0..9] of Byte;
+      err : ErrorStruct;
+      rt : LReal;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 028 MOVE_BLK
+      CALL MOVE_BLK
+      (  IN := #src[0] ,
+         COUNT := #u1 ,
+         OUT := #dst[0]
+      );
+END_FUNCTION_BLOCK

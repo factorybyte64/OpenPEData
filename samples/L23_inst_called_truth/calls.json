@@ -1,0 +1,4 @@
+﻿[{"call":"TiaPlcSoftware(create block, device=PLC_1, name=FB_Typed_DB, blockType=InstanceDB, instanceOf=FB_Typed)","result":{"created":true,"number":1}},
+ {"call":"TiaPlcSoftware(create block, device=PLC_2, name=FB_Typed_DB, blockType=InstanceDB, instanceOf=FB_Typed)","result":{"created":true,"number":1}},
+ {"call":"TiaPlcSoftware(networkWrite block, device=PLC_1, name=Main, mode=append, networks=[{code:'\"FB_Typed_DB\"(in1 := 1);', language:SCL, title:'call FB_Typed'}])","result":{"networksAfter":2,"compile":"Success"}},
+ {"call":"TiaPlcSoftware(networkWrite block, device=PLC_2, name=Main, mode=append, networks=[{code:'\"FB_Typed_DB\"(in1 := 1);', language:SCL, title:'call FB_Typed'}])","result":{"networksAfter":2,"compile":"Success"}}]

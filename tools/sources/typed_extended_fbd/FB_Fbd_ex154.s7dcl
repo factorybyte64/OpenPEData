@@ -1,0 +1,23 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex154"
+    VAR_INPUT
+        v_ioid : Byte;
+        v_addr : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_hwid : HW_IO;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Log2mod( IOID := #v_ioid, ADDR := #v_addr, RET_VAL => #v_ret_val, HWID => #v_hwid )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

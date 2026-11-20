@@ -1,0 +1,16 @@
+{
+    S7_Optimized := "FALSE"
+}
+DATA_BLOCK "DB_12Std"
+    VAR
+        b0 : Bool;
+        w : Word;
+        i : Int;
+        r : Real;
+        s : String[6];
+        arr : Array[0..3] of Int;
+        u : "UDT_12";
+    END_VAR
+    i := -4;
+    arr[2] := 22;
+END_DATA_BLOCK

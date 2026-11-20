@@ -1,0 +1,24 @@
+A: 120_hmi_item_iofield  B: 121_hmi_item_iofield_pvtext
+CHANGED 1003:00cd:2018 ILScreenItemData name='IOField_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:19:04.398102Z' -> '2026-10-20T16:19:42.630308Z'  (timestamp)
+          raw IPropertyDynamicExpandoAttributes: 60 -> 96 bytes
+          slot table [104, 0, 0, 0, 0, 0, 0, 0, 289, 349, 0, 0, 0, 205, 0] -> [104, 0, 0, 0, 0, 0, 0, 0, 289, 385, 0, 0, 0, 205, 0]
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:19:10.239252Z' -> '2026-10-20T16:19:50.552105Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:2400, 0014:0007:2420, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 120_hmi_item_iofield vs. 121_hmi_item_iofield_pvtext (SHA-256, first 12)
+  GONE   IM/SearchIndex/_14_1.del  e5311eaf8b45 -> -
+  NEW    IM/SearchIndex/_14_2.del  - -> 881bb36bfaf7
+  NEW    IM/SearchIndex/_16_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_17.cfs  - -> 8feca3082e40
+  NEW    IM/SearchIndex/_18.cfs  - -> 1b8925cfd2d6
+  NEW    IM/SearchIndex/_18_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_19.cfs  - -> 75783ee67184
+  CHG    IM/SearchIndex/segments.gen  da357178ce66 -> 04fe3e4243d9
+  GONE   IM/SearchIndex/segments_s  daf3eb43efdc -> -
+  NEW    IM/SearchIndex/segments_w  - -> f707a69eb0c7
+  CHG    System/PEData.idx  2a8b38ff3d82 -> 44bb753b03b0
+  name 'HmiTag_IO' found in: System/PEData.plf (utf-8 x2)

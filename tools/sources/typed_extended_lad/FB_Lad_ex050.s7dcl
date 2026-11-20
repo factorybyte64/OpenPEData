@@ -1,0 +1,30 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex050"
+    VAR_INPUT
+        v_id : HW_SUBMODULE;
+        v_offset : Int;
+        v_len : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_status : DWord;
+        v_error : Bool;
+    END_VAR
+    VAR_IN_OUT
+        v_outputs : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Setio_Part;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Setio_Part( ID := #v_id, OFFSET := #v_offset, LEN := #v_len, STATUS => #v_status, ERROR => #v_error, OUTPUTS := #v_outputs )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,43 @@
+A: 110_hmi_screen  B: 115_hmi_item_rect
+CHANGED 1002:00cd:1808 ILScreenData name='Screen_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:03:53.618946Z' -> '2026-10-20T16:16:28.849306Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link ILScreenItems -> 1003:00cd:1c10
+NEW     1003:00cd:1c10 ILScreenItemData name='Rectangle_1'
+          ICoreAttributes.CreationTime = '2026-10-20T16:16:28.849306Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:16:28.849306Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'Rectangle_1'
+          ICoreAttributes.Subtype = 'HmiRectangle'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IPropertyDynamicLinkExpandoAttributes.B!.} = 'c130bbc-f35a-4068-aaab-1eba6135e5b0'
+          link ILScreenItemParent -> 1002:00cd:1808
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:03:53.618946Z' -> '2026-10-20T16:16:28.849306Z'  (timestamp)
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[697] 01f6050000000000000000000000100100000001010000009f05785eed544b6edb3010ed51042eb2 -> bytes[765] 01ce07000000000000000000000010010000000101000000e305785eed55dd6e9b3014dea3202e7a
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:04:00.999296Z' -> '2026-10-20T16:16:37.426065Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 000c:0007:e, 000d:0007:10, 0011:0007:1ff8, 0014:0007:1ff9, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 110_hmi_screen vs. 115_hmi_item_rect (SHA-256, first 12)
+  CHG    000_empty.ap21  4de924fd9efb -> 22692646ba50
+  NEW    IM/SearchIndex/_10.cfs  - -> b13d8c1c5e96
+  GONE   IM/SearchIndex/_u_1.del  10798ce1f02b -> -
+  NEW    IM/SearchIndex/_u_2.del  - -> 312d2cdfa99a
+  NEW    IM/SearchIndex/_w_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_x.cfs  - -> 36ca7d2cd711
+  NEW    IM/SearchIndex/_x_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_y.cfs  - -> 46da34949bec
+  NEW    IM/SearchIndex/_z.cfs  - -> 7d0862ea24eb
+  NEW    IM/SearchIndex/_z_1.del  - -> d2d8e7beec83
+  CHG    IM/SearchIndex/segments.gen  96fc6a8fdefb -> aad16471c98b
+  GONE   IM/SearchIndex/segments_j  7bdb31c5a885 -> -
+  NEW    IM/SearchIndex/segments_n  - -> 058803e1cdf2
+  CHG    System/PEData.idx  ad1c045d77f5 -> ce6fc5b61535
+  name 'Rectangle_1' found in: System/PEData.plf (utf-8 x1)

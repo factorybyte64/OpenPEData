@@ -1,0 +1,82 @@
+﻿A: samples\002_cpu  (735 records, 709 keys)
+B: samples\004_fb  (754 records, 714 keys)
+
+CHANGED 0003:0007:3  store:0x00070003  @A635891 @B679751 len 57  versionsInB=4
+        +48 len 2:  A: 08 00 00 00 0f 0c 00 00 00 00
+                      B: 08 00 00 00 17 10 00 00 00 00
+
+CHANGED 1006:0001:449  Siemens.Automation.ObjectFrame.CorePersistenceInfo [ObjectType]  @A475467 @B678586 len 328  versionsInB=3
+        +291 len 36:  A: 6d 69 74 5f 39 38 38 66 33 65 35 38 2d 39 32 61 64 2d 34 35 38 31 2d 62 31 32 38 2d 64 62 32 61 39 31 63 62 30 34 37 36 ff
+                        B: 6d 69 74 5f 62 65 33 36 31 30 37 39 2d 30 34 36 30 2d 34 66 65 36 2d 61 31 63 33 2d 32 62 62 39 39 30 33 32 32 61 39 33 ff
+
+CHANGED 0005:0007:8  store:0x00070005  @A475827 @B678946 len 230 -> 246  versionsInB=3
+        length field differs; common prefix 44, common suffix 7
+        A[+40..+223): 86 2e 25 06 b5 00 00 00 00 0b 00 00 00 01 00 00 00 03 10 04 00 20 04 00 00 00 00 00 00 02 00 00 00 01 10 04 00 21 04 00 00 00 00 00 00 03 00 00 00 28 10 02 00 33 04 00 00 00 00 00 00 04 00 00 00 08 10 01 00 41 04 00 00 00 00 00 00 05 00 00 00 14 10 02 00 43 04 00 00 00 00 00 00 06 00 00 00 06 10 01 00 49 04 00 00 00 00 00 00 07 00 00 00 05 10 02 00 4a 04 00 00 00 00 00 00 08 00 00
+        B[+40..+239): 86 2e 25 06 c5 00 00 00 00 0c 00 00 00 01 00 00 00 03 10 04 00 20 04 00 00 00 00 00 00 02 00 00 00 01 10 04 00 21 04 00 00 00 00 00 00 03 00 00 00 28 10 02 00 33 04 00 00 00 00 00 00 04 00 00 00 08 10 01 00 41 04 00 00 00 00 00 00 05 00 00 00 14 10 02 00 43 04 00 00 00 00 00 00 06 00 00 00 06 10 01 00 49 04 00 00 00 00 00 00 07 00 00 00 05 10 02 00 4a 04 00 00 00 00 00 00 08 00 00
+        A ascii[] utf16[]
+        B ascii[] utf16[]
+
+CHANGED 0004:0007:5  store:0x00070004  @A635980 @B679840 len 57  versionsInB=3
+        +48 len 1:  A: 08 00 00 00 0b 00 00 00 00
+                      B: 08 00 00 00 0c 00 00 00 00
+
+CHANGED 100e:0002:916  Siemens.Automation.DomainModel.FolderData [ObjectType]  @A343498 @B674756 len 287  versionsInB=2
+        +236 len 1:  A: 00 00 34 00 02 00 4a 20 22
+                       B: 00 00 34 00 03 00 4a 20 22
+        +270 len 10:  A: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+                        B: 00 00 00 00 13 20 02 00 01 10 22 00 10 0c 00 00 00 00
+
+CHANGED 1607:0022:930  Siemens.Simatic.Lang.Model.Structures.TargetBlockInterfaceContainer [ObjectType]  @A350376 @B678353 len 201  versionsInB=2
+        +150 len 1:  A: 00 00 34 00 02 00 08 26 22
+                       B: 00 00 34 00 03 00 08 26 22
+        +184 len 10:  A: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+                        B: 00 00 00 00 08 26 22 00 0c 16 22 00 12 0c 00 00 00 00
+
+CHANGED 101c:0010:813  Siemens.Simatic.HwConfiguration.Model.S7ControllerTargetData [ObjectType]  @A411515 @B645250 len 29462 -> 29474  versionsInB=2
+        length field differs; common prefix 368, common suffix 485
+        A[+364..+28977): 00 00 00 00 29 71 00 00 00 00 00 00 00 00 00 00 c9 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 59 1d 00 00 00 00 00 00 cd 6f 00 00 41 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        B[+364..+28989): 00 00 00 00 35 71 00 00 00 00 00 00 00 00 00 00 c9 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 59 1d 00 00 00 00 00 00 cd 6f 00 00 41 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        A ascii[factorybyte|!DHQ|#!s`|%1.d|%K<||'0~?|(OU}|)b+LP|**xe|+/#G|+9q$!Y|+oSl] utf16[]
+        B ascii[factorybyte|!DHQ|#!s`|%1.d|%K<||'0~?|(OU}|)b+LP|**xe|+/#G|+9q$!Y|+oSl] utf16[]
+
+CHANGED 1032:0022:91f  Siemens.Simatic.Lang.Model.Blocks.ProgramInformationSourceData [ObjectType]  @A469116 @B675640 len 2681  versionsInB=2
+        +1599 len 10:  A: 38 30 32 37 33 35 37 30 33 30 39 32 31 36 22 3e 0d 0a
+                         B: 38 30 32 37 35 30 36 33 31 30 35 33 32 33 22 3e 0d 0a
+        +1671 len 10:  A: 38 30 32 37 33 35 37 30 33 30 39 32 31 36 22 20 76 61
+                         B: 38 30 32 37 35 30 36 33 31 30 35 33 32 33 22 20 76 61
+
+CHANGED 0006:0007:15  store:0x00070006  @A476089 @B679224 len 67 -> 75  versionsInB=2
+        length field differs; common prefix 44, common suffix 8
+        A[+40..+59): 86 2e 25 0d 12 00 00 00 02 08 00 00 00 0a 00 00 00 02 03 00 00 00 08
+        B[+40..+67): 86 2e 25 0d 1a 00 00 00 03 08 00 00 00 0a 00 00 00 0c 00 00 00 03 03 00 00 00 08 00 00 00 08
+        A ascii[] utf16[]
+        B ascii[] utf16[]
+
+CHANGED 0011:0007:bfa  store:0x00070011  @A493621 @B679331 len 326 -> 388  versionsInB=2
+        length field differs; common prefix 44, common suffix 4
+        A[+40..+322): 5a 79 a0 c5 15 01 00 00 15 01 00 00 01 10 22 00 08 00 00 00 08 00 00 00 01 00 00 00 0c 52 65 6c 65 61 73 65 43 6f 75 6e 74 05 00 00 80 02 00 00 00 0c 54 61 72 67 65 74 46 61 6d 69 6c 79 0b 00 00 80 03 00 00 00 14 50 72 65 66 65 72 61 62 6c 79 52 65 6e 75 6d 62 65 72 65 64 01 00 00 80 04 00 00 00 49 53 69 65 6d 65 6e 73 2e 53 69 6d 61 74 69 63 2e 4c 61 6e 67 2e 4d 6f 64 65 6c 2e 42
+        B[+40..+384): 5a 79 a0 c5 53 01 00 00 53 01 00 00 01 10 22 00 0a 00 00 00 0a 00 00 00 01 00 00 00 0c 52 65 6c 65 61 73 65 43 6f 75 6e 74 05 00 00 80 02 00 00 00 0c 54 61 72 67 65 74 46 61 6d 69 6c 79 0b 00 00 80 03 00 00 00 14 50 72 65 66 65 72 61 62 6c 79 52 65 6e 75 6d 62 65 72 65 64 01 00 00 80 04 00 00 00 49 53 69 65 6d 65 6e 73 2e 53 69 6d 61 74 69 63 2e 4c 61 6e 67 2e 4d 6f 64 65 6c 2e 42
+        A ascii[BlockLanguageLevel|ESFunctionalityLevel|ESLanguageLevel|ISiemens.Simatic.Lang.Model.Blocks.ICommonFingerprintData.DataStoreVersion|PreferablyRenumbered|PreviousBlockNumber|ReleaseCount|TargetFamily] utf16[]
+        B ascii[BlockLanguageLevel|CompilerSettings|ESFunctionalityLevel|ESLanguageLevel|ISiemens.Simatic.Lang.Model.Blocks.ICommonFingerprintData.DataStoreVersion|MemorySignatureConfiguration|PreferablyRenumbered|PreviousBlockNumber|ReleaseCount|TargetFamily] utf16[]
+
+NEW     1001:0022:c10  Siemens.Simatic.Lang.Model.Blocks.CodeBlockData [ObjectType]  @B641529 len 1905  versionsInB=1
+        ascii[    <Attribut Key="CreateExtendedDebug" Value="false" />|    <Attribut Key="MonitorArrayLimits" Value="false" />|    <Attribut Key="SetFlagAutomatically" Value="false" />|  </Language>|  <Language Key="SCL">|</CompilerSettingsDocument>|<CompilerSettingsDocument Version="11.0.1.0">|FB_Empty! |PLUSBLOCKD|S71500|V(H3|]^h;}g[] utf16[]
+        hex: 71 07 00 00 01 10 22 00 10 0c 00 00 00 00 00 00 0c 00 00 00 03 00 00 00 00 00 17 02 af 11 a7 b5 d9 e7 75 4d bc 88 76 64 39 0c f3 da 00 00 00 00 00 00 00 00 00 00 00 00 24 01 00 00 00 00 00 00 bb 04 00 00 00 00 00 00 88 00 00 00 3e 07 00 00 00 00 00 00 00 00 00 00 af 04 00 00 5f 05 00 00 b7 01 00 00 00 00 00 00 e8 00 00 00 00 00 00 00 00 00 00 00 9c 01 00 00 7a 01 00 00 36 01 00 00
+
+NEW     1202:0022:c11  Siemens.Simatic.Lang.Model.Idents.IdentContainerData [ObjectType]  @B643466 len 273  versionsInB=1
+        ascii[%256E1960-4E24-4683-B45C-42199F207B31|bytype] utf16[]
+        hex: 11 01 00 00 02 12 22 00 11 0c 00 00 00 00 00 00 0c 00 00 00 03 00 00 00 00 00 06 02 12 54 e3 53 75 f5 9a 49 b0 d4 c0 d0 29 be 5b f0 00 00 00 00 00 00 00 00 00 00 00 00 44 00 00 00 bc 00 00 00 00 00 00 00 78 00 00 00 22 00 00 00 4e 00 00 00 20 00 00 00 00 00 00 00 47 00 00 00 63 00 00 00 21 00 00 00 01 01 25 32 35 36 45 31 39 36 30 2d 34 45 32 34 2d 34 36 38 33 2d 42 34 35 43 2d 34
+
+NEW     160c:0022:c12  Siemens.Simatic.Lang.Model.Structures.InterfaceVersionRootData [ObjectType]  @B643771 len 946  versionsInB=1
+        ascii[3BIVE:FB_Empty/7b7e9644-92d4-4457-ad74-cc63e9b2746c|<Root InterfaceGuid="459a50e9-ef7c-419c-b220-d633e69a9433" RIdSlots="0"><Member ID="2" Name="Input" SubPartIndex="0" StdO="0" /><Member ID="3" Name="Output" SubPartIndex="1" StdO="0" /><Member ID="4" Name="InOut" SubPartIndex="2" StdO="0" /><Member ID="5" Name="Static" SubPartIndex="3" StdO="0" /><Member ID="6" Name="Temp" SubPartIndex="4" StdO="0" /><Member ID="8" Name="Constant" SubPartIndex="5" StdO="0" /><ExtensionMemory VolatileSize="100" /></Root>B|FB_Empty|r=17] utf16[]
+        hex: b2 03 00 00 0c 16 22 00 12 0c 00 00 00 00 00 00 08 00 00 00 03 00 00 00 00 00 09 02 23 d2 c9 43 3f b0 13 44 b9 59 90 ff 2b c2 b3 ad 7a 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 50 00 00 00 bc 02 00 00 5d 03 00 00 00 00 00 00 2a 02 00 00 18 00 00 00 00 01 2c 00 00 00 00 00 44 00 00 00 b3 19 12 50 14 00 00 00 00 00 32 00 00 00 08 00 00 00 06 00 00 00 00 00 18 00 00 00
+
+NEW     1016:0022:c13  Siemens.Simatic.Lang.Model.Blocks.CompileUnitData [ObjectType]  @B644749 len 469  versionsInB=1
+        ascii[/' a|<AdditionalInformation/>t|<SCLSource Version="3.4.0.0"><Symbols /><RootStatements Version="3.4.0.0" /></SCLSource>T|Plain4|Visible! ] utf16[]
+        hex: d5 01 00 00 16 10 22 00 13 0c 00 00 00 00 00 00 0c 00 00 00 03 00 00 00 00 00 08 02 e0 2f 27 20 61 a9 65 40 80 4e b5 34 79 48 06 64 4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 00 00 00 00 00 00 80 01 00 00 00 00 00 00 50 00 00 00 2f 00 00 00 ba 87 0d eb 05 2e df 48 24 00 00 00 00 00 25 00 00 00 00 00 27 00 00 00 26 00 00 00 01 01 01 08 56 69 73 69 62 6c 65 21 20 00 00 00
+
+NEW     0014:0007:ff8  store:0x00070014  @B680195 len 389  versionsInB=1
+        ascii[$$COMMIT$ |0;O(|8j23"7|aa]Mc%|rbu1|~Slc] utf16[]
+        hex: 85 01 00 00 14 00 07 00 f8 0f 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 61 f5 0a 05 09 90 ce 4f b2 55 93 27 9d 8e 9c 85 54 01 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8a 7a 47 eb 05 2e df 08 01 00 ff ff ff ff 0a 24 24 43 4f 4d 4d 49 54 24 20 01 00 00 d5 45 95 8d ac 86 22 eb f1 b0 bf 55 ba 06 58 79 00 ec fd 49 62 c8 ba f8 1d 9b 72 62 75 31 d9 e5
+
+summary: new 5, removed 0, changed 10, same 697, noise-only 2

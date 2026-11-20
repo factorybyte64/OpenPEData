@@ -1,0 +1,32 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex125"
+    VAR_INPUT
+        v_mode : UInt;
+        v_ob : OB_ANY;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_info : Variant;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            RT_INFO(
+                MODE := #v_mode,
+                OB := #v_ob,
+                Ret_Val => #v_ret_val,
+                INFO := #v_info
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

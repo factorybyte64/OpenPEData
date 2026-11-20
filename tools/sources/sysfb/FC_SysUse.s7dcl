@@ -1,0 +1,41 @@
+{
+    S7_Optimized := "TRUE";
+    S7_EditorMode := "SCL";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SysUse" : Void
+    { S7_Language := "SCL" }
+    NETWORK
+        "DB_TSEND_C"(CONNECT := "DB_Buf".buf, DATA := "DB_Buf".buf, ADDR := "DB_Buf".buf, COM_RST := "DB_Buf".b);
+        "DB_TRCV_C"(CONNECT := "DB_Buf".buf, DATA := "DB_Buf".buf, ADDR := "DB_Buf".buf, COM_RST := "DB_Buf".b);
+        "DB_TCON"(CONNECT := "DB_Buf".buf);
+        "DB_TMAIL_C"(TO_S := "DB_Buf".s, CC := "DB_Buf".s, SUBJECT := "DB_Buf".s, TEXT := "DB_Buf".s, ATTACHMENT := "DB_Buf".buf, MAIL_ADDR_PARAM := "DB_Buf".buf);
+        "DB_MB_CLIENT"(REQ := FALSE, DISCONNECT := FALSE, MB_MODE := 0, MB_DATA_ADDR := 0, MB_DATA_LEN := 0, MB_DATA_PTR := "DB_Buf".buf, CONNECT := "DB_Buf".buf, RD_MB_DATA_PTR := "DB_Buf".buf, WR_MB_DATA_PTR := "DB_Buf".buf);
+        "DB_MB_SERVER"(MB_HOLD_REG := "DB_Buf".buf, CONNECT := "DB_Buf".buf);
+        "DB_GETIO"(INPUTS := "DB_Buf".buf);
+        "DB_SETIO"(OUTPUTS := "DB_Buf".buf);
+        "DB_GETIO_PART"(INPUTS := "DB_Buf".buf);
+        "DB_SETIO_PART"(OUTPUTS := "DB_Buf".buf);
+        "DB_Program_Alarm"();
+        "DB_DRUM"();
+        "DB_DCAT"();
+        "DB_MCAT"();
+        "DB_IMC"();
+        "DB_SMC"();
+        "DB_LEAD_LAG"();
+        "DB_PULSEGEN"();
+        "DB_GET_SFB"(ADDR_1 := P#DB1.DBX0.0 BYTE 10, RD_1 := "DB_Buf".buf);
+        "DB_PUT_SFB"(ADDR_1 := P#DB1.DBX0.0 BYTE 10, SD_1 := "DB_Buf".buf);
+        "DB_RDREC_SFB"(RECORD := "DB_Buf".buf);
+        "DB_WRREC_SFB"(RECORD := "DB_Buf".buf);
+        "DB_RALRM_SFB"(TINFO := "DB_Buf".buf, AINFO := "DB_Buf".buf);
+        "DB_T_CONFIG_SFB"();
+        "DB_USEND_SFB"(SD_1 := "DB_Buf".buf, SD_2 := "DB_Buf".buf, SD_3 := "DB_Buf".buf, SD_4 := "DB_Buf".buf);
+        "DB_URCV_SFB"(RD_1 := "DB_Buf".buf, RD_2 := "DB_Buf".buf, RD_3 := "DB_Buf".buf, RD_4 := "DB_Buf".buf);
+        "DB_BSEND_SFB"(SD_1 := "DB_Buf".buf, LEN := "DB_Buf".w);
+        "DB_BRCV_SFB"(RD_1 := "DB_Buf".buf, LEN := "DB_Buf".w);
+        "DB_T_DISCON"();
+        "DB_R_TRIG"();
+        "DB_F_TRIG"();
+    END_NETWORK
+END_FUNCTION

@@ -1,0 +1,133 @@
+A: 221_hw_profibus.zap21  B: 222_hw_dp_master.zap21
+CHANGED 1002:0002:8b1 DataTypeItemData name='Hw_IoSystem'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 100e:0010:808 DeviceData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:10.491241Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+          raw <links 1>: 420 -> 436 bytes
+          +link Mastersystems -> 1020:0010:1420
+          slot table [0, 0, 0, 104, 0, 0, 0, 0, 410, 223, 926, 0, 0, 842, 422] -> [0, 0, 0, 104, 0, 0, 0, 0, 410, 223, 942, 0, 0, 858, 422]
+CHANGED 1011:0010:c13 DeviceItemData name='PROFIBUS interface'
+          IConfigBaseData.PersistentExpandoAttributeFlags: bytes[295] 270100000c0000003c000000300000000a000000090000003c0000003c0000008a0000001e000000 -> bytes[313] 390100000c00000040000000340000000b0000000a0000003c0000003c0000008a0000001e000000
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:10.491241Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+          IPersistentExpandoData.Sap_Array: '<absent>' -> bytes[44] 2c000000140000003f00000000000000200000000c00000001000000350000000c00000001000000
+          raw IPersistentExpandoData: 198 -> 302 bytes
+          raw <links 0>: 100 -> 116 bytes
+          raw <links 1>: 52 -> 68 bytes
+          +link MasterToMastersystem -> 1020:0010:1420
+          +link ConstantTags -> 105d:0002:1421
+          slot table [0, 0, 104, 0, 0, 0, 0, 246, 258, 747, 794, 810, 0, 1008, 1108] -> [0, 0, 104, 0, 0, 0, 0, 246, 258, 765, 812, 828, 0, 1130, 1246]
+CHANGED 1018:0010:c10 NonProgrammableTargetData name='CM_DP'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:10.491241Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          IControllerTarget.MaxUsedLidForRange: bytes[53] 001d000000000000000000000000100100000001010000001d000000010000001900000013000080 -> bytes[53] 001d000000000000000000000000100100000001010000001d000000010000001900000013000080
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:10.491241Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.ConstantLoadRelevantModifiedTime: '2026-10-24T15:31:12.305290Z' -> '2026-10-24T15:32:15.482206Z'
+          raw ICoreExpandoAttributes: 20112 -> 20112 bytes
+          raw <links 1>: 972 -> 972 bytes
+          raw <links 77>: 252 -> 252 bytes
+          +link typed slot 19 -> 105d:0002:1421
+CHANGED 101e:0010:1018 SubnetData name='PROFIBUS_1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:44.250754Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link Mastersystems -> 1020:0010:1420
+NEW     1020:0010:1420 MastersystemData name='PROFINET IO-System'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:32:15.335366Z'
+          ICoreAttributes.Subtype = 'BusSystem.Mastersystem'
+          ICoreAttributes.Name = 'PROFINET IO-System'
+          IBrowsingAttributes.BrowsingParameters = 17
+          IConfigBaseData.ConfigObjectTypeName = 'Mastersystem_PROFIBUS'
+          IConfigBaseData.ConfigObjectTypeVersion = '11.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[130] 820000000c000000240000001800000004000000030000000a0000000a0000000a0000005e000000
+          IPersistentExpandoData.PositionNumber = 1
+          IPersistentExpandoData.MaxMastersystemNumber = 32
+          IPersistentExpandoData.MinMastersystemNumber = 1
+          link Master -> 1011:0010:c13
+          link Environment -> 1028:0002:433
+          link Target -> 1018:0010:c10
+          link AddressManager -> 1057:0010:80d
+          link Device -> 100e:0010:808
+          link Subnet -> 101e:0010:1018
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:44.496790Z' -> '2026-10-24T15:32:15.584681Z'  (timestamp)
+CHANGED 1039:0022:886 EAMTZTagTableFingerprintContainer name=None
+          ICommonFingerprintData.DataStore: bytes[388] 01ab05000000000000000000000010010000000101000000ea02785eed94dd4ec2301cc5f1d6c4c4 -> bytes[389] 01ab05000000000000000000000010010000000101000000eb02785eed94c14ec2301cc6f16a62e2
+          ICommonFingerprintData.DataVersion: 639284526722651180 -> 639284527354330374
+          slot table [0, 559, 0, 152, 68, 0] -> [0, 560, 0, 152, 68, 0]
+CHANGED 1057:0010:80d AddressManagerV2Data name='S7-1500/ET200MP station_1 LAddressManager of type: Main '
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:10.491241Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+          IPersistentExpandoData.AddressMap: bytes[332] cc0200320100000000000000000000001001000000010100000001000001080031342e302e302e30 -> bytes[348] dc0200420100000000000000000000001001000000010100000001000001080031342e302e302e30
+          raw IPersistentExpandoData: 1464 -> 1464 bytes
+          raw <links 1>: 276 -> 292 bytes
+          +link RegisteredMastersystems -> 1020:0010:1420
+NEW     105d:0002:1421 SimaticConstantTagData name='Local~PROFINET_IO-System'
+          ITagAddress.AddressMode = 'Invalid'
+          ITagAddress.DuplicateState = 'Unique'
+          ITagAddress.LocalIdentifier = 58
+          ITagAddress.LocalIdentifierIsValid = True
+          ITagAddress.LocalOffset = -1
+          ITagAddress.MaxUsedChildLid = 0
+          ITagAddress.Part10 = -1
+          ITagAddress.Part4 = -1
+          ITagAddress.Part5 = -1
+          ITagAddress.Part6 = -1
+          ITagAddress.Part7 = -1
+          ITagAddress.Part8 = -1
+          ITagAddress.Part9 = -1
+          ITagAddress.RuntimeIdentifier = 0
+          ITagAddress.RuntimeIdentifierIsValid = False
+          ITagAddress.SupportsAddressingByOffset = True
+          ITagAddress.AddressStrategy = ''
+          ITagAddress.LogicalAddress = ''
+          ITagAddress.Part1 = ''
+          ITagAddress.Part2 = ''
+          ITagAddress.Part3 = ''
+          ITagAddress.Scope = 'S71500'
+          IDefaultStrategyData.Visible = True
+          IDefaultStrategyData.LowerLimit = ''
+          IDefaultStrategyData.UpperLimit = ''
+          IDefaultStrategyData.DefaultValue = '260'
+          IDefaultStrategyData.Defaults = bytes[32] 2000000010000000180000000000000008000000000000000800000000000000
+          IStructureItem.HmiReadOnly = False
+          IStructureItem.HmiStructureTypeRelevant = True
+          IStructureItem.HmiVisible = True
+          IStructureItem.Index = 0
+          IStructureItem.IsUpdateRequired = False
+          IStructureItem.Kind = 'ElementaryRef'
+          IStructureItem.Length = 16
+          IStructureItem.LineId = -1
+          IStructureItem.MemberCount = 0
+          IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+          IStructureItem.LowerBounds = None
+          IStructureItem.UpperBounds = None
+          IStructureItem.DataTypeRefName = ''
+          IStructureItem.DisplayTypeName = 'Hw_IoSystem'
+          IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IStructureRoot.CompileTime = '0001-01-01T00:00:00Z'
+          IStructureRoot.IsSystemDefined = True
+          IStructureRoot.IsValid = True
+          IStructureRoot.StructureModifiedTime = '0001-01-01T00:00:00Z'
+          IStructureRoot.Family = ''
+          ICoreAttributes.CreationTime = '2026-10-24T15:32:15.410255Z'
+          ICoreAttributes.IsConstant = True
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:32:15.335366Z'
+          ICoreAttributes.Name = 'Local~PROFINET_IO-System'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.LoadRelevantModifiedTime = '2026-10-24T15:32:15.482206Z'
+          link TagTable -> 1062:0002:815
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link BelongsTo -> 101c:0010:813
+          link DataTypeRef -> 1002:0002:8b1
+          link DeviceItem -> 1011:0010:c13
+CHANGED 1062:0002:815 EAMTZTagTableData name='Default tag table'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:10.491241Z' -> '2026-10-24T15:32:15.335366Z'  (timestamp)
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.LoadRelevantModifiedTime: '2026-10-24T15:31:12.305290Z' -> '2026-10-24T15:32:15.482206Z'
+          raw ICoreExpandoAttributes: 50 -> 50 bytes
+          raw <links 1>: 788 -> 804 bytes
+          +link Content -> 105d:0002:1421
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1808, 0011:0007:bf2, 0014:0007:0, 0015:0007:20, 0016:0007:18

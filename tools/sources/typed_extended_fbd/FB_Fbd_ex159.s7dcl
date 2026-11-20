@@ -1,0 +1,28 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex159"
+    VAR_INPUT
+        v_ioid : Byte;
+        v_laddr : HW_ANY;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_pecount : Int;
+        v_pacount : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_peaddr : Array[0..99] of Byte;
+        v_paaddr : Array[0..99] of Byte;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Rd_Lgadr( IOID := #v_ioid, LADDR := #v_laddr, RET_VAL => #v_ret_val, PEADDR := #v_peaddr, PECOUNT => #v_pecount, PAADDR := #v_paaddr, PACOUNT => #v_pacount )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,115 @@
+A: 110_hmi_screen  B: 119_hmi_screen_tag
+CHANGED 1001:00b4:139e HmiCycleData name='T1s'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T16:18:26.725152Z'  (timestamp)
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:22.741476Z' -> '2026-10-20T16:18:26.725152Z'  (timestamp)
+CHANGED 1002:0002:1079 DataTypeItemData name='Int'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T16:18:26.725152Z'  (timestamp)
+CHANGED 1004:00e5:106c HmiTagTableData name='Default tag table'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:22.741476Z' -> '2026-10-20T16:18:26.725152Z'  (timestamp)
+          raw <links 1>: 468 -> 484 bytes
+          +link Content -> 1008:00e5:1c12
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:03:53.618946Z' -> '2026-10-20T16:18:26.725152Z'  (timestamp)
+NEW     1008:00e5:1c12 HmiTagData name='HmiTag_IO'
+          ITagAddress.AddressMode = 'Invalid'
+          ITagAddress.DuplicateState = 'Unique'
+          ITagAddress.LocalIdentifier = 0
+          ITagAddress.LocalIdentifierIsValid = False
+          ITagAddress.LocalOffset = -1
+          ITagAddress.Part10 = -1
+          ITagAddress.Part4 = -1
+          ITagAddress.Part5 = -1
+          ITagAddress.Part6 = -1
+          ITagAddress.Part7 = -1
+          ITagAddress.Part8 = -1
+          ITagAddress.Part9 = -1
+          ITagAddress.RuntimeIdentifierIsValid = False
+          ITagAddress.SupportsAddressingByOffset = True
+          ITagAddress.LogicalAddress = ''
+          ITagAddress.Part1 = ''
+          ITagAddress.Part2 = ''
+          ITagAddress.Part3 = ''
+          ITagAddress.Scope = 'HMI_ILRT'
+          ITagAddress.Target = 'Default'
+          IStructureItem.HmiReadOnly = False
+          IStructureItem.HmiStructureTypeRelevant = True
+          IStructureItem.HmiVisible = True
+          IStructureItem.Index = 0
+          IStructureItem.IsUpdateRequired = False
+          IStructureItem.Kind = 'Unknown'
+          IStructureItem.Length = 16
+          IStructureItem.LineId = -1
+          IStructureItem.MemberCount = 0
+          IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+          IStructureItem.LowerBounds = None
+          IStructureItem.UpperBounds = None
+          IStructureItem.DataTypeRefName = ''
+          IStructureItem.DisplayTypeName = 'Int'
+          IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          ICoreAttributes.CreationTime = '2026-10-20T16:18:26.725152Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T16:18:26.725152Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Name = 'HmiTag_IO'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IHmiHandshakeTagAttributes.Timeout = 0
+          IHmiTagAttributes.AcquisitionTriggerMode = 'Visible'
+          IHmiTagAttributes.ConfirmationType = 'None'
+          IHmiTagAttributes.GmpRelevant = False
+          IHmiTagAttributes.JobNumber = 0
+          IHmiTagAttributes.MandatoryCommenting = False
+          IHmiTagAttributes.Persistency = False
+          IHmiTagAttributes.QualityCode = False
+          IHmiTagAttributes.Scope = 'System'
+          IHmiTagAttributes.UpdateMode = 'ProjectWide'
+          IHmiTagAttributes.UseMultiplexing = False
+          IHmiTagStructureAttributes.Coding = 'Binary'
+          IHmiTagStructureAttributes.DataTypeShape = 'IsElementary'
+          IHmiTagStructureAttributes.LimitHighLowType = 'NoLimit'
+          IHmiTagStructureAttributes.LimitHighType = 'NoLimit'
+          IHmiTagStructureAttributes.LimitLowHighType = 'NoLimit'
+          IHmiTagStructureAttributes.LimitLowType = 'NoLimit'
+          IHmiTagStructureAttributes.LinearScaling = False
+          IHmiTagStructureAttributes.ScalingHmiHigh = 100.0
+          IHmiTagStructureAttributes.ScalingHmiLow = 0.0
+          IHmiTagStructureAttributes.ScalingPlcHigh = 10.0
+          IHmiTagStructureAttributes.ScalingPlcLow = 0.0
+          IHmiTagStructureAttributes.SubstituteValueUsage = 'None'
+          IHmiTagStructureAttributes.LimitHighConstant = ''
+          IHmiTagStructureAttributes.LimitHighLowConstant = ''
+          IHmiTagStructureAttributes.LimitLowConstant = ''
+          IHmiTagStructureAttributes.LimitLowHighConstant = ''
+          IHmiTagStructureAttributes.StartValue = ''
+          IHmiTagStructureAttributes.SubstituteValue = ''
+          link TagTable -> 1004:00e5:106c
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link DataTypeRef -> 1002:0002:1079
+          link IHmiTagAttributes_AcquisitionCycle -> 1001:00b4:139e
+          link IHmiTagStructureAttributes_HmiDataType -> 1002:0002:1079
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[697] 01f6050000000000000000000000100100000001010000009f05785eed544b6edb3010ed51042eb2 -> bytes[783] 01b707000000000000000000000010010000000101000000f505785eed55dd6eda3014dea344b9e8
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T16:04:00.999296Z' -> '2026-10-20T16:18:39.449220Z'  (timestamp)
+store records changed/new: 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000c:0007:e, 000d:0007:10, 0014:0007:1ff8, 0015:0007:20
+
+H-022: files outside System/PEData.plf, base 110_hmi_screen vs. 119_hmi_screen_tag (SHA-256, first 12)
+  NEW    IM/SearchIndex/_10.cfs  - -> 3cde0e01acdf
+  NEW    IM/SearchIndex/_10_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_11.cfs  - -> 955381a93c3a
+  GONE   IM/SearchIndex/_u_1.del  10798ce1f02b -> -
+  NEW    IM/SearchIndex/_u_2.del  - -> f5f94e240276
+  NEW    IM/SearchIndex/_w_1.del  - -> c9c60928b8bc
+  NEW    IM/SearchIndex/_x.cfs  - -> 714cdeb0a4ba
+  NEW    IM/SearchIndex/_y.cfs  - -> 978f830aeffe
+  NEW    IM/SearchIndex/_z.cfs  - -> 4829aec47450
+  CHG    IM/SearchIndex/segments.gen  96fc6a8fdefb -> aad16471c98b
+  GONE   IM/SearchIndex/segments_j  7bdb31c5a885 -> -
+  NEW    IM/SearchIndex/segments_n  - -> 9b35acd3e447
+  CHG    System/PEData.idx  ad1c045d77f5 -> 800e142681d7
+  CHG    XRef/XRef.db  da7093d09b04 -> f07f63f1c950
+  name 'HmiTag_IO' found in: System/PEData.plf (utf-8 x1)

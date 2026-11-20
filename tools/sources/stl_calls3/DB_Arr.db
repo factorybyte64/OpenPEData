@@ -1,0 +1,12 @@
+DATA_BLOCK "DB_Arr"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+NON_RETAIN
+   STRUCT
+      a : Array[0..9] of Int;
+      b : Array[0..9] of Int;
+   END_STRUCT;
+
+BEGIN
+
+END_DATA_BLOCK

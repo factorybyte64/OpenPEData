@@ -1,0 +1,9 @@
+Ground truth DBTon (TIA V21 UI, 2026-11-07; Openness does not list this DB, not even with system blocks):
+DBTon [DB13], folder System blocks > Program resources, type IEC_TIMER
+Static
+  PT  Time  start value T#2S
+  ET  Time  T#0ms
+  IN  Bool  false
+  Q   Bool  false
+Used in FC_Ton: "DBTon".TON(IN := #start, PT := T#2S); #q := "DBTon".Q;
+Without a use, TIA deletes the DB from Program resources at the next compile.

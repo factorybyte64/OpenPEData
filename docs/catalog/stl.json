@@ -1,0 +1,3214 @@
+[
+ {
+  "group": "STL / Bit logic operations",
+  "title": "R_TRIG: Detect positive signal edge (S7-1500)",
+  "name": "R_TRIG",
+  "params": [
+   {
+    "name": "CLK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Bit logic operations",
+  "title": "F_TRIG: Detect negative signal edge (S7-1500)",
+  "name": "F_TRIG",
+  "params": [
+   {
+    "name": "CLK",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Timer operations",
+  "title": "TP: Generate pulse (S7-1500)",
+  "name": "TP",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME, LTIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME, LTIME"
+   }
+  ]
+ },
+ {
+  "group": "STL / Timer operations",
+  "title": "TON: Generate on-delay (S7-1500)",
+  "name": "TON",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME, LTIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME, LTIME"
+   }
+  ]
+ },
+ {
+  "group": "STL / Timer operations",
+  "title": "TOF: Generate off-delay (S7-1500)",
+  "name": "TOF",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME, LTIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME, LTIME"
+   }
+  ]
+ },
+ {
+  "group": "STL / Timer operations",
+  "title": "TONR: Time accumulator (S7-1500)",
+  "name": "TONR",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PT",
+    "decl": "Input",
+    "types": "TIME, LTIME"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ET",
+    "decl": "Output",
+    "types": "TIME, LTIME"
+   }
+  ]
+ },
+ {
+  "group": "STL / Timer operations",
+  "title": "RESET_TIMER: Reset timer (S7-1500)",
+  "name": "RESET_TIMER",
+  "params": [
+   {
+    "name": "TIMER",
+    "decl": "Output",
+    "types": "IEC_TIMER, IEC_LTIMER, TP_TIME, TP_LTIME, TON_TIME, TON_LTIME, TOF_TIME, TOF_LTIME, TONR_TIME, TONR_LTIME"
+   }
+  ]
+ },
+ {
+  "group": "STL / Timer operations",
+  "title": "PRESET_TIMER: Load time duration (S7-1500)",
+  "name": "PRESET_TIMER",
+  "params": [
+   {
+    "name": "<Time duration>",
+    "decl": "Input",
+    "types": "TIME, LTIME"
+   },
+   {
+    "name": "<IEC timer>",
+    "decl": "Output",
+    "types": "IEC_TIMER, IEC_LTIMER, TP_TIME, TP_LTIME, TON_TIME, TON_LTIME, TOF_TIME, TOF_LTIME, TONR_TIME, TONR_LTIME"
+   }
+  ]
+ },
+ {
+  "group": "STL / Counter operations",
+  "title": "CTU: Count up (S7-1500)",
+  "name": "CTU",
+  "params": [
+   {
+    "name": "CU",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "Integers, CHAR, WCHAR, DATE"
+   }
+  ]
+ },
+ {
+  "group": "STL / Counter operations",
+  "title": "CTD: Count down (S7-1500)",
+  "name": "CTD",
+  "params": [
+   {
+    "name": "CD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "Integers, CHAR, WCHAR, DATE"
+   }
+  ]
+ },
+ {
+  "group": "STL / Counter operations",
+  "title": "CTUD: Count up and down (S7-1500)",
+  "name": "CTUD",
+  "params": [
+   {
+    "name": "CU",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PV",
+    "decl": "Input",
+    "types": "Integers"
+   },
+   {
+    "name": "QU",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "QD",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CV",
+    "decl": "Output",
+    "types": "Integers, CHAR, WCHAR, DATE"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations",
+  "title": "CompType: Compare tag structured data types (S7-1500)",
+  "name": "CompType",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, character strings, timers, date and time, ARRAY of <data type> with fixed and variable ARRAY limits, STRUCT, VARIANT, ANY, PLC data type"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, character strings, timers, date and time, ARRAY of <data type> with fixed and variable ARRAY limits, STRUCT, VARIANT, ANY, PLC data type"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "EQ_Type: Compare data type for EQUAL with the data type of a tag (S7-1500)",
+  "name": "EQ_Type",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "NE_Type: Compare data type for UNEQUAL with the data type of a tag (S7-1500)",
+  "name": "NE_Type",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "EQ_ElemType: Compare data type of an ARRAY element for EQUAL with the data type of a tag (S7-1500)",
+  "name": "EQ_ElemType",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "NE_ElemType: Compare data type of an ARRAY element for UNEQUAL with the data type of a tag (S7-1500)",
+  "name": "NE_ElemType",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, date and time, character strings, ARRAY, PLC data types"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "IS_NULL: Check for EQUALS NULL pointer (S7-1500)",
+  "name": "IS_NULL",
+  "params": [
+   {
+    "name": "OPERAND",
+    "decl": "Input",
+    "types": "VARIANT or REF_TO <data type>"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "NOT_NULL: Check for UNEQUALS NULL pointer (S7-1500)",
+  "name": "NOT_NULL",
+  "params": [
+   {
+    "name": "OPERAND",
+    "decl": "Input",
+    "types": "VARIANT or REF_TO <data type>"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "IS_ARRAY: Check for ARRAY (S7-1500)",
+  "name": "IS_ARRAY",
+  "params": [
+   {
+    "name": "OPERAND",
+    "decl": "Input",
+    "types": "VARIANT, ResolvedSymbol"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "EQ_TypeOfDB: Compare data type of an indirectly addressed DB for EQUAL with a data type (S7-1500)",
+  "name": "EQ_TypeOfDB",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "TYPE_ID"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Comparator operations / VARIANT",
+  "title": "NE_TypeOfDB: Compare data type of an indirectly addressed DB for UNEQUAL with a data type (S7-1500)",
+  "name": "NE_TypeOfDB",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "TYPE_ID"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Math functions",
+  "title": "MIN: Get minimum (S7-1500)",
+  "name": "MIN",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN3",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "STL / Math functions",
+  "title": "MAX: Get maximum (S7-1500)",
+  "name": "MAX",
+  "params": [
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN2",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "IN3",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "STL / Math functions",
+  "title": "LIMIT: Set limit value (S7-1500)",
+  "name": "LIMIT",
+  "params": [
+   {
+    "name": "MN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, TIME, LTIME, TOD, LTOD, DATE, LDT"
+   },
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, TIME, LTIME, TOD, LTOD, DATE, LDT"
+   },
+   {
+    "name": "MX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers, TIME, LTIME, TOD, LTOD, DATE, LDT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers, TIME, LTIME, TOD, LTOD, DATE, LDT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "MOVE: Move value (S7-1500)",
+  "name": "MOVE",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, strings, ARRAY, IEC data types, PLC data type (UDT), DB_ANY"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, strings, ARRAY, IEC data types, PLC data type (UDT), DB_ANY"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "Deserialize: Deserialize (S7-1500)",
+  "name": "Deserialize",
+  "params": [
+   {
+    "name": "SRC_ARRAY",
+    "decl": "Input",
+    "types": "ARRAY[*] of BYTE 1) or ARRAY of CHAR"
+   },
+   {
+    "name": "DEST_VARIABLE",
+    "decl": "InOut",
+    "types": "all data types"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "Serialize: Serialize (S7-1500)",
+  "name": "Serialize",
+  "params": [
+   {
+    "name": "SRC_VARIABLE",
+    "decl": "Input",
+    "types": "all data types"
+   },
+   {
+    "name": "DEST_ARRAY",
+    "decl": "InOut",
+    "types": "ARRAY of BYTE or ARRAY of CHAR"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "MOVE_BLK: Move block (S7-1500)",
+  "name": "MOVE_BLK",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT, ULINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "MOVE_BLK_VARIANT: Move block (S7-1500)",
+  "name": "MOVE_BLK_VARIANT",
+  "params": [
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "SRC_INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "DEST_INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "UMOVE_BLK: Move block uninterruptible (S7-1500)",
+  "name": "UMOVE_BLK",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT, ULINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "FILL_BLK: Fill block (S7-1500)",
+  "name": "FILL_BLK",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT, ULINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "UFILL_BLK: Fill block uninterruptible (S7-1500)",
+  "name": "UFILL_BLK",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT, ULINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Binary numbers, integers, floating-point numbers, timers, TOD, LTOD, DATE, CHAR, WCHAR"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "SCATTER: Parse the bit sequence into individual bits (S7-1500)",
+  "name": "SCATTER",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "BYTE, WORD, DWORD, LWORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "ARRAY[*] of BOOL, STRUCT or PLC data type *: 8, 16, 32 or 64 elements"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "SCATTER_BLK: Parse elements of an ARRAY of bit sequence into individual bits (S7-1500)",
+  "name": "SCATTER_BLK",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Element of an ARRAY[*] of - BYTE - WORD - DWORD - LWORD"
+   },
+   {
+    "name": "COUNT_IN",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT, ULINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Element of an ARRAY[*] of - BOOL - STRUCT - PLC data type"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "GATHER: Merge individual bits into a bit sequence (S7-1500)",
+  "name": "GATHER",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "ARRAY[*] of BOOL, STRUCT or PLC data type *: 8, 16, 32 or 64 elements"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BYTE, WORD, DWORD, LWORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations",
+  "title": "GATHER_BLK: Merge individual bits into multiple elements of an ARRAY of bit sequence (S7-1500)",
+  "name": "GATHER_BLK",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Element of an ARRAY[*] of - BOOL - STRUCT - PLC data type"
+   },
+   {
+    "name": "COUNT_OUT",
+    "decl": "Input",
+    "types": "USINT, UINT, UDINT, ULINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Element of an ARRAY[*] of - BYTE - WORD - DWORD - LWORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / ARRAY DB",
+  "title": "ReadFromArrayDB: Read from ARRAY data block (S7-1500)",
+  "name": "ReadFromArrayDB",
+  "params": [
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / ARRAY DB",
+  "title": "WriteToArrayDB: Write to ARRAY data block (S7-1500)",
+  "name": "WriteToArrayDB",
+  "params": [
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / ARRAY DB",
+  "title": "ReadFromArrayDBL: Read from array data block in load memory (S7-1500)",
+  "name": "ReadFromArrayDBL",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "InOut",
+    "types": "VARIANT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / ARRAY DB",
+  "title": "WriteToArrayDBL: Write to array data block in load memory (S7-1500)",
+  "name": "WriteToArrayDBL",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DB",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "INDEX",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "PEEK: Read memory address (S7-1500)",
+  "name": "PEEK",
+  "params": [
+   {
+    "name": "AREA",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DBNUMBER",
+    "decl": "Input",
+    "types": "DINT, DB_ANY"
+   },
+   {
+    "name": "BYTEOFFSET",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "PEEK_BOOL: Read memory bit (S7-1500)",
+  "name": "PEEK_BOOL",
+  "params": [
+   {
+    "name": "AREA",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DBNUMBER",
+    "decl": "Input",
+    "types": "DINT, DB_ANY"
+   },
+   {
+    "name": "BYTEOFFSET",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "BITOFFSET",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "POKE: Write memory address (S7-1500)",
+  "name": "POKE",
+  "params": [
+   {
+    "name": "AREA",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DBNUMBER",
+    "decl": "Input",
+    "types": "DINT, DB_ANY"
+   },
+   {
+    "name": "BYTEOFFSET",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "POKE_BOOL: Write memory bit (S7-1500)",
+  "name": "POKE_BOOL",
+  "params": [
+   {
+    "name": "AREA",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DBNUMBER",
+    "decl": "Input",
+    "types": "DINT, DB_ANY"
+   },
+   {
+    "name": "BYTEOFFSET",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "BITOFFSET",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "POKE_BLK: Write memory area (S7-1500)",
+  "name": "POKE_BLK",
+  "params": [
+   {
+    "name": "AREA_SRC",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DBNUMBER_SRC",
+    "decl": "Input",
+    "types": "DINT, DB_ANY 1)"
+   },
+   {
+    "name": "BYTEOFFSET_SRC",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "AREA_DEST",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "DBNUMBER_DEST",
+    "decl": "Input",
+    "types": "DINT, DB_ANY 1)"
+   },
+   {
+    "name": "BYTEOFFSET_DEST",
+    "decl": "Input",
+    "types": "DINT"
+   },
+   {
+    "name": "COUNT",
+    "decl": "Input",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "READ_LITTLE: Read data in little endian format (S7-1500)",
+  "name": "READ_LITTLE",
+  "params": [
+   {
+    "name": "SRC_ARRAY",
+    "decl": "Input",
+    "types": "ARRAY of BYTE"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "DEST_VARIABLE",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, LDT, TOD, LTOD, DATE, CHAR, WCHAR, BCD16, BCD32"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "WRITE_LITTLE: Write data in little endian format (S7-1500)",
+  "name": "WRITE_LITTLE",
+  "params": [
+   {
+    "name": "SRC_VARIABLE",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, LDT, TOD, LTOD, DATE, CHAR, WCHAR, BCD16, BCD32"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "DEST_ARRAY",
+    "decl": "InOut",
+    "types": "ARRAY of BYTE"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "READ_BIG: Read data in big endian format (S7-1500)",
+  "name": "READ_BIG",
+  "params": [
+   {
+    "name": "SRC_ARRAY",
+    "decl": "Input",
+    "types": "ARRAY of BYTE"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "DEST_VARIABLE",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, LDT, TOD, LTOD, DATE, CHAR, WCHAR, BCD16, BCD32"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Read / Write access",
+  "title": "WRITE_BIG: Write data in big endian format (S7-1500)",
+  "name": "WRITE_BIG",
+  "params": [
+   {
+    "name": "SRC_VARIABLE",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, LDT, TOD, LTOD, DATE, CHAR, WCHAR, BCD16, BCD32"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   },
+   {
+    "name": "DEST_ARRAY",
+    "decl": "InOut",
+    "types": "ARRAY of BYTE"
+   },
+   {
+    "name": "POS",
+    "decl": "InOut",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / VARIANT",
+  "title": "VariantGet: Read out VARIANT tag value (S7-1500)",
+  "name": "VariantGet",
+  "params": [
+   {
+    "name": "SRC",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "DST",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, character strings, ARRAY elements, PLC data types"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / VARIANT",
+  "title": "VariantPut: Write VARIANT tag value (S7-1500)",
+  "name": "VariantPut",
+  "params": [
+   {
+    "name": "SRC",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, date and time, character strings, ARRAY elements, PLC data types"
+   },
+   {
+    "name": "DST",
+    "decl": "Input",
+    "types": "VARIANT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / VARIANT",
+  "title": "CountOfElements: Get number of ARRAY elements (S7-1500)",
+  "name": "CountOfElements",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "VARIANT, ResolvedSymbol"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "UDINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / ARRAY[*]",
+  "title": "LOWER_BOUND: Read out low ARRAY limit (S7-1500)",
+  "name": "LOWER_BOUND",
+  "params": [
+   {
+    "name": "ARR",
+    "decl": "Input",
+    "types": "ARRAY​[*]"
+   },
+   {
+    "name": "DIM",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / ARRAY[*]",
+  "title": "UPPER_BOUND: Read out high ARRAY limit (S7-1500)",
+  "name": "UPPER_BOUND",
+  "params": [
+   {
+    "name": "ARR",
+    "decl": "Input",
+    "types": "ARRAY​[*]"
+   },
+   {
+    "name": "DIM",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "DINT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Legacy",
+  "title": "BLKMOV: Move block (S7-1500)",
+  "name": "BLKMOV",
+  "params": [
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Legacy",
+  "title": "UBLKMOV: Move block uninterruptible (S7-1500)",
+  "name": "UBLKMOV",
+  "params": [
+   {
+    "name": "SRCBLK",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Move operations / Legacy",
+  "title": "FILL: Fill block (S7-1500)",
+  "name": "FILL",
+  "params": [
+   {
+    "name": "BVAL",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Conversion operations",
+  "title": "SCALE_X: Scale (S7-1500)",
+  "name": "SCALE_X",
+  "params": [
+   {
+    "name": "MIN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "Floating-point numbers"
+   },
+   {
+    "name": "MAX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "Integers, floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "STL / Conversion operations",
+  "title": "NORM_X: Normalize (S7-1500)",
+  "name": "NORM_X",
+  "params": [
+   {
+    "name": "MIN",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "VALUE",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "MAX",
+    "decl": "Input",
+    "types": "Integers, floating-point numbers"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "Floating-point numbers"
+   }
+  ]
+ },
+ {
+  "group": "STL / Conversion operations / VARIANT",
+  "title": "VARIANT_TO_DB_ANY: Convert VARIANT to DB_ANY (S7-1500)",
+  "name": "VARIANT_TO_DB_ANY",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "VARIANT"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "ERR",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Conversion operations / VARIANT",
+  "title": "DB_ANY_TO_VARIANT: Convert DB_ANY to VARIANT (S7-1500)",
+  "name": "DB_ANY_TO_VARIANT",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "DB_ANY"
+   },
+   {
+    "name": "ERR",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Conversion operations / Legacy",
+  "title": "SCALE: Scale (S7-1500)",
+  "name": "SCALE",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "HI_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "LO_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "BIPOLAR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "REAL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Conversion operations / Legacy",
+  "title": "UNSCALE: Unscale (S7-1500)",
+  "name": "UNSCALE",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "HI_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "LO_LIM",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "BIPOLAR",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "ENDIS_PW: Locking and unlocking passwords of the CPU access levels (S7-1500)",
+  "name": "ENDIS_PW",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "F_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "FULL_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "R_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "HMI_PWD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "F_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "FULL_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "R_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "HMI_PWD_ON",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "RE_TRIGR: Restart cycle monitoring time (S7-1500)",
+  "name": "RE_TRIGR",
+  "params": null
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "STP: Exit program (S7-1500)",
+  "name": "STP",
+  "params": null
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "GET_ERROR: Get error locally (S7-1500)",
+  "name": "GET_ERROR",
+  "params": [
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "ErrorStruct"
+   }
+  ]
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "GET_ERR_ID: Get error ID locally (S7-1500)",
+  "name": "GET_ERR_ID",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "INIT_RD: Initialize all retain data (S7-1500)",
+  "name": "INIT_RD",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "WAIT: Configure time delay (S7-1500)",
+  "name": "WAIT",
+  "params": [
+   {
+    "name": "WT",
+    "decl": "Input",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Program control operations / Runtime control",
+  "title": "RUNTIME: Measure program runtime (S7-1500)",
+  "name": "RUNTIME",
+  "params": [
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "LREAL"
+   },
+   {
+    "name": "MEM",
+    "decl": "InOut",
+    "types": "LREAL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Word logic operations",
+  "title": "DECO: Decode (S7-1500)",
+  "name": "DECO",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings"
+   }
+  ]
+ },
+ {
+  "group": "STL / Word logic operations",
+  "title": "ENCO: Encode (S7-1500)",
+  "name": "ENCO",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Word logic operations",
+  "title": "SEL: Select (S7-1500)",
+  "name": "SEL",
+  "params": [
+   {
+    "name": "G",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN0",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, DT, LDT"
+   },
+   {
+    "name": "IN1",
+    "decl": "Input",
+    "types": "Bit strings, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, DT, LDT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "Bit strings, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, DT, LDT"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "DRUM: Implement sequencer (S7-1500)",
+  "name": "DRUM",
+  "params": [
+   {
+    "name": "RESET",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "JOG",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "DRUM_EN",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "LST_STEP",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "EVENT(i), 1 ≤ i ≤ 16",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT(j), 1 ≤ j ≤ 16",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT_WORD",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "DCAT: Discrete control-timer alarm (S7-1500)",
+  "name": "DCAT",
+  "params": [
+   {
+    "name": "CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "O_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "C_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OA",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CA",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "MCAT: Motor control-timer alarm (S7-1500)",
+  "name": "MCAT",
+  "params": [
+   {
+    "name": "O_CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "C_CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "S_CMD",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "O_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "C_FB",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CO",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "OA",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "CA",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "Q",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "IMC: Compare input bits with the bits of a mask (S7-1500)",
+  "name": "IMC",
+  "params": [
+   {
+    "name": "IN_BIT0",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT1",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT2",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT3",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT4",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT5",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT6",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT7",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT8",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT9",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT10",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT11",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT12",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT13",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT14",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT15",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "CMP_STEP",
+    "decl": "Input",
+    "types": "BYTE"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "SMC: Compare scan matrix (S7-1500)",
+  "name": "SMC",
+  "params": [
+   {
+    "name": "IN_BIT0",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT1",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT2",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT3",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT4",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT5",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT6",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT7",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT8",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT9",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT10",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT11",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT12",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT13",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT14",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "IN_BIT15",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   },
+   {
+    "name": "OUT_STEP",
+    "decl": "Output",
+    "types": "BYTE"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "LEAD_LAG: Lead and lag algorithm  (S7-1500)",
+  "name": "LEAD_LAG",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "REAL"
+   },
+   {
+    "name": "SAMPLE_T",
+    "decl": "Input",
+    "types": "INT"
+   },
+   {
+    "name": "OUT",
+    "decl": "Output",
+    "types": "REAL"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "SEG: Create bit pattern for seven-segment display (S7-1500)",
+  "name": "SEG",
+  "params": []
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "BCDCPL: Create tens complement (S7-1500)",
+  "name": "BCDCPL",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "Bit strings"
+   },
+   {
+    "name": "ERR_CODE",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / Legacy",
+  "title": "BITSUM: Count number of set bits (S7-1500)",
+  "name": "BITSUM",
+  "params": [
+   {
+    "name": "IN",
+    "decl": "Input",
+    "types": "DWORD"
+   },
+   {
+    "name": "RET_VAL",
+    "decl": "Output",
+    "types": "INT"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "A: AND logic operation (S7-1500)",
+  "name": "A",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "AN: Negated AND logic operation (S7-1500)",
+  "name": "AN",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "O: OR logic operation (S7-1500)",
+  "name": "O",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "ON: Negated OR logic operation (S7-1500)",
+  "name": "ON",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "X: EXCLUSIVE OR logic operation (S7-1500)",
+  "name": "X",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "XN: Negated EXCLUSIVE OR logic operation (S7-1500)",
+  "name": "XN",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "O: OR logic operation of AND functions (S7-1500)",
+  "name": "O",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "A(: AND logic operation with branch (S7-1500)",
+  "name": "A(",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "AN(: Negated AND logic operation with branch (S7-1500)",
+  "name": "AN(",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "O(: OR logic operation with branch (S7-1500)",
+  "name": "O(",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "ON(: Negated OR logic operation with branch (S7-1500)",
+  "name": "ON(",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "X(: EXCLUSIVE OR logic operation with branch (S7-1500)",
+  "name": "X(",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "XN(: Negated EXCLUSIVE OR logic operation with branch (S7-1500)",
+  "name": "XN(",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "): Close branch (S7-1500)",
+  "name": ")",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "=: Assignment (S7-1500)",
+  "name": "=",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "R: Reset (S7-1500)",
+  "name": "R",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "S: Set (S7-1500)",
+  "name": "S",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "NOT: Invert RLO (S7-1500)",
+  "name": "NOT",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "SET: Set RLO to 1 (S7-1500)",
+  "name": "SET",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "CLR: Reset RLO to 0 (S7-1500)",
+  "name": "CLR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "SAVE: Save RLO in BR bit (S7-1500)",
+  "name": "SAVE",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "FN: Scan RLO for negative signal edge (S7-1500)",
+  "name": "FN",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Bit logic operations",
+  "title": "FP: Scan RLO for positive signal edge (S7-1500)",
+  "name": "FP",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BOOL"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "FR: Enable timer (S7-1500)",
+  "name": "FR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "L: Load timer value (S7-1500)",
+  "name": "L",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "LC: Load BCD-coded timer value (S7-1500)",
+  "name": "LC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "R: Reset timer (S7-1500)",
+  "name": "R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "SP: Start pulse timer (S7-1500)",
+  "name": "SP",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "SE: Start extended pulse timer (S7-1500)",
+  "name": "SE",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "SD: Start on-delay timer (S7-1500)",
+  "name": "SD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "SS: Start retentive on-delay timer (S7-1500)",
+  "name": "SS",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Timer operations",
+  "title": "SF: Start off-delay timer (S7-1500)",
+  "name": "SF",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "FR: Enable counter (S7-1500)",
+  "name": "FR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "L: Load counter (S7-1500)",
+  "name": "L",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "LC: Load BCD-coded counter value (S7-1500)",
+  "name": "LC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "R: Reset counter (S7-1500)",
+  "name": "R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "S: Set counter (S7-1500)",
+  "name": "S",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "CU: Count up (S7-1500)",
+  "name": "CU",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Counter operations",
+  "title": "CD: Count down (S7-1500)",
+  "name": "CD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Comparator operations",
+  "title": "? I: Compare 16-bit integers (S7-1500)",
+  "name": "? I",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Comparator operations",
+  "title": "? D: Compare 32-bit integers (S7-1500)",
+  "name": "? D",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Comparator operations",
+  "title": "? R: Compare floating-point numbers (S7-1500)",
+  "name": "? R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "+I: Add integers (16 bit) (S7-1500)",
+  "name": "+I",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "-I: Subtract integers (16 bit) (S7-1500)",
+  "name": "-I",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "*I: Multiply integers (16 bit) (S7-1500)",
+  "name": "*I",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "/I: Divide integers (16 bit) (S7-1500)",
+  "name": "/I",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "+D: Add double integers (32 bit) (S7-1500)",
+  "name": "+D",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "-D: Subtract double integers (32 bit) (S7-1500)",
+  "name": "-D",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "*D: Multiply double integers (32 bit) (S7-1500)",
+  "name": "*D",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "/D: Divide double integers (32 bit) (S7-1500)",
+  "name": "/D",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "+: Add constants (S7-1500)",
+  "name": "+",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "INC: Increment (S7-1500)",
+  "name": "INC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "DEC: Decrement (S7-1500)",
+  "name": "DEC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Integers",
+  "title": "MOD: Return remainder of division (S7-1500)",
+  "name": "MOD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Floating-point numbers",
+  "title": "+R: Add floating-point numbers (S7-1500)",
+  "name": "+R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Floating-point numbers",
+  "title": "-R: Subtract floating-point numbers (S7-1500)",
+  "name": "-R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Floating-point numbers",
+  "title": "*R: Multiply floating-point numbers (S7-1500)",
+  "name": "*R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Floating-point numbers",
+  "title": "/R: Divide floating-point numbers (S7-1500)",
+  "name": "/R",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Floating-point numbers",
+  "title": "ABS: Form absolute value (S7-1500)",
+  "name": "ABS",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "SQR: Form square (S7-1500)",
+  "name": "SQR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "SQRT: Form square root (S7-1500)",
+  "name": "SQRT",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "EXP: Form exponential value (S7-1500)",
+  "name": "EXP",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "LN: Form natural logarithm (S7-1500)",
+  "name": "LN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "SIN: Form sine value (S7-1500)",
+  "name": "SIN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "ASIN: Form arcsine value (S7-1500)",
+  "name": "ASIN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "COS: Form cosine value (S7-1500)",
+  "name": "COS",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "ACOS: Form arccosine value (S7-1500)",
+  "name": "ACOS",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "TAN: Form tangent value (S7-1500)",
+  "name": "TAN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Math functions / Advanced floating-point numbers",
+  "title": "ATAN: Form arctangent value (S7-1500)",
+  "name": "ATAN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "L: Load (S7-1500)",
+  "name": "L",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Input",
+    "types": "BYTE, WORD, DWORD, SINT, INT, DINT, USINT, UINT, UDINT, Timers, REAL, DATE, TOD, CHAR"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "L STW: Load status word in accumulator 1 (S7-1500)",
+  "name": "L STW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "LAR1: Load AR1 with contents of accumulator 1 (S7-1500)",
+  "name": "LAR1",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "LAR1 <D>: Load AR1 with double word or area pointer (S7-1500)",
+  "name": "LAR1 <D>",
+  "params": [
+   {
+    "name": "<D>",
+    "decl": "Input",
+    "types": "DWORD, POINTER"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "LAR1 AR2: Load AR1 with contents of AR2 (S7-1500)",
+  "name": "LAR1 AR2",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "LAR2: Load AR2 with contents of accumulator 1 (S7-1500)",
+  "name": "LAR2",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Load",
+  "title": "LAR2 <D>: Load AR2 with double word or area pointer (S7-1500)",
+  "name": "LAR2 <D>",
+  "params": [
+   {
+    "name": "<D>",
+    "decl": "Input",
+    "types": "DWORD, POINTER"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "T: Transfer (S7-1500)",
+  "name": "T",
+  "params": [
+   {
+    "name": "<Operand>",
+    "decl": "Output",
+    "types": "BYTE, WORD, DWORD, SINT, INT, DINT, USINT, UINT, UDINT, Timers, REAL, DATE, TOD, CHAR"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "T STW: Transfer accumulator 1 to status word  (S7-1500)",
+  "name": "T STW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "CAR: Switch AR1 and AR2 (S7-1500)",
+  "name": "CAR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "TAR1: Transfer AR1 to accumulator 1 (S7-1500)",
+  "name": "TAR1",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "TAR1 <D>: Transfer AR1 to double word (S7-1500)",
+  "name": "TAR1 <D>",
+  "params": [
+   {
+    "name": "<D>",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "TAR1 AR2: Transfer AR1 to AR2 (S7-1500)",
+  "name": "TAR1 AR2",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "TAR2: Transfer AR2 to accumulator 1 (S7-1500)",
+  "name": "TAR2",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Load and transfer / Transfer",
+  "title": "TAR2 <D>: Transfer AR2 to double word (S7-1500)",
+  "name": "TAR2 <D>",
+  "params": [
+   {
+    "name": "<D>",
+    "decl": "Output",
+    "types": "DWORD"
+   }
+  ]
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "BTI: Convert BCD to integer (16 bit) (S7-1500)",
+  "name": "BTI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "ITB: Convert integer (16 bit) to BCD (S7-1500)",
+  "name": "ITB",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "BTD: Convert BCD to integer (32 bit) (S7-1500)",
+  "name": "BTD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "ITD: Convert integer (16 bit) to integer (32 bit) (S7-1500)",
+  "name": "ITD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "DTB: Convert integer (32 bit) to BCD (S7-1500)",
+  "name": "DTB",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "DTR: Convert integer (32 bit) to floating-point number (S7-1500)",
+  "name": "DTR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "INVI: Create ones complement integer (16 bit) (S7-1500)",
+  "name": "INVI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "INVD: Create ones complement double integer (32 bit) (S7-1500)",
+  "name": "INVD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "NEGI: Negate integer (16 bit) (S7-1500)",
+  "name": "NEGI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "NEGD: Negate integer (32 bit) (S7-1500)",
+  "name": "NEGD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "NEGR: Negate floating-point number (S7-1500)",
+  "name": "NEGR",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "CAW: Switch bytes in the right word of accumulator 1 (S7-1500)",
+  "name": "CAW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "CAD: Switch all bytes in accumulator 1 (S7-1500)",
+  "name": "CAD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "RND: Round numerical value (S7-1500)",
+  "name": "RND",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "TRUNC: Truncate numerical value (S7-1500)",
+  "name": "TRUNC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "RND+: Generate next higher integer from floating-point number (S7-1500)",
+  "name": "RND+",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Conversion operations",
+  "title": "RND-: Generate next lower integer from floating-point number (S7-1500)",
+  "name": "RND-",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "Jump label (S7-1500)",
+  "name": "Jump label",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JU: Unconditional jump (S7-1500)",
+  "name": "JU",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JC: Jump if RLO = 1 (S7-1500)",
+  "name": "JC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JCN: Jump if RLO = 0 (S7-1500)",
+  "name": "JCN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JCB: Jump if RLO = 1 and save RLO (S7-1500)",
+  "name": "JCB",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JNB: Jump if RLO = 0 and save RLO (S7-1500)",
+  "name": "JNB",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JBI: Jump if BR = 1 (S7-1500)",
+  "name": "JBI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JNBI: Jump if BR = 0 (S7-1500)",
+  "name": "JNBI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JO: Jump if OV = 1 (S7-1500)",
+  "name": "JO",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JOS: Jump if OS = 1 (S7-1500)",
+  "name": "JOS",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JZ: Jump if the result is zero (S7-1500)",
+  "name": "JZ",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JN: Jump if the result is not zero (S7-1500)",
+  "name": "JN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JP: Jump if the result is greater than zero (S7-1500)",
+  "name": "JP",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JM: Jump if the result is less than zero (S7-1500)",
+  "name": "JM",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JPZ: Jump if the result is greater than or equal to zero (S7-1500)",
+  "name": "JPZ",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JMZ: Jump if the result is less than or equal to zero (S7-1500)",
+  "name": "JMZ",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JUO: Jump if the result is invalid (S7-1500)",
+  "name": "JUO",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "JL: Define jump list (S7-1500)",
+  "name": "JL",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Jumps",
+  "title": "LOOP: Loop (S7-1500)",
+  "name": "LOOP",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "OPN: Open data block in DB register (S7-1500)",
+  "name": "OPN",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "OPNDI: Open data block in DI register (S7-1500)",
+  "name": "OPNDI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "CDB: Swap data block register (S7-1500)",
+  "name": "CDB",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "L DBLG: Load the length of a global data block into accumulator 1 (S7-1500)",
+  "name": "L DBLG",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "L DBNO: Load the number of a global data block into accumulator 1 (S7-1500)",
+  "name": "L DBNO",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "L DILG: Load the length of an instance data block into accumulator 1 (S7-1500)",
+  "name": "L DILG",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Data blocks",
+  "title": "L DINO: Load the number of an instance data block into accumulator 1 (S7-1500)",
+  "name": "L DINO",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Code blocks",
+  "title": "BE: Block end (S7-1500)",
+  "name": "BE",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Code blocks",
+  "title": "BEC: Conditional block end (S7-1500)",
+  "name": "BEC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Code blocks",
+  "title": "BEU: Unconditional block end (S7-1500)",
+  "name": "BEU",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Code blocks",
+  "title": "CALL: Call block (S7-1500)",
+  "name": "CALL",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Code blocks",
+  "title": "CC: Conditional block call (S7-1500)",
+  "name": "CC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Program control operations / Code blocks",
+  "title": "UC: Unconditional block call (S7-1500)",
+  "name": "UC",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Word logic operations",
+  "title": "AW: AND logic operation word by word (S7-1500)",
+  "name": "AW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Word logic operations",
+  "title": "OW: OR logic operation word by word (S7-1500)",
+  "name": "OW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Word logic operations",
+  "title": "XOW: EXCLUSIVE OR logic operation word by word (S7-1500)",
+  "name": "XOW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Word logic operations",
+  "title": "AD: AND logic operation double word by double word (S7-1500)",
+  "name": "AD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Word logic operations",
+  "title": "OD: OR logic operation double word by double word (S7-1500)",
+  "name": "OD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Word logic operations",
+  "title": "XOD: EXCLUSIVE OR logic operation double word by double word (S7-1500)",
+  "name": "XOD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Shift",
+  "title": "SSI: Shift word by word with sign (S7-1500)",
+  "name": "SSI",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Shift",
+  "title": "SSD: Shift double word by double word with sign (S7-1500)",
+  "name": "SSD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Shift",
+  "title": "SLW: Shift left word by word (S7-1500)",
+  "name": "SLW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Shift",
+  "title": "SRW: Shift right word by word (S7-1500)",
+  "name": "SRW",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Shift",
+  "title": "SLD: Shift left double word by double word (S7-1500)",
+  "name": "SLD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Shift",
+  "title": "SRD: Shift right double word by double word (S7-1500)",
+  "name": "SRD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Rotate",
+  "title": "RLD: Rotate left double word by double word (S7-1500)",
+  "name": "RLD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Rotate",
+  "title": "RRD: Rotate right double word by double word (S7-1500)",
+  "name": "RRD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Rotate",
+  "title": "RLDA: Rotate left by status bit CC 1 (S7-1500)",
+  "name": "RLDA",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Shift and rotate / Rotate",
+  "title": "RRDA: Rotate right by status bit CC 1 (S7-1500)",
+  "name": "RRDA",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Accumulator",
+  "title": "TAK: Swap content of accumulators 1 and 2 (S7-1500)",
+  "name": "TAK",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Accumulator",
+  "title": "PUSH: Shift content to the next higher accumulator (S7-1500)",
+  "name": "PUSH",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Accumulator",
+  "title": "POP: Shift content to the next lower accumulator (S7-1500)",
+  "name": "POP",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Address register",
+  "title": "+AR1: Add accumulator 1 to AR1 (S7-1500)",
+  "name": "+AR1",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Address register",
+  "title": "+AR2: Add accumulator 1 to AR2 (S7-1500)",
+  "name": "+AR2",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Null instructions",
+  "title": "BLD: Program display (null instruction) (S7-1500)",
+  "name": "BLD",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Null instructions",
+  "title": "NOP 0: Null instruction (S7-1500)",
+  "name": "NOP 0",
+  "params": null
+ },
+ {
+  "group": "STL / STL Mnemonic / Additional instructions / Null instructions",
+  "title": "NOP 1: Null instruction (S7-1500)",
+  "name": "NOP 1",
+  "params": null
+ }
+]

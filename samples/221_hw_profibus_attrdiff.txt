@@ -1,0 +1,83 @@
+A: 220_hw_cm_dp.zap21  B: 221_hw_profibus.zap21
+CHANGED 1001:0004:421 PackageContainerDatas name='Packages'
+          raw <links 1>: 644 -> 660 bytes
+          +link ContainsPackage -> 1002:0004:1019
+NEW     1002:0004:1019 PackageContainerData name='HW.SubnetPB{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.SubnetPB'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.SubnetPB{11.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedProduct -> 1004:0004:423
+          link RelatedProduct -> 1004:0004:42f
+          link RelatedObject -> 101e:0010:1018
+CHANGED 1004:0004:423 ProductVersionInfoData name='Siemens.Simatic.Portal:14.00.00.00'
+          raw <links 1>: 404 -> 420 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1019
+CHANGED 1004:0004:42f ProductVersionInfoData name='Siemens.Simatic.STEP7.SinemaEBasic:12.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1019
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 101d:0010:c14 NodeData name='P1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:12.123584Z' -> '2026-10-24T15:31:44.250754Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          +link Subnet -> 101e:0010:1018
+NEW     101e:0010:1018 SubnetData name='PROFIBUS_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:44.250754Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:44.250754Z'
+          ICoreAttributes.Subtype = '1'
+          ICoreAttributes.Name = 'PROFIBUS_1'
+          IConfigBaseData.ConfigObjectTypeName = 'SubnetPB'
+          IConfigBaseData.ConfigObjectTypeVersion = '11.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[1052] 1c0400000c000000a00000009400000023000000220000003c000000320000003200000032000000
+          IPersistentExpandoData.NetCyclicBroadcastEnabled = True
+          IPersistentExpandoData.NetHsa = 126
+          IPersistentExpandoData.NetLastUsedPBMpiAddress = 2
+          IPersistentExpandoData.NetBaudrate = 6
+          IPersistentExpandoData.NetBusProfile = 0
+          IPersistentExpandoData.NetLineConfigEnabled = False
+          IPersistentExpandoData.NetLineConfigCountRepeater = 0
+          IPersistentExpandoData.NetLineConfigCountLwl = 0
+          IPersistentExpandoData.NetOpticalRingEnabled = False
+          IPersistentExpandoData.NetOlmP12 = False
+          IPersistentExpandoData.NetOlmG12 = False
+          IPersistentExpandoData.NetOlmG12Eec = False
+          IPersistentExpandoData.NetOlmG121300 = False
+          IPersistentExpandoData.NetWatchdogSetByUser = False
+          IPersistentExpandoData.NetTtrSetByUser = False
+          IPersistentExpandoData.NetConfigEnabled = False
+          IPersistentExpandoData.NetConfigMasterStationsNotInProject = 0
+          IPersistentExpandoData.NetConfigPassiveStationsNotInProject = 0
+          IPersistentExpandoData.NetConfigActiveStationsNotInProject = 0
+          IPersistentExpandoData.NetConfigTrafficLoad = 1
+          IPersistentExpandoData.NetOptimizeProfile = False
+          IPersistentExpandoData.NetOptimizeTslot = False
+          IPersistentExpandoData.NetOptimizeConf = False
+          IPersistentExpandoData.NetParticipantsBeforeUpload = -1
+          IPersistentExpandoData.NetIsochronActive = False
+          IPersistentExpandoData.NetIsochronAdditionalPgCount = 0
+          IPersistentExpandoData.NetIsochronDpCycleAutoCalc = True
+          IPersistentExpandoData.NetClockSyncTiToAutoCalc = True
+          IPersistentExpandoData.NetLineConfigLengthCopper = 0.001
+          IPersistentExpandoData.NetLineConfigLengthLwl = 0.001
+          IPersistentExpandoData.NetIsochronPgTimeUIManual = -1
+          IPersistentExpandoData.NetClockSyncTiUIManual = -1.0
+          IPersistentExpandoData.NetClockSyncToUIManual = -1.0
+          IPersistentExpandoData.NetIsochronDpCycleUIManual = -1.0
+          ISubnetData.NetSubnetId = 30021821399041
+          ISubnetData.NetType = 1
+          link RelatedPackage -> 1002:0004:1019
+          link SubnetNodes -> 101d:0010:c14
+          link ParentProject -> 1028:0002:433
+          link Environment -> 1028:0002:433
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:31:12.701540Z' -> '2026-10-24T15:31:44.496790Z'  (timestamp)
+          raw <links 1>: 260 -> 276 bytes
+          +link ProjectSubnets -> 101e:0010:1018
+          slot table [0, 0, 0, 76, 0, 0, 432, 172] -> [0, 0, 0, 76, 0, 0, 448, 172]
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1400, 0014:0007:0, 0015:0007:20, 0016:0007:18

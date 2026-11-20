@@ -1,0 +1,136 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_LadOperands"
+    VAR_INPUT
+        a : Bool;
+        ia : Int;
+        wa : Word;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        io : Int;
+        dout : DInt;
+        rout : Real;
+        tout : Time;
+        sout : String;
+    END_VAR
+    VAR_IN_OUT
+        arr : Array[0..9] of Int;
+    END_VAR
+    VAR CONSTANT
+        cInt : Int := 7;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := "tInt", out1 => #io )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T2"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "tBool" )
+            Coil( "tOut" )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T3"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := #arr[2], out1 => #arr[3] )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T4"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := #arr[#ia], out1 => #io )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T5"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := "DB_Motor".motor.Count, out1 => #io )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T6"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #wa.%X3 )
+            Coil( #q )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T7"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := T#5S, out1 => #tout )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T8"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := DINT#5, out1 => #dout )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T10"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := "MAX_COUNT", out1 => #io )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T11"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := #cInt, out1 => #io )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T12"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Move( in := "tInt", out1 => "DB_Global".aInt[2] )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T14"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Real" }
+            Move( in := 1.5, out1 => #rout )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

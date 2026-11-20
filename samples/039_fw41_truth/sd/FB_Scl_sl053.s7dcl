@@ -1,0 +1,28 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl053"
+    VAR_INPUT
+        v_req : Bool;
+        v_db : DB_ANY;
+        v_index : DInt;
+    END_VAR
+    VAR_OUTPUT
+        v_busy : Bool;
+        v_done : Bool;
+        v_error : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_value : Variant;
+    END_VAR
+    VAR
+        inst : ReadFromArrayDBL;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #inst(req := #v_req, db := #v_db, index := #v_index, value := #v_value, busy => #v_busy, done => #v_done, error => #v_error);
+    END_NETWORK
+END_FUNCTION_BLOCK

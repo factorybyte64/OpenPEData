@@ -1,0 +1,20 @@
+{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_Common
+    VAR
+        a_onlyA : Int;
+        speed : Real;
+        flags : Array[0..7] of Bool;
+        cfg : STRUCT
+            ip : Array[0..3] of Byte;
+            "name" : String[20];
+        END_STRUCT;
+    END_VAR
+
+    speed := 1.5;
+    cfg."name" := 'PLC_A';
+
+END_DATA_BLOCK

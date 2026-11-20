@@ -1,0 +1,32 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclSlice" : Void
+    VAR_TEMP
+        b : Bool;
+        w : Word;
+        dw : DWord;
+        by : Byte;
+        lw : LWord;
+        i : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #b := #w.%X3;
+        #w.%X0 := TRUE;
+        #by := #w.%B1;
+        #w.%B0 := #by;
+        #dw.%W1 := #w;
+        #b := #dw.%X31;
+        #w := #dw.%W0;
+        #by := #dw.%B3;
+        #dw.%B2 := #by;
+        #b := #lw.%X63;
+        #w := #lw.%W3;
+        #dw := #lw.%D1;
+        "tWord".%X5 := #b;
+        #b := "tDWord".%X7;
+    END_NETWORK
+END_FUNCTION

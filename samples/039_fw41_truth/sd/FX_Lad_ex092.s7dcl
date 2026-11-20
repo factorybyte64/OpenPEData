@@ -1,0 +1,103 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FX_Lad_ex092"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+        "ib" : Int;
+        ic : Int;
+        da : DInt;
+        "db" : DInt;
+        ra : Real;
+        rb : Real;
+        wa : Word;
+        wb : Word;
+        dwa : DWord;
+        ba : Byte;
+        ta : Time;
+        tb : Time;
+        s1 : String;
+        s2 : String;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+        dout : DInt;
+        rout : Real;
+        wout : Word;
+        dwout : DWord;
+        bout : Byte;
+        tout : Time;
+        sout : String;
+    END_VAR
+    VAR_IN_OUT
+        p_pe_i_dev_new : Bool;
+        p_cmd : Int;
+        p_activate : Bool;
+        p_valid : Bool;
+        p_error : Bool;
+        p_status : Word;
+        x_byte : Byte;
+        arr : Array[0..9] of Int;
+        barr : Array[0..7] of Bool;
+        iinout : Int;
+    END_VAR
+    VAR
+        ton1 : TON_TIME;
+        tof1 : TOF_TIME;
+        tp1 : TP_TIME;
+        tonr1 : TONR_TIME;
+        ctu1 : CTU_INT;
+        ctd1 : CTD_INT;
+        ctud1 : CTUD_INT;
+        rtrig1 : R_TRIG;
+        ftrig1 : F_TRIG;
+        edge1 : Bool;
+        edge2 : Bool;
+        stat1 : Bool;
+        stat2 : Bool;
+        stati : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Bool;
+        t2 : Bool;
+        ti : Int;
+        td : DInt;
+        tr : Real;
+        tw : Word;
+        tt : Time;
+        var1 : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3ns"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            PE_PEM_Status_RSP(
+                PE_I_DEV_NEW := #p_pe_i_dev_new,
+                CMD := #p_cmd,
+                PE_MODE_ID_Source := #wa,
+                PE_MODE_ID_Destination := #x_byte,
+                Time_to_Operate := #x_byte,
+                Remaining_time_to_dest := #x_byte,
+                Mode_Power_Consumption := #x_byte,
+                Energy_Cons_to_dest := #x_byte,
+                Energy_Cons_to_operate := #x_byte,
+                ERROR => #p_error,
+                STATUS => #p_status,
+                Activate := #p_activate,
+                VALID := #p_valid,
+                DATA_ERRORRSP := #iinout
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,33 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex048"
+    VAR_INPUT
+        v_id : HW_SUBMODULE;
+    END_VAR
+    VAR_OUTPUT
+        v_status : DWord;
+    END_VAR
+    VAR_IN_OUT
+        v_outputs : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : SETIO;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.SETIO(
+                ID := #v_id,
+                STATUS => #v_status,
+                OUTPUTS := #v_outputs
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

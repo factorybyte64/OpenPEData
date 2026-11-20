@@ -1,0 +1,70 @@
+FUNCTION_BLOCK "FB_StlCall"
+TITLE = STL catalog FB_StlCall
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR
+      inner : "FB_StlInner";
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 129 BEC
+      A     #a;
+      BEC   ;
+NETWORK
+TITLE = 130 BEU
+      A     #b;
+      JCN   NBEU;
+      BEU   ;
+NBEU: NOP   0;
+NETWORK
+TITLE = 131 CALL
+      CALL  "FC_StlPar"
+      (  x := #i1,
+         y := 5,
+         q := #q,
+         r := #ir
+      );
+      CALL  #inner
+      (  start := #a,
+         cnt := #ir
+      );
+      CALL  "FB_StlInner", "DB_StlInner"
+      (  start := #b,
+         cnt := #ir
+      );
+NETWORK
+TITLE = 132 CC
+      A     #a;
+      CC    "FC_StlNoPar";
+NETWORK
+TITLE = 133 UC
+      UC    "FC_StlNoPar";
+END_FUNCTION_BLOCK

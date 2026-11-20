@@ -1,0 +1,19 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclArr" : Void
+    VAR_TEMP
+        i : Int;
+    END_VAR
+    VAR_IN_OUT
+        arr : Array[1..2, 1..2] of Int;
+        arr3 : Array[0..1, 0..1, 0..1] of Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #arr[#i, 1] := #arr[1, #i];
+        #arr3[#i, 0, 1] := #arr3[1, #i, 0];
+    END_NETWORK
+END_FUNCTION

@@ -1,0 +1,25 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex157"
+    VAR_INPUT
+        v_master : Int;
+        v_station : Int;
+        v_slot : Int;
+        v_subslot : Int;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_laddr : HW_IO;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Geo_Log( MASTER := #v_master, STATION := #v_station, SLOT := #v_slot, SUBSLOT := #v_subslot, RET_VAL := #v_ret_val, LADDR => #v_laddr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,380 @@
+A: 002_cpu.zap21  B: 220_hw_cm_dp.zap21
+CHANGED 1001:0004:421 PackageContainerDatas name='Packages'
+          raw <links 1>: 628 -> 644 bytes
+          +link ContainsPackage -> 1002:0004:c15
+CHANGED 1002:0002:8b7 DataTypeItemData name='Hw_SubModule'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+CHANGED 1002:0002:8bb DataTypeItemData name='Hw_Interface'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+NEW     1002:0004:c15 PackageContainerData name='HW.S71500.CP.Profibus.Modules.MDD_6ES7542-5DX00-0XE0_2.0_19.0.0{11.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.S71500.CP.Profibus.Modules.MDD_6ES7542-5DX00-0XE0_2.0_19.0.0'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000b00000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.S71500.CP.Profibus.Modules.MDD_6ES7542-5DX00-0XE0_2.0_19.0.0{11.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedObject -> 1018:0010:c10
+          link RelatedProduct -> 1004:0004:c16
+CHANGED 1003:0004:420 ProductVersionInfoContainer name='Products'
+          raw <links 1>: 484 -> 500 bytes
+          +link ContainsVersionInfo -> 1004:0004:c16
+CHANGED 1004:0004:874 ProductVersionInfoData name='Siemens.Simatic.STEP7.Basic:19.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link IsContainedIn -> 1004:0004:c16
+NEW     1004:0004:c16 ProductVersionInfoData name='Siemens.Simatic.STEP7.Professional:19.00.00.00'
+          IProductVersionInfoDataAttributes.IsHidden = False
+          IProductVersionInfoDataAttributes.ProductType = 'ServicePack'
+          IProductVersionInfoDataAttributes.DisplayName = 'STEP 7 Professional'
+          IProductVersionInfoDataAttributes.DisplayVersion = 'V19'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'Siemens.Simatic.STEP7.Professional:19.00.00.00'
+          link Parent -> 1003:0004:420
+          link Environment -> 1003:0004:420
+          link RelatedPackageContainerData -> 1002:0004:c15
+          link ContainsEdition -> 1004:0004:874
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 100e:0010:808 DeviceData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+          raw <links 1>: 340 -> 420 bytes
+          +link DeviceItems -> 1018:0010:c10
+          +link LogicalElements -> 1011:0010:c11
+          +link LogicalElements -> 1011:0010:c12
+          +link LogicalElements -> 1011:0010:c13
+          +link LogicalElements -> 1018:0010:c10
+          slot table [0, 0, 0, 104, 0, 0, 0, 0, 410, 223, 846, 0, 0, 762, 422] -> [0, 0, 0, 104, 0, 0, 0, 0, 410, 223, 926, 0, 0, 842, 422]
+CHANGED 1011:0010:80e DeviceItemData name='Rail_0'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+          raw <links 1>: 52 -> 68 bytes
+          +link Elements -> 1018:0010:c10
+          slot table [0, 0, 104, 0, 0, 0, 0, 223, 235, 499, 0, 705, 0, 569, 653] -> [0, 0, 104, 0, 0, 0, 0, 223, 235, 499, 0, 721, 0, 569, 653]
+NEW     1011:0010:c11 DeviceItemData name='CpCommon_1'
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'S71500.CP.Common'
+          ICoreAttributes.Name = 'CpCommon_1'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 1
+          IConfigBaseData.ConfigObjectTypeName = 'S71500\\CP\\Submodules\\CpCommon\\MDD_S71500-CP-Common_1.0'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[69] 450000000c0000001c0000001000000002000000010000003c000000290000000200000010000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 4
+          IDeviceItemData.PositionNumber = 1
+          IDeviceItemData.UICapabilities = 9223372036837998849
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsAutocreated = True
+          link Parent -> 1018:0010:c10
+          link Environment -> 1028:0002:433
+          link Target -> 1018:0010:c10
+          link Container -> 1018:0010:c10
+          link LogicalContainer -> 100e:0010:808
+          link Controller -> 101c:0010:813
+          link AddressManagers -> 1057:0010:80d
+NEW     1011:0010:c12 DeviceItemData name='CM_DP'
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'S71500.CP.Proxy'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'CM_DP'
+          IBrowsingAttributes.BrowsingParameters = 1
+          IConfigBaseData.ConfigObjectTypeName = 'S71500\\CP\\Submodules\\CpProxy\\MDD_S71500-CP-Proxy_1.0'
+          IConfigBaseData.ConfigObjectTypeVersion = '14.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[69] 450000000c0000001c0000001000000002000000010000003c000000290000000200000010000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 4
+          IDeviceItemData.PositionNumber = 65520
+          IDeviceItemData.UICapabilities = 9223372036837998849
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsAutocreated = True
+          link Parent -> 1018:0010:c10
+          link Environment -> 1028:0002:433
+          link Target -> 1018:0010:c10
+          link Container -> 1018:0010:c10
+          link LogicalContainer -> 100e:0010:808
+          link Controller -> 101c:0010:813
+          link AddressManagers -> 1057:0010:80d
+          link ConstantTags -> 105d:0002:c17
+NEW     1011:0010:c13 DeviceItemData name='PROFIBUS interface'
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'S71500.CP.Interface.PB'
+          ICoreAttributes.Name = 'PROFIBUS interface'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          IBrowsingAttributes.BrowsingParameters = 2097153
+          IConfigBaseData.ConfigObjectTypeName = 'S71500\\CP\\Submodules\\DP\\Interface\\MDD_S71500-CP-Profibus-Interface_2.0'
+          IConfigBaseData.ConfigObjectTypeVersion = '16.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[295] 270100000c0000003c000000300000000a000000090000003c0000003c0000008a0000001e000000
+          IDeviceItemData.DeviceItemFeatures = 0
+          IDeviceItemData.DeviceItemType = 1057284
+          IDeviceItemData.PositionNumber = 32768
+          IDeviceItemData.UICapabilities = 9223372036837998849
+          IDeviceItemData.FwVersion = ''
+          IDeviceItemData.InvariantTypeName = ''
+          IDeviceItemData.OrderNumber = ''
+          IDiagnosticAttributes.DiagCapabilities = 132
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.IsAutocreated = True
+          IPersistentExpandoData.BackPackRequired = True
+          IPersistentExpandoData.DPMasterMode = 1
+          IPersistentExpandoData.IsPersistentReadOnly = False
+          IPersistentExpandoData.UniqueSlaveId = '8b94702b-fa9d-4fc6-b141-d7bb134e9954'
+          IPersistentExpandoData.SlavesUploadInfo = ''
+          IPersistentExpandoData.TransferAreaInformationISlave = ''
+          IPersistentExpandoData.Sdb2xxxSlaveParameterBlock = bytes[21] 150000000000000000000000000000100100000000
+          IPersistentExpandoData.Sdb2xAddressTableBlock = bytes[21] 150000000000000000000000000000100100000000
+          link Parent -> 1018:0010:c10
+          link Environment -> 1028:0002:433
+          link Target -> 1018:0010:c10
+          link Container -> 1018:0010:c10
+          link LogicalContainer -> 100e:0010:808
+          link Controller -> 101c:0010:813
+          link DeviceItemNodes -> 101d:0010:c14
+          link AddressManagers -> 1057:0010:80d
+          link ConstantTags -> 105d:0002:c18
+NEW     1018:0010:c10 NonProgrammableTargetData name='CM_DP'
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.Protection = 'NoProtection'
+          ICoreAttributes.Password = ''
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.LastModifiedBy = 'factorybyte'
+          ICoreAttributes.Subtype = 'S71500.CP.PB'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'CM_DP'
+          IBrowsingAttributes.BrowsingParameters = 4363124753
+          IConfigBaseData.ConfigObjectTypeName = 'S71500\\CP\\Profibus\\Modules\\MDD_6ES7542-5DX00-0XE0_2.0'
+          IConfigBaseData.ConfigObjectTypeVersion = '19.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[72] 480000000c0000001c0000001000000002000000010000003c0000002c0000000200000010000000
+          IDeviceItemData.DeviceItemFeatures = 1
+          IDeviceItemData.DeviceItemType = 34
+          IDeviceItemData.PositionNumber = 2
+          IDeviceItemData.UICapabilities = 9223372036838002961
+          IDeviceItemData.FwVersion = 'V2.0'
+          IDeviceItemData.InvariantTypeName = 'CM 1542-5'
+          IDeviceItemData.OrderNumber = '6GK7 542-5DX00-0XE0'
+          IDiagnosticAttributes.DiagCapabilities = 8388860
+          IDiagnosticAttributes.OnlineHostPriority = 0
+          IPersistentExpandoData.BackPackRequired = True
+          link Parent -> 100e:0010:808
+          link Environment -> 1028:0002:433
+          link LogicalContainer -> 100e:0010:808
+          link Container -> 1011:0010:80e
+          link Controller -> 101c:0010:813
+          link DeviceItems -> 1011:0010:c11
+          link DeviceItems -> 1011:0010:c12
+          link DeviceItems -> 1011:0010:c13
+          link Elements -> 1011:0010:c11
+          link Elements -> 1011:0010:c12
+          link Elements -> 1011:0010:c13
+          link RelatedPackage -> 1002:0004:c15
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          IControllerTarget.MaxUsedLidForRange: bytes[53] 001d000000000000000000000000100100000001010000001d000000010000001900000013000080 -> bytes[53] 001d000000000000000000000000100100000001010000001d000000010000001900000013000080
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.ConstantLoadRelevantModifiedTime: '2026-10-19T17:22:33.774168Z' -> '2026-10-24T15:31:12.305290Z'
+          raw ICoreExpandoAttributes: 20112 -> 20112 bytes
+          raw <links 1>: 972 -> 972 bytes
+          raw <links 63>: 492 -> 492 bytes
+          raw <links 77>: 252 -> 252 bytes
+          +link typed slot 19 -> 105d:0002:c17
+          +link typed slot 19 -> 105d:0002:c18
+          +link typed slot 95 -> 1011:0010:c11
+          +link typed slot 95 -> 1011:0010:c12
+          +link typed slot 95 -> 1011:0010:c13
+          +link typed slot 95 -> 1018:0010:c10
+NEW     101d:0010:c14 NodeData name='P1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:12.123584Z'
+          ICoreAttributes.Subtype = '1'
+          ICoreAttributes.Name = 'P1'
+          IConfigBaseData.ConfigObjectTypeName = 'NodePBMpi'
+          IConfigBaseData.ConfigObjectTypeVersion = '11.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[164] a40000000c000000280000001c00000005000000040000003c000000320000003200000032000000
+          INodeData.NodeFeatures = 4
+          INodeData.NodePathID = 0
+          INodeData.NodeType = 1
+          INodeData.NodeID = 'P1'
+          IPersistentExpandoData.NodeGetsAddressAutomatically = True
+          IPersistentExpandoData.NodePBMpiAddress = 2
+          IPersistentExpandoData.NodePartylineHsa = 126
+          IPersistentExpandoData.NodePartylineBaudrate = 6
+          link DeviceItem -> 1011:0010:c13
+          link Environment -> 1028:0002:433
+          link Target -> 1018:0010:c10
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:41.521779Z' -> '2026-10-24T15:31:12.701540Z'  (timestamp)
+CHANGED 1039:0022:886 EAMTZTagTableFingerprintContainer name=None
+          ICommonFingerprintData.DataStore: bytes[382] 01ab05000000000000000000000010010000000101000000e402785eed944d4ec3301085cb160989 -> bytes[388] 01ab05000000000000000000000010010000000101000000ea02785eed94dd4ec2301cc5f1d6c4c4
+          ICommonFingerprintData.DataVersion: 639280273521448304 -> 639284526722651180
+          slot table [0, 553, 0, 152, 68, 0] -> [0, 559, 0, 152, 68, 0]
+CHANGED 1057:0010:80d AddressManagerV2Data name='S7-1500/ET200MP station_1 LAddressManager of type: Main '
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+          IPersistentExpandoData.AddressMap: bytes[284] 9c0200020100000000000000000000001001000000010100000001000001080031342e302e302e30 -> bytes[332] cc0200320100000000000000000000001001000000010100000001000001080031342e302e302e30
+          raw IPersistentExpandoData: 784 -> 1464 bytes
+          raw <links 1>: 228 -> 276 bytes
+          +link RegisteredDeviceItems -> 1011:0010:c11
+          +link RegisteredDeviceItems -> 1011:0010:c12
+          +link RegisteredDeviceItems -> 1011:0010:c13
+          slot table [84, 0, 0, 0, 0, 194, 526, 0, 442, 1310] -> [84, 0, 0, 0, 0, 194, 526, 0, 442, 1990]
+NEW     105d:0002:c17 SimaticConstantTagData name='Local~CM_DP'
+          ITagAddress.AddressMode = 'Invalid'
+          ITagAddress.DuplicateState = 'Unique'
+          ITagAddress.LocalIdentifier = 56
+          ITagAddress.LocalIdentifierIsValid = True
+          ITagAddress.LocalOffset = -1
+          ITagAddress.MaxUsedChildLid = 0
+          ITagAddress.Part10 = -1
+          ITagAddress.Part4 = -1
+          ITagAddress.Part5 = -1
+          ITagAddress.Part6 = -1
+          ITagAddress.Part7 = -1
+          ITagAddress.Part8 = -1
+          ITagAddress.Part9 = -1
+          ITagAddress.RuntimeIdentifier = 0
+          ITagAddress.RuntimeIdentifierIsValid = False
+          ITagAddress.SupportsAddressingByOffset = True
+          ITagAddress.AddressStrategy = ''
+          ITagAddress.LogicalAddress = ''
+          ITagAddress.Part1 = ''
+          ITagAddress.Part2 = ''
+          ITagAddress.Part3 = ''
+          ITagAddress.Scope = 'S71500'
+          IDefaultStrategyData.Visible = True
+          IDefaultStrategyData.LowerLimit = ''
+          IDefaultStrategyData.UpperLimit = ''
+          IDefaultStrategyData.DefaultValue = '258'
+          IDefaultStrategyData.Defaults = bytes[32] 2000000010000000180000000000000008000000000000000800000000000000
+          IStructureItem.HmiReadOnly = False
+          IStructureItem.HmiStructureTypeRelevant = True
+          IStructureItem.HmiVisible = True
+          IStructureItem.Index = 0
+          IStructureItem.IsUpdateRequired = False
+          IStructureItem.Kind = 'ElementaryRef'
+          IStructureItem.Length = 16
+          IStructureItem.LineId = -1
+          IStructureItem.MemberCount = 0
+          IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+          IStructureItem.LowerBounds = None
+          IStructureItem.UpperBounds = None
+          IStructureItem.DataTypeRefName = ''
+          IStructureItem.DisplayTypeName = 'Hw_SubModule'
+          IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IStructureRoot.CompileTime = '0001-01-01T00:00:00Z'
+          IStructureRoot.IsSystemDefined = True
+          IStructureRoot.IsValid = True
+          IStructureRoot.StructureModifiedTime = '0001-01-01T00:00:00Z'
+          IStructureRoot.Family = ''
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:12.256791Z'
+          ICoreAttributes.IsConstant = True
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'Local~CM_DP'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.LoadRelevantModifiedTime = '2026-10-24T15:31:12.305290Z'
+          link TagTable -> 1062:0002:815
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link BelongsTo -> 101c:0010:813
+          link DataTypeRef -> 1002:0002:8b7
+          link DeviceItem -> 1011:0010:c12
+NEW     105d:0002:c18 SimaticConstantTagData name='Local~CM_DP~PROFIBUS_interface'
+          ITagAddress.AddressMode = 'Invalid'
+          ITagAddress.DuplicateState = 'Unique'
+          ITagAddress.LocalIdentifier = 57
+          ITagAddress.LocalIdentifierIsValid = True
+          ITagAddress.LocalOffset = -1
+          ITagAddress.MaxUsedChildLid = 0
+          ITagAddress.Part10 = -1
+          ITagAddress.Part4 = -1
+          ITagAddress.Part5 = -1
+          ITagAddress.Part6 = -1
+          ITagAddress.Part7 = -1
+          ITagAddress.Part8 = -1
+          ITagAddress.Part9 = -1
+          ITagAddress.RuntimeIdentifier = 0
+          ITagAddress.RuntimeIdentifierIsValid = False
+          ITagAddress.SupportsAddressingByOffset = True
+          ITagAddress.AddressStrategy = ''
+          ITagAddress.LogicalAddress = ''
+          ITagAddress.Part1 = ''
+          ITagAddress.Part2 = ''
+          ITagAddress.Part3 = ''
+          ITagAddress.Scope = 'S71500'
+          IDefaultStrategyData.Visible = True
+          IDefaultStrategyData.LowerLimit = ''
+          IDefaultStrategyData.UpperLimit = ''
+          IDefaultStrategyData.DefaultValue = '259'
+          IDefaultStrategyData.Defaults = bytes[32] 2000000010000000180000000000000008000000000000000800000000000000
+          IStructureItem.HmiReadOnly = False
+          IStructureItem.HmiStructureTypeRelevant = True
+          IStructureItem.HmiVisible = True
+          IStructureItem.Index = 0
+          IStructureItem.IsUpdateRequired = False
+          IStructureItem.Kind = 'ElementaryRef'
+          IStructureItem.Length = 16
+          IStructureItem.LineId = -1
+          IStructureItem.MemberCount = 0
+          IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+          IStructureItem.LowerBounds = None
+          IStructureItem.UpperBounds = None
+          IStructureItem.DataTypeRefName = ''
+          IStructureItem.DisplayTypeName = 'Hw_Interface'
+          IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          IStructureRoot.CompileTime = '0001-01-01T00:00:00Z'
+          IStructureRoot.IsSystemDefined = True
+          IStructureRoot.IsValid = True
+          IStructureRoot.StructureModifiedTime = '0001-01-01T00:00:00Z'
+          IStructureRoot.Family = ''
+          ICoreAttributes.CreationTime = '2026-10-24T15:31:12.262014Z'
+          ICoreAttributes.IsConstant = True
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:31:10.491241Z'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'Local~CM_DP~PROFIBUS_interface'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.LoadRelevantModifiedTime = '2026-10-24T15:31:12.300292Z'
+          link TagTable -> 1062:0002:815
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link BelongsTo -> 101c:0010:813
+          link DataTypeRef -> 1002:0002:8bb
+          link DeviceItem -> 1011:0010:c13
+CHANGED 1062:0002:815 EAMTZTagTableData name='Default tag table'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:31:10.491241Z'  (timestamp)
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.LoadRelevantModifiedTime: '2026-10-19T17:22:36.950651Z' -> '2026-10-24T15:31:12.305290Z'
+          raw ICoreExpandoAttributes: 50 -> 50 bytes
+          raw <links 1>: 756 -> 788 bytes
+          +link Content -> 105d:0002:c17
+          +link Content -> 105d:0002:c18
+store records changed/new: 0002:0007:7, 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000d:0007:10, 0011:0007:bf2, 0011:0007:bf3, 0011:0007:ff8, 0014:0007:0, 0015:0007:20, 0016:0007:18

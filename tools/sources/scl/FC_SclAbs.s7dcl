@@ -1,0 +1,19 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclAbs" : Void
+    VAR_TEMP
+        b : Bool;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        %MW100 := 5;
+        %M10.3 := TRUE;
+        %Q1.0 := %I1.0;
+        %MD104 := 100;
+        %MB110 := 1;
+        #b := %M10.3;
+    END_NETWORK
+END_FUNCTION

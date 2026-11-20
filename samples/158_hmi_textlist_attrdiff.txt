@@ -1,0 +1,80 @@
+A: 102_hmi_tag_int.zap21  B: 158_hmi_textlist.zap21
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:55.784060Z' -> '2026-10-29T20:56:23.818150Z'  (timestamp)
+          raw <links 93>: 492 -> 492 bytes
+          +link typed slot 102 -> 1005:00e8:1c12
+NEW     1005:00c8:1c15 HmiTextData name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[94] 5e0000002b000000ffffffff020000000904ffff1c000000270000000700000053746f7070656400
+          link ExpandoParent -> 1007:00e8:1c14
+          link Category -> 100a:00c8:10f0
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1005:00c8:1c17 HmiTextData name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[94] 5e0000002b000000ffffffff020000000904ffff1c000000270000000700000052756e6e696e6700
+          link ExpandoParent -> 1007:00e8:1c16
+          link Category -> 100a:00c8:10f0
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+NEW     1005:00e8:1c12 HmiTextListData name='TL_State'
+          ICoreAttributes.CreationTime = '2026-10-29T20:56:23.818150Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:56:23.818150Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'TL_State'
+          link HmiTextListDataParent -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link HmiTextListEntryDataChildren -> 1007:00e8:1c14
+          link HmiTextListEntryDataChildren -> 1007:00e8:1c16
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.History: bytes[126] 7e000000010000000c0000007200000020000000360a431a032edf482d0000000000000000000000 -> bytes[259] 030100000200000010000000820000007200000020000000360a431a032edf482d00000000000000
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:55.784060Z' -> '2026-10-29T20:56:23.818150Z'  (timestamp)
+NEW     1007:00e8:1c14 HmiTextListEntryData name='Text_list_entry_1'
+          ICoreAttributes.CreationTime = '2026-10-29T20:56:23.818150Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:56:23.818150Z'
+          ICoreAttributes.Name = 'Text_list_entry_1'
+          ITextAttributes.Text = bytes[6] 060000000080
+          IHmiListEntryAttributes.DefaultEntry = False
+          IHmiListEntryAttributes.EntryType = 'SingleValue'
+          IHmiListEntryAttributes.From = 0
+          IHmiListEntryAttributes.To = 0
+          link HmiTextListEntryDataParent -> 1005:00e8:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoChildren -> 1005:00c8:1c15
+NEW     1007:00e8:1c16 HmiTextListEntryData name='Text_list_entry_2'
+          ICoreAttributes.CreationTime = '2026-10-29T20:56:23.818150Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-29T20:56:23.818150Z'
+          ICoreAttributes.Name = 'Text_list_entry_2'
+          ITextAttributes.Text = bytes[6] 060000000080
+          IHmiListEntryAttributes.DefaultEntry = False
+          IHmiListEntryAttributes.EntryType = 'SingleValue'
+          IHmiListEntryAttributes.From = 1
+          IHmiListEntryAttributes.To = 1
+          link HmiTextListEntryDataParent -> 1005:00e8:1c12
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link ExpandoChildren -> 1005:00c8:1c17
+CHANGED 100a:00c8:10f0 HMI_runtime name='HMI runtime'
+          raw <links 21>: 3852 -> 3852 bytes
+          +link typed slot 25 -> 1005:00c8:1c15
+          +link typed slot 25 -> 1005:00c8:1c17
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[978] 00ba03000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e -> bytes[837] 01e10c000000000000000000000010010000000101000000ab06785eed96db6edb381086fb28822e
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:02.518832Z' -> '2026-10-29T20:56:54.191653Z'  (timestamp)
+store records changed/new: 0003:0007:3, 0004:0007:5, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

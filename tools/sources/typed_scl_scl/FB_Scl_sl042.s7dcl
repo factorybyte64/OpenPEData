@@ -1,0 +1,19 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl042"
+    VAR_INPUT
+        v_count : UDInt;
+        v_src_index : DInt;
+        v_dest_index : DInt;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : UDInt;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := MOVE_BLK_VARIANT(COUNT := #v_count, SRC_INDEX := #v_src_index, DEST_INDEX := #v_dest_index);
+    END_NETWORK
+END_FUNCTION_BLOCK

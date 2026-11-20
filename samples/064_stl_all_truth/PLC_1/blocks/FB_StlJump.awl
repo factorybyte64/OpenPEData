@@ -1,0 +1,203 @@
+﻿FUNCTION_BLOCK "FB_StlJump"
+TITLE = STL catalog FB_StlJump
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR 
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 102 Jump label
+      JU LB01;
+      L 1;
+      T #ir;
+LB01:      NOP 0;
+NETWORK
+TITLE = 103 JU
+      JU J001;
+      L 1;
+      T #ir;
+J001:      NOP 0;
+NETWORK
+TITLE = 104 JC
+      A #a;
+      JC J002;
+      L 1;
+      T #ir;
+J002:      NOP 0;
+NETWORK
+TITLE = 105 JCN
+      A #a;
+      JCN J003;
+      L 1;
+      T #ir;
+J003:      NOP 0;
+NETWORK
+TITLE = 106 JCB
+      A #a;
+      JCB J004;
+      L 1;
+      T #ir;
+J004:      NOP 0;
+NETWORK
+TITLE = 107 JNB
+      A #a;
+      JNB J005;
+      L 1;
+      T #ir;
+J005:      NOP 0;
+NETWORK
+TITLE = 108 JBI
+      A #a;
+      SAVE;
+      JBI J006;
+      L 1;
+      T #ir;
+J006:      NOP 0;
+NETWORK
+TITLE = 109 JNBI
+      A #a;
+      SAVE;
+      JNBI J007;
+      L 1;
+      T #ir;
+J007:      NOP 0;
+NETWORK
+TITLE = 110 JO
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JO J008;
+      L 1;
+      T #ir;
+J008:      NOP 0;
+NETWORK
+TITLE = 111 JOS
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JOS J009;
+      L 1;
+      T #ir;
+J009:      NOP 0;
+NETWORK
+TITLE = 112 JZ
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JZ J010;
+      L 1;
+      T #ir;
+J010:      NOP 0;
+NETWORK
+TITLE = 113 JN
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JN J011;
+      L 1;
+      T #ir;
+J011:      NOP 0;
+NETWORK
+TITLE = 114 JP
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JP J012;
+      L 1;
+      T #ir;
+J012:      NOP 0;
+NETWORK
+TITLE = 115 JM
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JM J013;
+      L 1;
+      T #ir;
+J013:      NOP 0;
+NETWORK
+TITLE = 116 JPZ
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JPZ J014;
+      L 1;
+      T #ir;
+J014:      NOP 0;
+NETWORK
+TITLE = 117 JMZ
+      L #i1;
+      L #i2;
+      -I;
+      T #ir;
+      JMZ J015;
+      L 1;
+      T #ir;
+J015:      NOP 0;
+NETWORK
+TITLE = 118 JUO
+      L #r1;
+      L #r2;
+      /R;
+      T #rr;
+      JUO J016;
+      L 1;
+      T #ir;
+J016:      NOP 0;
+NETWORK
+TITLE = 119 JL
+      L #i1;
+      JL LST1;
+      JU SG0;
+      JU SG1;
+LST1:      JU SEND;
+SG0:      L 10;
+      T #ir;
+      JU SEND;
+SG1:      L 11;
+      T #ir;
+SEND:      NOP 0;
+NETWORK
+TITLE = 120 LOOP
+      L 5;
+NXT1:      T #ir;
+      L #ir;
+      LOOP NXT1;
+END_FUNCTION_BLOCK
+

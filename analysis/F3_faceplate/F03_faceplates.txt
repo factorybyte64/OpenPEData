@@ -1,0 +1,53 @@
+Faceplate type FP_Basic  guid f10ac243-f6e0-459c-bd54-b3b7d374677f  default 0.0.1
+  V 0.0.1 Committed default  author factorybyte  released 2026-10-20T17:49:59.722470Z  env 92 objects
+    content 750x300, interface empty
+      B_CircArc1       HmiCircularArc               310,250 NonexNone
+      B_Circle1        HmiCircle                    70,250 NonexNone
+      B_CircleSeg1     HmiCircleSegment             190,250 NonexNone
+      B_EllArc1        HmiEllipticalArc             350,140 NonexNone
+      B_Ellipse1       HmiEllipse                   70,140 NonexNone
+      B_EllipseSeg1    HmiEllipseSegment            210,140 NonexNone
+      B_GraphicView1   HmiGraphicView               590,10 150x100
+      B_Line1          HmiLine                      150,10 120x60
+      B_Polygon1       HmiPolygon                   430,10 106x58
+      B_Polyline1      HmiPolyline                  290,10 106x58
+      B_Rect1          HmiRectangle                 10,10 120x60
+      B_Text1          HmiText                      390,220 160x40
+Faceplate type FP_Controls  guid cb3ad79d-2036-4097-b6a3-f8ac40771bec  default None
+  V 0.0.1 InWork  author factorybyte  env 88 objects
+    content 810x880, interface empty
+      C_AlarmControl1  HmiAlarmControl              10,10 380x200
+      C_DetParam1      HmiDetailedParameterControl  400,350 190x120
+      C_Faceplate1     HmiFaceplateContainer        10,750 190x120
+      C_Trend1         HmiTrendControl              400,10 380x200
+Faceplate type FP_Elements  guid b97a64fc-3cf5-46f4-8040-af01de06aadc  default 0.0.1
+  V 0.0.1 Committed default  author factorybyte  released 2026-10-20T17:57:01.748150Z  env 97 objects
+    content 800x400, interface empty
+      E_Bar1           HmiBar                       10,90 60x180
+      E_Button1        HmiButton                    10,10 140x50
+      E_CheckBox1      HmiCheckBoxGroup             10,290 160x100
+      E_Clock1         HmiClock                     390,90 160x160
+      E_Gauge1         HmiGauge                     190,90 180x180
+      E_IOField1       HmiIOField                   170,10 140x40
+      E_ListBox1       HmiListBox                   370,290 160x100
+      E_Radio1         HmiRadioButtonGroup          190,290 160x100
+      E_Slider1        HmiSlider                    90,90 80x180
+      E_Switch1        HmiToggleSwitch              570,90 120x50
+      E_SymIOField1    HmiSymbolicIOField           330,10 140x40
+      E_TextBox1       HmiTextBox                   490,10 160x60
+      E_TouchArea1     HmiTouchArea                 550,290 140x100
+Faceplate type FP_Interface  guid 34f8de41-c791-40c1-80b8-95ee32a6d1ba  default None
+  V 0.0.1 InWork  author factorybyte  env 88 objects
+    content 360x260, interface empty
+      I_Bar1           HmiBar                       190,90 60x160
+      I_IOField1       HmiIOField                   10,110 140x40
+      I_Rect1          HmiRectangle                 10,10 120x80
+      I_Text1          HmiText                      150,10 200x40  events ForeColorTrigger
+    unresolved tags (shells): HmiTag_Ext1
+Faceplate type FP_Script  guid 73628c9d-31e9-49e6-877b-5d12fcb7b00d  default None
+  V 0.0.1 InWork  author factorybyte  env 87 objects
+    content 180x140, interface empty
+      S_Button1        HmiButton                    10,10 160x50  events OnTapped,OnDown
+      S_IOField1       HmiIOField                   10,90 160x40  events ProcessValueOnPropertyChanged
+    unresolved tags (shells): HmiTag_Ext1
+Faceplate instance C_Faceplate1 on FP_Controls (no type)

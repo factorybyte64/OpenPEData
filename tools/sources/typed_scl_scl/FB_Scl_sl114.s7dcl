@@ -1,0 +1,28 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl114"
+    VAR_INPUT
+        v_o_cmd : Bool;
+        v_c_cmd : Bool;
+        v_s_cmd : Bool;
+        v_o_fb : Bool;
+        v_c_fb : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_oo : Bool;
+        v_co : Bool;
+        v_oa : Bool;
+        v_ca : Bool;
+        v_q : Bool;
+    END_VAR
+    VAR
+        inst : MCAT;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #inst(O_CMD := #v_o_cmd, C_CMD := #v_c_cmd, S_CMD := #v_s_cmd, O_FB := #v_o_fb, C_FB := #v_c_fb, OO => #v_oo, CO => #v_co, OA => #v_oa, CA => #v_ca, Q => #v_q);
+    END_NETWORK
+END_FUNCTION_BLOCK

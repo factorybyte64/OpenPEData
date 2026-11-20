@@ -1,0 +1,182 @@
+{
+ "pattern": ".",
+ "ignoreCase": true,
+ "scannedScreens": 2,
+ "scannedScripts": 12,
+ "matchedScreens": 2,
+ "hitCount": 17,
+ "truncated": false,
+ "missing": [],
+ "results": [
+  {
+   "screen": "FP_Script",
+   "groupPath": "",
+   "hits": [
+    {
+     "item": null,
+     "handler": "event:Loaded",
+     "field": "ScriptCode",
+     "line": 1,
+     "text": "// F01 FP_Script Loaded",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": null,
+     "handler": "event:Loaded",
+     "field": "ScriptCode",
+     "line": 2,
+     "text": "HMIRuntime.Trace(\"F01 screen loaded\");",
+     "textShortened": null,
+     "match": "H"
+    },
+    {
+     "item": null,
+     "handler": "event:Loaded",
+     "field": "GlobalDefinitionAreaScriptCode",
+     "line": 1,
+     "text": "//Insert definitions for events here",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "S_Button1",
+     "handler": "event:Tapped",
+     "field": "ScriptCode",
+     "line": 1,
+     "text": "// F01 S_Button1 Tapped",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "S_Button1",
+     "handler": "event:Tapped",
+     "field": "ScriptCode",
+     "line": 2,
+     "text": "Tags(\"HmiTag_Ext1\").Write(true);",
+     "textShortened": null,
+     "match": "T"
+    },
+    {
+     "item": "S_Button1",
+     "handler": "event:Tapped",
+     "field": "GlobalDefinitionAreaScriptCode",
+     "line": 1,
+     "text": "//Insert definitions for events here",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "S_Button1",
+     "handler": "event:Down",
+     "field": "ScriptCode",
+     "line": 1,
+     "text": "// F01 S_Button1 Down",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "S_Button1",
+     "handler": "event:Down",
+     "field": "ScriptCode",
+     "line": 2,
+     "text": "HMIRuntime.Trace(\"F01 button down\");",
+     "textShortened": null,
+     "match": "H"
+    },
+    {
+     "item": "S_Button1",
+     "handler": "event:Down",
+     "field": "GlobalDefinitionAreaScriptCode",
+     "line": 1,
+     "text": "//Insert definitions for events here",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "S_IOField1",
+     "handler": "propertyEvent:ProcessValue",
+     "field": "ScriptCode",
+     "line": 1,
+     "text": "// F01 S_IOField1 ProcessValue Change",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "S_IOField1",
+     "handler": "propertyEvent:ProcessValue",
+     "field": "ScriptCode",
+     "line": 2,
+     "text": "HMIRuntime.Trace(\"F01 value changed: \" + value);",
+     "textShortened": null,
+     "match": "H"
+    },
+    {
+     "item": "S_IOField1",
+     "handler": "propertyEvent:ProcessValue",
+     "field": "GlobalDefinitionAreaScriptCode",
+     "line": 1,
+     "text": "//Insert definitions for events here",
+     "textShortened": null,
+     "match": "/"
+    }
+   ]
+  },
+  {
+   "screen": "FP_Interface",
+   "groupPath": "",
+   "hits": [
+    {
+     "item": null,
+     "handler": "dynamization:BackColor",
+     "field": "ScriptCode",
+     "line": 1,
+     "text": "return Tags(\"HmiTag_Ext1\").Read() ? 0xFFFFF0F0 : 0xFFF0F0FF;",
+     "textShortened": null,
+     "match": "r"
+    },
+    {
+     "item": null,
+     "handler": "dynamization:BackColor",
+     "field": "GlobalDefinitionAreaScriptCode",
+     "line": 1,
+     "text": "// F01 global definition I_Text1",
+     "textShortened": null,
+     "match": "/"
+    },
+    {
+     "item": "I_Text1",
+     "handler": "dynamization:ForeColor",
+     "field": "ScriptCode",
+     "line": 1,
+     "text": "let v = Tags(\"HmiTag_Ext1\").Read();",
+     "textShortened": null,
+     "match": "l"
+    },
+    {
+     "item": "I_Text1",
+     "handler": "dynamization:ForeColor",
+     "field": "ScriptCode",
+     "line": 2,
+     "text": "return v ? 0xFFFF0000 : 0xFF006600;",
+     "textShortened": null,
+     "match": "r"
+    },
+    {
+     "item": "I_Text1",
+     "handler": "dynamization:ForeColor",
+     "field": "GlobalDefinitionAreaScriptCode",
+     "line": 1,
+     "text": "// F01 global definition I_Text1",
+     "textShortened": null,
+     "match": "/"
+    }
+   ]
+  }
+ ],
+ "durationMs": 289,
+ "queueMs": 1,
+ "defaulted": {
+  "path": "000_empty"
+ }
+}

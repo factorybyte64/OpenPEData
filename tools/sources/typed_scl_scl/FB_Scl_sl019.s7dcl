@@ -1,0 +1,23 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl019"
+    VAR_INPUT
+        v_c_no : Counter;
+        v_cu : Bool;
+        v_cd : Bool;
+        v_s : Bool;
+        v_pv : Word;
+        v_r : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_q : Bool;
+        v_cv : Word;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_cv := S_CUD(C_NO := #v_c_no, CU := #v_cu, CD := #v_cd, S := #v_s, PV := #v_pv, R := #v_r, Q => #v_q);
+    END_NETWORK
+END_FUNCTION_BLOCK

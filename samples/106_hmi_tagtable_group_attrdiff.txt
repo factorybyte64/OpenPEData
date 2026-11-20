@@ -1,0 +1,1095 @@
+A: 101_hmi_base  B: 106_hmi_tagtable_group
+NEW     1004:00e5:1809 HmiTagTableData name='HmiTagTable_1'
+          ICoreAttributes.CreationTime = '2026-10-20T14:57:50.780715Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T14:57:50.780715Z'
+          ICoreAttributes.Subtype = ''
+          ICoreAttributes.Name = 'HmiTagTable_1'
+          link AggregatingFolder -> 100e:0002:1808
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:22.741476Z' -> '2026-10-20T14:57:50.780715Z'  (timestamp)
+CHANGED 100e:0002:106b FolderData name='HmiTagFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T14:57:43.086812Z'  (timestamp)
+          raw <links 1>: 52 -> 52 bytes
+          +link AggregatedElements -> 100e:0002:1808
+NEW     100e:0002:1808 FolderData name='HmiTagGroup_1'
+          IFolderAttributes.AvailableLocalSubpathLength = 0
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T14:57:50.780715Z'
+          ICoreAttributes.Subtype = 'HmiTag.Subfolder'
+          ICoreAttributes.Name = 'HmiTagGroup_1'
+          link AggregatingFolder -> 100e:0002:106b
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link AggregatedElements -> 1004:00e5:1809
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:54:32.379110Z' -> '2026-10-20T14:57:56.344359Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000c:0007:e, 000d:0007:10, 0014:0007:1bf0, 0015:0007:20
+
+DUMP HmiTagData, HmiTagTableData, FolderData
+OBJECT 1004:00e5:106c HmiTagTableData name='Default tag table' size=678
+  slot  0 IFolderElementAttributes                                -
+  slot  1 ICoreAttributes                                         57 bytes
+  slot  2 ICoreExpandoAttributes                                  -
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 <links 0>                                               84 bytes
+  slot  5 <links 1>                                               468 bytes
+    ICoreAttributes.CreationTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.IsConstant = False
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:54:22.741476Z'
+    ICoreAttributes.Name = 'Default tag table'
+    ICoreAttributes.Subtype = 'Default'
+    link AggregatingFolder                        -> 100e:0002:106b FolderData name='HmiTagFolder'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link Content                                  -> 1007:00e5:10af HmiSystemTagData name='@RedundancyState_2'
+    link Content                                  -> 1007:00e5:10b1 HmiSystemTagData name='@ServerMachineName'
+    link Content                                  -> 1007:00e5:10b3 HmiSystemTagData name='@ServerMachineName_1'
+    link Content                                  -> 1007:00e5:10b5 HmiSystemTagData name='@ServerMachineName_2'
+    link Content                                  -> 1007:00e5:10b7 HmiSystemTagData name='@ConfiguredAlarms'
+    link Content                                  -> 1007:00e5:10b9 HmiSystemTagData name='@DiagnosticsIndicatorTag'
+    link Content                                  -> 1007:00e5:10bb HmiSystemTagData name='@ConfiguredLoggingTags'
+    link Content                                  -> 1007:00e5:10bd HmiSystemTagData name='@OnlineBackupState'
+    link Content                                  -> 1007:00e5:10bf HmiSystemTagData name='@UserName'
+    link Content                                  -> 1007:00e5:10c1 HmiSystemTagData name='@LocalMachineName'
+    link Content                                  -> 1007:00e5:10c3 HmiSystemTagData name='@RedundancyState_1'
+    link Content                                  -> 1007:00e5:10c5 HmiSystemTagData name='@ConfiguredExternalTags'
+    link Content                                  -> 1007:00e5:10c7 HmiSystemTagData name='@SystemHealthIndex_2'
+    link Content                                  -> 1007:00e5:10c9 HmiSystemTagData name='@SystemActivationState_2'
+    link Content                                  -> 1007:00e5:10cb HmiSystemTagData name='@SystemHealthIndex'
+    link Content                                  -> 1007:00e5:10cd HmiSystemTagData name='@KPIEnabled'
+    link Content                                  -> 1007:00e5:10cf HmiSystemTagData name='@DeltaActivationState'
+    link Content                                  -> 1007:00e5:10d1 HmiSystemTagData name='@DeltaActivationState_1'
+    link Content                                  -> 1007:00e5:10d3 HmiSystemTagData name='@DeltaActivationState_2'
+    link Content                                  -> 1007:00e5:10d5 HmiSystemTagData name='@SystemHealthIndex_1'
+    link Content                                  -> 1007:00e5:10d7 HmiSystemTagData name='@Heartbeat'
+    link Content                                  -> 1007:00e5:10d9 HmiSystemTagData name='@SystemActivationState_1'
+    link Content                                  -> 1007:00e5:10db HmiSystemTagData name='@CurrentLanguage'
+    link Content                                  -> 1007:00e5:10dd HmiSystemTagData name='@SystemActivationState'
+    link Content                                  -> 1007:00e5:10df HmiSystemTagData name='@Heartbeat_2'
+    link Content                                  -> 1007:00e5:10e1 HmiSystemTagData name='@Heartbeat_1'
+    link Content                                  -> 1007:00e5:10e3 HmiSystemTagData name='@UserDomain'
+    link Content                                  -> 1007:00e5:157b HmiSystemTagData name='@HMI_Connection_1_PLC_OpState'
+    link Content                                  -> 1007:00e5:157d HmiSystemTagData name='@HMI_Connection_1_PLC_OpStateCtrl'
+OBJECT 1004:00e5:1809 HmiTagTableData name='HmiTagTable_1' size=199
+  slot  0 IFolderElementAttributes                                -
+  slot  1 ICoreAttributes                                         46 bytes
+  slot  2 ICoreExpandoAttributes                                  -
+  slot  3 ICoreExpandoLinkAttributes                              -
+  slot  4 <links 0>                                               84 bytes
+  slot  5 <links 1>                                               -
+    ICoreAttributes.CreationTime = '2026-10-20T14:57:50.780715Z'
+    ICoreAttributes.IsConstant = False
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = False
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:57:50.780715Z'
+    ICoreAttributes.Subtype = ''
+    ICoreAttributes.Name = 'HmiTagTable_1'
+    link AggregatingFolder                        -> 100e:0002:1808 FolderData name='HmiTagGroup_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1064 FolderData name='HmiVBScriptFolder' size=225
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         52 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'HmiVBScript'
+    ICoreAttributes.Name = 'HmiVBScriptFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1065 FolderData name='HmiCScriptFolder' size=223
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         50 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'HmiCScript'
+    ICoreAttributes.Name = 'HmiCScriptFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1066 FolderData name='HmiCHeaderFolder' size=223
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         50 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'HmiCHeader'
+    ICoreAttributes.Name = 'HmiCHeaderFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1067 FolderData name='ScreenViewFolder' size=223
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         50 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'ScreenView'
+    ICoreAttributes.Name = 'ScreenViewFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1068 FolderData name='TemplateFolder' size=219
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         46 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'Template'
+    ICoreAttributes.Name = 'TemplateFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1069 FolderData name='PopupScreenFolder' size=225
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         52 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'PopupScreen'
+    ICoreAttributes.Name = 'PopupScreenFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:106a FolderData name='SlideinScreenFolder' size=229
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         56 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'SlideinScreen'
+    ICoreAttributes.Name = 'SlideinScreenFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:106b FolderData name='HmiTagFolder' size=267
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         42 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:57:43.086812Z'
+    ICoreAttributes.Subtype = 'HmiTag'
+    ICoreAttributes.Name = 'HmiTagFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link AggregatedElements                       -> 1004:00e5:106c HmiTagTableData name='Default tag table'
+    link AggregatedElements                       -> 100e:0002:1808 FolderData name='HmiTagGroup_1'
+OBJECT 100e:0002:106d FolderData name='HmiStructureTypeFolder' size=235
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         62 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'HmiStructureType'
+    ICoreAttributes.Name = 'HmiStructureTypeFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:106e FolderData name='ILScreenFolder' size=219
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         46 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'ILScreen'
+    ICoreAttributes.Name = 'ILScreenFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:106f FolderData name='ParameterSetTypeFolder' size=235
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         62 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:53:48.984638Z'
+    ICoreAttributes.Subtype = 'ParameterSetType'
+    ICoreAttributes.Name = 'ParameterSetTypeFolder'
+    link FolderParent                             -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+OBJECT 100e:0002:1808 FolderData name='HmiTagGroup_1' size=278
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         53 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = False
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:57:50.780715Z'
+    ICoreAttributes.Subtype = 'HmiTag.Subfolder'
+    ICoreAttributes.Name = 'HmiTagGroup_1'
+    link AggregatingFolder                        -> 100e:0002:106b FolderData name='HmiTagFolder'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link AggregatedElements                       -> 1004:00e5:1809 HmiTagTableData name='HmiTagTable_1'
+OBJECT 100e:0002:434 FolderData name='DocumentationSettingsFolder' size=303
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         78 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'DocumentationSettingsFolder'
+    ICoreAttributes.Name = 'DocumentationSettingsFolder'
+    link FolderParent                             -> 1028:0002:433 ProjectData name='000_empty'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link AggregatedElements                       -> 100e:0002:435 FolderData name='DocumentInformationFolder'
+    link AggregatedElements                       -> 100e:0002:436 FolderData name='FramesFolder'
+    link AggregatedElements                       -> 100e:0002:437 FolderData name='CoverPagesFolder'
+OBJECT 100e:0002:435 FolderData name='DocumentInformationFolder' size=247
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         74 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'DocumentInformationFolder'
+    ICoreAttributes.Name = 'DocumentInformationFolder'
+    link AggregatingFolder                        -> 100e:0002:434 FolderData name='DocumentationSettingsFolder'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:436 FolderData name='FramesFolder' size=221
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         48 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'FramesFolder'
+    ICoreAttributes.Name = 'FramesFolder'
+    link AggregatingFolder                        -> 100e:0002:434 FolderData name='DocumentationSettingsFolder'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:437 FolderData name='CoverPagesFolder' size=229
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         56 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'CoverPagesFolder'
+    ICoreAttributes.Name = 'CoverPagesFolder'
+    link AggregatingFolder                        -> 100e:0002:434 FolderData name='DocumentationSettingsFolder'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:438 FolderData name='CommonDataFolder' size=229
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         56 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'CommonDataFolder'
+    ICoreAttributes.Name = 'CommonDataFolder'
+    link FolderParent                             -> 1028:0002:433 ProjectData name='000_empty'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:439 FolderData name='VersionControlInterfaceSystemFolder' size=267
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         94 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'VersionControlInterfaceSystemFolder'
+    ICoreAttributes.Name = 'VersionControlInterfaceSystemFolder'
+    link FolderParent                             -> 1028:0002:433 ProjectData name='000_empty'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:43a FolderData name='AdditionalDevicesFolder' size=243
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         70 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'AdditionalDevicesFolder'
+    ICoreAttributes.Name = 'AdditionalDevicesFolder'
+    link FolderParent                             -> 1028:0002:433 ProjectData name='000_empty'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:43b FolderData name='CrossDeviceFunctionFolderData' size=307
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         82 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'CrossDeviceFunctionFolderData'
+    ICoreAttributes.Name = 'CrossDeviceFunctionFolderData'
+    link FolderParent                             -> 1028:0002:433 ProjectData name='000_empty'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link AggregatedElements                       -> 100e:0002:43c FolderData name='MachineValidationFolderData'
+    link AggregatedElements                       -> 100e:0002:43d FolderData name='DistributedTraceFolderData'
+    link AggregatedElements                       -> 100e:0002:43f FolderData name='LttDistributedTraceFolderData'
+OBJECT 100e:0002:43c FolderData name='MachineValidationFolderData' size=251
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         78 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'MachineValidationFolderData'
+    ICoreAttributes.Name = 'MachineValidationFolderData'
+    link AggregatingFolder                        -> 100e:0002:43b FolderData name='CrossDeviceFunctionFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:43d FolderData name='DistributedTraceFolderData' size=301
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         76 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'DistributedTraceFolderData'
+    ICoreAttributes.Name = 'DistributedTraceFolderData'
+    link AggregatingFolder                        -> 100e:0002:43b FolderData name='CrossDeviceFunctionFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link AggregatedElements                       -> 100e:0002:43e FolderData name='DistributedTraceMeasurementFolderData'
+OBJECT 100e:0002:43e FolderData name='DistributedTraceMeasurementFolderData' size=271
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         98 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'DistributedTraceMeasurementFolderData'
+    ICoreAttributes.Name = 'DistributedTraceMeasurementFolderData'
+    link AggregatingFolder                        -> 100e:0002:43d FolderData name='DistributedTraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:43f FolderData name='LttDistributedTraceFolderData' size=307
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         82 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'LttDistributedTraceFolderData'
+    ICoreAttributes.Name = 'LttDistributedTraceFolderData'
+    link AggregatingFolder                        -> 100e:0002:43b FolderData name='CrossDeviceFunctionFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link AggregatedElements                       -> 100e:0002:440 FolderData name='LttDistributedTraceMeasurementFolderData'
+OBJECT 100e:0002:440 FolderData name='LttDistributedTraceMeasurementFolderData' size=277
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         104 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'LttDistributedTraceMeasurementFolderData'
+    ICoreAttributes.Name = 'LttDistributedTraceMeasurementFolderData'
+    link AggregatingFolder                        -> 100e:0002:43f FolderData name='LttDistributedTraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+OBJECT 100e:0002:444 FolderData name='LibrarySystemTypeSystemFolder' size=255
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         82 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'LibrarySystemTypeSystemFolder'
+    ICoreAttributes.Name = 'LibrarySystemTypeSystemFolder'
+    link FolderParent                             -> 1014:0002:443 LibraryData name='Project library'
+    link Environment                              -> 1014:0002:443 LibraryData name='Project library'
+OBJECT 100e:0002:445 FolderData name='LibraryTypeSystemFolder' size=243
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         70 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'LibraryTypeSystemFolder'
+    ICoreAttributes.Name = 'LibraryTypeSystemFolder'
+    link FolderParent                             -> 1014:0002:443 LibraryData name='Project library'
+    link Environment                              -> 1014:0002:443 LibraryData name='Project library'
+OBJECT 100e:0002:446 FolderData name='LibraryMasterCopySystemFolder' size=255
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         82 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'LibraryMasterCopySystemFolder'
+    ICoreAttributes.Name = 'LibraryMasterCopySystemFolder'
+    link FolderParent                             -> 1014:0002:443 LibraryData name='Project library'
+    link Environment                              -> 1014:0002:443 LibraryData name='Project library'
+OBJECT 100e:0002:447 FolderData name='LibrarySystemMasterCopySystemFolder' size=267
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         94 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'LibrarySystemMasterCopySystemFolder'
+    ICoreAttributes.Name = 'LibrarySystemMasterCopySystemFolder'
+    link FolderParent                             -> 1014:0002:443 LibraryData name='Project library'
+    link Environment                              -> 1014:0002:443 LibraryData name='Project library'
+OBJECT 100e:0002:448 FolderData name='CommonDataFolder' size=229
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         56 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:04:51.432907Z'
+    ICoreAttributes.Subtype = 'CommonDataFolder'
+    ICoreAttributes.Name = 'CommonDataFolder'
+    link FolderParent                             -> 1014:0002:443 LibraryData name='Project library'
+    link Environment                              -> 1014:0002:443 LibraryData name='Project library'
+OBJECT 100e:0002:814 FolderData name='ControllerTagsFolder' size=289
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         64 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:23:06.359293Z'
+    ICoreAttributes.Subtype = 'ControllerTagsFolder'
+    ICoreAttributes.Name = 'ControllerTagsFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link AggregatedElements                       -> 1062:0002:815 EAMTZTagTableData name='Default tag table'
+    link AggregatedElements                       -> 1062:0002:c10 EAMTZTagTableData name='TagTable_1'
+OBJECT 100e:0002:816 FolderData name='EnergySuite' size=219
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         46 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'EnergySuite'
+    ICoreAttributes.Name = 'EnergySuite'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:817 FolderData name='TraceFolderData' size=311
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         54 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               84 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'TraceFolderData'
+    ICoreAttributes.Name = 'TraceFolderData'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link AggregatedElements                       -> 100e:0002:818 FolderData name='LttFolderData'
+    link AggregatedElements                       -> 100e:0002:81c FolderData name='TraceMeasurementFolderData'
+    link AggregatedElements                       -> 100e:0002:81d FolderData name='TraceRecordFolderData'
+    link AggregatedElements                       -> 100e:0002:81e FolderData name='TraceCombinedRecordFolderData'
+    link AggregatedElements                       -> 100e:0002:81f FolderData name='TraceDistributedFolderData'
+OBJECT 100e:0002:818 FolderData name='LttFolderData' size=275
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         50 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'LttFolderData'
+    ICoreAttributes.Name = 'LttFolderData'
+    link AggregatingFolder                        -> 100e:0002:817 FolderData name='TraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link AggregatedElements                       -> 100e:0002:819 FolderData name='LttRecordFolderData'
+    link AggregatedElements                       -> 100e:0002:81a FolderData name='LttCombinedRecordFolderData'
+    link AggregatedElements                       -> 100e:0002:81b FolderData name='TraceLttDistributedFolderData'
+OBJECT 100e:0002:819 FolderData name='LttRecordFolderData' size=235
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         62 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'LttRecordFolderData'
+    ICoreAttributes.Name = 'LttRecordFolderData'
+    link AggregatingFolder                        -> 100e:0002:818 FolderData name='LttFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:81a FolderData name='LttCombinedRecordFolderData' size=251
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         78 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'LttCombinedRecordFolderData'
+    ICoreAttributes.Name = 'LttCombinedRecordFolderData'
+    link AggregatingFolder                        -> 100e:0002:818 FolderData name='LttFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:81b FolderData name='TraceLttDistributedFolderData' size=255
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         82 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'TraceLttDistributedFolderData'
+    ICoreAttributes.Name = 'TraceLttDistributedFolderData'
+    link AggregatingFolder                        -> 100e:0002:818 FolderData name='LttFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:81c FolderData name='TraceMeasurementFolderData' size=249
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         76 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'TraceMeasurementFolderData'
+    ICoreAttributes.Name = 'TraceMeasurementFolderData'
+    link AggregatingFolder                        -> 100e:0002:817 FolderData name='TraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:81d FolderData name='TraceRecordFolderData' size=239
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         66 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'TraceRecordFolderData'
+    ICoreAttributes.Name = 'TraceRecordFolderData'
+    link AggregatingFolder                        -> 100e:0002:817 FolderData name='TraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:81e FolderData name='TraceCombinedRecordFolderData' size=255
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         82 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'TraceCombinedRecordFolderData'
+    ICoreAttributes.Name = 'TraceCombinedRecordFolderData'
+    link AggregatingFolder                        -> 100e:0002:817 FolderData name='TraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:81f FolderData name='TraceDistributedFolderData' size=249
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         76 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:27.375013Z'
+    ICoreAttributes.Subtype = 'TraceDistributedFolderData'
+    ICoreAttributes.Name = 'TraceDistributedFolderData'
+    link AggregatingFolder                        -> 100e:0002:817 FolderData name='TraceFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:834 FolderData name='ProgramUnitsFolder' size=233
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         60 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'ProgramUnitsFolder'
+    ICoreAttributes.Name = 'ProgramUnitsFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:906 FolderData name='OpcUaFolderData' size=279
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         54 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'OpcUaFolderData'
+    ICoreAttributes.Name = 'OpcUaFolderData'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link AggregatedElements                       -> 100e:0002:907 FolderData name='OpcUaServerFolderData'
+    link AggregatedElements                       -> 100e:0002:908 FolderData name='OpcUaClientFolderData'
+OBJECT 100e:0002:907 FolderData name='OpcUaServerFolderData' size=239
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         66 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'OpcUaServerFolderData'
+    ICoreAttributes.Name = 'OpcUaServerFolderData'
+    link AggregatingFolder                        -> 100e:0002:906 FolderData name='OpcUaFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:908 FolderData name='OpcUaClientFolderData' size=239
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         66 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'OpcUaClientFolderData'
+    ICoreAttributes.Name = 'OpcUaClientFolderData'
+    link AggregatingFolder                        -> 100e:0002:906 FolderData name='OpcUaFolderData'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:916 FolderData name='ProgramBlocksFolder' size=287
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         62 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'ProgramBlocksFolder'
+    ICoreAttributes.Name = 'ProgramBlocksFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link FolderData2ProgramInformationSourceData  -> 1032:0022:91f ProgramInformationSourceData name=None
+    link AggregatedElements                       -> 1001:0022:927 CodeBlockData name='Main'
+OBJECT 100e:0002:917 FolderData name='TechnologicalParamFolder' size=245
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         72 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'TechnologicalParamFolder'
+    ICoreAttributes.Name = 'TechnologicalParamFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:918 FolderData name='ExternalSourceFolder' size=237
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         64 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'ExternalSourceFolder'
+    ICoreAttributes.Name = 'ExternalSourceFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:919 FolderData name='ControllerDataTypeFolder' size=245
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         72 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               -
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'ControllerDataTypeFolder'
+    ICoreAttributes.Name = 'ControllerDataTypeFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+OBJECT 100e:0002:91a FolderData name='WatchtablesFolder' size=283
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderAttributes                                       8 bytes
+  slot  2 IFolderElementAttributes                                -
+  slot  3 ILocalFolder                                            -
+  slot  4 ICoreAttributes                                         58 bytes
+  slot  5 ICoreExpandoAttributes                                  -
+  slot  6 ICoreExpandoLinkAttributes                              -
+  slot  7 <links 0>                                               84 bytes
+  slot  8 <links 1>                                               52 bytes
+    IFolderAttributes.AvailableLocalSubpathLength = 0
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.IsUndeletable = True
+    ICoreAttributes.ModifiedTime = '2026-10-19T17:22:21.692873Z'
+    ICoreAttributes.Subtype = 'WatchtablesFolder'
+    ICoreAttributes.Name = 'WatchtablesFolder'
+    link FolderParent                             -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 101c:0010:813 S7ControllerTargetData name='PLC_1'
+    link AggregatedElements                       -> 1704:0022:91b VarTableForceData name='Force table'
+
+H-022: files outside System/PEData.plf, base 101_hmi_base vs. 106_hmi_tagtable_group (SHA-256, first 12)
+  GONE   IM/SearchIndex/_k.fdt  245fdf1fff3a -> -
+  GONE   IM/SearchIndex/_k.fdx  8e4019eefac4 -> -
+  GONE   IM/SearchIndex/_k.fnm  f5ea9c41f0be -> -
+  GONE   IM/SearchIndex/_k.frq  041bb492326c -> -
+  GONE   IM/SearchIndex/_k.prx  ce6f46905390 -> -
+  GONE   IM/SearchIndex/_k.tii  185d192bab24 -> -
+  GONE   IM/SearchIndex/_k.tis  d9f49c87de67 -> -
+  GONE   IM/SearchIndex/_k.tvd  505396d7a8cd -> -
+  GONE   IM/SearchIndex/_k.tvf  05cdbdb42e4a -> -
+  GONE   IM/SearchIndex/_k.tvx  c382128ff031 -> -
+  GONE   IM/SearchIndex/_k_3.del  48829a79ab12 -> -
+  GONE   IM/SearchIndex/_l.cfs  2e406706c934 -> -
+  GONE   IM/SearchIndex/_m.cfs  82dfa4cb8b1b -> -
+  GONE   IM/SearchIndex/_n.cfs  a92aca6f7098 -> -
+  GONE   IM/SearchIndex/_o.cfs  e9235270b9c3 -> -
+  GONE   IM/SearchIndex/_p.cfs  0ca9d81d09ca -> -
+  GONE   IM/SearchIndex/_q.cfs  745bdf6da71a -> -
+  GONE   IM/SearchIndex/_q_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_r.cfs  a36bd588b2ff -> -
+  NEW    IM/SearchIndex/_u.fdt  - -> 3165df898996
+  NEW    IM/SearchIndex/_u.fdx  - -> ded7fdd66cc9
+  NEW    IM/SearchIndex/_u.fnm  - -> f5ea9c41f0be
+  NEW    IM/SearchIndex/_u.frq  - -> 5fe40c935d2d
+  NEW    IM/SearchIndex/_u.prx  - -> cb5f4b884f84
+  NEW    IM/SearchIndex/_u.tii  - -> d81e81a5d0d1
+  NEW    IM/SearchIndex/_u.tis  - -> ff5c7c80b01a
+  NEW    IM/SearchIndex/_u.tvd  - -> b7ff44a0c2d7
+  NEW    IM/SearchIndex/_u.tvf  - -> 75f744d06174
+  NEW    IM/SearchIndex/_u.tvx  - -> 4d8505b041fc
+  NEW    IM/SearchIndex/_u_1.del  - -> 37000824d9cb
+  NEW    IM/SearchIndex/_v.cfs  - -> 9fefd5f2cf32
+  CHG    IM/SearchIndex/segments.gen  0b1189306b73 -> 96fc6a8fdefb
+  GONE   IM/SearchIndex/segments_e  11c5d270d2cd -> -
+  NEW    IM/SearchIndex/segments_j  - -> 6714f9c27b34
+  CHG    System/PEData.idx  1a4448c5231e -> 826cbc6495f9
+  name 'HmiTagTable_1' found in: System/PEData.plf (utf-8 x1)

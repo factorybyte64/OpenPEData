@@ -1,0 +1,34 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ou015"
+    VAR_INPUT
+        v_en_r : Bool;
+        v_id : CONN_OUC;
+        v_len : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_ndr : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+        v_rcvd_len : UInt;
+    END_VAR
+    VAR_IN_OUT
+        v_data : Bool;
+        v_adhoc : Variant;
+    END_VAR
+    VAR
+        inst : Trcv;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.Trcv( EN_R := #v_en_r, ID := #v_id, LEN := #v_len, DATA := #v_data, NDR => #v_ndr, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status, RCVD_LEN => #v_rcvd_len, ADHOC := #v_adhoc )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

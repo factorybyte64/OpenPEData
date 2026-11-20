@@ -1,0 +1,103 @@
+{
+ "source": "TiaHmiUnified partGet Thresholds/#n (Openness: Value 0 and read-only, not stored in the file)",
+ "screen": "PC-System_1/Screen_1",
+ "items": {
+  "Bar_T": {
+   "Left": 40,
+   "Top": 40,
+   "Width": 120,
+   "Height": 300,
+   "StraightScale": {
+    "BeginValue": 0,
+    "EndValue": 50
+   },
+   "Thresholds": [
+    {
+     "Name": "Maximum_1",
+     "ThresholdMode": "Maximum",
+     "Color": "0xFFD01200",
+     "Enable": true,
+     "Value": 0
+    },
+    {
+     "Name": "Upper_1",
+     "ThresholdMode": "Upper",
+     "Color": "0xFFFFBC00",
+     "Enable": true,
+     "Value": 0
+    },
+    {
+     "Name": "Normal_1",
+     "ThresholdMode": "Normal",
+     "Color": "0xFF249196",
+     "Enable": false,
+     "Value": 0
+    },
+    {
+     "Name": "Lower_1",
+     "ThresholdMode": "Lower",
+     "Color": "0xFF00A3F7",
+     "Enable": false,
+     "Value": 0
+    },
+    {
+     "Name": "Minimum_1",
+     "ThresholdMode": "Minimum",
+     "Color": "0xFF264D70",
+     "Enable": false,
+     "Value": 0
+    }
+   ]
+  },
+  "Gauge_T": {
+   "Left": 240,
+   "Top": 40,
+   "Width": 300,
+   "Height": 300,
+   "CurvedScale": {
+    "BeginValue": 0,
+    "EndValue": 100
+   },
+   "Thresholds": [
+    {
+     "Name": "Maximum_1",
+     "ThresholdMode": "Maximum",
+     "Color": "0xFFD01200",
+     "Enable": true,
+     "Value": 0
+    },
+    {
+     "Name": "Upper_1",
+     "ThresholdMode": "Upper",
+     "Color": "0xFFFFBC00",
+     "Enable": true,
+     "Value": 0
+    },
+    {
+     "Name": "Normal_1",
+     "ThresholdMode": "Normal",
+     "Color": "0xFF249196",
+     "Enable": true,
+     "Value": 0
+    },
+    {
+     "Name": "Lower_1",
+     "ThresholdMode": "Lower",
+     "Color": "0xFF00A3F7",
+     "Enable": true,
+     "Value": 0
+    },
+    {
+     "Name": "Minimum_1",
+     "ThresholdMode": "Minimum",
+     "Color": "0xFF264D70",
+     "Enable": true,
+     "Value": 0
+    }
+   ]
+  }
+ },
+ "editor": {
+  "note": "TIA screen editor (VNC screenshot docs/img/z15/171_thresholds_editor.jpg): markers at 90/80/20/10 % of the scale (Maximum/Upper/Lower/Minimum), Normal without marker; Gauge with scale 0..50: 45/40/10/5, with 0..100: 90/80/20/10; Gauge value 0 shown in the Minimum colour, Bar value 0 in the default colour"
+ }
+}

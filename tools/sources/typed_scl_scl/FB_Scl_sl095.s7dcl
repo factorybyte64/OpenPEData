@@ -1,0 +1,25 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl095"
+    VAR_INPUT
+        v_req : Bool;
+        v_f_pwd : Bool;
+        v_full_pwd : Bool;
+        v_r_pwd : Bool;
+        v_hmi_pwd : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_f_pwd_on : Bool;
+        v_full_pwd_on : Bool;
+        v_r_pwd_on : Bool;
+        v_hmi_pwd_on : Bool;
+        v_ret_val : Word;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        ENDIS_PW(REQ := #v_req, F_PWD := #v_f_pwd, FULL_PWD := #v_full_pwd, R_PWD := #v_r_pwd, HMI_PWD := #v_hmi_pwd, F_PWD_ON => #v_f_pwd_on, FULL_PWD_ON => #v_full_pwd_on, R_PWD_ON => #v_r_pwd_on, HMI_PWD_ON => #v_hmi_pwd_on, RET_VAL => #v_ret_val);
+    END_NETWORK
+END_FUNCTION_BLOCK

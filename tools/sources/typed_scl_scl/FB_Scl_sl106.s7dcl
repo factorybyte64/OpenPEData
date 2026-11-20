@@ -1,0 +1,20 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl106"
+    VAR_INPUT
+        v_k : Int;
+        v_in0 : String;
+        v_in1 : String;
+        v_inelse : String;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Int;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := MUX(K := #v_k, IN0 := #v_in0, IN1 := #v_in1, INELSE := #v_inelse);
+    END_NETWORK
+END_FUNCTION_BLOCK

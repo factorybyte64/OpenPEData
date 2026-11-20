@@ -1,0 +1,41 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_pt001"
+    VAR_INPUT
+        v_req : Bool;
+        v_port : PORT;
+        v_protocol : UInt;
+        v_baud : UInt;
+        v_parity : UInt;
+        v_databits : UInt;
+        v_stopbits : UInt;
+        v_flowctrl : UInt;
+        v_xonchar : Char;
+        v_xoffchar : Char;
+        v_waittime : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_mode : Variant;
+        v_line_pre : Variant;
+        v_brk_det : Variant;
+    END_VAR
+    VAR
+        inst : Port_Config;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Port_Config( REQ := #v_req, PORT := #v_port, PROTOCOL := #v_protocol, BAUD := #v_baud, PARITY := #v_parity, DATABITS := #v_databits, STOPBITS := #v_stopbits, FLOWCTRL := #v_flowctrl, XONCHAR := #v_xonchar, XOFFCHAR := #v_xoffchar, WAITTIME := #v_waittime, DONE => #v_done, ERROR => #v_error, STATUS => #v_status, MODE := #v_mode, LINE_PRE := #v_line_pre, BRK_DET := #v_brk_det )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

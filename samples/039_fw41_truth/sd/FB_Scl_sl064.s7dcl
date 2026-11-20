@@ -1,0 +1,18 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl064"
+    VAR_INPUT
+        v_src : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_dst : Date;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        VariantGet(SRC := #v_src, DST => #v_dst);
+    END_NETWORK
+END_FUNCTION_BLOCK

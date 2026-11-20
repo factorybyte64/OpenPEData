@@ -1,0 +1,1975 @@
+{
+ "ex001": {
+  "block": "FX_Fbd_ex001",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_COMP: Compare time tags",
+  "via": "xml",
+  "xml": {
+   "name": "T_Comp",
+   "templates": {
+    "date_type": "DTL",
+    "relation": "EQ"
+   }
+  }
+ },
+ "ex002": {
+  "block": "FX_Fbd_ex002",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_CONV: Convert times and extract",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_CONV",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "DInt",
+    "src_type": "Time"
+   }
+  }
+ },
+ "ex003": {
+  "block": "FX_Fbd_ex003",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_ADD: Add times",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_ADD",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "date_type": "Time",
+    "time_type": "Time"
+   }
+  }
+ },
+ "ex004": {
+  "block": "FX_Fbd_ex004",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_SUB: Subtract times",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_SUB",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "date_type": "Time",
+    "time_type": "Time"
+   }
+  }
+ },
+ "ex005": {
+  "block": "FB_Fbd_ex005",
+  "body": [
+   "T_Diff pins=IN1,IN2,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_DIFF: Time difference",
+  "typed": true
+ },
+ "ex006": {
+  "block": "FX_Fbd_ex006",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "T_COMBINE: Combine times",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "T_COMBINE",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "date_type": "DTL",
+    "time_type": "Time_Of_Day"
+   }
+  }
+ },
+ "ex007": {
+  "block": "FB_Fbd_ex007",
+  "body": [
+   "Wr_Sys_T pins=IN,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WR_SYS_T: Set time-of-day",
+  "typed": true
+ },
+ "ex008": {
+  "block": "FB_Fbd_ex008",
+  "body": [
+   "Rd_Sys_T pins=RET_VAL,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_SYS_T: Read time-of-day",
+  "typed": true
+ },
+ "ex009": {
+  "block": "FB_Fbd_ex009",
+  "body": [
+   "Rd_Loc_T pins=RET_VAL,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_LOC_T: Read local time",
+  "typed": true
+ },
+ "ex010": {
+  "block": "FX_Fbd_ex010",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WR_LOC_T: Write local time",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "WR_LOC_T",
+   "pins": [
+    "LOCTIME",
+    "DST",
+    "RET_VAL"
+   ],
+   "templates": {
+    "loctime_type": "DTL"
+   }
+  }
+ },
+ "ex011": {
+  "block": "FB_Fbd_ex011",
+  "body": [
+   "Set_Timezone pins=REQ,TimeZone,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SET_TIMEZONE: Set time zone",
+  "typed": true
+ },
+ "ex012": {
+  "block": "FB_Fbd_ex012",
+  "body": [
+   "Snc_Rtcb pins=RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SNC_RTCB: Synchronize slave clocks",
+  "typed": true
+ },
+ "ex013": {
+  "block": "FB_Fbd_ex013",
+  "body": [
+   "Time_Tck pins=RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "TIME_TCK: Read time counter",
+  "typed": true
+ },
+ "ex014": {
+  "block": "FB_Fbd_ex014",
+  "body": [
+   "Rtm pins=NR,MODE,PV,RET_VAL,CQ,CV"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RTM: Runtime meters",
+  "typed": true
+ },
+ "ex015": {
+  "block": "FB_Fbd_ex015",
+  "body": [
+   "S_Move pins=IN,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_MOVE: Move character string",
+  "typed": true
+ },
+ "ex016": {
+  "block": "FX_Fbd_ex016",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_COMP: Compare character strings",
+  "via": "xml",
+  "xml": {
+   "name": "S_Comp",
+   "templates": {
+    "relation": "EQ",
+    "src_type": "String"
+   }
+  }
+ },
+ "ex017": {
+  "block": "FX_Fbd_ex017",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "S_CONV: Convert character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "S_CONV",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "USInt",
+    "src_type": "String"
+   }
+  }
+ },
+ "ex018": {
+  "block": "FX_Fbd_ex018",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "STRG_VAL: Convert character string to numerical value",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "STRG_VAL",
+   "pins": [
+    "IN",
+    "FORMAT",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "dest_type": "Int",
+    "src_type": "String"
+   }
+  }
+ },
+ "ex019": {
+  "block": "FX_Fbd_ex019",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "VAL_STRG: Convert numerical value to character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "VAL_STRG",
+   "pins": [
+    "IN",
+    "SIZE",
+    "PREC",
+    "FORMAT",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String",
+    "value_type": "Int"
+   }
+  }
+ },
+ "ex020": {
+  "block": "FX_Fbd_ex020",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Strg_TO_Chars: Convert character string to Array of CHAR",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Strg_TO_Chars",
+   "pins": [
+    "STRG",
+    "PCHARS",
+    "CHARS",
+    "CNT"
+   ],
+   "templates": {
+    "ptr_type": "Variant",
+    "strg_type": "String"
+   }
+  }
+ },
+ "ex021": {
+  "block": "FX_Fbd_ex021",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Chars_TO_Strg: Convert Array of CHAR to character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Chars_TO_Strg",
+   "pins": [
+    "CHARS",
+    "PCHARS",
+    "CNT",
+    "STRG"
+   ],
+   "templates": {
+    "ptr_type": "Variant",
+    "str_type": "String"
+   }
+  }
+ },
+ "ex022": {
+  "block": "FX_Fbd_ex022",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MAX_LEN: Determine the length of a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MAX_LEN",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "SrcType": "String"
+   }
+  }
+ },
+ "ex023": {
+  "block": "FX_Fbd_ex023",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "JOIN: Join multiple strings",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "JOIN",
+   "pins": [
+    "Mode",
+    "RecSeparator",
+    "EndSeparator",
+    "SrcStruct",
+    "Count",
+    "Position",
+    "Ret_Val",
+    "DstArray"
+   ],
+   "templates": {}
+  }
+ },
+ "ex024": {
+  "block": "FX_Fbd_ex024",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SPLIT: Splitting an array of characters into multiple strings",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "SPLIT",
+   "pins": [
+    "Mode",
+    "RecSeparator",
+    "EndSeparator",
+    "SrcArray",
+    "Position",
+    "Ret_Val",
+    "Count",
+    "DstStruct"
+   ],
+   "templates": {}
+  }
+ },
+ "ex025": {
+  "block": "FB_Fbd_ex025",
+  "body": [
+   "Ath pins=IN,N,RET_VAL,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ATH: Convert ASCII string to hexadecimal number",
+  "typed": true
+ },
+ "ex026": {
+  "block": "FB_Fbd_ex026",
+  "body": [
+   "Hta pins=IN,N,RET_VAL,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "HTA: Convert hexadecimal number to ASCII string",
+  "typed": true
+ },
+ "ex027": {
+  "block": "FX_Fbd_ex027",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LEN: Determine the length of a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "LEN",
+   "pins": [
+    "IN",
+    "OUT"
+   ],
+   "templates": {
+    "return_type": "Int",
+    "str_type": "String"
+   }
+  }
+ },
+ "ex028": {
+  "block": "FX_Fbd_ex028",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "CONCAT: Combine character strings",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "CONCAT",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "card": "2",
+    "str_type": "String"
+   }
+  }
+ },
+ "ex029": {
+  "block": "FX_Fbd_ex029",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LEFT: Read the left character of a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "LEFT",
+   "pins": [
+    "IN",
+    "L",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex030": {
+  "block": "FX_Fbd_ex030",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RIGHT: Read the right characters of a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RIGHT",
+   "pins": [
+    "IN",
+    "L",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex031": {
+  "block": "FX_Fbd_ex031",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MID: Read middle characters of a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "MID",
+   "pins": [
+    "IN",
+    "L",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "value_type": "String"
+   }
+  }
+ },
+ "ex032": {
+  "block": "FX_Fbd_ex032",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DELETE: Delete characters in a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "DELETE",
+   "pins": [
+    "IN",
+    "L",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex033": {
+  "block": "FX_Fbd_ex033",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "INSERT: Insert characters in a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "INSERT",
+   "pins": [
+    "IN1",
+    "IN2",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex034": {
+  "block": "FX_Fbd_ex034",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "REPLACE: Replace characters in a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "REPLACE",
+   "pins": [
+    "IN1",
+    "IN2",
+    "L",
+    "P",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex035": {
+  "block": "FX_Fbd_ex035",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "FIND: Find characters in a character string",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "FIND",
+   "pins": [
+    "IN1",
+    "IN2",
+    "OUT"
+   ],
+   "templates": {
+    "str_type": "String"
+   }
+  }
+ },
+ "ex036": {
+  "block": "FB_Fbd_ex036",
+  "body": [
+   "GetSymbolName pins=VARIABLE,SIZE,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GetSymbolName: Read out a tag on the input parameter",
+  "typed": true
+ },
+ "ex037": {
+  "block": "FB_Fbd_ex037",
+  "body": [
+   "GetSymbolPath pins=VARIABLE,SIZE,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Querying GetSymbolPath: actual parameter at beginning of a call path",
+  "typed": true
+ },
+ "ex038": {
+  "block": "FB_Fbd_ex038",
+  "body": [
+   "GetInstanceName pins=SIZE,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GetInstanceName: Read out name of the read instance",
+  "typed": true
+ },
+ "ex039": {
+  "block": "FB_Fbd_ex039",
+  "body": [
+   "GetInstancePath pins=SIZE,OUT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GetInstancePath: Query composite global name of the block instance",
+  "typed": true
+ },
+ "ex040": {
+  "block": "FB_Fbd_ex040",
+  "body": [
+   "GetBlockName pins=SIZE,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GetBlockName: Read out name of the block",
+  "typed": true
+ },
+ "ex041": {
+  "block": "FB_Fbd_ex041",
+  "body": [
+   "Updat_Pi pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "UPDAT_PI: Update the process image inputs",
+  "typed": true
+ },
+ "ex042": {
+  "block": "FB_Fbd_ex042",
+  "body": [
+   "Updat_Po pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "UPDAT_PO: Update the process image outputs",
+  "typed": true
+ },
+ "ex043": {
+  "block": "FB_Fbd_ex043",
+  "body": [
+   "Sync_Pi pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SYNC_PI: Synchronize the process image inputs",
+  "typed": true
+ },
+ "ex044": {
+  "block": "FB_Fbd_ex044",
+  "body": [
+   "Sync_Po pins=PART,RET_VAL,FLADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SYNC_PO: Synchronize the process image outputs",
+  "typed": true
+ },
+ "ex045": {
+  "block": "FB_Fbd_ex045",
+  "body": [
+   "Rdrec pins=REQ,ID,INDEX,MLEN,VALID,BUSY,ERROR,STATUS,LEN,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RDREC: Read data record",
+  "typed": true
+ },
+ "ex046": {
+  "block": "FB_Fbd_ex046",
+  "body": [
+   "Wrrec pins=REQ,ID,INDEX,LEN,DONE,BUSY,ERROR,STATUS,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WRREC: Write data record",
+  "typed": true
+ },
+ "ex047": {
+  "block": "FB_Fbd_ex047",
+  "body": [
+   "Getio pins=ID,STATUS,LEN,INPUTS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GETIO: Read all inputs of a submodule",
+  "typed": true
+ },
+ "ex048": {
+  "block": "FB_Fbd_ex048",
+  "body": [
+   "Setio pins=ID,STATUS,OUTPUTS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SETIO: Write all outputs of a submodule",
+  "typed": true
+ },
+ "ex049": {
+  "block": "FB_Fbd_ex049",
+  "body": [
+   "Getio_Part pins=ID,OFFSET,LEN,STATUS,ERROR,INPUTS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GETIO_PART: Read inputs of a submodule",
+  "typed": true
+ },
+ "ex050": {
+  "block": "FB_Fbd_ex050",
+  "body": [
+   "Setio_Part pins=ID,OFFSET,LEN,STATUS,ERROR,OUTPUTS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SETIO_PART: Write outputs of a submodule",
+  "typed": true
+ },
+ "ex051": {
+  "block": "FB_Fbd_ex051",
+  "body": [
+   "RALRM pins=MODE,F_ID,MLEN,NEW,STATUS,ID,LEN,TINFO,AINFO"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Description RALRM",
+  "typed": true
+ },
+ "ex052": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter STATUS"
+ },
+ "ex053": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter TINFO"
+ },
+ "ex054": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter AINFO"
+ },
+ "ex055": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Destination area TINFO and AINFO"
+ },
+ "ex056": {
+  "block": "FB_Fbd_ex056",
+  "body": [
+   "D_Act_Dp pins=REQ,MODE,LADDR,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "D_ACT_DP: Activate/deactivate DP slaves",
+  "typed": true
+ },
+ "ex057": {
+  "block": "FB_Fbd_ex057",
+  "body": [
+   "ReconfigIOSystem pins=REQ,MODE,LADDR,CTRLREC,DONE,BUSY,ERROR,STATUS,ERR_INFO"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ReconfigIOSystem: Reconfigure IO system",
+  "typed": true
+ },
+ "ex058": {
+  "block": "FB_Fbd_ex058",
+  "body": [
+   "RD_REC pins=REQ,LADDR,RECNUM,RET_VAL,BUSY,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_REC: Read data record from I/O",
+  "typed": true
+ },
+ "ex059": {
+  "block": "FB_Fbd_ex059",
+  "body": [
+   "WR_REC pins=REQ,LADDR,RECNUM,RECORD,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WR_REC: Write data record to I/O",
+  "typed": true
+ },
+ "ex060": {
+  "block": "FB_Fbd_ex060",
+  "body": [
+   "Dprd_Dat pins=LADDR,RET_VAL,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DPRD_DAT: Read consistent data of a DP standard slave",
+  "typed": true
+ },
+ "ex061": {
+  "block": "FB_Fbd_ex061",
+  "body": [
+   "Dpwr_Dat pins=LADDR,RECORD,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DPWR_DAT: Write consistent data of a DP standard slave",
+  "typed": true
+ },
+ "ex062": {
+  "block": "FB_Fbd_ex062",
+  "body": [
+   "Rcvrec pins=MODE,F_ID,MLEN,CODE1,CODE2,NEW,STATUS,SLOT,SUBSLOT,INDEX,LEN,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RCVREC: Receive data record",
+  "typed": true
+ },
+ "ex063": {
+  "block": "FB_Fbd_ex063",
+  "body": [
+   "Prvrec pins=MODE,F_ID,CODE1,CODE2,LEN,NEW,STATUS,SLOT,SUBSLOT,INDEX,RLEN,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PRVREC: Make data record available",
+  "typed": true
+ },
+ "ex064": {
+  "block": "FB_Fbd_ex064",
+  "body": [
+   "Dpsyc_Fr pins=REQ,LADDR,GROUP,MODE,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DPSYC_FR: Synchronize DP slaves / Freeze inputs",
+  "typed": true
+ },
+ "ex065": {
+  "block": "FB_Fbd_ex065",
+  "body": [
+   "Dpnrm_Dg pins=REQ,LADDR,RET_VAL,RECORD,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DPNRM_DG: Read diagnostics data from a DP slave",
+  "typed": true
+ },
+ "ex066": {
+  "block": "FB_Fbd_ex066",
+  "body": [
+   "Dp_Topol pins=REQ,R,DP_ID,RET_VAL,BUSY,DPR,DPRI"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DP_TOPOL: Determine topology for DP master system",
+  "typed": true
+ },
+ "ex067": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Description of PROFIenergy"
+ },
+ "ex068": {
+  "block": "FX_Fbd_ex068",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_START_END: Start and exit energy-saving mode",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_START_END",
+   "pins": [
+    "START",
+    "END",
+    "ID",
+    "PAUSE_TIME",
+    "VALID",
+    "BUSY",
+    "ERROR",
+    "STATUS",
+    "PE_MODE_ID"
+   ],
+   "templates": {
+    "id_type": "HW_SUBMODULE"
+   }
+  }
+ },
+ "ex069": {
+  "block": "FX_Fbd_ex069",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_CMD: Start and exit energy-saving mode / Read out status information",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_CMD",
+   "pins": [
+    "REQ",
+    "ID",
+    "CMD",
+    "CMD_MODIFIER",
+    "CMD_PARA",
+    "CMD_PARA_LEN",
+    "RESPONSE_DATA",
+    "VALID",
+    "BUSY",
+    "ERROR",
+    "STATUS",
+    "CMD_DSID_RQ"
+   ],
+   "templates": {
+    "card": "1",
+    "cmd_para_type": "Variant",
+    "id_type": "HW_SUBMODULE",
+    "response_data_type": "Variant"
+   }
+  }
+ },
+ "ex070": {
+  "block": "FX_Fbd_ex070",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_DS3_Write_ET200S: Set power module switching behavior",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_DS3_Write_ET200S",
+   "pins": [
+    "ENABLE",
+    "ID",
+    "BUSY",
+    "DONE",
+    "ERROR",
+    "STATUS",
+    "Slot_No_1",
+    "Func_1",
+    "Slot_No_2",
+    "Func_2",
+    "Slot_No_3",
+    "Func_3",
+    "Slot_No_4",
+    "Func_4",
+    "Slot_No_5",
+    "Func_5",
+    "Slot_No_6",
+    "Func_6",
+    "Slot_No_7",
+    "Func_7",
+    "Slot_No_8",
+    "Func_8"
+   ],
+   "templates": {
+    "id_type": "HW_SUBMODULE"
+   }
+  }
+ },
+ "ex071": {
+  "block": "FB_Fbd_ex071",
+  "body": [
+   "PE_WOL pins=COM_RST,START,END,PENERGY,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Description PE_WOL",
+  "typed": true
+ },
+ "ex072": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter COM_RST"
+ },
+ "ex073": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter START"
+ },
+ "ex074": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter END"
+ },
+ "ex075": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PENERGY parameter"
+ },
+ "ex076": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter STATUS"
+ },
+ "ex077": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Structure of the message frames"
+ },
+ "ex078": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"Start_Pause\""
+ },
+ "ex079": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"End_Pause\""
+ },
+ "ex080": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"Query_modes\" - \"List_Energy_Saving_Modes\""
+ },
+ "ex081": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"Query_modes\" - \"Get_Mode\""
+ },
+ "ex082": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"PEM_Status\""
+ },
+ "ex083": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI command \"PE_Identify\""
+ },
+ "ex084": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"Query_Measurement\" - \"Get_Measurement_list\""
+ },
+ "ex085": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "PI Command \"Query_Measurement\" - \"Get_Measurement_values\""
+ },
+ "ex086": {
+  "block": "FX_Fbd_ex086",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_I_DEV: Control PROFIenergy commands in the I-Device",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_I_DEV",
+   "pins": [
+    "RESET",
+    "ID",
+    "VALID",
+    "CMD_PARA",
+    "DATA_ERRORRSP",
+    "INDEX",
+    "CMD",
+    "CMD_MODIFIER",
+    "NEW",
+    "ERROR",
+    "STATUS"
+   ],
+   "templates": {
+    "any_variant_type": "Variant",
+    "id_type": "HW_SUBMODULE"
+   }
+  }
+ },
+ "ex087": {
+  "block": "FB_Fbd_ex087",
+  "body": [
+   "Pe_Error_Rsp pins=PE_I_DEV_NEW,ERROR_CODE,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Error_RSP: Generate negative answer to command",
+  "typed": true
+ },
+ "ex088": {
+  "block": "FB_Fbd_ex088",
+  "body": [
+   "Pe_Start_Rsp pins=PE_I_DEV_NEW,CMD,PE_MODE_ID,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Start_RSP: Generate answer to command at start of pause",
+  "typed": true
+ },
+ "ex089": {
+  "block": "FB_Fbd_ex089",
+  "body": [
+   "Pe_End_Rsp pins=PE_I_DEV_NEW,CMD,Time_to_Operate,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_End_RSP: Generate answer to command at end of pause",
+  "typed": true
+ },
+ "ex090": {
+  "block": "FX_Fbd_ex090",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_List_Modes_RSP: Generate queried energy savings modes as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_List_Modes_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "CMD_MODIFIER",
+    "Number_of_PE_Mode_IDs",
+    "PE_MODE_ID",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant",
+    "pe_mode_id_type": "Variant"
+   }
+  }
+ },
+ "ex091": {
+  "block": "FX_Fbd_ex091",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Get_Mode_RSP: Generate queried energy data as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_Get_Mode_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "CMD_MODIFIER",
+    "PE_Mode_ID",
+    "PE_Mode_Attributes",
+    "Time_min_Pause",
+    "Time_to_Pause",
+    "Time_to_Operate",
+    "Mode_Power_Consumption",
+    "Energy_Consum_to_Pause",
+    "Energy_Consum_to_operate",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS",
+    "Time_min_Length_of_stay",
+    "Time_max_length_of_stay"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant"
+   }
+  }
+ },
+ "ex092": {
+  "block": "FX_Fbd_ex092",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_PEM_Status_RSP: Generate PEM status as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_PEM_Status_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "PE_MODE_ID_Source",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS",
+    "PE_MODE_ID_Destination",
+    "Time_to_Operate",
+    "Remaining_time_to_dest",
+    "Mode_Power_Consumption",
+    "Energy_Cons_to_dest",
+    "Energy_Cons_to_operate"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant"
+   }
+  }
+ },
+ "ex093": {
+  "block": "FX_Fbd_ex093",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Identify_RSP: Generate supported PROFIenergy commands as answer",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "PE_Identify_RSP",
+   "pins": [
+    "PE_I_DEV_NEW",
+    "CMD",
+    "Start_Pause",
+    "ACTIVATE",
+    "VALID",
+    "DATA_ERRORRSP",
+    "ERROR",
+    "STATUS",
+    "End_Pause",
+    "Query_Modes",
+    "PEM_Status",
+    "PE_Identify",
+    "Query_Measurement"
+   ],
+   "templates": {
+    "data_errorrsp_type": "Variant"
+   }
+  }
+ },
+ "ex094": {
+  "block": "FB_Fbd_ex094",
+  "body": [
+   "Pe_Measurement_List_Rsp pins=PE_I_DEV_NEW,CMD,CMD_MODIFIER,Count,ACTIVATE,VALID,ERROR,STATUS,Measurement_List,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Measurement_List_RSP: Generate list of supported measured values as answer",
+  "typed": true
+ },
+ "ex095": {
+  "block": "FB_Fbd_ex095",
+  "body": [
+   "Pe_Measurement_Value_Rsp pins=PE_I_DEV_NEW,CMD,CMD_MODIFIER,Count,Measurement_Values,ACTIVATE,VALID,ERROR,STATUS,DATA_ERRORRSP"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PE_Measurement_Value_RSP: Generate queried measured values as answer",
+  "typed": true
+ },
+ "ex096": {
+  "block": "FB_Fbd_ex096",
+  "body": [
+   "Rd_Dpar pins=REQ,LADDR,INDEX,RECORD,VALID,BUSY,ERROR,STATUS,LEN"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_DPAR: Read module data record",
+  "typed": true
+ },
+ "ex097": {
+  "block": "FB_Fbd_ex097",
+  "body": [
+   "Rd_Dpara pins=REQ,LADDR,RECNUM,RET_VAL,BUSY,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_DPARA: Read module data record asynchronously",
+  "typed": true
+ },
+ "ex098": {
+  "block": "FB_Fbd_ex098",
+  "body": [
+   "Rd_Dparm pins=IOID,LADDR,RECNUM,RET_VAL,RECORD"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_DPARM: Read data record from configured system data",
+  "typed": true
+ },
+ "ex099": {
+  "block": "FB_Fbd_ex099",
+  "body": [
+   "Wr_Dparm pins=REQ,LADDR,RECNUM,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WR_DPARM: Transfer data record",
+  "typed": true
+ },
+ "ex100": {
+  "block": "FB_Fbd_ex100",
+  "body": [
+   "Attach pins=OB_NR,EVENT,ADD,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ATTACH: Attach an OB to an interrupt event",
+  "typed": true
+ },
+ "ex101": {
+  "block": "FB_Fbd_ex101",
+  "body": [
+   "Detach pins=OB_NR,EVENT,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DETACH: Detach an OB from an interrupt event",
+  "typed": true
+ },
+ "ex102": {
+  "block": "FB_Fbd_ex102",
+  "body": [
+   "Set_Cint pins=OB_NR,CYCLE,PHASE,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SET_CINT: Set cyclic interrupt parameters",
+  "typed": true
+ },
+ "ex103": {
+  "block": "FB_Fbd_ex103",
+  "body": [
+   "Qry_Cint pins=OB_NR,CYCLE,PHASE,STATUS,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "QRY_CINT: Query cyclic interrupt parameters",
+  "typed": true
+ },
+ "ex104": {
+  "block": "FB_Fbd_ex104",
+  "body": [
+   "Set_Tint pins=OB_NR,SDT,PERIOD,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SET_TINT: Set time-of-day interrupt",
+  "typed": true
+ },
+ "ex105": {
+  "block": "FB_Fbd_ex105",
+  "body": [
+   "Set_Tintl pins=OB_NR,SDT,LOCAL,PERIOD,ACTIVATE,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SET_TINTL: Set time-of-day interrupt",
+  "typed": true
+ },
+ "ex106": {
+  "block": "FB_Fbd_ex106",
+  "body": [
+   "Can_Tint pins=OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "CAN_TINT: Cancel time-of-day interrupt",
+  "typed": true
+ },
+ "ex107": {
+  "block": "FB_Fbd_ex107",
+  "body": [
+   "Act_Tint pins=OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ACT_TINT: Enable time-of-day interrupt",
+  "typed": true
+ },
+ "ex108": {
+  "block": "FB_Fbd_ex108",
+  "body": [
+   "Qry_Tint pins=OB_NR,RET_VAL,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "QRY_TINT: Query status of time-of-day interrupt",
+  "typed": true
+ },
+ "ex109": {
+  "block": "FB_Fbd_ex109",
+  "body": [
+   "Srt_Dint pins=OB_NR,DTIME,SIGN,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SRT_DINT: Start time-delay interrupt",
+  "typed": true
+ },
+ "ex110": {
+  "block": "FB_Fbd_ex110",
+  "body": [
+   "Can_Dint pins=OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "CAN_DINT: Cancel time-delay interrupt",
+  "typed": true
+ },
+ "ex111": {
+  "block": "FB_Fbd_ex111",
+  "body": [
+   "Qry_Dint pins=OB_NR,RET_VAL,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "QRY_DINT: Query time-delay interrupt status",
+  "typed": true
+ },
+ "ex112": {
+  "block": "FB_Fbd_ex112",
+  "body": [
+   "Msk_Flt pins=PRGFLT_SET_MASK,ACCFLT_SET_MASK,RET_VAL,PRGFLT_MASKED,ACCFLT_MASKED"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "MSK_FLT: Mask synchronous error events",
+  "typed": true
+ },
+ "ex113": {
+  "block": "FB_Fbd_ex113",
+  "body": [
+   "Dmsk_Flt pins=PRGFLT_RESET_MASK,ACCFLT_RESET_MASK,RET_VAL,PRGFLT_MASKED,ACCFLT_MASKED"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DMSK_FLT: Unmask synchronous error events",
+  "typed": true
+ },
+ "ex114": {
+  "block": "FB_Fbd_ex114",
+  "body": [
+   "Read_Err pins=PRGFLT_QUERY,ACCFLT_QUERY,RET_VAL,PRGFLT_CLR,ACCFLT_CLR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "READ_ERR: Read out event status register",
+  "typed": true
+ },
+ "ex115": {
+  "block": "FB_Fbd_ex115",
+  "body": [
+   "Dis_Irt pins=MODE,OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DIS_IRT: Disable interrupt event",
+  "typed": true
+ },
+ "ex116": {
+  "block": "FB_Fbd_ex116",
+  "body": [
+   "En_Irt pins=MODE,OB_NR,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "EN_IRT: Enable interrupt event",
+  "typed": true
+ },
+ "ex117": {
+  "block": "FB_Fbd_ex117",
+  "body": [
+   "Dis_Airt pins=RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DIS_AIRT: Delay execution of higher priority interrupts and asynchronous error events",
+  "typed": true
+ },
+ "ex118": {
+  "block": "FB_Fbd_ex118",
+  "body": [
+   "En_Airt pins=RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "EN_AIRT: Enable execution of higher priority interrupts and asynchronous error events",
+  "typed": true
+ },
+ "ex119": {
+  "block": "FX_Fbd_ex119",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Program_Alarm: Generate program alarm with associated values",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Program_Alarm",
+   "pins": [
+    "SIG",
+    "TIMESTAMP",
+    "Error",
+    "Status",
+    "SD_1",
+    "SD_2",
+    "SD_3",
+    "SD_4",
+    "SD_5",
+    "SD_6",
+    "SD_7",
+    "SD_8",
+    "SD_9",
+    "SD_10"
+   ],
+   "templates": {}
+  }
+ },
+ "ex120": {
+  "block": "FB_Fbd_ex120",
+  "body": [
+   "Get_Alarmstate pins=Alarm,AlarmState,Error,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Get_AlarmState: Output alarm status",
+  "typed": true
+ },
+ "ex121": {
+  "block": "FB_Fbd_ex121",
+  "body": [
+   "Gen_Usrmsg pins=Mode,TextID,TextListID,Ret_Val,AssocValues"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Gen_UsrMsg: Generate user diagnostic alarms",
+  "typed": true
+ },
+ "ex122": {
+  "block": "FB_Fbd_ex122",
+  "body": [
+   "Get_Alarm pins=OperateMode,DataMode,DispClassNr,Lcid,Data,DataReady,Busy,Error,Init,Status"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Get_Alarm: Read pending alarm",
+  "typed": true
+ },
+ "ex123": {
+  "block": "FB_Fbd_ex123",
+  "body": [
+   "Ack_Alarms pins=MODE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Ack_Alarms: Acknowledge alarms",
+  "typed": true
+ },
+ "ex124": {
+  "block": "FB_Fbd_ex124",
+  "body": [
+   "Rd_Sinfo pins=RET_VAL,TOP_SI,START_UP_SI"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_SINFO: Read current OB start information",
+  "typed": true
+ },
+ "ex125": {
+  "block": "FB_Fbd_ex125",
+  "body": [
+   "Rt_Info pins=MODE,OB,RET_VAL,INFO"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RT_INFO: Read out runtime statistics",
+  "typed": true
+ },
+ "ex126": {
+  "block": "FB_Fbd_ex126",
+  "body": [
+   "Led pins=LADDR,LED,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LED: Read LED status",
+  "typed": true
+ },
+ "ex127": {
+  "block": "FB_Fbd_ex127",
+  "body": [
+   "Get_Im_Data pins=LADDR,IM_TYPE,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "Get_IM_Data: Reading identification and maintenance data",
+  "typed": true
+ },
+ "ex128": {
+  "block": "FB_Fbd_ex128",
+  "body": [
+   "Get_Name pins=LADDR,STATION_NR,DATA,DONE,BUSY,ERROR,LEN,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GET_NAME: Read out name of an IO device or a DP slave",
+  "typed": true
+ },
+ "ex129": {
+  "block": "FB_Fbd_ex129",
+  "body": [
+   "GetStationInfo pins=REQ,LADDR,DETAIL,MODE,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GetStationInfo: Read information of an IO device",
+  "typed": true
+ },
+ "ex130": {
+  "block": "FB_Fbd_ex130",
+  "body": [
+   "DeviceStates pins=LADDR,MODE,RET_VAL,STATE"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DeviceStates: Read module status information in an IO system",
+  "typed": true
+ },
+ "ex131": {
+  "block": "FB_Fbd_ex131",
+  "body": [
+   "ModuleStates pins=LADDR,MODE,RET_VAL,STATE"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ModuleStates: Read module status information of a module",
+  "typed": true
+ },
+ "ex132": {
+  "block": "FB_Fbd_ex132",
+  "body": [
+   "Gen_Diag pins=LADDR,MODE,DiagEvent,RET_VAL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GEN_DIAG: Generate diagnostics information",
+  "typed": true
+ },
+ "ex133": {
+  "block": "FB_Fbd_ex133",
+  "body": [
+   "Get_Diag pins=MODE,LADDR,RET_VAL,CNT_DIAG,DIAG,DETAIL"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GET_DIAG: Read diagnostic information",
+  "typed": true
+ },
+ "ex134": {
+  "block": "FB_Fbd_ex134",
+  "body": [
+   "CTRL_PWM pins=PWM,ENABLE,BUSY,STATUS"
+  ],
+  "ok": true,
+  "sample": "040_s71200",
+  "title": "CTRL_PWM: Pulse-width modulation",
+  "typed": true
+ },
+ "ex135": {
+  "block": "FB_Fbd_ex135",
+  "body": [
+   "RecipeExport pins=REQ,RECIPE_DB,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RecipeExport: Exporting recipes",
+  "typed": true
+ },
+ "ex136": {
+  "block": "FB_Fbd_ex136",
+  "body": [
+   "RecipeImport pins=REQ,RECIPE_DB,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RecipeImport: Importing recipes",
+  "typed": true
+ },
+ "ex137": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Data logging - Overview"
+ },
+ "ex138": {
+  "block": "FB_Fbd_ex138",
+  "body": [
+   "DataLogCreate pins=REQ,RECORDS,FORMAT,TIMESTAMP,NAME,ID,HEADER,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogCreate: Create data log",
+  "typed": true
+ },
+ "ex139": {
+  "block": "FB_Fbd_ex139",
+  "body": [
+   "DataLogOpen pins=REQ,MODE,NAME,ID,DONE,BUSY,ERROR,STATUS,Data"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogOpen: Open data log",
+  "typed": true
+ },
+ "ex140": {
+  "block": "FB_Fbd_ex140",
+  "body": [
+   "DataLogOpen pins=REQ,MODE,NAME,ID,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogOpen: Open data log",
+  "typed": true
+ },
+ "ex141": {
+  "block": "FB_Fbd_ex141",
+  "body": [
+   "DataLogClear pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogClear: Empty data log",
+  "typed": true
+ },
+ "ex142": {
+  "block": "FB_Fbd_ex142",
+  "body": [
+   "DataLogWrite pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogWrite: Write data log",
+  "typed": true
+ },
+ "ex143": {
+  "block": "FB_Fbd_ex143",
+  "body": [
+   "DataLogClose pins=REQ,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogClose: Close data log",
+  "typed": true
+ },
+ "ex144": {
+  "block": "FB_Fbd_ex144",
+  "body": [
+   "DataLogDelete pins=REQ,NAME,DELFILE,ID,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogDelete: Delete data log",
+  "typed": true
+ },
+ "ex145": {
+  "block": "FB_Fbd_ex145",
+  "body": [
+   "DataLogNewFile pins=REQ,RECORDS,NAME,ID,DONE,BUSY,ERROR,STATUS,Data"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogNewFile: Data log in new file",
+  "typed": true
+ },
+ "ex146": {
+  "block": "FB_Fbd_ex146",
+  "body": [
+   "DataLogNewFile pins=REQ,RECORDS,NAME,ID,DATA,DONE,BUSY,ERROR,STATUS"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DataLogNewFile: Data log in new file",
+  "typed": true
+ },
+ "ex147": {
+  "block": "FB_Fbd_ex147",
+  "body": [
+   "Create_Db pins=REQ,LOW_LIMIT,UP_LIMIT,COUNT,ATTRIB,SRCBLK,RET_VAL,BUSY,DB_NUM"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "CREATE_DB: Create data block",
+  "typed": true
+ },
+ "ex148": {
+  "block": "FB_Fbd_ex148",
+  "body": [
+   "Read_Dbl pins=REQ,SRCBLK,RET_VAL,BUSY,DSTBLK"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "READ_DBL: Read from data block in the load memory",
+  "typed": true
+ },
+ "ex149": {
+  "block": "FB_Fbd_ex149",
+  "body": [
+   "Writ_Dbl pins=REQ,SRCBLK,RET_VAL,BUSY,DSTBLK"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "WRIT_DBL: Write to data block in the load memory",
+  "typed": true
+ },
+ "ex150": {
+  "block": "FB_Fbd_ex150",
+  "body": [
+   "Attr_Db pins=REQ,DB_NUMBER,RET_VAL,DB_LENGTH,ATTRIB"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "ATTR_DB: Read data block attribute",
+  "typed": true
+ },
+ "ex151": {
+  "block": "FB_Fbd_ex151",
+  "body": [
+   "Delete_Db pins=REQ,DB_NUMBER,RET_VAL,BUSY"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "DELETE_DB: Delete data block",
+  "typed": true
+ },
+ "ex152": {
+  "block": "FB_Fbd_ex152",
+  "body": [
+   "Geo2log pins=GEOADDR,RET_VAL,LADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GEO2LOG: Determine hardware identifier from slot",
+  "typed": true
+ },
+ "ex153": {
+  "block": "FB_Fbd_ex153",
+  "body": [
+   "Log2geo pins=LADDR,RET_VAL,GEOADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LOG2GEO: Determine slot from hardware identifier",
+  "typed": true
+ },
+ "ex154": {
+  "block": "FB_Fbd_ex154",
+  "body": [
+   "Log2mod pins=IOID,ADDR,RET_VAL,HWID"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LOG2MOD: Determine the hardware identifier from addressing of STEP 7 V5.5 SPx",
+  "typed": true
+ },
+ "ex155": {
+  "block": "FB_Fbd_ex155",
+  "body": [
+   "Io2mod pins=ADDR,RET_VAL,LADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "IO2MOD: Determine hardware identifier from an IO address",
+  "typed": true
+ },
+ "ex156": {
+  "block": "FB_Fbd_ex156",
+  "body": [
+   "Rd_Addr pins=LADDR,RET_VAL,PIADDR,PICOUNT,PQADDR,PQCOUNT"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_ADDR: Determine IO addresses from the hardware identifier",
+  "typed": true
+ },
+ "ex157": {
+  "block": "FB_Fbd_ex157",
+  "body": [
+   "Geo_Log pins=MASTER,STATION,SLOT,SUBSLOT,RET_VAL,LADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GEO_LOG: Determine hardware identifier from slot",
+  "typed": true
+ },
+ "ex158": {
+  "block": "FB_Fbd_ex158",
+  "body": [
+   "Log_Geo pins=LADDR,RET_VAL,AREA,MASTER,STATION,SLOT,SUBSLOT,OFFSET"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LOG_GEO: Determine slot from hardware identifier",
+  "typed": true
+ },
+ "ex159": {
+  "block": "FX_Fbd_ex159",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RD_LGADR: Determine IO addresses from the hardware identifier",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "RD_LGADR",
+   "pins": [
+    "IOID",
+    "LADDR",
+    "RET_VAL",
+    "PEADDR",
+    "PECOUNT",
+    "PAADDR",
+    "PACOUNT"
+   ],
+   "templates": {
+    "laddr_type": "HW_ANY"
+   }
+  }
+ },
+ "ex160": {
+  "block": "FB_Fbd_ex160",
+  "body": [
+   "Gadr_Lgc pins=SUBNETID,RACK,SLOT,SUBSLOT,SUBADDR,RET_VAL,IOID,LADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "GADR_LGC: Determine hardware identifier from slot and offset in the user data address area",
+  "typed": true
+ },
+ "ex161": {
+  "block": "FB_Fbd_ex161",
+  "body": [
+   "Lgc_Gadr pins=IOID,LADDR,RET_VAL,AREA,RACK,SLOT,SUBADDR"
+  ],
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "LGC_GADR: Determine slot from hardware identifier",
+  "typed": true
+ }
+}

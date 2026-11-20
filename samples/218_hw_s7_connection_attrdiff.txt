@@ -1,0 +1,69 @@
+A: 212_hw_subnet.zap21  B: 218_hw_s7_connection.zap21
+CHANGED 1001:0004:421 PackageContainerDatas name='Packages'
+          raw <links 1>: 644 -> 660 bytes
+          +link ContainsPackage -> 1002:0004:1019
+NEW     1002:0004:1019 PackageContainerData name='HW.Connections{2.0.0.0.0}'
+          IPackageContainerDataAttributes.Mandatory = False
+          IPackageContainerDataAttributes.Name = 'HW.Connections'
+          IPackageContainerDataAttributes.Version = bytes[24] 180000000200000000000000000000000000000000000000
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'HW.Connections{2.0.0.0.0}'
+          link Parent -> 1001:0004:421
+          link Environment -> 1001:0004:421
+          link RelatedProduct -> 1004:0004:423
+          link RelatedProduct -> 1004:0004:42f
+          link RelatedObject -> 1002:0010:1018
+NEW     1002:0010:1018 BlockConnectionPointData name='S7_Connection_1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-24T15:30:22.209633Z'
+          ICoreAttributes.Subtype = 'S7ConnectionPoint'
+          ICoreAttributes.Name = 'S7_Connection_1'
+          IConfigBaseData.ConfigObjectTypeName = 'S7ConnectionPoint'
+          IConfigBaseData.ConfigObjectTypeVersion = '1.0.0.0'
+          IConfigBaseData.AdditionalInfos = bytes[94] 5e000000010000000c00000052000000140000001c0000002d000000450000000800000000000000
+          IConfigBaseData.PersistentExpandoAttributeFlags = bytes[484] e40100000c0000006000000054000000130000001200000014000000140000001e0000001e000000
+          IPersistentExpandoData.ConnOneWay = True
+          IPersistentExpandoData.ConnEstablishment = True
+          IPersistentExpandoData.ConnSendOperatingMessages = False
+          IPersistentExpandoData.ConnS7TcpIp = True
+          IPersistentExpandoData.ConnS7YAddress = False
+          IPersistentExpandoData.ConnS7LocalTsap = True
+          IPersistentExpandoData.ConnS7RemoteTsap = False
+          IPersistentExpandoData.ConnRemoteRackPositionNr = 0
+          IPersistentExpandoData.ConnRemoteSlotPositionNr = 0
+          IPersistentExpandoData.ConnCharacteristics = 196870
+          IPersistentExpandoData.ConnId = bytes[9] 000100000000000000
+          IPersistentExpandoData.ConnRemoteAddress = ''
+          IPersistentExpandoData.ConnS7TsapId = 0
+          IPersistentExpandoData.ConnRemoteTsapId = 3
+          IPersistentExpandoData.ConnRemoteTsap = 'SIMATIC-ACC'
+          IPersistentExpandoData.SdbNr = bytes[9] bd0200000000000000
+          IPersistentExpandoData.ConnName = 'S7_Connection_1'
+          IPersistentExpandoData.ConnRemoteEndPointName = '0000000000000000000000000'
+          link RelatedPackage -> 1002:0004:1019
+          link Conn2Nodes -> 101d:0010:827
+          link Parent -> 101c:0010:813
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+CHANGED 1004:0004:423 ProductVersionInfoData name='Siemens.Simatic.Portal:14.00.00.00'
+          raw <links 1>: 420 -> 436 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1019
+CHANGED 1004:0004:42f ProductVersionInfoData name='Siemens.Simatic.STEP7.SinemaEBasic:12.00.00.00'
+          raw <links 1>: 52 -> 52 bytes
+          +link RelatedPackageContainerData -> 1002:0004:1019
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000 -> bytes[116] 740000000200000010000000250000001500000000000000100000001400000004566369014f0000
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-24T15:30:22.209633Z'  (timestamp)
+          raw <links 46>: 0 -> 24 bytes
+          raw <links 63>: 492 -> 492 bytes
+          +link typed slot 64 -> 1002:0010:1018
+          slot table [4891, 536, 0, 0, 0, 1647, 7537, 0, 0, 0, 0, 0, 1764, 1776, 2346, 2429, 2445, 0, 3331, 27649, 3871, 28945, 0, 0, 0, 0, 28921, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3463, 3595, 3715, 0, 0, 0, 4867, 3895, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3835, 0, 28969, 0, 0, 28873, 0, 0, 0, 0, 0, 0, 0, 0, 7513, 0, 28621, 7489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] -> [4891, 536, 0, 0, 0, 1647, 7537, 0, 0, 0, 0, 0, 1764, 1776, 2346, 2429, 2445, 0, 3331, 27649, 3871, 28945, 0, 0, 0, 0, 28921, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3463, 3595, 3715, 0, 0, 0, 4867, 3895, 29461, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3835, 0, 28969, 0, 0, 28873, 0, 0, 0, 0, 0, 0, 0, 0, 7513, 0, 28621, 7489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+CHANGED 101d:0010:827 NodeData name='X1'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:24:38.887598Z' -> '2026-10-24T15:30:22.209633Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link Node2Conns -> 1002:0010:1018
+          slot table [88, 0, 0, 0, 0, 114, 934, 961, 0, 1241, 0] -> [88, 0, 0, 0, 0, 114, 934, 961, 0, 1241, 1325]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-24T15:24:39.272105Z' -> '2026-10-24T15:30:22.766552Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1400, 0014:0007:0, 0015:0007:20, 0016:0007:18

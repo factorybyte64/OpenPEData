@@ -1,0 +1,29 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex024"
+    VAR_INPUT
+        v_mode : DWord;
+        v_recseparator : Variant;
+        v_endseparator : Variant;
+        v_srcarray : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_count : UDInt;
+    END_VAR
+    VAR_IN_OUT
+        v_position : UDInt;
+        v_dststruct : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Split( Mode := #v_mode, RecSeparator := #v_recseparator, EndSeparator := #v_endseparator, SrcArray := #v_srcarray, DestStruct := 0, Position := #v_position, Ret_Val => #v_ret_val, Count => #v_count, DstStruct := #v_dststruct )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

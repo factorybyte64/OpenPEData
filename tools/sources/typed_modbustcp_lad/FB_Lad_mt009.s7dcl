@@ -1,0 +1,37 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_mt009"
+    VAR_IN_OUT
+        v_disconnect : Variant;
+        v_req : Variant;
+        v_mb_mode : Variant;
+        v_mb_data_addr : Variant;
+        v_mb_data_len : Variant;
+        v_rd_mb_data_addr : Variant;
+        v_rd_mb_data_len : Variant;
+        v_wr_mb_data_addr : Variant;
+        v_wr_mb_data_len : Variant;
+        v_done : Variant;
+        v_busy : Variant;
+        v_error : Variant;
+        v_status : Variant;
+        v_mb_data_ptr : Variant;
+        v_connect : Variant;
+        v_rd_mb_data_ptr : Variant;
+        v_wr_mb_data_ptr : Variant;
+    END_VAR
+    VAR
+        inst : MB_CLIENT;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.MB_CLIENT( DISCONNECT := #v_disconnect, REQ := #v_req, MB_MODE := #v_mb_mode, MB_DATA_ADDR := #v_mb_data_addr, MB_DATA_LEN := #v_mb_data_len, RD_MB_DATA_ADDR := #v_rd_mb_data_addr, RD_MB_DATA_LEN := #v_rd_mb_data_len, WR_MB_DATA_ADDR := #v_wr_mb_data_addr, WR_MB_DATA_LEN := #v_wr_mb_data_len, DONE := #v_done, BUSY := #v_busy, ERROR := #v_error, STATUS := #v_status, MB_DATA_PTR := #v_mb_data_ptr, CONNECT := #v_connect, RD_MB_DATA_PTR := #v_rd_mb_data_ptr, WR_MB_DATA_PTR := #v_wr_mb_data_ptr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

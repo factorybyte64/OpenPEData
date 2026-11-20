@@ -1,0 +1,40 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex147"
+    VAR_INPUT
+        v_req : Bool;
+        v_low_limit : UInt;
+        v_up_limit : UInt;
+        v_count : UDInt;
+        v_attrib : Byte;
+        v_srcblk : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_busy : Bool;
+        v_db_num : UInt;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            CREATE_DB(
+                REQ := #v_req,
+                LOW_LIMIT := #v_low_limit,
+                UP_LIMIT := #v_up_limit,
+                COUNT := #v_count,
+                ATTRIB := #v_attrib,
+                SRCBLK := #v_srcblk,
+                RET_VAL => #v_ret_val,
+                BUSY => #v_busy,
+                DB_NUM => #v_db_num
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

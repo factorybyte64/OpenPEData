@@ -1,0 +1,46 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_Iface" : Int
+    VAR_INPUT
+        { S7_MLC := "MLC_iBool" }
+        iBool : Bool;
+        { S7_MLC := "MLC_iInt" }
+        iInt : Int;
+        { S7_MLC := "MLC_iReal" }
+        iReal : Real;
+        { S7_MLC := "MLC_iArr" }
+        iArr : Array[0..3] of Int;
+        { S7_MLC := "MLC_iMotor" }
+        iMotor : _.UDT_Motor;
+    END_VAR
+    VAR_OUTPUT
+        { S7_MLC := "MLC_oBool" }
+        oBool : Bool;
+        { S7_MLC := "MLC_oInt" }
+        oInt : Int;
+    END_VAR
+    VAR_IN_OUT
+        { S7_MLC := "MLC_ioReal" }
+        ioReal : Real;
+    END_VAR
+    VAR_TEMP
+        { S7_MLC := "MLC_tInt" }
+        tInt : Int;
+    END_VAR
+    VAR CONSTANT
+        { S7_MLC := "MLC_cInt" }
+        cInt : Int := 7;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #tInt := #iInt + #cInt;
+                #oInt := #tInt;
+                #oBool := #iBool;
+                #ioReal := #ioReal + #iReal;
+                #FC_Iface := #tInt;
+    END_NETWORK
+END_FUNCTION

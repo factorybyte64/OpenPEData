@@ -1,0 +1,28 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ou012"
+    VAR_INPUT
+        v_req : Bool;
+        v_id : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR
+        inst : Tdiscon;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.Tdiscon( REQ := #v_req, ID := #v_id, DONE => #v_done, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

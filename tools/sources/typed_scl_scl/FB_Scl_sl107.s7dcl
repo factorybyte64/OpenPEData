@@ -1,0 +1,21 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl107"
+    VAR_INPUT
+        v_k : Int;
+        v_in : String;
+    END_VAR
+    VAR_OUTPUT
+        v_out0 : String;
+        v_out1 : String;
+        v_outn : String;
+        v_outelse : String;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        DEMUX(K := #v_k, IN := #v_in, OUT0 => #v_out0, OUT1 => #v_out1, OUTn => #v_outn, OUTELSE => #v_outelse);
+    END_NETWORK
+END_FUNCTION_BLOCK

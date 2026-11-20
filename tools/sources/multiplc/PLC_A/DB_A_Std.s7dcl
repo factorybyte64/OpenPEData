@@ -1,0 +1,19 @@
+{
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_A_Std
+    VAR
+        b0 : Bool;
+        b1 : Bool;
+        "w" : Word;
+        "d" : DInt;
+        r : Real;
+        s : String[8];
+        arr : Array[1..3] of Int;
+    END_VAR
+
+    "d" := 42;
+
+END_DATA_BLOCK

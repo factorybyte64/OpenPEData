@@ -1,0 +1,9 @@
+{
+    S7_Optimized := "TRUE"
+}
+DATA_BLOCK "DB_Motor"
+    VAR
+        motor : "UDT_Motor";
+    END_VAR
+    motor.Speed := 750.0;
+END_DATA_BLOCK

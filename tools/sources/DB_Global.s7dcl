@@ -1,0 +1,22 @@
+{
+    S7_Optimized := "TRUE"
+}
+DATA_BLOCK "DB_Global"
+    VAR
+        { S7_MLC := "MLC_xBool" }
+        xBool : Bool;
+        iInt : Int;
+        { S7_MLC := "MLC_rReal" }
+        rReal : Real;
+        aInt : Array[0..3] of Int;
+        sData : Struct
+            a : Bool;
+            b : DInt;
+        END_STRUCT;
+    END_VAR
+    xBool := TRUE;
+    iInt := 42;
+    rReal := 3.5;
+    aInt[1] := 11;
+    sData.b := -5;
+END_DATA_BLOCK

@@ -1,0 +1,39 @@
+{
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_Put"
+    VAR_INPUT
+        req : Bool;
+        id : Word;
+    END_VAR
+    VAR_OUTPUT
+        done : Bool;
+        err : Bool;
+        status : Word;
+    END_VAR
+    VAR_IN_OUT
+        addr1 : Remote;
+        addr2 : Remote;
+        addr3 : Remote;
+        addr4 : Remote;
+    END_VAR
+    VAR
+        inst : PUT;
+    END_VAR
+    VAR_TEMP
+        rd1 : Array[0..9] of Byte;
+        rd2 : Array[0..9] of Byte;
+        rd3 : Array[0..9] of Byte;
+        rd4 : Array[0..9] of Byte;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.PUT( REQ := #req, ID := #id, DONE => #done, ERROR => #err, STATUS => #status, ADDR_1 := #addr1, ADDR_2 := #addr2, ADDR_3 := #addr3, ADDR_4 := #addr4, SD_1 := #rd1, SD_2 := #rd2, SD_3 := #rd3, SD_4 := #rd4 )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,28 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex047"
+    VAR_INPUT
+        v_id : HW_SUBMODULE;
+    END_VAR
+    VAR_OUTPUT
+        v_status : DWord;
+        v_len : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_inputs : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Getio;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.Getio( ID := #v_id, STATUS => #v_status, LEN => #v_len, INPUTS := #v_inputs )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

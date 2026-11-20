@@ -1,0 +1,23 @@
+A: 043_plc_alarm_text.zap21  B: 044_plc_alarm_class.zap21
+CHANGED 1002:0022:1018 DataBlockData name='FB_Alarm_DB'
+          ICommonFingerprintData.DataStore: bytes[407] 01a505000000000000000000000010010000000101000000fd02785eed94df4ac3301487e7ad20f8 -> bytes[407] 01a505000000000000000000000010010000000101000000fd02785eed94dd4ac3301886e7a92078
+          ICommonFingerprintData.DataVersion: 639285551445466020 -> 639285551604453484
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:59:04.073044Z' -> '2026-10-25T19:59:20.380152Z'  (timestamp)
+CHANGED 1003:0040:56a AlarmClassData name='Acknowledgement'
+          raw <links 1>: 0 -> 52 bytes
+          +link Alarms -> 100c:0040:101d
+          slot table [0, 190, 215, 0, 160, 0, 76, 0] -> [0, 190, 215, 0, 160, 0, 76, 313]
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.History: bytes[302] 2e0100000200000010000000820000007200000020000000360a431a032edf482d00000000000000 -> bytes[478] de010000030000001400000086000000320100007200000020000000360a431a032edf482d000000
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+CHANGED 100c:0040:101d SimpleControllerAlarmData name='Alarm_1'
+          IAlarmDataExt.ModifiedTime: '2026-10-25T19:59:04.572865Z' -> '2026-10-25T19:59:20.444255Z'  (timestamp)
+          ISimpleControllerAlarmData.Acknowledgement: '<absent>' -> -1
+          ISimpleControllerAlarmData.AlarmClassIsSet: '<absent>' -> True
+          ISimpleControllerAlarmData.IsInfoReport: '<absent>' -> -1
+          raw <links 0>: 84 -> 84 bytes
+          +link AlarmClass -> 1003:0040:56a
+          slot table [96, 0, 0, 255, 0, 574, 215, 514, 0, 0, 0, 131, 318] -> [96, 0, 0, 255, 0, 574, 215, 514, 0, 3036, 0, 131, 318]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:59:05.015783Z' -> '2026-10-25T19:59:20.840183Z'  (timestamp)
+store records changed/new: 0003:0007:3, 000d:0007:10, 0014:0007:0, 0015:0007:20, 0016:0007:18

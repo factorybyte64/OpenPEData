@@ -1,0 +1,111 @@
+=== samples/L15_mc_db: 1 master copies, 0 tombstones
+MC 1016:0002:2440 'DB_Motor' guid=d65840da2ed8d6438d4e40aed6ee1317
+   ICoreAttributes.CreationTime = 2026-10-20T16:05:18.665767Z
+   ICoreAttributes.IsShell = False
+   ICoreAttributes.ModifiedTime = 2026-10-20T16:05:18.665767Z
+   ICoreAttributes.Version = 
+   ICoreAttributes.Author = factorybyte
+   ICoreAttributes.LastModifiedBy = factorybyte
+   ICoreAttributes.Name = DB_Motor
+   ICoreAttributes.Subtype = IECPL
+   ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+   ICoreLibMasterCopyAttributes.BinaryData = bytes[20] 0000000000000000000000000000100100000000
+   ICoreLibMasterCopyAttributes.CoreObjectData = bytes[33] 000000010000000c00000016000000010000000000ffffffff0000000000000000
+   ICoreLibMasterCopyAttributes.NonCoreObjectData = bytes[7] 00000000000000
+   ICoreLibObjectAttributes.IsSystemElement = False
+   ICoreLibObjectAttributes.State = Committed
+   ICoreLibObjectAttributes.OriginalLibrary = None
+   ICoreLibObjectAttributes.OriginalName = None
+   ICoreLibObjectAttributes.DetailHelp = 
+   ICoreLibObjectAttributes.ShortHelp = 
+   ICoreLibObjectAttributes.IconData = bytes[685] 00950200000000000000000000001001000000010100000089504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000000017352474200aece1ce90000000467414d410000
+   ICoreLibObjectAttributes.IconResource = bytes[15] 000000000000000000000000000000
+   CoreObjectData: {'len': 33, 'hex': '000000010000000c00000016000000010000000000ffffffff0000000000000000', 'u32be': [1, 12, 22, 1, 0, 16777215, 4278190080, 0]}
+   NonCoreObjectData: 00000000000000
+   SharedRawData: <?xml version="1.0" encoding="utf-16"?><SharedRawData><ClipboardHeader formatVersion="1.0.0.0" projectId="5d71afef-15fb-42f6-9cbe-2b8a2cdd35ef"><SourceScopePath><ObjectScope scopeTypeName="Persistence" scopeId="fstore://WIN11-FACTORYBYTE/C:\GitHub\factorybyte\OpenPEData\samples\L15_mc_db\System\PEData.plf" /><ObjectScope scopeTypeName="Project" scopeId="{135208-1075}" /><ObjectScope scopeTypeName="Target" scopeId="{1052700-2067}" /></SourceScopePath><TypeDescriptor roles="SelectedObject" typeName="Siemens.Simatic.Lang.Model.Blocks.DataBlockData.DB" soc="1" eoc="0" poc="0" voc="0" /></ClipboardHeader><ClipboardData formatVersion="1.0.0.0"><SelectedIds>0</SelectedIds><ObjectResolvers><Resolver sid="Siemens.Automation.ObjectFrame.CoreObjectClipboardResolver" /></ObjectResolvers></ClipboardData></SharedRawData>
+   link AggregatingFolder      slot10 -> 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   link Environment            slot10 -> 1014:0002:443 LibraryData 'Project library'
+   link EditingCulture         slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link ReferenceCulture       slot10 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link UsedCultures           slot11 -> 1009:0001:442 CoreCulture 'en-US(1033)'
+   link Devices                slot11 -> 100e:0010:2441 DeviceData 'PLC_1'
+   link VisibleParts           slot11 -> 1002:0022:2442 DataBlockData 'DB_Motor'
+   link RelatedPackage         slot11 -> 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming CultureIsUsedBy <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsEditingCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming IsReferenceCultureIn <- 1009:0001:442 CoreCulture 'en-US(1033)'
+   incoming AggregatedElements <- 100e:0002:446 FolderData 'LibraryMasterCopySystemFolder'
+   incoming RelatedObject <- 1002:0004:920 PackageContainerData 'Siemens.Simatic.Lang.S7PSW.V21.0.0.0.NonMandatory{2.0.0.0.0}'
+   incoming ParentProject <- 100e:0010:2441 DeviceData 'PLC_1'
+   incoming VisiblePartInverse <- 1002:0022:2442 DataBlockData 'DB_Motor'
+   copies (Environment -> MC): 15
+     1002:0022:2442 DataBlockData                    'DB_Motor'                               shell=False size=1887 orig=['1002:0022:2038']
+         IN  AggregatingFolder                        -> 100e:0002:2444 FolderData 'ProgramBlocksFolder'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  VisiblePartInverse                       -> 1016:0002:2440 LibraryMasterCopyData 'DB_Motor'
+         IN  LoadableBinaries                         -> 1011:0022:2445 LoadablePlusDataBlockData None
+         IN  InterfaceComments                        -> 160d:0022:2447 InterfaceCommentsPartData None
+         IN  BelongsTo                                -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  CurrentInterface                         -> 160c:0022:2449 InterfaceVersionRootData 'BIVE:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921'
+         IN  CoreObject2IdentContainer                -> 1202:0022:2446 IdentContainerData None
+     1003:0022:244d UserTypeData                     'UDT_Motor'                              shell=False size=368 orig=['1003:0022:1018']
+         IN  TRefParent                               -> 100e:0002:244c FolderData 'ControllerDataTypeFolder'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  BlockToVersionElements                   -> 160c:0022:244a InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+     100e:0002:2444 FolderData                       'ProgramBlocksFolder'                    shell=False size=287 orig=['100e:0002:916']
+         IN  FolderParent                             -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  AggregatedElements                       -> 1002:0022:2442 DataBlockData 'DB_Motor'
+     100e:0002:244c FolderData                       'ControllerDataTypeFolder'               shell=False size=289 orig=['100e:0002:919']
+         IN  TRefParent                               -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  TextualReferences                        -> 1003:0022:244d UserTypeData 'UDT_Motor'
+     100e:0002:244f FolderData                       'ProgramUnitsFolder'                     shell=False size=233 orig=['100e:0002:834']
+         IN  FolderParent                             -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+     100e:0010:2441 DeviceData                       'PLC_1'                                  shell=True size=584 orig=['100e:0010:808']
+         IN  ParentProject                            -> 1016:0002:2440 LibraryMasterCopyData 'DB_Motor'
+         IN  DeviceItems                              -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+     1011:0022:2445 LoadablePlusDataBlockData        None                                     shell=None size=928 orig=[]
+         IN  Parent                                   -> 1002:0022:2442 DataBlockData 'DB_Motor'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+     1019:0001:244e ResourceAllocatorData            None                                     shell=None size=495 orig=[]
+         IN  CoreTarget                               -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+     101c:0010:2443 S7ControllerTargetData           'PLC_1'                                  shell=False size=25950 orig=['101c:0010:813']
+         IN  Parent                                   -> 100e:0010:2441 DeviceData 'PLC_1'
+         IN  ControllerTargetData2BlockInterfaceContainer -> 1607:0022:2448 TargetBlockInterfaceContainer None
+         IN  ResourceAllocatorData                    -> 1019:0001:244e ResourceAllocatorData None
+         IN  Folders                                  -> 100e:0002:2444 FolderData 'ProgramBlocksFolder'
+         IN  SWObjectsBelongingToMe                   -> 1002:0022:2442 DataBlockData 'DB_Motor'
+         IN  SWObjectData_IUnitElementAttributes_BaseUnitData_Inverse -> 1002:0022:2442 DataBlockData 'DB_Motor'
+         IN  TextualReferences                        -> 100e:0002:244c FolderData 'ControllerDataTypeFolder'
+         IN  Folders                                  -> 100e:0002:244f FolderData 'ProgramUnitsFolder'
+     1202:0022:2446 IdentContainerData               None                                     shell=None size=273 orig=[]
+         IN  IdentContainerInverse                    -> 1002:0022:2442 DataBlockData 'DB_Motor'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+     1607:0022:2448 TargetBlockInterfaceContainer    None                                     shell=None size=201 orig=[]
+         IN  Parent                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  InterfaceParts                           -> 160c:0022:2449 InterfaceVersionRootData 'BIVE:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921'
+         IN  InterfaceParts                           -> 160c:0022:244a InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+         IN  InterfaceParts                           -> 160b:0022:244b InterfacePartData 'BI:Values:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921#dfdeaaee'
+     160b:0022:244b InterfacePartData                'BI:Values:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921#dfdeaaee' shell=False size=510 orig=['160b:0022:203c']
+         IN  Parent                                   -> 1607:0022:2448 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  UsedByVersions                           -> 160c:0022:2449 InterfaceVersionRootData 'BIVE:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921'
+     160c:0022:2449 InterfaceVersionRootData         'BIVE:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921' shell=False size=1124 orig=['160c:0022:203a']
+         IN  Parent                                   -> 1607:0022:2448 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  UsedByBlock                              -> 1002:0022:2442 DataBlockData 'DB_Motor'
+         IN  UsedParts                                -> 160c:0022:244a InterfaceVersionRootData '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c'
+         IN  UsedParts                                -> 160b:0022:244b InterfacePartData 'BI:Values:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921#dfdeaaee'
+     160c:0022:244a InterfaceVersionRootData         '_BIVE:UDT_Motor/a1e9a937-ba10-4845-9d11-f06e36ada58c' shell=False size=1191 orig=['160c:0022:101a']
+         IN  Parent                                   -> 1607:0022:2448 TargetBlockInterfaceContainer None
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'
+         IN  VersionElementToBlock                    -> 1003:0022:244d UserTypeData 'UDT_Motor'
+         IN  UsedByVersions                           -> 160c:0022:2449 InterfaceVersionRootData 'BIVE:DB_Motor/6c94c0e8-1b49-4227-99f2-b0ee24196921'
+     160d:0022:2447 InterfaceCommentsPartData        None                                     shell=None size=246 orig=[]
+         IN  InverseInterfaceComments                 -> 1002:0022:2442 DataBlockData 'DB_Motor'
+         IN  Target                                   -> 101c:0010:2443 S7ControllerTargetData 'PLC_1'

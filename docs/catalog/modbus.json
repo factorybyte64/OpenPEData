@@ -1,0 +1,195 @@
+[
+ {
+  "group": "MODBUS (RTU)",
+  "title": "MB_COMM_LOAD: Configure port on the PtP module for Modbus RTU (S7-1200)",
+  "name": "MB_COMM_LOAD",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "PORT",
+    "decl": "Input",
+    "types": "PORT"
+   },
+   {
+    "name": "BAUD",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "PARITY",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "FLOW_CTRL",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RTS_ON_DLY",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RTS_OFF_DLY",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "RESP_TO",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "MB_DB",
+    "decl": "Input",
+    "types": "MB_BASE"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "MODBUS (RTU) / MB_MASTER: Communicate via the PtP port as Modbus master",
+  "title": "Description of MB_MASTER (S7-1200)",
+  "name": "Description of MB_MASTER",
+  "params": [
+   {
+    "name": "REQ",
+    "decl": "Input",
+    "types": "BOOL"
+   },
+   {
+    "name": "MB_ADDR",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "MODE",
+    "decl": "Input",
+    "types": "USINT"
+   },
+   {
+    "name": "DATA_ADDR",
+    "decl": "Input",
+    "types": "UDINT"
+   },
+   {
+    "name": "DATA_LEN",
+    "decl": "Input",
+    "types": "UINT"
+   },
+   {
+    "name": "DONE",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "BUSY",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "MODBUS (RTU) / MB_MASTER: Communicate via the PtP port as Modbus master",
+  "title": "Parameter REQ (S7-1200)",
+  "name": "Parameter REQ",
+  "params": null
+ },
+ {
+  "group": "MODBUS (RTU) / MB_MASTER: Communicate via the PtP port as Modbus master",
+  "title": "DATA_ADDR and MODE parameters (S7-1200)",
+  "name": "DATA_ADDR and MODE parameters",
+  "params": null
+ },
+ {
+  "group": "MODBUS (RTU) / MB_MASTER: Communicate via the PtP port as Modbus master",
+  "title": "Parameter DATA_PTR (S7-1200)",
+  "name": "Parameter DATA_PTR",
+  "params": null
+ },
+ {
+  "group": "MODBUS (RTU) / MB_MASTER: Communicate via the PtP port as Modbus master",
+  "title": "Instance DB of the \"MB_MASTER\" instruction (S7-1200)",
+  "name": "Instance DB of the \"MB_MASTER\" instruction",
+  "params": null
+ },
+ {
+  "group": "MODBUS (RTU) / MB_MASTER: Communicate via the PtP port as Modbus master",
+  "title": "Sample program for a Modbus master (S7-1200)",
+  "name": "Sample program for a Modbus master",
+  "params": null
+ },
+ {
+  "group": "MODBUS (RTU) / MB_SLAVE: Communicate via the PtP port as Modbus slave",
+  "title": "Description of MB_SLAVE (S7-1200)",
+  "name": "Description of MB_SLAVE",
+  "params": [
+   {
+    "name": "MB_ADDR",
+    "decl": "Input",
+    "types": "V1.0: USINT V2.0: UINT"
+   },
+   {
+    "name": "NDR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "DR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "ERROR",
+    "decl": "Output",
+    "types": "BOOL"
+   },
+   {
+    "name": "STATUS",
+    "decl": "Output",
+    "types": "WORD"
+   }
+  ]
+ },
+ {
+  "group": "MODBUS (RTU) / MB_SLAVE: Communicate via the PtP port as Modbus slave",
+  "title": "Instance DB of the \"MB_SLAVE\" instruction (S7-1200)",
+  "name": "Instance DB of the \"MB_SLAVE\" instruction",
+  "params": null
+ },
+ {
+  "group": "MODBUS (RTU) / MB_SLAVE: Communicate via the PtP port as Modbus slave",
+  "title": "Sample program for a Modbus slave (S7-1200)",
+  "name": "Sample program for a Modbus slave",
+  "params": null
+ }
+]

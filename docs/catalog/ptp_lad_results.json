@@ -1,0 +1,155 @@
+{
+ "pt001": {
+  "block": "FX_Lad_pt001",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "PORT_CFG: Configure communication parameters dynamically",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Port_Config",
+   "pins": [
+    "REQ",
+    "PORT",
+    "PROTOCOL",
+    "BAUD",
+    "PARITY",
+    "DATABITS",
+    "STOPBITS",
+    "FLOWCTRL",
+    "XONCHAR",
+    "XOFFCHAR",
+    "WAITTIME",
+    "DONE",
+    "ERROR",
+    "STATUS",
+    "MODE",
+    "LINE_PRE",
+    "BRK_DET"
+   ],
+   "templates": {}
+  }
+ },
+ "pt002": {
+  "block": "FX_Lad_pt002",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SEND_CFG: Configure serial transmission parameters dynamically",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Send_Config",
+   "pins": [
+    "REQ",
+    "PORT",
+    "RTSONDLY",
+    "RTSOFFDLY",
+    "BREAK",
+    "IDLELINE",
+    "DONE",
+    "ERROR",
+    "STATUS",
+    "USR_END",
+    "APP_END"
+   ],
+   "templates": {}
+  }
+ },
+ "pt003": {
+  "block": "FX_Lad_pt003",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RCV_CFG: Configure serial receive parameters dynamically",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Receive_Config",
+   "pins": [
+    "REQ",
+    "PORT",
+    "DONE",
+    "ERROR",
+    "STATUS",
+    "Receive_Conditions"
+   ],
+   "templates": {}
+  }
+ },
+ "pt004": {
+  "block": "FX_Lad_pt004",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "SEND_PTP: Transmit send buffer data",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Send_P2P",
+   "pins": [
+    "REQ",
+    "PORT",
+    "BUFFER",
+    "LENGTH",
+    "DONE",
+    "ERROR",
+    "STATUS",
+    "UNIVERSAL"
+   ],
+   "templates": {}
+  }
+ },
+ "pt005": {
+  "block": "FX_Lad_pt005",
+  "ok": true,
+  "sample": "039_fw41",
+  "title": "RCV_PTP: Enable receive messages",
+  "via": "xml",
+  "xml": {
+   "enPin": "en",
+   "name": "Receive_P2P",
+   "pins": [
+    "PORT",
+    "BUFFER",
+    "NDR",
+    "ERROR",
+    "STATUS",
+    "LENGTH",
+    "UNIVERSAL"
+   ],
+   "templates": {}
+  }
+ },
+ "pt006": {
+  "block": "FB_Lad_pt006",
+  "body": [
+   "Receive_Reset pins=REQ,PORT,DONE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "RCV_RST: Delete receive buffer",
+  "typed": true
+ },
+ "pt007": {
+  "block": "FB_Lad_pt007",
+  "body": [
+   "Signal_Get pins=REQ,PORT,NDR,DTR,DSR,RTS,CTS,DCD,RING,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "SGN_GET: Query RS-232 signals",
+  "typed": true
+ },
+ "pt008": {
+  "block": "FB_Lad_pt008",
+  "body": [
+   "Signal_Set pins=REQ,PORT,SIGNAL,RTS,DTR,DSR,DONE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "SGN_SET: Set RS-232 signals",
+  "typed": true
+ },
+ "pt009": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "General status information of the communications blocks"
+ }
+}

@@ -1,0 +1,67 @@
+FUNCTION_BLOCK "FB_StlDb"
+TITLE = STL catalog FB_StlDb
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 121 OPN
+      OPN   "DB_StlStd";
+      L     %DBW0;
+      T     #wr;
+      OPN   %DB100;
+NETWORK
+TITLE = 122 OPNDI
+      OPNDI "DB_StlStd";
+      L     %DIW0;
+      T     #wr;
+NETWORK
+TITLE = 123 CDB
+      CDB   ;
+NETWORK
+TITLE = 124 L DBLG
+      L     DBLG;
+      T     #dr;
+NETWORK
+TITLE = 125 L DBNO
+      L     DBNO;
+      T     #dr;
+NETWORK
+TITLE = 126 L DILG
+      L     DILG;
+      T     #dr;
+NETWORK
+TITLE = 127 L DINO
+      L     DINO;
+      T     #dr;
+END_FUNCTION_BLOCK

@@ -1,0 +1,24 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex021"
+    VAR_INPUT
+        v_chars : Int;
+        v_pchars : DInt;
+        v_cnt : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_strg : Int;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "[ptr_type := Int, str_type := Int]" }
+            Chars_To_Strg( CHARS := #v_chars, PCHARS := #v_pchars, CNT := #v_cnt, STRG => #v_strg )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,47 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_Lad" : Void
+    VAR_INPUT
+        { S7_MLC := "MLC_start" }
+        start : Bool;
+        { S7_MLC := "MLC_a" }
+        "a" : Int;
+        { S7_MLC := "MLC_b" }
+        "b" : Int;
+    END_VAR
+    VAR_OUTPUT
+        { S7_MLC := "MLC_running" }
+        running : Bool;
+        { S7_MLC := "MLC_sum" }
+        sum : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_N1C";
+        S7_NetworkTitle := "MLC_N1T"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #start )
+            Coil( #running )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N2T"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Int" }
+            Add(
+                in1 := #"a",
+                in2 := #"b",
+                out => #sum
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION

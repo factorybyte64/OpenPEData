@@ -1,0 +1,78 @@
+{
+ "mb001": {
+  "block": "FB_Lad_mb001",
+  "body": [
+   "Modbus_Comm_Load pins=REQ,PORT,BAUD,PARITY,FLOW_CTRL,RTS_ON_DLY,RTS_OFF_DLY,RESP_TO,MB_DB,DONE,ERROR,STATUS"
+  ],
+  "ok": true,
+  "title": "MB_COMM_LOAD: Configure port on the PtP module for Modbus RTU",
+  "typed": true
+ },
+ "mb002": {
+  "block": "FB_Lad_mb002",
+  "body": [
+   "Modbus_Master pins=REQ,MB_ADDR,MODE,DATA_ADDR,DATA_LEN,DONE,BUSY,ERROR,STATUS,DATA_PTR"
+  ],
+  "ok": true,
+  "title": "Description of MB_MASTER",
+  "typed": true
+ },
+ "mb003": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter REQ"
+ },
+ "mb004": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "DATA_ADDR and MODE parameters"
+ },
+ "mb005": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Parameter DATA_PTR"
+ },
+ "mb006": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Instance DB of the \"MB_MASTER\" instruction"
+ },
+ "mb007": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Sample program for a Modbus master"
+ },
+ "mb008": {
+  "block": "FB_Lad_mb008",
+  "body": [
+   "Modbus_Slave pins=MB_ADDR,NDR,DR,ERROR,STATUS,MB_HOLD_REG"
+  ],
+  "ok": true,
+  "title": "Description of MB_SLAVE",
+  "typed": true
+ },
+ "mb009": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Instance DB of the \"MB_SLAVE\" instruction"
+ },
+ "mb010": {
+  "last": {
+   "message": "no SD name"
+  },
+  "ok": false,
+  "title": "Sample program for a Modbus slave"
+ }
+}

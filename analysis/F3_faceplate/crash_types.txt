@@ -1,0 +1,109 @@
+fp_dump samples/F02_hmi_faceplates_crash
+====================================================================================================
+OBJECT 0002:00d3:2018  type Siemens.Simatic.Hmi.DL.FaceplateLib.FaceplateLibraryTypeData (0x00d30002)  name='FP_Basic'
+  record @4483174 length 354, u32@16=5 u32@20=3 slot count 12 b27=3 GUID e43d684ca85d374d95a24967a39911f2
+  layout_ok=True, sets 10, errors -
+  record versions of this key: @4483174 len 354
+  ancestors: Siemens.Simatic.Hmi.DL.FaceplateLib.FaceplateLibraryTypeData > Siemens.Simatic.Hmi.Model.Library.HmiByRefTypeObjectBase > Siemens.Automation.CommonServices.Library.Model.ByRefTypeObjectBase > Siemens.Simatic.Hmi.Model.Library.HmiTypeObjectBase > Siemens.Automation.CommonServices.Library.Model.TypeObjectBase > Siemens.Automation.DomainModel.FolderElementData > Siemens.Automation.ObjectFrame.CoreObject
+  header bytes:
+      000000  62 01 00 00 02 00 d3 00 18 20 00 00 00 00 00 00 05 00 00 00 03 00 00 00 00 00 0c 03 e4 3d 68 4c  b........ ...................=hL
+      000020  a8 5d 37 4d 95 a2 49 67 a3 99 11 f2 a6 00 00 00 00 00 00 00 c5 00 00 00 00 00 00 00 00 00 00 00  .]7M..Ig........................
+      000040  5c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d9 00 00 00 2d 01 00 00              \.......................-...
+  slot  0 @166    ITypeBaseAttributesInfo                       31 bytes
+      IsObsolete = False
+      IsSetAsNonUpdateable = False
+      OriginalTypeGuid = '00000000-0000-0000-0000-000000000000'
+      TypeNamespace = None
+      MinimumTargetDeviceVersion = ''
+      0000a6  1f 00 00 00 00 00 1e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01     ...............................
+  slot  1 @-      ITypeBaseExpandoAttributes                    empty
+  slot  2 @197    ITypeInfo                                     20 bytes
+      TypeGuid = 'f10ac243-f6e0-459c-bd54-b3b7d374677f'
+      0000c5  14 00 00 00 43 c2 0a f1 e0 f6 9c 45 bd 54 b3 b7 d3 74 67 7f                                      ....C......E.T...tg.
+  slot  3 @-      ITypeProtectionInfo                           empty
+  slot  4 @-      IFolderElementAttributes                      empty
+  slot  5 @92     ICoreAttributes                               74 bytes
+      IsShell = False
+      Subtype = ''
+      Author = 'factorybyte'
+      Comment = b' \x00\x00\x00\x10\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+      Name = 'FP_Basic'
+      00005c  4a 00 00 00 16 00 00 00 20 00 00 00 00 41 00 00 00 15 00 00 00 01 0a 44 61 74 61 4c 6f 67 58 45  J....... ....A.........factorybyte
+      00007c  21 20 00 00 00 10 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ! ..............................
+      00009c  00 09 46 50 5f 42 61 73 69 63                                                                    ..FP_Basic
+  slot  6 @-      ICoreExpandoAttributes                        empty
+  slot  7 @-      ICoreExpandoLinkAttributes                    empty
+  slot  8 @-      IHmiByRefTypeObjectBaseAttributes             empty
+  slot  9 @-      IAdditionalAttributes                         empty
+  slot 10 @217    <links 0>                                     84 bytes
+      0000d9  54 00 03 00 10 20 02 00 0e 10 02 00 45 04 00 00 00 00 00 00 0c 20 01 00 14 10 02 00 43 04 00 00  T.... ......E........ ......C...
+      0000f9  00 00 00 00 09 20 06 00 03 00 d3 00 19 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ..... ....... ..................
+      000119  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                      ....................
+  slot 11 @301    <links 1>                                     52 bytes
+      00012d  34 00 01 00 07 20 06 00 03 00 d3 00 19 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  4.... ....... ..................
+      00014d  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                      ....................
+  links out (4):
+    slot 10 AggregatingFolder                             -> 100e:0002:445 FolderData name='LibraryTypeSystemFolder'
+    slot 10 Environment                                   -> 1014:0002:443 LibraryData name='Project library'
+    slot 10 TypeToDefaultVersion                          -> 0003:00d3:2019 FaceplateLibraryVersionData name=None
+    slot 11 TypeObjectToVersionObject                     -> 0003:00d3:2019 FaceplateLibraryVersionData name=None
+  links in:
+    100e:0002:445 FolderData name='LibraryTypeSystemFolder'  via AggregatedElements (slot 8)
+    0003:00d3:2019 FaceplateLibraryVersionData name=None  via VersionObjectToTypeObject (slot 15)
+    0003:00d3:2019 FaceplateLibraryVersionData name=None  via DefaultVersionToType (slot 15)
+  raw references in other records (GUID e43d684ca85d374d95a24967a39911f2 / link ref 0200d3001820000000000000):
+    ref12 at +250 (slot 8 <links 1>) in 100e:0002:445 FolderData name='LibraryTypeSystemFolder'
+    ref12 at +357 (slot 15 <links 0>) in 0003:00d3:2019 FaceplateLibraryVersionData name=None
+====================================================================================================
+OBJECT 0002:00d3:207e  type Siemens.Simatic.Hmi.DL.FaceplateLib.FaceplateLibraryTypeData (0x00d30002)  name='FP_Controls'
+  record @5842467 length 357, u32@16=5 u32@20=3 slot count 12 b27=3 GUID 4496116b174954429db5287c70dc8e3d
+  layout_ok=True, sets 10, errors -
+  record versions of this key: @5842467 len 357
+  ancestors: Siemens.Simatic.Hmi.DL.FaceplateLib.FaceplateLibraryTypeData > Siemens.Simatic.Hmi.Model.Library.HmiByRefTypeObjectBase > Siemens.Automation.CommonServices.Library.Model.ByRefTypeObjectBase > Siemens.Simatic.Hmi.Model.Library.HmiTypeObjectBase > Siemens.Automation.CommonServices.Library.Model.TypeObjectBase > Siemens.Automation.DomainModel.FolderElementData > Siemens.Automation.ObjectFrame.CoreObject
+  header bytes:
+      000000  65 01 00 00 02 00 d3 00 7e 20 00 00 00 00 00 00 05 00 00 00 03 00 00 00 00 00 0c 03 44 96 11 6b  e.......~ ..................D..k
+      000020  17 49 54 42 9d b5 28 7c 70 dc 8e 3d a9 00 00 00 00 00 00 00 c8 00 00 00 00 00 00 00 00 00 00 00  .ITB..(|p..=....................
+      000040  5c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 dc 00 00 00 30 01 00 00              \.......................0...
+  slot  0 @169    ITypeBaseAttributesInfo                       31 bytes
+      IsObsolete = False
+      IsSetAsNonUpdateable = False
+      OriginalTypeGuid = '00000000-0000-0000-0000-000000000000'
+      TypeNamespace = None
+      MinimumTargetDeviceVersion = ''
+      0000a9  1f 00 00 00 00 00 1e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01     ...............................
+  slot  1 @-      ITypeBaseExpandoAttributes                    empty
+  slot  2 @200    ITypeInfo                                     20 bytes
+      TypeGuid = 'cb3ad79d-2036-4097-b6a3-f8ac40771bec'
+      0000c8  14 00 00 00 9d d7 3a cb 36 20 97 40 b6 a3 f8 ac 40 77 1b ec                                      ......:.6 .@....@w..
+  slot  3 @-      ITypeProtectionInfo                           empty
+  slot  4 @-      IFolderElementAttributes                      empty
+  slot  5 @92     ICoreAttributes                               77 bytes
+      IsShell = False
+      Subtype = ''
+      Author = 'factorybyte'
+      Name = 'FP_Controls'
+      Comment = b' \x00\x00\x00\x10\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+      00005c  4d 00 00 00 16 00 00 00 2c 00 00 00 00 20 00 00 00 15 00 00 00 01 0a 44 61 74 61 4c 6f 67 58 45  M.......,.... .........factorybyte
+      00007c  0c 46 50 5f 43 6f 6e 74 72 6f 6c 73 21 20 00 00 00 10 00 00 00 ff ff ff ff 00 00 00 00 00 00 00  .FP_Controls! ..................
+      00009c  00 00 00 00 00 00 00 00 00 00 00 00 00                                                           .............
+  slot  6 @-      ICoreExpandoAttributes                        empty
+  slot  7 @-      ICoreExpandoLinkAttributes                    empty
+  slot  8 @-      IHmiByRefTypeObjectBaseAttributes             empty
+  slot  9 @-      IAdditionalAttributes                         empty
+  slot 10 @220    <links 0>                                     84 bytes
+      0000dc  54 00 02 00 10 20 02 00 0e 10 02 00 45 04 00 00 00 00 00 00 0c 20 01 00 14 10 02 00 43 04 00 00  T.... ......E........ ......C...
+      0000fc  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................................
+      00011c  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                      ....................
+  slot 11 @304    <links 1>                                     52 bytes
+      000130  34 00 01 00 07 20 06 00 03 00 d3 00 7f 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  4.... ....... ..................
+      000150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                      ....................
+  links out (3):
+    slot 10 AggregatingFolder                             -> 100e:0002:445 FolderData name='LibraryTypeSystemFolder'
+    slot 10 Environment                                   -> 1014:0002:443 LibraryData name='Project library'
+    slot 11 TypeObjectToVersionObject                     -> 0003:00d3:207f FaceplateLibraryVersionData name=None
+  links in:
+    100e:0002:445 FolderData name='LibraryTypeSystemFolder'  via AggregatedElements (slot 8)
+    0003:00d3:207f FaceplateLibraryVersionData name=None  via VersionObjectToTypeObject (slot 15)
+  raw references in other records (GUID 4496116b174954429db5287c70dc8e3d / link ref 0200d3007e20000000000000):
+    ref12 at +266 (slot 8 <links 1>) in 100e:0002:445 FolderData name='LibraryTypeSystemFolder'
+    ref12 at +357 (slot 15 <links 0>) in 0003:00d3:207f FaceplateLibraryVersionData name=None

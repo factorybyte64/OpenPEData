@@ -1,0 +1,502 @@
+FUNCTION_BLOCK "FB_StlMath"
+TITLE = STL catalog FB_StlMath
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 040 ? I
+      L     #i1;
+      L     #i2;
+      ==I   ;
+      =     #q;
+      L     #i1;
+      L     #i2;
+      <>I   ;
+      =     #q;
+      L     #i1;
+      L     #i2;
+      >I    ;
+      =     #q;
+      L     #i1;
+      L     #i2;
+      <I    ;
+      =     #q;
+      L     #i1;
+      L     #i2;
+      >=I   ;
+      =     #q;
+      L     #i1;
+      L     #i2;
+      <=I   ;
+      =     #q;
+NETWORK
+TITLE = 041 ? D
+      L     #d1;
+      L     #d2;
+      ==D   ;
+      =     #q;
+      L     #d1;
+      L     #d2;
+      <>D   ;
+      =     #q;
+      L     #d1;
+      L     #d2;
+      >D    ;
+      =     #q;
+      L     #d1;
+      L     #d2;
+      <D    ;
+      =     #q;
+      L     #d1;
+      L     #d2;
+      >=D   ;
+      =     #q;
+      L     #d1;
+      L     #d2;
+      <=D   ;
+      =     #q;
+NETWORK
+TITLE = 042 ? R
+      L     #r1;
+      L     #r2;
+      ==R   ;
+      =     #q;
+      L     #r1;
+      L     #r2;
+      <>R   ;
+      =     #q;
+      L     #r1;
+      L     #r2;
+      >R    ;
+      =     #q;
+      L     #r1;
+      L     #r2;
+      <R    ;
+      =     #q;
+      L     #r1;
+      L     #r2;
+      >=R   ;
+      =     #q;
+      L     #r1;
+      L     #r2;
+      <=R   ;
+      =     #q;
+NETWORK
+TITLE = 043 +I
+      L     #i1;
+      L     #i2;
+      +I;
+      T     #ir;
+NETWORK
+TITLE = 044 -I
+      L     #i1;
+      L     #i2;
+      -I;
+      T     #ir;
+NETWORK
+TITLE = 045 *I
+      L     #i1;
+      L     #i2;
+      *I;
+      T     #ir;
+NETWORK
+TITLE = 046 /I
+      L     #i1;
+      L     #i2;
+      /I;
+      T     #ir;
+NETWORK
+TITLE = 047 +D
+      L     #d1;
+      L     #d2;
+      +D;
+      T     #dr;
+NETWORK
+TITLE = 048 -D
+      L     #d1;
+      L     #d2;
+      -D;
+      T     #dr;
+NETWORK
+TITLE = 049 *D
+      L     #d1;
+      L     #d2;
+      *D;
+      T     #dr;
+NETWORK
+TITLE = 050 /D
+      L     #d1;
+      L     #d2;
+      /D;
+      T     #dr;
+NETWORK
+TITLE = 051 +
+      L     #i1;
+      +     5;
+      T     #ir;
+NETWORK
+TITLE = 052 INC
+      L     #by1;
+      INC   1;
+      T     #by1;
+NETWORK
+TITLE = 053 DEC
+      L     #by1;
+      DEC   1;
+      T     #by1;
+NETWORK
+TITLE = 054 MOD
+      L     #d1;
+      L     #d2;
+      MOD;
+      T     #dr;
+NETWORK
+TITLE = 055 +R
+      L     #r1;
+      L     #r2;
+      +R;
+      T     #rr;
+NETWORK
+TITLE = 056 -R
+      L     #r1;
+      L     #r2;
+      -R;
+      T     #rr;
+NETWORK
+TITLE = 057 *R
+      L     #r1;
+      L     #r2;
+      *R;
+      T     #rr;
+NETWORK
+TITLE = 058 /R
+      L     #r1;
+      L     #r2;
+      /R;
+      T     #rr;
+NETWORK
+TITLE = 059 ABS
+      L     #r1;
+      ABS   ;
+      T     #rr;
+NETWORK
+TITLE = 060 SQR
+      L     #r1;
+      SQR;
+      T     #rr;
+NETWORK
+TITLE = 061 SQRT
+      L     #r1;
+      SQRT;
+      T     #rr;
+NETWORK
+TITLE = 062 EXP
+      L     #r1;
+      EXP;
+      T     #rr;
+NETWORK
+TITLE = 063 LN
+      L     #r1;
+      LN;
+      T     #rr;
+NETWORK
+TITLE = 064 SIN
+      L     #r1;
+      SIN;
+      T     #rr;
+NETWORK
+TITLE = 065 ASIN
+      L     #r1;
+      ASIN;
+      T     #rr;
+NETWORK
+TITLE = 066 COS
+      L     #r1;
+      COS;
+      T     #rr;
+NETWORK
+TITLE = 067 ACOS
+      L     #r1;
+      ACOS;
+      T     #rr;
+NETWORK
+TITLE = 068 TAN
+      L     #r1;
+      TAN;
+      T     #rr;
+NETWORK
+TITLE = 069 ATAN
+      L     #r1;
+      ATAN;
+      T     #rr;
+NETWORK
+TITLE = 085 BTI
+      L     #w1;
+      BTI;
+      T     #ir;
+NETWORK
+TITLE = 086 ITB
+      L     #i1;
+      ITB;
+      T     #wr;
+NETWORK
+TITLE = 087 BTD
+      L     #dw1;
+      BTD;
+      T     #dr;
+NETWORK
+TITLE = 088 ITD
+      L     #i1;
+      ITD;
+      T     #dr;
+NETWORK
+TITLE = 089 DTB
+      L     #d1;
+      DTB;
+      T     #dwr;
+NETWORK
+TITLE = 090 DTR
+      L     #d1;
+      DTR;
+      T     #rr;
+NETWORK
+TITLE = 091 INVI
+      L     #i1;
+      INVI;
+      T     #ir;
+NETWORK
+TITLE = 092 INVD
+      L     #d1;
+      INVD;
+      T     #dr;
+NETWORK
+TITLE = 093 NEGI
+      L     #i1;
+      NEGI;
+      T     #ir;
+NETWORK
+TITLE = 094 NEGD
+      L     #d1;
+      NEGD;
+      T     #dr;
+NETWORK
+TITLE = 095 NEGR
+      L     #r1;
+      NEGR;
+      T     #rr;
+NETWORK
+TITLE = 096 CAW
+      L     #w1;
+      CAW;
+      T     #wr;
+NETWORK
+TITLE = 097 CAD
+      L     #dw1;
+      CAD;
+      T     #dwr;
+NETWORK
+TITLE = 098 RND
+      L     #r1;
+      RND;
+      T     #dr;
+NETWORK
+TITLE = 099 TRUNC
+      L     #r1;
+      TRUNC;
+      T     #dr;
+NETWORK
+TITLE = 100 RND+
+      L     #r1;
+      RND+;
+      T     #dr;
+NETWORK
+TITLE = 101 RND-
+      L     #r1;
+      RND-;
+      T     #dr;
+NETWORK
+TITLE = 134 AW
+      L     #w1;
+      L     #w2;
+      AW;
+      T     #wr;
+      L     #w1;
+      AW   W#16#00FF;
+      T     #wr;
+NETWORK
+TITLE = 135 OW
+      L     #w1;
+      L     #w2;
+      OW;
+      T     #wr;
+      L     #w1;
+      OW   W#16#00FF;
+      T     #wr;
+NETWORK
+TITLE = 136 XOW
+      L     #w1;
+      L     #w2;
+      XOW;
+      T     #wr;
+      L     #w1;
+      XOW   W#16#00FF;
+      T     #wr;
+NETWORK
+TITLE = 137 AD
+      L     #dw1;
+      L     #dw2;
+      AD;
+      T     #dwr;
+      L     #dw1;
+      AD   DW#16#0000_FFFF;
+      T     #dwr;
+NETWORK
+TITLE = 138 OD
+      L     #dw1;
+      L     #dw2;
+      OD;
+      T     #dwr;
+      L     #dw1;
+      OD   DW#16#0000_FFFF;
+      T     #dwr;
+NETWORK
+TITLE = 139 XOD
+      L     #dw1;
+      L     #dw2;
+      XOD;
+      T     #dwr;
+      L     #dw1;
+      XOD   DW#16#0000_FFFF;
+      T     #dwr;
+NETWORK
+TITLE = 140 SSI
+      L     #i1;
+      SSI   2;
+      T     #ir;
+      L     2;
+      L     #i1;
+      SSI;
+      T     #ir;
+NETWORK
+TITLE = 141 SSD
+      L     #d1;
+      SSD   2;
+      T     #dr;
+      L     2;
+      L     #d1;
+      SSD;
+      T     #dr;
+NETWORK
+TITLE = 142 SLW
+      L     #w1;
+      SLW   2;
+      T     #wr;
+      L     2;
+      L     #w1;
+      SLW;
+      T     #wr;
+NETWORK
+TITLE = 143 SRW
+      L     #w1;
+      SRW   2;
+      T     #wr;
+      L     2;
+      L     #w1;
+      SRW;
+      T     #wr;
+NETWORK
+TITLE = 144 SLD
+      L     #dw1;
+      SLD   2;
+      T     #dwr;
+      L     2;
+      L     #dw1;
+      SLD;
+      T     #dwr;
+NETWORK
+TITLE = 145 SRD
+      L     #dw1;
+      SRD   2;
+      T     #dwr;
+      L     2;
+      L     #dw1;
+      SRD;
+      T     #dwr;
+NETWORK
+TITLE = 146 RLD
+      L     #dw1;
+      RLD   3;
+      T     #dwr;
+NETWORK
+TITLE = 147 RRD
+      L     #dw1;
+      RRD   3;
+      T     #dwr;
+NETWORK
+TITLE = 148 RLDA
+      L     #dw1;
+      RLDA;
+      T     #dwr;
+NETWORK
+TITLE = 149 RRDA
+      L     #dw1;
+      RRDA;
+      T     #dwr;
+NETWORK
+TITLE = 150 TAK
+      L     #i1;
+      L     #i2;
+      TAK   ;
+      T     #ir;
+NETWORK
+TITLE = 151 PUSH
+      L     #i1;
+      PUSH  ;
+      T     #ir;
+NETWORK
+TITLE = 152 POP
+      L     #i1;
+      L     #i2;
+      POP   ;
+      T     #ir;
+NETWORK
+TITLE = 155 BLD
+      BLD   100;
+NETWORK
+TITLE = 156 NOP 0
+      NOP   0;
+NETWORK
+TITLE = 157 NOP 1
+      NOP   1;
+END_FUNCTION_BLOCK

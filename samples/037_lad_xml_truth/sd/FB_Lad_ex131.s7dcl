@@ -1,0 +1,30 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex131"
+    VAR_INPUT
+        v_laddr : HW_DEVICE;
+        v_mode : UInt;
+        v_ret_val : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_state : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            ModuleStates(
+                LADDR := #v_laddr,
+                MODE := #v_mode,
+                Ret_Val => #v_ret_val,
+                STATE := #v_state
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

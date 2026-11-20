@@ -1,0 +1,28 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex123"
+    VAR_INPUT
+        v_mode : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            Ack_Alarms(
+                MODE := #v_mode,
+                ERROR => #v_error,
+                STATUS => #v_status
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

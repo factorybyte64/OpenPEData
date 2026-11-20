@@ -1,0 +1,478 @@
+A: 103_hmi_tag_ext  B: 109_hmi_alarm_analog
+CHANGED 1001:00b4:139e HmiCycleData name='T1s'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:19.870830Z' -> '2026-10-20T15:27:52.291692Z'  (timestamp)
+CHANGED 1001:00b5:1062 HmiDeviceData name='Device'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:19.870830Z' -> '2026-10-20T15:27:59.581325Z'  (timestamp)
+          raw <links 42>: 0 -> 24 bytes
+          +link typed slot 51 -> 1006:00c0:1c14
+          slot table [0, 516, 0, 0, 9050, 0, 0, 0, 5481, 609, 885, 0, 0, 0, 0, 5457, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5409, 0, 0, 0, 0, 0, 0, 2397, 0, 0, 0, 0, 2949, 0, 5229, 5253, 0, 0, 3297, 0, 0, 0, 0, 2913, 5433, 5385, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9026, 0, 3201, 0, 0, 0, 0, 0, 0, 0, 0, 1137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2421, 0, 0, 0, 0, 1425, 0, 0, 1389, 0, 0, 0, 0, 0, 0, 0] -> [0, 516, 0, 0, 9050, 0, 0, 0, 5481, 609, 885, 0, 0, 0, 0, 5457, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5409, 0, 0, 0, 0, 0, 0, 2397, 0, 0, 0, 0, 2949, 0, 5229, 5253, 9116, 0, 3297, 0, 0, 0, 0, 2913, 5433, 5385, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9026, 0, 3201, 0, 0, 0, 0, 0, 0, 0, 0, 1137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2421, 0, 0, 0, 0, 1425, 0, 0, 1389, 0, 0, 0, 0, 0, 0, 0]
+CHANGED 1002:0002:1079 DataTypeItemData name='Int'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:20.616318Z' -> '2026-10-20T15:27:52.291692Z'  (timestamp)
+CHANGED 1002:00c0:134a HmiAlarmClassData name='Alarm'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T15:27:59.680532Z'  (timestamp)
+CHANGED 1002:00c0:1363 HmiAlarmClassData name='Warning'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:53:48.984638Z' -> '2026-10-20T15:27:59.680532Z'  (timestamp)
+CHANGED 1004:00e5:106c HmiTagTableData name='Default tag table'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:20.616318Z' -> '2026-10-20T15:27:52.291692Z'  (timestamp)
+          raw <links 1>: 500 -> 516 bytes
+          +link Content -> 1008:00e5:1c12
+NEW     1005:00c8:1c16 HmiTextData name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[121] 7900000035000000ffffffff020000000904ffff1c00000031000000110000005465737420616e61
+          link ExpandoParent -> 1006:00c0:1c14
+          link Category -> 1009:0040:1c15
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          (only header bytes differ)
+CHANGED 1006:0010:1028 HmiApplicationData name='HMI_1'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:20.616318Z' -> '2026-10-20T15:27:59.788864Z'  (timestamp)
+          raw <links 1>: 388 -> 404 bytes
+          +link TextCategories -> 1009:0040:1c15
+          slot table [124, 0, 0, 236, 246, 0, 0, 6307, 6299, 381, 0, 0, 725, 737, 1339, 1435, 1451, 0, 5795, 5911] -> [124, 0, 0, 236, 246, 0, 0, 6323, 6315, 381, 0, 0, 725, 737, 1339, 1435, 1451, 0, 5795, 5911]
+NEW     1006:00c0:1c14 HmiAnalogAlarmData name=None
+          ICoreAttributes.CreationTime = None
+          ICoreAttributes.IsShell = True
+          ICoreAttributes.ModifiedTime = None
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Subtype = 'AnalogAlarm_1'
+          IAlarmData.AlarmId = 1
+          IAlarmData.AlarmKind = 'Undefined'
+          IAlarmData.Priority = 0
+          IAlarmData.Range = -1
+          IAlarmData.ReadOnlyForUser = False
+          IAlarmData.Report = -1
+          IAlarmData.SecondaryAlarmId = 1
+          IAlarmData.Version = 0
+          IAlarmData.TextIndexes = None
+          IHmiAnalogAlarmAttributes.Delay = 0
+          IHmiAnalogAlarmAttributes.DelayTimeUnit = 'Millisecond'
+          IHmiAnalogAlarmLimitAttributes.Hysteresis = 0
+          IHmiAnalogAlarmLimitAttributes.HysteresisInPercent = False
+          IHmiAnalogAlarmLimitAttributes.HysteresisMode = 'Off'
+          IHmiAnalogAlarmLimitAttributes.LimitMode = 'UpperLimit'
+          IHmiAnalogAlarmLimitAttributes.LimitValueType = 'Constant'
+          IHmiAnalogAlarmLimitAttributes.Suppression = False
+          IHmiAnalogAlarmLimitAttributes.LimitValueConstant = '100'
+          IHmiOnlyAlarmAttributes.StatusBitNumber = 0
+          IHmiScadaAlarmAttributes.UniqueId = 1
+          IILHmiAlarmAttributes.Origin = ''
+          IILHmiAlarmAttributes.Area = 'HMI_1::Alarming'
+          ITextAttributes.AlarmText1 = bytes[6] 060000000080
+          link HmiAnalogAlarmDataParentRelation -> 1001:00b5:1062
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link IHmiAnalogAlarmAttributes_TriggerTag -> 1008:00e5:1c12
+          link HmiAlarmClassDataRelation -> 1002:00c0:1363
+          link ExpandoChildren -> 1005:00c8:1c16
+NEW     1008:00e5:1c12 HmiTagData name='HmiTag_Int2'
+          ITagAddress.AddressMode = 'Invalid'
+          ITagAddress.DuplicateState = 'Unique'
+          ITagAddress.LocalIdentifier = 0
+          ITagAddress.LocalIdentifierIsValid = False
+          ITagAddress.LocalOffset = -1
+          ITagAddress.Part10 = -1
+          ITagAddress.Part4 = -1
+          ITagAddress.Part5 = -1
+          ITagAddress.Part6 = -1
+          ITagAddress.Part7 = -1
+          ITagAddress.Part8 = -1
+          ITagAddress.Part9 = -1
+          ITagAddress.RuntimeIdentifierIsValid = False
+          ITagAddress.SupportsAddressingByOffset = True
+          ITagAddress.LogicalAddress = ''
+          ITagAddress.Part1 = ''
+          ITagAddress.Part2 = ''
+          ITagAddress.Part3 = ''
+          ITagAddress.Scope = 'HMI_ILRT'
+          ITagAddress.Target = 'Default'
+          IStructureItem.HmiReadOnly = False
+          IStructureItem.HmiStructureTypeRelevant = True
+          IStructureItem.HmiVisible = True
+          IStructureItem.Index = 0
+          IStructureItem.IsUpdateRequired = False
+          IStructureItem.Kind = 'Unknown'
+          IStructureItem.Length = 16
+          IStructureItem.LineId = -1
+          IStructureItem.MemberCount = 0
+          IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+          IStructureItem.LowerBounds = None
+          IStructureItem.UpperBounds = None
+          IStructureItem.DataTypeRefName = ''
+          IStructureItem.DisplayTypeName = 'Int'
+          IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          ICoreAttributes.CreationTime = '2026-10-20T15:27:52.291692Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-20T15:27:59.634662Z'
+          ICoreAttributes.Author = 'factorybyte'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreAttributes.Name = 'HmiTag_Int2'
+          IHmiHandshakeTagAttributes.Timeout = 0
+          IHmiTagAttributes.AcquisitionTriggerMode = 'Visible'
+          IHmiTagAttributes.ConfirmationType = 'None'
+          IHmiTagAttributes.GmpRelevant = False
+          IHmiTagAttributes.JobNumber = 0
+          IHmiTagAttributes.MandatoryCommenting = False
+          IHmiTagAttributes.Persistency = False
+          IHmiTagAttributes.QualityCode = False
+          IHmiTagAttributes.Scope = 'System'
+          IHmiTagAttributes.UpdateMode = 'ProjectWide'
+          IHmiTagAttributes.UseMultiplexing = False
+          IHmiTagStructureAttributes.Coding = 'Binary'
+          IHmiTagStructureAttributes.DataTypeShape = 'IsElementary'
+          IHmiTagStructureAttributes.LimitHighLowType = 'NoLimit'
+          IHmiTagStructureAttributes.LimitHighType = 'NoLimit'
+          IHmiTagStructureAttributes.LimitLowHighType = 'NoLimit'
+          IHmiTagStructureAttributes.LimitLowType = 'NoLimit'
+          IHmiTagStructureAttributes.LinearScaling = False
+          IHmiTagStructureAttributes.ScalingHmiHigh = 100.0
+          IHmiTagStructureAttributes.ScalingHmiLow = 0.0
+          IHmiTagStructureAttributes.ScalingPlcHigh = 10.0
+          IHmiTagStructureAttributes.ScalingPlcLow = 0.0
+          IHmiTagStructureAttributes.SubstituteValueUsage = 'None'
+          IHmiTagStructureAttributes.LimitHighConstant = ''
+          IHmiTagStructureAttributes.LimitHighLowConstant = ''
+          IHmiTagStructureAttributes.LimitLowConstant = ''
+          IHmiTagStructureAttributes.LimitLowHighConstant = ''
+          IHmiTagStructureAttributes.StartValue = ''
+          IHmiTagStructureAttributes.SubstituteValue = ''
+          link TagTable -> 1004:00e5:106c
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link DataTypeRef -> 1002:0002:1079
+          link IHmiTagAttributes_AcquisitionCycle -> 1001:00b4:139e
+          link IHmiTagStructureAttributes_HmiDataType -> 1002:0002:1079
+          link HmiAnalogAlarmData_IHmiAnalogAlarmAttributes_TriggerTag_Inverse -> 1006:00c0:1c14
+NEW     1009:0040:1c15 AlarmTextCategory name='Alarm'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Name = 'Alarm'
+          ICoreAttributes.Subtype = 'AnalogAlarmText'
+          ICoreTextCategory.IsFormatted = True
+          ICoreTextCategory.IsMultiLine = True
+          ICoreTextCategory.IsSystemText = False
+          ICoreTextCategory.MaxLength = 0
+          link CoreTarget -> 1006:0010:1028
+          link Environment -> 1028:0002:433
+          link Target -> 1006:0010:1028
+          link CategoryInverse -> 1005:00c8:1c16
+CHANGED 100d:0001:1063 ChangeListData name=None
+          IChangeListDataRespository.Value: bytes[978] 00ba03000000000000000000000010010000000101000000efbbbf3c3f786d6c2076657273696f6e -> bytes[739] 011309000000000000000000000010010000000101000000c905785eed95dd4edb3014c7f728512e
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-20T14:55:29.104844Z' -> '2026-10-20T15:28:23.803244Z'  (timestamp)
+store records changed/new: 0002:0007:7, 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000c:0007:e, 000d:0007:10, 0011:0007:1ff8, 0014:0007:1ff9, 0015:0007:20
+
+DUMP HmiAnalogAlarmData, HmiTagData
+OBJECT 1006:00c0:1c14 HmiAnalogAlarmData name=None size=518
+  slot  0 ICoreAttributes                                         95 bytes
+  slot  1 ICoreExpandoAttributes                                  -
+  slot  2 ICoreExpandoLinkAttributes                              -
+  slot  3 IAlarmData                                              33 bytes
+  slot  4 IHmiAlarmAttributes                                     -
+  slot  5 IHmiAlarmGMPAttributes                                  -
+  slot  6 IHmiAnalogAlarmAttributes                               12 bytes
+  slot  7 IHmiAnalogAlarmLimitAttributes                          30 bytes
+  slot  8 IHmiOnlyAlarmAttributes                                 8 bytes
+  slot  9 IHmiScadaAlarmAttributes                                8 bytes
+  slot 10 IILHmiAlarmAttributes                                   29 bytes
+  slot 11 IProcessValueAttributes                                 -
+  slot 12 IAdditionalAttributes                                   -
+  slot 13 IDynamicAttributes                                      -
+  slot 14 IDynamicLinkAttributes                                  -
+  slot 15 ISoftlinkAttributes                                     -
+  slot 16 ITextAttributes                                         46 bytes
+  slot 17 <links 0>                                               84 bytes
+  slot 18 <links 1>                                               52 bytes
+    ICoreAttributes.CreationTime = None
+    ICoreAttributes.IsShell = True
+    ICoreAttributes.ModifiedTime = None
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Subtype = 'AnalogAlarm_1'
+    IAlarmData.AlarmId = 1
+    IAlarmData.AlarmKind = 'Undefined'
+    IAlarmData.Priority = 0
+    IAlarmData.Range = -1
+    IAlarmData.ReadOnlyForUser = False
+    IAlarmData.Report = -1
+    IAlarmData.SecondaryAlarmId = 1
+    IAlarmData.Version = 0
+    IAlarmData.TextIndexes = None
+    IHmiAnalogAlarmAttributes.Delay = 0
+    IHmiAnalogAlarmAttributes.DelayTimeUnit = 'Millisecond'
+    IHmiAnalogAlarmLimitAttributes.Hysteresis = 0
+    IHmiAnalogAlarmLimitAttributes.HysteresisInPercent = False
+    IHmiAnalogAlarmLimitAttributes.HysteresisMode = 'Off'
+    IHmiAnalogAlarmLimitAttributes.LimitMode = 'UpperLimit'
+    IHmiAnalogAlarmLimitAttributes.LimitValueType = 'Constant'
+    IHmiAnalogAlarmLimitAttributes.Suppression = False
+    IHmiAnalogAlarmLimitAttributes.LimitValueConstant = '100'
+    IHmiOnlyAlarmAttributes.StatusBitNumber = 0
+    IHmiScadaAlarmAttributes.UniqueId = 1
+    IILHmiAlarmAttributes.Origin = ''
+    IILHmiAlarmAttributes.Area = 'HMI_1::Alarming'
+    ITextAttributes.AlarmText1 = bytes[6] 060000000080
+    problem ICoreAttributes: ['var Name at 1222586046, expected 95']
+    link HmiAnalogAlarmDataParentRelation         -> 1001:00b5:1062 HmiDeviceData name='Device'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link IHmiAnalogAlarmAttributes_TriggerTag     -> 1008:00e5:1c12 HmiTagData name='HmiTag_Int2'
+    link HmiAlarmClassDataRelation                -> 1002:00c0:1363 HmiAlarmClassData name='Warning'
+    link ExpandoChildren                          -> 1005:00c8:1c16 HmiTextData name=None
+OBJECT 1008:00e5:180a HmiTagData name='HmiTag_Ext1' size=885
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderElementAttributes                                -
+  slot  2 ITagAddress                                             99 bytes
+  slot  3 IDefaultStrategyData                                    -
+  slot  4 IStructureItem                                          99 bytes
+  slot  5 IStructureRoot                                          -
+  slot  6 ICoreAttributes                                         89 bytes
+  slot  7 ICoreExpandoAttributes                                  -
+  slot  8 ICoreExpandoLinkAttributes                              -
+  slot  9 IAdditionalAttributes                                   90 bytes
+  slot 10 IDynamicAttributes                                      -
+  slot 11 IDynamicLinkAttributes                                  -
+  slot 12 ISoftlinkAttributes                                     50 bytes
+  slot 13 ITextAttributes                                         -
+  slot 14 IControllerTagAttributes                                9 bytes
+  slot 15 IHmiHandshakeTagAttributes                              8 bytes
+  slot 16 IHmiLoggingTagExpandoAttributes                         -
+  slot 17 IHmiLoggingTagExpandoLinkAttributes                     -
+  slot 18 IHmiTagAddressDynamization                              -
+  slot 19 IHmiTagAttributes                                       29 bytes
+  slot 20 IHmiTagBaseAttributes                                   -
+  slot 21 IHmiTagExpandoAttributes                                -
+  slot 22 IHmiTagExpandoMultiplexedList                           -
+  slot 23 IHmiTagStructureAttributes                              95 bytes
+  slot 24 <links 0>                                               116 bytes
+  slot 25 <links 1>                                               52 bytes
+    ITagAddress.AddressMode = 'Fixed'
+    ITagAddress.DuplicateState = 'Unique'
+    ITagAddress.LocalIdentifier = 0
+    ITagAddress.LocalIdentifierIsValid = False
+    ITagAddress.LocalOffset = -1
+    ITagAddress.Part10 = -1
+    ITagAddress.Part4 = 3
+    ITagAddress.Part5 = -1
+    ITagAddress.Part6 = 1
+    ITagAddress.Part7 = 0
+    ITagAddress.Part8 = 0
+    ITagAddress.Part9 = -1
+    ITagAddress.RuntimeIdentifierIsValid = False
+    ITagAddress.SupportsAddressingByOffset = True
+    ITagAddress.Part1 = ''
+    ITagAddress.Part2 = ''
+    ITagAddress.Part3 = ''
+    ITagAddress.Target = 'Default'
+    ITagAddress.Scope = 'S71500'
+    ITagAddress.LogicalAddress = '%M0.0'
+    IStructureItem.HmiReadOnly = False
+    IStructureItem.HmiStructureTypeRelevant = True
+    IStructureItem.HmiVisible = True
+    IStructureItem.Index = 0
+    IStructureItem.IsUpdateRequired = False
+    IStructureItem.Kind = 'Unknown'
+    IStructureItem.Length = 1
+    IStructureItem.LineId = -1
+    IStructureItem.MemberCount = 0
+    IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+    IStructureItem.LowerBounds = None
+    IStructureItem.UpperBounds = None
+    IStructureItem.DataTypeRefName = ''
+    IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+    IStructureItem.DisplayTypeName = 'Bool'
+    ICoreAttributes.CreationTime = '2026-10-20T14:55:19.870830Z'
+    ICoreAttributes.IsConstant = False
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.ModifiedTime = '2026-10-20T14:55:20.616318Z'
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'HmiTag_Ext1'
+    IAdditionalAttributes.TypeSafeAddress = bytes[28] 1c0000000810c77210000000520000000c0000000100000009000040
+    ISoftlinkAttributes.LinkHandle = bytes[8] 08000000dcee0300
+    IControllerTagAttributes.HmiAccessible = True
+    IControllerTagAttributes.PlcObjectConsistentAndCompiledState = 'NoConsistencySupport'
+    IHmiHandshakeTagAttributes.Timeout = 0
+    IHmiTagAttributes.AcquisitionTriggerMode = 'Visible'
+    IHmiTagAttributes.ConfirmationType = 'None'
+    IHmiTagAttributes.GmpRelevant = False
+    IHmiTagAttributes.JobNumber = 0
+    IHmiTagAttributes.MandatoryCommenting = False
+    IHmiTagAttributes.Persistency = False
+    IHmiTagAttributes.QualityCode = False
+    IHmiTagAttributes.Scope = 'System'
+    IHmiTagAttributes.UpdateMode = 'ProjectWide'
+    IHmiTagAttributes.UseMultiplexing = False
+    IHmiTagStructureAttributes.Coding = 'Binary'
+    IHmiTagStructureAttributes.DataTypeShape = 'IsElementary'
+    IHmiTagStructureAttributes.LimitHighLowType = 'NoLimit'
+    IHmiTagStructureAttributes.LimitHighType = 'NoLimit'
+    IHmiTagStructureAttributes.LimitLowHighType = 'NoLimit'
+    IHmiTagStructureAttributes.LimitLowType = 'NoLimit'
+    IHmiTagStructureAttributes.LinearScaling = False
+    IHmiTagStructureAttributes.ScalingHmiHigh = 100.0
+    IHmiTagStructureAttributes.ScalingHmiLow = 0.0
+    IHmiTagStructureAttributes.ScalingPlcHigh = 10.0
+    IHmiTagStructureAttributes.ScalingPlcLow = 0.0
+    IHmiTagStructureAttributes.SubstituteValueUsage = 'None'
+    IHmiTagStructureAttributes.LimitHighConstant = ''
+    IHmiTagStructureAttributes.LimitHighLowConstant = ''
+    IHmiTagStructureAttributes.LimitLowConstant = ''
+    IHmiTagStructureAttributes.LimitLowHighConstant = ''
+    IHmiTagStructureAttributes.StartValue = ''
+    IHmiTagStructureAttributes.SubstituteValue = ''
+    link TagTable                                 -> 1004:00e5:106c HmiTagTableData name='Default tag table'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link IHmiTagAttributes_AcquisitionCycle       -> 1001:00b4:139e HmiCycleData name='T1s'
+    link IHmiTagAttributes_Connection             -> 1002:00b2:1550 HmiConnectionData name='HMI_Connection_1'
+    link DataTypeRef                              -> 1002:0002:888 DataTypeItemData name='Bool'
+    link IHmiTagStructureAttributes_HmiDataType   -> 1002:0002:1075 DataTypeItemData name='Bool'
+    link InverseConsumer                          -> 5021:0002:180b ScopedLinkMaintainerData name=None
+OBJECT 1008:00e5:1c12 HmiTagData name='HmiTag_Int2' size=716
+  slot  0 IDisplayNaming                                          -
+  slot  1 IFolderElementAttributes                                -
+  slot  2 ITagAddress                                             96 bytes
+  slot  3 IDefaultStrategyData                                    -
+  slot  4 IStructureItem                                          98 bytes
+  slot  5 IStructureRoot                                          -
+  slot  6 ICoreAttributes                                         89 bytes
+  slot  7 ICoreExpandoAttributes                                  -
+  slot  8 ICoreExpandoLinkAttributes                              -
+  slot  9 IAdditionalAttributes                                   -
+  slot 10 IDynamicAttributes                                      -
+  slot 11 IDynamicLinkAttributes                                  -
+  slot 12 ISoftlinkAttributes                                     -
+  slot 13 ITextAttributes                                         -
+  slot 14 IControllerTagAttributes                                -
+  slot 15 IHmiHandshakeTagAttributes                              8 bytes
+  slot 16 IHmiLoggingTagExpandoAttributes                         -
+  slot 17 IHmiLoggingTagExpandoLinkAttributes                     -
+  slot 18 IHmiTagAddressDynamization                              -
+  slot 19 IHmiTagAttributes                                       29 bytes
+  slot 20 IHmiTagBaseAttributes                                   -
+  slot 21 IHmiTagExpandoAttributes                                -
+  slot 22 IHmiTagExpandoMultiplexedList                           -
+  slot 23 IHmiTagStructureAttributes                              95 bytes
+  slot 24 <links 0>                                               100 bytes
+  slot 25 <links 1>                                               52 bytes
+    ITagAddress.AddressMode = 'Invalid'
+    ITagAddress.DuplicateState = 'Unique'
+    ITagAddress.LocalIdentifier = 0
+    ITagAddress.LocalIdentifierIsValid = False
+    ITagAddress.LocalOffset = -1
+    ITagAddress.Part10 = -1
+    ITagAddress.Part4 = -1
+    ITagAddress.Part5 = -1
+    ITagAddress.Part6 = -1
+    ITagAddress.Part7 = -1
+    ITagAddress.Part8 = -1
+    ITagAddress.Part9 = -1
+    ITagAddress.RuntimeIdentifierIsValid = False
+    ITagAddress.SupportsAddressingByOffset = True
+    ITagAddress.LogicalAddress = ''
+    ITagAddress.Part1 = ''
+    ITagAddress.Part2 = ''
+    ITagAddress.Part3 = ''
+    ITagAddress.Scope = 'HMI_ILRT'
+    ITagAddress.Target = 'Default'
+    IStructureItem.HmiReadOnly = False
+    IStructureItem.HmiStructureTypeRelevant = True
+    IStructureItem.HmiVisible = True
+    IStructureItem.Index = 0
+    IStructureItem.IsUpdateRequired = False
+    IStructureItem.Kind = 'Unknown'
+    IStructureItem.Length = 16
+    IStructureItem.LineId = -1
+    IStructureItem.MemberCount = 0
+    IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+    IStructureItem.LowerBounds = None
+    IStructureItem.UpperBounds = None
+    IStructureItem.DataTypeRefName = ''
+    IStructureItem.DisplayTypeName = 'Int'
+    IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+    ICoreAttributes.CreationTime = '2026-10-20T15:27:52.291692Z'
+    ICoreAttributes.IsConstant = False
+    ICoreAttributes.IsShell = False
+    ICoreAttributes.ModifiedTime = '2026-10-20T15:27:59.634662Z'
+    ICoreAttributes.Author = 'factorybyte'
+    ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+    ICoreAttributes.Name = 'HmiTag_Int2'
+    IHmiHandshakeTagAttributes.Timeout = 0
+    IHmiTagAttributes.AcquisitionTriggerMode = 'Visible'
+    IHmiTagAttributes.ConfirmationType = 'None'
+    IHmiTagAttributes.GmpRelevant = False
+    IHmiTagAttributes.JobNumber = 0
+    IHmiTagAttributes.MandatoryCommenting = False
+    IHmiTagAttributes.Persistency = False
+    IHmiTagAttributes.QualityCode = False
+    IHmiTagAttributes.Scope = 'System'
+    IHmiTagAttributes.UpdateMode = 'ProjectWide'
+    IHmiTagAttributes.UseMultiplexing = False
+    IHmiTagStructureAttributes.Coding = 'Binary'
+    IHmiTagStructureAttributes.DataTypeShape = 'IsElementary'
+    IHmiTagStructureAttributes.LimitHighLowType = 'NoLimit'
+    IHmiTagStructureAttributes.LimitHighType = 'NoLimit'
+    IHmiTagStructureAttributes.LimitLowHighType = 'NoLimit'
+    IHmiTagStructureAttributes.LimitLowType = 'NoLimit'
+    IHmiTagStructureAttributes.LinearScaling = False
+    IHmiTagStructureAttributes.ScalingHmiHigh = 100.0
+    IHmiTagStructureAttributes.ScalingHmiLow = 0.0
+    IHmiTagStructureAttributes.ScalingPlcHigh = 10.0
+    IHmiTagStructureAttributes.ScalingPlcLow = 0.0
+    IHmiTagStructureAttributes.SubstituteValueUsage = 'None'
+    IHmiTagStructureAttributes.LimitHighConstant = ''
+    IHmiTagStructureAttributes.LimitHighLowConstant = ''
+    IHmiTagStructureAttributes.LimitLowConstant = ''
+    IHmiTagStructureAttributes.LimitLowHighConstant = ''
+    IHmiTagStructureAttributes.StartValue = ''
+    IHmiTagStructureAttributes.SubstituteValue = ''
+    link TagTable                                 -> 1004:00e5:106c HmiTagTableData name='Default tag table'
+    link Environment                              -> 1028:0002:433 ProjectData name='000_empty'
+    link Target                                   -> 1006:0010:1028 HmiApplicationData name='HMI_1'
+    link DataTypeRef                              -> 1002:0002:1079 DataTypeItemData name='Int'
+    link IHmiTagAttributes_AcquisitionCycle       -> 1001:00b4:139e HmiCycleData name='T1s'
+    link IHmiTagStructureAttributes_HmiDataType   -> 1002:0002:1079 DataTypeItemData name='Int'
+    link HmiAnalogAlarmData_IHmiAnalogAlarmAttributes_TriggerTag_Inverse -> 1006:00c0:1c14 HmiAnalogAlarmData name=None
+
+H-022: files outside System/PEData.plf, base 103_hmi_tag_ext vs. 109_hmi_alarm_analog (SHA-256, first 12)
+  GONE   IM/SearchIndex/_10.cfs  cd64052c1f83 -> -
+  GONE   IM/SearchIndex/_10_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_11.cfs  b70a723c6531 -> -
+  NEW    IM/SearchIndex/_1e.fdt  - -> f2963663f4d9
+  NEW    IM/SearchIndex/_1e.fdx  - -> 17b1e9da9f7c
+  NEW    IM/SearchIndex/_1e.fnm  - -> c67711b8fdde
+  NEW    IM/SearchIndex/_1e.frq  - -> eda990a42d2f
+  NEW    IM/SearchIndex/_1e.prx  - -> 8dc3b7b049e5
+  NEW    IM/SearchIndex/_1e.tii  - -> c542be40ab81
+  NEW    IM/SearchIndex/_1e.tis  - -> 1e4f0c73a2e7
+  NEW    IM/SearchIndex/_1e.tvd  - -> 5ba3ad97f24a
+  NEW    IM/SearchIndex/_1e.tvf  - -> 821867f997d4
+  NEW    IM/SearchIndex/_1e.tvx  - -> e5ad63877424
+  NEW    IM/SearchIndex/_1e_1.del  - -> e30f1f62dd98
+  NEW    IM/SearchIndex/_1f.cfs  - -> c0218f0b2808
+  GONE   IM/SearchIndex/_u.fdt  8e1d49989356 -> -
+  GONE   IM/SearchIndex/_u.fdx  5a0bb36abb8a -> -
+  GONE   IM/SearchIndex/_u.fnm  f5ea9c41f0be -> -
+  GONE   IM/SearchIndex/_u.frq  8d5c0f9a31b3 -> -
+  GONE   IM/SearchIndex/_u.prx  3686b6f42530 -> -
+  GONE   IM/SearchIndex/_u.tii  1ef5ee846508 -> -
+  GONE   IM/SearchIndex/_u.tis  37cb576d9f13 -> -
+  GONE   IM/SearchIndex/_u.tvd  4ca3d5e4a9ab -> -
+  GONE   IM/SearchIndex/_u.tvf  44b9ccea3613 -> -
+  GONE   IM/SearchIndex/_u.tvx  fe73dab20e4c -> -
+  GONE   IM/SearchIndex/_u_2.del  3a3829f43797 -> -
+  GONE   IM/SearchIndex/_v.cfs  893662e1ab44 -> -
+  GONE   IM/SearchIndex/_v_1.del  c9c60928b8bc -> -
+  GONE   IM/SearchIndex/_w.cfs  cdce1bd59bd8 -> -
+  GONE   IM/SearchIndex/_x.cfs  bc3b86361159 -> -
+  GONE   IM/SearchIndex/_y.cfs  e5e2e44458d0 -> -
+  GONE   IM/SearchIndex/_z.cfs  4bda6cdf62a1 -> -
+  CHG    IM/SearchIndex/segments.gen  96fc6a8fdefb -> 99161b466926
+  GONE   IM/SearchIndex/segments_j  128ce5c3704d -> -
+  NEW    IM/SearchIndex/segments_q  - -> 52e63317eb8d
+  CHG    System/PEData.idx  beb59e0e12e2 -> a8afb9a2dc01
+  CHG    XRef/XRef.db  887057a18865 -> a6d3ba80d431
+  name 'AnalogAlarm_1' found in: System/PEData.plf (utf-8 x1)

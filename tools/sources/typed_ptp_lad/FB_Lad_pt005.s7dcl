@@ -1,0 +1,28 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_pt005"
+    VAR_INPUT
+        v_port : PORT;
+        v_buffer : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_ndr : Bool;
+        v_error : Bool;
+        v_status : Word;
+        v_length : UInt;
+    END_VAR
+    VAR_IN_OUT
+        v_universal : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Receive_P2P( EN_R := TRUE, PORT := #v_port, BUFFER := #v_buffer, NDR => #v_ndr, ERROR => #v_error, STATUS => #v_status, LENGTH => #v_length, UNIVERSAL := #v_universal )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

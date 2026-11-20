@@ -1,0 +1,24 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ex056"
+    VAR_INPUT
+        v_req : Bool;
+        v_mode : USInt;
+        v_laddr : HW_DEVICE;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+        v_busy : Bool;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            D_Act_Dp( REQ := #v_req, MODE := #v_mode, LADDR := #v_laddr, RET_VAL => #v_ret_val, BUSY => #v_busy )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

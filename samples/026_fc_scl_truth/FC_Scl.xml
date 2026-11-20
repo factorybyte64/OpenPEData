@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-08T19:47:34.5615124Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="a" Datatype="Int" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">First input</MultiLanguageText>
+              </Comment>
+            </Member>
+            <Member Name="b" Datatype="Int" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Second input</MultiLanguageText>
+              </Comment>
+            </Member>
+          </Section>
+          <Section Name="Output">
+            <Member Name="result" Datatype="Int" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Limited sum</MultiLanguageText>
+              </Comment>
+            </Member>
+            <Member Name="total" Datatype="Int" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Sum 1..4</MultiLanguageText>
+              </Comment>
+            </Member>
+          </Section>
+          <Section Name="InOut">
+            <Member Name="gain" Datatype="Real" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Gain value</MultiLanguageText>
+              </Comment>
+            </Member>
+          </Section>
+          <Section Name="Temp">
+            <Member Name="tmp" Datatype="Int" />
+            <Member Name="i" Datatype="Int" />
+          </Section>
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+          </Section>
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC_Scl</Name>
+      <Namespace />
+      <Number>1</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+                <Text UId="22"> Sum of both inputs</Text>
+              </LineComment>
+              <NewLine Num="1" UId="23" />
+              <Access Scope="LocalVariable" UId="24">
+                <Symbol UId="25">
+                  <Component Name="tmp" UId="26" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="27" />
+              <Token Text=":=" UId="28" />
+              <Blank Num="1" UId="29" />
+              <Access Scope="LocalVariable" UId="30">
+                <Symbol UId="31">
+                  <Component Name="a" UId="32" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="33" />
+              <Token Text="+" UId="34" />
+              <Blank Num="1" UId="35" />
+              <Access Scope="LocalVariable" UId="36">
+                <Symbol UId="37">
+                  <Component Name="b" UId="38" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="39" />
+              <NewLine Num="2" UId="40" />
+              <LineComment Inserted="false" NoClosingBracket="false" UId="41">
+                <Text UId="42"> Limit the result to 0..100</Text>
+              </LineComment>
+              <NewLine Num="1" UId="43" />
+              <Access Scope="LocalVariable" UId="44">
+                <Symbol UId="45">
+                  <Component Name="result" UId="46" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="47" />
+              <Token Text=":=" UId="48" />
+              <Blank Num="1" UId="49" />
+              <Access Scope="LiteralConstant" UId="50">
+                <Constant UId="51">
+                  <ConstantValue UId="53">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="54" />
+              <NewLine Num="1" UId="55" />
+              <Token Text="IF" UId="56" />
+              <Blank Num="1" UId="57" />
+              <Access Scope="LocalVariable" UId="58">
+                <Symbol UId="59">
+                  <Component Name="tmp" UId="60" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="61" />
+              <Token Text="&gt;" UId="62" />
+              <Blank Num="1" UId="63" />
+              <Access Scope="LiteralConstant" UId="64">
+                <Constant UId="65">
+                  <ConstantValue UId="67">100</ConstantValue>
+                </Constant>
+              </Access>
+              <Blank Num="1" UId="68" />
+              <Token Text="THEN" UId="69" />
+              <NewLine Num="1" UId="70" />
+              <Blank Num="4" UId="71" />
+              <Access Scope="LocalVariable" UId="72">
+                <Symbol UId="73">
+                  <Component Name="result" UId="74" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="75" />
+              <Token Text=":=" UId="76" />
+              <Blank Num="1" UId="77" />
+              <Access Scope="LiteralConstant" UId="78">
+                <Constant UId="79">
+                  <ConstantValue UId="81">100</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="82" />
+              <NewLine Num="1" UId="83" />
+              <Token Text="ELSIF" UId="84" />
+              <Blank Num="1" UId="85" />
+              <Access Scope="LocalVariable" UId="86">
+                <Symbol UId="87">
+                  <Component Name="tmp" UId="88" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="89" />
+              <Token Text="&lt;" UId="90" />
+              <Blank Num="1" UId="91" />
+              <Access Scope="LiteralConstant" UId="92">
+                <Constant UId="93">
+                  <ConstantValue UId="95">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Blank Num="1" UId="96" />
+              <Token Text="THEN" UId="97" />
+              <NewLine Num="1" UId="98" />
+              <Blank Num="4" UId="99" />
+              <Access Scope="LocalVariable" UId="100">
+                <Symbol UId="101">
+                  <Component Name="result" UId="102" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="103" />
+              <Token Text=":=" UId="104" />
+              <Blank Num="1" UId="105" />
+              <Access Scope="LiteralConstant" UId="106">
+                <Constant UId="107">
+                  <ConstantValue UId="109">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="110" />
+              <NewLine Num="1" UId="111" />
+              <Token Text="ELSE" UId="112" />
+              <NewLine Num="1" UId="113" />
+              <Blank Num="4" UId="114" />
+              <Access Scope="LocalVariable" UId="115">
+                <Symbol UId="116">
+                  <Component Name="result" UId="117" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="118" />
+              <Token Text=":=" UId="119" />
+              <Blank Num="1" UId="120" />
+              <Access Scope="LocalVariable" UId="121">
+                <Symbol UId="122">
+                  <Component Name="tmp" UId="123" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="124" />
+              <NewLine Num="1" UId="125" />
+              <Token Text="END_IF" UId="126" />
+              <Token Text=";" UId="127" />
+              <NewLine Num="2" UId="128" />
+              <LineComment Inserted="false" NoClosingBracket="false" UId="129">
+                <Text UId="130"> Accumulate 1..4</Text>
+              </LineComment>
+              <NewLine Num="1" UId="131" />
+              <Access Scope="LocalVariable" UId="132">
+                <Symbol UId="133">
+                  <Component Name="total" UId="134" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="135" />
+              <Token Text=":=" UId="136" />
+              <Blank Num="1" UId="137" />
+              <Access Scope="LiteralConstant" UId="138">
+                <Constant UId="139">
+                  <ConstantValue UId="141">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="142" />
+              <NewLine Num="1" UId="143" />
+              <Token Text="FOR" UId="144" />
+              <Blank Num="1" UId="145" />
+              <Access Scope="LocalVariable" UId="146">
+                <Symbol UId="147">
+                  <Component Name="i" UId="148" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="149" />
+              <Token Text=":=" UId="150" />
+              <Blank Num="1" UId="151" />
+              <Access Scope="LiteralConstant" UId="152">
+                <Constant UId="153">
+                  <ConstantValue UId="155">1</ConstantValue>
+                </Constant>
+              </Access>
+              <Blank Num="1" UId="156" />
+              <Token Text="TO" UId="157" />
+              <Blank Num="1" UId="158" />
+              <Access Scope="LiteralConstant" UId="159">
+                <Constant UId="160">
+                  <ConstantValue UId="162">4</ConstantValue>
+                </Constant>
+              </Access>
+              <Blank Num="1" UId="163" />
+              <Token Text="DO" UId="164" />
+              <NewLine Num="1" UId="165" />
+              <Blank Num="4" UId="166" />
+              <Access Scope="LocalVariable" UId="167">
+                <Symbol UId="168">
+                  <Component Name="total" UId="169" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="170" />
+              <Token Text=":=" UId="171" />
+              <Blank Num="1" UId="172" />
+              <Access Scope="LocalVariable" UId="173">
+                <Symbol UId="174">
+                  <Component Name="total" UId="175" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="176" />
+              <Token Text="+" UId="177" />
+              <Blank Num="1" UId="178" />
+              <Access Scope="LocalVariable" UId="179">
+                <Symbol UId="180">
+                  <Component Name="i" UId="181" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="182" />
+              <NewLine Num="1" UId="183" />
+              <Token Text="END_FOR" UId="184" />
+              <Token Text=";" UId="185" />
+              <NewLine Num="2" UId="186" />
+              <LineComment Inserted="false" NoClosingBracket="false" UId="187">
+                <Text UId="188"> Call the function block with its instance data block</Text>
+              </LineComment>
+              <NewLine Num="1" UId="189" />
+              <Access Scope="Call" UId="190">
+                <CallInfo UId="191" BlockType="FB" Name="FB_Iface">
+                  <Instance Scope="GlobalVariable" UId="192">
+                    <Component Name="FB_Iface_DB" UId="193">
+                      <BooleanAttribute Name="HasQuotes" UId="194">true</BooleanAttribute>
+                    </Component>
+                  </Instance>
+                  <Token Text="(" UId="195" />
+                  <Parameter Name="iBool" UId="196">
+                    <Blank Num="1" UId="197" />
+                    <Token Text=":=" UId="198" />
+                    <Blank Num="1" UId="199" />
+                    <Access Scope="LiteralConstant" UId="200">
+                      <Constant UId="201">
+                        <ConstantValue UId="203">TRUE</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="204" />
+                  <NewLine Num="1" UId="205" />
+                  <Blank Num="14" UId="206" />
+                  <Parameter Name="iInt" UId="207">
+                    <Blank Num="1" UId="208" />
+                    <Token Text=":=" UId="209" />
+                    <Blank Num="1" UId="210" />
+                    <Access Scope="LocalVariable" UId="211">
+                      <Symbol UId="212">
+                        <Component Name="result" UId="213" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="214" />
+                  <NewLine Num="1" UId="215" />
+                  <Blank Num="14" UId="216" />
+                  <Parameter Name="iReal" UId="217">
+                    <Blank Num="1" UId="218" />
+                    <Token Text=":=" UId="219" />
+                    <Blank Num="1" UId="220" />
+                    <Access Scope="LiteralConstant" UId="221">
+                      <Constant UId="222">
+                        <ConstantValue UId="224">1.5</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="225" />
+                  <NewLine Num="1" UId="226" />
+                  <Blank Num="14" UId="227" />
+                  <Parameter Name="ioReal" UId="228">
+                    <Blank Num="1" UId="229" />
+                    <Token Text=":=" UId="230" />
+                    <Blank Num="1" UId="231" />
+                    <Access Scope="LocalVariable" UId="232">
+                      <Symbol UId="233">
+                        <Component Name="gain" UId="234" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="239" />
+                </CallInfo>
+              </Access>
+              <Token Text=";" UId="240" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

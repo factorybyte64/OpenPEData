@@ -1,0 +1,27 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_pt003"
+    VAR_INPUT
+        v_req : Bool;
+        v_port : PORT;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_receive_conditions : Variant;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Receive_Config( REQ := #v_req, PORT := #v_port, CONDITIONS := 0, DONE => #v_done, ERROR => #v_error, STATUS => #v_status, Receive_Conditions := #v_receive_conditions )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

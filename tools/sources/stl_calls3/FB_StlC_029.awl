@@ -1,0 +1,29 @@
+FUNCTION_BLOCK "FB_StlC_029"
+TITLE = STL call MOVE_BLK_VARIANT
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      cnt : UDInt;
+      si : DInt;
+      di : DInt;
+   END_VAR
+   VAR_OUTPUT
+      io : Int;
+   END_VAR
+   VAR_IN_OUT
+      src : Variant;
+      dst : Variant;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 029 MOVE_BLK_VARIANT
+      CALL MOVE_BLK_VARIANT
+      (  SRC                         := #src ,
+         COUNT                       := #cnt ,
+         SRC_INDEX                   := #si ,
+         DEST_INDEX                  := #di ,
+         RET_VAL                     := #io ,
+         DEST                        := #dst
+      );
+END_FUNCTION_BLOCK

@@ -1,0 +1,121 @@
+A: 048_plc_watch_entry.zap21  B: 049_plc_unit.zap21
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+NEW     100e:0002:1829 FolderData name='ProgramBlocksFolder'
+          IFolderAttributes.AvailableLocalSubpathLength = 0
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.Subtype = 'ProgramBlocksFolder'
+          ICoreAttributes.Name = 'ProgramBlocksFolder'
+          link FolderParent -> 1d01:0022:1828
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     100e:0002:182a FolderData name='ExternalSourceFolder'
+          IFolderAttributes.AvailableLocalSubpathLength = 0
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.Subtype = 'ExternalSourceFolder'
+          ICoreAttributes.Name = 'ExternalSourceFolder'
+          link FolderParent -> 1d01:0022:1828
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     100e:0002:182b FolderData name='ControllerDataTypeFolder'
+          IFolderAttributes.AvailableLocalSubpathLength = 0
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.Subtype = 'ControllerDataTypeFolder'
+          ICoreAttributes.Name = 'ControllerDataTypeFolder'
+          link FolderParent -> 1d01:0022:1828
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     100e:0002:182c FolderData name='ControllerTagsFolder'
+          IFolderAttributes.AvailableLocalSubpathLength = 0
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.Subtype = 'ControllerTagsFolder'
+          ICoreAttributes.Name = 'ControllerTagsFolder'
+          link FolderParent -> 1d01:0022:1828
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link AggregatedElements -> 1062:0002:182d
+CHANGED 100e:0002:834 FolderData name='ProgramUnitsFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-19T17:22:21.692873Z' -> '2026-10-25T20:09:21.501647Z'  (timestamp)
+          raw <links 1>: 0 -> 52 bytes
+          +link AggregatedElements -> 1d01:0022:1828
+          slot table [0, 140, 0, 0, 80, 0, 0, 148, 0] -> [0, 140, 0, 0, 80, 0, 0, 148, 232]
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:08:49.607555Z' -> '2026-10-25T20:09:21.501647Z'  (timestamp)
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.ConstantLoadRelevantModifiedTime: '2026-10-19T17:23:06.398603Z' -> '2026-10-25T20:09:21.770067Z'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.CounterLoadRelevantModifiedTime: '2026-10-19T17:23:06.398603Z' -> '2026-10-25T20:09:21.770067Z'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.InputLoadRelevantModifiedTime: '2026-10-19T17:23:06.398603Z' -> '2026-10-25T20:09:21.770067Z'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.MarkerLoadRelevantModifiedTime: '2026-10-19T17:23:07.362636Z' -> '2026-10-25T20:09:21.770067Z'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.OutputLoadRelevantModifiedTime: '2026-10-19T17:23:06.398603Z' -> '2026-10-25T20:09:21.770067Z'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.TimerLoadRelevantModifiedTime: '2026-10-19T17:23:06.398603Z' -> '2026-10-25T20:09:21.770067Z'
+          raw ICoreExpandoAttributes: 20112 -> 20112 bytes
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-25T20:08:52.640785Z' -> '2026-10-25T20:09:21.877772Z'  (timestamp)
+CHANGED 1032:0022:91f ProgramInformationSourceData name=None
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataStore: bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000 -> bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataVersion: 639280273570309216 -> 639285557617384631
+          raw IExpandoInformationData: 2524 -> 2524 bytes
+NEW     1039:0022:182e EAMTZTagTableFingerprintContainer name=None
+          ICoreExpandoAttributes.Siemens.Simatic.Lang.Model.Blocks.ICommonFingerprintData.DataStoreVersion = 281474976710656
+          ICommonFingerprintData.DataVersion = 639285557617270650
+          ICommonFingerprintData.ValidState = 0
+          ICommonFingerprintData.DataStore = bytes[374] 01ab05000000000000000000000010010000000101000000dc02785eed94414ec3301045cb160989
+          link Parent -> 1062:0002:182d
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1062:0002:182d EAMTZTagTableData name='Default tag table_1'
+          IUnitElementAttributes.Access = 'Public'
+          IUnitElementAttributes.ElementAccess = 'Internal'
+          ICoreAttributes.CreationTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.IsUndeletable = True
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.Name = 'Default tag table_1'
+          ICoreAttributes.Subtype = 'Default'
+          ICoreExpandoAttributes.Siemens.Automation.DomainServices.TagService.LoadRelevantModifiedTime = '2026-10-25T20:09:21.770067Z'
+          link AggregatingFolder -> 100e:0002:182c
+          link EAMTZTagTableData_IUnitElementAttributes_BaseUnitData -> 1d01:0022:1828
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link EAMTZTagTableDataFingerprintContainer -> 1039:0022:182e
+NEW     1d01:0022:1828 UnitData name='Unit_A'
+          ILoadObject.LoadType = 'PLUSBLOCK'
+          ICoreAttributes.CreationTime = '2026-10-25T20:09:21.651599Z'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T20:09:21.501647Z'
+          ICoreAttributes.Protection = 'NoProtection'
+          ICoreAttributes.ProtectionVersionId = 0
+          ICoreAttributes.Culture = ''
+          ICoreAttributes.Password = ''
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Subtype = 'ProgramUnit'
+          ICoreAttributes.Name = 'Unit_A'
+          ICoreAttributes.Author = ''
+          ICoreAttributes.Comment = bytes[42] 2a0000001a000000ffffffff01000000ffff16000000000000002910220000000000000000000000
+          ICoreExpandoAttributes.Siemens.Simatic.Lang.Model.Blocks.ICommonFingerprintData.DataStoreVersion = 281474976710656
+          ICommonFingerprintData.DataVersion = 639285557617270628
+          ICommonFingerprintData.ValidState = 0
+          ICommonFingerprintData.DataStore = bytes[415] 0087010000000000000000000000100100000001010000000010deadbeef01000000000000000000
+          IGeneralUnitData.CompileStatus = 'Binary'
+          IGeneralUnitData.CompileTime = '0001-01-01T00:00:00Z'
+          IGeneralUnitData.DownloadTime = '0001-01-01T00:00:00Z'
+          IGeneralUnitData.Id = 1
+          IGeneralUnitData.DefaultNamespace = ''
+          IGeneralUnitData.Text = ''
+          link AggregatingFolder -> 100e:0002:834
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link Folders -> 100e:0002:1829
+          link Folders -> 100e:0002:182a
+          link Folders -> 100e:0002:182b
+          link Folders -> 100e:0002:182c
+          link EAMTZTagTableData_IUnitElementAttributes_BaseUnitData_Inverse -> 1062:0002:182d
+store records changed/new: 0002:0007:7, 0003:0007:3, 000d:0007:10, 0011:0007:1c10, 0014:0007:0, 0015:0007:20, 0016:0007:18

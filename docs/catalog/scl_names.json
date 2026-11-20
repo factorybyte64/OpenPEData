@@ -1,0 +1,482 @@
+{
+ "001": {
+  "title": "R_TRIG: Detect positive signal edge",
+  "sdName": "R_TRIG"
+ },
+ "002": {
+  "title": "F_TRIG: Detect negative signal edge",
+  "sdName": "F_TRIG"
+ },
+ "003": {
+  "title": "TP: Generate pulse",
+  "sdName": "TP"
+ },
+ "004": {
+  "title": "TON: Generate on-delay",
+  "sdName": "TON"
+ },
+ "005": {
+  "title": "TOF: Generate off-delay",
+  "sdName": "TOF"
+ },
+ "006": {
+  "title": "TONR: Time accumulator",
+  "sdName": "TONR"
+ },
+ "007": {
+  "title": "RESET_TIMER: Reset timer",
+  "sdName": "RESET_TIMER"
+ },
+ "008": {
+  "title": "PRESET_TIMER: Load time duration",
+  "sdName": "PRESET_TIMER"
+ },
+ "009": {
+  "title": "S_PULSE: Assign pulse timer parameters and start",
+  "sdName": "S_PULSE"
+ },
+ "010": {
+  "title": "S_PEXT: Assign extended pulse timer parameters and start",
+  "sdName": "S_PEXT"
+ },
+ "011": {
+  "title": "S_ODT: Assign on-delay timer parameters and start",
+  "sdName": "S_ODT"
+ },
+ "012": {
+  "title": "S_ODTS: Assign retentive on-delay timer parameters and start",
+  "sdName": "S_ODTS"
+ },
+ "013": {
+  "title": "S_OFFDT: Assign off-delay timer parameters and start",
+  "sdName": "S_OFFDT"
+ },
+ "014": {
+  "title": "CTU: Count up",
+  "sdName": "CTU"
+ },
+ "015": {
+  "title": "CTD: Count down",
+  "sdName": "CTD"
+ },
+ "016": {
+  "title": "CTUD: Count up and down",
+  "sdName": "CTUD"
+ },
+ "017": {
+  "title": "S_CU: Assign parameters and count up",
+  "sdName": "S_CU"
+ },
+ "018": {
+  "title": "S_CD: Assign parameters and count down",
+  "sdName": "S_CD"
+ },
+ "019": {
+  "title": "S_CUD: Assign parameters and count up / down",
+  "sdName": "S_CUD"
+ },
+ "020": {
+  "title": "TypeOf: Check data type of a VARIANT or ResolvedSymbol tag",
+  "sdName": "TypeOf"
+ },
+ "021": {
+  "title": "TypeOfElements: Check data type of an ARRAY element of a tag",
+  "sdName": "TypeOfElements"
+ },
+ "022": {
+  "title": "IS_ARRAY: Check for ARRAY",
+  "sdName": "IS_ARRAY"
+ },
+ "023": {
+  "title": "TypeOfDB: Query data type of a DB",
+  "sdName": "TypeOfDB"
+ },
+ "024": {
+  "title": "ABS: Form absolute value",
+  "sdName": "ABS"
+ },
+ "025": {
+  "title": "MIN: Get minimum",
+  "sdName": "MIN"
+ },
+ "026": {
+  "title": "MAX: Get maximum",
+  "sdName": "MAX"
+ },
+ "027": {
+  "title": "LIMIT: Set limit value",
+  "sdName": "LIMIT"
+ },
+ "028": {
+  "title": "SQR: Form square",
+  "sdName": "SQR"
+ },
+ "029": {
+  "title": "SQRT: Form square root",
+  "sdName": "SQRT"
+ },
+ "030": {
+  "title": "LN: Form natural logarithm",
+  "sdName": "LN"
+ },
+ "031": {
+  "title": "EXP: Form exponential value",
+  "sdName": "EXP"
+ },
+ "032": {
+  "title": "SIN: Form sine value",
+  "sdName": "SIN"
+ },
+ "033": {
+  "title": "COS: Form cosine value",
+  "sdName": "COS"
+ },
+ "034": {
+  "title": "TAN: Form tangent value",
+  "sdName": "TAN"
+ },
+ "035": {
+  "title": "ASIN: Form arcsine value",
+  "sdName": "ASIN"
+ },
+ "036": {
+  "title": "ACOS: Form arccosine value",
+  "sdName": "ACOS"
+ },
+ "037": {
+  "title": "ATAN: Form arctangent value",
+  "sdName": "ATAN"
+ },
+ "038": {
+  "title": "FRAC: Return fraction",
+  "sdName": "FRAC"
+ },
+ "039": {
+  "title": "Deserialize: Deserialize",
+  "sdName": "Deserialize"
+ },
+ "040": {
+  "title": "Serialize: Serialize",
+  "sdName": "Serialize"
+ },
+ "041": {
+  "title": "MOVE_BLK: Move block",
+  "sdName": "MOVE_BLK"
+ },
+ "042": {
+  "title": "MOVE_BLK_VARIANT: Move block",
+  "sdName": "MOVE_BLK_VARIANT"
+ },
+ "043": {
+  "title": "UMOVE_BLK: Move block uninterruptible",
+  "sdName": "UMOVE_BLK"
+ },
+ "044": {
+  "title": "FILL_BLK: Fill block",
+  "sdName": "FILL_BLK"
+ },
+ "045": {
+  "title": "UFILL_BLK: Fill block uninterruptible",
+  "sdName": "UFILL_BLK"
+ },
+ "046": {
+  "title": "SCATTER: Parse the bit sequence into individual bits",
+  "sdName": "SCATTER"
+ },
+ "047": {
+  "title": "SCATTER_BLK: Parse elements of an ARRAY of bit sequence into individual bits",
+  "sdName": "SCATTER_BLK"
+ },
+ "048": {
+  "title": "GATHER: Merge individual bits into a bit sequence",
+  "sdName": "GATHER"
+ },
+ "049": {
+  "title": "GATHER_BLK: Merge individual bits into multiple elements of an ARRAY of bit sequence",
+  "sdName": "GATHER_BLK"
+ },
+ "050": {
+  "title": "SWAP: Swap",
+  "sdName": "SWAP"
+ },
+ "051": {
+  "title": "ReadFromArrayDB: Read from array data block",
+  "sdName": "ReadFromArrayDB"
+ },
+ "052": {
+  "title": "WriteToArrayDB: Write to array data block",
+  "sdName": "WriteToArrayDB"
+ },
+ "053": {
+  "title": "ReadFromArrayDBL: Read from array data block in load memory",
+  "sdName": "ReadFromArrayDBL"
+ },
+ "054": {
+  "title": "WriteToArrayDBL: Write to array data block in load memory",
+  "sdName": "WriteToArrayDBL"
+ },
+ "055": {
+  "title": "PEEK: Read memory address",
+  "sdName": "PEEK"
+ },
+ "056": {
+  "title": "PEEK_BOOL: Read memory bit",
+  "sdName": "PEEK_BOOL"
+ },
+ "057": {
+  "title": "POKE: Write memory address",
+  "sdName": "POKE"
+ },
+ "058": {
+  "title": "POKE_BOOL: Write memory bit",
+  "sdName": "POKE_BOOL"
+ },
+ "059": {
+  "title": "POKE_BLK: Write memory area",
+  "sdName": "POKE_BLK"
+ },
+ "060": {
+  "title": "READ_LITTLE: Read data in little endian format",
+  "sdName": "READ_LITTLE"
+ },
+ "061": {
+  "title": "WRITE_LITTLE: Write data in little endian format",
+  "sdName": "WRITE_LITTLE"
+ },
+ "062": {
+  "title": "READ_BIG: Read data in big endian format",
+  "sdName": "READ_BIG"
+ },
+ "063": {
+  "title": "WRITE_BIG: Write data in big endian format",
+  "sdName": "WRITE_BIG"
+ },
+ "064": {
+  "title": "VariantGet: Read out VARIANT tag value",
+  "sdName": "VariantGet"
+ },
+ "065": {
+  "title": "VariantPut: Write VARIANT tag value",
+  "sdName": "VariantPut"
+ },
+ "066": {
+  "title": "CountOfElements: Get number of ARRAY elements",
+  "sdName": "CountOfElements"
+ },
+ "067": {
+  "title": "LOWER_BOUND: Read out low ARRAY limit",
+  "sdName": "LOWER_BOUND"
+ },
+ "068": {
+  "title": "UPPER_BOUND: Read out high ARRAY limit",
+  "sdName": "UPPER_BOUND"
+ },
+ "069": {
+  "title": "BLKMOV: Move block",
+  "sdName": "BLKMOV"
+ },
+ "070": {
+  "title": "UBLKMOV: Move block uninterruptible",
+  "sdName": "UBLKMOV"
+ },
+ "071": {
+  "title": "FILL: Fill block",
+  "sdName": "FILL"
+ },
+ "072": {
+  "title": "CONVERT: Convert value",
+  "sdName": "CONVERT"
+ },
+ "073": {
+  "title": "ROUND: Round numerical value",
+  "sdName": "ROUND"
+ },
+ "074": {
+  "title": "CEIL: Generate next higher integer from floating-point number",
+  "sdName": "CEIL"
+ },
+ "075": {
+  "title": "FLOOR: Generate next lower integer from floating-point number",
+  "sdName": "FLOOR"
+ },
+ "076": {
+  "title": "TRUNC: Truncate numerical value",
+  "sdName": "TRUNC"
+ },
+ "077": {
+  "title": "SCALE_X: Scale",
+  "sdName": "SCALE_X"
+ },
+ "078": {
+  "title": "NORM_X: Normalize",
+  "sdName": "NORM_X"
+ },
+ "079": {
+  "title": "REF: Create a reference to a tag",
+  "sdName": "REF"
+ },
+ "080": {
+  "title": "VARIANT_TO_DB_ANY: Convert VARIANT to DB_ANY",
+  "sdName": "VARIANT_TO_DB_ANY"
+ },
+ "081": {
+  "title": "DB_ANY_TO_VARIANT: Convert DB_ANY to VARIANT",
+  "sdName": "DB_ANY_TO_VARIANT"
+ },
+ "082": {
+  "title": "SCALE: Scale",
+  "sdName": "SCALE"
+ },
+ "083": {
+  "title": "UNSCALE: Unscale",
+  "sdName": "UNSCALE"
+ },
+ "084": {
+  "title": "IF: Run conditionally",
+  "sdName": "IF"
+ },
+ "085": {
+  "title": "CASE: Create multiway branch",
+  "sdName": "CASE"
+ },
+ "086": {
+  "title": "FOR: Run in counting loop",
+  "sdName": "FOR"
+ },
+ "087": {
+  "title": "WHILE: Run if condition is met",
+  "sdName": "WHILE"
+ },
+ "088": {
+  "title": "REPEAT: Run if condition is not met",
+  "sdName": "REPEAT"
+ },
+ "089": {
+  "title": "CONTINUE: Recheck loop condition",
+  "sdName": "CONTINUE"
+ },
+ "090": {
+  "title": "EXIT: Exit loop immediately",
+  "sdName": "EXIT"
+ },
+ "091": {
+  "title": "GOTO: Jump",
+  "sdName": "GOTO"
+ },
+ "092": {
+  "title": "RETURN: Exit block",
+  "sdName": "RETURN"
+ },
+ "093": {
+  "title": "(*...*): Insert a comment section",
+  "sdName": null
+ },
+ "094": {
+  "title": "REGION: Structure program code",
+  "sdName": "REGION"
+ },
+ "095": {
+  "title": "ENDIS_PW: Locking and unlocking passwords of the CPU access levels",
+  "sdName": "ENDIS_PW"
+ },
+ "096": {
+  "title": "RE_TRIGR: Restart cycle monitoring time",
+  "sdName": "RE_TRIGR"
+ },
+ "097": {
+  "title": "STP: Exit program",
+  "sdName": "STP"
+ },
+ "098": {
+  "title": "GET_ERROR: Get error locally",
+  "sdName": "GET_ERROR"
+ },
+ "099": {
+  "title": "GET_ERR_ID: Get error ID locally",
+  "sdName": "GET_ERR_ID"
+ },
+ "100": {
+  "title": "INIT_RD: Initialize all retain data",
+  "sdName": "INIT_RD"
+ },
+ "101": {
+  "title": "WAIT: Configure time delay",
+  "sdName": "WAIT"
+ },
+ "102": {
+  "title": "RUNTIME: Measure program runtime",
+  "sdName": "RUNTIME"
+ },
+ "103": {
+  "title": "DECO: Decode",
+  "sdName": "DECO"
+ },
+ "104": {
+  "title": "ENCO: Encode",
+  "sdName": "ENCO"
+ },
+ "105": {
+  "title": "SEL: Select",
+  "sdName": "SEL"
+ },
+ "106": {
+  "title": "MUX: Multiplex",
+  "sdName": "MUX"
+ },
+ "107": {
+  "title": "DEMUX: Demultiplex",
+  "sdName": "DEMUX"
+ },
+ "108": {
+  "title": "SHR: Shift right",
+  "sdName": "SHR"
+ },
+ "109": {
+  "title": "SHL: Shift left",
+  "sdName": "SHL"
+ },
+ "110": {
+  "title": "ROR: Rotate right",
+  "sdName": "ROR"
+ },
+ "111": {
+  "title": "ROL: Rotate left",
+  "sdName": "ROL"
+ },
+ "112": {
+  "title": "DRUM: Implement sequencer",
+  "sdName": "DRUM"
+ },
+ "113": {
+  "title": "DCAT: Discrete control-timer alarm",
+  "sdName": "DCAT"
+ },
+ "114": {
+  "title": "MCAT: Motor control-timer alarm",
+  "sdName": "MCAT"
+ },
+ "115": {
+  "title": "IMC: Compare input bits with the bits of a mask",
+  "sdName": "IMC"
+ },
+ "116": {
+  "title": "SMC: Compare scan matrix",
+  "sdName": "SMC"
+ },
+ "117": {
+  "title": "LEAD_LAG: Lead and lag algorithm",
+  "sdName": "LEAD_LAG"
+ },
+ "118": {
+  "title": "SEG: Create bit pattern for seven-segment display",
+  "sdName": "SEG"
+ },
+ "119": {
+  "title": "BCDCPL: Create tens complement",
+  "sdName": "BCDCPL"
+ },
+ "120": {
+  "title": "BITSUM: Count number of set bits",
+  "sdName": "BITSUM"
+ }
+}

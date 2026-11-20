@@ -1,0 +1,396 @@
+A: 041_plc_alarm_fb.zap21  B: 042_plc_alarm_idb.zap21
+CHANGED 1001:0022:c11 CodeBlockData name='FB_Alarm'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:56:43.538740Z' -> '2026-10-25T19:57:57.587483Z'  (timestamp)
+          raw <links 1>: 52 -> 84 bytes
+          +link GeneratedByThis -> 1002:0022:1018
+          +link BlockToVersionElements -> 160c:0022:c13
+          slot table [0, 0, 0, 292, 0, 1200, 0, 136, 1882, 0, 0, 1188, 1364, 412, 0, 232, 0, 0, 1855, 378, 310, 1212, 1312] -> [0, 0, 0, 292, 0, 1200, 0, 136, 1914, 0, 0, 1188, 1396, 412, 0, 232, 0, 0, 1887, 378, 310, 1212, 1312]
+NEW     1002:0022:1018 DataBlockData name='FB_Alarm_DB'
+          ILoadObject.LoadType = 'PLUSBLOCK'
+          ITagAddress.AddressMode = 'Fixed'
+          ITagAddress.DuplicateState = 'Unique'
+          ITagAddress.MaxUsedChildLid = 0
+          ITagAddress.Part10 = -1
+          ITagAddress.Part4 = 6
+          ITagAddress.Part5 = 1
+          ITagAddress.Part6 = -1
+          ITagAddress.Part7 = -1
+          ITagAddress.Part8 = -1
+          ITagAddress.Part9 = -1
+          ITagAddress.RuntimeIdentifier = 2316173313
+          ITagAddress.RuntimeIdentifierIsValid = True
+          ITagAddress.SupportsAddressingByOffset = False
+          ITagAddress.AddressStrategy = ''
+          ITagAddress.Part1 = ''
+          ITagAddress.Part2 = ''
+          ITagAddress.Part3 = ''
+          ITagAddress.Scope = 'S71500'
+          ITagAddress.Target = 'Default'
+          ITagAddress.LogicalAddress = '%DB1'
+          IUnitElementAttributes.Access = 'Public'
+          IUnitElementAttributes.ElementAccess = 'Undefined'
+          IStructureItem.HmiReadOnly = False
+          IStructureItem.HmiStructureTypeRelevant = True
+          IStructureItem.HmiVisible = True
+          IStructureItem.Index = 0
+          IStructureItem.IsUpdateRequired = False
+          IStructureItem.Kind = 'Structure'
+          IStructureItem.Length = 0
+          IStructureItem.LineId = -1
+          IStructureItem.MemberCount = 0
+          IStructureItem.TemplateRefTime = '0001-01-01T00:00:00Z'
+          IStructureItem.LowerBounds = None
+          IStructureItem.UpperBounds = None
+          IStructureItem.DataTypeRefName = ''
+          IStructureItem.DisplayTypeName = 'Block_DB'
+          IStructureItem.VendorData = bytes[36] 000c000000000000000000000000100100000001010000000c000000000000000c000000
+          ICoreAttributes.CreationTime = '2026-10-25T19:57:57.953254Z'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsKnowHowProtected = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.ModifiedTime = '2026-10-25T19:57:57.587483Z'
+          ICoreAttributes.Protection = 'NoProtection'
+          ICoreAttributes.Password = None
+          ICoreAttributes.Culture = ''
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Subtype = 'DB'
+          ICoreAttributes.Name = 'FB_Alarm_DB'
+          ICoreAttributes.Comment = bytes[32] 2000000010000000ffffffff0000000000000000000000000000000000000000
+          ICoreExpandoAttributes.OpnsCustomer = '2100300'
+          ICoreExpandoAttributes.Siemens.Simatic.Lang.Model.Blocks.ICommonFingerprintData.DataStoreVersion = 281474976710656
+          ICommonFingerprintData.DataVersion = 639285550779624734
+          ICommonFingerprintData.ValidState = 0
+          ICommonFingerprintData.DataStore = bytes[397] 01a505000000000000000000000010010000000101000000f302785eed94416ac2401486edb650e8
+          IExpandoInformationData.NonRetain = True
+          IExpandoInformationData.ReleaseCount = 50
+          IExpandoInformationData.ToFB_IDB = False
+          IExpandoInformationData.ProtectionVersionId = 0
+          IExpandoInformationData.NotSupportedAfterUpload = False
+          IExpandoInformationData.Unlinked = False
+          IExpandoInformationData.PBK = False
+          IExpandoInformationData.NotLoadable = False
+          IExpandoInformationData.Licensed = False
+          IExpandoInformationData.FProtection = False
+          IExpandoInformationData.HugeDB = False
+          IExpandoInformationData.IsWriteProtectedInAS = False
+          IExpandoInformationData.IsSystem = False
+          IExpandoInformationData.PreferablyRenumbered = True
+          IExpandoInformationData.MemorySignatureConfiguration = 2
+          IExpandoInformationData.TargetFamily = 'S71500'
+          IExpandoInformationData.ESFunctionalityLevel = 21
+          IExpandoInformationData.ESLanguageLevel = 21
+          IExpandoInformationData.BlockLanguageLevel = 9223372036854775807
+          IExpandoInformationData.DownloadHistory = 'DB?-0'
+          IGeneralBlockSourceData.AutoNumber = True
+          IGeneralBlockSourceData.BlockLanguage = 'DB'
+          IGeneralBlockSourceData.BlockType = 'DB'
+          IGeneralBlockSourceData.CompileArtifacts = 'Binary'
+          IGeneralBlockSourceData.CreationId = 639285550778955605
+          IGeneralBlockSourceData.InterfaceModifiedId = 0
+          IGeneralBlockSourceData.Number = 1
+          IGeneralBlockSourceData.OnlySymbolicAccess = True
+          IGeneralBlockSourceData.ResourceHandling = 'None'
+          IGeneralBlockSourceData.SkipDuringMake = False
+          IGeneralBlockSourceData.TargetGroup = 'Plus'
+          IGeneralBlockSourceData.XRefChangeCounter = 0
+          IGeneralBlockSourceData.OriginalPartName = ''
+          IGeneralDataBlockSourceData.AdditionalAttributes = 'None'
+          IGeneralDataBlockSourceData.OfNumber = 1
+          IGeneralDataBlockSourceData.OfType = 'FB'
+          IGeneralDataBlockSourceData.Technology = 'StandardDB'
+          IGeneralDataBlockSourceData.TemplateValueVersion = 0
+          IGeneralDataBlockSourceData.Type = 'IDBofFB'
+          IGeneralDataBlockSourceData.OfName = None
+          IGeneralDataBlockSourceData.TemplateValues = bytes[20] 0000000000000000000000000000100100000000
+          IPlcHeaderData.HeaderAuthor = ''
+          IPlcHeaderData.HeaderFamily = ''
+          IPlcHeaderData.HeaderName = ''
+          IPlcHeaderData.HeaderVersion = '0.1'
+          IMakeData.BodyCompileState = 'OutOfDate'
+          IMakeData.CheckName = False
+          IMakeData.CheckNumber = False
+          IMakeData.InterfaceState = 'None'
+          IMakeData.InterfaceTypeUnknown = False
+          IMakeData.Level = 12
+          IMakeData.OffsetsValid = True
+          IMakeData.SeqIndex = 3
+          IMakeData.SeqNo = 0
+          IMakeData.RenameBlockingIdents = ''
+          IMakeData.RenumberBlockingIdents = ''
+          IMakeData.ResponsibleClient = ''
+          ITimestampData.CodeModified = '2026-10-25T19:57:58.424501Z'
+          ITimestampData.InterfaceModified = '2026-10-25T19:56:49.186958Z'
+          ITimestampData.LoadRelevantModified = '2026-10-25T19:57:58.424501Z'
+          ITimestampData.Modified = '2026-10-25T19:57:58.424501Z'
+          ITimestampData.OMSpTypeModified = '2026-10-25T19:56:49.186958Z'
+          ITimestampData.OffsetRelevantModified = '2026-10-25T19:56:49.186958Z'
+          ITimestampData.ParameterModified = '2026-10-25T19:56:49.186958Z'
+          ITimestampData.StructureModified = '2026-10-25T19:56:49.186958Z'
+          link AggregatingFolder -> 100e:0002:916
+          link SWObjectData_IUnitElementAttributes_BaseUnitData -> 101c:0010:813
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link BelongsTo -> 101c:0010:813
+          link IsGeneratedFrom -> 1001:0022:c11
+          link CurrentInterface -> 160c:0022:101a
+          link CoreObject2IdentContainer -> 1202:0022:1019
+          link AttachedAlarms -> 100c:0040:101d
+CHANGED 1006:0001:449 CorePersistenceInfo name=None
+          IPersistenceInfoAttributes.ProjectSavePoint: bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369 -> bytes[178] b2000000030000001400000029000000780000001500000000000000100000001400000004566369
+NEW     1008:0040:101e AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:101f AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1020 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1021 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1022 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1023 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1024 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1025 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1026 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1027 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     1008:0040:1028 AlarmText name=None
+          ICoreTextExtendedData.IsFormatted = False
+          ICoreTextExtendedData.IsModifiedByUser = False
+          ICoreTextExtendedData.DefaultText = ''
+          ICoreTextExtendedData.FormattedDefaultText = ''
+          ICoreTextRepository.Text = bytes[52] 340000001a000000ffffffff01000000ffff16000000000000001210400000000000000000000100
+          link Alarm -> 100c:0040:101d
+          link Category -> 1012:0040:566
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+NEW     100c:0040:101d SimpleControllerAlarmData name='Alarm_1'
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Subtype = 'InstanceAlarm'
+          ICoreAttributes.Name = 'Alarm_1'
+          IAlarmData.AlarmId = 512
+          IAlarmData.AlarmKind = 'InstanceAlarm'
+          IAlarmData.Priority = -1
+          IAlarmData.Range = -1
+          IAlarmData.ReadOnlyForUser = False
+          IAlarmData.Report = -1
+          IAlarmData.SecondaryAlarmId = 1
+          IAlarmData.Version = 0
+          IAlarmData.TextIndexes = bytes[30] 1e0000000b00000000000100020003000400050006000700080009000a00
+          IAlarmDataExt.AcknowledgementGroup = -1
+          IAlarmDataExt.AlarmType = 'Alarm_AP'
+          IAlarmDataExt.CreationTime = '2026-10-25T19:57:58.361845Z'
+          IAlarmDataExt.DisplayClass = -1
+          IAlarmDataExt.ModifiedTime = '2026-10-25T19:57:58.417413Z'
+          IAlarmDataExt.Producer = 0
+          IAlarmDataExt.IsInvalids = None
+          IControllerAlarmData.IsReadOnly = False
+          IControllerAlarmData.MemberCOID = '52'
+          IControllerAlarmData.FullMemberHierarchy = bytes[20] 14000000010000000c00000008416c61726d5f31
+          IControllerAlarmData.MemberHierarchy = bytes[20] 14000000010000000c00000008416c61726d5f31
+          link PhysicalParent -> 1002:0022:1018
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link TypeAlarm -> 100c:0040:c46
+          link Texts -> 1008:0040:101e
+          link Texts -> 1008:0040:101f
+          link Texts -> 1008:0040:1020
+          link Texts -> 1008:0040:1021
+          link Texts -> 1008:0040:1022
+          link Texts -> 1008:0040:1023
+          link Texts -> 1008:0040:1024
+          link Texts -> 1008:0040:1025
+          link Texts -> 1008:0040:1026
+          link Texts -> 1008:0040:1027
+          link Texts -> 1008:0040:1028
+          link InverseResourceAllocatorObjects -> 1019:0001:835
+CHANGED 100c:0040:c46 SimpleControllerAlarmData name='Alarm_1'
+          raw <links 1>: 180 -> 196 bytes
+          +link InstanceAlarms -> 100c:0040:101d
+          slot table [96, 0, 0, 127, 0, 0, 190, 541, 355, 230, 323, 239, 361] -> [96, 0, 0, 127, 0, 0, 190, 557, 355, 230, 323, 239, 361]
+CHANGED 100e:0002:916 FolderData name='ProgramBlocksFolder'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:56:43.538740Z' -> '2026-10-25T19:57:57.587483Z'  (timestamp)
+          raw <links 1>: 84 -> 100 bytes
+          +link AggregatedElements -> 1002:0022:1018
+CHANGED 1012:0040:566 FormattedUserAlarmTextCategory name='FormattedUserAlarmTextCategory'
+          raw <links 1>: 180 -> 356 bytes
+          +link CategoryInverse -> 1008:0040:101e
+          +link CategoryInverse -> 1008:0040:101f
+          +link CategoryInverse -> 1008:0040:1020
+          +link CategoryInverse -> 1008:0040:1021
+          +link CategoryInverse -> 1008:0040:1022
+          +link CategoryInverse -> 1008:0040:1023
+          +link CategoryInverse -> 1008:0040:1024
+          +link CategoryInverse -> 1008:0040:1025
+          +link CategoryInverse -> 1008:0040:1026
+          +link CategoryInverse -> 1008:0040:1027
+          +link CategoryInverse -> 1008:0040:1028
+CHANGED 1019:0001:835 ResourceAllocatorData name=None
+          ICoreExpandoAttributes.0_0: '<absent>' -> bytes[41] 29001000000000000000000000000010010000000101000000010000000100000000020000000000
+          IResourceAllocatorData.NumericRanges: bytes[296] 28010000010000000c0000001c010000220000002a0000005f000000ffff00000100000087000000 -> bytes[350] 5e010000010000000c00000052010000220000002a0000005f000000ffff00000100000087000000
+          raw ICoreExpandoAttributes: 34 -> 132 bytes
+          raw <links 1>: 0 -> 52 bytes
+          +link ResourceAllocatorObjects -> 100c:0040:101d
+          slot table [0, 152, 0, 186, 68, 0] -> [0, 152, 0, 284, 68, 646]
+CHANGED 101c:0010:813 S7ControllerTargetData name='PLC_1'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:56:51.986789Z' -> '2026-10-25T19:57:57.587483Z'  (timestamp)
+          raw <links 1>: 972 -> 972 bytes
+          raw <links 3>: 84 -> 96 bytes
+          +link typed slot 19 -> 1002:0022:1018
+          +link typed slot 21 -> 1002:0022:1018
+          slot table [4907, 536, 0, 0, 0, 1647, 7553, 0, 0, 0, 0, 0, 1764, 1776, 2346, 2429, 2445, 0, 3331, 27665, 3887, 28961, 0, 0, 0, 0, 28937, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3479, 3611, 3731, 0, 0, 0, 4883, 3911, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3851, 0, 29045, 0, 0, 28889, 0, 0, 0, 0, 0, 0, 0, 0, 7529, 0, 28637, 7505, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] -> [4907, 536, 0, 0, 0, 1647, 7553, 0, 0, 0, 0, 0, 1764, 1776, 2346, 2429, 2445, 0, 3331, 27665, 3887, 28961, 0, 0, 0, 0, 28937, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3479, 3611, 3731, 0, 0, 0, 4883, 3911, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3851, 0, 29057, 0, 0, 28889, 0, 0, 0, 0, 0, 0, 0, 0, 7529, 0, 28637, 7505, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+CHANGED 1028:0002:433 ProjectData name='000_empty'
+          ICoreAttributes.ModifiedTime: '2026-10-25T19:56:52.323975Z' -> '2026-10-25T19:57:59.293488Z'  (timestamp)
+CHANGED 1032:0022:91f ProgramInformationSourceData name=None
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataStore: bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000 -> bytes[259] 830200e9000000000000000000000000100100000001010000000010deadbeef0100000000000000
+          IExpandoInformationData.FingerprintInfrastructure.Container.DataVersion: 639285550057405745 -> 639285550779687652
+          raw IExpandoInformationData: 2524 -> 2524 bytes
+NEW     1202:0022:1019 IdentContainerData name=None
+          IIdentContainerData.NextFreePartId = 0
+          IIdentContainerData.FilcMetaPayloadVersion = ''
+          IIdentContainerData.PayLoadVersion = ''
+          IIdentContainerData.ContextProviderGuid = '256E1960-4E24-4683-B45C-42199F207B31'
+          IIdentContainerData.PartMappingStrategy = 'bytype'
+          IIdentContainerData.FilcMetaPayload = bytes[20] 0000000000000000000000000000100100000000
+          IIdentContainerData.PayLoad = bytes[20] 0000000000000000000000000000100100000000
+          link IdentContainerInverse -> 1002:0022:1018
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+CHANGED 1607:0022:930 TargetBlockInterfaceContainer name=None
+          raw <links 1>: 84 -> 100 bytes
+          +link InterfaceParts -> 160c:0022:101a
+NEW     160c:0022:101a InterfaceVersionRootData name='BIVE:FB_Alarm_DB/9b33b031-e5bb-41bf-bfa3-fb8cad8a35af'
+          ICoreAttributes.IsConstant = False
+          ICoreAttributes.IsShell = False
+          ICoreAttributes.Version = ''
+          ICoreAttributes.Name = 'BIVE:FB_Alarm_DB/9b33b031-e5bb-41bf-bfa3-fb8cad8a35af'
+          IInterfacePartData.Flags = 'None'
+          IInterfacePartData.Kind = 'Values'
+          IInterfacePartData.PathLength = 0
+          IInterfacePartData.PayloadCRC = 0
+          IInterfacePartData.Counter = bytes[20] 1400000000003200000008000000000000000000
+          IInterfacePartData.OffsetInfo = bytes[24] 180000001000000000000000000000000000000000000000
+          IInterfacePartData.Payload = bytes[20] 0000000000000000000000000000100100000000
+          IInterfaceVersionData.BlockRID = 2449473537
+          IInterfaceVersionData.Context = 18
+          IInterfaceVersionData.HasNamespace = False
+          IInterfaceVersionData.HighestIdentUId = 20
+          IInterfaceVersionData.InterfaceModified = '0001-01-01T00:00:00Z'
+          IInterfaceVersionData.MemberDeletedChangeCounter = 0
+          IInterfaceVersionData.OMSpTypeModified = '0001-01-01T00:00:00Z'
+          IInterfaceVersionData.OffsetModified = '0001-01-01T00:00:00Z'
+          IInterfaceVersionData.ParameterModified = '0001-01-01T00:00:00Z'
+          IInterfaceVersionData.SetPointCount = 0
+          IInterfaceVersionData.State = 'None'
+          IInterfaceVersionData.StructureModified = '0001-01-01T00:00:00Z'
+          IInterfaceVersionData.SubTypeVersionChangeCount = 0
+          IInterfaceVersionData.TComSize = 0
+          IInterfaceVersionData.TrackingGuid = '00000000-0000-0000-0000-000000000000'
+          IInterfaceVersionData.Version = 'V21_00'
+          IInterfaceVersionData.VolatileAreaSize = 0
+          IInterfaceVersionData.SourceObjectID = ''
+          IInterfaceVersionData.BlockName = 'FB_Alarm_DB'
+          IInterfaceVersionData.ErrorStore = bytes[20] 0000000000000000000000000000100100000000
+          IInterfaceVersionData.TrackingHistory = bytes[20] 0000000000000000000000000000100100000000
+          link Parent -> 1607:0022:930
+          link Environment -> 1028:0002:433
+          link Target -> 101c:0010:813
+          link UsedByBlock -> 1002:0022:1018
+          link UsedParts -> 160c:0022:c13
+CHANGED 160c:0022:c13 InterfaceVersionRootData name='_BIVE:FB_Alarm/9616aec7-a9d4-4852-ac36-b5a623a2f6de'
+          ICoreAttributes.IsConstant: False -> True
+          ICoreAttributes.Name: 'BIVE:FB_Alarm/9616aec7-a9d4-4852-ac36-b5a623a2f6de' -> '_BIVE:FB_Alarm/9616aec7-a9d4-4852-ac36-b5a623a2f6de'
+          IInterfaceVersionData.InterfaceModified: '0001-01-01T00:00:00Z' -> '2026-10-25T19:56:49.186958Z'  (timestamp)
+          IInterfaceVersionData.OffsetModified: '0001-01-01T00:00:00Z' -> '2026-10-25T19:56:49.186958Z'  (timestamp)
+          IInterfaceVersionData.ParameterModified: '0001-01-01T00:00:00Z' -> '2026-10-25T19:56:49.186958Z'  (timestamp)
+          IInterfaceVersionData.SourceObjectID: '' -> '{2232321-3089}'
+          IInterfaceVersionData.StructureModified: '0001-01-01T00:00:00Z' -> '2026-10-25T19:56:49.186958Z'  (timestamp)
+          raw <links 0>: 84 -> 84 bytes
+          raw <links 1>: 116 -> 132 bytes
+          +link VersionElementToBlock -> 1001:0022:c11
+          +link UsedByVersions -> 160c:0022:101a
+          slot table [1005, 0, 0, 0, 0, 80, 1071, 1252, 1336] -> [1005, 0, 0, 0, 0, 80, 1072, 1267, 1351]
+store records changed/new: 0002:0007:7, 0003:0007:3, 0004:0007:5, 0005:0007:8, 0006:0007:15, 000d:0007:10, 0011:0007:1400, 0011:0007:bfc, 0014:0007:0, 0015:0007:20, 0016:0007:18

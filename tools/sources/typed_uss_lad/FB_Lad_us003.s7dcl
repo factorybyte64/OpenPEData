@@ -1,0 +1,29 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_us003"
+    VAR_INPUT
+        v_port : PORT;
+        v_baud : DInt;
+    END_VAR
+    VAR_OUTPUT
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_uss_db : P2P_USS_BASE;
+    END_VAR
+    VAR
+        inst : USS_Port_Scan;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.USS_Port_Scan( PORT := #v_port, BAUD := #v_baud, USS_DB := #v_uss_db, ERROR => #v_error, STATUS => #v_status )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

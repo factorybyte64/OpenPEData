@@ -1,0 +1,19 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl105"
+    VAR_INPUT
+        v_g : Bool;
+        v_in0 : Time_Of_Day;
+        v_in1 : Time_Of_Day;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Bool;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := SEL(G := #v_g, IN0 := #v_in0, IN1 := #v_in1);
+    END_NETWORK
+END_FUNCTION_BLOCK

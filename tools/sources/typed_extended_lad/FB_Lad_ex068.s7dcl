@@ -1,0 +1,28 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_ex068"
+    VAR_INPUT
+        v_start : Bool;
+        v_end : Bool;
+        v_id : HW_;
+        v_pause_time : Time;
+    END_VAR
+    VAR_OUTPUT
+        v_valid : Bool;
+        v_busy : Bool;
+        v_error : Bool;
+        v_status : DWord;
+        v_pe_mode_id : Byte;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Pe_Start_End( START := #v_start, END := #v_end, ID := #v_id, PAUSE_TIME := #v_pause_time, VALID => #v_valid, BUSY => #v_busy, ERROR => #v_error, STATUS => #v_status, PE_MODE_ID => #v_pe_mode_id )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

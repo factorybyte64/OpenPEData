@@ -1,0 +1,51 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_mb001"
+    VAR_INPUT
+        v_req : Bool;
+        v_port : PORT;
+        v_baud : UDInt;
+        v_parity : UInt;
+        v_flow_ctrl : UInt;
+        v_rts_on_dly : UInt;
+        v_rts_off_dly : UInt;
+        v_resp_to : UInt;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_mb_db : P2P_MB_BASE;
+    END_VAR
+    VAR
+        inst : Modbus_Comm_Load;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Modbus_Comm_Load(
+                REQ := #v_req,
+                PORT := #v_port,
+                BAUD := #v_baud,
+                PARITY := #v_parity,
+                FLOW_CTRL := #v_flow_ctrl,
+                RTS_ON_DLY := #v_rts_on_dly,
+                RTS_OFF_DLY := #v_rts_off_dly,
+                RESP_TO := #v_resp_to,
+                DONE => #v_done,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                MB_DB := #v_mb_db
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

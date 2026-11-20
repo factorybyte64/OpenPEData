@@ -1,0 +1,156 @@
+FUNCTION_BLOCK "FB_StlBit"
+TITLE = STL catalog FB_StlBit
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR
+      edgeN : Bool;
+      edgeP : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 001 A
+      A     #a;
+      =     #q;
+NETWORK
+TITLE = 002 AN
+      AN    #a;
+      =     #q;
+NETWORK
+TITLE = 003 O
+      O     #a;
+      O     #b;
+      =     #q;
+NETWORK
+TITLE = 004 ON
+      ON    #a;
+      =     #q;
+NETWORK
+TITLE = 005 X
+      X     #a;
+      X     #b;
+      =     #q;
+NETWORK
+TITLE = 006 XN
+      XN    #a;
+      =     #q;
+NETWORK
+TITLE = 007 O (2)
+      A     #a;
+      A     #b;
+      O     ;
+      A     #c;
+      =     #q;
+NETWORK
+TITLE = 008 A(
+      A(    ;
+      O     #a;
+      O     #b;
+      )     ;
+      =     #q;
+NETWORK
+TITLE = 009 AN(
+      AN(   ;
+      O     #a;
+      O     #b;
+      )     ;
+      =     #q;
+NETWORK
+TITLE = 010 O(
+      O(    ;
+      A     #a;
+      A     #b;
+      )     ;
+      =     #q;
+NETWORK
+TITLE = 011 ON(
+      ON(   ;
+      A     #a;
+      )     ;
+      =     #q;
+NETWORK
+TITLE = 012 X(
+      X(    ;
+      A     #a;
+      )     ;
+      X     #b;
+      =     #q;
+NETWORK
+TITLE = 013 XN(
+      XN(   ;
+      A     #a;
+      )     ;
+      =     #q;
+NETWORK
+TITLE = 014 )
+      A(    ;
+      A     #a;
+      )     ;
+      =     #q;
+NETWORK
+TITLE = 015 =
+      A     #a;
+      =     #q;
+NETWORK
+TITLE = 016 R
+      A     #a;
+      R     #q;
+NETWORK
+TITLE = 017 S
+      A     #a;
+      S     #q;
+NETWORK
+TITLE = 018 NOT
+      A     #a;
+      NOT   ;
+      =     #q;
+NETWORK
+TITLE = 019 SET
+      SET   ;
+      =     #q;
+NETWORK
+TITLE = 020 CLR
+      CLR   ;
+      =     #q;
+NETWORK
+TITLE = 021 SAVE
+      A     #a;
+      SAVE  ;
+NETWORK
+TITLE = 022 FN
+      A     #a;
+      FN    #edgeN;
+      =     #q;
+NETWORK
+TITLE = 023 FP
+      A     #a;
+      FP    #edgeP;
+      =     #q;
+END_FUNCTION_BLOCK

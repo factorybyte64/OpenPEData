@@ -1,0 +1,20 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl056"
+    VAR_INPUT
+        v_area : Byte;
+        v_dbnumber : DInt;
+        v_byteoffset : DInt;
+        v_bitoffset : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : Byte;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := PEEK_BOOL(AREA := #v_area, DBNUMBER := #v_dbnumber, BYTEOFFSET := #v_byteoffset, BITOFFSET := #v_bitoffset);
+    END_NETWORK
+END_FUNCTION_BLOCK

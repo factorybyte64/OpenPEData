@@ -1,0 +1,27 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD"
+}
+FUNCTION_BLOCK "FB_Lad_mt015"
+    VAR_IN_OUT
+        v_ndr : Variant;
+        v_disconnect : Variant;
+        v_dr : Variant;
+        v_error : Variant;
+        v_status : Variant;
+        v_mb_hold_reg : Variant;
+        v_connect : Variant;
+    END_VAR
+    VAR
+        inst : MB_SERVER;
+    END_VAR
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.MB_SERVER( NDR := #v_ndr, DISCONNECT := #v_disconnect, DR := #v_dr, ERROR := #v_error, STATUS := #v_status, MB_HOLD_REG := #v_mb_hold_reg, CONNECT := #v_connect )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

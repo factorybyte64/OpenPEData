@@ -1,0 +1,36 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex066"
+    VAR_INPUT
+        v_req : Bool;
+        v_r : Bool;
+        v_dp_id : HW_IOSYSTEM;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_busy : Bool;
+        v_dpr : Byte;
+        v_dpri : Byte;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            DP_TOPOL(
+                REQ := #v_req,
+                R := #v_r,
+                DP_ID := #v_dp_id,
+                RET_VAL => #v_ret_val,
+                BUSY => #v_busy,
+                DPR => #v_dpr,
+                DPRI => #v_dpri
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

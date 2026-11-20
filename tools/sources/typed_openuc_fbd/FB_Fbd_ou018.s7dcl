@@ -1,0 +1,34 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_Fbd_ou018"
+    VAR_INPUT
+        v_en_r : Bool;
+        v_id : CONN_OUC;
+        v_len : UDInt;
+    END_VAR
+    VAR_OUTPUT
+        v_ndr : Bool;
+        v_error : Bool;
+        v_busy : Bool;
+        v_status : Word;
+        v_rcvd_len : UDInt;
+    END_VAR
+    VAR_IN_OUT
+        v_data : Array[0..99] of Byte;
+        v_addr : Array[0..99] of Byte;
+    END_VAR
+    VAR
+        inst : Turcv;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.Turcv( EN_R := #v_en_r, ID := #v_id, LEN := #v_len, NDR => #v_ndr, ERROR => #v_error, BUSY => #v_busy, STATUS => #v_status, RCVD_LEN => #v_rcvd_len, DATA := #v_data, ADDR := #v_addr )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

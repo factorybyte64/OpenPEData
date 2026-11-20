@@ -1,0 +1,23 @@
+{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD"
+}
+FUNCTION_BLOCK "FB_FbdTech"
+    VAR_INPUT
+        sp : Real;
+        pv : Real;
+    END_VAR
+    VAR_OUTPUT
+        outv : Real;
+        err : Bool;
+    END_VAR
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T1"
+    }
+    NETWORK
+        RUNG
+            "PID_Comp_2_3"( Setpoint := #sp, Input := #pv, Output => #outv, Error => #err )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

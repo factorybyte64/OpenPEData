@@ -1,0 +1,18 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl051"
+    VAR_INPUT
+        v_db : DB_ANY;
+        v_index : DInt;
+    END_VAR
+    VAR_OUTPUT
+        v_ret : DB_ANY;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_ret := ReadFromArrayDB(DB := #v_db, INDEX := #v_index);
+    END_NETWORK
+END_FUNCTION_BLOCK

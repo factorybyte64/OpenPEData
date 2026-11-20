@@ -1,0 +1,22 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl117"
+    VAR_INPUT
+        v_in : Real;
+        v_sample_t : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Real;
+        v_err_code : Word;
+    END_VAR
+    VAR
+        inst : LEAD_LAG;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #inst(IN := #v_in, SAMPLE_T := #v_sample_t, OUT => #v_out, ERR_CODE => #v_err_code);
+    END_NETWORK
+END_FUNCTION_BLOCK

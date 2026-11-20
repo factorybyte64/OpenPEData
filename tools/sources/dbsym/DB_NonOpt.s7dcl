@@ -1,0 +1,27 @@
+{
+    S7_Optimized := "FALSE"
+}
+DATA_BLOCK "DB_NonOpt"
+    VAR
+        b0 : Bool;
+        b1 : Bool;
+        by : Byte;
+        i : Int;
+        d : DInt;
+        r : Real;
+        t : Time;
+        dt : Date_And_Time;
+        s : String[12];
+        arr : Array[1..4] of Word;
+        m : Array[0..1, 0..2] of Int;
+        st : Struct
+            x : Bool;
+            y : Real;
+        END_STRUCT;
+        u : "UDT_Inner";
+    END_VAR
+    i := 5;
+    s := 'std';
+    m[1, 2] := -3;
+    st.y := 2.5;
+END_DATA_BLOCK

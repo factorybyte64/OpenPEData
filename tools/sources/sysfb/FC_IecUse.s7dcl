@@ -1,0 +1,23 @@
+{
+    S7_Optimized := "TRUE";
+    S7_EditorMode := "SCL";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_IecUse" : Void
+    VAR_INPUT
+        b : Bool;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        "DB_IEC_TIMER".TON(IN := #b, PT := T#1S);
+        "DB_IEC_LTIMER".TON(IN := #b, PT := LT#1S);
+        "DB_IEC_COUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_SCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_DCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_LCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_UCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_USCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_UDCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+        "DB_IEC_ULCOUNTER".CTU(CU := #b, R := FALSE, PV := 5);
+    END_NETWORK
+END_FUNCTION

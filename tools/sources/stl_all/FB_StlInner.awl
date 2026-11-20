@@ -1,0 +1,27 @@
+FUNCTION_BLOCK "FB_StlInner"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT
+      start : Bool;
+   END_VAR
+
+   VAR_OUTPUT
+      cnt : Int;
+   END_VAR
+
+   VAR
+      n : Int;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 
+      A     #start;
+      JCN   E1;
+      L     #n;
+      +     1;
+      T     #n;
+E1:   L     #n;
+      T     #cnt;
+END_FUNCTION_BLOCK
