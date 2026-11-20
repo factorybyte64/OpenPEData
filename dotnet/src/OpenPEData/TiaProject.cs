@@ -22,6 +22,8 @@ public sealed class TiaProject : IDisposable
     readonly string corePath;
     readonly ReadLimits limits;
     ProjectModel? model;
+    TiaProjectContent? content;
+    IntegrityReport? integrity;
     bool disposed;
 
     TiaProject(TiaProjectInfo info, TiaVersion version, ProjectModel model, string corePath, IReadOnlyList<string> warnings, ReadLimits limits)
@@ -111,6 +113,34 @@ public sealed class TiaProject : IDisposable
     /// <param name="cancellationToken">Checked before each block and data type.</param>
     public JsonObject GetStructure(bool includeKeys = false, CancellationToken cancellationToken = default) =>
         (JsonObject)ToNode(Raw(includeKeys ? TiaContent.StructureWithKeys : TiaContent.Structure, cancellationToken))!;
+
+    /// <summary>Typed project content: devices, PLC software (blocks, tags, data types), HMI software (tags, screens and
+    /// items), libraries and statistics. Every typed object also carries its JSON node (<see cref="TiaContentObject.Json"/>)
+    /// with all details of <see cref="GetStructure"/>. Computed once per instance; later calls return the same object.</summary>
+    /// <param name="cancellationToken">Checked before each block and data type.</param>
+    public TiaProjectContent GetContent(CancellationToken cancellationToken = default)
+    {
+        lock (gate)
+        {
+            ObjectDisposedException.ThrowIf(disposed, this);
+            if (content is null)
+                content = new TiaProjectContent(GetStructure(false, cancellationToken));
+            return content;
+        }
+    }
+
+    /// <summary>Typed integrity check (<see cref="Verify"/>): per PEData file, hash chain and signatures, index.
+    /// Computed once per instance; later calls return the same object.</summary>
+    public IntegrityReport GetIntegrityReport(CancellationToken cancellationToken = default)
+    {
+        lock (gate)
+        {
+            ObjectDisposedException.ThrowIf(disposed, this);
+            if (integrity is null)
+                integrity = new IntegrityReport(Verify(cancellationToken));
+            return integrity;
+        }
+    }
 
     /// <summary>Objects whose content could not be read (statistics.errors of the structure); reads the structure if needed.</summary>
     public IReadOnlyList<ParseIssue> GetIssues(CancellationToken cancellationToken = default)
@@ -212,6 +242,8 @@ public sealed class TiaProject : IDisposable
     {
         model = null;
         results.Clear();
+        content = null;
+        integrity = null;
     }
 
     /// <summary>The value tree of the reader for one content, computed once; reader errors become CorruptProjectException.</summary>
