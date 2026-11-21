@@ -1,18 +1,184 @@
 <Window x:Class="OpenPEData.Viewer.SettingsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Settings – OpenPEData Viewer" SizeToContent="Height" Width="520" ResizeMode="NoResize"
+        Title="Settings – OpenPEData Viewer" Width="820" Height="560" MinWidth="640" MinHeight="420"
         WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
         Background="{StaticResource PaneBg}" FontFamily="Segoe UI" FontSize="13">
-    <StackPanel Margin="16">
-        <TextBlock Text="Updates" FontSize="15" FontWeight="SemiBold"/>
-        <CheckBox x:Name="AutoCheckBox" Margin="0,10,0,0"
-                  Content="Check for updates automatically (at startup and every 12 hours)"/>
-        <CheckBox x:Name="PrereleaseBox" Margin="0,6,0,0" Content="Include pre-releases"/>
-        <TextBlock x:Name="UpdateHint" Margin="0,8,0,0" TextWrapping="Wrap" Foreground="{StaticResource Muted}"/>
-        <DockPanel Margin="0,18,0,0" LastChildFill="False">
-            <Button DockPanel.Dock="Right" Padding="14,4" Margin="6,0,0,0" IsCancel="True">Cancel</Button>
-            <Button DockPanel.Dock="Right" Padding="14,4" IsDefault="True" Click="OnOk">OK</Button>
-        </DockPanel>
-    </StackPanel>
+    <Window.Resources>
+        <Style x:Key="PageTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,4"/>
+        </Style>
+        <Style x:Key="PageIntro" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource Muted}"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,0,0,14"/>
+        </Style>
+        <Style x:Key="GroupTitle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="2,8,0,6"/>
+        </Style>
+        <Style x:Key="Card" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="Padding" Value="16,12"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+        </Style>
+        <Style x:Key="Hint" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource Muted}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="22,2,0,0"/>
+        </Style>
+        <Style x:Key="NavItem" TargetType="ListBoxItem">
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Margin" Value="0,1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="Bd" Background="Transparent" CornerRadius="5" Padding="{TemplateBinding Padding}">
+                            <Grid>
+                                <Border x:Name="Mark" Width="3" HorizontalAlignment="Left" Margin="-10,2,0,2" CornerRadius="2"
+                                        Background="{StaticResource Accent}" Visibility="Collapsed"/>
+                                <ContentPresenter/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#E6EAF0"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#DDE3EA"/>
+                                <Setter TargetName="Mark" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+        <!-- footer -->
+        <Border DockPanel.Dock="Bottom" Background="{StaticResource HeaderBg}" BorderBrush="{StaticResource Line}" BorderThickness="0,1,0,0" Padding="16,10">
+            <DockPanel LastChildFill="False">
+                <TextBlock x:Name="FooterHint" DockPanel.Dock="Left" VerticalAlignment="Center" Foreground="{StaticResource Muted}" FontSize="12"/>
+                <Button DockPanel.Dock="Right" Padding="16,5" Margin="8,0,0,0" MinWidth="80" IsCancel="True">Cancel</Button>
+                <Button DockPanel.Dock="Right" Padding="16,5" MinWidth="80" IsDefault="True" Click="OnOk">OK</Button>
+            </DockPanel>
+        </Border>
+
+        <!-- navigation -->
+        <Border DockPanel.Dock="Left" Width="200" Background="{StaticResource HeaderBg}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,1,0">
+            <ListBox x:Name="Nav" Background="Transparent" BorderThickness="0" Padding="8,12" SelectionChanged="OnNavChanged"
+                     ItemContainerStyle="{StaticResource NavItem}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+        </Border>
+
+        <!-- pages -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="24,18,24,12">
+            <Grid>
+                <!-- General -->
+                <StackPanel x:Name="PageGeneral">
+                    <TextBlock Style="{StaticResource PageTitle}" Text="General"/>
+                    <TextBlock Style="{StaticResource PageIntro}" Text="Start behavior of the viewer."/>
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <CheckBox x:Name="ReopenBox" Content="Open the last project at startup"/>
+                            <TextBlock Style="{StaticResource Hint}" Text="Only when the viewer is started without a project (not with a file from Explorer or the command line)."/>
+                            <TextBlock x:Name="LastProjectText" Style="{StaticResource Hint}" FontFamily="Cascadia Mono, Consolas"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <!-- Display -->
+                <StackPanel x:Name="PageDisplay" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource PageTitle}" Text="Display"/>
+                    <TextBlock Style="{StaticResource PageIntro}" Text="How screens are drawn in the preview."/>
+                    <TextBlock Style="{StaticResource GroupTitle}" Text="Screen preview"/>
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <CheckBox x:Name="RuntimeVisibilityBox" Content="Like runtime: hide objects with Visible = false"/>
+                            <TextBlock Style="{StaticResource Hint}" Text="Start value of the toolbar switch &quot;Like runtime&quot;. Off: like the TIA screen editor, hidden objects are drawn."/>
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Style="{StaticResource GroupTitle}" Text="Rendering"/>
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <CheckBox x:Name="SoftwareRenderBox" Content="Software rendering (no graphics card acceleration)"/>
+                            <TextBlock Style="{StaticResource Hint}" Text="For Remote Desktop sessions and virtual machines with display problems. Applies after a restart of the viewer. The environment variable OPENPEDATA_SOFTWARE_RENDER=1 turns it on as well."/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <!-- Export -->
+                <StackPanel x:Name="PageExport" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource PageTitle}" Text="Export"/>
+                    <TextBlock Style="{StaticResource PageIntro}" Text="Format of the CSV files that the lists and the view &quot;Export&quot; write."/>
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <DockPanel>
+                                <TextBlock Text="Field separator" VerticalAlignment="Center" Width="140"/>
+                                <ComboBox x:Name="SeparatorBox" Width="260" HorizontalAlignment="Left">
+                                    <ComboBoxItem Tag=";" Content="Semicolon ( ; ) – Excel, comma decimals"/>
+                                    <ComboBoxItem Tag="," Content="Comma ( , )"/>
+                                    <ComboBoxItem Tag="&#9;" Content="Tab"/>
+                                </ComboBox>
+                            </DockPanel>
+                            <CheckBox x:Name="BomBox" Margin="0,12,0,0" Content="UTF-8 with byte order mark"/>
+                            <TextBlock Style="{StaticResource Hint}" Text="Excel needs it to show umlauts and other special characters correctly."/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <!-- Updates -->
+                <StackPanel x:Name="PageUpdates" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource PageTitle}" Text="Updates"/>
+                    <TextBlock Style="{StaticResource PageIntro}" Text="New versions come from the GitHub releases of OpenPEData."/>
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <CheckBox x:Name="AutoCheckBox" Content="Check for updates automatically (at startup and every 12 hours)"/>
+                            <TextBlock Style="{StaticResource Hint}" Text="A new version is shown as a notice in the toolbar; nothing is installed without a click."/>
+                            <CheckBox x:Name="PrereleaseBox" Margin="0,12,0,0" Content="Include pre-releases"/>
+                        </StackPanel>
+                    </Border>
+                    <TextBlock x:Name="UpdateHint" Style="{StaticResource Hint}" Margin="2,4,0,0"/>
+                    <Button HorizontalAlignment="Left" Padding="14,5" Margin="0,14,0,0" Click="OnShowUpdates"
+                            Content="Show versions and install…" ToolTip="Install any version (update or downgrade)"/>
+                </StackPanel>
+
+                <!-- About -->
+                <StackPanel x:Name="PageAbout" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource PageTitle}" Text="About"/>
+                    <TextBlock Style="{StaticResource PageIntro}" Text="Reads TIA Portal projects and libraries without TIA Portal."/>
+                    <Border Style="{StaticResource Card}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="140"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Viewer" Foreground="{StaticResource Muted}" Margin="0,2"/>
+                            <TextBlock x:Name="VersionText" Grid.Column="1" Margin="0,2" TextWrapping="Wrap"/>
+                            <TextBlock Grid.Row="1" Text="Parser" Foreground="{StaticResource Muted}" Margin="0,2"/>
+                            <TextBlock x:Name="ParserText" Grid.Row="1" Grid.Column="1" Margin="0,2" TextWrapping="Wrap"/>
+                            <TextBlock Grid.Row="2" Text="Settings folder" Foreground="{StaticResource Muted}" Margin="0,2"/>
+                            <TextBlock x:Name="FolderText" Grid.Row="2" Grid.Column="1" Margin="0,2" TextWrapping="Wrap" FontFamily="Cascadia Mono, Consolas"/>
+                        </Grid>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <Button Padding="14,5" Click="OnOpenFolder" Content="Open settings folder"/>
+                        <Button Padding="14,5" Margin="8,0,0,0" Click="OnOpenProjectPage" Content="Project page on GitHub"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
 </Window>

@@ -52,9 +52,17 @@ public partial class MainWindow
         UpdateNotice.ToolTip = $"{update.Title}: show the release notes and install";
     }
 
-    private async void OnSettings(object sender, RoutedEventArgs e)
+    private void OnSettings(object sender, RoutedEventArgs e) => ShowSettings(null);
+
+    /// <summary>Opens the settings dialog (optionally on one page) and applies what changed.</summary>
+    private async void ShowSettings(string? page)
     {
-        if (new SettingsWindow { Owner = this }.ShowDialog() != true) return;
+        var dialog = new SettingsWindow(page) { Owner = this };
+        if (dialog.ShowDialog() != true) return;
+        if (dialog.RestartNeeded)
+            MessageBox.Show(this, "The rendering setting applies after the viewer is started again.", "Settings – OpenPEData Viewer",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        if (dialog.ShowUpdatesRequested) OnUpdates(this, new RoutedEventArgs());
         var settings = UpdateSettings.Load();
         if (!settings.AutoCheck) ShowUpdateNotice(null);         // turned off: no notice any more
         else if (_updateTimer != null) await AutoCheckUpdatesAsync();  // on (or pre-releases changed): check at once

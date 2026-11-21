@@ -16,6 +16,11 @@ public partial class MainWindow : Window
     /// <summary>The loaded project, opened once; verify, cross references and program information read from it.</summary>
     private TiaProject? _project;
     private TreeNode? _root;
+    /// <summary>Top level of the tree: the project node, then the OpenPEData views (overview, lists, cross-references,
+    /// integrity check, export).</summary>
+    private readonly System.Collections.ObjectModel.ObservableCollection<TreeNode> _top = [];
+    /// <summary>Data of the analysis views for the loaded project.</summary>
+    private AnalysisContext? _analysis;
     private CancellationTokenSource? _cts;
     private readonly DispatcherTimer _filterTimer;
     /// <summary>The one parser run --proginfo of the loaded project (all PLCs); null until a node "Program info" is opened.</summary>
@@ -37,13 +42,14 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         Title = AppVersion.Title();
+        Tree.ItemsSource = _top;
         InitUpdates();
         DetailViews.CrossRefsPending = CrossRefsState;
         _filterTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(250) };
         _filterTimer.Tick += (_, _) =>
         {
             _filterTimer.Stop();
-            _root?.ApplyFilter(FilterBox.Text.Trim());
+            foreach (var n in _top) n.ApplyFilter(FilterBox.Text.Trim());
         };
         InputBindings.Add(new KeyBinding(new RelayCommand(() => OnOpenFile(this, new RoutedEventArgs())), Key.O, ModifierKeys.Control));
         InputBindings.Add(new KeyBinding(new RelayCommand(() => { if (_path != null) _ = LoadAsync(_path); }), Key.F5, ModifierKeys.None));
@@ -65,13 +71,16 @@ public partial class MainWindow : Window
             var dump = Opt("--dump");
             var screenPng = Opt("--screen-png");
             var compare = Opt("--compare");
+            var settingsPng = Opt("--settings-snapshot");  // file.png or file.png:Page (documentation of the settings dialog)
             ScreenRenderer.Language = Opt("--lang");
-            ScreenRenderer.RuntimeVisibility = args.Remove("--runtime-visibility");
+            ScreenRenderer.RuntimeVisibility = args.Remove("--runtime-visibility") || ViewerSettings.Current.RuntimeVisibility;
             RuntimeVisibilityBox.IsChecked = ScreenRenderer.RuntimeVisibility;
             var verify = args.Remove("--verify");
             var xref = args.Remove("--xref");
             var proginfo = args.Remove("--proginfo");
             if (args.Count > 0) await LoadAsync(args[0]);
+            else if (ViewerSettings.Current is { ReopenLastProject: true, LastProject: { } last } && (File.Exists(last) || Directory.Exists(last)))
+                await LoadAsync(last);
             // --xref, --proginfo, --verify: run at once; without --select the node is selected
             async Task RunOption(TreeNode? node, Func<Task> run)
             {
@@ -105,6 +114,18 @@ public partial class MainWindow : Window
                 await Dispatcher.InvokeAsync(() => { }, DispatcherPriority.ApplicationIdle);
                 File.WriteAllText(dump, DumpState(), new System.Text.UTF8Encoding(false));
                 if (snapshot == null) Close();
+            }
+            if (settingsPng != null)
+            {
+                var cut = settingsPng.LastIndexOf(':');
+                var page = cut > 1 ? settingsPng[(cut + 1)..] : null;
+                var file = cut > 1 ? settingsPng[..cut] : settingsPng;
+                var dlg = new SettingsWindow(page) { Owner = this, WindowStartupLocation = WindowStartupLocation.Manual, Left = -4000 };
+                dlg.Show();
+                await Dispatcher.InvokeAsync(() => { }, DispatcherPriority.ApplicationIdle);
+                Snapshot.Save(dlg, file);
+                dlg.Close();
+                if (snapshot == null) { Close(); return; }
             }
             if (snapshot != null)
             {
@@ -145,7 +166,7 @@ public partial class MainWindow : Window
             sb.AppendLine($"{new string(' ', d * 2)}{(n.IsSelected ? "*" : "-")} {n.Display}  ({n.Kind})");
             if (n.IsExpanded) foreach (var c in n.Children) Walk(c, d + 1);
         }
-        if (_root != null) Walk(_root, 1);
+        foreach (var n in _top) Walk(n, 1);
         sb.AppendLine("DETAIL: " + DetailPath.Text + "  |  " + DetailTitle.Text);
         sb.AppendLine("TABS: " + string.Join(" | ", DetailTabs.Items.OfType<TabItem>().Select(t => (t.IsSelected ? "*" : "") + t.Header)));
         switch ((DetailTabs.SelectedItem as TabItem)?.Content)
@@ -175,7 +196,12 @@ public partial class MainWindow : Window
     {
         var node = _root;
         var segs = path.Split('/', StringSplitOptions.RemoveEmptyEntries).ToList();
-        if (segs.Count > 0 && _root != null && _root.Display.StartsWith(segs[0], StringComparison.OrdinalIgnoreCase)) segs.RemoveAt(0);
+        // the first segment may name a top-level node (the project or a view); otherwise the path starts in the project
+        if (segs.Count > 0 && _top.FirstOrDefault(t => t.Display.StartsWith(segs[0], StringComparison.OrdinalIgnoreCase)) is { } top)
+        {
+            node = top;
+            segs.RemoveAt(0);
+        }
         foreach (var seg in segs)
         {
             var next = node?.Children.FirstOrDefault(c => c.Display.StartsWith(seg, StringComparison.OrdinalIgnoreCase));
@@ -255,12 +281,26 @@ public partial class MainWindow : Window
             _root.Add(new TreeNode("File", NodeKind.Info, new JsonObject { ["path"] = path }));
             _root.Children.Move(_root.Children.Count - 1, 0);
             AddProgInfoNodes(_root);
-            _root.Add(new TreeNode("Integrity check", NodeKind.Verify));
-            _root.Add(new TreeNode("Cross-references", NodeKind.CrossRefs));
-            Tree.ItemsSource = new[] { _root };
+            _analysis = new AnalysisContext(res.Json, path, _root.Name)
+            {
+                Navigate = kind => { if (RootNode(kind) is { } n) n.IsSelected = true; },
+                Status = text => SetBusy(false, text),
+            };
+            _top.Clear();
+            _top.Add(_root);
+            foreach (var v in AnalysisViews.ViewNodes(_analysis)) _top.Add(v);
+            _top.Add(new TreeNode("Cross-references", NodeKind.CrossRefs));
+            _top.Add(new TreeNode("Integrity check", NodeKind.Verify));
+            _top.Add(AnalysisViews.ExportNode());
+            if (!Environment.GetCommandLineArgs().Any(a => a is "--dump" or "--snapshot" or "--screen-png"))
+            {
+                var settings = ViewerSettings.Current.Clone();
+                settings.LastProject = Path.GetFullPath(path);
+                settings.Save();
+            }
             Title = AppVersion.Title(_root.Name);
             ReloadButton.IsEnabled = true;
-            if (FilterBox.Text.Length > 0) _root.ApplyFilter(FilterBox.Text.Trim());
+            if (FilterBox.Text.Length > 0) foreach (var n in _top) n.ApplyFilter(FilterBox.Text.Trim());
             _root.IsSelected = true;
             FillLanguages(res.Json);
             var st = res.Json["statistics"];
@@ -280,7 +320,8 @@ public partial class MainWindow : Window
         }
     }
 
-    private TreeNode? RootNode(NodeKind kind) => _root?.Children.FirstOrDefault(c => c.Kind == kind);
+    /// <summary>A view node at the top level of the tree.</summary>
+    private TreeNode? RootNode(NodeKind kind) => _top.FirstOrDefault(c => c.Kind == kind);
 
     /// <summary>Starts a background parser run once per loaded project and returns its task; a failed run stays until
     /// "Try again".</summary>
@@ -456,7 +497,7 @@ public partial class MainWindow : Window
     {
         var top = node;
         while (top.Parent != null) top = top.Parent;
-        if (!ReferenceEquals(Tree.SelectedItem, node) || !ReferenceEquals(top, _root)) return;
+        if (!ReferenceEquals(Tree.SelectedItem, node) || !_top.Contains(top)) return;
         ShowNode(node);
     }
 
@@ -486,15 +527,7 @@ public partial class MainWindow : Window
         return panel;
     }
 
-    private void OnAbout(object sender, RoutedEventArgs e)
-    {
-        MessageBox.Show(this,
-            $"OpenPEData Viewer {AppVersion.Label}\n" +
-            "Reads TIA Portal V21 projects and libraries without TIA Portal.\n\n" +
-            $"Parser: {ParserRunner.BackendDescription()}\n\n" +
-            "Environment variable: OPENPEDATA_SOFTWARE_RENDER",
-            "Info – OpenPEData Viewer", MessageBoxButton.OK, MessageBoxImage.Information);
-    }
+    private void OnAbout(object sender, RoutedEventArgs e) => ShowSettings("About");
 
     private void SetBusy(bool busy, string text)
     {
@@ -587,6 +620,9 @@ public partial class MainWindow : Window
         DetailTabs.Items.Clear();
         TabItem? select = null;
         if (node.Kind == NodeKind.ProgramInfo) ShowProgInfo(node);
+        else if (AnalysisViews.IsView(node.Kind))
+            foreach (var (header, create) in AnalysisViews.Tabs(node, _analysis))
+                DetailTabs.Items.Add(new TabItem { Header = header, Tag = create, Padding = new Thickness(10, 4, 10, 4) });
         else if (node.Kind == NodeKind.Verify && node.Data == null)
             DetailTabs.Items.Add(new TabItem { Header = "Integrity check", Padding = new Thickness(10, 4, 10, 4),
                 Content = RunState(node, EnsureVerify(), "Checking integrity …", () => _verify = null) });

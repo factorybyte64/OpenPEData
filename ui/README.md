@@ -23,8 +23,24 @@ The viewer reads the project in its own process with the library `OpenPEData.dll
 Project › device groups › PLC (Program blocks with groups and system blocks, PLC tags with "Show all
 tags", PLC data types with system data types) or HMI (HMI tags, Screens, Connections, HMI alarms,
 Text and graphic lists, Cycles) › Libraries (Types with versions and folders, faceplate types with versions,
-Master copies, Type instances) › Statistics › Integrity check › Cross-references. A
-station with exactly one CPU or one HMI appears, as in TIA, as one node `PLC_1 [CPU 1513-1 PN]`.
+Master copies, Type instances) › Statistics. A station with exactly one CPU or one HMI appears, as in TIA, as one
+node `PLC_1 [CPU 1513-1 PN]`.
+
+The project is the first node at the top level of the tree. After it come the **OpenPEData views**, which evaluate
+and export the whole project:
+
+| View | Content |
+| --- | --- |
+| Overview | key figures as tiles (devices, PLCs, HMIs, blocks, data types, tags, screens, alarms, library types; a click opens the view), the file statistics, and a table of all PLCs and HMIs with type, order number, firmware and counts |
+| Blocks | all program blocks of all PLCs in one list (PLC, name, type, number, language, folder with readable system folder names, know-how protection …) and all PLC data types |
+| Tags | all PLC tags and all HMI tags of the project (PLC/HMI, tag table, name, data type, address, comment per language …) |
+| Alarms | PLC alarms (type and instance alarms with texts), HMI discrete and analog alarms |
+| Cross-references | as before (below) |
+| Integrity check | as before (below) |
+| Export | project report as one HTML page (key figures and all lists, printable as PDF), all lists as CSV files into a folder, the parser result as JSON |
+
+Each list has a filter box (text in any column, case ignored), a row count and "Export CSV…" for the rows shown.
+Empty lists are left out as tabs. CSV separator and byte order mark: Settings › Export.
 
 Right after loading, each PLC has **Program info** as its first child node. When it is first clicked, the
 viewer starts `--proginfo` in the background; the detail pane and the status bar show "Loading program info …",
@@ -32,7 +48,7 @@ and the UI stays responsive. Then the tabs Call structure, Dependency structure,
 and Resources per block appear. One run delivers all PLCs of the project and is valid until the next load; an error is shown in the
 detail pane with "Try again".
 
-Likewise, **Integrity check** and **Cross-references** are always in the tree at project level. The first click starts
+Likewise, **Integrity check** and **Cross-references** are always in the tree as views at the top level. The first click starts
 `--verify --json` or `--xref` in the background with a loading indicator; afterwards the node carries the result in its name
 (`Integrity check [OK]`, `Cross-references [436]`) and shows its tabs. The tabs "Used by", "Uses" and
 "Usages" on blocks, PLC data types, screens and tag tables are there from the start; opening one of them
@@ -76,19 +92,28 @@ holds are hidden and only counted.
 Operation: open a file/folder or drag it in, `F5` reload, `Ctrl+F` tree filter. Cells can be copied with `Ctrl+C`
 including the header.
 
+## Settings
+
+The gear button in the toolbar opens the settings window with the categories **General** (open the last project at
+startup), **Display** (start value of "Like runtime", software rendering), **Export** (CSV separator, UTF-8 byte order
+mark), **Updates** (automatic check, pre-releases, "Show versions and install…") and **About** (version, parser,
+settings folder). Saved in `%AppData%\OpenPEData\settings.json`; the updater keeps `updates.json`.
+
 ## Command line
 
 ```
 OpenPEData.Viewer.exe <project> [--select "Project/PLC_1/Program blocks/Main"] [--tab Networks]
                                 [--verify] [--xref] [--proginfo] [--dump file.txt] [--snapshot image.png]
+OpenPEData.Viewer.exe --settings-snapshot settings.png[:Page]
 ```
 
 `--select` selects a node by the beginnings of the display names, `--tab` a tab. `--verify`, `--xref` and
 `--proginfo` start the respective run right after loading, wait for it and, without `--select`, select the node
 "Integrity check", "Cross-references" or the first node "Program info". `--dump` writes the visible
 tree, the tabs and the content of the selected tab as text and exits the program (check without a screen).
-`--snapshot` saves the window as PNG; this only works in a connected Windows session.
-`OPENPEDATA_SOFTWARE_RENDER=1` forces software rendering.
+`--snapshot` saves the window as PNG; this only works in a connected Windows session. `--settings-snapshot` saves the
+settings window, optionally on a page (`General`, `Display`, `Export`, `Updates`, `About`).
+`OPENPEDATA_SOFTWARE_RENDER=1` (or Settings › Display) forces software rendering.
 
 ## Tests
 
@@ -134,7 +159,7 @@ The installed viewer updates itself from the GitHub releases of `factorybyte64/O
 
 - **Automatic check (opt-out):** at startup (after 3 s) and every 12 hours the viewer reads the release list. If a
   newer version is there, the toolbar shows a button "Update V… available"; nothing is installed without a click.
-  Turn it off with the checkbox in **Settings…** (or in **Updates…**; saved in `updates.json`, see below) or for a whole machine with the environment
+  Turn it off in **Settings › Updates** (or in **Updates…**; saved in `updates.json`, see below) or for a whole machine with the environment
   variable `OPENPEDATA_NO_UPDATE_CHECK=1`. No check in development builds (not installed with the setup) and in
   command line runs (`--dump`, `--snapshot`, `--screen-png`).
 - **Updates… dialog:** lists every release with date, kind and release notes. Any release can be installed:

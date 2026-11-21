@@ -12,6 +12,8 @@ public enum NodeKind
     ScreensFolder, Screen, Connections, Alarms, TextLists, Cycles, Libraries, Library, LibType, LibVersion,
     MasterCopy, Instances, Faceplate, Statistics, Verify, CrossRefs, ProgramInfo, Info,
     Hardware, HwItem, Safety, Network, Umac, PlcSection, WatchTable,
+    // OpenPEData views at the top level of the tree
+    Overview, BlockList, TagList, AlarmList, Export,
 }
 
 public sealed class TreeNode : INotifyPropertyChanged
@@ -67,6 +69,11 @@ public sealed class TreeNode : INotifyPropertyChanged
         NodeKind.Instances => "",
         NodeKind.Statistics => "",
         NodeKind.Verify => "",
+        NodeKind.Overview => "",
+        NodeKind.BlockList => "",
+        NodeKind.TagList => "",
+        NodeKind.AlarmList => "",
+        NodeKind.Export => "",
         NodeKind.CrossRefs or NodeKind.ProgramInfo => "",
         _ => "",
     };
@@ -532,6 +539,10 @@ public static class TreeBuilder
         ["SafetyCompilerBlocksFolder"] = "Compiler blocks",
         ["SystemDataTypeFolder"] = "System data types",
     };
+
+    /// <summary>A group path ("SystemBlocksFolder/ProgramResourcesFolder") with the display names of the system folders.</summary>
+    internal static string? FolderDisplay(string? group) => string.IsNullOrEmpty(group) ? group
+        : string.Join("/", group.Split('/').Select(s => SystemFolderNames.GetValueOrDefault(s, s)));
 
     private static int SystemFolderRank(string display)
     {

@@ -13,6 +13,13 @@
             <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
+        <Style x:Key="IconButton" TargetType="Button" BasedOn="{StaticResource ToolButton}">
+            <Setter Property="FontFamily" Value="Segoe Fluent Icons, Segoe MDL2 Assets"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="Margin" Value="4,0,0,0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
         <HierarchicalDataTemplate DataType="{x:Type local:TreeNode}" ItemsSource="{Binding Children}">
             <StackPanel Orientation="Horizontal" Margin="0,1">
                 <TextBlock Text="{Binding Glyph}" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="13"
@@ -30,17 +37,20 @@
                     <Button Style="{StaticResource ToolButton}" Click="OnOpenFile" ToolTip="Open project file (.ap21 or .zap21), Ctrl+O">Open file…</Button>
                     <Button Style="{StaticResource ToolButton}" Click="OnOpenFolder" ToolTip="Open project folder">Open folder…</Button>
                     <Button x:Name="ReloadButton" Style="{StaticResource ToolButton}" Click="OnReload" IsEnabled="False" ToolTip="Reload (F5)">Reload</Button>
-                    <Button Style="{StaticResource ToolButton}" Click="OnAbout" ToolTip="Version and parser">Info</Button>
-                    <Button Style="{StaticResource ToolButton}" Click="OnSettings" ToolTip="Settings (automatic update check)">Settings…</Button>
-                    <Button Style="{StaticResource ToolButton}" Click="OnUpdates" ToolTip="Check for updates, install any version (update or downgrade)">Updates…</Button>
                     <Button x:Name="UpdateNotice" Style="{StaticResource ToolButton}" Click="OnUpdates" Visibility="Collapsed"
                             Background="{StaticResource Accent}" Foreground="White" BorderBrush="{StaticResource Accent}"/>
+                    <Border Width="1" Background="{StaticResource Line}" Margin="4,2,10,2"/>
                     <TextBlock Text="Language" VerticalAlignment="Center" Margin="8,0,6,0" Foreground="{StaticResource Muted}"/>
                     <ComboBox x:Name="LangBox" MinWidth="90" VerticalContentAlignment="Center" SelectionChanged="OnLanguageChanged"
                               ToolTip="Runtime language of the screen texts (languages of the HMI devices; without its own text, the default text)"/>
                     <CheckBox x:Name="RuntimeVisibilityBox" Content="Like runtime (respect Visible)" VerticalAlignment="Center" Margin="12,0,0,0"
                               Checked="OnRuntimeVisibilityChanged" Unchecked="OnRuntimeVisibilityChanged"
                               ToolTip="Off: like the TIA screen editor, objects with Visible=false are drawn. On: like the runtime, they are missing."/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="8,0,0,0">
+                    <Button Style="{StaticResource IconButton}" Click="OnUpdates" ToolTip="Updates: check, install any version (update or downgrade)" Content="&#xE895;"/>
+                    <Button Style="{StaticResource IconButton}" Click="OnSettings" ToolTip="Settings" Content="&#xE713;"/>
+                    <Button Style="{StaticResource IconButton}" Click="OnAbout" ToolTip="About OpenPEData Viewer" Content="&#xE946;"/>
                 </StackPanel>
                 <Grid DockPanel.Dock="Right" Width="280" HorizontalAlignment="Right">
                     <TextBox x:Name="FilterBox" Padding="6,4" TextChanged="OnFilterChanged" VerticalContentAlignment="Center"
@@ -81,7 +91,7 @@
 
             <!-- project tree -->
             <DockPanel Grid.Column="0" Background="White">
-                <TextBlock DockPanel.Dock="Top" Text="Project tree" FontWeight="SemiBold" Padding="10,8,10,6"
+                <TextBlock DockPanel.Dock="Top" Text="Project and views" FontWeight="SemiBold" Padding="10,8,10,6"
                            Background="{StaticResource HeaderBg}"/>
                 <TreeView x:Name="Tree" BorderThickness="0" Padding="2,4" SelectedItemChanged="OnSelectionChanged"
                           VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
@@ -91,6 +101,10 @@
                             <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
                             <Setter Property="Padding" Value="2,1"/>
                             <Style.Triggers>
+                                <!-- a gap between the project and the OpenPEData views -->
+                                <DataTrigger Binding="{Binding Kind}" Value="Overview">
+                                    <Setter Property="Margin" Value="0,10,0,0"/>
+                                </DataTrigger>
                                 <DataTrigger Binding="{Binding IsVisible}" Value="False">
                                     <Setter Property="Visibility" Value="Collapsed"/>
                                 </DataTrigger>

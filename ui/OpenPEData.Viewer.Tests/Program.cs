@@ -100,6 +100,45 @@ public static class Program
         Eq(null, GitHubReleases.FindUpdate(list, SemanticVersion.Parse("0.2.1"), false, null)?.Tag, "updater: no update on the newest version");
     }
 
+    /// <summary>Analysis views: project-wide lists over all PLCs and HMIs (system data types with the PLC data types,
+    /// system folder names readable, comment texts as own columns), the list filter over all columns, CSV quoting and
+    /// the HTML report.</summary>
+    static void AnalysisLists()
+    {
+        var json = JsonNode.Parse("""
+            {"project":{"name":"P","devices":[
+              {"name":"S1","plcs":[{"name":"PLC_1","typeName":"CPU","blocks":[
+                 {"name":"Main","type":"OB","number":1,"language":"LAD","group":"","networks":[{}]},
+                 {"name":"Program_Alarm","type":"FB","number":700,"language":"STL","group":"SystemBlocksFolder/ProgramResourcesFolder"},
+                 {"name":"ALARM_BASE","type":"FBT","group":"SystemDataTypeFolder"}],
+               "tagTables":[{"name":"T1","tags":[{"name":"Start","dataType":"Bool","address":"%I0.0","comment":{"en-US":"Start; \"button\""}}]}],
+               "types":[{"name":"UDT_A","group":"Types","members":[{}]}]}]},
+              {"name":"S2","hmi":[{"name":"HMI_1","tagTables":[{"name":"HT","tags":[{"name":"H1","dataType":"Int","loggingTags":[{}]}]}],
+               "discreteAlarms":[{"name":"A1"}],"analogAlarms":[],"screens":[{"name":"Main","items":[{},{}]}]}]}],
+             "plcAlarms":{"alarms":[{"name":"Alarm_1","plc":"PLC_1","block":"FB_A","texts":{"alarmText":{"en-US":"Pump"}}}]}},
+             "statistics":{"objects":10}}
+            """)!;
+        var ctx = new AnalysisContext(json, @"C:\p.ap21", "P");
+        int Rows(string key) => ctx.List(key).Rows.Count;
+        Eq("2,2,2,1,1,1,1,0,1", string.Join(",", new[] { "devices", "blocks", "plcTypes", "plcTags", "hmiTags", "plcAlarms",
+            "hmiDiscreteAlarms", "hmiAnalogAlarms", "screens" }.Select(Rows)), "analysis: row counts of the lists");
+        var fb = ctx.List("blocks").Rows[1];
+        Eq("System blocks/Program resources", fb["folder"], "analysis: system folder names in the block list");
+        Eq(false, ctx.List("blocks").Rows[0].ContainsKey("networks"), "analysis: code structures are no columns");
+        Eq("Start; \"button\"", ctx.List("plcTags").Rows[0].GetValueOrDefault("comment.en-US"), "analysis: comment text as column");
+        Eq("Pump", ctx.List("plcAlarms").Rows[0].GetValueOrDefault("texts.alarmText.en-US"), "analysis: alarm text as column");
+        Eq("2", ctx.List("screens").Rows[0]["objects"], "analysis: screen objects counted");
+
+        var table = DetailViews.ToTable(ctx.List("plcTags").Rows);
+        table.DefaultView.RowFilter = AnalysisViews.RowFilter(table, "i0.0");
+        Eq(1, table.DefaultView.Count, "analysis: filter finds the address, case ignored");
+        table.DefaultView.RowFilter = AnalysisViews.RowFilter(table, "x'[*%]");
+        Eq(0, table.DefaultView.Count, "analysis: filter with quote, brackets and wildcards is valid");
+        Eq("\"Start; \"\"button\"\"\"", AnalysisViews.Csv.Quote("Start; \"button\"", ";"), "analysis: CSV quoting");
+        var html = AnalysisViews.Report.Html(ctx);
+        Eq(true, html.Contains("<h2 id=\"plcTags\">PLC tags") && html.Contains("Start; &quot;button&quot;"), "analysis: report has lists, HTML encoded");
+    }
+
     [STAThread]
     public static int Main()
     {
@@ -118,6 +157,7 @@ public static class Program
             ScreenRenderer.RuntimeVisibility = saved;
         }
         UpdaterReleases();
+        AnalysisLists();
         Console.WriteLine($"OpenPEData viewer tests: {_checks - Failures.Count}/{_checks} checks passed");
         foreach (var f in Failures) Console.WriteLine("  FAIL " + f);
         return Failures.Count == 0 ? 0 : 1;

@@ -348,7 +348,7 @@ public static class DetailViews
         return d;
     }
 
-    internal static DataTable ToTable(List<Dictionary<string, string?>> rows)
+    public static DataTable ToTable(List<Dictionary<string, string?>> rows)
     {
         var cols = new List<string>();
         var seen = new HashSet<string>();
