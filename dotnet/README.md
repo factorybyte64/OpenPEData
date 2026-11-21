@@ -94,6 +94,12 @@ expression MPL-2.0, no dependencies) and `OpenPEData.<version>.snupkg` (symbols)
 `src\OpenPEData\OpenPEData.csproj`; Source Link of the .NET SDK embeds the repository URL and the commit. The package
 version is the `<Version>` of the library.
 
+Publishing on nuget.org: push a tag `lib-vX.Y.Z` (`X.Y.Z` = `<Version>` of the library). The workflow
+`.github/workflows/nuget.yml` runs the full CI, packs the library and pushes `.nupkg` and `.snupkg` to nuget.org. The
+library tags are independent of the viewer tags `vX.Y.Z`. Login is nuget.org Trusted Publishing (repository variable
+`NUGET_USER` = nuget.org profile name, policy on nuget.org for `factorybyte64/OpenPEData`, workflow `nuget.yml`);
+alternatively a repository secret `NUGET_API_KEY`.
+
 ## Tests
 
 ```
