@@ -9,7 +9,7 @@ dotnet run --project ui\OpenPEData.Viewer -- samples\031_lad_all.zap21
 ```
 
 Prerequisites: .NET 10 SDK (Windows). NuGet package:
-`Velopack` 1.2.0 (installation hooks, see below).
+`Velopack` 1.2.0 (installation hooks and auto-updater, see below).
 
 ## How it works
 
@@ -111,7 +111,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\ui\scripts\Pack-OpenPEData
 ```
 
 - Result: `ui\artifacts\Releases\OpenPEData-Setup-V<version>.exe` (version = `<Version>` in
-  `OpenPEData.Viewer.csproj`, channel `win`, no delta packages, no portable variant, no auto-updates).
+  `OpenPEData.Viewer.csproj`, channel `win`, no delta packages, no portable variant). Next to it, in
+  `ui\artifacts\_vpk-staging\`, the update package for the auto-updater: `releases.win.json` and
+  `OpenPEData-<version>-full.nupkg`.
 - Per-user installation under `%LocalAppData%\OpenPEData\` with shortcuts on the desktop and in the Start menu;
   uninstall via "Apps & Features". If the .NET 10 Desktop Runtime is missing, the setup installs it
   (`--framework net10-x64-desktop`). Python is not needed; the setup contains no Python code, only
@@ -124,3 +126,26 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\ui\scripts\Pack-OpenPEData
   `vpk pack`, and then runs `dotnet publish` on the launcher. A plain `dotnet build` of the launcher without that file
   stops with error `OPDSETUP001` ("Embedded\SetupPayload.exe is missing"); build the viewer with
   `dotnet build ui\OpenPEData.Viewer -c Release -p:PackSetup=false` instead.
+
+## Auto-updater
+
+The installed viewer updates itself from the GitHub releases of `factorybyte64/OpenPEData` (code in
+`OpenPEData.Viewer\Updates\`, Velopack `UpdateManager` with a GitHub source).
+
+- **Automatic check (opt-out):** at startup (after 3 s) and every 12 hours the viewer reads the release list. If a
+  newer version is there, the toolbar shows a button "Update V… available"; nothing is installed without a click.
+  Turn it off in **Updates…** ("Check for updates automatically") or for a whole machine with the environment
+  variable `OPENPEDATA_NO_UPDATE_CHECK=1`. No check in development builds (not installed with the setup) and in
+  command line runs (`--dump`, `--snapshot`, `--screen-png`).
+- **Updates… dialog:** lists every release with date, kind and release notes. Any release can be installed:
+  newer ones as update, older ones as downgrade (with a confirmation). The viewer downloads the full package, closes,
+  installs it and starts again with the project that was open. "Skip this version" hides the offered version until
+  a newer one comes out; "Include pre-releases" also offers releases flagged as pre-release on GitHub (or with a
+  version label such as `v0.3.0-beta.1`).
+- **Settings:** `%AppData%\OpenPEData\updates.json` (outside the installation, kept across updates and downgrades).
+- **Release assets:** the release workflow (`.github\workflows\release.yml`) attaches the setup, `releases.win.json`
+  and `OpenPEData-X.Y.Z-full.nupkg` to every release. Each release carries its own feed, so the updater installs
+  exactly the chosen version. Releases without `releases.win.json` (v0.1.0 and v0.1.1, built before the updater)
+  are shown as "setup only"; running the release workflow by hand for their tag adds the package. Such old versions
+  have no updater themselves: after a downgrade to them, the current setup brings the viewer back.
+- **Limits:** GitHub allows 60 API requests per hour and IP without a token; the check uses one request.

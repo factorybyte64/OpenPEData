@@ -1,6 +1,7 @@
 ﻿<#
 .SYNOPSIS
-    Publishes OpenPEData.Viewer (with the .NET parser OpenPEData.dll) and creates a silent Velopack Setup.exe (no auto-updates).
+    Publishes OpenPEData.Viewer (with the .NET parser OpenPEData.dll) and creates a silent Velopack Setup.exe plus the update package
+    (releases.win.json, OpenPEData-<version>-full.nupkg in artifacts\_vpk-staging) for the viewer's auto-updater.
 
 .DESCRIPTION
     1) dotnet publish OpenPEData.Viewer to a staging folder; the parser is the library OpenPEData.dll

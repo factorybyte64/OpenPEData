@@ -2,7 +2,8 @@ using Velopack;
 
 namespace OpenPEData.Viewer;
 
-/// <summary>Entry point with the Velopack install/uninstall hooks (no update checks), then the WPF application.</summary>
+/// <summary>Entry point with the Velopack install/uninstall hooks, then the WPF application. Updates are not applied
+/// on startup: the updater (Updates\, dialog "Updates…") downloads a chosen version and restarts into it.</summary>
 public static class Program
 {
     [STAThread]
