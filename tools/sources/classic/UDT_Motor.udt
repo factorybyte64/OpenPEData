@@ -1,0 +1,9 @@
+﻿TYPE "UDT_Motor"
+VERSION : 0.1
+   STRUCT
+      Running : Bool;   // Motor on
+      Speed : Real := 1500.0;   // Speed setpoint
+      Count : Int := 7;
+   END_STRUCT;
+
+END_TYPE

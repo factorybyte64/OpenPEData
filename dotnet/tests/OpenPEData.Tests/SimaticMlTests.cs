@@ -18,8 +18,8 @@ public static class SimaticMlTests
         foreach (var truth in Directory.GetDirectories(samples, "*_truth").OrderBy(x => x, StringComparer.Ordinal))
         {
             var sample = Path.GetFileName(truth)[..^"_truth".Length];
-            var zap = Path.Combine(samples, sample + ".zap21");
-            if (!File.Exists(zap) || (Program.Samples is { } f && !sample.Contains(f, StringComparison.Ordinal)))
+            var zap = Program.SampleArchive(sample);
+            if (zap is null ||(Program.Samples is { } f && !sample.Contains(f, StringComparison.Ordinal)))
                 continue;
             var exports = new Dictionary<string, List<XElement?>>();
             foreach (var x in Directory.GetFiles(truth, "*.xml", SearchOption.AllDirectories).OrderBy(x => x, StringComparer.Ordinal))

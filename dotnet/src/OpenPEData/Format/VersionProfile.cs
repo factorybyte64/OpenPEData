@@ -15,8 +15,16 @@ internal sealed record VersionProfile(
 {
     public static readonly VersionProfile V21 = new(new TiaVersion(21), "0000:0007:1", 0x00070000, "OpenPEData.Data.V21.unified_enums.json");
 
+    /// <summary>TIA Portal V19 and V20: same metamodel record and decoding as V21 so far, evidenced by the samples
+    /// v19_* and v20_* (PLC: tags, UDT, DBs, FB/FC interfaces, SCL/LAD/FBD/STL code; 2026-11-21). The WinCC Unified
+    /// enums are those of V21 until HMI samples of these versions show a difference.</summary>
+    public static readonly VersionProfile V19 = V21 with { Version = new TiaVersion(19) };
+
+    /// <inheritdoc cref="V19"/>
+    public static readonly VersionProfile V20 = V21 with { Version = new TiaVersion(20) };
+
     /// <summary>All profiles, oldest first; TiaVersion.Supported is derived from it.</summary>
-    public static readonly ImmutableArray<VersionProfile> All = [V21];
+    public static readonly ImmutableArray<VersionProfile> All = [V19, V20, V21];
 
     public static VersionProfile? For(TiaVersion v) => All.FirstOrDefault(p => p.Version == v);
 

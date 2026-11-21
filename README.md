@@ -8,6 +8,10 @@ the viewer is in `ui\`. The Python parser `parser\` and the Python scripts in `t
 
 Goals and non-goals: see docs\GOALS.md (the only authoritative source).
 
+Supported TIA Portal versions: V21 and, since 2026-11-21, V19 and V20 (projects `.ap19`/`.ap20`, archives
+`.zap19`/`.zap20`, global libraries `.zal19`/`.zal20`). The format is the same; the evidence are the samples
+`samples\v19_*` and `samples\v20_*` and the test `ProjectTests.OlderVersionSamples` (see docs\PLAN-V19-V20.md).
+
 ## Approach
 
 Differential analysis with controlled samples: TiaMcpXE (Openness) is used to create projects that differ from

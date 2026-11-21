@@ -1,0 +1,77 @@
+﻿FUNCTION_BLOCK "FB_Iface"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      iBool : Bool;   // Input bool
+      iInt : Int;   // Input int
+      iReal : Real;   // Input real
+      iArr : Array[0..3] of Int;   // Input array
+      iMotor : "UDT_Motor";   // Input UDT
+   END_VAR
+
+   VAR_OUTPUT 
+      oBool : Bool;   // Output bool
+      oInt : Int;   // Output int
+   END_VAR
+
+   VAR_IN_OUT 
+      ioReal : Real;   // InOut real
+   END_VAR
+
+   VAR 
+      stInt : Int := 42;   // Static int
+      stBool : Bool;   // Static bool comment
+   END_VAR
+
+   VAR_TEMP 
+      tInt : Int;   // Temp int
+   END_VAR
+
+   VAR CONSTANT 
+      cInt : Int := 7;   // Constant int
+   END_VAR
+
+
+BEGIN
+	#tInt := #iInt + #cInt;
+	#oInt := #tInt;
+	#oBool := #iBool;
+	#ioReal := #ioReal + #iReal;
+END_FUNCTION_BLOCK
+
+FUNCTION "FC_Iface" : Int
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      iBool : Bool;   // Input bool
+      iInt : Int;   // Input int
+      iReal : Real;   // Input real
+      iArr : Array[0..3] of Int;   // Input array
+      iMotor : "UDT_Motor";   // Input UDT
+   END_VAR
+
+   VAR_OUTPUT 
+      oBool : Bool;   // Output bool
+      oInt : Int;   // Output int
+   END_VAR
+
+   VAR_IN_OUT 
+      ioReal : Real;   // InOut real
+   END_VAR
+
+   VAR_TEMP 
+      tInt : Int;   // Temp int
+   END_VAR
+
+   VAR CONSTANT 
+      cInt : Int := 7;   // Constant int
+   END_VAR
+
+
+BEGIN
+	#tInt := #iInt + #cInt;
+	#oInt := #tInt;
+	#oBool := #iBool;
+	#ioReal := #ioReal + #iReal;
+	#FC_Iface := #tInt;
+END_FUNCTION
