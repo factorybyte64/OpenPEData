@@ -19,10 +19,11 @@ decoder (`Runtime\Zlib.cs`), XML by `System.Xml.Linq`, RSA by `System.Numerics.B
 
 | Folder | Content |
 | --- | --- |
-| `src\OpenPEData` | Library. Only the facade is public: `TiaProject`, `TiaVersion`, `TiaProjectInfo`, `OpenOptions`, `TiaContent`, `ParseIssue` and the exceptions (`OpenPEDataException` …). Everything below (`Runtime`, `Format`, `Model`, `TextTree` = text tree of the CLI) is `internal`; tests and CLI see it via `InternalsVisibleTo` |
+| `src\OpenPEData` | Library. Only the facade is public: `TiaProject`, `TiaVersion`, `TiaProjectInfo`, `OpenOptions`, `TiaContent`, `ParseIssue`, the typed results (`Results\`) and the exceptions (`OpenPEDataException` …). Everything below (`Runtime`, `Format`, `Model`, `TextTree` = text tree of the CLI) is `internal`; tests and CLI see it via `InternalsVisibleTo` |
 | `src\OpenPEData\Runtime` | the Python semantics of the original output: `PyDict` (ordered dict, keys as in Python), `Py` (truth value, comparison, `sorted`, `repr`/`str`, float `repr`, `round`, slicing, decoding with replacement), `PyJson` (`json.dumps` with `indent`, `ensure_ascii`), `Bin` (`struct.unpack_from` with `struct.error`), `Zlib`, `Et` (ElementTree on `XElement`) |
 | `src\OpenPEData\Format` | plf, object record, metamodel, attributes/expandos/blobs, project loading, `--verify`, PEData.idx, SQLite, XRef |
 | `src\OpenPEData\Model` | Project model, interfaces, code (SCL/LAD/FBD), PLC alarms and tables, program info, hardware, HMI, styles, library, faceplates |
+| `src\OpenPEData\Results` | Typed results of the facade: `TiaProjectContent` (devices, PLC software, HMI software, libraries), `IntegrityReport`, `MultilingualText`; read from the JSON structure, each object keeps its JSON node |
 | `src\OpenPEData\Data` | `unified_enums.json` (Openness enum names of the Unified style values) |
 | `src\OpenPEData.Cli` | `OpenPEData.Cli.exe` (UTF-8, CRLF) |
 | `tests\OpenPEData.Tests` | Test program without a test framework (no packages) |
@@ -51,6 +52,8 @@ using OpenPEData;
 
 using var p = TiaProject.Open(@"C:\Projects\Plant.zap21");   // load once: read plf, hashes, metamodel
 TiaVersion v = p.Version;                                    // V21 (from .ap21/.zap21/.al21/.zal21)
+TiaProjectContent content = p.GetContent();                 // typed: Devices, Plcs (Blocks, Tags, DataTypes), Hmis (Tags, Screens), Libraries
+IntegrityReport check = p.GetIntegrityReport();             // typed --verify: files, commits (chain, signature), index
 JsonObject structure = p.GetStructure();                     // --json as a System.Text.Json tree (includeKeys: --keys)
 IReadOnlyList<ParseIssue> issues = p.GetIssues();            // unreadable objects (statistics.errors)
 JsonObject report = p.Verify();                              // --verify --json; p.IsIntact() = exit code 0
@@ -61,7 +64,9 @@ string text = p.ToText();                                    // exactly the outp
 TiaProjectInfo? what = TiaProject.Probe(path);               // detect without loading (version, kind, archive)
 ```
 
-- Each partial result is computed on the first call and kept; every call returns a new `JsonObject`.
+- Each partial result is computed on the first call and kept; every call returns a new `JsonObject`. The typed results
+  (`GetContent`, `GetIntegrityReport`) are computed once and the same object is returned on every call. Each typed object
+  has the typed properties of the common content and its JSON node (`Json`) with all further details.
 - Calls on one instance run sequentially (one lock), different instances in parallel. Every method takes a
   `CancellationToken`; building the structure checks it before every block and data type.
 - Errors: `NotATiaProjectException` (no folder/archive with `System\PEData.plf`, no metamodel),
@@ -77,6 +82,17 @@ TiaProjectInfo? what = TiaProject.Probe(path);               // detect without l
 - Errors in the core: only `struct.error`/`IndexError` count as "not decodable", as in Python; .NET errors such as
   `IndexOutOfRangeException` are errors of the port and appear as such. Cancellation, `OutOfMemoryException` and too deep
   recursion never go into `statistics.errors`.
+
+## NuGet package
+
+```
+dotnet pack dotnet\src\OpenPEData -c Release -o <dir>
+```
+
+creates `OpenPEData.<version>.nupkg` (library, XML documentation, `PACKAGE.md` as package readme, `NOTICE`, license
+expression MPL-2.0, no dependencies) and `OpenPEData.<version>.snupkg` (symbols). The metadata is in
+`src\OpenPEData\OpenPEData.csproj`; Source Link of the .NET SDK embeds the repository URL and the commit. The package
+version is the `<Version>` of the library.
 
 ## Tests
 
@@ -94,6 +110,8 @@ dotnet\tests\OpenPEData.Tests\bin\Release\net10.0\OpenPEData.Tests.exe
 - `ProjectTests`: integrity of all samples, tampering test, idx and XRef consistency, tag addresses, metamodel.
 - `UnitTests`: simple expando, neutral culture, inline codes, kind-4 blobs with store records, value types, blob kinds,
   varint, CoreText, addresses, maps, dict/sorting/slicing semantics, ElementTree.
+- `TypedResultTests`: the typed results against the JSON structure on every input (devices, PLCs, blocks, tags, data
+  types, HMI tags, screens, items, libraries, integrity report) and against the Openness truth on selected samples.
 - `GoldenTests`: the Python semantics of the output against `golden.json` (generated with Python): float `repr`, `round`,
   `repr`, `json.dumps`, UTF-8/UTF-16/ASCII with replacement, zlib incl. error messages, SQLite tables, timestamps.
 
@@ -115,7 +133,7 @@ Python parser (equal to .NET only for the samples without the later findings lis
 ## Status (2026-11-20)
 
 - Release build of the solution and of the viewer: 0 warnings, 0 errors.
-- Test program: 65 of 65 tests green (no filter, 264 inputs from `samples\`; `analysis\real` and `samples\local_gsd`
+- Test program: 72 of 72 tests green (no filter, 264 inputs from `samples\`; `analysis\real` and `samples\local_gsd`
   are local only and skipped when missing). `baseline.json` was regenerated on 2026-11-20 after the samples 039, 065,
   068 and 072 were rebuilt (2026-11-10/11) and after the fix of the Singlebit mapping masks (`HmiMappingTests`).
 - CLI over all 264 inputs × 7 modes: exit code 0, no stderr output, no `statistics.errors`, `--verify` ok everywhere.
