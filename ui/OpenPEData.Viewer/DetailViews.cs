@@ -93,7 +93,7 @@ public static class DetailViews
     {
         var rows = node.Children.Select(c =>
         {
-            var d = new Dictionary<string, string?> { ["Name"] = c.Name, ["Info"] = c.Suffix, ["Kind"] = c.Kind.ToString() };
+            var d = new Dictionary<string, string?> { ["Name"] = c.Name, ["Info"] = c.Suffix };
             if (c.Data is JsonObject o)
                 foreach (var k in new[] { "type", "number", "language", "dataType", "address", "group" })
                     if (o[k] is JsonValue v) d[k] = Scalar(v);
@@ -398,6 +398,7 @@ public static class DetailViews
             HorizontalGridLinesBrush = new SolidColorBrush(Color.FromRgb(0xE4, 0xE7, 0xEB)),
             AlternatingRowBackground = new SolidColorBrush(Color.FromRgb(0xF7, 0xF9, 0xFB)),
             BorderThickness = new Thickness(0),
+            Background = Brushes.White,
             FontFamily = new FontFamily("Segoe UI"),
             EnableRowVirtualization = true,
             EnableColumnVirtualization = true,
@@ -409,7 +410,7 @@ public static class DetailViews
         {
             var col = table.Columns[e.PropertyName];
             if (col == null) return;
-            if (captions || col.Caption != col.ColumnName) e.Column.Header = col.Caption;
+            if (captions || col.Caption != col.ColumnName) e.Column.Header = captions ? Caption(col.Caption) : col.Caption;
             if (e.Column is DataGridTextColumn tc)
             {
                 tc.MaxWidth = 600;
@@ -417,12 +418,39 @@ public static class DetailViews
                 style.Setters.Add(new Setter(TextBlock.TextTrimmingProperty, TextTrimming.CharacterEllipsis));
                 style.Setters.Add(new Setter(FrameworkElement.ToolTipProperty,
                     new System.Windows.Data.Binding(col.ColumnName)));
-                if (col.Caption is "name" or "Name" or "Path") style.Setters.Add(new Setter(TextBlock.FontFamilyProperty, new FontFamily("Consolas, Segoe UI")));
                 tc.ElementStyle = style;
             }
         };
         g.ItemsSource = table.DefaultView;
         return g;
+    }
+
+    private static readonly Dictionary<string, string> Words = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["plc"] = "PLC", ["hmi"] = "HMI", ["db"] = "DB", ["fb"] = "FB", ["fc"] = "FC", ["ob"] = "OB", ["id"] = "ID",
+        ["ip"] = "IP", ["opc"] = "OPC", ["ua"] = "UA", ["udt"] = "UDT", ["url"] = "URL", ["hw"] = "HW",
+    };
+
+    /// <summary>Column caption in plain words: "dataType" = "Data type", "tagTable" = "Tag table", "plc" = "PLC",
+    /// "comment.en-US" = "Comment (en-US)", "texts.alarmText.en-US" = "Alarm text (en-US)".</summary>
+    public static string Caption(string key)
+    {
+        if (key.Length == 0 || key.Contains(' ')) return key;
+        var parts = key.Split('.');
+        string? culture = null;
+        if (parts.Length > 1 && System.Text.RegularExpressions.Regex.IsMatch(parts[^1], "^[a-z]{2,3}(-[A-Za-z0-9]+)*$") && parts[^1].Contains('-'))
+        {
+            culture = parts[^1];
+            parts = parts[..^1];
+        }
+        // the last meaningful part names the column ("texts.alarmText" = "Alarm text"); other parent parts as prefix
+        var name = parts.Length > 1 && parts[0] is "texts" ? parts[^1] : string.Join(" ", parts);
+        var words = System.Text.RegularExpressions.Regex.Matches(name, "[A-Z]{2,}(?=[A-Z][a-z]|\\b|[0-9])|[A-Z]?[a-z]+|[A-Z]+|[0-9]+")
+            .Select(m => Words.TryGetValue(m.Value, out var w) ? w : m.Value.ToLowerInvariant()).ToList();
+        if (words.Count == 0) return key;
+        if (words[0].Length > 0 && char.IsLower(words[0][0])) words[0] = char.ToUpperInvariant(words[0][0]) + words[0][1..];
+        var text = string.Join(" ", words);
+        return culture == null ? text : $"{text} ({culture})";
     }
 
     private static UIElement Text(string text, bool mono = false) => new TextBox

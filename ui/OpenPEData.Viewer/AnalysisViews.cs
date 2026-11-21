@@ -42,6 +42,8 @@ public sealed class AnalysisContext
     public string Path { get; }
     public string ProjectName { get; }
     public IReadOnlyList<ProjectList> Lists { get; }
+    /// <summary>Warnings and objects the parser could not read (shown in the overview).</summary>
+    public string? ParserMessages { get; init; }
     public ProjectList List(string key) => Lists.First(l => l.Key == key);
     /// <summary>Selects the tree node of a view (tiles of the overview).</summary>
     public Action<NodeKind>? Navigate { get; set; }
@@ -325,6 +327,12 @@ public static class AnalysisViews
             }
             root.Children.Add(Card(grid, new Thickness(0, 0, 10, 0)));
         }
+        if (ctx.ParserMessages is { } pm)
+        {
+            root.Children.Add(new TextBlock { Text = "Parser messages", FontWeight = FontWeights.SemiBold, Margin = new Thickness(2, 14, 0, 6) });
+            root.Children.Add(Card(new TextBlock { Text = pm, TextWrapping = TextWrapping.Wrap, FontFamily = new FontFamily("Cascadia Mono, Consolas"),
+                FontSize = 12 }, new Thickness(0, 0, 10, 0)));
+        }
         return new ScrollViewer { Content = root, VerticalScrollBarVisibility = ScrollBarVisibility.Auto };
     }
 
@@ -505,7 +513,7 @@ public static class AnalysisViews
             var sep = string.IsNullOrEmpty(s.CsvSeparator) ? ";" : s.CsvSeparator;
             var cols = view.Table!.Columns.Cast<DataColumn>().ToList();
             var sb = new StringBuilder();
-            sb.AppendLine(string.Join(sep, cols.Select(c => Quote(c.Caption, sep))));
+            sb.AppendLine(string.Join(sep, cols.Select(c => Quote(DetailViews.Caption(c.Caption), sep))));
             foreach (DataRowView r in view)
                 sb.AppendLine(string.Join(sep, cols.Select(c => Quote(Format(r.Row[c]), sep))));
             File.WriteAllText(file, sb.ToString(), new UTF8Encoding(s.CsvByteOrderMark));
@@ -561,7 +569,7 @@ public static class AnalysisViews
                 var t = DetailViews.ToTable(l.Rows);
                 sb.Append("<h2 id=\"").Append(l.Key).Append("\">").Append(E(l.Title)).Append(" <span class=\"muted\">(")
                   .Append(t.Rows.Count.ToString(CultureInfo.InvariantCulture)).Append(")</span></h2><table><thead><tr>");
-                foreach (DataColumn c in t.Columns) sb.Append("<th>").Append(E(c.Caption)).Append("</th>");
+                foreach (DataColumn c in t.Columns) sb.Append("<th>").Append(E(DetailViews.Caption(c.Caption))).Append("</th>");
                 sb.Append("</tr></thead><tbody>");
                 foreach (DataRow r in t.Rows)
                 {

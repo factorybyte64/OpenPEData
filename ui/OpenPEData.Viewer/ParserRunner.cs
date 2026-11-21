@@ -61,6 +61,32 @@ public static class ParserRunner
                 AddSimaticMl(x, xml);
     }
 
+    /// <summary>Devices in each device group in the order of creation (object id of the record key
+    /// "typeLo:typeHi:oid"), as the TIA project tree and Openness (Project.Devices) list them; the parser sorts them by
+    /// name.</summary>
+    internal static void OrderDevicesLikeTia(JsonNode? json)
+    {
+        if (json?["project"]?["devices"] is not JsonArray devs || devs.Count < 2) return;
+        static long Oid(JsonNode? d) => TreeBuilder.Str(d?["key"]) is { } k && k.Split(':') is { Length: 3 } p
+            && long.TryParse(p[2], System.Globalization.NumberStyles.HexNumber, null, out var v) ? v : long.MaxValue;
+        var sorted = devs.Select((d, i) => (d, i)).OrderBy(x => TreeBuilder.Str(x.d?["group"]) ?? "", StringComparer.Ordinal)
+            .ThenBy(x => Oid(x.d)).ThenBy(x => x.i).Select(x => x.d).ToList();
+        devs.Clear();
+        foreach (var d in sorted) devs.Add(d);
+    }
+
+    /// <summary>Removes the record keys (property "key") again, as the parser does without --keys.</summary>
+    internal static void StripKeys(JsonNode? n)
+    {
+        if (n is JsonObject o)
+        {
+            o.Remove("key");
+            foreach (var kv in o) StripKeys(kv.Value);
+        }
+        else if (n is JsonArray a)
+            foreach (var x in a) StripKeys(x);
+    }
+
     /// <summary>Same results as the CLI flags: stderr lines for unreadable objects, exit code 1 for a failed --verify,
     /// an exception becomes stderr text with exit code 1.</summary>
     static Result Run(TiaProject project, string[] flags, CancellationToken ct)
@@ -81,7 +107,10 @@ public static class ParserRunner
                 json = project.GetProgramInfo(ct);
             else
             {
-                json = project.GetStructure(flags.Contains("--keys"), ct);
+                // with the record keys, to list the devices in the order of the TIA project tree (order of creation)
+                json = project.GetStructure(true, ct);
+                OrderDevicesLikeTia(json);
+                if (!flags.Contains("--keys")) StripKeys(json);
                 foreach (var e in project.GetIssues(ct))
                     err.AppendLine($"not readable: {e.Object}: {e.Message}");
                 try

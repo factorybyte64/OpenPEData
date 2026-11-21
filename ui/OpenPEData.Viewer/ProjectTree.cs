@@ -78,6 +78,9 @@ public sealed class TreeNode : INotifyPropertyChanged
         _ => "",
     };
 
+    /// <summary>Detaches the node from its parent (to show it at the top level of the tree).</summary>
+    internal void Detach() => Parent = null;
+
     public TreeNode Add(TreeNode child)
     {
         child.Parent = this;
@@ -130,6 +133,10 @@ public sealed class TreeNode : INotifyPropertyChanged
 /// <summary>Builds a TIA-Portal-like project tree from the parser JSON.</summary>
 public static class TreeBuilder
 {
+    /// <summary>The project node with the children of the TIA Portal V21 project tree, in its order and with its names:
+    /// Devices &amp; networks, the device groups and devices (in the order of creation, like TIA), Security settings
+    /// (Users and roles), Languages &amp; resources. Libraries and plant objects are separate views in TIA (task card
+    /// "Libraries", tab "Plant objects"); see <see cref="LibraryNode"/> and <see cref="PlantObjectsNode"/>.</summary>
     public static TreeNode Build(JsonNode root, string fileName)
     {
         ScreenRenderer.SetGraphics(root["project"]?["graphics"], root["library"]);
@@ -138,17 +145,19 @@ public static class TreeBuilder
         var project = root["project"]!;
         var top = new TreeNode(Str(project["name"]) ?? fileName, NodeKind.Project, project);
         top.ListsInTree.UnionWith(["devices", "deviceGroups", "network", "umac", "plcAlarms", "plcWatchTables", "plcUnits",
-            "plcOpcUaInterfaces", "plcSupervisions", "plcTextLists", "plantViews"]);
+            "plcOpcUaInterfaces", "plcSupervisions", "plcTextLists", "plantViews", "languages"]);
         top.IsExpanded = true;
 
-        // device groups as folders
+        AddNetwork(top, project);
+
+        // device groups as folders, devices in them
         var groups = new Folders(top, NodeKind.Folder);
         foreach (var g in Arr(project["deviceGroups"]))
             groups.Get(Str(g["path"]), g);
-        foreach (var dev in Arr(project["devices"]))
+        foreach (var dev in Arr(project["devices"]).Where(d => d["hiddenModuleDevice"] is not JsonValue h || !h.TryGetValue<bool>(out var b) || !b))
             AddDevice(groups.Get(Str(dev["group"])), dev, project);
+        SystemFoldersLast(top);
 
-        AddNetwork(top, project);
         if (project["umac"] is JsonObject um && (Arr(um["users"]).Any() || Arr(um["roles"]).Any()))
         {
             // role assignments of a user as text ("Role (device)") so that the user table shows them
@@ -156,21 +165,49 @@ public static class TreeBuilder
             foreach (var u in Arr(data["users"]))
                 u["roles"] = new JsonArray(Arr(u["roles"]).Select(r => (JsonNode?)JsonValue.Create(
                     Str(r["role"]) + (Str(r["device"]) is { } d ? $" ({d})" : ""))).ToArray());
-            top.Add(new TreeNode("User management (UMAC)", NodeKind.Umac, data,
+            var sec = top.Add(new TreeNode("Security settings", NodeKind.Folder, null));
+            sec.Add(new TreeNode("Users and roles", NodeKind.Umac, data,
                 $"{Arr(um["users"]).Count()} users, {Arr(um["roles"]).Count()} roles"));
         }
 
-        // plant view (one per project): its nodes as one table with their paths
-        foreach (var pv in Arr(project["plantViews"]))
-            top.Add(new TreeNode("Plant view " + (Str(pv["name"]) ?? ""), NodeKind.PlcSection, pv,
-                Arr(pv["nodes"]).Count() + " nodes"));
-
-        AddLibrary(top, root);
-
-        if (root["statistics"] is JsonObject st)
-            top.Add(new TreeNode("Statistics", NodeKind.Statistics, st));
-        SystemFoldersLast(top);
+        if (project["languages"] is JsonNode langs && (langs is JsonObject { Count: > 0 } || langs is JsonArray { Count: > 0 }))
+        {
+            var lr = top.Add(new TreeNode("Languages & resources", NodeKind.Folder, null));
+            lr.Add(new TreeNode("Project languages", NodeKind.TextLists,
+                langs is JsonArray la ? new JsonObject { ["languages"] = la.DeepClone() } : langs.DeepClone()));
+        }
         return top;
+    }
+
+    /// <summary>Project library and faceplate types (TIA: task card "Libraries"), as a view next to the project; null when
+    /// the project has none.</summary>
+    public static TreeNode? LibraryNode(JsonNode root)
+    {
+        var holder = new TreeNode("", NodeKind.Folder);
+        AddLibrary(holder, root);
+        var n = holder.Children.FirstOrDefault();
+        if (n == null) return null;
+        holder.Children.Clear();
+        return Reparent(n, null);
+    }
+
+    /// <summary>The plant view (TIA: tab "Plant objects" of the project tree) as a view; null without plant view.</summary>
+    public static TreeNode? PlantObjectsNode(JsonNode root)
+    {
+        var pvs = Arr(root["project"]?["plantViews"]).ToList();
+        if (pvs.Count == 0) return null;
+        if (pvs.Count == 1)
+            return new TreeNode("Plant objects", NodeKind.PlcSection, pvs[0], Arr(pvs[0]["nodes"]).Count() + " nodes");
+        var n = new TreeNode("Plant objects", NodeKind.Folder, null);
+        foreach (var pv in pvs)
+            n.Add(new TreeNode(Str(pv["name"]) ?? "Plant view", NodeKind.PlcSection, pv, Arr(pv["nodes"]).Count() + " nodes"));
+        return n;
+    }
+
+    private static TreeNode Reparent(TreeNode n, TreeNode? parent)
+    {
+        n.Detach();
+        return n;
     }
 
     private static void SystemFoldersLast(TreeNode n)
@@ -204,7 +241,8 @@ public static class TreeBuilder
     private static void AddHardware(TreeNode station, JsonNode dev)
     {
         if (dev["hardware"] is not JsonObject hw || !Arr(hw["items"]).Any()) return;
-        var hn = station.Add(new TreeNode("Device configuration", NodeKind.Hardware, hw, Str(hw["catalog"])?.Split('\\').LastOrDefault()));
+        var hn = station.Add(new TreeNode("Device configuration", NodeKind.Hardware, hw));
+        station.Children.Move(station.Children.Count - 1, 0);  // TIA: first child of the station / PLC / HMI
         hn.ListsInTree.UnionWith(["items", "safety"]);
         void Items(TreeNode parent, JsonNode? items)
         {
@@ -220,8 +258,10 @@ public static class TreeBuilder
         }
         Items(hn, hw["items"]);
         if (hw["safety"] is JsonObject sf)
-            station.Add(new TreeNode("Safety administration", NodeKind.Safety, sf,
-                Str(sf["programSettings"]?["SafetySystemVersion"])));
+        {
+            station.Add(new TreeNode("Safety administration", NodeKind.Safety, sf, Str(sf["programSettings"]?["SafetySystemVersion"])));
+            station.Children.Move(station.Children.Count - 1, 1);
+        }
     }
 
     /// <summary>Network view of the project: subnets, IO systems, domains, connections and port interconnections.</summary>
@@ -237,7 +277,7 @@ public static class TreeBuilder
         var lists = new[] { ("subnets", "Subnets"), ("ioSystems", "IO systems"), ("syncDomains", "Sync and MRP domains"),
             ("connections", "Connections"), ("portLinks", "Port interconnections") };
         if (!lists.Any(l => Arr(data[l.Item1]).Any())) return;
-        var n = top.Add(new TreeNode("Network", NodeKind.Network, data));
+        var n = top.Add(new TreeNode("Devices & networks", NodeKind.Network, data));
         foreach (var (key, label) in lists)
         {
             n.ListsInTree.Add(key);
@@ -245,56 +285,24 @@ public static class TreeBuilder
         }
     }
 
-    /// <summary>PLC objects the parser outputs at project level (keyed by the PLC name): alarms, text lists, watch and
-    /// force tables, software units, OPC UA server interfaces, ProDiag supervisions.</summary>
-    private static void AddPlcSections(TreeNode n, JsonNode project, string? plcName)
-    {
-        bool MinePlc(JsonNode x) => plcName == null || Str(x["plc"]) == plcName;
-        JsonArray Clone(IEnumerable<JsonNode> xs) => new(xs.Select(x => x.DeepClone()).ToArray());
+    private static bool MinePlc(JsonNode x, string? plcName) => plcName == null || Str(x["plc"]) == plcName;
+    private static JsonArray CloneAll(IEnumerable<JsonNode> xs) => new(xs.Select(x => x.DeepClone()).ToArray());
 
-        var pa = project["plcAlarms"];
-        var al = Arr(pa?["alarms"]).Where(MinePlc).ToList();
-        if (al.Count > 0)
-            n.Add(new TreeNode("PLC alarms", NodeKind.PlcSection,
-                new JsonObject { ["alarms"] = Clone(al), ["alarmClasses"] = pa?["alarmClasses"]?.DeepClone() }, al.Count.ToString()));
-        var tl = Arr(project["plcTextLists"]).Where(x => MinePlc(x) && Str(x["kind"]) == "user").ToList();
-        if (tl.Count > 0)
-        {
-            var f = n.Add(new TreeNode("PLC alarm text lists", NodeKind.TagsFolder, null, tl.Count.ToString()));
-            foreach (var t in tl.OrderBy(x => Str(x["name"]) ?? "", TiaOrder.Instance))
-                f.Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.TextLists, t, Str(t["listRange"])));
-        }
-        var wt = Arr(project["plcWatchTables"]).Where(MinePlc).ToList();
-        if (wt.Count > 0)
-        {
-            var f = n.Add(new TreeNode("Watch and force tables", NodeKind.TagsFolder, null, wt.Count.ToString()));
-            foreach (var t in wt.OrderBy(x => Str(x["kind"]) == "force").ThenBy(x => Str(x["name"]) ?? "", TiaOrder.Instance))
-                f.Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.WatchTable, t,
-                    (Str(t["kind"]) == "force" ? "Force table, " : "") + Arr(t["entries"]).Count()));
-        }
-        foreach (var (key, label, list) in new[] { ("plcUnits", "Software units", "units"),
-                     ("plcOpcUaInterfaces", "OPC UA server interfaces", "interfaces") })
-        {
-            var xs = Arr(project[key]).Where(MinePlc).ToList();
-            if (xs.Count > 0)
-                n.Add(new TreeNode(label, NodeKind.PlcSection, new JsonObject { [list] = Clone(xs) }, xs.Count.ToString()));
-        }
-        var sv = new JsonArray();
-        foreach (var c in Arr(project["plcSupervisions"]))
-            foreach (var s in Arr(c["supervisions"]))
-            {
-                var o = new JsonObject { ["proDiagFb"] = Str(c["proDiagFb"]) };
-                foreach (var kv in s.AsObject()) o[kv.Key] = kv.Value?.DeepClone();
-                sv.Add(o);
-            }
-        if (sv.Count > 0)
-            n.Add(new TreeNode("ProDiag supervisions", NodeKind.PlcSection, new JsonObject { ["supervisions"] = sv }, sv.Count.ToString()));
-    }
-
+    /// <summary>The PLC with its children in the order of the TIA Portal V21 project tree: Device configuration (added
+    /// with the station), Safety administration, Software units, Program blocks, PLC tags, PLC data types, Watch and
+    /// force tables, OPC UA communication, Program info, PLC supervisions &amp; alarms, PLC alarm text lists. Nodes TIA
+    /// shows but the project holds no data for (Online &amp; diagnostics, Technology objects, Traces …) are left out.
+    /// Alarms, text lists, watch tables, units, OPC UA interfaces and supervisions come from the project level of the
+    /// parser output (keyed by the PLC name).</summary>
     private static TreeNode AddPlc(TreeNode parent, JsonNode plc, string? stationName, JsonNode project)
     {
         var n = parent.Add(new TreeNode(stationName ?? Str(plc["name"]) ?? "PLC", NodeKind.Plc, plc, Str(plc["typeName"])));
         n.ListsInTree.UnionWith(["blocks", "tagTables", "types"]);
+        var plcName = Str(plc["name"]);
+
+        var units = Arr(project["plcUnits"]).Where(x => MinePlc(x, plcName)).ToList();
+        if (units.Count > 0)
+            n.Add(new TreeNode("Software units", NodeKind.PlcSection, new JsonObject { ["units"] = CloneAll(units) }, units.Count.ToString()));
 
         var blocks = n.Add(new TreeNode("Program blocks", NodeKind.BlocksFolder, plc));
         var bf = new Folders(blocks, NodeKind.BlocksFolder);
@@ -330,56 +338,63 @@ public static class TreeBuilder
             yf.Get(Str(t["group"])).Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.PlcType, t, Str(t["type"])));
         yf.Finish();
 
-        AddPlcSections(n, project, Str(plc["name"]));
+        var wt = Arr(project["plcWatchTables"]).Where(x => MinePlc(x, plcName)).ToList();
+        if (wt.Count > 0)
+        {
+            var f = n.Add(new TreeNode("Watch and force tables", NodeKind.TagsFolder, null, wt.Count.ToString()));
+            foreach (var t in wt.OrderBy(x => Str(x["kind"]) == "force").ThenBy(x => Str(x["name"]) ?? "", TiaOrder.Instance))
+                f.Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.WatchTable, t,
+                    (Str(t["kind"]) == "force" ? "Force table, " : "") + Arr(t["entries"]).Count()));
+        }
+
+        var opc = Arr(project["plcOpcUaInterfaces"]).Where(x => MinePlc(x, plcName)).ToList();
+        if (opc.Count > 0)
+            n.Add(new TreeNode("OPC UA communication", NodeKind.PlcSection, new JsonObject { ["interfaces"] = CloneAll(opc) }, opc.Count.ToString()));
+
+        // read on first selection (parser --proginfo)
+        n.Add(new TreeNode("Program info", NodeKind.ProgramInfo, new JsonObject { ["plc"] = plcName }));
+
+        // TIA: one editor "PLC supervisions & alarms" with the alarms and the ProDiag supervisions
+        var pa = project["plcAlarms"];
+        var al = Arr(pa?["alarms"]).Where(x => MinePlc(x, plcName)).ToList();
+        var sv = new JsonArray();
+        foreach (var c in Arr(project["plcSupervisions"]))
+            foreach (var s in Arr(c["supervisions"]))
+            {
+                var o = new JsonObject { ["proDiagFb"] = Str(c["proDiagFb"]) };
+                foreach (var kv in s.AsObject()) o[kv.Key] = kv.Value?.DeepClone();
+                sv.Add(o);
+            }
+        if (al.Count > 0 || sv.Count > 0)
+        {
+            var data = new JsonObject();
+            if (al.Count > 0)
+            {
+                data["alarms"] = CloneAll(al);
+                data["alarmClasses"] = pa?["alarmClasses"]?.DeepClone();
+            }
+            if (sv.Count > 0) data["supervisions"] = sv;
+            n.Add(new TreeNode("PLC supervisions & alarms", NodeKind.PlcSection, data, (al.Count + sv.Count).ToString()));
+        }
+
+        var tl = Arr(project["plcTextLists"]).Where(x => MinePlc(x, plcName) && Str(x["kind"]) == "user").ToList();
+        if (tl.Count > 0)
+        {
+            var f = n.Add(new TreeNode("PLC alarm text lists", NodeKind.TagsFolder, null, tl.Count.ToString()));
+            foreach (var t in tl.OrderBy(x => Str(x["name"]) ?? "", TiaOrder.Instance))
+                f.Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.TextLists, t, Str(t["listRange"])));
+        }
         return n;
     }
 
+    /// <summary>The HMI (WinCC Unified) with its children in the order of the TIA Portal V21 project tree: Device
+    /// configuration (added with the station), Runtime settings, Screens, HMI tags, Connections, HMI alarms, Logs,
+    /// Scripts, Cycles, Text and graphic lists. Nodes without data in the project are left out.</summary>
     private static TreeNode AddHmi(TreeNode parent, JsonNode hmi, string? stationName)
     {
         var n = parent.Add(new TreeNode(stationName ?? Str(hmi["name"]) ?? "HMI", NodeKind.Hmi, hmi, Str(hmi["typeName"])));
         n.ListsInTree.UnionWith(["tagTables", "screens", "style"]);
 
-        var tags = n.Add(new TreeNode("HMI tags", NodeKind.TagsFolder, hmi));
-        tags.Add(new TreeNode("Show all tags", NodeKind.AllTags, AllTags(Arr(hmi["tagTables"]))));
-        var tf = new Folders(tags, NodeKind.TagsFolder);
-        foreach (var t in ByName(hmi["tagTables"]))
-            tf.Get(Str(t["group"])).Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.TagTable, t, Arr(t["tags"]).Count().ToString()));
-
-        ScreenRenderer.SetTextLists(hmi["textLists"]);
-        var screens = n.Add(new TreeNode("Screens", NodeKind.ScreensFolder, hmi));
-        var sf = new Folders(screens, NodeKind.ScreensFolder);
-        foreach (var s in ByName(hmi["screens"]))
-        {
-            ScreenRenderer.SetStyle(s, hmi["style"] as JsonObject);
-            sf.Get(Str(s["group"])).Add(new TreeNode(Str(s["name"]) ?? "?", NodeKind.Screen, s));
-        }
-        sf.Finish();
-
-        n.Add(Sub("Connections", NodeKind.Connections, hmi, "connections"));
-        n.Add(Sub("HMI alarms", NodeKind.Alarms, hmi, "discreteAlarms", "analogAlarms", "alarmClasses"));
-        n.Add(Sub("Text and graphic lists", NodeKind.TextLists, hmi, "textLists", "graphicLists"));
-        n.Add(Sub("Cycles", NodeKind.Cycles, hmi, "cycles"));
-        // logging: data logs, alarm logs, audit trails, and the logging tags of all HMI tags as one list
-        var lt = new JsonArray();
-        foreach (var t in Arr(hmi["tagTables"]))
-            foreach (var tag in Arr(t["tags"]))
-                foreach (var l in Arr(tag["loggingTags"]))
-                {
-                    var o = new JsonObject { ["tag"] = Str(tag["name"]), ["tagTable"] = Str(t["name"]) };
-                    foreach (var kv in l.AsObject()) o[kv.Key] = kv.Value?.DeepClone();
-                    lt.Add(o);
-                }
-        var logging = Sub("Logging", NodeKind.PlcSection, hmi, "dataLogs", "alarmLogs", "auditTrails");
-        if (lt.Count > 0) ((JsonObject)logging.Data!)["loggingTags"] = lt;
-        if (logging.Data is JsonObject lo && lo.Count > 0) n.Add(logging);
-        // global script modules: one node per module, its code as its own tab
-        var sm = Arr(hmi["scriptModules"]).ToList();
-        if (sm.Count > 0)
-        {
-            var f = n.Add(new TreeNode("Script modules", NodeKind.TagsFolder, null, sm.Count.ToString()));
-            foreach (var m in sm)
-                f.Add(new TreeNode(Str(m["name"]) ?? "?", NodeKind.PlcSection, m, Arr(m["functions"]).Count() + " functions"));
-        }
         // runtime settings: only the values stored in the project (absent = default), one row per setting
         if (hmi["runtimeSettings"] is JsonObject rs)
         {
@@ -392,6 +407,51 @@ public static class TreeBuilder
             if (hmi["runtimeLanguages"] is JsonArray rl && rl.Count > 0) data["runtimeLanguages"] = rl.DeepClone();
             n.Add(new TreeNode("Runtime settings", NodeKind.PlcSection, data, (rows.Count - 1).ToString()));
         }
+
+        ScreenRenderer.SetTextLists(hmi["textLists"]);
+        var screens = n.Add(new TreeNode("Screens", NodeKind.ScreensFolder, hmi));
+        var sf = new Folders(screens, NodeKind.ScreensFolder);
+        foreach (var s in ByName(hmi["screens"]))
+        {
+            ScreenRenderer.SetStyle(s, hmi["style"] as JsonObject);
+            sf.Get(Str(s["group"])).Add(new TreeNode(Str(s["name"]) ?? "?", NodeKind.Screen, s));
+        }
+        sf.Finish();
+
+        var tags = n.Add(new TreeNode("HMI tags", NodeKind.TagsFolder, hmi));
+        tags.Add(new TreeNode("Show all tags", NodeKind.AllTags, AllTags(Arr(hmi["tagTables"]))));
+        var tf = new Folders(tags, NodeKind.TagsFolder);
+        foreach (var t in ByName(hmi["tagTables"]))
+            tf.Get(Str(t["group"])).Add(new TreeNode(Str(t["name"]) ?? "?", NodeKind.TagTable, t, Arr(t["tags"]).Count().ToString()));
+
+        n.Add(Sub("Connections", NodeKind.Connections, hmi, "connections"));
+        n.Add(Sub("HMI alarms", NodeKind.Alarms, hmi, "discreteAlarms", "analogAlarms", "alarmClasses"));
+
+        // logs: data logs, alarm logs, audit trails, and the logging tags of all HMI tags as one list
+        var lt = new JsonArray();
+        foreach (var t in Arr(hmi["tagTables"]))
+            foreach (var tag in Arr(t["tags"]))
+                foreach (var l in Arr(tag["loggingTags"]))
+                {
+                    var o = new JsonObject { ["tag"] = Str(tag["name"]), ["tagTable"] = Str(t["name"]) };
+                    foreach (var kv in l.AsObject()) o[kv.Key] = kv.Value?.DeepClone();
+                    lt.Add(o);
+                }
+        var logging = Sub("Logs", NodeKind.PlcSection, hmi, "dataLogs", "alarmLogs", "auditTrails");
+        if (lt.Count > 0) ((JsonObject)logging.Data!)["loggingTags"] = lt;
+        if (logging.Data is JsonObject lo && lo.Count > 0) n.Add(logging);
+
+        // scripts: one node per global module, its code as its own tab
+        var sm = Arr(hmi["scriptModules"]).ToList();
+        if (sm.Count > 0)
+        {
+            var f = n.Add(new TreeNode("Scripts", NodeKind.TagsFolder, null, sm.Count.ToString()));
+            foreach (var m in sm)
+                f.Add(new TreeNode(Str(m["name"]) ?? "?", NodeKind.PlcSection, m, Arr(m["functions"]).Count() + " functions"));
+        }
+
+        n.Add(Sub("Cycles", NodeKind.Cycles, hmi, "cycles"));
+        n.Add(Sub("Text and graphic lists", NodeKind.TextLists, hmi, "textLists", "graphicLists"));
         n.ListsInTree.UnionWith(["connections", "discreteAlarms", "analogAlarms", "alarmClasses", "textLists", "cycles",
             "dataLogs", "alarmLogs", "auditTrails", "scriptModules", "runtimeLanguages", "graphicLists"]);
         return n;

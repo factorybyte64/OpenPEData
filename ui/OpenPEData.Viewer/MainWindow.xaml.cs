@@ -278,16 +278,17 @@ public partial class MainWindow : Window
             _verify = null;
             _xref = null;
             _root = TreeBuilder.Build(res.Json, Path.GetFileNameWithoutExtension(path.TrimEnd('\\', '/')));
-            _root.Add(new TreeNode("File", NodeKind.Info, new JsonObject { ["path"] = path }));
-            _root.Children.Move(_root.Children.Count - 1, 0);
-            AddProgInfoNodes(_root);
             _analysis = new AnalysisContext(res.Json, path, _root.Name)
             {
+                ParserMessages = string.IsNullOrWhiteSpace(res.StdErr) ? null : res.StdErr.Trim(),
                 Navigate = kind => { if (RootNode(kind) is { } n) n.IsSelected = true; },
                 Status = text => SetBusy(false, text),
             };
             _top.Clear();
             _top.Add(_root);
+            // TIA shows these next to the project tree (task card "Libraries", tab "Plant objects")
+            if (TreeBuilder.LibraryNode(res.Json) is { } libs) _top.Add(libs);
+            if (TreeBuilder.PlantObjectsNode(res.Json) is { } plant) _top.Add(plant);
             foreach (var v in AnalysisViews.ViewNodes(_analysis)) _top.Add(v);
             _top.Add(new TreeNode("Cross-references", NodeKind.CrossRefs));
             _top.Add(new TreeNode("Integrity check", NodeKind.Verify));
@@ -306,9 +307,7 @@ public partial class MainWindow : Window
             var st = res.Json["statistics"];
             SetBusy(false, $"{path}  ·  {st?["objects"]} objects, {st?["records"]} records, " +
                            $"hash errors {st?["hashErrors"]}  ·  read in {sw.Elapsed.TotalSeconds:0.0} s" +
-                           (string.IsNullOrWhiteSpace(res.StdErr) ? "" : "  ·  parser messages: see node \"File\""));
-            if (!string.IsNullOrWhiteSpace(res.StdErr))
-                ((JsonObject)_root.Children[0].Data!)["parserMessages"] = res.StdErr.Trim();
+                           (string.IsNullOrWhiteSpace(res.StdErr) ? "" : "  ·  parser messages: see Overview"));
         }
         catch (OperationCanceledException)
         {
@@ -414,17 +413,6 @@ public partial class MainWindow : Window
         var task = EnsureXref();
         return task.IsCompletedSuccessfully ? StatePanel(NoXrefText, false, null)
             : RunState(node, task, "Reading cross-references from XRef.db …", () => _xref = null);
-    }
-
-    /// <summary>Adds the node "Program info" as first child of each PLC; its content is read on first selection.</summary>
-    private static void AddProgInfoNodes(TreeNode n)
-    {
-        if (n.Kind == NodeKind.Plc)
-        {
-            n.Add(new TreeNode("Program info", NodeKind.ProgramInfo, new JsonObject { ["plc"] = TreeBuilder.Str(n.Data?["name"]) }));
-            n.Children.Move(n.Children.Count - 1, 0);
-        }
-        foreach (var c in n.Children.ToList()) AddProgInfoNodes(c);
     }
 
     private IEnumerable<TreeNode> FindProgInfoNodes()
@@ -612,7 +600,7 @@ public partial class MainWindow : Window
     private void ShowNode(TreeNode node)
     {
         DetailPath.Text = node.Parent?.PathText ?? "";
-        DetailTitle.Text = node.Display;
+        DetailTitle.Text = node.Name;
         _shownKind = null;
         var wanted = new List<string>();
         if (_lastTab.TryGetValue(node.Kind, out var last)) wanted.Add(last);

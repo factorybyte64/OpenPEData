@@ -135,6 +135,9 @@ public static class Program
         table.DefaultView.RowFilter = AnalysisViews.RowFilter(table, "x'[*%]");
         Eq(0, table.DefaultView.Count, "analysis: filter with quote, brackets and wildcards is valid");
         Eq("\"Start; \"\"button\"\"\"", AnalysisViews.Csv.Quote("Start; \"button\"", ";"), "analysis: CSV quoting");
+        Eq("Data type|Tag table|PLC|Comment (en-US)|Alarm text (en-US)|Know how protected|OPC UA server",
+            string.Join("|", new[] { "dataType", "tagTable", "plc", "comment.en-US", "texts.alarmText.en-US", "knowHowProtected", "opcUaServer" }
+                .Select(DetailViews.Caption)), "analysis: column captions in plain words");
         var html = AnalysisViews.Report.Html(ctx);
         Eq(true, html.Contains("<h2 id=\"plcTags\">PLC tags") && html.Contains("Start; &quot;button&quot;"), "analysis: report has lists, HTML encoded");
     }

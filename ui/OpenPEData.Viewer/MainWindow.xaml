@@ -6,25 +6,30 @@
         Background="{StaticResource PaneBg}" FontFamily="Segoe UI" FontSize="13"
         AllowDrop="True" Drop="OnDrop" DragOver="OnDragOver">
     <Window.Resources>
-        <Style x:Key="ToolButton" TargetType="Button">
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="Margin" Value="0,0,6,0"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
-            <Setter Property="Cursor" Value="Hand"/>
+        <Style x:Key="ToolButton" TargetType="Button" BasedOn="{StaticResource FlatButton}">
+            <Setter Property="Margin" Value="0,0,2,0"/>
         </Style>
         <Style x:Key="IconButton" TargetType="Button" BasedOn="{StaticResource ToolButton}">
             <Setter Property="FontFamily" Value="Segoe Fluent Icons, Segoe MDL2 Assets"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Padding" Value="8,5"/>
             <Setter Property="Margin" Value="4,0,0,0"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        <Style x:Key="ToolGlyph" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe Fluent Icons, Segoe MDL2 Assets"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="{StaticResource Accent}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,7,0"/>
         </Style>
         <HierarchicalDataTemplate DataType="{x:Type local:TreeNode}" ItemsSource="{Binding Children}">
             <StackPanel Orientation="Horizontal" Margin="0,1">
                 <TextBlock Text="{Binding Glyph}" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="13"
                            Foreground="{StaticResource Accent}" VerticalAlignment="Center" Margin="0,0,6,0"/>
-                <TextBlock Text="{Binding Display}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                <!-- the count or type of a node as a quiet note after the name -->
+                <TextBlock Text="{Binding Suffix}" VerticalAlignment="Center" Margin="7,0,0,0" FontSize="12"
+                           Foreground="{StaticResource Muted}"/>
             </StackPanel>
         </HierarchicalDataTemplate>
     </Window.Resources>
@@ -34,9 +39,15 @@
         <Border DockPanel.Dock="Top" Background="{StaticResource HeaderBg}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,0,1" Padding="10,8">
             <DockPanel>
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
-                    <Button Style="{StaticResource ToolButton}" Click="OnOpenFile" ToolTip="Open project file (.ap21 or .zap21), Ctrl+O">Open file…</Button>
-                    <Button Style="{StaticResource ToolButton}" Click="OnOpenFolder" ToolTip="Open project folder">Open folder…</Button>
-                    <Button x:Name="ReloadButton" Style="{StaticResource ToolButton}" Click="OnReload" IsEnabled="False" ToolTip="Reload (F5)">Reload</Button>
+                    <Button Style="{StaticResource ToolButton}" Click="OnOpenFile" ToolTip="Open project file (.ap21 or .zap21), Ctrl+O">
+                        <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource ToolGlyph}" Text="&#xE8E5;"/><TextBlock Text="Open project"/></StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource ToolButton}" Click="OnOpenFolder" ToolTip="Open project folder">
+                        <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource ToolGlyph}" Text="&#xE838;"/><TextBlock Text="Open folder"/></StackPanel>
+                    </Button>
+                    <Button x:Name="ReloadButton" Style="{StaticResource ToolButton}" Click="OnReload" IsEnabled="False" ToolTip="Reload (F5)">
+                        <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource ToolGlyph}" Text="&#xE72C;"/><TextBlock Text="Reload"/></StackPanel>
+                    </Button>
                     <Button x:Name="UpdateNotice" Style="{StaticResource ToolButton}" Click="OnUpdates" Visibility="Collapsed"
                             Background="{StaticResource Accent}" Foreground="White" BorderBrush="{StaticResource Accent}"/>
                     <Border Width="1" Background="{StaticResource Line}" Margin="4,2,10,2"/>
@@ -91,7 +102,7 @@
 
             <!-- project tree -->
             <DockPanel Grid.Column="0" Background="White">
-                <TextBlock DockPanel.Dock="Top" Text="Project and views" FontWeight="SemiBold" Padding="10,8,10,6"
+                <TextBlock DockPanel.Dock="Top" Text="Project navigation" FontWeight="SemiBold" Padding="10,8,10,6"
                            Background="{StaticResource HeaderBg}"/>
                 <TreeView x:Name="Tree" BorderThickness="0" Padding="2,4" SelectedItemChanged="OnSelectionChanged"
                           VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
@@ -121,7 +132,7 @@
                 <Border DockPanel.Dock="Top" Padding="14,10,14,8" BorderBrush="{StaticResource Line}" BorderThickness="0,0,0,1">
                     <StackPanel>
                         <TextBlock x:Name="DetailPath" Foreground="{StaticResource Muted}" FontSize="12" TextTrimming="CharacterEllipsis"/>
-                        <TextBlock x:Name="DetailTitle" FontSize="18" FontWeight="SemiBold" Margin="0,2,0,0" TextTrimming="CharacterEllipsis"/>
+                        <TextBlock x:Name="DetailTitle" FontSize="20" FontWeight="SemiBold" Margin="0,2,0,0" TextTrimming="CharacterEllipsis"/>
                     </StackPanel>
                 </Border>
                 <TabControl x:Name="DetailTabs" BorderThickness="0,1,0,0" Padding="0" SelectionChanged="OnTabChanged"/>
