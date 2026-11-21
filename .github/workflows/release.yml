@@ -1,4 +1,8 @@
-# Builds the Velopack setup with ui/scripts/Pack-OpenPEData.ps1 and attaches it to the GitHub release of the tag.
+# Builds the Velopack setup with ui/scripts/Pack-OpenPEData.ps1 and attaches it to the GitHub release of the tag,
+# together with the update package of the viewer's auto-updater (ui/OpenPEData.Viewer/Updates): the Velopack feed
+# releases.win.json and the full package OpenPEData-X.Y.Z-full.nupkg. Every release carries its own feed, so the
+# updater can install any release (update or downgrade). Running this workflow by hand for an older tag adds the
+# update package to that release as well.
 #
 # Trigger: pushing a tag vX.Y.Z (X.Y.Z must equal <Version> in ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj), or
 # running the workflow by hand for an existing tag. The full CI (ci.yml) runs first; the setup is only built when all
@@ -100,12 +104,20 @@ jobs:
           if (-not (Test-Path -LiteralPath $setup)) {
               throw "Setup not found: $setup"
           }
+          # update package for the auto-updater: the Velopack feed and the full package of this version
+          $staging = 'ui/artifacts/_vpk-staging'
+          $feed = Join-Path $staging 'releases.win.json'
+          $package = Get-ChildItem -LiteralPath $staging -Filter '*-full.nupkg' | Select-Object -First 1
+          if (-not (Test-Path -LiteralPath $feed) -or -not $package) {
+              throw "Velopack feed or full package missing in $staging"
+          }
+          $files = @($setup, $feed, $package.FullName)
           gh release view $env:TAG --repo $env:GITHUB_REPOSITORY *> $null
           if ($LASTEXITCODE -eq 0) {
-              gh release upload $env:TAG $setup --clobber --repo $env:GITHUB_REPOSITORY
+              gh release upload $env:TAG @files --clobber --repo $env:GITHUB_REPOSITORY
           }
           else {
-              gh release create $env:TAG $setup --verify-tag --title "OpenPEData $env:TAG" --generate-notes --repo $env:GITHUB_REPOSITORY
+              gh release create $env:TAG @files --verify-tag --title "OpenPEData $env:TAG" --generate-notes --repo $env:GITHUB_REPOSITORY
           }
           if ($LASTEXITCODE -ne 0) {
               throw "gh release failed with exit code $LASTEXITCODE"
@@ -115,4 +127,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: OpenPEData-Setup-${{ env.TAG }}
-          path: ui/artifacts/Releases/OpenPEData-Setup-*.exe
+          path: |
+            ui/artifacts/Releases/OpenPEData-Setup-*.exe
+            ui/artifacts/_vpk-staging/releases.win.json
+            ui/artifacts/_vpk-staging/*-full.nupkg
