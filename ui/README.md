@@ -134,7 +134,7 @@ The installed viewer updates itself from the GitHub releases of `factorybyte64/O
 
 - **Automatic check (opt-out):** at startup (after 3 s) and every 12 hours the viewer reads the release list. If a
   newer version is there, the toolbar shows a button "Update V… available"; nothing is installed without a click.
-  Turn it off in **Updates…** ("Check for updates automatically") or for a whole machine with the environment
+  Turn it off with the checkbox in **Settings…** (or in **Updates…**; saved in `updates.json`, see below) or for a whole machine with the environment
   variable `OPENPEDATA_NO_UPDATE_CHECK=1`. No check in development builds (not installed with the setup) and in
   command line runs (`--dump`, `--snapshot`, `--screen-png`).
 - **Updates… dialog:** lists every release with date, kind and release notes. Any release can be installed:

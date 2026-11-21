@@ -52,6 +52,14 @@ public partial class MainWindow
         UpdateNotice.ToolTip = $"{update.Title}: show the release notes and install";
     }
 
+    private async void OnSettings(object sender, RoutedEventArgs e)
+    {
+        if (new SettingsWindow { Owner = this }.ShowDialog() != true) return;
+        var settings = UpdateSettings.Load();
+        if (!settings.AutoCheck) ShowUpdateNotice(null);         // turned off: no notice any more
+        else if (_updateTimer != null) await AutoCheckUpdatesAsync();  // on (or pre-releases changed): check at once
+    }
+
     private void OnUpdates(object sender, RoutedEventArgs e)
     {
         var restartArgs = _path != null ? new[] { _path } : Array.Empty<string>();

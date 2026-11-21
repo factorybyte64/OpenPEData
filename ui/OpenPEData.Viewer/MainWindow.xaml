@@ -31,6 +31,7 @@
                     <Button Style="{StaticResource ToolButton}" Click="OnOpenFolder" ToolTip="Open project folder">Open folder…</Button>
                     <Button x:Name="ReloadButton" Style="{StaticResource ToolButton}" Click="OnReload" IsEnabled="False" ToolTip="Reload (F5)">Reload</Button>
                     <Button Style="{StaticResource ToolButton}" Click="OnAbout" ToolTip="Version and parser">Info</Button>
+                    <Button Style="{StaticResource ToolButton}" Click="OnSettings" ToolTip="Settings (automatic update check)">Settings…</Button>
                     <Button Style="{StaticResource ToolButton}" Click="OnUpdates" ToolTip="Check for updates, install any version (update or downgrade)">Updates…</Button>
                     <Button x:Name="UpdateNotice" Style="{StaticResource ToolButton}" Click="OnUpdates" Visibility="Collapsed"
                             Background="{StaticResource Accent}" Foreground="White" BorderBrush="{StaticResource Accent}"/>
