@@ -148,4 +148,7 @@ The installed viewer updates itself from the GitHub releases of `factorybyte64/O
   exactly the chosen version. Releases without `releases.win.json` (v0.1.0 and v0.1.1, built before the updater)
   are shown as "setup only"; running the release workflow by hand for their tag adds the package. Such old versions
   have no updater themselves: after a downgrade to them, the current setup brings the viewer back.
+- **Testing without GitHub:** `OPENPEDATA_UPDATE_API=http://localhost:8000/releases.json` makes the viewer read the
+  release list from that URL instead of the GitHub API (same JSON format; the asset URLs may point to the same local
+  server, e.g. `python -m http.server` in a folder with the JSON, the `releases.win.json` and `.nupkg` of each version).
 - **Limits:** GitHub allows 60 API requests per hour and IP without a token; the check uses one request.

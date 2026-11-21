@@ -51,10 +51,17 @@ public static class GitHubReleases
         return http;
     }
 
+    /// <summary>Release list URL. OPENPEDATA_UPDATE_API replaces it for tests (a local HTTP server serving a JSON file in
+    /// the format of the GitHub API whose asset URLs point to the same server).</summary>
+    public static string ApiUrl =>
+        Environment.GetEnvironmentVariable("OPENPEDATA_UPDATE_API") is { Length: > 0 } url
+            ? url
+            : $"https://api.github.com/repos/{Owner}/{Repo}/releases?per_page=100";
+
     /// <summary>All published releases, newest version first.</summary>
     public static async Task<IReadOnlyList<ReleaseEntry>> FetchAsync(CancellationToken ct)
     {
-        using var response = await Http.GetAsync($"https://api.github.com/repos/{Owner}/{Repo}/releases?per_page=100", ct);
+        using var response = await Http.GetAsync(ApiUrl, ct);
         if (response.StatusCode is HttpStatusCode.Forbidden or HttpStatusCode.TooManyRequests)
             throw new InvalidOperationException("GitHub refused the request (rate limit of 60 requests per hour reached?). Please try again later.");
         response.EnsureSuccessStatusCode();
