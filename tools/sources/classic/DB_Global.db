@@ -1,0 +1,24 @@
+﻿DATA_BLOCK "DB_Global"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      xBool : Bool;   // Bool comment
+      iInt : Int;
+      rReal : Real;   // Real comment
+      aInt : Array[0..3] of Int;
+      sData : Struct
+         a : Bool;
+         b : DInt;
+      END_STRUCT;
+   END_VAR
+
+
+BEGIN
+   xBool := TRUE;
+   iInt := 42;
+   rReal := 3.5;
+   aInt[1] := 11;
+   sData.b := -5;
+
+END_DATA_BLOCK

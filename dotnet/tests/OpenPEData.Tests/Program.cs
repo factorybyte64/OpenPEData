@@ -91,6 +91,12 @@ public static class Program
     /// <summary>Only inputs whose path contains this text (differential and sample tests).</summary>
     public static string? Samples { get; private set; }
 
+    /// <summary>Archive of a sample in samples\ for any TIA version (.zap19, .zap20, .zap21 …); null if there is none.</summary>
+    public static string? SampleArchive(string sample) =>
+        Directory.GetFiles(Path.Combine(Root, "samples"), sample + ".zap??")
+            .Where(f => System.Text.RegularExpressions.Regex.IsMatch(Path.GetFileName(f), @"\.zap[0-9]{2}\z"))
+            .Order(StringComparer.Ordinal).FirstOrDefault();
+
     static string FindRoot()
     {
         var d = new DirectoryInfo(AppContext.BaseDirectory);

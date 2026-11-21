@@ -120,9 +120,102 @@ public static class ProjectTests
     [Test]
     public static void DbSymbolsAgainstSimaticML()
     {
+        // (V21 samples; the samples of other TIA versions are checked in OlderVersionSamples)
         var c = new Check("059/060/066-071 members = SimaticML");
         foreach (var sample in new[] { "059_db_symbols", "060_db_attrs", "066_sys_fb_instances", "067_tsend_trcv_single", "068_motion_tos", "069_safety_compiled", "070_db_khp_units", "071_db_1200_300", "072_motion_tcpu" })
             DbSymbols(c, sample);
+        c.Done();
+    }
+
+    /// <summary>Samples of TIA Portal V19 and V20 (samples\v19_*, v20_*; docs\PLAN-V19-V20.md): each opens as a supported
+    /// version without warnings, its integrity check passes, and where a truth folder holds Openness block exports,
+    /// every block is parsed with the members, data types and start values of its SimaticML interface.</summary>
+    [Test]
+    public static void OlderVersionSamples()
+    {
+        var c = new Check("V19/V20 samples: version, verify, members = SimaticML");
+        var dir = Path.Combine(Program.Root, "samples");
+        var archives = Directory.GetFiles(dir, "v??_*.zap??").Concat(Directory.GetFiles(dir, "v??_*.zal??"))
+            .Order(StringComparer.Ordinal).ToList();
+        c.True(archives.Count >= 2, "V19/V20 samples present");
+        foreach (var a in archives)
+        {
+            var sample = Path.GetFileNameWithoutExtension(a);
+            var want = new TiaVersion(int.Parse(sample[1..3], System.Globalization.CultureInfo.InvariantCulture));
+            if (Program.Samples is { } f && !sample.Contains(f, StringComparison.Ordinal))
+                continue;
+            using (var p = TiaProject.Open(a))
+            {
+                c.Eq(want, p.Version, sample + " version");
+                c.Eq(true, p.Version.IsSupported, sample + " supported");
+                c.Eq(0, p.Warnings.Count, sample + " no warnings");
+                c.Eq(true, p.IsIntact(), sample + " verify ok");
+                // 005: watch table and software units; 006: alarm text, info text and text list written via Openness
+                var json = sample.Contains("_005_") || sample.Contains("_006_") || sample.Contains("_007_") || sample.Contains("_008_") || sample.Contains("_101_") || sample.Contains("_102_") || sample.Contains("_201_") || sample.Contains("_202_") || sample.Contains("_301_") || sample.Contains("_103_") || sample.Contains("_009_") || sample.Contains("_104_") || sample.Contains("_105_") || sample.Contains("_203_") ? p.ToJson() : "";
+                // 105: integrated HMI connection HMI_Connection_1 to PLC_1 and an HMI text list (TL_Hmi in V20, TLHmi in V19)
+                if (sample.Contains("_105_"))
+                    foreach (var s in new[] { "\"HMI_Connection_1\"", sample.StartsWith("v19", StringComparison.Ordinal) ? "\"TLHmi\"" : "\"TL_Hmi\"", "\"Stopped\"", "\"Running\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 203 (V19): library type UDT_Motor 0.0.1 created from the PLC data type via the TIA UI
+                if (sample.Contains("_203_"))
+                    foreach (var s in new[] { "PlcTypeLibraryType", "\"UDT_Motor\"", "\"0.0.1\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 104: faceplate type FPBasic 0.0.1 (released) and its instance Faceplate_1 on Screen_1
+                if (sample.Contains("_104_"))
+                    foreach (var s in new[] { "\"FPBasic\"", "\"Faceplate_1\"", "V0.0.1\\\\FPBasic" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 009: ProDiag operand supervision of "Tag_Bool_1" with its text (as 057)
+                if (sample.Contains("_009_"))
+                    foreach (var s in new[] { "\"supervisions\"", "\"Test supervision\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 103: selected style Dark style (style name with the version: FlatStyle_DarkV1902 / FlatStyle_DarkV2000)
+                if (sample.Contains("_103_"))
+                    c.True(json.Contains("\"FlatStyle_DarkV" + (sample.StartsWith("v19", StringComparison.Ordinal) ? "1902" : "2000") + "\"", StringComparison.Ordinal), sample + " dark style selected");
+                // 301: ET 200SP IO device on subnet PN/IE_1 in the PROFINET IO system of PLC_1
+                if (sample.Contains("_301_"))
+                    foreach (var s in new[] { "\"IO_1\"", "\"PN/IE_1\"", "\"PROFINET IO-System\"", "\"192.168.0.2\"", "6ES7 155-6AU02-0BN0" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 202: global library (.zalNN) with the master copy UDT_Motor; in V20 also the type FC_Iface 1.0.0
+                if (sample.Contains("_202_"))
+                {
+                    c.Eq(TiaProjectKind.GlobalLibrary, p.Info.Kind, sample + " kind");
+                    foreach (var s in sample.StartsWith("v20", StringComparison.Ordinal)
+                        ? new[] { "\"UDT_Motor\"", "\"FC_Iface\"", "\"1.0.0\"" }
+                        : new[] { "\"UDT_Motor\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                }
+                // 201: project library with master copies (FB, UDT, tag table); in V20 also a released type FC_Iface 1.0.0
+                if (sample.Contains("_201_"))
+                    foreach (var s in sample.StartsWith("v20", StringComparison.Ordinal)
+                        ? new[] { "\"FB_Iface\"", "\"UDT_Motor\"", "\"TagTable_1\"", "LibraryMasterCopyData", "CodeBlockLibraryType", "\"1.0.0\"" }
+                        : new[] { "\"FB_Iface\"", "\"UDT_Motor\"", "\"TagTable_1\"", "LibraryMasterCopyData" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 102: alarm control, gauge, trend control, data log with logging tag, global script module
+                if (sample.Contains("_102_"))
+                    foreach (var s in new[] { "\"AlarmControl_1\"", "\"Gauge_1\"", "\"Trend_1\"", "\"DataLog_1\"", "\"HmiTag_Int_Log\"", "\"Module_1\"", "return a + b" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 101: WinCC Unified panel with screen items, HMI tag bound to the I/O field, discrete alarm
+                if (sample.Contains("_101_"))
+                    foreach (var s in new[] { "\"Screen_1\"", "\"Button_1\"", "\"IOField_1\"", "\"Rect_1\"", "\"Text_1\"", "\"Bar_1\"", "\"HmiTag_Int\"", "\"Alarm_Disc_1\"", "\"Tank level high\"", "\"0xFF3366CC\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 008: force table entry %Q0.0 Bool TRUE (as 078)
+                if (sample.Contains("_008_"))
+                    foreach (var s in new[] { "\"%Q0.0:P\"", "\"Force table\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                // 007: technology object with DynamicDefaults.Velocity 750, OPC UA server interface, ProDiag FB
+                if (sample.Contains("_007_"))
+                    foreach (var s in new[] { "\"TO_Speed\"", "\"startValue\": \"750.0\"", "\"SI_Test\"", "\"ProDiag_FB\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                if (sample.Contains("_005_"))
+                    foreach (var s in new[] { "\"WT_Test\"", "\"Unit_A\"", "\"Unit_B\"", "\"FB_Alarm_DB\"", "\"FB_Iface_DB\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+                if (sample.Contains("_006_"))
+                    foreach (var s in new[] { "\"Pump overload\"", "\"Check the motor protection\"", "\"TL_Test\"", "\"Off\"", "\"On\"" })
+                        c.True(json.Contains(s, StringComparison.Ordinal), sample + " contains " + s);
+            }
+            if (Directory.Exists(Path.Combine(dir, sample + "_truth")))
+                DbSymbols(c, sample);
+        }
         c.Done();
     }
 
@@ -369,7 +462,7 @@ public static class ProjectTests
 
     static Dictionary<string, PyDict> ParsedBlocks(string sample)
     {
-        using var p = TiaProject.Open(Path.Combine(Program.Root, "samples", sample + ".zap21"));
+        using var p = TiaProject.Open(Program.SampleArchive(sample) ?? throw new TestFailure("no archive of sample " + sample));
         var objs = new Dictionary<string, PyDict>();
         void Walk(object? o)
         {
@@ -413,8 +506,8 @@ public static class ProjectTests
             if (b.Get("interface") is List<object?> { Count: > 0 })
                 foreach (var sec in ((List<object?>)b["interface"]!).Cast<PyDict>())
                     Flat((List<object?>)sec["members"]!, "", got);
-            else
-                Flat((List<object?>)b["members"]!, "", got);
+            else if (b.Get("members") is List<object?> members)
+                Flat(members, "", got);
             var exp = new Dictionary<string, (string? Type, string? Start, Dictionary<string, string?> Elems)>();
             var itf = XDocument.Load(f).Descendants().First(e => e.Name.LocalName == "Interface");
             // a technology object type nests the sections of its base type in Section "Base" (072: TO_SynchronousAxis
