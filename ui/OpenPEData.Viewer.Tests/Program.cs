@@ -1,4 +1,7 @@
 using System.Globalization;
+using System.Text.Json.Nodes;
+using System.Windows;
+using System.Windows.Controls;
 using OpenPEData.Viewer;
 
 namespace OpenPEData.Viewer.Tests;
@@ -36,6 +39,34 @@ public static class Program
         Eq("rgba(145,146,153,0.502)", Eval($"Converter.RGBA(Converter.Darker({half}, 0.4))"), $"{mode}: RGBA of the darker half transparent color");
     }
 
+    /// <summary>Trend and function trend control without stored parts (sample 173): the default trend area is drawn
+    /// with value axis labels 0..100, time or value labels below, and every tool bar button that fits carries a symbol.</summary>
+    static void TrendControls(string mode)
+    {
+        var screen = JsonNode.Parse("""{"name":"Screen_1","width":800,"height":480}""")!.AsObject();
+        var items = JsonNode.Parse("""
+            [{"name":"Trend_1","type":"HmiTrendControl","left":10,"width":380,"height":300,"properties":{"Left":10,"Top":10,"Width":380,"Height":300}},
+             {"name":"FTrend_1","type":"HmiFunctionTrendControl","left":410,"width":380,"height":300,"properties":{"Left":410,"Top":10,"Width":380,"Height":300}}]
+            """)!.AsArray().Select(n => n!).ToList();
+        var canvas = ScreenRenderer.Render(screen, items);
+        var texts = new List<string>();
+        var symbols = 0;
+        void Walk(object o)
+        {
+            if (o is TextBlock tb) texts.Add(tb.Text);
+            if (o is Viewbox { Child: Canvas { Children.Count: 1 } c } && c.Children[0] is System.Windows.Shapes.Path) symbols++;
+            if (o is DependencyObject d)
+                foreach (var child in LogicalTreeHelper.GetChildren(d)) Walk(child);
+        }
+        Walk(canvas);
+        Eq(true, texts.Contains("100") && texts.Contains("0"), $"{mode}: value axis labels 0 and 100");
+        Eq(true, texts.Count(t => System.Text.RegularExpressions.Regex.IsMatch(t, @"^\d{1,2}/\d{1,2}/\d{4}\n\d{1,2}:\d{2}:\d{2} [AP]M$")) >= 2,
+            $"{mode}: time axis labels date and time (M/d/yyyy, h:mm:ss tt)");
+        Eq(true, texts.Contains("Legend:"), $"{mode}: legend heading");
+        Eq(true, texts.Contains("50"), $"{mode}: function trend bottom axis label 50");
+        Eq(14, symbols, $"{mode}: tool bar symbols (the 7 buttons that fit into 380 px per control)");
+    }
+
     [STAThread]
     public static int Main()
     {
@@ -46,6 +77,7 @@ public static class Program
             {
                 ScreenRenderer.RuntimeVisibility = runtime;
                 DarkerLighterKeepAlpha(runtime ? "runtime" : "editor");
+                TrendControls(runtime ? "runtime" : "editor");
             }
         }
         finally

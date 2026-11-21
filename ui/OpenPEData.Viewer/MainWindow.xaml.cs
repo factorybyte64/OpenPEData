@@ -158,7 +158,8 @@ public partial class MainWindow : Window
                     foreach (var r in v.Cast<System.Data.DataRowView>().Take(60))
                         sb.AppendLine(string.Join(" | ", r.Row.ItemArray.Select(x => x is DBNull ? "" : x?.ToString())));
                 break;
-            case Viewbox vb:
+            case DockPanel dp when dp.Children.OfType<Viewbox>().FirstOrDefault() is { } vb:
+                sb.AppendLine("Buttons: " + string.Join(", ", dp.Children.OfType<Button>().Select(b => b.Content)));
                 var canvas = ((vb.Child as Border)?.Child as Canvas)?.Children.OfType<Canvas>().FirstOrDefault();
                 sb.AppendLine($"Preview {canvas?.Width}x{canvas?.Height}, objects {canvas?.Children.Count}");
                 foreach (var b in canvas?.Children.OfType<Border>() ?? [])

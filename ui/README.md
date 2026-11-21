@@ -62,7 +62,7 @@ Secrets (passwords, encrypted keys, certificate stores) are already output by th
 | Properties | scalar fields, nested fields with a dot (`comment.en-US`) |
 | Interface / Elements | tags with section, data type, start value, comment; Struct/UDT elements indented with path |
 | Networks | SCL source text or LAD/FBD parts, operands and wires |
-| Preview | screens and faceplate versions to scale with position, size and background color of the objects |
+| Preview | screens and faceplate versions to scale with position, size and background color of the objects; "Export PNG…" saves the screen at its original size (1 screen pixel = 1 image pixel), the same image as `--screen-png` |
 | Lists | every further object list as a sortable table (tags, screen items, alarms, versions, faceplate interface, local faceplate tags …) |
 | Used by / Uses | usages of a block, PLC data type or screen from XRef.db (instructions with names such as `R_TRIG`); loads the cross-references when first opened |
 | Usages | on a tag table, every usage of its tags; loads the cross-references when first opened |

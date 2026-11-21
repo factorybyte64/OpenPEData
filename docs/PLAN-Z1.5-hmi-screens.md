@@ -90,7 +90,7 @@ Each step comprises:
 | R4 | done | Circle, ellipse, arcs, segments, polyline, polygon |
 | R5 | done | Layers, rotation, visibility, styles (Extended/Flat), gradients ±1 step |
 | R6 | largely | Group, screen window frame; faceplate container with content of the type version and static interface values of the instance. Open: content of custom widgets (package format not interpreted, widget content outside what Openness reads) and embedded screen in the screen window |
-| R7 | largely | Lists and groups, window frames of the controls with tables, toolbar buttons and row headers, process diagnostics grid, scales (arcDial/straightDial) with marker and value knob. Open: icons and column names (runtime-internal, not in the file), trend contents. Thresholds and segmented bar modes since 2026-11-08 (sample 171, runtime comparison) |
+| R7 | largely | Lists and groups, window frames of the controls with tables, toolbar buttons and row headers, process diagnostics grid, scales (arcDial/straightDial) with marker and value knob. Since 2026-11-20: trend and function trend areas (value and time axes, grid, legend; default compositions from sample 173) and simple tool bar symbols of our own (the runtime icons are not in the file; user decision 2026-11-20). Open: column names (runtime-internal, not in the file). Thresholds and segmented bar modes since 2026-11-08 (sample 171, runtime comparison) |
 | R8 | done | F01 (7 screens) and F40 (126 screens) render without crashing; 164 against runtime 27.33 % → 2.91 % differing pixels (remainder: icons, font smoothing, time of day) |
 
 **Parser extensions along the way** (only values stored in the file):
@@ -103,7 +103,7 @@ Each step comprises:
 **Open:**
 - Runtime comparison of small gauges, bars and clocks as well as the horizontal scale: done (164 Screen_R8, 1.79 % differing pixels, see COVERAGE.md).
 - Screen window content: done (commit 77d6794d, the screen window shows its static screen).
-- Custom widget content.
+- Custom widget content: deferred (user decision 2026-11-20). The content is an HTML/JavaScript package; no sample holds a custom widget and Openness cannot create one.
 - Thresholds: drawn since 2026-11-08 and compared against the WinCC Unified runtime (sample 171, marks and range color, 1.7 % differing pixels); segmented bar modes also compared (1.8 %).
 
 ## Framework

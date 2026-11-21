@@ -1,5 +1,5 @@
 {
- "source": "samples\\165_hmi_item_defaults (TiaHmiUnified itemGet detail=full, MTP700 Unified Comfort, TIA V21); values of its style (ExtendedStyle) replaced from 166/167 or left out: object defaults without style; HmiProcessDiagnosisCriteriaAnalysisControl, -GraphOverviewControl, -PlcCodeViewerControl: itemGet full in the 164 working copy (WinCC Unified PC RT, ExtendedStyle), 2026-10-31, structure-defining properties only",
+ "source": "samples\\165_hmi_item_defaults (TiaHmiUnified itemGet detail=full, MTP700 Unified Comfort, TIA V21); values of its style (ExtendedStyle) replaced from 166/167 or left out: object defaults without style; HmiProcessDiagnosisCriteriaAnalysisControl, -GraphOverviewControl, -PlcCodeViewerControl: itemGet full in the 164 working copy (WinCC Unified PC RT, ExtendedStyle), 2026-10-31, structure-defining properties only; trend areas, axes and trend of HmiTrendControl and HmiFunctionTrendControl: Openness partGet in samples{_hmi_trend_control (truth trend_parts.json), 2026-11-20",
  "screen": {
   "AlternateBackColor": "0xFFEBEBEB",
   "BackFillPattern": "Solid",
@@ -612,7 +612,84 @@
    },
    "Visible": true,
    "Width": 640,
-   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose",
+   "FunctionTrendAreas": [
+    {
+     "BackColor": "0xFFFFFFFF",
+     "GridLines": "VerticalMajor, HorizontalMajor",
+     "MajorGridLinesColor": "0xFFD9D9D9",
+     "MinorGridLinesColor": "0xFFD9D9D9",
+     "Ruler": {
+      "Color": "0xFF3C3C3B",
+      "Width": 1
+     },
+     "SizeFactor": 1,
+     "Visible": true,
+     "BottomValueAxes": [
+      {
+       "AutoRange": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "BeginValue": 0,
+       "EndValue": 100,
+       "DivisionCount": 10,
+       "SubDivisionCount": 1,
+       "LabelColor": "0xFF919299",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 14,
+        "Weight": "Normal"
+       },
+       "OutputFormat": "{I}",
+       "ScaleMode": "Labels, Ticks",
+       "ScalingType": "Linear",
+       "TickColor": "0xFF1C1F30",
+       "Visible": true
+      }
+     ],
+     "LeftValueAxes": [
+      {
+       "AutoRange": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "BeginValue": 0,
+       "EndValue": 100,
+       "DivisionCount": 10,
+       "SubDivisionCount": 1,
+       "LabelColor": "0xFF575756",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 14,
+        "Weight": "Normal"
+       },
+       "OutputFormat": "{I}",
+       "ScaleMode": "Labels, Ticks",
+       "ScalingType": "Linear",
+       "TickColor": "0xFF1C1F30",
+       "Visible": true
+      }
+     ],
+     "FunctionTrends": [
+      {
+       "AlternateBackColor": "0x00FFFFFF",
+       "BackColor": "0xFF000000",
+       "BackFillPattern": "Transparent",
+       "DashType": "Solid",
+       "LineColor": "0xFF93C01F",
+       "LineWidth": 1,
+       "MarkerColor": "0xFF000000",
+       "MarkerDimension": 3,
+       "MarkerType": "None",
+       "PointCount": 120,
+       "RangeType": "TimeRange",
+       "TimeRangeBase": "Day",
+       "TimeRangeFactor": 1,
+       "TrendMode": "Interpolated",
+       "Visible": true
+      }
+     ]
+    }
+   ]
   },
   "HmiGauge": {
    "AlternateBackColor": "0xFF808080",
@@ -1562,7 +1639,76 @@
    },
    "Visible": true,
    "Width": 640,
-   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose",
+   "TrendAreas": [
+    {
+     "BackColor": "0xFFFFFFFF",
+     "GridLines": "VerticalMajor, HorizontalMajor",
+     "MajorGridLinesColor": "0xFFD9D9D9",
+     "MinorGridLinesColor": "0xFFD9D9D9",
+     "Ruler": {
+      "Color": "0xFF3C3C3B",
+      "Width": 1
+     },
+     "SizeFactor": 1,
+     "Visible": true,
+     "BottomTimeAxes": [
+      {
+       "AlwaysShowRecent": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "LabelColor": "0xFF575756",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 10,
+        "Weight": "Normal"
+       },
+       "PointCount": 120,
+       "RangeType": "TimeRange",
+       "ScaleMode": "Labels, Ticks",
+       "TickColor": "0xFF1C1F30",
+       "TimeRangeBase": "Minute",
+       "TimeRangeFactor": 1,
+       "Visible": true
+      }
+     ],
+     "LeftValueAxes": [
+      {
+       "AutoRange": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "BeginValue": 0,
+       "EndValue": 100,
+       "DivisionCount": 10,
+       "SubDivisionCount": 1,
+       "LabelColor": "0xFF575756",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 11,
+        "Weight": "Normal"
+       },
+       "OutputFormat": "{I}",
+       "ScaleMode": "Labels, Ticks",
+       "ScalingType": "Linear",
+       "TickColor": "0xFF1C1F30",
+       "Visible": true
+      }
+     ],
+     "Trends": [
+      {
+       "LineColor": "0xFF95C122",
+       "LineWidth": 1,
+       "DashType": "Solid",
+       "TrendMode": "Interpolated",
+       "BackColor": "0xFF93C01F",
+       "AlternateBackColor": "0xFFC5E876",
+       "BackFillPattern": "Transparent",
+       "MarkerType": "None",
+       "Visible": true
+      }
+     ]
+    }
+   ]
   },
   "HmiWebControl": {
    "BackColor": "0xFFCCCCCC",

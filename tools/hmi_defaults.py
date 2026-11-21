@@ -40,7 +40,10 @@ def style_of(sample):
                 if r:
                     return r
         return None
-    sw = find(Model(os.path.join(SAMPLES, sample)).to_dict())
+    path = os.path.join(SAMPLES, sample)
+    if not os.path.exists(path):
+        path += ".zap21"  # samples are kept as signed archives
+    sw = find(Model(path).to_dict())
     return ((sw or {}).get("style") or {}).get("values") or {}
 
 
@@ -105,6 +108,38 @@ def unstyle(values, typ, cls, base, alts):
     return n
 
 
+def add_trend_parts(items, path):
+    """Default compositions of the trend controls (sample 173_hmi_trend_control, Openness partGet): one trend area with
+    its axes and trend for HmiTrendControl and HmiFunctionTrendControl. Openness creates them with every new control;
+    the parser emits only stored parts, so the viewer needs them to draw the areas."""
+    with open(path, encoding="utf-8") as f:
+        t = json.load(f)
+
+    def part(o):
+        return {k: v for k, v in o.items() if k not in ("type", "compositions", "Name")}
+
+    for item, typ, key, subs in (("Trend_1", "HmiTrendControl", "TrendAreas", ("BottomTimeAxes", "LeftValueAxes", "Trends")),
+                                 ("FTrend_1", "HmiFunctionTrendControl", "FunctionTrendAreas", ("BottomValueAxes", "LeftValueAxes"))):
+        src = t[item]
+        area = part(src[key + "/#0"])
+        for sub in subs:
+            p = src[key + "/#0/" + sub + "/#0"]
+            area[sub] = [{k: v for k, v in p.items() if k != "type" and (sub == "Trends" or k != "Name")}]
+        if typ == "HmiFunctionTrendControl":
+            area["FunctionTrends"] = [FUNCTION_TREND]
+        if typ in items:
+            items[typ][key] = [area]
+
+
+# Default function trend of a new HmiFunctionTrendControl, read on the sample project of 173 after it was archived
+# (TiaHmiUnified partGet FTrend_1 FunctionTrendAreas/#0/FunctionTrends/#0, TIA V21, 2026-11-21); trend_parts.json of
+# 173 lists the composition but not its values. The runtime shows it in the legend as "Trend 1".
+FUNCTION_TREND = {"AlternateBackColor": "0x00FFFFFF", "BackColor": "0xFF000000", "BackFillPattern": "Transparent",
+                  "DashType": "Solid", "LineColor": "0xFF93C01F", "LineWidth": 1, "MarkerColor": "0xFF000000",
+                  "MarkerDimension": 3, "MarkerType": "None", "PointCount": 120, "RangeType": "TimeRange",
+                  "TimeRangeBase": "Day", "TimeRangeFactor": 1, "TrendMode": "Interpolated", "Visible": True}
+
+
 def main():
     items, screen = {}, None
     for fn in sorted(os.listdir(SRC)):
@@ -123,6 +158,9 @@ def main():
         r = unstyle(v, t, "HmiScreen" if t == "screen" else v.get("StyleItemClass") or t, base, alts)
         n = [n[0] + r[0], n[1] + r[1]]
     print("style values of 165: %d replaced from 166/167, %d left out" % tuple(n))
+    trends = os.path.join(SAMPLES, "173_hmi_trend_control_truth", "trend_parts.json")
+    if os.path.exists(trends):
+        add_trend_parts(items, trends)
     out = {"source": "samples\\165_hmi_item_defaults (TiaHmiUnified itemGet detail=full, MTP700 Unified Comfort, TIA V21); "
                      "values of its style (ExtendedStyle) replaced from 166/167 or left out: object defaults without style",
            "screen": screen, "items": items}

@@ -1,0 +1,23 @@
+{
+  "source": "TiaMcpXE TiaHmiUnified itemGet (detail full) and partGet on HMI_1/Screen_1, TIA Portal V21, 2026-11-20",
+  "Trend_1": {
+    "item": {"type": "HmiTrendControl", "Left": 10, "Top": 10, "Width": 380, "Height": 300, "AreaSpacing": 10, "BackColor": "0xFFFFFFFF", "CaptionColor": "0xFF91939A", "ShowRuler": true, "ShowStatisticRulers": false, "ExtendRulerToAxis": false, "Online": true, "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose",
+      "Caption": {"Font": {"Name": "SiemensSans", "Size": 14, "Weight": "Normal"}, "ForeColor": "0xFF000000", "Visible": true},
+      "Legend": {"Font": {"Name": "SiemensSans", "Size": 11, "Weight": "Normal"}, "ForeColor": "0xFF000000", "Visible": true},
+      "StatusBar": {"BackColor": "0xFFE6E6EB", "Font": {"Name": "SiemensSans", "Size": 10}, "Visible": true},
+      "ToolBar": {"BackColor": "0xFFFFFFFF", "Font": {"Name": "SiemensSans", "Size": 14}, "Visible": true},
+      "compositions": {"TrendAreas": 1}},
+    "TrendAreas/#0": {"type": "HmiTrendAreaPart", "Name": "TrendArea_1", "BackColor": "0xFFFFFFFF", "GridLines": "VerticalMajor, HorizontalMajor", "MajorGridLinesColor": "0xFFD9D9D9", "MinorGridLinesColor": "0xFFD9D9D9", "Ruler": {"Color": "0xFF3C3C3B", "Width": 1}, "SizeFactor": 1, "Visible": true,
+      "compositions": {"BottomTimeAxes": 1, "TopTimeAxes": 0, "Trends": 1, "LeftValueAxes": 1, "RightValueAxes": 0}},
+    "TrendAreas/#0/BottomTimeAxes/#0": {"type": "HmiTimeAxisPart", "Name": "Time axis - bottom_1", "AlwaysShowRecent": true, "AutoScaling": true, "AxisColor": "0xFF000000", "LabelColor": "0xFF575756", "LabelFont": {"Name": "SiemensSans", "Size": 10, "Weight": "Normal"}, "PointCount": 120, "RangeType": "TimeRange", "ScaleMode": "Labels, Ticks", "TickColor": "0xFF1C1F30", "TimeRangeBase": "Minute", "TimeRangeFactor": 1, "Visible": true},
+    "TrendAreas/#0/LeftValueAxes/#0": {"type": "HmiYValueAxisPart", "Name": "Left value axis_1", "AutoRange": true, "AutoScaling": true, "AxisColor": "0xFF000000", "BeginValue": 0, "EndValue": 100, "DivisionCount": 10, "SubDivisionCount": 1, "LabelColor": "0xFF575756", "LabelFont": {"Name": "SiemensSans", "Size": 11, "Weight": "Normal"}, "OutputFormat": "{I}", "ScaleMode": "Labels, Ticks", "ScalingType": "Linear", "TickColor": "0xFF1C1F30", "Visible": true},
+    "TrendAreas/#0/Trends/#0": {"type": "HmiTrendPart", "LineColor": "0xFF95C122", "LineWidth": 1, "DashType": "Solid", "TrendMode": "Interpolated", "BackColor": "0xFF93C01F", "AlternateBackColor": "0xFFC5E876", "BackFillPattern": "Transparent", "MarkerType": "None", "Visible": true}
+  },
+  "FTrend_1": {
+    "item": {"type": "HmiFunctionTrendControl", "Left": 410, "Top": 10, "Width": 380, "Height": 300, "compositions": {"FunctionTrendAreas": 1}},
+    "FunctionTrendAreas/#0": {"type": "HmiFunctionTrendAreaPart", "Name": "Function trend - area_1", "BackColor": "0xFFFFFFFF", "GridLines": "VerticalMajor, HorizontalMajor", "MajorGridLinesColor": "0xFFD9D9D9", "MinorGridLinesColor": "0xFFD9D9D9", "Ruler": {"Color": "0xFF3C3C3B", "Width": 1}, "SizeFactor": 1, "Visible": true,
+      "compositions": {"BottomValueAxes": 1, "FunctionTrends": 1, "TopValueAxes": 0, "LeftValueAxes": 1, "RightValueAxes": 0}},
+    "FunctionTrendAreas/#0/BottomValueAxes/#0": {"type": "HmiXValueAxisPart", "Name": "Bottom value axis_1", "AutoRange": true, "AutoScaling": true, "AxisColor": "0xFF000000", "BeginValue": 0, "EndValue": 100, "DivisionCount": 10, "SubDivisionCount": 1, "LabelColor": "0xFF919299", "LabelFont": {"Name": "SiemensSans", "Size": 14, "Weight": "Normal"}, "OutputFormat": "{I}", "ScaleMode": "Labels, Ticks", "ScalingType": "Linear", "TickColor": "0xFF1C1F30", "Visible": true},
+    "FunctionTrendAreas/#0/LeftValueAxes/#0": {"type": "HmiYValueAxisPart", "Name": "Left value axis_1", "AutoRange": true, "AutoScaling": true, "AxisColor": "0xFF000000", "BeginValue": 0, "EndValue": 100, "DivisionCount": 10, "SubDivisionCount": 1, "LabelColor": "0xFF575756", "LabelFont": {"Name": "SiemensSans", "Size": 14, "Weight": "Normal"}, "OutputFormat": "{I}", "ScaleMode": "Labels, Ticks", "ScalingType": "Linear", "TickColor": "0xFF1C1F30", "Visible": true}
+  }
+}

@@ -11,7 +11,7 @@ namespace OpenPEData.Viewer;
 /// <summary>Draws a WinCC Unified screen with its screen items (Z1.5). <see cref="Render"/> gives the screen at 1:1 in
 /// screen pixels; the preview tab wraps it in a scalable frame, <see cref="SavePng"/> and <see cref="Compare"/> serve
 /// the comparison with runtime / editor screenshots (options --screen-png, --compare).</summary>
-public static class ScreenRenderer
+public static partial class ScreenRenderer
 {
     /// <summary>Openness defaults per screen item type (HmiDefaults.json, built by tools\hmi_defaults.py from sample
     /// 165). Only for drawing: the parser output holds just what the file stores (decision User 2026-10-29).</summary>
@@ -400,17 +400,55 @@ public static class ScreenRenderer
         return canvas;
     }
 
-    /// <summary>Preview tab: the screen in a frame, scaled to the available space.</summary>
+    /// <summary>Preview tab: the screen in a frame, scaled to the available space, with a button that saves the screen
+    /// at 1:1 as PNG (the same image as the command line option --screen-png).</summary>
     public static UIElement Preview(JsonObject screen, IEnumerable<JsonNode> items)
     {
+        var list = items.ToList();
         var frame = new Border
         {
             BorderBrush = Brushes.Gray,
             BorderThickness = new Thickness(1),
-            Child = Render(screen, items),
+            Child = Render(screen, list),
             Margin = new Thickness(12),
         };
-        return new Viewbox { Child = frame, Stretch = Stretch.Uniform, StretchDirection = StretchDirection.Both };
+        var export = new Button
+        {
+            Content = "Export PNG…",
+            ToolTip = "Save the screen at its original size (1 screen pixel = 1 image pixel) as PNG",
+            Padding = new Thickness(10, 3, 10, 3),
+            Margin = new Thickness(12, 8, 12, 0),
+            HorizontalAlignment = HorizontalAlignment.Left,
+        };
+        export.Click += (_, _) => ExportPng(screen, list);
+        var panel = new DockPanel { LastChildFill = true };
+        DockPanel.SetDock(export, Dock.Top);
+        panel.Children.Add(export);
+        panel.Children.Add(new Viewbox { Child = frame, Stretch = Stretch.Uniform, StretchDirection = StretchDirection.Both });
+        return panel;
+    }
+
+    /// <summary>Asks for a file name and saves the screen at 1:1 as PNG.</summary>
+    private static void ExportPng(JsonObject screen, IReadOnlyList<JsonNode> items)
+    {
+        var name = TreeBuilder.Str(screen["name"]) ?? "screen";
+        var dlg = new Microsoft.Win32.SaveFileDialog
+        {
+            Title = "Export screen as PNG",
+            FileName = string.Concat(name.Select(ch => Path.GetInvalidFileNameChars().Contains(ch) ? '_' : ch)) + ".png",
+            DefaultExt = ".png",
+            Filter = "PNG image (*.png)|*.png",
+            AddExtension = true,
+        };
+        if (dlg.ShowDialog() != true) return;
+        try
+        {
+            SavePng(ToBitmap(Render(screen, items)), dlg.FileName);
+        }
+        catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+        {
+            MessageBox.Show($"The PNG could not be saved: {e.Message}", "Export PNG", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
     }
 
     /// <summary>Style values of an item type (StyleItemClass) in the selected style of the screen being drawn.</summary>
@@ -985,6 +1023,8 @@ public static class ScreenRenderer
             Canvas.SetTop(div, caption);
             c.Children.Add(div);
         }
+        if (type is "HmiTrendControl" or "HmiFunctionTrendControl")
+            TrendContent(c, p, type, iw, caption, bottom);
         if (type == "HmiScreenWindow" && ScreenWindowContent(p, iw, Math.Max(0, bottom - caption)) is { } content)
         {
             Canvas.SetTop(content, caption);
@@ -1122,7 +1162,8 @@ public static class ScreenRenderer
         for (var i = 0; i < tb.Buttons && x + bw <= iw; i++, x += bw + gap)
         {
             // Flat template: a button that cannot be operated (no data at rest, as most in the runtime) has opacity 0.6
-            var r = new Border { Width = bw, Height = bh, CornerRadius = new CornerRadius(flat ? 0 : 3), Background = fill, BorderBrush = stroke, BorderThickness = new Thickness(bwidth), Opacity = flat ? 0.6 : 1 };
+            var r = new Border { Width = bw, Height = bh, CornerRadius = new CornerRadius(flat ? 0 : 3), Background = fill, BorderBrush = stroke, BorderThickness = new Thickness(bwidth), Opacity = flat ? 0.6 : 1,
+                Child = ToolBarIcon(type, i, Brush(TreeBuilder.Str(part?["ForeColor"])), Math.Min(bw, bh)) };
             Canvas.SetLeft(r, x);
             Canvas.SetTop(r, top + mt);
             c.Children.Add(r);
