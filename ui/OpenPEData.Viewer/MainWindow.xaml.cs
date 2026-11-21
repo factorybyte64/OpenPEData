@@ -37,6 +37,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         Title = AppVersion.Title();
+        InitUpdates();
         DetailViews.CrossRefsPending = CrossRefsState;
         _filterTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(250) };
         _filterTimer.Tick += (_, _) =>

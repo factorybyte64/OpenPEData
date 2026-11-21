@@ -1,0 +1,18 @@
+<Window x:Class="OpenPEData.Viewer.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings – OpenPEData Viewer" SizeToContent="Height" Width="520" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        Background="{StaticResource PaneBg}" FontFamily="Segoe UI" FontSize="13">
+    <StackPanel Margin="16">
+        <TextBlock Text="Updates" FontSize="15" FontWeight="SemiBold"/>
+        <CheckBox x:Name="AutoCheckBox" Margin="0,10,0,0"
+                  Content="Check for updates automatically (at startup and every 12 hours)"/>
+        <CheckBox x:Name="PrereleaseBox" Margin="0,6,0,0" Content="Include pre-releases"/>
+        <TextBlock x:Name="UpdateHint" Margin="0,8,0,0" TextWrapping="Wrap" Foreground="{StaticResource Muted}"/>
+        <DockPanel Margin="0,18,0,0" LastChildFill="False">
+            <Button DockPanel.Dock="Right" Padding="14,4" Margin="6,0,0,0" IsCancel="True">Cancel</Button>
+            <Button DockPanel.Dock="Right" Padding="14,4" IsDefault="True" Click="OnOk">OK</Button>
+        </DockPanel>
+    </StackPanel>
+</Window>
