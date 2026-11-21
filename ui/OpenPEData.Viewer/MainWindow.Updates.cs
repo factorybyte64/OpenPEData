@@ -65,6 +65,9 @@ public partial class MainWindow
         var restartArgs = _path != null ? new[] { _path } : Array.Empty<string>();
         var dialog = new UpdateWindow(_availableUpdate?.Tag, restartArgs) { Owner = this };
         dialog.ShowDialog();
-        if (dialog.Fetched) ShowUpdateNotice(dialog.AvailableUpdate);
+        // the notice belongs to the automatic check: when it is off (setting, environment variable or development
+        // build) a check in the dialog does not bring the notice back
+        if (_updateTimer == null || !UpdateSettings.Load().AutoCheck) ShowUpdateNotice(null);
+        else if (dialog.Fetched) ShowUpdateNotice(dialog.AvailableUpdate);
     }
 }

@@ -28,6 +28,7 @@ public partial class UpdateWindow : Window
     private IReadOnlyList<ReleaseEntry>? _releases;
     private CancellationTokenSource? _installCts;
     private bool _initializing = true;
+    private DateTime _checkedAt;
 
     /// <summary>True after the release list was read from GitHub in this dialog.</summary>
     public bool Fetched => _releases != null;
@@ -68,10 +69,9 @@ public partial class UpdateWindow : Window
         try
         {
             _releases = await GitHubReleases.FetchAsync(CancellationToken.None);
-            var update = AvailableUpdate;
-            CheckStatus.Text = $"Checked at {DateTime.Now:HH:mm}: " +
-                (update != null ? $"{update.Label} is available." : "you have the newest version.");
-            Refresh(_preselectTag ?? update?.Tag);
+            _checkedAt = DateTime.Now;
+            ShowCheckResult();
+            Refresh(_preselectTag ?? AvailableUpdate?.Tag);
         }
         catch (Exception ex)
         {
@@ -81,6 +81,15 @@ public partial class UpdateWindow : Window
         {
             CheckButton.IsEnabled = _installCts == null;
         }
+    }
+
+    /// <summary>Result line of the last check; follows "Skip this version" and the pre-release setting.</summary>
+    private void ShowCheckResult()
+    {
+        if (_releases == null) return;
+        var update = AvailableUpdate;
+        CheckStatus.Text = $"Checked at {_checkedAt:HH:mm}: " +
+            (update != null ? $"{update.Label} is available." : "you have the newest version.");
     }
 
     private void Refresh(string? selectTag)
@@ -96,6 +105,7 @@ public partial class UpdateWindow : Window
             ?? rows.FirstOrDefault(r => r.Release.Version == _current)
             ?? rows.FirstOrDefault();
         if (ReleaseList.SelectedItem != null) ReleaseList.ScrollIntoView(ReleaseList.SelectedItem);
+        ShowCheckResult();
         UpdateActions();
     }
 
