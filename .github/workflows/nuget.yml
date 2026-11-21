@@ -1,0 +1,125 @@
+# Packs the library dotnet/src/OpenPEData and publishes OpenPEData.X.Y.Z.nupkg and .snupkg on nuget.org.
+#
+# Trigger: pushing a tag lib-vX.Y.Z (X.Y.Z must equal <Version> in dotnet/src/OpenPEData/OpenPEData.csproj), or
+# running the workflow by hand for an existing tag. The library has its own version, independent of the viewer and
+# its vX.Y.Z tags (release.yml), so a viewer release does not publish a package and vice versa. The full CI (ci.yml)
+# runs first; the package is only published when all tests pass. A version that is already on nuget.org is skipped.
+# Running by hand with "dry_run" packs only and keeps the package as a workflow artifact.
+#
+# Login: nuget.org Trusted Publishing (OIDC, short-lived key per run, no stored API key). Needs the repository
+# variable NUGET_USER (nuget.org profile name) and a Trusted Publishing policy on nuget.org for this repository and
+# the workflow file nuget.yml. Fallback: if the repository secret NUGET_API_KEY is set, it is used instead.
+name: NuGet
+
+on:
+  push:
+    tags: ['lib-v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to publish (e.g. lib-v0.2.0)'
+        required: true
+      dry_run:
+        description: 'Pack only, do not push to nuget.org'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nuget-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+    with:
+      ref: ${{ inputs.tag || github.ref }}
+
+  publish:
+    name: Pack and publish on nuget.org
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: nuget
+    permissions:
+      contents: read
+      id-token: write # nuget.org Trusted Publishing
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      DOTNET_NOLOGO: 'true'
+      DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          fetch-depth: 1
+          # the package needs no samples: skip the ~590 MB
+          sparse-checkout: |
+            /*
+            !/samples/
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Check tag against the library version
+        id: version
+        shell: pwsh
+        run: |
+          if ($env:TAG -notmatch '^lib-v(\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?)$') {
+              throw "Tag '$env:TAG' does not have the form lib-vX.Y.Z"
+          }
+          $tagVersion = $Matches[1]
+          [xml]$proj = Get-Content -LiteralPath dotnet/src/OpenPEData/OpenPEData.csproj
+          $projVersion = ($proj.Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1).Trim()
+          if ($tagVersion -ne $projVersion) {
+              throw "Tag $env:TAG does not match <Version>$projVersion</Version> in OpenPEData.csproj"
+          }
+          "version=$tagVersion" >> $env:GITHUB_OUTPUT
+
+      - name: Pack
+        run: dotnet pack dotnet/src/OpenPEData/OpenPEData.csproj -c Release -o artifacts/nuget
+
+      - name: Check package
+        shell: pwsh
+        run: |
+          $v = '${{ steps.version.outputs.version }}'
+          foreach ($f in "OpenPEData.$v.nupkg", "OpenPEData.$v.snupkg") {
+              if (-not (Test-Path -LiteralPath "artifacts/nuget/$f")) { throw "Missing artifacts/nuget/$f" }
+          }
+          Get-ChildItem artifacts/nuget | Format-Table Name, Length
+
+      - name: Upload package as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OpenPEData-nuget-${{ steps.version.outputs.version }}
+          path: artifacts/nuget/*
+
+      - name: nuget.org login (Trusted Publishing)
+        id: login
+        if: ${{ !inputs.dry_run && vars.NUGET_USER != '' }}
+        uses: NuGet/login@v1
+        with:
+          user: ${{ vars.NUGET_USER }}
+
+      - name: Push to nuget.org
+        if: ${{ !inputs.dry_run }}
+        shell: pwsh
+        env:
+          OIDC_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+          STORED_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          $key = if ($env:STORED_KEY) { $env:STORED_KEY } else { $env:OIDC_KEY }
+          if (-not $key) {
+              throw 'No nuget.org key: set the repository variable NUGET_USER (Trusted Publishing) or the secret NUGET_API_KEY'
+          }
+          $v = '${{ steps.version.outputs.version }}'
+          # the .snupkg next to the .nupkg is pushed to the symbol server automatically
+          dotnet nuget push "artifacts/nuget/OpenPEData.$v.nupkg" --api-key $key `
+              --source https://api.nuget.org/v3/index.json --skip-duplicate
+          if ($LASTEXITCODE -ne 0) { throw "dotnet nuget push failed with exit code $LASTEXITCODE" }
+          "Published: https://www.nuget.org/packages/OpenPEData/$v" >> $env:GITHUB_STEP_SUMMARY
