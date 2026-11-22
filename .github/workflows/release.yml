@@ -1,5 +1,5 @@
 # Builds the viewer setup for a tag vX.Y.Z (X.Y.Z = <Version> in OpenPEData.Viewer.csproj) after CI and attaches it
-# with the update package to the GitHub release. Optional secret OPENPEDATA_SIGN_PARAMS for code signing.
+# with the update package to a draft GitHub release (notes: .github/release-notes/<tag>.md). Optional secret OPENPEDATA_SIGN_PARAMS for code signing.
 name: Release
 
 on:
@@ -101,7 +101,12 @@ jobs:
               gh release upload $env:TAG @files --clobber --repo $env:GITHUB_REPOSITORY
           }
           else {
-              gh release create $env:TAG @files --verify-tag --title "OpenPEData $env:TAG" --generate-notes --repo $env:GITHUB_REPOSITORY
+              # created as draft: published by hand after the assets are checked; notes from .github/release-notes/<tag>.md
+              $notes = ".github/release-notes/$env:TAG.md"
+              if (-not (Test-Path -LiteralPath $notes)) {
+                  throw "Release notes not found: $notes"
+              }
+              gh release create $env:TAG @files --verify-tag --draft --title "OpenPEData $env:TAG" --notes-file $notes --repo $env:GITHUB_REPOSITORY
           }
           if ($LASTEXITCODE -ne 0) {
               throw "gh release failed with exit code $LASTEXITCODE"
