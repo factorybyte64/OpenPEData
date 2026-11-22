@@ -1,0 +1,22 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl010"
+    VAR_INPUT
+        v_t_no : Timer;
+        v_s : Bool;
+        v_tv : S5Time;
+        v_r : Bool;
+    END_VAR
+    VAR_OUTPUT
+        v_q : Bool;
+        v_bi : Word;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #v_bi := S_PEXT(T_NO := #v_t_no, S := #v_s, TV := #v_tv, R := #v_r, Q => #v_q);
+    END_NETWORK
+END_FUNCTION_BLOCK

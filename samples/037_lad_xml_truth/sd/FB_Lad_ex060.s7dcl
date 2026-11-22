@@ -1,0 +1,28 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex060"
+    VAR_INPUT
+        v_laddr : HW_IO;
+        v_ret_val : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_record : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            DPRD_DAT(
+                LADDR := #v_laddr,
+                RET_VAL => #v_ret_val,
+                RECORD => #v_record
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,19 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl043"
+    VAR_INPUT
+        v_in : Array[0..9] of Date;
+        v_count : USInt;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Array[0..9] of Date;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        UMOVE_BLK(IN := #v_in[0], COUNT := #v_count, OUT => #v_out[0]);
+    END_NETWORK
+END_FUNCTION_BLOCK

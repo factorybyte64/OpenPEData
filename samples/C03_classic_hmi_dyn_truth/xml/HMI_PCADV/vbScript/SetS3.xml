@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-22T02:34:49.0208Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.RuntimeScripting.VBScript ID="0">
+    <AttributeList>
+      <Code>SmartTags("D_State") = 3
+SmartTags("D_Bool") = True
+SmartTags("D_SInt") = 127
+SmartTags("D_Int") = 32767
+SmartTags("D_DInt") = 2147483647
+SmartTags("D_USInt") = 255
+SmartTags("D_UInt") = 65535
+SmartTags("D_UDInt") = 4294967295
+SmartTags("D_Real") = 123456.789
+SmartTags("D_LReal") = 1E+300
+SmartTags("D_String") = "Ünïcödé äöüß ÄÖÜ € – long text that is wider than the field 0123456789 ABCDEFGHIJ"
+SmartTags("D_DateTime") = DateSerial(2099, 12, 31) + TimeSerial(23, 59, 59)
+SmartTags("D_Pct") = 100
+SmartTags("D_Range") = 75
+SmartTags("D_Bits") = 4
+SmartTags("D_Vis") = True
+SmartTags("D_En") = False
+SmartTags("D_X") = 682
+SmartTags("D_Y") = 384
+SmartTags("D_Max") = 50
+SmartTags("D_Min") = -50
+SmartTags("D_TL") = 10
+SmartTags("D_BarR") = 5
+</Code>
+      <Name>SetS3</Name>
+      <PreCode>
+
+</PreCode>
+      <Type>Sub</Type>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </Hmi.RuntimeScripting.VBScript>
+</Document>

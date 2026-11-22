@@ -1,0 +1,81 @@
+using System.Windows;
+using System.Windows.Threading;
+using OpenPEData.Viewer.Updates;
+
+namespace OpenPEData.Viewer;
+
+/// <summary>Auto-updater of the main window: background check against the GitHub releases at startup and every
+/// 12 hours (opt-out in "Updates…"), a notice button in the toolbar, and the dialog for any version up or down.</summary>
+public partial class MainWindow
+{
+    private ReleaseEntry? _availableUpdate;
+    private DispatcherTimer? _updateTimer;
+
+    private void InitUpdates()
+    {
+        // no network checks for command line runs (--dump, --snapshot, --screen-png), development builds or when
+        // turned off for the machine
+        var args = Environment.GetCommandLineArgs();
+        if (args.Any(a => a is "--dump" or "--snapshot" or "--screen-png")) return;
+        if (AppUpdater.AutoCheckDisabledByEnvironment || !AppUpdater.IsInstalled) return;
+        Loaded += async (_, _) =>
+        {
+            await Task.Delay(TimeSpan.FromSeconds(3));  // the project opens first
+            await AutoCheckUpdatesAsync();
+        };
+        _updateTimer = new DispatcherTimer { Interval = TimeSpan.FromHours(12) };
+        _updateTimer.Tick += async (_, _) => await AutoCheckUpdatesAsync();
+        _updateTimer.Start();
+    }
+
+    private async Task AutoCheckUpdatesAsync()
+    {
+        var settings = UpdateSettings.Load();  // the dialog may have changed it
+        if (!settings.AutoCheck) return;
+        try
+        {
+            var releases = await GitHubReleases.FetchAsync(CancellationToken.None);
+            ShowUpdateNotice(GitHubReleases.FindUpdate(releases, AppUpdater.CurrentVersion, settings.IncludePrereleases, settings.SkippedVersion));
+        }
+        catch
+        {
+            // offline, proxy, rate limit: silent; "Updates…" shows the error
+        }
+    }
+
+    private void ShowUpdateNotice(ReleaseEntry? update)
+    {
+        _availableUpdate = update;
+        UpdateNotice.Visibility = update == null ? Visibility.Collapsed : Visibility.Visible;
+        if (update == null) return;
+        UpdateNotice.Content = $"Update {update.Label} available";
+        UpdateNotice.ToolTip = $"{update.Title}: show the release notes and install";
+    }
+
+    private void OnSettings(object sender, RoutedEventArgs e) => ShowSettings(null);
+
+    /// <summary>Opens the settings dialog (optionally on one page) and applies what changed.</summary>
+    private async void ShowSettings(string? page)
+    {
+        var dialog = new SettingsWindow(page) { Owner = this };
+        if (dialog.ShowDialog() != true) return;
+        if (dialog.RestartNeeded)
+            MessageBox.Show(this, "The rendering setting applies after the viewer is started again.", "Settings – OpenPEData Viewer",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        if (dialog.ShowUpdatesRequested) OnUpdates(this, new RoutedEventArgs());
+        var settings = UpdateSettings.Load();
+        if (!settings.AutoCheck) ShowUpdateNotice(null);         // turned off: no notice any more
+        else if (_updateTimer != null) await AutoCheckUpdatesAsync();  // on (or pre-releases changed): check at once
+    }
+
+    private void OnUpdates(object sender, RoutedEventArgs e)
+    {
+        var restartArgs = _path != null ? new[] { _path } : Array.Empty<string>();
+        var dialog = new UpdateWindow(_availableUpdate?.Tag, restartArgs) { Owner = this };
+        dialog.ShowDialog();
+        // the notice belongs to the automatic check: when it is off (setting, environment variable or development
+        // build) a check in the dialog does not bring the notice back
+        if (_updateTimer == null || !UpdateSettings.Load().AutoCheck) ShowUpdateNotice(null);
+        else if (dialog.Fetched) ShowUpdateNotice(dialog.AvailableUpdate);
+    }
+}

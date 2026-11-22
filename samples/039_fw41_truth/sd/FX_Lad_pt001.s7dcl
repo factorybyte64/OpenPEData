@@ -1,0 +1,116 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FX_Lad_pt001"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+        "ib" : Int;
+        ic : Int;
+        da : DInt;
+        "db" : DInt;
+        ra : Real;
+        rb : Real;
+        wa : Word;
+        wb : Word;
+        dwa : DWord;
+        ba : Byte;
+        ta : Time;
+        tb : Time;
+        s1 : String;
+        s2 : String;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+        dout : DInt;
+        rout : Real;
+        wout : Word;
+        dwout : DWord;
+        bout : Byte;
+        tout : Time;
+        sout : String;
+    END_VAR
+    VAR_IN_OUT
+        p_req : Bool;
+        p_port : PORT;
+        p_protocol : UInt;
+        p_baud : UInt;
+        p_parity : UInt;
+        p_databits : UInt;
+        p_stopbits : UInt;
+        p_flowctrl : UInt;
+        p_xonchar : Char;
+        p_xoffchar : Char;
+        p_waittime : UInt;
+        p_done : Bool;
+        p_error : Bool;
+        p_status : Word;
+        x_usint : USInt;
+        arr : Array[0..9] of Int;
+        barr : Array[0..7] of Bool;
+        iinout : Int;
+    END_VAR
+    VAR
+        { S7_Setpoint := "False" }
+        inst : Port_Config;
+        ton1 : TON_TIME;
+        tof1 : TOF_TIME;
+        tp1 : TP_TIME;
+        tonr1 : TONR_TIME;
+        ctu1 : CTU_INT;
+        ctd1 : CTD_INT;
+        ctud1 : CTUD_INT;
+        rtrig1 : R_TRIG;
+        ftrig1 : F_TRIG;
+        edge1 : Bool;
+        edge2 : Bool;
+        stat1 : Bool;
+        stat2 : Bool;
+        stati : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Bool;
+        t2 : Bool;
+        ti : Int;
+        td : DInt;
+        tr : Real;
+        tw : Word;
+        tt : Time;
+        var1 : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3EL"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.Port_Config(
+                REQ := #p_req,
+                PORT := #p_port,
+                PROTOCOL := #p_protocol,
+                BAUD := #p_baud,
+                PARITY := #p_parity,
+                DATABITS := #p_databits,
+                STOPBITS := #p_stopbits,
+                FLOWCTRL := #p_flowctrl,
+                XONCHAR := #p_xonchar,
+                XOFFCHAR := #p_xoffchar,
+                WAITTIME := #p_waittime,
+                MODE := #x_usint,
+                LINE_PRE := #x_usint,
+                BRK_DET := #x_usint,
+                DONE => #p_done,
+                ERROR => #p_error,
+                STATUS => #p_status
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

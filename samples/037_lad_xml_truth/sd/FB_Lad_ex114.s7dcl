@@ -1,0 +1,32 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex114"
+    VAR_INPUT
+        v_prgflt_query : DWord;
+        v_accflt_query : DWord;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_prgflt_clr : DWord;
+        v_accflt_clr : DWord;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            READ_ERR(
+                PRGFLT_QUERY := #v_prgflt_query,
+                ACCFLT_QUERY := #v_accflt_query,
+                RET_VAL => #v_ret_val,
+                PRGFLT_CLR => #v_prgflt_clr,
+                ACCFLT_CLR => #v_accflt_clr
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

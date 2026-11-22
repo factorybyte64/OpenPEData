@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-11T00:48:23.7852385Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="v_o_cmd" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_c_cmd" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_s_cmd" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_o_fb" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_c_fb" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="Output">
+            <Member Name="v_oo" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_co" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_oa" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_ca" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_q" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="InOut" />
+          <Section Name="Static">
+            <Member Name="inst" Datatype="MCAT" Version="2.1" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="O_CMD" Datatype="Bool" />
+                  <Member Name="C_CMD" Datatype="Bool" />
+                  <Member Name="S_CMD" Datatype="Bool" />
+                  <Member Name="O_FB" Datatype="Bool" />
+                  <Member Name="C_FB" Datatype="Bool" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="OO" Datatype="Bool" />
+                  <Member Name="CO" Datatype="Bool" />
+                  <Member Name="OA" Datatype="Bool" />
+                  <Member Name="CA" Datatype="Bool" />
+                  <Member Name="Q" Datatype="Bool" />
+                </Section>
+                <Section Name="InOut" />
+                <Section Name="Static">
+                  <Member Name="ET" Datatype="DInt" />
+                  <Member Name="PT" Datatype="DInt" />
+                  <Member Name="PREV_TIME" Datatype="DWord" />
+                  <Member Name="O_HIS" Datatype="Bool" />
+                  <Member Name="C_HIS" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_Scl_sl114</Name>
+      <Namespace />
+      <Number>198</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Access Scope="LocalVariable" UId="21">
+                <Symbol UId="22">
+                  <Component Name="inst" UId="23" />
+                </Symbol>
+              </Access>
+              <Access Scope="Call" UId="24">
+                <Instruction UId="25">
+                  <Token Text="(" UId="26" />
+                  <Parameter Name="O_CMD" UId="27">
+                    <Blank Num="1" UId="28" />
+                    <Token Text=":=" UId="29" />
+                    <Blank Num="1" UId="30" />
+                    <Access Scope="LocalVariable" UId="31">
+                      <Symbol UId="32">
+                        <Component Name="v_o_cmd" UId="33" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="34" />
+                  <Blank Num="1" UId="35" />
+                  <Parameter Name="C_CMD" UId="36">
+                    <Blank Num="1" UId="37" />
+                    <Token Text=":=" UId="38" />
+                    <Blank Num="1" UId="39" />
+                    <Access Scope="LocalVariable" UId="40">
+                      <Symbol UId="41">
+                        <Component Name="v_c_cmd" UId="42" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="43" />
+                  <Blank Num="1" UId="44" />
+                  <Parameter Name="S_CMD" UId="45">
+                    <Blank Num="1" UId="46" />
+                    <Token Text=":=" UId="47" />
+                    <Blank Num="1" UId="48" />
+                    <Access Scope="LocalVariable" UId="49">
+                      <Symbol UId="50">
+                        <Component Name="v_s_cmd" UId="51" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="52" />
+                  <Blank Num="1" UId="53" />
+                  <Parameter Name="O_FB" UId="54">
+                    <Blank Num="1" UId="55" />
+                    <Token Text=":=" UId="56" />
+                    <Blank Num="1" UId="57" />
+                    <Access Scope="LocalVariable" UId="58">
+                      <Symbol UId="59">
+                        <Component Name="v_o_fb" UId="60" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="61" />
+                  <Blank Num="1" UId="62" />
+                  <Parameter Name="C_FB" UId="63">
+                    <Blank Num="1" UId="64" />
+                    <Token Text=":=" UId="65" />
+                    <Blank Num="1" UId="66" />
+                    <Access Scope="LocalVariable" UId="67">
+                      <Symbol UId="68">
+                        <Component Name="v_c_fb" UId="69" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="70" />
+                  <Blank Num="1" UId="71" />
+                  <Parameter Name="OO" UId="72">
+                    <Blank Num="1" UId="73" />
+                    <Token Text="=&gt;" UId="74" />
+                    <Blank Num="1" UId="75" />
+                    <Access Scope="LocalVariable" UId="76">
+                      <Symbol UId="77">
+                        <Component Name="v_oo" UId="78" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="79" />
+                  <Blank Num="1" UId="80" />
+                  <Parameter Name="CO" UId="81">
+                    <Blank Num="1" UId="82" />
+                    <Token Text="=&gt;" UId="83" />
+                    <Blank Num="1" UId="84" />
+                    <Access Scope="LocalVariable" UId="85">
+                      <Symbol UId="86">
+                        <Component Name="v_co" UId="87" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="88" />
+                  <Blank Num="1" UId="89" />
+                  <Parameter Name="OA" UId="90">
+                    <Blank Num="1" UId="91" />
+                    <Token Text="=&gt;" UId="92" />
+                    <Blank Num="1" UId="93" />
+                    <Access Scope="LocalVariable" UId="94">
+                      <Symbol UId="95">
+                        <Component Name="v_oa" UId="96" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="97" />
+                  <Blank Num="1" UId="98" />
+                  <Parameter Name="CA" UId="99">
+                    <Blank Num="1" UId="100" />
+                    <Token Text="=&gt;" UId="101" />
+                    <Blank Num="1" UId="102" />
+                    <Access Scope="LocalVariable" UId="103">
+                      <Symbol UId="104">
+                        <Component Name="v_ca" UId="105" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="106" />
+                  <Blank Num="1" UId="107" />
+                  <Parameter Name="Q" UId="108">
+                    <Blank Num="1" UId="109" />
+                    <Token Text="=&gt;" UId="110" />
+                    <Blank Num="1" UId="111" />
+                    <Access Scope="LocalVariable" UId="112">
+                      <Symbol UId="113">
+                        <Component Name="v_q" UId="114" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="115" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="116" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

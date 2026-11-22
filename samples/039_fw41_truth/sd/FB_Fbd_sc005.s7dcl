@@ -1,0 +1,45 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_sc005"
+    VAR_INPUT
+        v_req : Bool;
+        v_r : Bool;
+        v_id : CONN_PRG;
+        v_r_id : CONN_R_ID;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_sd_1 : Array[0..99] of Byte;
+        v_len : Word;
+    END_VAR
+    VAR
+        inst : BSEND;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            #inst.BSEND(
+                REQ := #v_req,
+                R := #v_r,
+                ID := #v_id,
+                R_ID := #v_r_id,
+                DONE => #v_done,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                SD_1 := #v_sd_1,
+                LEN := #v_len
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

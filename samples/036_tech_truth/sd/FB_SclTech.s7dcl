@@ -1,0 +1,23 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_SclTech"
+    VAR_INPUT
+        sp : Real;
+        pv : Real;
+    END_VAR
+    VAR_OUTPUT
+        outv : Real;
+        err : Bool;
+    END_VAR
+
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_T1"
+    }
+    NETWORK
+        "PID_Comp_2_3"(Setpoint := #sp, Input := #pv, Output => #outv, Error => #err);
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,108 @@
+﻿FUNCTION_BLOCK "FB_StlTimer"
+TITLE = STL catalog FB_StlTimer
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR 
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 024 FR
+      A #a;
+      FR "Tag__639296449666761157";
+NETWORK
+TITLE = 025 L
+      L "Tag__639296449666761157";
+      T #wr;
+NETWORK
+TITLE = 026 LC
+      LC "Tag__639296449666761157";
+      T #wr;
+NETWORK
+TITLE = 027 R
+      A #a;
+      R "Tag__639296449666761157";
+NETWORK
+TITLE = 028 SP
+      A #a;
+      L S5T#1S;
+      SP "Tag__639296449666761157";
+NETWORK
+TITLE = 029 SE
+      A #a;
+      L S5T#2S;
+      SE "Tag__639296449667118790";
+NETWORK
+TITLE = 030 SD
+      A #a;
+      L S5T#3S;
+      SD "Tag__639296449667279911";
+NETWORK
+TITLE = 031 SS
+      A #a;
+      L S5T#4S;
+      SS "Tag__639296449667396582";
+NETWORK
+TITLE = 032 SF
+      A #a;
+      L S5T#5S;
+      SF "Tag__639296449667490544";
+NETWORK
+TITLE = 033 FR
+      A #a;
+      FR "Tag__639296449667666479";
+NETWORK
+TITLE = 034 L
+      L "Tag__639296449667666479";
+      T #wr;
+NETWORK
+TITLE = 035 LC
+      LC "Tag__639296449667666479";
+      T #wr;
+NETWORK
+TITLE = 036 R
+      A #a;
+      R "Tag__639296449667666479";
+NETWORK
+TITLE = 037 S
+      A #a;
+      L C#5;
+      S "Tag__639296449667666479";
+NETWORK
+TITLE = 038 CU
+      A #a;
+      CU "Tag__639296449667666479";
+NETWORK
+TITLE = 039 CD
+      A #a;
+      CD "Tag__639296449667666479";
+END_FUNCTION_BLOCK
+

@@ -1,0 +1,19 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Scl_sl049"
+    VAR_INPUT
+        v_in : Array[0..9] of Bool;
+        v_count_out : USInt;
+    END_VAR
+    VAR_OUTPUT
+        v_out : Array[0..9] of Byte;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        GATHER_BLK(IN := #v_in[0], COUNT_OUT := #v_count_out, OUT => #v_out[0]);
+    END_NETWORK
+END_FUNCTION_BLOCK

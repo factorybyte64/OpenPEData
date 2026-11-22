@@ -1,0 +1,83 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_us004"
+    VAR_INPUT
+        v_run : Bool;
+        v_off2 : Bool;
+        v_off3 : Bool;
+        v_f_ack : Bool;
+        v_dir : Bool;
+        v_drive : USInt;
+        v_pzd_len : USInt;
+        v_speed_sp : Real;
+        v_ctrl3 : Word;
+        v_ctrl4 : Word;
+        v_ctrl5 : Word;
+        v_ctrl6 : Word;
+        v_ctrl7 : Word;
+        v_ctrl8 : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_ndr : Bool;
+        v_error : Bool;
+        v_status : Word;
+        v_run_en : Bool;
+        v_d_dir : Bool;
+        v_inhibit : Bool;
+        v_fault : Bool;
+        v_speed : Real;
+        v_status1 : Word;
+        v_status3 : Word;
+        v_status4 : Word;
+        v_status5 : Word;
+        v_status6 : Word;
+        v_status7 : Word;
+        v_status8 : Word;
+    END_VAR
+    VAR
+        inst : USS_Drive_Control;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.USS_Drive_Control(
+                RUN := #v_run,
+                OFF2 := #v_off2,
+                OFF3 := #v_off3,
+                F_ACK := #v_f_ack,
+                DIR := #v_dir,
+                DRIVE := #v_drive,
+                PZD_LEN := #v_pzd_len,
+                SPEED_SP := #v_speed_sp,
+                CTRL3 := #v_ctrl3,
+                CTRL4 := #v_ctrl4,
+                CTRL5 := #v_ctrl5,
+                CTRL6 := #v_ctrl6,
+                CTRL7 := #v_ctrl7,
+                CTRL8 := #v_ctrl8,
+                NDR => #v_ndr,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                RUN_EN => #v_run_en,
+                D_DIR => #v_d_dir,
+                INHIBIT => #v_inhibit,
+                FAULT => #v_fault,
+                SPEED => #v_speed,
+                STATUS1 => #v_status1,
+                STATUS3 => #v_status3,
+                STATUS4 => #v_status4,
+                STATUS5 => #v_status5,
+                STATUS6 => #v_status6,
+                STATUS7 => #v_status7,
+                STATUS8 => #v_status8
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

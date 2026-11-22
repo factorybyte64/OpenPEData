@@ -1,0 +1,37 @@
+﻿FUNCTION_BLOCK "FB_StlC_040"
+TITLE = STL call WriteToArrayDBL
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      req : Bool;
+      di1 : DInt;
+      dba : DB_ANY;
+   END_VAR
+
+   VAR_OUTPUT 
+      busy : Bool;
+      done : Bool;
+      err : Int;
+   END_VAR
+
+   VAR 
+      val : Int;
+      inst {InstructionName := 'WriteToArrayDBL'; LibVersion := '1.2'} : WriteToArrayDBL;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 040 WriteToArrayDBL
+      CALL #inst
+      {ptr_type := 'DB_ANY'}
+      (  req                         := #req , 
+         "db"                        := #dba , 
+         index                       := #di1 , 
+         value                       := #val , 
+         busy                        := #busy , 
+         done                        := #done , 
+         error                       := #err
+      );
+END_FUNCTION_BLOCK
+

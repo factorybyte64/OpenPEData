@@ -1,0 +1,44 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_us006"
+    VAR_INPUT
+        v_req : Bool;
+        v_drive : USInt;
+        v_param : UInt;
+        v_index : UInt;
+        v_eeprom : Bool;
+        v_value : P2P_USS_BASE;
+    END_VAR
+    VAR_OUTPUT
+        v_done : Bool;
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_uss_db : P2P_USS_BASE;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            USS_Write_Param(
+                REQ := #v_req,
+                DRIVE := #v_drive,
+                PARAM := #v_param,
+                INDEX := #v_index,
+                EEPROM := #v_eeprom,
+                VALUE := #v_value,
+                DONE => #v_done,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                USS_DB := #v_uss_db
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

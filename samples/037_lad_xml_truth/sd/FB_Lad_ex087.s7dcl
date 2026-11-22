@@ -1,0 +1,38 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex087"
+    VAR_INPUT
+        v_pe_i_dev_new : Bool;
+        v_error_code : Byte;
+    END_VAR
+    VAR_OUTPUT
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_activate : Bool;
+        v_valid : Bool;
+        v_data_errorrsp : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            PE_Error_RSP(
+                PE_I_DEV_NEW := #v_pe_i_dev_new,
+                ERROR_CODE := #v_error_code,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                Activate := #v_activate,
+                VALID := #v_valid,
+                DATA_ERRORRSP := #v_data_errorrsp
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

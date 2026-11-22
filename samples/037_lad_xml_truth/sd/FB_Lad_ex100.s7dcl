@@ -1,0 +1,28 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex100"
+    VAR_INPUT
+        v_ob_nr : OB_ATT;
+        v_event : EVENT_ATT;
+        v_add : Bool;
+        v_ret_val : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            ATTACH(
+                OB_NR := #v_ob_nr,
+                EVENT := #v_event,
+                ADD := #v_add,
+                RET_VAL => #v_ret_val
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

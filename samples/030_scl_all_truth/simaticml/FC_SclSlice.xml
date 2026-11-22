@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-10T07:02:25.6615705Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp">
+            <Member Name="b" Datatype="Bool" />
+            <Member Name="w" Datatype="Word" />
+            <Member Name="dw" Datatype="DWord" />
+            <Member Name="by" Datatype="Byte" />
+            <Member Name="lw" Datatype="LWord" />
+            <Member Name="i" Datatype="Int" />
+          </Section>
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+          </Section>
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>FC_SclSlice</Name>
+      <Namespace />
+      <Number>6</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Access Scope="LocalVariable" UId="21">
+                <Symbol UId="22">
+                  <Component Name="b" UId="23" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="24" />
+              <Token Text=":=" UId="25" />
+              <Blank Num="1" UId="26" />
+              <Access Scope="LocalVariable" UId="27">
+                <Symbol UId="28">
+                  <Component Name="w" UId="29" />
+                  <Token Text="." UId="30" />
+                  <Token Text="%X3" UId="31" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="32" />
+              <NewLine Num="1" UId="33" />
+              <Access Scope="LocalVariable" UId="34">
+                <Symbol UId="35">
+                  <Component Name="w" UId="36" />
+                  <Token Text="." UId="37" />
+                  <Token Text="%X0" UId="38" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="39" />
+              <Token Text=":=" UId="40" />
+              <Blank Num="1" UId="41" />
+              <Access Scope="LiteralConstant" UId="42">
+                <Constant UId="43">
+                  <ConstantValue UId="45">TRUE</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="46" />
+              <NewLine Num="1" UId="47" />
+              <Access Scope="LocalVariable" UId="48">
+                <Symbol UId="49">
+                  <Component Name="by" UId="50" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="51" />
+              <Token Text=":=" UId="52" />
+              <Blank Num="1" UId="53" />
+              <Access Scope="LocalVariable" UId="54">
+                <Symbol UId="55">
+                  <Component Name="w" UId="56" />
+                  <Token Text="." UId="57" />
+                  <Token Text="%B1" UId="58" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="59" />
+              <NewLine Num="1" UId="60" />
+              <Access Scope="LocalVariable" UId="61">
+                <Symbol UId="62">
+                  <Component Name="w" UId="63" />
+                  <Token Text="." UId="64" />
+                  <Token Text="%B0" UId="65" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="66" />
+              <Token Text=":=" UId="67" />
+              <Blank Num="1" UId="68" />
+              <Access Scope="LocalVariable" UId="69">
+                <Symbol UId="70">
+                  <Component Name="by" UId="71" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="72" />
+              <NewLine Num="1" UId="73" />
+              <Access Scope="LocalVariable" UId="74">
+                <Symbol UId="75">
+                  <Component Name="dw" UId="76" />
+                  <Token Text="." UId="77" />
+                  <Token Text="%W1" UId="78" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="79" />
+              <Token Text=":=" UId="80" />
+              <Blank Num="1" UId="81" />
+              <Access Scope="LocalVariable" UId="82">
+                <Symbol UId="83">
+                  <Component Name="w" UId="84" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="85" />
+              <NewLine Num="1" UId="86" />
+              <Access Scope="LocalVariable" UId="87">
+                <Symbol UId="88">
+                  <Component Name="b" UId="89" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="90" />
+              <Token Text=":=" UId="91" />
+              <Blank Num="1" UId="92" />
+              <Access Scope="LocalVariable" UId="93">
+                <Symbol UId="94">
+                  <Component Name="dw" UId="95" />
+                  <Token Text="." UId="96" />
+                  <Token Text="%X31" UId="97" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="98" />
+              <NewLine Num="1" UId="99" />
+              <Access Scope="LocalVariable" UId="100">
+                <Symbol UId="101">
+                  <Component Name="w" UId="102" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="103" />
+              <Token Text=":=" UId="104" />
+              <Blank Num="1" UId="105" />
+              <Access Scope="LocalVariable" UId="106">
+                <Symbol UId="107">
+                  <Component Name="dw" UId="108" />
+                  <Token Text="." UId="109" />
+                  <Token Text="%W0" UId="110" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="111" />
+              <NewLine Num="1" UId="112" />
+              <Access Scope="LocalVariable" UId="113">
+                <Symbol UId="114">
+                  <Component Name="by" UId="115" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="116" />
+              <Token Text=":=" UId="117" />
+              <Blank Num="1" UId="118" />
+              <Access Scope="LocalVariable" UId="119">
+                <Symbol UId="120">
+                  <Component Name="dw" UId="121" />
+                  <Token Text="." UId="122" />
+                  <Token Text="%B3" UId="123" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="124" />
+              <NewLine Num="1" UId="125" />
+              <Access Scope="LocalVariable" UId="126">
+                <Symbol UId="127">
+                  <Component Name="dw" UId="128" />
+                  <Token Text="." UId="129" />
+                  <Token Text="%B2" UId="130" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="131" />
+              <Token Text=":=" UId="132" />
+              <Blank Num="1" UId="133" />
+              <Access Scope="LocalVariable" UId="134">
+                <Symbol UId="135">
+                  <Component Name="by" UId="136" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="137" />
+              <NewLine Num="1" UId="138" />
+              <Access Scope="LocalVariable" UId="139">
+                <Symbol UId="140">
+                  <Component Name="b" UId="141" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="142" />
+              <Token Text=":=" UId="143" />
+              <Blank Num="1" UId="144" />
+              <Access Scope="LocalVariable" UId="145">
+                <Symbol UId="146">
+                  <Component Name="lw" UId="147" />
+                  <Token Text="." UId="148" />
+                  <Token Text="%X63" UId="149" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="150" />
+              <NewLine Num="1" UId="151" />
+              <Access Scope="LocalVariable" UId="152">
+                <Symbol UId="153">
+                  <Component Name="w" UId="154" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="155" />
+              <Token Text=":=" UId="156" />
+              <Blank Num="1" UId="157" />
+              <Access Scope="LocalVariable" UId="158">
+                <Symbol UId="159">
+                  <Component Name="lw" UId="160" />
+                  <Token Text="." UId="161" />
+                  <Token Text="%W3" UId="162" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="163" />
+              <NewLine Num="1" UId="164" />
+              <Access Scope="LocalVariable" UId="165">
+                <Symbol UId="166">
+                  <Component Name="dw" UId="167" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="168" />
+              <Token Text=":=" UId="169" />
+              <Blank Num="1" UId="170" />
+              <Access Scope="LocalVariable" UId="171">
+                <Symbol UId="172">
+                  <Component Name="lw" UId="173" />
+                  <Token Text="." UId="174" />
+                  <Token Text="%D1" UId="175" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="176" />
+              <NewLine Num="1" UId="177" />
+              <Access Scope="GlobalVariable" UId="178">
+                <Symbol UId="179">
+                  <Component Name="tWord" UId="180">
+                    <BooleanAttribute Name="HasQuotes" UId="181">true</BooleanAttribute>
+                  </Component>
+                  <Token Text="." UId="182" />
+                  <Token Text="%X5" UId="183" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="184" />
+              <Token Text=":=" UId="185" />
+              <Blank Num="1" UId="186" />
+              <Access Scope="LocalVariable" UId="187">
+                <Symbol UId="188">
+                  <Component Name="b" UId="189" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="190" />
+              <NewLine Num="1" UId="191" />
+              <Access Scope="LocalVariable" UId="192">
+                <Symbol UId="193">
+                  <Component Name="b" UId="194" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="195" />
+              <Token Text=":=" UId="196" />
+              <Blank Num="1" UId="197" />
+              <Access Scope="GlobalVariable" UId="198">
+                <Symbol UId="199">
+                  <Component Name="tDWord" UId="200">
+                    <BooleanAttribute Name="HasQuotes" UId="201">true</BooleanAttribute>
+                  </Component>
+                  <Token Text="." UId="202" />
+                  <Token Text="%X7" UId="203" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="204" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

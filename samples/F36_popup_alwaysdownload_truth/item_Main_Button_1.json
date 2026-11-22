@@ -1,0 +1,17 @@
+{
+ "Name": "Button_1",
+ "type": "HmiButton",
+ "Left": 77,
+ "Top": 33,
+ "Width": 160,
+ "Height": 40,
+ "events": [
+  {
+   "eventType": "Tapped",
+   "Async": false,
+   "GlobalDefinitionAreaScriptCode": "//Insert definitions for events here\r\n\r\n",
+   "ScriptCode": "\r\nlet data = {TagProperty_1:{Tag:\"Tag_1\"}, ColorProperty:0xff00ff00};\r\n// Other property types: let data = {GraphicProperty:\"GraphicCollection.Left_Arrow\", ResourceList_Property:\"@Default.Text_list_1\"}; \r\n// ... let data = {Long_Property:8, Boolean_Property:true, ConfigurationString_Property:\"Hello World\", FloatingPoint_Property:10.5}; \r\nlet po = UI.OpenFaceplateInPopup(\"FP_Basic_V_0_0_1\", \"PopupBasic\", data);\r\npo.Left = 100;\r\npo.Top = 150;\r\npo.Visible = true;\r\n"
+  }
+ ],
+ "source": "Openness(itemGet, screen Main, Button_1, detail full) on a retrieved copy of F36_popup_alwaysdownload.zap21 (<temp>/OpenPEData_F36), own TIA instance, 2026-10-31; excerpt"
+}

@@ -1,0 +1,4002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-22T02:34:33.8938509Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.Screen.Screen ID="0">
+    <AttributeList>
+      <ActiveLayer>0</ActiveLayer>
+      <BackColor>192, 192, 192</BackColor>
+      <GridColor>0, 0, 0</GridColor>
+      <Height>800</Height>
+      <Name>D_Gauge_1</Name>
+      <Number>485</Number>
+      <Visible>true</Visible>
+      <Width>1280</Width>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="HelpText">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <Hmi.Screen.ScreenLayer ID="3" CompositionName="Layers">
+        <AttributeList>
+          <Index>0</Index>
+          <Name>Layer_0</Name>
+          <VisibleES>true</VisibleES>
+        </AttributeList>
+        <ObjectList>
+          <Hmi.Screen.Gauge ID="4" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>6</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>Static</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>4</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="6" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="8" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="9" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="A" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="C" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="E" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="10" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>6</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_Static</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>186</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="12" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="13" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="14" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="15" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Static</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="16" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>208</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>A_Range</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>4</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.RangeAppearanceAnimation ID="17" CompositionName="Animations">
+                <AttributeList>
+                  <Name>RangeAppearanceAnimation</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="18" CompositionName="RangeTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Range</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                  <Hmi.Dynamic.Range ID="1B" CompositionName="RangeValues">
+                    <AttributeList>
+                      <BackColor>255, 0, 0</BackColor>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>255, 255, 255</ForeColor>
+                      <LowerLimit>0</LowerLimit>
+                      <UpperLimit>9</UpperLimit>
+                    </AttributeList>
+                  </Hmi.Dynamic.Range>
+                  <Hmi.Dynamic.Range ID="1C" CompositionName="RangeValues">
+                    <AttributeList>
+                      <BackColor>0, 160, 0</BackColor>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>0, 0, 0</ForeColor>
+                      <LowerLimit>10</LowerLimit>
+                      <UpperLimit>49</UpperLimit>
+                    </AttributeList>
+                  </Hmi.Dynamic.Range>
+                  <Hmi.Dynamic.Range ID="1D" CompositionName="RangeValues">
+                    <AttributeList>
+                      <BackColor>0, 0, 255</BackColor>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>255, 255, 0</ForeColor>
+                      <LowerLimit>50</LowerLimit>
+                      <UpperLimit>99</UpperLimit>
+                    </AttributeList>
+                  </Hmi.Dynamic.Range>
+                </ObjectList>
+              </Hmi.Dynamic.RangeAppearanceAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="1E" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="1F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="20" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="21" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="22" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="23" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="24" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="25" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="26" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="27" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="28" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>208</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_A_Range</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>186</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="29" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="2A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="2B" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="2C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>A_Range</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="2D" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>410</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>A_Flash</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>4</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.RangeAppearanceAnimation ID="2E" CompositionName="Animations">
+                <AttributeList>
+                  <Name>RangeAppearanceAnimation</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="2F" CompositionName="RangeTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Range</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                  <Hmi.Dynamic.Range ID="31" CompositionName="RangeValues">
+                    <AttributeList>
+                      <BackColor>255, 0, 0</BackColor>
+                      <FlashingType>Fast</FlashingType>
+                      <ForeColor>255, 255, 255</ForeColor>
+                      <LowerLimit>50</LowerLimit>
+                      <UpperLimit>99</UpperLimit>
+                    </AttributeList>
+                  </Hmi.Dynamic.Range>
+                </ObjectList>
+              </Hmi.Dynamic.RangeAppearanceAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="32" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="33" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="34" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="35" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="36" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="37" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="38" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="39" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="3A" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="3B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="3C" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>410</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_A_Flash</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>186</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="3D" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="3E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="3F" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="40" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>A_Flash</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="41" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>612</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>A_Bit</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>4</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.SingleBitAppearanceAnimation ID="42" CompositionName="Animations">
+                <AttributeList>
+                  <BitPosition>0</BitPosition>
+                  <Name>SingleBitAppearanceAnimation</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.SingleBitPropertyValue ID="43" CompositionName="SingleBitPropertyValues">
+                    <AttributeList>
+                      <BackColor>128, 128, 128</BackColor>
+                      <BitPosition>0</BitPosition>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>255, 255, 255</ForeColor>
+                    </AttributeList>
+                  </Hmi.Dynamic.SingleBitPropertyValue>
+                  <Hmi.Dynamic.SingleBitPropertyValue ID="44" CompositionName="SingleBitPropertyValues">
+                    <AttributeList>
+                      <BackColor>255, 255, 0</BackColor>
+                      <BitPosition>1</BitPosition>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>0, 0, 0</ForeColor>
+                    </AttributeList>
+                  </Hmi.Dynamic.SingleBitPropertyValue>
+                  <Hmi.Dynamic.TagElementTrigger ID="45" CompositionName="SingleBitTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Bool</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.SingleBitAppearanceAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="48" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="49" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="4A" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="4B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="4C" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="4D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="4E" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="4F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="50" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="51" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="52" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>612</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_A_Bit</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>186</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="53" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="54" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="55" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="56" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>A_Bit</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="57" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>814</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>A_Bits</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>4</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.MultipleBitsAppearanceAnimation ID="58" CompositionName="Animations">
+                <AttributeList>
+                  <Name>MultipleBitsAppearanceAnimation</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="59" CompositionName="MultipleBitsTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Bits</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                  <Hmi.Dynamic.MultipleBitsValue ID="5C" CompositionName="MultipleBitsValues">
+                    <AttributeList>
+                      <BackColor>255, 0, 0</BackColor>
+                      <BitPosition>0</BitPosition>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>255, 255, 255</ForeColor>
+                    </AttributeList>
+                  </Hmi.Dynamic.MultipleBitsValue>
+                  <Hmi.Dynamic.MultipleBitsValue ID="5D" CompositionName="MultipleBitsValues">
+                    <AttributeList>
+                      <BackColor>0, 160, 0</BackColor>
+                      <BitPosition>1</BitPosition>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>0, 0, 0</ForeColor>
+                    </AttributeList>
+                  </Hmi.Dynamic.MultipleBitsValue>
+                  <Hmi.Dynamic.MultipleBitsValue ID="5E" CompositionName="MultipleBitsValues">
+                    <AttributeList>
+                      <BackColor>0, 0, 255</BackColor>
+                      <BitPosition>2</BitPosition>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>255, 255, 0</ForeColor>
+                    </AttributeList>
+                  </Hmi.Dynamic.MultipleBitsValue>
+                  <Hmi.Dynamic.MultipleBitsValue ID="5F" CompositionName="MultipleBitsValues">
+                    <AttributeList>
+                      <BackColor>255, 128, 0</BackColor>
+                      <BitPosition>3</BitPosition>
+                      <FlashingType>No</FlashingType>
+                      <ForeColor>0, 0, 0</ForeColor>
+                    </AttributeList>
+                  </Hmi.Dynamic.MultipleBitsValue>
+                </ObjectList>
+              </Hmi.Dynamic.MultipleBitsAppearanceAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="60" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="61" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="62" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="63" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="64" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="65" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="66" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="67" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="68" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="69" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="6A" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>814</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_A_Bits</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>186</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="6B" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="6C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="6D" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="6E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>A_Bits</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="6F" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>1016</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>V_Range</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>4</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.VisibilityAnimation ID="70" CompositionName="Animations">
+                <AttributeList>
+                  <Name>VisibilityAnimation</Name>
+                  <RangeEnd>49</RangeEnd>
+                  <RangeStart>10</RangeStart>
+                  <Visible>true</Visible>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="71" CompositionName="VisibilityTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Range</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.VisibilityAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="73" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="74" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="75" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="76" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="77" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="78" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="79" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="7A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="7B" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="7C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="7D" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>1016</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_V_Range</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>186</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="7E" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="7F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="80" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="81" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>V_Range</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="82" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>6</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>V_Bit</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>206</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.SingleBitVisibilityAnimation ID="83" CompositionName="Animations">
+                <AttributeList>
+                  <BitPosition>0</BitPosition>
+                  <Name>VisibilityAnimation</Name>
+                  <Visible>true</Visible>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="84" CompositionName="VisibilityTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Vis</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.SingleBitVisibilityAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="87" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="88" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="89" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="8A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="8B" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="8C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="8D" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="8E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="8F" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="90" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="91" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>6</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_V_Bit</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>388</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="92" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="93" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="94" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="95" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>V_Bit</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="96" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>208</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>M_H</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>206</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.HorizontalMovementAnimation ID="97" CompositionName="Animations">
+                <AttributeList>
+                  <Name>HorizontalMovementAnimation</Name>
+                  <RangeEnd>100</RangeEnd>
+                  <RangeStart>0</RangeStart>
+                  <XDelta>40</XDelta>
+                  <XPosEnd>248</XPosEnd>
+                  <YDelta>0</YDelta>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="98" CompositionName="MovementTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Pct</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.HorizontalMovementAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="9B" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="9C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="9D" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="9E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="9F" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="A0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="A1" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="A2" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="A3" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="A4" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="A5" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>208</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_M_H</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>388</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="A6" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="A7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="A8" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="A9" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>M_H</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="AA" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>410</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>M_V</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>206</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.VerticalMovementAnimation ID="AB" CompositionName="Animations">
+                <AttributeList>
+                  <Name>VerticalMovementAnimation</Name>
+                  <RangeEnd>100</RangeEnd>
+                  <RangeStart>0</RangeStart>
+                  <XDelta>0</XDelta>
+                  <YDelta>30</YDelta>
+                  <YPosEnd>236</YPosEnd>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="AC" CompositionName="MovementTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Pct</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.VerticalMovementAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="AE" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="AF" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="B0" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="B1" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="B2" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="B4" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="B6" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="B7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="B8" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>410</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_M_V</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>388</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="B9" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="BA" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="BB" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="BC" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>M_V</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="BD" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>612</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>M_D</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>206</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.DiagonalMovementAnimation ID="BE" CompositionName="Animations">
+                <AttributeList>
+                  <Name>DiagonalMovementAnimation</Name>
+                  <RangeEnd>100</RangeEnd>
+                  <RangeStart>0</RangeStart>
+                  <XDelta>40</XDelta>
+                  <XPosEnd>652</XPosEnd>
+                  <YDelta>30</YDelta>
+                  <YPosEnd>236</YPosEnd>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="BF" CompositionName="MovementTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Pct</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.DiagonalMovementAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="C1" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="C2" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="C3" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="C4" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="C5" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="C6" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="C7" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="C8" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="C9" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="CA" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="CB" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>612</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_M_D</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>388</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="CC" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="CD" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="CE" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="CF" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>M_D</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="D0" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>814</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>M_Direct</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>206</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.DirectMovementAnimation ID="D1" CompositionName="Animations">
+                <AttributeList>
+                  <Name>DirectMovementAnimation</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="D2" CompositionName="XPosTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_X</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                  <Hmi.Dynamic.TagElementTrigger ID="D5" CompositionName="YPosTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Y</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.DirectMovementAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="D8" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="D9" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="DA" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="DB" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="DC" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="DD" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="DE" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="DF" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="E0" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="E1" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="E2" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>814</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_M_Direct</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>388</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="E3" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="E4" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="E5" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="E6" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>M_Direct</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="E7" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>1016</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>E_Range</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>206</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.ObjectEnablingAnimation ID="E8" CompositionName="Animations">
+                <AttributeList>
+                  <Name>ObjectEnablingAnimation</Name>
+                  <ObjectEnabled>false</ObjectEnabled>
+                  <RangeEnd>49</RangeEnd>
+                  <RangeStart>10</RangeStart>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="E9" CompositionName="ObjectEnablingTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Range</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.ObjectEnablingAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="EB" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="EC" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="ED" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="EE" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="EF" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="F0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="F1" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="F2" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="F3" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="F4" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="F5" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>1016</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_E_Range</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>388</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="F6" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="F7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="F8" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="F9" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>E_Range</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="FA" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>6</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>E_Bit</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>408</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.SingleBitObjectEnablingAnimation ID="FB" CompositionName="Animations">
+                <AttributeList>
+                  <BitPosition>0</BitPosition>
+                  <Name>ObjectEnablingAnimation</Name>
+                  <ObjectEnabled>true</ObjectEnabled>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="FC" CompositionName="ObjectEnablingTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_En</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.SingleBitObjectEnablingAnimation>
+              <Hmi.Globalization.MultiLingualFont ID="FF" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="100" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="101" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="102" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Globalization.MultiLingualFont ID="103" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="104" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="105" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="106" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="107" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="108" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="109" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>6</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_E_Bit</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>590</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="10A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="10B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="10C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="10D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>E_Bit</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="10E" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>208</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>PV_Pct</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>408</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="10F" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="110" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="111" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="112" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Screen.Property ID="113" CompositionName="Properties">
+                <AttributeList>
+                  <Name>ProcessValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="114" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Pct</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+              <Hmi.Globalization.MultiLingualFont ID="115" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="116" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="117" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="118" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="119" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="11A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="11B" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>208</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_PV_Pct</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>590</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="11C" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="11D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="11E" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="11F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>PV_Pct</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="120" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>410</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>PV_Real</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>408</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="121" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="122" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="123" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="124" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Screen.Property ID="125" CompositionName="Properties">
+                <AttributeList>
+                  <Name>ProcessValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="126" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Real</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+              <Hmi.Globalization.MultiLingualFont ID="128" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="129" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="12A" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="12B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="12C" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="12D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="12E" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>410</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_PV_Real</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>590</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="12F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="130" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="131" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="132" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>PV_Real</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Gauge ID="133" CompositionName="ScreenItems">
+            <AttributeList>
+              <AngleMax>45</AngleMax>
+              <AngleMin>-225</AngleMin>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CaptionColor>0, 0, 0</CaptionColor>
+              <CaptionTop>0.85</CaptionTop>
+              <CenterColor>128, 128, 128</CenterColor>
+              <CenterSize>0.08</CenterSize>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <DialFillStyle>Solid</DialFillStyle>
+              <DialSize>0.87</DialSize>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Gradation>10</Gradation>
+              <Height>150</Height>
+              <InnerDialColor>255, 255, 255</InnerDialColor>
+              <InnerDialInnerDistance>0.08</InnerDialInnerDistance>
+              <InnerDialOuterDistance>0.9</InnerDialOuterDistance>
+              <Left>612</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MaximumValue>100</MaximumValue>
+              <MinimumValue>0</MinimumValue>
+              <NeedleHeight>0.61</NeedleHeight>
+              <ObjectName>PV_Pct_MaxMin</ObjectName>
+              <PointerColor>255, 255, 255</PointerColor>
+              <RangeLower1Color>255, 255, 0</RangeLower1Color>
+              <RangeLower1Enabled>true</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>true</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 255, 0</RangeUpper1Color>
+              <RangeUpper1Enabled>true</RangeUpper1Enabled>
+              <RangeUpper1Start>3.5</RangeUpper1Start>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>true</RangeUpper2Enabled>
+              <RangeUpper2Start>70</RangeUpper2Start>
+              <ScaleLabelColor>0, 0, 255</ScaleLabelColor>
+              <ScaleTickColor>0, 0, 0</ScaleTickColor>
+              <ScaleTickLabelPosition>0.55</ScaleTickLabelPosition>
+              <ScaleTickLength>0.2</ScaleTickLength>
+              <ScaleTickPosition>0.9</ScaleTickPosition>
+              <ShowDecimalPoint>false</ShowDecimalPoint>
+              <ShowInnerDial>false</ShowInnerDial>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowPeakValuePointer>false</ShowPeakValuePointer>
+              <TabIndex>-1</TabIndex>
+              <Top>408</Top>
+              <UnitColor>0, 0, 255</UnitColor>
+              <UnitTop>0.4</UnitTop>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Gauge</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="134" CompositionName="CaptionFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="135" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="136" CompositionName="CaptionText">
+                <ObjectList>
+                  <MultilingualTextItem ID="137" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text>SIMATIC</Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Screen.Property ID="138" CompositionName="Properties">
+                <AttributeList>
+                  <Name>ProcessValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="139" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Pct</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+              <Hmi.Screen.Property ID="13A" CompositionName="Properties">
+                <AttributeList>
+                  <Name>MaximumValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="13B" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Max</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+              <Hmi.Screen.Property ID="13D" CompositionName="Properties">
+                <AttributeList>
+                  <Name>MinimumValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="13E" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Min</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+              <Hmi.Globalization.MultiLingualFont ID="140" CompositionName="ScaleLabelFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="141" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Globalization.MultiLingualFont ID="142" CompositionName="UnitFont">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="143" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="144" CompositionName="UnitText">
+                <ObjectList>
+                  <MultilingualTextItem ID="145" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Gauge>
+          <Hmi.Screen.TextField ID="146" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>612</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_PV_Pct_MaxMin</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>590</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>198</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="147" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="148" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="149" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="14A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>PV_Pct_MaxMin</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.IOField ID="14B" CompositionName="ScreenItems">
+            <AttributeList>
+              <AboveUpperLimitColor>255, 0, 0</AboveUpperLimitColor>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BelowLowerLimitColor>255, 255, 0</BelowLowerLimitColor>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <DataFormat>Decimal</DataFormat>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FieldLength>10</FieldLength>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <FormatPattern>9</FormatPattern>
+              <Height>22</Height>
+              <HiddenInput>false</HiddenInput>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>4</Left>
+              <LeftMargin>0</LeftMargin>
+              <Mode>Output</Mode>
+              <ObjectName>State</ObjectName>
+              <RightMargin>0</RightMargin>
+              <ShiftDecimalPoint>0</ShiftDecimalPoint>
+              <ShowLeadingZeros>false</ShowLeadingZeros>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>774</Top>
+              <TopMargin>0</TopMargin>
+              <Unit />
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>60</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>I/O field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="14D" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="14E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="14F" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="150" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Screen.Property ID="151" CompositionName="Properties">
+                <AttributeList>
+                  <Name>ProcessValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="152" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_State</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+            </ObjectList>
+          </Hmi.Screen.IOField>
+          <Hmi.Screen.Button ID="154" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <CornerStyle>Round</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>211, 211, 211</FirstGradientColor>
+              <FirstGradientOffset>14</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>0, 0, 0</FocusColor>
+              <FocusWidth>1</FocusWidth>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>22</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>70</Left>
+              <MiddleGradientColor>128, 128, 128</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>S1</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>169, 169, 169</SecondGradientColor>
+              <SecondGradientOffset>14</SecondGradientOffset>
+              <TabIndex>1</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>774</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseFirstGradient>false</UseFirstGradient>
+              <UseSecondGradient>false</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>40</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Button</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Event.Event ID="156" CompositionName="Events">
+                <AttributeList>
+                  <Name>Click</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="157" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="158" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>SetS1</Name>
+                          <Type>VBScript</Type>
+                        </AttributeList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="159" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="15A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="15B" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="15C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="15D" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="15E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S1</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="15F" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="160" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S1</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="161" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <CornerStyle>Round</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>211, 211, 211</FirstGradientColor>
+              <FirstGradientOffset>14</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>0, 0, 0</FocusColor>
+              <FocusWidth>1</FocusWidth>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>22</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>114</Left>
+              <MiddleGradientColor>128, 128, 128</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>S2</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>169, 169, 169</SecondGradientColor>
+              <SecondGradientOffset>14</SecondGradientOffset>
+              <TabIndex>2</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>774</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseFirstGradient>false</UseFirstGradient>
+              <UseSecondGradient>false</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>40</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Button</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Event.Event ID="162" CompositionName="Events">
+                <AttributeList>
+                  <Name>Click</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="163" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="164" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>SetS2</Name>
+                          <Type>VBScript</Type>
+                        </AttributeList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="165" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="166" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="167" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="168" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="169" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="16A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S2</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="16B" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="16C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S2</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="16D" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <CornerStyle>Round</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>211, 211, 211</FirstGradientColor>
+              <FirstGradientOffset>14</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>0, 0, 0</FocusColor>
+              <FocusWidth>1</FocusWidth>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>22</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>158</Left>
+              <MiddleGradientColor>128, 128, 128</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>S3</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>169, 169, 169</SecondGradientColor>
+              <SecondGradientOffset>14</SecondGradientOffset>
+              <TabIndex>3</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>774</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseFirstGradient>false</UseFirstGradient>
+              <UseSecondGradient>false</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>40</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Button</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Event.Event ID="16E" CompositionName="Events">
+                <AttributeList>
+                  <Name>Click</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="16F" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="170" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>SetS3</Name>
+                          <Type>VBScript</Type>
+                        </AttributeList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="171" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="172" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="173" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="174" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="175" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="176" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S3</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="177" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="178" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S3</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="179" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <CornerStyle>Round</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>211, 211, 211</FirstGradientColor>
+              <FirstGradientOffset>14</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>0, 0, 0</FocusColor>
+              <FocusWidth>1</FocusWidth>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>22</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>202</Left>
+              <MiddleGradientColor>128, 128, 128</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>S4</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>169, 169, 169</SecondGradientColor>
+              <SecondGradientOffset>14</SecondGradientOffset>
+              <TabIndex>4</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>774</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseFirstGradient>false</UseFirstGradient>
+              <UseSecondGradient>false</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>40</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Button</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Event.Event ID="17A" CompositionName="Events">
+                <AttributeList>
+                  <Name>Click</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="17B" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="17C" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>SetS4</Name>
+                          <Type>VBScript</Type>
+                        </AttributeList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="17D" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="17E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="17F" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="180" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="181" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="182" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S4</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="183" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="184" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>S4</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="185" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <CornerStyle>Round</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>211, 211, 211</FirstGradientColor>
+              <FirstGradientOffset>14</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>0, 0, 0</FocusColor>
+              <FocusWidth>1</FocusWidth>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>22</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>1236</Left>
+              <MiddleGradientColor>128, 128, 128</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>Next</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>169, 169, 169</SecondGradientColor>
+              <SecondGradientOffset>14</SecondGradientOffset>
+              <TabIndex>5</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>774</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseFirstGradient>false</UseFirstGradient>
+              <UseSecondGradient>false</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>40</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Button</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Event.Event ID="186" CompositionName="Events">
+                <AttributeList>
+                  <Name>Click</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="187" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="188" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>ActivateScreen</Name>
+                          <Type>SystemFunction</Type>
+                        </AttributeList>
+                        <ObjectList>
+                          <Hmi.Event.FunctionListEntryParameter ID="189" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Screen name</Name>
+                            </AttributeList>
+                            <LinkList>
+                              <Value TargetID="@OpenLink">
+                                <Name>D_Clock_1</Name>
+                              </Value>
+                            </LinkList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                          <Hmi.Event.FunctionListEntryParameter ID="18B" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Object number</Name>
+                              <Value Type="System.Int32">0</Value>
+                            </AttributeList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                        </ObjectList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="18C" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="18D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="18E" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="18F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="190" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="191" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Next</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="192" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="193" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Next</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+        </ObjectList>
+      </Hmi.Screen.ScreenLayer>
+    </ObjectList>
+  </Hmi.Screen.Screen>
+</Document>

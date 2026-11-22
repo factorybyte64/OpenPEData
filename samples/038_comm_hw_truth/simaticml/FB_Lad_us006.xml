@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-10T19:21:34.4655131Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="v_req" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_drive" Datatype="USInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_param" Datatype="UInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_index" Datatype="UInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_eeprom" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_value" Datatype="P2P_USS_BASE" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="w_USSExtendedError" Datatype="Word" />
+                  <Member Name="STR" Datatype="Array[1..16] of P2P_USS2_BASE" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="tx_ready" Datatype="Bool" />
+                        <Member Name="tx0_last_ready" Datatype="Bool" />
+                        <Member Name="rx_ready" Datatype="Bool" />
+                        <Member Name="rx0_last_ready" Datatype="Bool" />
+                        <Member Name="param_read" Datatype="Bool" />
+                        <Member Name="param_write_eeprom" Datatype="Bool" />
+                        <Member Name="value_is_dword" Datatype="Bool" />
+                        <Member Name="param_error" Datatype="Bool" />
+                        <Member Name="done_pass_1" Datatype="Bool" />
+                        <Member Name="param_is_array" Datatype="Bool" />
+                        <Member Name="value" Datatype="DWord" />
+                        <Member Name="w_param_num" Datatype="Word" />
+                        <Member Name="w_param_index" Datatype="Word" />
+                        <Member Name="b_param_state" Datatype="Byte" />
+                        <Member Name="b_USS_Words" Datatype="Byte" />
+                        <Member Name="b_LatestRxCount" Datatype="Byte" />
+                        <Member Name="b_LastRxCount" Datatype="Byte" />
+                        <Member Name="w_LastStatus" Datatype="Word" />
+                        <Member Name="TX" Datatype="Array[0..1, 0..29] of Byte" />
+                        <Member Name="RX" Datatype="Array[0..1, 0..29] of Byte" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Output">
+            <Member Name="v_done" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_error" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_status" Datatype="Word" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="InOut">
+            <Member Name="v_uss_db" Datatype="P2P_USS_BASE" Version="1.0" Accessibility="Public">
+              <Sections>
+                <Section Name="None">
+                  <Member Name="w_USSExtendedError" Datatype="Word" />
+                  <Member Name="STR" Datatype="Array[1..16] of P2P_USS2_BASE" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="tx_ready" Datatype="Bool" />
+                        <Member Name="tx0_last_ready" Datatype="Bool" />
+                        <Member Name="rx_ready" Datatype="Bool" />
+                        <Member Name="rx0_last_ready" Datatype="Bool" />
+                        <Member Name="param_read" Datatype="Bool" />
+                        <Member Name="param_write_eeprom" Datatype="Bool" />
+                        <Member Name="value_is_dword" Datatype="Bool" />
+                        <Member Name="param_error" Datatype="Bool" />
+                        <Member Name="done_pass_1" Datatype="Bool" />
+                        <Member Name="param_is_array" Datatype="Bool" />
+                        <Member Name="value" Datatype="DWord" />
+                        <Member Name="w_param_num" Datatype="Word" />
+                        <Member Name="w_param_index" Datatype="Word" />
+                        <Member Name="b_param_state" Datatype="Byte" />
+                        <Member Name="b_USS_Words" Datatype="Byte" />
+                        <Member Name="b_LatestRxCount" Datatype="Byte" />
+                        <Member Name="b_LastRxCount" Datatype="Byte" />
+                        <Member Name="w_LastStatus" Datatype="Word" />
+                        <Member Name="TX" Datatype="Array[0..1, 0..29] of Byte" />
+                        <Member Name="RX" Datatype="Array[0..1, 0..29] of Byte" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Static" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_Lad_us006</Name>
+      <Namespace />
+      <Number>10</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="v_req" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="v_drive" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="v_param" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="v_index" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="v_eeprom" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="v_value" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="v_uss_db" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="v_done" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="29">
+                  <Symbol>
+                    <Component Name="v_error" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="30">
+                  <Symbol>
+                    <Component Name="v_status" />
+                  </Symbol>
+                </Access>
+                <Part Name="USS_Write_Param" Version="5.0" UId="31" />
+              </Parts>
+              <Wires>
+                <Wire UId="32">
+                  <Powerrail />
+                  <NameCon UId="31" Name="en" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="21" />
+                  <NameCon UId="31" Name="REQ" />
+                </Wire>
+                <Wire UId="34">
+                  <IdentCon UId="22" />
+                  <NameCon UId="31" Name="DRIVE" />
+                </Wire>
+                <Wire UId="35">
+                  <IdentCon UId="23" />
+                  <NameCon UId="31" Name="PARAM" />
+                </Wire>
+                <Wire UId="36">
+                  <IdentCon UId="24" />
+                  <NameCon UId="31" Name="INDEX" />
+                </Wire>
+                <Wire UId="37">
+                  <IdentCon UId="25" />
+                  <NameCon UId="31" Name="EEPROM" />
+                </Wire>
+                <Wire UId="38">
+                  <IdentCon UId="26" />
+                  <NameCon UId="31" Name="VALUE" />
+                </Wire>
+                <Wire UId="39">
+                  <IdentCon UId="27" />
+                  <NameCon UId="31" Name="USS_DB" />
+                </Wire>
+                <Wire UId="40">
+                  <NameCon UId="31" Name="DONE" />
+                  <IdentCon UId="28" />
+                </Wire>
+                <Wire UId="41">
+                  <NameCon UId="31" Name="ERROR" />
+                  <IdentCon UId="29" />
+                </Wire>
+                <Wire UId="42">
+                  <NameCon UId="31" Name="STATUS" />
+                  <IdentCon UId="30" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>USS_WPM - Change parameters in the drive</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

@@ -1,0 +1,28 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex124"
+    VAR_OUTPUT
+        v_ret_val : Int;
+    END_VAR
+    VAR_IN_OUT
+        v_top_si : Array[0..99] of Byte;
+        v_start_up_si : Array[0..99] of Byte;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            RD_SINFO(
+                RET_VAL => #v_ret_val,
+                TOP_SI => #v_top_si,
+                START_UP_SI => #v_start_up_si
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

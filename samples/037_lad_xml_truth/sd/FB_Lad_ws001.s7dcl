@@ -1,0 +1,26 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ws001"
+    VAR_INPUT
+        v_ctrl_db : DB_WWW;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            WWW(
+                CTRL_DB := #v_ctrl_db,
+                RET_VAL => #v_ret_val
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

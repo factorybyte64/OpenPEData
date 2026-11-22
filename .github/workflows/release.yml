@@ -1,0 +1,117 @@
+# Builds the viewer setup for a tag vX.Y.Z (X.Y.Z = <Version> in OpenPEData.Viewer.csproj) after CI and attaches it
+# with the update package to the GitHub release. Optional secret OPENPEDATA_SIGN_PARAMS for code signing.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to build the setup for (e.g. v1.2.3)'
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+    with:
+      ref: ${{ inputs.tag || github.ref }}
+
+  setup:
+    name: Build setup and publish release
+    needs: tests
+    runs-on: windows-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      DOTNET_NOLOGO: 'true'
+      DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          fetch-depth: 1
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+          restore-keys: nuget-${{ runner.os }}-
+
+      - name: Check tag against the viewer version
+        id: version
+        shell: pwsh
+        run: |
+          if ($env:TAG -notmatch '^v(\d+\.\d+\.\d+)$') {
+              throw "Tag '$env:TAG' does not have the form vX.Y.Z"
+          }
+          $tagVersion = $Matches[1]
+          [xml]$proj = Get-Content -LiteralPath ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj
+          $projVersion = ($proj.Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1).Trim()
+          if ($tagVersion -ne $projVersion) {
+              throw "Tag $env:TAG does not match <Version>$projVersion</Version> in OpenPEData.Viewer.csproj"
+          }
+          "version=$tagVersion" >> $env:GITHUB_OUTPUT
+
+      - name: Put .NET global tools on PATH
+        shell: pwsh
+        run: Join-Path $env:USERPROFILE '.dotnet\tools' >> $env:GITHUB_PATH
+
+      - name: Build setup
+        shell: pwsh
+        env:
+          OPENPEDATA_SIGN_PARAMS: ${{ secrets.OPENPEDATA_SIGN_PARAMS }}
+        run: ./ui/scripts/Pack-OpenPEData.ps1 -Configuration Release -Version '${{ steps.version.outputs.version }}'
+
+      - name: Publish release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $label = 'V' + ('${{ steps.version.outputs.version }}' -replace '\.', '-')
+          $setup = "ui/artifacts/Releases/OpenPEData-Setup-$label.exe"
+          if (-not (Test-Path -LiteralPath $setup)) {
+              throw "Setup not found: $setup"
+          }
+          # update package for the auto-updater: the Velopack feed and the full package of this version
+          $staging = 'ui/artifacts/_vpk-staging'
+          $feed = Join-Path $staging 'releases.win.json'
+          $package = Get-ChildItem -LiteralPath $staging -Filter '*-full.nupkg' | Select-Object -First 1
+          if (-not (Test-Path -LiteralPath $feed) -or -not $package) {
+              throw "Velopack feed or full package missing in $staging"
+          }
+          $files = @($setup, $feed, $package.FullName)
+          gh release view $env:TAG --repo $env:GITHUB_REPOSITORY *> $null
+          if ($LASTEXITCODE -eq 0) {
+              gh release upload $env:TAG @files --clobber --repo $env:GITHUB_REPOSITORY
+          }
+          else {
+              gh release create $env:TAG @files --verify-tag --title "OpenPEData $env:TAG" --generate-notes --repo $env:GITHUB_REPOSITORY
+          }
+          if ($LASTEXITCODE -ne 0) {
+              throw "gh release failed with exit code $LASTEXITCODE"
+          }
+
+      - name: Upload setup as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OpenPEData-Setup-${{ env.TAG }}
+          path: |
+            ui/artifacts/Releases/OpenPEData-Setup-*.exe
+            ui/artifacts/_vpk-staging/releases.win.json
+            ui/artifacts/_vpk-staging/*-full.nupkg

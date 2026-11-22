@@ -1,0 +1,91 @@
+{
+ "detail": "full",
+ "count": 1,
+ "skipped": [],
+ "objects": [
+  {
+   "name": "FP_Flash",
+   "groupPath": "",
+   "itemCount": 1,
+   "attributes": {
+    "AlternateBackColor": "0xFFEBEBEB",
+    "BackColor": "0xFFC0C0C0",
+    "BackFillPattern": "Solid",
+    "BackGraphicStretchMode": "UniformToFill",
+    "BackgroundFillMode": "Window",
+    "Enabled": true,
+    "Height": 480,
+    "HorizontalAlignment": "Left",
+    "ScreenNumber": 0,
+    "VerticalAlignment": "Top",
+    "Width": 800
+   },
+   "items": [
+    {
+     "name": "X_Rect1",
+     "type": "HmiRectangle",
+     "attributes": {
+      "AlternateBackColor": "0xFF00FF00",
+      "AlternateBorderColor": "0xFFFFFFFF",
+      "Authorization": "None",
+      "BackColor": "0xFF00CC66",
+      "BackFillPattern": "Solid",
+      "BorderColor": "0xFF7D7D85",
+      "BorderWidth": 1,
+      "Corners": {
+       "BottomLeftRadius": 0,
+       "BottomRightRadius": 0,
+       "TopLeftRadius": 0,
+       "TopRightRadius": 0
+      },
+      "CurrentQuality": "None",
+      "DashType": "Solid",
+      "Enabled": true,
+      "FillDirection": "BottomToTop",
+      "FillLevel": 0,
+      "Height": 80,
+      "Left": 20,
+      "Opacity": 1,
+      "RequireExplicitUnlock": false,
+      "RotationAngle": 0,
+      "RotationCenterPlacement": "AbsoluteFromCenter",
+      "RotationCenterX": 0,
+      "RotationCenterY": 0,
+      "ShowFillLevel": false,
+      "ShowFocusVisual": true,
+      "StyleItemClass": "HmiRectangle",
+      "TabIndex": 0,
+      "Top": 20,
+      "Visible": true,
+      "Width": 120
+     },
+     "dynamizations": [
+      {
+       "DataType": "Bool",
+       "DynamizationType": "Tag",
+       "PlcTag": "Tag_Bool_1",
+       "PropertyName": "Visible",
+       "ReadOnly": true,
+       "Tag": "HmiTag_Ext1",
+       "UseIndirectAddressing": false,
+       "ValueConverter": {
+        "IsFormulaSelected": false,
+        "MappingTable": {
+         "ConditionType": "None"
+        }
+       }
+      },
+      {
+       "AlternateColor": "0xFFFF00FF",
+       "Color": "0xFF00CC66",
+       "DynamizationType": "Flashing",
+       "FlashingCondition": "Always",
+       "FlashingRate": "Fast",
+       "PropertyName": "BackColor"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

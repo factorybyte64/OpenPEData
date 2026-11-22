@@ -1,0 +1,3309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-22T00:27:47.7722371Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.Screen.Screen ID="0">
+    <AttributeList>
+      <ActiveLayer>0</ActiveLayer>
+      <BackColor>192, 192, 192</BackColor>
+      <GridColor>0, 0, 0</GridColor>
+      <Height>800</Height>
+      <Name>P_Clock_1</Name>
+      <Number>119</Number>
+      <Visible>true</Visible>
+      <Width>1280</Width>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="HelpText">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <Hmi.Screen.ScreenLayer ID="3" CompositionName="Layers">
+        <AttributeList>
+          <Index>0</Index>
+          <Name>Layer_0</Name>
+          <VisibleES>true</VisibleES>
+        </AttributeList>
+        <ObjectList>
+          <Hmi.Screen.Clock ID="4" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>10</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>Default</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="6" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="8" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>10</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_Default</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Default</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>false</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>170</Left>
+              <LockSquaredExtent>false</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>Analog</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="10" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="11" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>170</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_Analog</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="12" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="13" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="14" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="15" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Analog</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="16" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Transparent</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>330</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>BackFillStyle</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="17" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="18" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="19" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>330</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_BackFillStyle</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="1A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="1B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="1C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="1D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>BackFillStyle</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="1E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 0, 0</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>490</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>BorderBackColor</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="1F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="20" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="21" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>490</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_BorderBackColor</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="22" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="23" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="24" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="25" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>BorderBackColor</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="26" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>255, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>650</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>BorderColor</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="27" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="28" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="29" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>650</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_BorderColor</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="2A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="2B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="2C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="2D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>BorderColor</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="2E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>4</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>810</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>BorderWidth</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="2F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="30" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="31" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>810</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_BorderWidth</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="32" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="33" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="34" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="35" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>BorderWidth</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="36" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>12</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>970</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>CornerRadius</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>10</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="37" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="38" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="39" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>970</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_CornerRadius</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>162</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="3A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="3B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="3C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="3D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>CornerRadius</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="3E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>255, 0, 0</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>10</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>DialColor</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="3F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="40" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="41" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>10</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_DialColor</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="42" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="43" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="44" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="45" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>DialColor</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="46" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Dash</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>170</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>EdgeStyle</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="47" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="48" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="49" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>170</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_EdgeStyle</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="4A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="4B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="4C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="4D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>EdgeStyle</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="4E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Dot</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>330</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>EdgeStyle_2</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="4F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="50" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="51" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>330</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_EdgeStyle_2</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="52" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="53" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="54" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="55" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>EdgeStyle_2</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="56" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>DashDot</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>490</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>EdgeStyle_3</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="57" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="58" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="59" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>490</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_EdgeStyle_3</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="5A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="5B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="5C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="5D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>EdgeStyle_3</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="5E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>DashDotDot</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>650</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>EdgeStyle_4</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="5F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="60" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="61" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>650</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_EdgeStyle_4</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="62" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="63" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="64" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="65" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>EdgeStyle_4</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="66" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>Standard</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>810</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>Flashing</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="67" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="68" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="69" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>810</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_Flashing</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="6A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="6B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="6C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="6D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Flashing</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="6E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>30</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>970</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>HourNeedleHeight</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>186</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="6F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="70" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="71" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>970</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_HourNeedleHeight</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>338</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="72" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="73" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="74" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="75" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>HourNeedleHeight</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="76" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>20</HourNeedleWidth>
+              <Left>10</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>HourNeedleWidth</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="77" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="78" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="79" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>10</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_HourNeedleWidth</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="7A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="7B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="7C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="7D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>HourNeedleWidth</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="7E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>170</Left>
+              <LockSquaredExtent>false</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>LockSquaredExtent</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="7F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="80" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="81" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>170</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_LockSquaredExtent</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="82" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="83" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="84" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="85" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>LockSquaredExtent</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="86" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>330</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>40</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>MinuteNeedleHeight</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="87" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="88" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="89" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>330</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_MinuteNeedleHeight</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="8A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="8B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="8C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="8D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>MinuteNeedleHeight</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="8E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>490</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>16</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>MinuteNeedleWidth</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="8F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="90" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="91" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>490</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_MinuteNeedleWidth</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="92" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="93" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="94" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="95" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>MinuteNeedleWidth</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="96" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>650</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>255, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>NeedleBorderColor</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="97" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="98" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="99" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>650</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_NeedleBorderColor</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="9A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="9B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="9C" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="9D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>NeedleBorderColor</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="9E" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>810</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>255, 0, 0</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>NeedleColor</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="9F" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="A0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="A1" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>810</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_NeedleColor</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="A2" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="A3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="A4" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="A5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>NeedleColor</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="A6" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>970</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Solid</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>NeedleFillStyle</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>362</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="A7" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="A8" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="A9" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>970</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_NeedleFillStyle</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>514</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="AA" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="AB" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="AC" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="AD" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>NeedleFillStyle</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="AE" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>10</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>Arabic</NumberStyle>
+              <ObjectName>NumberStyle</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="AF" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="B1" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>10</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_NumberStyle</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="B2" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="B4" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="B5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>NumberStyle</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="B6" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>170</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>Roman</NumberStyle>
+              <ObjectName>NumberStyle_2</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="B7" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B8" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="B9" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>170</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_NumberStyle_2</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="BA" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="BB" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="BC" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="BD" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>NumberStyle_2</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="BE" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>330</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>SecondNeedleHeight</ObjectName>
+              <SecondNeedleHeight>40</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="BF" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="C0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="C1" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>330</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_SecondNeedleHeight</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="C2" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="C3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="C4" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="C5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>SecondNeedleHeight</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="C6" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>490</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>SecondNeedleWidth</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>6</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="C7" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="C8" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="C9" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>490</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_SecondNeedleWidth</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="CA" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="CB" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="CC" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="CD" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>SecondNeedleWidth</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="CE" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>650</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>ShowTicks</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>false</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="CF" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="D0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="D1" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>650</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_ShowTicks</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="D2" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="D3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="D4" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="D5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>ShowTicks</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="D6" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>810</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>TickDistance</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>50</TickDistance>
+              <TickStyle>Circle</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="D7" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="D8" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="D9" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>810</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_TickDistance</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="DA" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="DB" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="DC" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="DD" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>TickDistance</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Clock ID="DE" CompositionName="ScreenItems">
+            <AttributeList>
+              <Analog>true</Analog>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <DialColor>192, 192, 192</DialColor>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <Height>150</Height>
+              <HourNeedleHeight>50</HourNeedleHeight>
+              <HourNeedleWidth>10</HourNeedleWidth>
+              <Left>970</Left>
+              <LockSquaredExtent>true</LockSquaredExtent>
+              <MinuteNeedleHeight>70</MinuteNeedleHeight>
+              <MinuteNeedleWidth>8</MinuteNeedleWidth>
+              <NeedleBorderColor>0, 0, 0</NeedleBorderColor>
+              <NeedleColor>0, 255, 255</NeedleColor>
+              <NeedleFillStyle>Transparent</NeedleFillStyle>
+              <NumberStyle>NoNumber</NumberStyle>
+              <ObjectName>TickStyle</ObjectName>
+              <SecondNeedleHeight>80</SecondNeedleHeight>
+              <SecondNeedleWidth>2</SecondNeedleWidth>
+              <ShowTicks>true</ShowTicks>
+              <TabIndex>-1</TabIndex>
+              <TickDistance>80</TickDistance>
+              <TickStyle>Line</TickStyle>
+              <TicksColor>0, 255, 255</TicksColor>
+              <Top>538</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <Width>150</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Clock</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="DF" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="E0" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+            </ObjectList>
+          </Hmi.Screen.Clock>
+          <Hmi.Screen.TextField ID="E1" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>16</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>970</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>Label_TickStyle</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>690</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>158</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="E2" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="E3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="E4" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="E5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>TickStyle</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Button ID="E6" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CornerRadius>0</CornerRadius>
+              <CornerStyle>Round</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>211, 211, 211</FirstGradientColor>
+              <FirstGradientOffset>14</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>0, 0, 0</FocusColor>
+              <FocusWidth>1</FocusWidth>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>22</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>1238</Left>
+              <MiddleGradientColor>128, 128, 128</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>Next</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>169, 169, 169</SecondGradientColor>
+              <SecondGradientOffset>14</SecondGradientOffset>
+              <TabIndex>1</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>776</Top>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseFirstGradient>false</UseFirstGradient>
+              <UseSecondGradient>false</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>40</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Button</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Event.Event ID="E8" CompositionName="Events">
+                <AttributeList>
+                  <Name>Click</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="E9" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="EA" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>ActivateScreen</Name>
+                          <Type>SystemFunction</Type>
+                        </AttributeList>
+                        <ObjectList>
+                          <Hmi.Event.FunctionListEntryParameter ID="EB" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Screen name</Name>
+                            </AttributeList>
+                            <LinkList>
+                              <Value TargetID="@OpenLink">
+                                <Name>P_Clock_2</Name>
+                              </Value>
+                            </LinkList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                          <Hmi.Event.FunctionListEntryParameter ID="ED" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Object number</Name>
+                              <Value Type="System.Int32">0</Value>
+                            </AttributeList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                        </ObjectList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="EE" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="EF" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="F0" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="F1" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="F2" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="F3" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Text</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="F4" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="F5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Text</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+        </ObjectList>
+      </Hmi.Screen.ScreenLayer>
+    </ObjectList>
+  </Hmi.Screen.Screen>
+</Document>

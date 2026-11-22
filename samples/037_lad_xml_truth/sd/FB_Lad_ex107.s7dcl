@@ -1,0 +1,24 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex107"
+    VAR_INPUT
+        v_ob_nr : OB_TOD;
+        v_ret_val : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            ACT_TINT(
+                OB_NR := #v_ob_nr,
+                Ret_Val => #v_ret_val
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

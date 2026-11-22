@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-22T04:14:30.0062834Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.Screen.ScreenSlidein ID="0">
+    <AttributeList>
+      <Activate>true</Activate>
+      <ActiveLayer>0</ActiveLayer>
+      <BackColor>182, 182, 182</BackColor>
+      <Dimension>120</Dimension>
+      <Enabled>true</Enabled>
+      <GridColor>0, 0, 0</GridColor>
+      <LineColor1>223, 223, 223</LineColor1>
+      <LineColor2>32, 32, 32</LineColor2>
+      <OperatableAreaColor>128, 128, 128</OperatableAreaColor>
+      <SlideinType>Top</SlideinType>
+      <Visibility>FadeOut</Visibility>
+    </AttributeList>
+    <ObjectList>
+      <Hmi.Screen.ScreenLayer ID="1" CompositionName="Layers">
+        <AttributeList>
+          <Index>0</Index>
+          <Name>Layer_0</Name>
+          <VisibleES>true</VisibleES>
+        </AttributeList>
+        <ObjectList>
+          <Hmi.Screen.TextField ID="2" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>true</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <Height>20</Height>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>10</Left>
+              <LeftMargin>0</LeftMargin>
+              <ObjectName>SI_Title</ObjectName>
+              <RightMargin>0</RightMargin>
+              <TabIndex>-1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>10</Top>
+              <TopMargin>0</TopMargin>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>300</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Text field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="4" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="5" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="6" CompositionName="Text">
+                <ObjectList>
+                  <MultilingualTextItem ID="7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text><body><p>Slide-in screen Top</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.TextField>
+          <Hmi.Screen.Bar ID="8" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>192, 192, 192</BackColor>
+              <BarBackColor>128, 128, 128</BarBackColor>
+              <BarEdgeStyle>Solid</BarEdgeStyle>
+              <BarOrientation>Right</BarOrientation>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <CompatibilityMode>false</CompatibilityMode>
+              <CornerRadius>0</CornerRadius>
+              <CountSubDivisions>5</CountSubDivisions>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Flashing>None</Flashing>
+              <FlashingOnLimitViolation>false</FlashingOnLimitViolation>
+              <ForeColor>0, 255, 0</ForeColor>
+              <Height>40</Height>
+              <IntegerDigits>3</IntegerDigits>
+              <LargeTickLabelingStep>1</LargeTickLabelingStep>
+              <Left>330</Left>
+              <MaximumValue>5</MaximumValue>
+              <MinimumValue>-5</MinimumValue>
+              <ObjectName>SI_Bar</ObjectName>
+              <Precision>2</Precision>
+              <RangeLower1Color>255, 0, 255</RangeLower1Color>
+              <RangeLower1Enabled>false</RangeLower1Enabled>
+              <RangeLower2Color>255, 0, 0</RangeLower2Color>
+              <RangeLower2Enabled>false</RangeLower2Enabled>
+              <RangeNormalColor>0, 255, 0</RangeNormalColor>
+              <RangeNormalEnabled>true</RangeNormalEnabled>
+              <RangeUpper1Color>255, 0, 255</RangeUpper1Color>
+              <RangeUpper1Enabled>false</RangeUpper1Enabled>
+              <RangeUpper2Color>255, 0, 0</RangeUpper2Color>
+              <RangeUpper2Enabled>false</RangeUpper2Enabled>
+              <ScaleColor>0, 0, 0</ScaleColor>
+              <ScaleGradation>0</ScaleGradation>
+              <ScaleLabelingDoubleLined>true</ScaleLabelingDoubleLined>
+              <ScalePosition>RightDown</ScalePosition>
+              <SegmentColoring>Entire</SegmentColoring>
+              <ShowLimitLines>true</ShowLimitLines>
+              <ShowLimitMarkers>false</ShowLimitMarkers>
+              <ShowLimitRanges>false</ShowLimitRanges>
+              <ShowProcessValue>true</ShowProcessValue>
+              <ShowScale>true</ShowScale>
+              <ShowTickLabels>true</ShowTickLabels>
+              <TabIndex>-1</TabIndex>
+              <Top>10</Top>
+              <Unit />
+              <UseAutoScaling>true</UseAutoScaling>
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseExponentialFormat>false</UseExponentialFormat>
+              <Width>200</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>Bar</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="A" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <Hmi.Screen.Property ID="C" CompositionName="Properties">
+                <AttributeList>
+                  <Name>ProcessValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="D" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Pct</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+            </ObjectList>
+          </Hmi.Screen.Bar>
+          <Hmi.Screen.IOField ID="F" CompositionName="ScreenItems">
+            <AttributeList>
+              <AboveUpperLimitColor>255, 0, 0</AboveUpperLimitColor>
+              <BackColor>128, 128, 128</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BelowLowerLimitColor>255, 255, 0</BelowLowerLimitColor>
+              <BorderBackColor>255, 255, 255</BorderBackColor>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>1</BorderWidth>
+              <BottomMargin>0</BottomMargin>
+              <CornerRadius>0</CornerRadius>
+              <DataFormat>Decimal</DataFormat>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FieldLength>10</FieldLength>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <ForeColor>0, 0, 0</ForeColor>
+              <FormatPattern>s99999</FormatPattern>
+              <Height>30</Height>
+              <HiddenInput>false</HiddenInput>
+              <HorizontalAlignment>Left</HorizontalAlignment>
+              <Left>560</Left>
+              <LeftMargin>0</LeftMargin>
+              <Mode>InOutput</Mode>
+              <ObjectName>SI_Value</ObjectName>
+              <RightMargin>0</RightMargin>
+              <ShiftDecimalPoint>0</ShiftDecimalPoint>
+              <ShowLeadingZeros>false</ShowLeadingZeros>
+              <TabIndex>1</TabIndex>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>10</Top>
+              <TopMargin>0</TopMargin>
+              <Unit />
+              <UseDesignColorSchema>true</UseDesignColorSchema>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Top</VerticalAlignment>
+              <Width>120</Width>
+            </AttributeList>
+            <LinkList>
+              <StyleItem TargetID="@OpenLink">
+                <Name>I/O field</Name>
+              </StyleItem>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="11" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="12" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>16</FontSize>
+                      <FontStyle>Regular</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="13" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="14" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Screen.Property ID="15" CompositionName="Properties">
+                <AttributeList>
+                  <Name>ProcessValue</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagConnectionDynamic ID="16" CompositionName="Dynamic">
+                    <AttributeList>
+                      <Indirect>false</Indirect>
+                    </AttributeList>
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>D_Int</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagConnectionDynamic>
+                </ObjectList>
+              </Hmi.Screen.Property>
+            </ObjectList>
+          </Hmi.Screen.IOField>
+        </ObjectList>
+      </Hmi.Screen.ScreenLayer>
+    </ObjectList>
+  </Hmi.Screen.ScreenSlidein>
+</Document>

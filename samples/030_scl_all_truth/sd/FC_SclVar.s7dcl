@@ -1,0 +1,32 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclVar" : Void
+    VAR_INPUT
+        v : Variant;
+    END_VAR
+    VAR_TEMP
+        "i" : Int;
+        "b" : Bool;
+        n : UDInt;
+        "t" : Time;
+        "w" : Word;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #n := CountOfElements(#v);
+                #b := IS_ARRAY(#v);
+                #b := TypeOf(#v) = TypeOf(#i);
+                VariantGet(SRC := #v, DST => #i);
+                VariantPut(SRC := #i, DST := #v);
+                #i := MOVE_BLK_VARIANT(SRC := #v, COUNT := 1, SRC_INDEX := 0, DEST_INDEX := 0, DEST => #v);
+                #b := ENO;
+                
+            #i := 1;    // tab-separated
+            
+                #i := 2;   
+    END_NETWORK
+END_FUNCTION

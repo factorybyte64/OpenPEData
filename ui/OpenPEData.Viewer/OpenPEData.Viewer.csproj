@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <StartupObject>OpenPEData.Viewer.Program</StartupObject>
+    <Product>OpenPEData</Product>
+    <Authors>factorybyte64</Authors>
+    <Company>factorybyte64</Company>
+    <Copyright>Copyright (c) 2026 factorybyte64</Copyright>
+    <Version>0.0.1</Version>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\app_icon.png" />
+    <!-- Openness default values of the screen item types, only for drawing screens, generated from Openness exports of the test projects -->
+    <EmbeddedResource Include="HmiDefaults.json" LogicalName="HmiDefaults.json" />
+    <EmbeddedResource Include="HmiClassicDefaults.json" LogicalName="HmiClassicDefaults.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Velopack" Version="1.2.0" />
+  </ItemGroup>
+
+  <!-- The parser runs in process: the library OpenPEData.dll (dotnet\src\OpenPEData). -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\dotnet\src\OpenPEData\OpenPEData.csproj" />
+  </ItemGroup>
+
+  <!-- Release builds in Visual Studio also create the Velopack setup via ui\scripts\Pack-OpenPEData.ps1.
+       Command-line builds skip it unless -p:PackSetup=true is passed; the pack script publishes with PackSetup=false. -->
+  <PropertyGroup>
+    <PackSetup Condition="'$(PackSetup)' == '' And '$(Configuration)' == 'Release' And '$(BuildingInsideVisualStudio)' == 'true'">true</PackSetup>
+  </PropertyGroup>
+
+  <Target Name="PackVelopackSetup" AfterTargets="Build" Condition="'$(PackSetup)' == 'true'">
+    <Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\..\scripts\Pack-OpenPEData.ps1&quot; -Configuration $(Configuration)" />
+  </Target>
+
+</Project>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-22T02:34:48.5366465Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.RuntimeScripting.VBScript ID="0">
+    <AttributeList>
+      <Code>SmartTags("D_State") = 1
+SmartTags("D_Bool") = False
+SmartTags("D_SInt") = -128
+SmartTags("D_Int") = -32768
+SmartTags("D_DInt") = -2147483648
+SmartTags("D_USInt") = 0
+SmartTags("D_UInt") = 0
+SmartTags("D_UDInt") = 0
+SmartTags("D_Real") = -999.999
+SmartTags("D_LReal") = -0.00000015
+SmartTags("D_String") = ""
+SmartTags("D_DateTime") = DateSerial(1990, 1, 1) + TimeSerial(0, 0, 0)
+SmartTags("D_Pct") = 0
+SmartTags("D_Range") = 5
+SmartTags("D_Bits") = 1
+SmartTags("D_Vis") = False
+SmartTags("D_En") = False
+SmartTags("D_X") = 10
+SmartTags("D_Y") = 10
+SmartTags("D_Max") = 100
+SmartTags("D_Min") = 0
+SmartTags("D_TL") = -5
+SmartTags("D_BarR") = -5
+</Code>
+      <Name>SetS1</Name>
+      <PreCode>
+
+</PreCode>
+      <Type>Sub</Type>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </Hmi.RuntimeScripting.VBScript>
+</Document>

@@ -1,0 +1,2782 @@
+[
+ {
+  "screen": "D_Line_1",
+  "object": "Static",
+  "type": "Line",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "A_Range",
+  "type": "Line",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "A_Flash",
+  "type": "Line",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "A_Bit",
+  "type": "Line",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "A_Bits",
+  "type": "Line",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "V_Range",
+  "type": "Line",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 106
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "V_Bit",
+  "type": "Line",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 106
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "M_H",
+  "type": "Line",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 106
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "M_V",
+  "type": "Line",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 106
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "M_D",
+  "type": "Line",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 106
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "M_Direct",
+  "type": "Line",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 208
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "E_Range",
+  "type": "Line",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 208
+ },
+ {
+  "screen": "D_Line_1",
+  "object": "E_Bit",
+  "type": "Line",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 208
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "Static",
+  "type": "Polyline",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "A_Range",
+  "type": "Polyline",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "A_Flash",
+  "type": "Polyline",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "A_Bit",
+  "type": "Polyline",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "A_Bits",
+  "type": "Polyline",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "V_Range",
+  "type": "Polyline",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 106
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "V_Bit",
+  "type": "Polyline",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 106
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "M_H",
+  "type": "Polyline",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 106
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "M_V",
+  "type": "Polyline",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 106
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "M_D",
+  "type": "Polyline",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 106
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "M_Direct",
+  "type": "Polyline",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 208
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "E_Range",
+  "type": "Polyline",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 208
+ },
+ {
+  "screen": "D_Polyline_1",
+  "object": "E_Bit",
+  "type": "Polyline",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 208
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "Static",
+  "type": "Polygon",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "A_Range",
+  "type": "Polygon",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "A_Flash",
+  "type": "Polygon",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "A_Bit",
+  "type": "Polygon",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "A_Bits",
+  "type": "Polygon",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "V_Range",
+  "type": "Polygon",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 106
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "V_Bit",
+  "type": "Polygon",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 106
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "M_H",
+  "type": "Polygon",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 106
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "M_V",
+  "type": "Polygon",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 106
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "M_D",
+  "type": "Polygon",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 106
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "M_Direct",
+  "type": "Polygon",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 208
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "E_Range",
+  "type": "Polygon",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 208
+ },
+ {
+  "screen": "D_Polygon_1",
+  "object": "E_Bit",
+  "type": "Polygon",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 208
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "Static",
+  "type": "Ellipse",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "A_Range",
+  "type": "Ellipse",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "A_Flash",
+  "type": "Ellipse",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "A_Bit",
+  "type": "Ellipse",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "A_Bits",
+  "type": "Ellipse",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "V_Range",
+  "type": "Ellipse",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 106
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "V_Bit",
+  "type": "Ellipse",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 106
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "M_H",
+  "type": "Ellipse",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 106
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "M_V",
+  "type": "Ellipse",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 106
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "M_D",
+  "type": "Ellipse",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 106
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "M_Direct",
+  "type": "Ellipse",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 208
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "E_Range",
+  "type": "Ellipse",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 208
+ },
+ {
+  "screen": "D_Ellipse_1",
+  "object": "E_Bit",
+  "type": "Ellipse",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 208
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "Static",
+  "type": "Circle",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "A_Range",
+  "type": "Circle",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 108,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "A_Flash",
+  "type": "Circle",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 210,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "A_Bit",
+  "type": "Circle",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 312,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "A_Bits",
+  "type": "Circle",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 414,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "V_Range",
+  "type": "Circle",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 516,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "V_Bit",
+  "type": "Circle",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 618,
+  "top": 4
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "M_H",
+  "type": "Circle",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 6,
+  "top": 106
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "M_V",
+  "type": "Circle",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 108,
+  "top": 106
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "M_D",
+  "type": "Circle",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 210,
+  "top": 106
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "M_Direct",
+  "type": "Circle",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 312,
+  "top": 106
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "E_Range",
+  "type": "Circle",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 414,
+  "top": 106
+ },
+ {
+  "screen": "D_Circle_1",
+  "object": "E_Bit",
+  "type": "Circle",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 516,
+  "top": 106
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "Static",
+  "type": "Rectangle",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "A_Range",
+  "type": "Rectangle",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "A_Flash",
+  "type": "Rectangle",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "A_Bit",
+  "type": "Rectangle",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "A_Bits",
+  "type": "Rectangle",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "V_Range",
+  "type": "Rectangle",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 106
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "V_Bit",
+  "type": "Rectangle",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 106
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "M_H",
+  "type": "Rectangle",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 106
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "M_V",
+  "type": "Rectangle",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 106
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "M_D",
+  "type": "Rectangle",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 106
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "M_Direct",
+  "type": "Rectangle",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 208
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "E_Range",
+  "type": "Rectangle",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 208
+ },
+ {
+  "screen": "D_Rectangle_1",
+  "object": "E_Bit",
+  "type": "Rectangle",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 208
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "Static",
+  "type": "TextField",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "A_Range",
+  "type": "TextField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "A_Flash",
+  "type": "TextField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "A_Bit",
+  "type": "TextField",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "A_Bits",
+  "type": "TextField",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "V_Range",
+  "type": "TextField",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 86
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "V_Bit",
+  "type": "TextField",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 86
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "M_H",
+  "type": "TextField",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 86
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "M_V",
+  "type": "TextField",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 86
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "M_D",
+  "type": "TextField",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 86
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "M_Direct",
+  "type": "TextField",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 168
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "E_Range",
+  "type": "TextField",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 168
+ },
+ {
+  "screen": "D_TextField_1",
+  "object": "E_Bit",
+  "type": "TextField",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 168
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "Static",
+  "type": "GraphicView",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "A_Range",
+  "type": "GraphicView",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "A_Flash",
+  "type": "GraphicView",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "A_Bit",
+  "type": "GraphicView",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "A_Bits",
+  "type": "GraphicView",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "V_Range",
+  "type": "GraphicView",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "V_Bit",
+  "type": "GraphicView",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "M_H",
+  "type": "GraphicView",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "M_V",
+  "type": "GraphicView",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "M_D",
+  "type": "GraphicView",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "M_Direct",
+  "type": "GraphicView",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 228
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "E_Range",
+  "type": "GraphicView",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 228
+ },
+ {
+  "screen": "D_GraphicView_1",
+  "object": "E_Bit",
+  "type": "GraphicView",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 228
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "Static",
+  "type": "IOField",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "A_Range",
+  "type": "IOField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "A_Flash",
+  "type": "IOField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "A_Bit",
+  "type": "IOField",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "A_Bits",
+  "type": "IOField",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "V_Range",
+  "type": "IOField",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 86
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "V_Bit",
+  "type": "IOField",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 86
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "M_H",
+  "type": "IOField",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 86
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "M_V",
+  "type": "IOField",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 86
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "M_D",
+  "type": "IOField",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 86
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "M_Direct",
+  "type": "IOField",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 168
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "E_Range",
+  "type": "IOField",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 168
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "E_Bit",
+  "type": "IOField",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 168
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_SInt",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_SInt",
+  "details": "ProcessValue = D_SInt, FormatPattern s999",
+  "left": 462,
+  "top": 168
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_Int",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Int",
+  "details": "ProcessValue = D_Int, FormatPattern s99999",
+  "left": 614,
+  "top": 168
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_DInt",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_DInt",
+  "details": "ProcessValue = D_DInt, FormatPattern s9999999999",
+  "left": 6,
+  "top": 250
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_USInt",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_USInt",
+  "details": "ProcessValue = D_USInt, FormatPattern 999",
+  "left": 158,
+  "top": 250
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_UInt",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_UInt",
+  "details": "ProcessValue = D_UInt, FormatPattern 99999",
+  "left": 310,
+  "top": 250
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_UDInt",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_UDInt",
+  "details": "ProcessValue = D_UDInt, FormatPattern 9999999999",
+  "left": 462,
+  "top": 250
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_Real",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Real",
+  "details": "ProcessValue = D_Real",
+  "left": 614,
+  "top": 250
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_LReal",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_LReal",
+  "details": "ProcessValue = D_LReal",
+  "left": 6,
+  "top": 332
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_String",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_String",
+  "details": "ProcessValue = D_String, DataFormat String",
+  "left": 158,
+  "top": 332
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_Int_Shift2",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Int",
+  "details": "ProcessValue = D_Int, ShiftDecimalPoint 2, FormatPattern s99999",
+  "left": 310,
+  "top": 332
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_Int_s999999",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Int",
+  "details": "ProcessValue = D_Int, FormatPattern s999999",
+  "left": 462,
+  "top": 332
+ },
+ {
+  "screen": "D_IOField_1",
+  "object": "PV_Real_s9999_99",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Real",
+  "details": "ProcessValue = D_Real, FormatPattern s9999.99",
+  "left": 614,
+  "top": 332
+ },
+ {
+  "screen": "D_IOField_2",
+  "object": "PV_Int_Output",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Int",
+  "details": "ProcessValue = D_Int, Mode Output, FormatPattern s99999",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_IOField_2",
+  "object": "PV_Int_s99",
+  "type": "IOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Int",
+  "details": "ProcessValue = D_Int, FormatPattern s99",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "Static",
+  "type": "Button",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "A_Range",
+  "type": "Button",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 158,
+  "top": 4
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "A_Flash",
+  "type": "Button",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 310,
+  "top": 4
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "A_Bit",
+  "type": "Button",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 462,
+  "top": 4
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "A_Bits",
+  "type": "Button",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 614,
+  "top": 4
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "V_Range",
+  "type": "Button",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 6,
+  "top": 96
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "V_Bit",
+  "type": "Button",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 158,
+  "top": 96
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "M_H",
+  "type": "Button",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 310,
+  "top": 96
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "M_V",
+  "type": "Button",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 462,
+  "top": 96
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "M_D",
+  "type": "Button",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 614,
+  "top": 96
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "M_Direct",
+  "type": "Button",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 6,
+  "top": 188
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "E_Range",
+  "type": "Button",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 158,
+  "top": 188
+ },
+ {
+  "screen": "D_Button_1",
+  "object": "E_Bit",
+  "type": "Button",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 310,
+  "top": 188
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "Static",
+  "type": "SymbolicIOField",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "A_Range",
+  "type": "SymbolicIOField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 178,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "A_Flash",
+  "type": "SymbolicIOField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 350,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "A_Bit",
+  "type": "SymbolicIOField",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 522,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "A_Bits",
+  "type": "SymbolicIOField",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 6,
+  "top": 86
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "V_Range",
+  "type": "SymbolicIOField",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 178,
+  "top": 86
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "V_Bit",
+  "type": "SymbolicIOField",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 350,
+  "top": 86
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "M_H",
+  "type": "SymbolicIOField",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 522,
+  "top": 86
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "M_V",
+  "type": "SymbolicIOField",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 6,
+  "top": 168
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "M_D",
+  "type": "SymbolicIOField",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 178,
+  "top": 168
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "M_Direct",
+  "type": "SymbolicIOField",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 350,
+  "top": 168
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "E_Range",
+  "type": "SymbolicIOField",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 522,
+  "top": 168
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "E_Bit",
+  "type": "SymbolicIOField",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 6,
+  "top": 250
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "PV_TL_Value",
+  "type": "SymbolicIOField",
+  "dynamic": "TagConnection",
+  "tag": "D_TL",
+  "details": "ProcessValue = D_TL, TextList TL_Value",
+  "left": 178,
+  "top": 250
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "PV_TL_Bit",
+  "type": "SymbolicIOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Bool",
+  "details": "ProcessValue = D_Bool, TextList TL_Bit",
+  "left": 350,
+  "top": 250
+ },
+ {
+  "screen": "D_SymbolicIOField_1",
+  "object": "PV_TL_BitNo",
+  "type": "SymbolicIOField",
+  "dynamic": "TagConnection",
+  "tag": "D_Bits",
+  "details": "ProcessValue = D_Bits, TextList TL_BitNo",
+  "left": 522,
+  "top": 250
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "Static",
+  "type": "GraphicIOField",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "A_Range",
+  "type": "GraphicIOField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 118,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "A_Flash",
+  "type": "GraphicIOField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 230,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "A_Bit",
+  "type": "GraphicIOField",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 342,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "A_Bits",
+  "type": "GraphicIOField",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 454,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "V_Range",
+  "type": "GraphicIOField",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 566,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "V_Bit",
+  "type": "GraphicIOField",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 678,
+  "top": 4
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "M_H",
+  "type": "GraphicIOField",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 6,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "M_V",
+  "type": "GraphicIOField",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 118,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "M_D",
+  "type": "GraphicIOField",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 230,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "M_Direct",
+  "type": "GraphicIOField",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 342,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "E_Range",
+  "type": "GraphicIOField",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 454,
+  "top": 116
+ },
+ {
+  "screen": "D_GraphicIOField_1",
+  "object": "E_Bit",
+  "type": "GraphicIOField",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 566,
+  "top": 116
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "Static",
+  "type": "DateTimeField",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "A_Range",
+  "type": "DateTimeField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 218,
+  "top": 4
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "A_Flash",
+  "type": "DateTimeField",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 430,
+  "top": 4
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "A_Bit",
+  "type": "DateTimeField",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 6,
+  "top": 86
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "A_Bits",
+  "type": "DateTimeField",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 218,
+  "top": 86
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "V_Range",
+  "type": "DateTimeField",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 430,
+  "top": 86
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "V_Bit",
+  "type": "DateTimeField",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 6,
+  "top": 168
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "M_H",
+  "type": "DateTimeField",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 218,
+  "top": 168
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "M_V",
+  "type": "DateTimeField",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 430,
+  "top": 168
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "M_D",
+  "type": "DateTimeField",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 6,
+  "top": 250
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "M_Direct",
+  "type": "DateTimeField",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 218,
+  "top": 250
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "E_Range",
+  "type": "DateTimeField",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 430,
+  "top": 250
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "E_Bit",
+  "type": "DateTimeField",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 6,
+  "top": 332
+ },
+ {
+  "screen": "D_DateTimeField_1",
+  "object": "PV_DateTime",
+  "type": "DateTimeField",
+  "dynamic": "TagConnection",
+  "tag": "D_DateTime",
+  "details": "ProcessValue = D_DateTime",
+  "left": 218,
+  "top": 332
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "Static",
+  "type": "Bar",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "A_Range",
+  "type": "Bar",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 98,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "A_Flash",
+  "type": "Bar",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 190,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "A_Bit",
+  "type": "Bar",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 282,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "A_Bits",
+  "type": "Bar",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 374,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "V_Range",
+  "type": "Bar",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 466,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "V_Bit",
+  "type": "Bar",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 558,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "M_H",
+  "type": "Bar",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 650,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "M_V",
+  "type": "Bar",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 6,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "M_D",
+  "type": "Bar",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 98,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "M_Direct",
+  "type": "Bar",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 190,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "E_Range",
+  "type": "Bar",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 282,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "E_Bit",
+  "type": "Bar",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 374,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "PV_Pct",
+  "type": "Bar",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct",
+  "left": 466,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "PV_Real",
+  "type": "Bar",
+  "dynamic": "TagConnection",
+  "tag": "D_Real",
+  "details": "ProcessValue = D_Real",
+  "left": 558,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_1",
+  "object": "PV_BarR",
+  "type": "Bar",
+  "dynamic": "TagConnection",
+  "tag": "D_BarR",
+  "details": "ProcessValue = D_BarR",
+  "left": 650,
+  "top": 176
+ },
+ {
+  "screen": "D_Bar_2",
+  "object": "PV_Pct_0_100",
+  "type": "Bar",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct, MaximumValue 100, MinimumValue 0",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Bar_2",
+  "object": "PV_Pct_MaxMin",
+  "type": "Bar",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct, MaximumValue = D_Max, MinimumValue = D_Min",
+  "left": 98,
+  "top": 4
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "Static",
+  "type": "Switch",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "A_Range",
+  "type": "Switch",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 178,
+  "top": 4
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "A_Flash",
+  "type": "Switch",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 350,
+  "top": 4
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "A_Bit",
+  "type": "Switch",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 522,
+  "top": 4
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "A_Bits",
+  "type": "Switch",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 6,
+  "top": 96
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "V_Range",
+  "type": "Switch",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 178,
+  "top": 96
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "V_Bit",
+  "type": "Switch",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 350,
+  "top": 96
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "M_H",
+  "type": "Switch",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 522,
+  "top": 96
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "M_V",
+  "type": "Switch",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 6,
+  "top": 188
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "M_D",
+  "type": "Switch",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 178,
+  "top": 188
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "M_Direct",
+  "type": "Switch",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 350,
+  "top": 188
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "E_Range",
+  "type": "Switch",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 522,
+  "top": 188
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "E_Bit",
+  "type": "Switch",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 6,
+  "top": 280
+ },
+ {
+  "screen": "D_Switch_1",
+  "object": "PV_Bool",
+  "type": "Switch",
+  "dynamic": "TagConnection",
+  "tag": "D_Bool",
+  "details": "ProcessValue = D_Bool",
+  "left": 178,
+  "top": 280
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "Static",
+  "type": "SymbolLibrary",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "A_Range",
+  "type": "SymbolLibrary",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 118,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "A_Flash",
+  "type": "SymbolLibrary",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 230,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "A_Bit",
+  "type": "SymbolLibrary",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 342,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "A_Bits",
+  "type": "SymbolLibrary",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 454,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "V_Range",
+  "type": "SymbolLibrary",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 566,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "V_Bit",
+  "type": "SymbolLibrary",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 678,
+  "top": 4
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "M_H",
+  "type": "SymbolLibrary",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 6,
+  "top": 116
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "M_V",
+  "type": "SymbolLibrary",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 118,
+  "top": 116
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "M_D",
+  "type": "SymbolLibrary",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 230,
+  "top": 116
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "M_Direct",
+  "type": "SymbolLibrary",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 342,
+  "top": 116
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "E_Range",
+  "type": "SymbolLibrary",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 454,
+  "top": 116
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "E_Bit",
+  "type": "SymbolLibrary",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 566,
+  "top": 116
+ },
+ {
+  "screen": "D_SymbolLibrary_1",
+  "object": "PV_Pct",
+  "type": "SymbolLibrary",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct",
+  "left": 678,
+  "top": 116
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "Static",
+  "type": "Slider",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "A_Range",
+  "type": "Slider",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 118,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "A_Flash",
+  "type": "Slider",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 230,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "A_Bit",
+  "type": "Slider",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 342,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "A_Bits",
+  "type": "Slider",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 454,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "V_Range",
+  "type": "Slider",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 566,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "V_Bit",
+  "type": "Slider",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 678,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "M_H",
+  "type": "Slider",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 6,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "M_V",
+  "type": "Slider",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 118,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "M_D",
+  "type": "Slider",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 230,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "M_Direct",
+  "type": "Slider",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 342,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "E_Range",
+  "type": "Slider",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 454,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "E_Bit",
+  "type": "Slider",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 566,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_1",
+  "object": "PV_Pct",
+  "type": "Slider",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct",
+  "left": 678,
+  "top": 216
+ },
+ {
+  "screen": "D_Slider_2",
+  "object": "PV_Int",
+  "type": "Slider",
+  "dynamic": "TagConnection",
+  "tag": "D_Int",
+  "details": "ProcessValue = D_Int",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Slider_2",
+  "object": "PV_Pct_0_200",
+  "type": "Slider",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct, MaximumValue 200, MinimumValue 0",
+  "left": 118,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_1",
+  "object": "Static",
+  "type": "Gauge",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_1",
+  "object": "A_Range",
+  "type": "Gauge",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 208,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_1",
+  "object": "A_Flash",
+  "type": "Gauge",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 410,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_1",
+  "object": "A_Bit",
+  "type": "Gauge",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 6,
+  "top": 206
+ },
+ {
+  "screen": "D_Gauge_1",
+  "object": "A_Bits",
+  "type": "Gauge",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 208,
+  "top": 206
+ },
+ {
+  "screen": "D_Gauge_1",
+  "object": "V_Range",
+  "type": "Gauge",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 410,
+  "top": 206
+ },
+ {
+  "screen": "D_Gauge_2",
+  "object": "V_Bit",
+  "type": "Gauge",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_2",
+  "object": "M_H",
+  "type": "Gauge",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 208,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_2",
+  "object": "M_V",
+  "type": "Gauge",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 410,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_2",
+  "object": "M_D",
+  "type": "Gauge",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 6,
+  "top": 206
+ },
+ {
+  "screen": "D_Gauge_2",
+  "object": "M_Direct",
+  "type": "Gauge",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 208,
+  "top": 206
+ },
+ {
+  "screen": "D_Gauge_2",
+  "object": "E_Range",
+  "type": "Gauge",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 410,
+  "top": 206
+ },
+ {
+  "screen": "D_Gauge_3",
+  "object": "E_Bit",
+  "type": "Gauge",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_3",
+  "object": "PV_Pct",
+  "type": "Gauge",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct",
+  "left": 208,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_3",
+  "object": "PV_Real",
+  "type": "Gauge",
+  "dynamic": "TagConnection",
+  "tag": "D_Real",
+  "details": "ProcessValue = D_Real",
+  "left": 410,
+  "top": 4
+ },
+ {
+  "screen": "D_Gauge_3",
+  "object": "PV_Pct_MaxMin",
+  "type": "Gauge",
+  "dynamic": "TagConnection",
+  "tag": "D_Pct",
+  "details": "ProcessValue = D_Pct, MaximumValue = D_Max, MinimumValue = D_Min",
+  "left": 6,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_1",
+  "object": "Static",
+  "type": "Clock",
+  "dynamic": "Static",
+  "tag": "",
+  "details": "no dynamics",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Clock_1",
+  "object": "A_Range",
+  "type": "Clock",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "ranges 0..9 back 255, 0, 0 fore 255, 255, 255; 10..49 back 0, 160, 0 fore 0, 0, 0; 50..99 back 0, 0, 255 fore 255, 255, 0",
+  "left": 208,
+  "top": 4
+ },
+ {
+  "screen": "D_Clock_1",
+  "object": "A_Flash",
+  "type": "Clock",
+  "dynamic": "RangeAppearanceAnimation",
+  "tag": "D_Range",
+  "details": "range 50..99 back 255,0,0 fore 255,255,255 flashing Fast",
+  "left": 410,
+  "top": 4
+ },
+ {
+  "screen": "D_Clock_1",
+  "object": "A_Bit",
+  "type": "Clock",
+  "dynamic": "SingleBitAppearanceAnimation",
+  "tag": "D_Bool",
+  "details": "bit 0: 0 back 128,128,128 fore 255,255,255; 1 back 255,255,0 fore 0,0,0",
+  "left": 6,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_1",
+  "object": "A_Bits",
+  "type": "Clock",
+  "dynamic": "MultipleBitsAppearanceAnimation",
+  "tag": "D_Bits",
+  "details": "bit 0 back 255, 0, 0 fore 255, 255, 255; bit 1 back 0, 160, 0 fore 0, 0, 0; bit 2 back 0, 0, 255 fore 255, 255, 0; bit 3 back 255, 128, 0 fore 0, 0, 0",
+  "left": 208,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_1",
+  "object": "V_Range",
+  "type": "Clock",
+  "dynamic": "VisibilityAnimation",
+  "tag": "D_Range",
+  "details": "visible for 10..49",
+  "left": 410,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_2",
+  "object": "V_Bit",
+  "type": "Clock",
+  "dynamic": "SingleBitVisibilityAnimation",
+  "tag": "D_Vis",
+  "details": "visible when bit 0 is 1",
+  "left": 6,
+  "top": 4
+ },
+ {
+  "screen": "D_Clock_2",
+  "object": "M_H",
+  "type": "Clock",
+  "dynamic": "HorizontalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 0",
+  "left": 208,
+  "top": 4
+ },
+ {
+  "screen": "D_Clock_2",
+  "object": "M_V",
+  "type": "Clock",
+  "dynamic": "VerticalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 0 y 30",
+  "left": 410,
+  "top": 4
+ },
+ {
+  "screen": "D_Clock_2",
+  "object": "M_D",
+  "type": "Clock",
+  "dynamic": "DiagonalMovementAnimation",
+  "tag": "D_Pct",
+  "details": "range 0..100, delta x 40 y 30",
+  "left": 6,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_2",
+  "object": "M_Direct",
+  "type": "Clock",
+  "dynamic": "DirectMovementAnimation",
+  "tag": "D_X, D_Y",
+  "details": "x = D_X, y = D_Y",
+  "left": 208,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_2",
+  "object": "E_Range",
+  "type": "Clock",
+  "dynamic": "ObjectEnablingAnimation",
+  "tag": "D_Range",
+  "details": "disabled for 10..49",
+  "left": 410,
+  "top": 206
+ },
+ {
+  "screen": "D_Clock_3",
+  "object": "E_Bit",
+  "type": "Clock",
+  "dynamic": "SingleBitObjectEnablingAnimation",
+  "tag": "D_En",
+  "details": "enabled when bit 0 is 1",
+  "left": 6,
+  "top": 4
+ }
+]

@@ -1,0 +1,119 @@
+﻿FUNCTION_BLOCK "FB_StlLoad"
+TITLE = STL catalog FB_StlLoad
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+   VAR_INPUT 
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      i1 : Int;
+      i2 : Int;
+      d1 : DInt;
+      d2 : DInt;
+      r1 : Real;
+      r2 : Real;
+      w1 : Word;
+      w2 : Word;
+      dw1 : DWord;
+      dw2 : DWord;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      by1 : Byte;
+      ir : Int;
+      dr : DInt;
+      rr : Real;
+      wr : Word;
+      dwr : DWord;
+   END_VAR
+
+   VAR 
+      dummy : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 070 L
+      L #i1;
+      T #ir;
+      L "Tag__639296449648259132";
+      T #ir;
+      L P#M10.0;
+      T #dwr;
+      L B#16#12;
+      T #by1;
+      L 'AB';
+      T #wr;
+      L 2.5;
+      T #rr;
+      L T#1S;
+      T #dr;
+NETWORK
+TITLE = 071 L STW
+      L STW;
+      T #wr;
+NETWORK
+TITLE = 072 LAR1
+      L P#M10.0;
+      LAR1;
+NETWORK
+TITLE = 073 LAR1 <D>
+      LAR1 P#M20.0;
+      LAR1 #dw1;
+NETWORK
+TITLE = 074 LAR1 AR2
+      LAR1 AR2;
+NETWORK
+TITLE = 075 LAR2
+      L P#M10.0;
+      LAR2;
+NETWORK
+TITLE = 076 LAR2 <D>
+      LAR2 P#M30.0;
+      LAR2 #dw1;
+NETWORK
+TITLE = 077 T
+      L #i1;
+      T #ir;
+      T "Tag__639296449652422717";
+      L 2;
+      T W[ AR1, P#0.0];
+      T MW[ #dw1];
+NETWORK
+TITLE = 078 T STW
+      L #w1;
+      T STW;
+NETWORK
+TITLE = 079 CAR
+      CAR;
+NETWORK
+TITLE = 080 TAR1
+      TAR1;
+      T #dwr;
+NETWORK
+TITLE = 081 TAR1 <D>
+      TAR1 #dwr;
+NETWORK
+TITLE = 082 TAR1 AR2
+      TAR1 AR2;
+NETWORK
+TITLE = 083 TAR2
+      TAR2;
+      T #dwr;
+NETWORK
+TITLE = 084 TAR2 <D>
+      TAR2 #dwr;
+NETWORK
+TITLE = 153 +AR1
+      L +4;
+      +AR1;
+      +AR1 P#2.0;
+NETWORK
+TITLE = 154 +AR2
+      L +4;
+      +AR2;
+      +AR2 P#2.0;
+END_FUNCTION_BLOCK
+

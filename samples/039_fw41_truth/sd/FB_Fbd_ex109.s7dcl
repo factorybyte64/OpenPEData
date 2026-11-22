@@ -1,0 +1,30 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex109"
+    VAR_INPUT
+        v_ob_nr : Int;
+        v_dtime : Time;
+        v_sign : Word;
+    END_VAR
+    VAR_OUTPUT
+        v_ret_val : Int;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            SRT_DINT(
+                OB_NR := #v_ob_nr,
+                DTIME := #v_dtime,
+                SIGN := #v_sign,
+                RET_VAL => #v_ret_val
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-11T00:48:17.7043043Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="v_req" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_db" Datatype="DB_ANY" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_index" Datatype="DInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="Output">
+            <Member Name="v_busy" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_done" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_error" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="InOut">
+            <Member Name="v_value" Datatype="Variant" Accessibility="Public" />
+          </Section>
+          <Section Name="Static">
+            <Member Name="inst" Datatype="ReadFromArrayDBL" Version="1.2" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Sections>
+                <Section Name="Input">
+                  <Member Name="req" Datatype="Bool" />
+                  <Member Name="db" Datatype="DB_ANY" />
+                  <Member Name="index" Datatype="DInt" />
+                </Section>
+                <Section Name="Output">
+                  <Member Name="busy" Datatype="Bool" />
+                  <Member Name="done" Datatype="Bool" />
+                  <Member Name="error" Datatype="Int" />
+                </Section>
+                <Section Name="InOut">
+                  <Member Name="value" Datatype="Variant" />
+                </Section>
+                <Section Name="Static">
+                  <Member Name="header" Datatype="DBHeader" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="general" Datatype="GeneralDBHeader" Version="1.0">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="TypeCode" Datatype="DWord" />
+                              <Member Name="OriginalNumber" Datatype="DWord" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                        <Member Name="arrayDB" Datatype="ArrayDBHeader" Version="1.0">
+                          <Sections>
+                            <Section Name="None">
+                              <Member Name="PayLoadOffset" Datatype="UDInt" />
+                              <Member Name="Version" Datatype="DWord" />
+                              <Member Name="LowerBound" Datatype="DInt" />
+                              <Member Name="UpperBound" Datatype="DInt" />
+                              <Member Name="Elements" Datatype="UDInt" />
+                              <Member Name="PaddedSize" Datatype="UDInt" />
+                              <Member Name="ElementSize" Datatype="UDInt" />
+                              <Member Name="Reserved" Datatype="UDInt" />
+                            </Section>
+                          </Sections>
+                        </Member>
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="state" Datatype="USInt" />
+                  <Member Name="internal_req" Datatype="Bool" />
+                  <Member Name="perfect" Datatype="Bool" />
+                  <Member Name="index_copy" Datatype="DInt" />
+                  <Member Name="dbref" Datatype="VAREF" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="RID" Datatype="DWord" />
+                        <Member Name="AREA" Datatype="Byte" />
+                        <Member Name="DB_NUMBER" Datatype="UInt" />
+                        <Member Name="OFFSET" Datatype="UDInt" />
+                        <Member Name="LENGTH" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="dstref" Datatype="VAREF" Version="1.0">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="RID" Datatype="DWord" />
+                        <Member Name="AREA" Datatype="Byte" />
+                        <Member Name="DB_NUMBER" Datatype="UInt" />
+                        <Member Name="OFFSET" Datatype="UDInt" />
+                        <Member Name="LENGTH" Datatype="UDInt" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_Scl_sl053</Name>
+      <Namespace />
+      <Number>31</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Access Scope="LocalVariable" UId="21">
+                <Symbol UId="22">
+                  <Component Name="inst" UId="23" />
+                </Symbol>
+              </Access>
+              <Access Scope="Call" UId="24">
+                <Instruction UId="25">
+                  <Token Text="(" UId="26" />
+                  <Parameter Name="req" UId="27">
+                    <Blank Num="1" UId="28" />
+                    <Token Text=":=" UId="29" />
+                    <Blank Num="1" UId="30" />
+                    <Access Scope="LocalVariable" UId="31">
+                      <Symbol UId="32">
+                        <Component Name="v_req" UId="33" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="34" />
+                  <Blank Num="1" UId="35" />
+                  <Parameter Name="db" UId="36">
+                    <Blank Num="1" UId="37" />
+                    <Token Text=":=" UId="38" />
+                    <Blank Num="1" UId="39" />
+                    <Access Scope="LocalVariable" UId="40">
+                      <Symbol UId="41">
+                        <Component Name="v_db" UId="42" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="43" />
+                  <Blank Num="1" UId="44" />
+                  <Parameter Name="index" UId="45">
+                    <Blank Num="1" UId="46" />
+                    <Token Text=":=" UId="47" />
+                    <Blank Num="1" UId="48" />
+                    <Access Scope="LocalVariable" UId="49">
+                      <Symbol UId="50">
+                        <Component Name="v_index" UId="51" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="52" />
+                  <Blank Num="1" UId="53" />
+                  <Parameter Name="value" UId="54">
+                    <Blank Num="1" UId="55" />
+                    <Token Text=":=" UId="56" />
+                    <Blank Num="1" UId="57" />
+                    <Access Scope="LocalVariable" UId="58">
+                      <Symbol UId="59">
+                        <Component Name="v_value" UId="60" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="61" />
+                  <Blank Num="1" UId="62" />
+                  <Parameter Name="busy" UId="63">
+                    <Blank Num="1" UId="64" />
+                    <Token Text="=&gt;" UId="65" />
+                    <Blank Num="1" UId="66" />
+                    <Access Scope="LocalVariable" UId="67">
+                      <Symbol UId="68">
+                        <Component Name="v_busy" UId="69" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="70" />
+                  <Blank Num="1" UId="71" />
+                  <Parameter Name="done" UId="72">
+                    <Blank Num="1" UId="73" />
+                    <Token Text="=&gt;" UId="74" />
+                    <Blank Num="1" UId="75" />
+                    <Access Scope="LocalVariable" UId="76">
+                      <Symbol UId="77">
+                        <Component Name="v_done" UId="78" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="79" />
+                  <Blank Num="1" UId="80" />
+                  <Parameter Name="error" UId="81">
+                    <Blank Num="1" UId="82" />
+                    <Token Text="=&gt;" UId="83" />
+                    <Blank Num="1" UId="84" />
+                    <Access Scope="LocalVariable" UId="85">
+                      <Symbol UId="86">
+                        <Component Name="v_error" UId="87" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="88" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="89" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

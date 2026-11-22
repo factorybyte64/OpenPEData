@@ -1,0 +1,44 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Fbd_ex095"
+    VAR_INPUT
+        v_pe_i_dev_new : Bool;
+        v_cmd : Int;
+        v_cmd_modifier : Int;
+        v_count : Byte;
+        v_measurement_values : Variant;
+    END_VAR
+    VAR_OUTPUT
+        v_error : Bool;
+        v_status : Word;
+    END_VAR
+    VAR_IN_OUT
+        v_activate : Bool;
+        v_valid : Bool;
+        v_data_errorrsp : Variant;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG
+            PE_Measurement_Value_RSP(
+                PE_I_DEV_NEW := #v_pe_i_dev_new,
+                CMD := #v_cmd,
+                CMD_MODIFIER := #v_cmd_modifier,
+                Count := #v_count,
+                Measurement_Values := #v_measurement_values,
+                ERROR => #v_error,
+                STATUS => #v_status,
+                Activate := #v_activate,
+                VALID := #v_valid,
+                DATA_ERRORRSP := #v_data_errorrsp
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

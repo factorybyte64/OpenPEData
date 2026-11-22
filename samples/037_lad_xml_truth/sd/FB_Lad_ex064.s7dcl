@@ -1,0 +1,34 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex064"
+    VAR_INPUT
+        v_req : Bool;
+        v_laddr : HW_INTERFACE;
+        v_group : Byte;
+        v_mode : Byte;
+        v_ret_val : Int;
+    END_VAR
+    VAR_OUTPUT
+        v_busy : Bool;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            DPSYC_FR(
+                REQ := #v_req,
+                LADDR := #v_laddr,
+                GROUP := #v_group,
+                MODE := #v_mode,
+                RET_VAL => #v_ret_val,
+                BUSY => #v_busy
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

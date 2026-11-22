@@ -1,0 +1,51 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_Trcv"
+    VAR_INPUT
+        en_r : Bool;
+        cont : Bool;
+        "len" : UInt;
+        "id" : CONN_OUC;
+        adhoc : Bool;
+    END_VAR
+    VAR_OUTPUT
+        done : Bool;
+        busy : Bool;
+        err : Bool;
+        status : Word;
+        rcvdlen : UInt;
+    END_VAR
+    VAR_IN_OUT
+        connect : TCON_IP_v4;
+        data : Array[0..99] of Byte;
+        comrst : Bool;
+        addr : Variant;
+    END_VAR
+    VAR
+        inst : TRCV;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.TRCV(
+                EN_R := #en_r,
+                ID := #"id",
+                LEN := #"len",
+                ADHOC := #adhoc,
+                NDR => #done,
+                BUSY => #busy,
+                ERROR => #err,
+                STATUS => #status,
+                RCVD_LEN => #rcvdlen,
+                DATA := #data
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

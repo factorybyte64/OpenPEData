@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-11-11T00:48:18.830974Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21 Update 3</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="v_area_src" Datatype="Byte" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_dbnumber_src" Datatype="DInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_byteoffset_src" Datatype="DInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_area_dest" Datatype="Byte" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_dbnumber_dest" Datatype="DInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_byteoffset_dest" Datatype="DInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="v_count" Datatype="DInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Static" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_Scl_sl059</Name>
+      <Namespace />
+      <Number>34</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Access Scope="Call" UId="21">
+                <Instruction Name="POKE_BLK" UId="22">
+                  <Token Text="(" UId="23" />
+                  <Parameter Name="area_src" UId="24">
+                    <Blank Num="1" UId="25" />
+                    <Token Text=":=" UId="26" />
+                    <Blank Num="1" UId="27" />
+                    <Access Scope="LocalVariable" UId="28">
+                      <Symbol UId="29">
+                        <Component Name="v_area_src" UId="30" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="31" />
+                  <Blank Num="1" UId="32" />
+                  <Parameter Name="dbNumber_src" UId="33">
+                    <Blank Num="1" UId="34" />
+                    <Token Text=":=" UId="35" />
+                    <Blank Num="1" UId="36" />
+                    <Access Scope="LocalVariable" UId="37">
+                      <Symbol UId="38">
+                        <Component Name="v_dbnumber_src" UId="39" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="40" />
+                  <Blank Num="1" UId="41" />
+                  <Parameter Name="byteOffset_src" UId="42">
+                    <Blank Num="1" UId="43" />
+                    <Token Text=":=" UId="44" />
+                    <Blank Num="1" UId="45" />
+                    <Access Scope="LocalVariable" UId="46">
+                      <Symbol UId="47">
+                        <Component Name="v_byteoffset_src" UId="48" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="49" />
+                  <Blank Num="1" UId="50" />
+                  <Parameter Name="area_dest" UId="51">
+                    <Blank Num="1" UId="52" />
+                    <Token Text=":=" UId="53" />
+                    <Blank Num="1" UId="54" />
+                    <Access Scope="LocalVariable" UId="55">
+                      <Symbol UId="56">
+                        <Component Name="v_area_dest" UId="57" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="58" />
+                  <Blank Num="1" UId="59" />
+                  <Parameter Name="dbNumber_dest" UId="60">
+                    <Blank Num="1" UId="61" />
+                    <Token Text=":=" UId="62" />
+                    <Blank Num="1" UId="63" />
+                    <Access Scope="LocalVariable" UId="64">
+                      <Symbol UId="65">
+                        <Component Name="v_dbnumber_dest" UId="66" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="67" />
+                  <Blank Num="1" UId="68" />
+                  <Parameter Name="byteOffset_dest" UId="69">
+                    <Blank Num="1" UId="70" />
+                    <Token Text=":=" UId="71" />
+                    <Blank Num="1" UId="72" />
+                    <Access Scope="LocalVariable" UId="73">
+                      <Symbol UId="74">
+                        <Component Name="v_byteoffset_dest" UId="75" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="76" />
+                  <Blank Num="1" UId="77" />
+                  <Parameter Name="count" UId="78">
+                    <Blank Num="1" UId="79" />
+                    <Token Text=":=" UId="80" />
+                    <Blank Num="1" UId="81" />
+                    <Access Scope="LocalVariable" UId="82">
+                      <Symbol UId="83">
+                        <Component Name="v_count" UId="84" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="85" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="86" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>OpenPEData</RootNamespace>
+    <AssemblyName>OpenPEData</AssemblyName>
+    <Version>0.0.1</Version>
+    <Product>OpenPEData</Product>
+    <Description>Reads TIA Portal projects (project folder, .zapNN archive) and global libraries without TIA Portal; supported versions: TiaVersion.Supported.</Description>
+    <!-- nullable warnings on; Model\*.cs files that iterate the dynamic value trees switch off CS8600/8602 per file -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- NuGet package (dotnet pack dotnet\src\OpenPEData -c Release): no dependencies, MPL-2.0, symbols as .snupkg,
+       Source Link from the .NET SDK (commit and repository URL are embedded when built from a git checkout) -->
+  <PropertyGroup>
+    <PackageId>OpenPEData</PackageId>
+    <Title>OpenPEData</Title>
+    <Authors>factorybyte64</Authors>
+    <Company>factorybyte64</Company>
+    <Copyright>Copyright (c) 2026 factorybyte64</Copyright>
+    <PackageDescription>Open reader for TIA Portal project files without TIA Portal: opens project folders, .zapNN archives,
+global libraries and .zalNN archives and returns devices, PLC software (blocks, tags, data types, code), WinCC Unified
+HMI software (tags, screens, items), libraries, an integrity check of the signed records, cross references and program
+information, as typed results or as JSON. No dependencies. Not affiliated with Siemens AG.</PackageDescription>
+    <PackageTags>TIA-Portal;SIMATIC;STEP7;WinCC-Unified;PLC;S7-1500;parser;reader;automation</PackageTags>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>PACKAGE.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/factorybyte64/OpenPEData</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/factorybyte64/OpenPEData.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true' or '$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="PACKAGE.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\..\NOTICE" Pack="true" PackagePath="\" Link="NOTICE" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- public surface: TiaProject and its result, option and exception types; the reader itself is internal -->
+    <InternalsVisibleTo Include="OpenPEData.Tests" />
+    <InternalsVisibleTo Include="OpenPEData.Cli" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Openness enum names of Unified style values -->
+    <EmbeddedResource Include="Data\unified_enums.json" LogicalName="OpenPEData.Data.V21.unified_enums.json" />
+  </ItemGroup>
+
+</Project>

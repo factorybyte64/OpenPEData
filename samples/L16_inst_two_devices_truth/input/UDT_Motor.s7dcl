@@ -1,0 +1,8 @@
+TYPE "UDT_Motor" : STRUCT
+    { S7_MLC := "MLC_Running" }
+    Running : Bool;
+    { S7_MLC := "MLC_Speed" }
+    Speed : Real := 1500.0;
+    Count : Int := 7;
+END_STRUCT;
+END_TYPE

@@ -1,0 +1,70 @@
+# Build, parser tests and viewer tests (Windows).
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: 'Git ref to test (default: the ref of the calling run)'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ inputs.ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_NOLOGO: 'true'
+  DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 'true'
+
+jobs:
+  dotnet:
+    name: .NET build and tests
+    # a pull request from a branch of this repository is already tested by its push run
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 1
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+          restore-keys: nuget-${{ runner.os }}-
+
+      - name: Build parser solution
+        run: dotnet build dotnet/OpenPEData.sln -c Release
+
+      - name: Build viewer
+        run: dotnet build ui/OpenPEData.Viewer/OpenPEData.Viewer.csproj -c Release -p:PackSetup=false
+
+      - name: Parser test program
+        run: dotnet/tests/OpenPEData.Tests/bin/Release/net10.0/OpenPEData.Tests.exe
+
+      - name: Viewer tests
+        run: dotnet run --project ui/OpenPEData.Viewer.Tests -c Release
+
+      - name: Upload classic screen render comparison
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: render-compare
+          path: render-compare/
+          if-no-files-found: ignore

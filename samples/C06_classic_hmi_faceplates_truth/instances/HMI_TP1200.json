@@ -1,0 +1,81 @@
+[
+  {
+    "screen": "C6_Faceplates",
+    "object": "FP_Dyn",
+    "type": "FaceplateInstance",
+    "faceplateType": "FP-C05 V 1.1.0",
+    "left": 10,
+    "top": 10,
+    "width": 300,
+    "height": 150,
+    "text": "Tags D_Int D_Range D_Pct",
+    "backgroundColor": "type default",
+    "tags": {
+      "FValue": "D_Int",
+      "FRange": "D_Range",
+      "FPct": "D_Pct",
+      "FVis": "D_Vis"
+    },
+    "staticValues": {},
+    "movement": null
+  },
+  {
+    "screen": "C6_Faceplates",
+    "object": "FP_Static",
+    "type": "FaceplateInstance",
+    "faceplateType": "FP-C05 V 1.1.0",
+    "left": 330,
+    "top": 10,
+    "width": 300,
+    "height": 150,
+    "text": "Static values",
+    "backgroundColor": "255, 255, 200",
+    "tags": {},
+    "staticValues": {
+      "FValue": 1234,
+      "FRange": 25,
+      "FPct": 75
+    },
+    "movement": null
+  },
+  {
+    "screen": "C6_Faceplates",
+    "object": "FP_Alt",
+    "type": "FaceplateInstance",
+    "faceplateType": "FP-C05 V 1.1.0",
+    "left": 10,
+    "top": 186,
+    "width": 300,
+    "height": 150,
+    "text": "Tags D_SInt D_TL D_UInt",
+    "backgroundColor": "200, 230, 255",
+    "tags": {
+      "FValue": "D_SInt",
+      "FRange": "D_TL",
+      "FPct": "D_UInt",
+      "FVis": "D_En"
+    },
+    "staticValues": {},
+    "movement": null
+  },
+  {
+    "screen": "C6_Faceplates",
+    "object": "FP_Move",
+    "type": "FaceplateInstance",
+    "faceplateType": "FP-C05 V 1.1.0",
+    "left": 330,
+    "top": 186,
+    "width": 300,
+    "height": 150,
+    "text": "Moved by D_Pct",
+    "backgroundColor": "type default",
+    "tags": {
+      "FValue": "D_Int",
+      "FRange": "D_Range",
+      "FPct": "D_Pct",
+      "FVis": "D_Vis"
+    },
+    "staticValues": {},
+    "movement": "HorizontalMovementAnimation D_Pct 0..100, delta x 40"
+  }
+]

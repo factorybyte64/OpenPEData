@@ -1,0 +1,25 @@
+﻿FUNCTION "FC_StlPar" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      x : Int;
+      y : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      r : Int;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 
+      L #x;
+      L #y;
+      +I;
+      T #r;
+      >I;
+      = #q;
+END_FUNCTION
+

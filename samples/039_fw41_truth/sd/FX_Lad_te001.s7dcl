@@ -1,0 +1,108 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FX_Lad_te001"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+        "ib" : Int;
+        ic : Int;
+        da : DInt;
+        "db" : DInt;
+        ra : Real;
+        rb : Real;
+        wa : Word;
+        wb : Word;
+        dwa : DWord;
+        ba : Byte;
+        ta : Time;
+        tb : Time;
+        s1 : String;
+        s2 : String;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+        dout : DInt;
+        rout : Real;
+        wout : Word;
+        dwout : DWord;
+        bout : Byte;
+        tout : Time;
+        sout : String;
+    END_VAR
+    VAR_IN_OUT
+        p_req : Bool;
+        p_id : Word;
+        p_to_s : String;
+        p_cc : String;
+        p_subject : String;
+        p_text : String;
+        p_attachment : Variant;
+        p_done : Bool;
+        p_busy : Bool;
+        p_error : Bool;
+        p_status : Word;
+        x_string : String;
+        arr : Array[0..9] of Int;
+        barr : Array[0..7] of Bool;
+        iinout : Int;
+    END_VAR
+    VAR
+        { S7_Setpoint := "False" }
+        inst : TMAIL_C;
+        ton1 : TON_TIME;
+        tof1 : TOF_TIME;
+        tp1 : TP_TIME;
+        tonr1 : TONR_TIME;
+        ctu1 : CTU_INT;
+        ctd1 : CTD_INT;
+        ctud1 : CTUD_INT;
+        rtrig1 : R_TRIG;
+        ftrig1 : F_TRIG;
+        edge1 : Bool;
+        edge2 : Bool;
+        stat1 : Bool;
+        stat2 : Bool;
+        stati : Int;
+    END_VAR
+    VAR_TEMP
+        t1 : Bool;
+        t2 : Bool;
+        ti : Int;
+        td : DInt;
+        tr : Real;
+        tw : Word;
+        tt : Time;
+        var1 : Variant;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4pY"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #inst.TMAIL_C(
+                REQ := #p_req,
+                TO_S := #p_to_s,
+                CC := #p_cc,
+                SUBJECT := #p_subject,
+                TEXT := #p_text,
+                ATTACHMENT := #p_attachment,
+                ATTACHMENT_NAME := #x_string,
+                MAIL_ADDR_PARAM := #"a",
+                DONE => #p_done,
+                BUSY => #p_busy,
+                ERROR => #p_error,
+                STATUS => #p_status
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

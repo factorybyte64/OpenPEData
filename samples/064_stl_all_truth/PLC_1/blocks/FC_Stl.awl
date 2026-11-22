@@ -1,0 +1,45 @@
+﻿FUNCTION "FC_Stl" : Void
+TITLE = STL test FC
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      a : Bool;
+      b : Bool;
+      x : Int;
+      y : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      sum : Int;
+   END_VAR
+
+   VAR_TEMP 
+      t : Int;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = Bit logic
+//Network comment line 1
+      A #a ;// and a
+      AN #b;
+      = #q;
+NETWORK
+TITLE = Arithmetic
+      L #x;
+      L #y;
+      +I;
+      T #t;
+
+      L #t;
+      L 0;
+      >I;
+      JC M001;
+      L 0;
+      T #t;
+M001:      L #t;
+      T #sum;
+END_FUNCTION
+

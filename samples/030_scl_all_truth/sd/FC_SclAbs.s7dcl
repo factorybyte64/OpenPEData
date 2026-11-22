@@ -1,0 +1,20 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclAbs" : Void
+    VAR_TEMP
+        "b" : Bool;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        "Tag_1" := 5;
+        "Tag_2" := TRUE;
+        "Tag_3" := "Tag_4";
+        "Tag_5" := 100;
+        "Tag_6" := 1;
+        #b := "Tag_2";
+    END_NETWORK
+END_FUNCTION

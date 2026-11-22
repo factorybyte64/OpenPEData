@@ -1,0 +1,20 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_SclRt" : Void
+    VAR_TEMP
+        "w" : Word;
+        err : ErrorStruct;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        // runtime control
+                RE_TRIGR();
+                #w := GET_ERR_ID();
+                GET_ERROR(#err);
+                STP();
+    END_NETWORK
+END_FUNCTION

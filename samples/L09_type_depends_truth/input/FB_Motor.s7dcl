@@ -1,0 +1,17 @@
+{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Motor"
+    VAR_INPUT
+        motor : "UDT_Motor";
+    END_VAR
+    VAR_OUTPUT
+        running : Bool;
+    END_VAR
+    { S7_Language := "SCL" }
+    NETWORK
+        #running := #motor.Running;
+    END_NETWORK
+END_FUNCTION_BLOCK

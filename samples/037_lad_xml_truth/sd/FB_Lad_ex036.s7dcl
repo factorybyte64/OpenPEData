@@ -1,0 +1,28 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Lad_ex036"
+    VAR_INPUT
+        v_size : DInt;
+        v_out : WString;
+    END_VAR
+    VAR_IN_OUT
+        v_variable : Array[0..99] of Byte;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_N1"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            GetSymbolName(
+                variable := #v_variable,
+                size := #v_size,
+                out => #v_out
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

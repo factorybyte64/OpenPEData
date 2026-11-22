@@ -1,0 +1,2021 @@
+{
+ "source": "samples\\165_hmi_item_defaults (Openness itemGet detail=full, MTP700 Unified Comfort, TIA V21); values of its style (ExtendedStyle) replaced from 166/167 or left out: object defaults without style; HmiProcessDiagnosisCriteriaAnalysisControl, -GraphOverviewControl, -PlcCodeViewerControl: itemGet full in the 164 working copy (WinCC Unified PC RT, ExtendedStyle), 2026-10-31, structure-defining properties only; trend areas, axes and trend of HmiTrendControl and HmiFunctionTrendControl: Openness partGet in samples\\173_hmi_trend_control (truth trend_parts.json), 2026-11-20",
+ "screen": {
+  "AlternateBackColor": "0xFFEBEBEB",
+  "BackFillPattern": "Solid",
+  "BackGraphicStretchMode": "UniformToFill",
+  "BackgroundFillMode": "Window",
+  "Enabled": true,
+  "Height": 480,
+  "HorizontalAlignment": "Left",
+  "ScreenNumber": 0,
+  "VerticalAlignment": "Top",
+  "Width": 800
+ },
+ "items": {
+  "HmiAlarmControl": {
+   "AcknowledgmentFlashingRate": "Medium",
+   "ActiveAlarmsViewSetup": "UnSuppressed",
+   "AlarmDefinitionViewSetup": "UnSuppressed, Disabled, SuppressedByDesign, Shelved",
+   "AlarmSourceType": "ActiveAlarms",
+   "AlarmStatisticsView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "AlarmView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "AlwaysShowRecent": true,
+   "BackColor": "0xFFCCCCCC",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "DefaultSortDirection": "Ascending",
+   "Height": 320,
+   "ResetFlashingRate": "Medium",
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiAlarmControl",
+   "SuppressFlashing": false,
+   "TimeZone": -1,
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiAlarmIndicator": {
+   "AlarmState": {
+    "Content": {
+     "Spacing": 5,
+     "VerticalTextAlignment": "Center"
+    }
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "Height": 115,
+   "IsFlashingRequired": true,
+   "NoAlarmState": {
+    "Content": {
+     "Spacing": 5,
+     "VerticalTextAlignment": "Center"
+    }
+   },
+   "Opacity": 1,
+   "ShowAlways": false,
+   "StyleItemClass": "HmiAlarmIndicator",
+   "Visible": true,
+   "Width": 100
+  },
+  "HmiAlarmLineControl": {
+   "AcknowledgmentFlashingRate": "Medium",
+   "ActiveAlarmsViewSetup": "UnSuppressed",
+   "AlarmLineView": {
+    "AllowFilter": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BackColor": "0xFF808080",
+   "BorderColor": "0xFF000000",
+   "BorderWidth": 1,
+   "DefaultSortDirection": "Ascending",
+   "NumberOfRows": 1,
+   "Opacity": 1,
+   "ResetFlashingRate": "Medium",
+   "StyleItemClass": "HmiAlarmLineControl",
+   "SuppressFlashing": false,
+   "TimeZone": -1,
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 640
+  },
+  "HmiBar": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BarMode": "Unicolor",
+   "BorderWidth": 1,
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "Height": 320,
+   "Label": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "Opacity": 1,
+   "OriginValue": 0,
+   "PeakIndicators": "None",
+   "RelativeToOrigin": false,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StraightScale": {
+    "AutoScaling": true,
+    "BeginValue": 0,
+    "LabelColor": "0xFF000000",
+    "LabelFont": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ScaleMode": "Labels, Ticks",
+    "ScalingType": "Linear"
+   },
+   "StyleItemClass": "HmiBar",
+   "ThresholdIndicators": "Markers",
+   "Title": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 80
+  },
+  "HmiButton": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Content": {
+    "Spacing": 5,
+    "TextTrimming": "None",
+    "VerticalTextAlignment": "Center"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 40,
+   "HotKey": 0,
+   "Opacity": 1,
+   "Padding": {},
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StyleItemClass": "HmiButton",
+   "Text": {
+    "en-US": "Text"
+   },
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiCheckBoxGroup": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Content": {
+    "HorizontalTextAlignment": "Left",
+    "Spacing": 5,
+    "TextTrimming": "None",
+    "VerticalTextAlignment": "Center"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 150,
+   "Opacity": 1,
+   "Padding": {},
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "SelectionItemHeight": 0,
+   "SelectorPosition": "Left",
+   "StyleItemClass": "HmiCheckBoxGroup",
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiCircle": {
+   "AlternateBackColor": "0xFF00FF00",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BackFillPattern": "Solid",
+   "BorderWidth": 1,
+   "CenterX": 24,
+   "CenterY": 24,
+   "DashType": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "Opacity": 1,
+   "Radius": 24,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiCircle",
+   "Visible": true
+  },
+  "HmiCircleSegment": {
+   "AlternateBackColor": "0xFF00FF00",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "AngleRange": 90,
+   "BackFillPattern": "Solid",
+   "BorderWidth": 1,
+   "CenterX": 48,
+   "CenterY": 48,
+   "DashType": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "Opacity": 1,
+   "Radius": 48,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiCircleSegment",
+   "Visible": true
+  },
+  "HmiCircularArc": {
+   "AlternateLineColor": "0xFFFFFFFF",
+   "AngleRange": 90,
+   "CapType": "Round",
+   "CenterX": 48,
+   "CenterY": 48,
+   "DashType": "Solid",
+   "EndType": "Line",
+   "LineWidth": 1,
+   "Opacity": 1,
+   "Radius": 48,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StartType": "Line",
+   "StyleItemClass": "HmiCircularArc",
+   "Visible": true
+  },
+  "HmiClock": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "DialLabelFont": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "DialMode": "Labels, Ticks",
+   "Height": 320,
+   "Opacity": 1,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowDate": false,
+   "ShowHours": true,
+   "ShowMinutes": true,
+   "StyleItemClass": "HmiClock",
+   "Title": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    }
+   },
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 320
+  },
+  "HmiDetailedParameterControl": {
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "EditMode": "Update, Create, Delete",
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 320,
+   "HideDetails": false,
+   "ParameterView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "SelectionForeColor": "0xFF000000",
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiDetailedParameterControl",
+   "TimeZone": -1,
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiEllipse": {
+   "AlternateBackColor": "0xFF00FF00",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BackFillPattern": "Solid",
+   "BorderWidth": 1,
+   "CenterX": 48,
+   "CenterY": 24,
+   "DashType": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "Opacity": 1,
+   "RadiusX": 48,
+   "RadiusY": 24,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiEllipse",
+   "Visible": true
+  },
+  "HmiEllipseSegment": {
+   "AlternateBackColor": "0xFF00FF00",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "AngleRange": 90,
+   "BackFillPattern": "Solid",
+   "BorderWidth": 1,
+   "CenterX": 96,
+   "CenterY": 48,
+   "DashType": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "Opacity": 1,
+   "RadiusX": 96,
+   "RadiusY": 48,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiEllipseSegment",
+   "Visible": true
+  },
+  "HmiEllipticalArc": {
+   "AlternateLineColor": "0xFFFFFFFF",
+   "AngleRange": 90,
+   "CapType": "Round",
+   "CenterX": 96,
+   "CenterY": 48,
+   "DashType": "Solid",
+   "EndType": "Line",
+   "LineWidth": 1,
+   "Opacity": 1,
+   "RadiusX": 96,
+   "RadiusY": 48,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StartType": "Line",
+   "StyleItemClass": "HmiEllipticalArc",
+   "Visible": true
+  },
+  "HmiFunctionTrendControl": {
+   "AreaSpacing": 10,
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "ExtendRulerToAxis": false,
+   "Height": 320,
+   "Legend": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "Online": true,
+   "ShiftAxes": false,
+   "ShowRuler": true,
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiFunctionTrendControl",
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose",
+   "FunctionTrendAreas": [
+    {
+     "BackColor": "0xFFFFFFFF",
+     "GridLines": "VerticalMajor, HorizontalMajor",
+     "MajorGridLinesColor": "0xFFD9D9D9",
+     "MinorGridLinesColor": "0xFFD9D9D9",
+     "Ruler": {
+      "Color": "0xFF3C3C3B",
+      "Width": 1
+     },
+     "SizeFactor": 1,
+     "Visible": true,
+     "BottomValueAxes": [
+      {
+       "AutoRange": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "BeginValue": 0,
+       "EndValue": 100,
+       "DivisionCount": 10,
+       "SubDivisionCount": 1,
+       "LabelColor": "0xFF919299",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 14,
+        "Weight": "Normal"
+       },
+       "OutputFormat": "{I}",
+       "ScaleMode": "Labels, Ticks",
+       "ScalingType": "Linear",
+       "TickColor": "0xFF1C1F30",
+       "Visible": true
+      }
+     ],
+     "LeftValueAxes": [
+      {
+       "AutoRange": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "BeginValue": 0,
+       "EndValue": 100,
+       "DivisionCount": 10,
+       "SubDivisionCount": 1,
+       "LabelColor": "0xFF575756",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 14,
+        "Weight": "Normal"
+       },
+       "OutputFormat": "{I}",
+       "ScaleMode": "Labels, Ticks",
+       "ScalingType": "Linear",
+       "TickColor": "0xFF1C1F30",
+       "Visible": true
+      }
+     ],
+     "FunctionTrends": [
+      {
+       "AlternateBackColor": "0x00FFFFFF",
+       "BackColor": "0xFF000000",
+       "BackFillPattern": "Transparent",
+       "DashType": "Solid",
+       "LineColor": "0xFF93C01F",
+       "LineWidth": 1,
+       "MarkerColor": "0xFF000000",
+       "MarkerDimension": 3,
+       "MarkerType": "None",
+       "PointCount": 120,
+       "RangeType": "TimeRange",
+       "TimeRangeBase": "Day",
+       "TimeRangeFactor": 1,
+       "TrendMode": "Interpolated",
+       "Visible": true
+      }
+     ]
+    }
+   ]
+  },
+  "HmiGauge": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BarMode": "Unicolor",
+   "BorderWidth": 1,
+   "CurvedScale": {
+    "AngleRange": 270,
+    "AutoScaling": true,
+    "BeginValue": 0,
+    "LabelColor": "0xFF000000",
+    "LabelFont": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ScaleMode": "Labels, Ticks",
+    "ScalingType": "Linear"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "Height": 320,
+   "Label": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "Opacity": 1,
+   "OriginValue": 0,
+   "PeakIndicators": "None",
+   "RelativeToOrigin": false,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StyleItemClass": "HmiGauge",
+   "ThresholdIndicators": "Markers",
+   "Title": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 320
+  },
+  "HmiGraphicView": {
+   "AlternateBackColor": "0xFF00FF00",
+   "BackFillPattern": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "GraphicStretchMode": "Fill",
+   "Height": 48,
+   "Opacity": 1,
+   "Padding": {
+    "Bottom": 0,
+    "Left": 0,
+    "Right": 0,
+    "Top": 0
+   },
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiGraphicView",
+   "Visible": true,
+   "Width": 96
+  },
+  "HmiIOField": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 40,
+   "HorizontalTextAlignment": "Center",
+   "IOFieldType": "InputOutput",
+   "InputBehavior": {
+    "AcceptOnDeactivated": true,
+    "ClearOnActivate": false,
+    "HiddenInput": false
+   },
+   "Opacity": 1,
+   "Padding": {},
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShiftDecimalPlaces": 0,
+   "ShowInputHint": false,
+   "StyleItemClass": "HmiIOField",
+   "TextTrimming": "None",
+   "VerticalTextAlignment": "Center",
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiLine": {
+   "AlternateLineColor": "0xFFFFFFFF",
+   "CapType": "Round",
+   "DashType": "Solid",
+   "EndType": "Line",
+   "Height": 48,
+   "LineWidth": 1,
+   "Opacity": 1,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StartType": "Line",
+   "StyleItemClass": "HmiLine",
+   "Visible": true,
+   "Width": 96,
+   "X1": 0,
+   "X2": 96,
+   "Y1": 0,
+   "Y2": 48
+  },
+  "HmiListBox": {
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Content": {
+    "HorizontalTextAlignment": "Left",
+    "Spacing": 5,
+    "TextTrimming": "None",
+    "VerticalTextAlignment": "Center"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 150,
+   "Opacity": 1,
+   "Padding": {
+    "Bottom": 0,
+    "Left": 0,
+    "Right": 0,
+    "Top": 0
+   },
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "SelectionItemHeight": 0,
+   "SelectionMode": "NonExclusive",
+   "SelectorPosition": "Left",
+   "StyleItemClass": "HmiListBox",
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiMediaControl": {
+   "AutoPlay": true,
+   "BackColor": "0xFFCCCCCC",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "Height": 320,
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiMediaControl",
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "VideoOutput": "PreserveAspectFit",
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiPolygon": {
+   "AlternateBackColor": "0xFF00FF00",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BackFillPattern": "Solid",
+   "BorderWidth": 1,
+   "DashType": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "Height": 48,
+   "JoinType": "Round",
+   "Opacity": 1,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiPolygon",
+   "Visible": true,
+   "Width": 96
+  },
+  "HmiPolyline": {
+   "AlternateLineColor": "0xFFFFFFFF",
+   "CapType": "Round",
+   "DashType": "Solid",
+   "EndType": "Line",
+   "Height": 48,
+   "JoinType": "Round",
+   "LineWidth": 1,
+   "Opacity": 1,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StartType": "Line",
+   "StyleItemClass": "HmiPolyline",
+   "Visible": true,
+   "Width": 96
+  },
+  "HmiProcessDiagnosisOverviewControl": {
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "Font": {
+    "Italic": false,
+    "Name": "SiemensSans",
+    "Size": 16,
+    "StrikeOut": false,
+    "Underline": false,
+    "Weight": "Normal"
+   },
+   "PDiagCategories": {
+    "Label": {
+     "Font": "HmiFontPart",
+     "Text": {
+      "en-US": "Category"
+     }
+    },
+    "SymbolFont": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    }
+   },
+   "PDiagSupervisionTypes": {
+    "Label": {
+     "Font": "HmiFontPart",
+     "Text": {
+      "en-US": "Type"
+     }
+    },
+    "SymbolFont": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    }
+   },
+   "PlcSource": {},
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiProcessDiagnosisOverviewControl",
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true
+  },
+  "HmiRadioButtonGroup": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Content": {
+    "HorizontalTextAlignment": "Left",
+    "Spacing": 5,
+    "TextTrimming": "None",
+    "VerticalTextAlignment": "Center"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 150,
+   "Opacity": 1,
+   "Padding": {},
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "SelectionItemHeight": 0,
+   "SelectorPosition": "Left",
+   "StyleItemClass": "HmiRadioButtonGroup",
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiRectangle": {
+   "AlternateBackColor": "0xFF00FF00",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BackFillPattern": "Solid",
+   "BorderWidth": 1,
+   "Corners": {
+    "BottomLeftRadius": 0,
+    "BottomRightRadius": 0,
+    "TopLeftRadius": 0,
+    "TopRightRadius": 0
+   },
+   "DashType": "Solid",
+   "FillDirection": "BottomToTop",
+   "FillLevel": 0,
+   "Height": 48,
+   "Opacity": 1,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowFillLevel": false,
+   "StyleItemClass": "HmiRectangle",
+   "Visible": true,
+   "Width": 96
+  },
+  "HmiScreenWindow": {
+   "Adaption": "None",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "CurrentZoomFactor": 1,
+   "Height": 320,
+   "HorizontalScrollBarPosition": 0,
+   "HorizontalScrollBarVisibility": "Automatic",
+   "InteractivePanning": true,
+   "InteractiveZooming": true,
+   "ScreenNumber": 0,
+   "StyleItemClass": "HmiScreenWindow",
+   "SupportedNavigation": "None",
+   "System": 0,
+   "TabIntoWindow": false,
+   "VerticalScrollBarPosition": 0,
+   "VerticalScrollBarVisibility": "Automatic",
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiSlider": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BarMode": "Unicolor",
+   "BorderWidth": 1,
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "Height": 320,
+   "Label": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "Opacity": 1,
+   "OriginValue": 0,
+   "PeakIndicators": "None",
+   "RelativeToOrigin": false,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "ShowValue": false,
+   "StraightScale": {
+    "AutoScaling": true,
+    "BeginValue": 0,
+    "LabelColor": "0xFF000000",
+    "LabelFont": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ScaleMode": "Labels, Ticks",
+    "ScalingType": "Linear"
+   },
+   "StyleItemClass": "HmiSlider",
+   "ThresholdIndicators": "Markers",
+   "ThumbBackColor": "0xFFC0C0C0",
+   "ThumbForeColor": "0xFFFFFFFF",
+   "Title": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000"
+   },
+   "ValuePosition": "LeftOrTop",
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 120,
+   "WriteDuringChange": false
+  },
+  "HmiSymbolicIOField": {
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Content": {
+    "HorizontalTextAlignment": "Left",
+    "Spacing": 5,
+    "TextTrimming": "None",
+    "VerticalTextAlignment": "Center"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Graphic": "(none)",
+   "Height": 40,
+   "IOFieldType": "InputOutput",
+   "Opacity": 1,
+   "Padding": {},
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "SelectedIndex": -1,
+   "SelectionForeColor": "0xFF000000",
+   "StyleItemClass": "HmiSymbolicIOField",
+   "Text": {},
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiSystemDiagnosisControl": {
+   "BackColor": "0xFFCCCCCC",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "DiagnosisBufferPathText": {
+    "en-US": "Diagnostics buffer - view"
+   },
+   "DiagnosisOverviewPathText": {
+    "en-US": "Diagnostics overview"
+   },
+   "Height": 320,
+   "MatrixView": {
+    "SystemDiagnosisHardwareDetailView": {
+     "AllowFilter": true,
+     "AllowSort": true,
+     "AlternateForeColor": "0xFF000000",
+     "CellPadding": "HmiPaddingPart",
+     "ColoringMode": "Rows",
+     "Font": "HmiFontPart",
+     "ForeColor": "0xFF000000",
+     "GridSelectionMode": "Single",
+     "HeaderSettings": "HmiDataGridHeaderSettingsPart",
+     "HorizontalScrollBarVisibility": "Automatic",
+     "SelectFullRow": true,
+     "VerticalScrollBarVisibility": "Automatic"
+    }
+   },
+   "ScriptDiagnosisOverviewText": {
+    "en-US": "Script diagnostics overview"
+   },
+   "ScriptDiagnosisView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "ShowStatusPath": true,
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiSystemDiagnosisControl",
+   "SystemDiagnosisView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "SystemDiagnosisViewType": "Matrix",
+   "TimeZone": -1,
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiText": {
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 40,
+   "HorizontalTextAlignment": "Center",
+   "Opacity": 1,
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StyleItemClass": "HmiText",
+   "Text": {
+    "en-US": "Text"
+   },
+   "VerticalTextAlignment": "Center",
+   "Visible": true,
+   "Width": 160
+  },
+  "HmiTextBox": {
+   "AlternateBackColor": "0xFF808080",
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 40,
+   "HorizontalTextAlignment": "Center",
+   "Opacity": 1,
+   "Padding": {},
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StyleItemClass": "HmiTextBox",
+   "Text": {
+    "en-US": "Text box"
+   },
+   "TextTrimming": "None",
+   "TextWrapping": "NoWrap",
+   "VerticalTextAlignment": "Center",
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 160
+  },
+  "HmiToggleSwitch": {
+   "AlternateBorderColor": "0xFFFFFFFF",
+   "BorderWidth": 1,
+   "Content": {
+    "Spacing": 5,
+    "SplitRatio": 0.5,
+    "TextTrimming": "None",
+    "VerticalTextAlignment": "Center"
+   },
+   "Font": {
+    "Italic": false,
+    "StrikeOut": false,
+    "Underline": false
+   },
+   "ForeColor": "0xFF000000",
+   "Height": 40,
+   "HotKey": 0,
+   "IsAlternateState": false,
+   "Opacity": 1,
+   "Padding": {
+    "Bottom": 0,
+    "Left": 0,
+    "Right": 0,
+    "Top": 0
+   },
+   "RotationAngle": 0,
+   "RotationCenterPlacement": "AbsoluteFromCenter",
+   "RotationCenterX": 0,
+   "RotationCenterY": 0,
+   "StyleItemClass": "HmiToggleSwitch",
+   "Text": {},
+   "Visible": true,
+   "VisualizeQuality": true,
+   "Width": 80
+  },
+  "HmiTouchArea": {
+   "BackColor": "0x00FFFFFF",
+   "Height": 320,
+   "Visible": true,
+   "Width": 320
+  },
+  "HmiTrendCompanion": {
+   "BackColor": "0xFFCCCCCC",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "Height": 320,
+   "ShowAlways": true,
+   "SnapToSourceControl": false,
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiTrendCompanion",
+   "TimeZone": -1,
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "TrendCompanionMode": "Ruler",
+   "TrendRulerView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "TrendStatisticAreaView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "TrendStatisticResultView": {
+    "AllowFilter": true,
+    "AllowSort": true,
+    "AlternateForeColor": "0xFF000000",
+    "BackColor": "0xFFFFFFFF",
+    "CellPadding": {
+     "Bottom": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ColoringMode": "Rows",
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "GridSelectionMode": "Single",
+    "HeaderSettings": {
+     "AllowColumnReorder": true,
+     "AllowColumnResize": true,
+     "ColumnHeaderType": "Content",
+     "Font": "HmiFontPart",
+     "HeaderForeColor": "0xFF000000"
+    },
+    "HorizontalScrollBarVisibility": "Automatic",
+    "SelectFullRow": true,
+    "VerticalScrollBarVisibility": "Automatic"
+   },
+   "UseSourceControlBackColor": false,
+   "UseSourceControlTrendColors": true,
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiTrendControl": {
+   "AreaSpacing": 10,
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "ExtendRulerToAxis": false,
+   "Height": 320,
+   "Legend": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "Online": true,
+   "ShiftAxes": false,
+   "ShowRuler": true,
+   "ShowStatisticRulers": false,
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiTrendControl",
+   "TimeZone": -1,
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose",
+   "TrendAreas": [
+    {
+     "BackColor": "0xFFFFFFFF",
+     "GridLines": "VerticalMajor, HorizontalMajor",
+     "MajorGridLinesColor": "0xFFD9D9D9",
+     "MinorGridLinesColor": "0xFFD9D9D9",
+     "Ruler": {
+      "Color": "0xFF3C3C3B",
+      "Width": 1
+     },
+     "SizeFactor": 1,
+     "Visible": true,
+     "BottomTimeAxes": [
+      {
+       "AlwaysShowRecent": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "LabelColor": "0xFF575756",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 10,
+        "Weight": "Normal"
+       },
+       "PointCount": 120,
+       "RangeType": "TimeRange",
+       "ScaleMode": "Labels, Ticks",
+       "TickColor": "0xFF1C1F30",
+       "TimeRangeBase": "Minute",
+       "TimeRangeFactor": 1,
+       "Visible": true
+      }
+     ],
+     "LeftValueAxes": [
+      {
+       "AutoRange": true,
+       "AutoScaling": true,
+       "AxisColor": "0xFF000000",
+       "BeginValue": 0,
+       "EndValue": 100,
+       "DivisionCount": 10,
+       "SubDivisionCount": 1,
+       "LabelColor": "0xFF575756",
+       "LabelFont": {
+        "Name": "SiemensSans",
+        "Size": 11,
+        "Weight": "Normal"
+       },
+       "OutputFormat": "{I}",
+       "ScaleMode": "Labels, Ticks",
+       "ScalingType": "Linear",
+       "TickColor": "0xFF1C1F30",
+       "Visible": true
+      }
+     ],
+     "Trends": [
+      {
+       "LineColor": "0xFF95C122",
+       "LineWidth": 1,
+       "DashType": "Solid",
+       "TrendMode": "Interpolated",
+       "BackColor": "0xFF93C01F",
+       "AlternateBackColor": "0xFFC5E876",
+       "BackFillPattern": "Transparent",
+       "MarkerType": "None",
+       "Visible": true
+      }
+     ]
+    }
+   ]
+  },
+  "HmiWebControl": {
+   "BackColor": "0xFFCCCCCC",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "Height": 320,
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true
+   },
+   "StyleItemClass": "HmiWebControl",
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "StrikeOut": false,
+     "Underline": false
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "UseHotKeys": true,
+    "Visible": true
+   },
+   "Visible": true,
+   "Width": 640,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose"
+  },
+  "HmiProcessDiagnosisCriteriaAnalysisControl": {
+   "BackColor": "0xFFFFFFFF",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true,
+    "BackColor": "0xFFE6E6EB"
+   },
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true,
+    "BackColor": "0xFFFFFFFF",
+    "UseHotKeys": true
+   },
+   "Width": 600,
+   "Height": 280,
+   "ForeColor": "0xFF000000",
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove, CanMaximize, CanClose",
+   "CriteriaAnalysisView": {
+    "AlternateBackColor": "0xFFF2F2F5",
+    "BackColor": "0xFFFFFFFF",
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "ForeColor": "0xFF000000",
+    "GridLineColor": "0xFFCCCCCC",
+    "GridLineVisibility": "Vertical",
+    "GridLineWidth": 1,
+    "RowHeight": 28,
+    "HeaderSettings": {
+     "HeaderBackColor": "0xFFE6E6EB",
+     "HeaderForeColor": "0xFF000000",
+     "HeaderGridLineColor": "0xFFC4C4C9",
+     "RowHeaderType": "None",
+     "ColumnHeaderType": "Content"
+    }
+   },
+   "StyleItemClass": "HmiProcessDiagnosisCriteriaAnalysisControl"
+  },
+  "HmiProcessDiagnosisGraphOverviewControl": {
+   "BackColor": "0xFFFFFFFF",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true,
+    "BackColor": "0xFFE6E6EB"
+   },
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true,
+    "BackColor": "0xFFFFFFFF",
+    "UseHotKeys": true
+   },
+   "Width": 450,
+   "Height": 200,
+   "ForeColor": "0xFF000000",
+   "Font": {
+    "Italic": false,
+    "Name": "SiemensSans",
+    "Size": 14,
+    "StrikeOut": false,
+    "Underline": false,
+    "Weight": "Normal"
+   },
+   "GridLineColor": "0xFFCCCCCC",
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove",
+   "ShowOperationMode": true,
+   "GraphOverview": {
+    "AlternateBackColor": "0xFFF2F2F5",
+    "BackColor": "0xFFFFFFFF",
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "ForeColor": "0xFF000000",
+    "GridLineColor": "0xFFCCCCCC",
+    "GridLineVisibility": "Vertical",
+    "GridLineWidth": 1,
+    "RowHeight": 28,
+    "HeaderSettings": {
+     "HeaderBackColor": "0xFFE6E6EB",
+     "HeaderForeColor": "0xFF000000",
+     "HeaderGridLineColor": "0xFFC4C4C9",
+     "RowHeaderType": "None",
+     "ColumnHeaderType": "None"
+    }
+   },
+   "StyleItemClass": "HmiProcessDiagnosisGraphOverviewControl"
+  },
+  "HmiProcessDiagnosisPlcCodeViewerControl": {
+   "BackColor": "0xFFFFFFFF",
+   "Caption": {
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "ForeColor": "0xFF000000",
+    "Visible": true
+   },
+   "CaptionColor": "0xFF91939A",
+   "StatusBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true,
+    "BackColor": "0xFFE6E6EB"
+   },
+   "ToolBar": {
+    "Enabled": true,
+    "Font": {
+     "Italic": false,
+     "Name": "SiemensSans",
+     "Size": 14,
+     "StrikeOut": false,
+     "Underline": false,
+     "Weight": "Normal"
+    },
+    "Padding": {
+     "Bottom": 0,
+     "Left": 0,
+     "Right": 0,
+     "Top": 0
+    },
+    "ShowToolTips": true,
+    "Visible": true,
+    "BackColor": "0xFFFFFFFF",
+    "UseHotKeys": true
+   },
+   "Width": 800,
+   "Height": 600,
+   "WindowFlags": "ShowCaption, ShowBorder, CanSize, CanMove",
+   "ShowSymbolLine": true,
+   "SymbolLineBackColor": "0xFFC9C9CD",
+   "SymbolLineForeColor": "0xFF000000",
+   "SymbolLineFont": {
+    "Italic": false,
+    "Name": "SiemensSans",
+    "Size": 14,
+    "StrikeOut": false,
+    "Underline": false,
+    "Weight": "Normal"
+   },
+   "OverviewDetailRatio": 0.5,
+   "CurrentZoomFactor": 1,
+   "StyleItemClass": "HmiProcessDiagnosisPlcCodeViewerControl"
+  }
+ }
+}

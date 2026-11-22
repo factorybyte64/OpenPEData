@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Single-file setup: wraps the Velopack Setup.exe (Embedded\SetupPayload.exe, written by ui\scripts\Pack-OpenPEData.ps1)
+       and always runs it with silent reinstall. .NET Framework 4.8 so that it starts on every Windows without a runtime. -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>OpenPEData-Setup</AssemblyName>
+    <ApplicationIcon>..\OpenPEData.Viewer\Assets\app.ico</ApplicationIcon>
+    <UseWPF>true</UseWPF>
+    <Product>OpenPEData</Product>
+    <Authors>factorybyte64</Authors>
+    <Company>factorybyte64</Company>
+    <Copyright>Copyright (c) 2026 factorybyte64</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Embedded\SetupPayload.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- The payload is git-ignored and only exists after Pack-OpenPEData.ps1 has run vpk pack. Without it the launcher
+       cannot be built: stop with a clear message instead of compiler error CS1566. -->
+  <Target Name="CheckSetupPayload" BeforeTargets="BeforeBuild;CoreCompile" Condition="!Exists('$(MSBuildThisFileDirectory)Embedded\SetupPayload.exe')">
+    <Error Code="OPDSETUP001" Text="Embedded\SetupPayload.exe is missing. The setup launcher wraps the Velopack setup and is built only by ui\scripts\Pack-OpenPEData.ps1, which creates the payload first (see ui\README.md, section Installer)." />
+  </Target>
+
+</Project>

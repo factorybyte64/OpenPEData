@@ -1,0 +1,87 @@
+﻿FUNCTION_BLOCK "FB_StlC_009"
+TITLE = STL call CTU
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      a : Bool;
+      b : Bool;
+      c : Bool;
+      ia : Int;
+      ib : Int;
+      ic : Int;
+      da : DInt;
+      db_v : DInt;
+      ra_v : Real;
+      rb : Real;
+      wa : Word;
+      wb : Word;
+      dwa : DWord;
+      ba : Byte;
+      ta : Time;
+      tb : Time;
+      s1 : String;
+      s2 : String;
+   END_VAR
+
+   VAR_OUTPUT 
+      q : Bool;
+      q2 : Bool;
+      io : Int;
+      io2 : Int;
+      dout : DInt;
+      rout : Real;
+      wout : Word;
+      dwout : DWord;
+      bout : Byte;
+      tout : Time;
+      sout : String;
+   END_VAR
+
+   VAR_IN_OUT 
+      arr : Array[0..9] of Int;
+      barr : Array[0..7] of Bool;
+      iinout : Int;
+   END_VAR
+
+   VAR 
+      ton1 {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      tof1 {InstructionName := 'TOF_TIME'; LibVersion := '1.0'} : TOF_TIME;
+      tp1 {InstructionName := 'TP_TIME'; LibVersion := '1.0'} : TP_TIME;
+      tonr1 {InstructionName := 'TONR_TIME'; LibVersion := '1.0'} : TONR_TIME;
+      ctu1 {InstructionName := 'CTU_INT'; LibVersion := '1.0'} : CTU_INT;
+      ctd1 {InstructionName := 'CTD_INT'; LibVersion := '1.0'} : CTD_INT;
+      ctud1 {InstructionName := 'CTUD_INT'; LibVersion := '1.0'} : CTUD_INT;
+      rtrig1 {InstructionName := 'R_TRIG'; LibVersion := '1.0'} : R_TRIG;
+      ftrig1 {InstructionName := 'F_TRIG'; LibVersion := '1.0'} : F_TRIG;
+      edge1 : Bool;
+      edge2 : Bool;
+      stat1 : Bool;
+      stat2 : Bool;
+      stati : Int;
+   END_VAR
+
+   VAR_TEMP 
+      t1 : Bool;
+      t2 : Bool;
+      ti : Int;
+      td : DInt;
+      tr : Real;
+      tw : Word;
+      tt : Time;
+      var1 : Variant;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 009 CTU
+      CALL #ctu1
+      {value_type := 'Int'}
+      (  CU                          := #a , 
+         R                           := #b , 
+         PV                          := #ia , 
+         Q                           := #q , 
+         CV                          := #io
+      );
+END_FUNCTION_BLOCK
+

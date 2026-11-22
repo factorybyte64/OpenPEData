@@ -1,0 +1,116 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_FbdStruct"
+    VAR_INPUT
+        "a" : Bool;
+        "b" : Bool;
+        "c" : Bool;
+        ia : Int;
+    END_VAR
+    VAR_OUTPUT
+        q : Bool;
+        q2 : Bool;
+        io : Int;
+        io2 : Int;
+    END_VAR
+    VAR
+        ifc1 : _.FB_Iface;
+        ton1 : TON_TIME;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_C1";
+        S7_NetworkTitle := "MLC_T1"
+    }
+    NETWORK
+        RUNG #a
+            A( in2 := #"b" )
+            O( in2 := #"c" )
+            Coil( #q )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T2"
+    }
+    NETWORK
+        RUNG #a
+            A( in2 := NOT #"b" )
+            Coil( #q )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T3"
+    }
+    NETWORK
+        RUNG #a
+            X( in2 := #"b" )
+            Coil( #q2 )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T4"
+    }
+    NETWORK
+        RUNG
+            "FC_SclCtl"(
+                n := #ia,
+                flag := #"a",
+                Ret_Val => #io2,
+                total => #io
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T5"
+    }
+    NETWORK
+        RUNG
+            "FB_Iface_DB"(
+                iBool := #"a",
+                iInt := #ia,
+                iReal :=  ,
+                iArr :=  ,
+                iMotor :=  ,
+                ioReal :=  ,
+                oBool =>  ,
+                oInt => #io
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T6"
+    }
+    NETWORK
+        RUNG
+            #ifc1(
+                iBool := #"a",
+                iInt := #ia,
+                iReal :=  ,
+                iArr :=  ,
+                iMotor :=  ,
+                ioReal :=  ,
+                oBool =>  ,
+                oInt => #io
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_T7"
+    }
+    NETWORK
+        RUNG "tIn"
+            A( in2 := "DB_Global".xBool )
+            Coil( "tOut" )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

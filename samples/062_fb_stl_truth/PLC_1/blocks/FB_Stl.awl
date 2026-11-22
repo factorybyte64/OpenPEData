@@ -1,0 +1,43 @@
+﻿FUNCTION_BLOCK "FB_Stl"
+TITLE = STL test FB
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      start : Bool;
+      stop : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      running : Bool;
+      count : Int;
+   END_VAR
+
+   VAR 
+      cnt : Int;
+      edge : Bool;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = Latch
+      A(;
+      O #start;
+      O #running;
+      );
+      AN #stop;
+      = #running;
+NETWORK
+TITLE = Count rising edges
+      A #start;
+      FP #edge;
+      JCN END1;
+      L #cnt;
+      + 1;
+      T #cnt;
+END1:      L #cnt;
+      T #count;
+      SET;
+      SAVE;
+END_FUNCTION_BLOCK
+

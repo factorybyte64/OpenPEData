@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Test runner for the viewer without test framework packages (like dotnet\tests\OpenPEData.Tests),
+       started with dotnet run on this project in Release; exit code 0 = all tests passed -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>OpenPEData.Viewer.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpenPEData.Viewer\OpenPEData.Viewer.csproj" />
+  </ItemGroup>
+
+</Project>

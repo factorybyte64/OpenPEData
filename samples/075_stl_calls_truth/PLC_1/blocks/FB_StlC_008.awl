@@ -1,0 +1,19 @@
+﻿FUNCTION_BLOCK "FB_StlC_008"
+TITLE = STL call PRESET_TIMER
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR 
+      t1 {InstructionName := 'IEC_TIMER'; LibVersion := '1.0'} : IEC_TIMER;
+   END_VAR
+
+
+BEGIN
+NETWORK
+TITLE = 008 PRESET_TIMER
+      CALL PRESET_TIMER
+      {time_type := 'Time', timer_type := 'IEC_TIMER'}
+      (  PT                          := T#2S , 
+         "TIMER"                     := #t1
+      );
+END_FUNCTION_BLOCK
+
