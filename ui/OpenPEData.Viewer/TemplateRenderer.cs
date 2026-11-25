@@ -53,12 +53,14 @@ public static partial class TemplateRenderer
             props["ProcessValue"] = 0;
         }
         props = WithThresholdValues(props);
-        // peak indicators show the lowest / highest value since the start: with a static value that value itself
-        if (props["PeakIndicators"] != null && props["ComputedMinPeakValue"] == null)
+        // peak indicators show the lowest / highest value since the start: with a static value that value itself;
+        // a static value does not change, so the trend indicator shows no arrow (runtime 2026-11-25)
+        if (props["PeakIndicators"] != null && props["ComputedMinPeakValue"] == null || props["ShowTrendIndicator"] != null && props["ComputedValueTendency"] == null)
         {
             props = (JsonObject)props.DeepClone();
-            props["ComputedMinPeakValue"] = props["ProcessValue"]?.DeepClone();
-            props["ComputedMaxPeakValue"] = props["ProcessValue"]?.DeepClone();
+            props["ComputedMinPeakValue"] ??= props["ProcessValue"]?.DeepClone();
+            props["ComputedMaxPeakValue"] ??= props["ProcessValue"]?.DeepClone();
+            props["ComputedValueTendency"] ??= "Steady";
         }
         var scope = new TemplateScope { Hmi = props, Width = w, Height = h };
         var counter = 0;

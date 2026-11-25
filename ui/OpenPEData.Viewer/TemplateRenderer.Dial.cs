@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace OpenPEData.Viewer;
 
 /// <summary>hmi-element:arcDial and hmi-element:straightDial (scales of gauge, clock, bar, slider) expanded into plain
-/// SVG: hmi-feature:scale (begin/end value, maximum-sections, type Logarithmic, extend both), range (begin/end
+/// SVG: hmi-feature:scale (begin/end value, maximum-sections, type: scaling type, extend both), range (begin/end
 /// value, also begin-surcharge, end-surcharge, scale-begin, scale-end) with ribbons, division (count, nested) and
 /// autoMeasure with ticks and labels, marker with ticks and poleMarkers, thresholds (markers and lines; not yet the ribbons of the segmented bar modes). Semantics derived from the templates and
 /// calibrated against the runtime (164, 2026-10-31): offsets are measured from the dial line along the outward
@@ -23,26 +23,59 @@ public static partial class TemplateRenderer
         public double Sx, Sy, Len, Dx, Dy;               // straight: start, length, unit direction of growing values
         public double SurBegin, SurEnd;                  // surcharge in pixels before begin / after end
         public double V0, V1 = 100;                      // scale values
-        public bool Log;                                 // ScalingType Logarithmic (both values > 0)
+        public string Scaling = "Linear";                // StraightScale/CurvedScale.ScalingType
 
-        double F(double v) => Log ? Math.Log10(Math.Max(v, 1e-12)) : v;
+        /// <summary>Not linear: labels sit at linear value steps, placed at their scaled positions (runtime 2026-11-25).</summary>
+        public bool NonLinear => Scaling != "Linear";
 
-        /// <summary>Position along the dial (pixels from the scale begin) of a value or a keyword.</summary>
+        static double L(double v) => Math.Log10(Math.Max(v, 1e-12));
+
+        /// <summary>Share of the scale (0 at the begin, 1 at the end) of a value. Runtime 2026-11-25, bar 0..100 and
+        /// 1..1000: Quadratic u², Cubic u³ (u = linear share), Logarithmic log, NegativeLogarithmic the mirrored log
+        /// (value 100 of 1..1000 near the begin).</summary>
+        public double Share(double v)
+        {
+            if (V1 == V0) return 0;
+            var u = (v - V0) / (V1 - V0);
+            switch (Scaling)
+            {
+                case "Logarithmic" when V0 > 0 && V1 > 0:
+                    return (L(v) - L(V0)) / (L(V1) - L(V0));
+                case "NegativeLogarithmic" when V0 > 0 && V1 > 0:
+                    return (L(V1) - L(V1 + V0 - v)) / (L(V1) - L(V0));
+                case "Quadratic": return u * Math.Abs(u);
+                case "Cubic": return u * u * u;
+                default: return u;
+            }
+        }
+
+        /// <summary>Position along the dial (pixels from the scale begin) of a value or a keyword. A value outside the
+        /// scale stops at the end of the surcharge (bar fill).</summary>
         public double At(object? v) => v switch
         {
             "begin-surcharge" => -SurBegin,
             "end-surcharge" => Length + SurEnd,
             "scale-begin" => 0,
             "scale-end" => Length,
-            // a value outside the scale stops at the end of the surcharge: bar and indicator stay inside the dial
-            _ => F(V1) == F(V0) ? 0 : Math.Clamp((F(TemplateExpr.Num(v)) - F(V0)) / (F(V1) - F(V0)) * Length, -SurBegin, Length + SurEnd),
+            _ => Limit(Share(TemplateExpr.Num(v)) * Length, -SurBegin, Length + SurEnd),
         };
+
+        /// <summary>Clamp that tolerates bounds in any order (a dial shorter than its surcharges).</summary>
+        public static double Limit(double v, double a, double b) => Math.Clamp(v, Math.Min(a, b), Math.Max(a, b));
 
         /// <summary>Value at position t (inverse of At).</summary>
         public double ValueAt(double t)
         {
-            var f = F(V0) + (F(V1) - F(V0)) * t / Math.Max(Length, 1e-9);
-            return Log ? Math.Pow(10, f) : f;
+            var s = t / Math.Max(Length, 1e-9);
+            double Lin(double u) => V0 + (V1 - V0) * u;
+            return Scaling switch
+            {
+                "Logarithmic" when V0 > 0 && V1 > 0 => Math.Pow(10, L(V0) + (L(V1) - L(V0)) * s),
+                "NegativeLogarithmic" when V0 > 0 && V1 > 0 => V1 + V0 - Math.Pow(10, L(V1) - (L(V1) - L(V0)) * s),
+                "Quadratic" => Lin(Math.Sign(s) * Math.Sqrt(Math.Abs(s))),
+                "Cubic" => Lin(Math.Cbrt(s)),
+                _ => Lin(s),
+            };
         }
 
         public double Length => Arc ? Math.Abs(Range) * Math.PI / 180 * R : Len;
@@ -94,10 +127,11 @@ public static partial class TemplateRenderer
         {
             if (!Cond(scale, s)) continue;
             (d.V0, d.V1) = (N(scale, "begin-value"), N(scale, "end-value"));
-            d.Log = TemplateExpr.Str(B(scale, "type")) is "Logarithmic" or "logarithmic" && d.V0 > 0 && d.V1 > 0;
+            var type = TemplateExpr.Str(B(scale, "type"));
+            d.Scaling = type.Length > 0 ? char.ToUpperInvariant(type[0]) + type[1..] : "Linear";
             var sections = Math.Max(1, (int)N(scale, "maximum-sections"));
             // extend both (AutoScaling): the scale ends move outwards to the next step of the automatic division
-            if (!d.Log && TemplateExpr.Str(B(scale, "extend")) == "both" && d.V1 != d.V0)
+            if (d.Scaling is not ("Logarithmic" or "NegativeLogarithmic") && TemplateExpr.Str(B(scale, "extend")) == "both" && d.V1 != d.V0)
             {
                 var step = NiceStep(d.V0, d.V1, sections);
                 var (lo, hi) = (Math.Min(d.V0, d.V1), Math.Max(d.V0, d.V1));
@@ -137,8 +171,9 @@ public static partial class TemplateRenderer
             }
             case "marker":
             {
-                // a value marker: ticks and pole markers at one position; no runtime value counts as 0
-                var t = d.At(B("value") ?? 0.0);
+                // a value marker: ticks and pole markers at one position; no runtime value counts as 0. A value
+                // outside the scale stays at the scale end (runtime 2026-11-25: bar -20 and 120 of 0..100)
+                var t = d.Arc ? d.At(B("value") ?? 0.0) : Dial.Limit(d.At(B("value") ?? 0.0), 0, d.Length);
                 foreach (var c in f.Elements())
                 {
                     if (!Cond(c, s)) continue;
@@ -176,14 +211,18 @@ public static partial class TemplateRenderer
                 var count = f.Name.LocalName == "division" ? Math.Max(1, (int)N("count")) : NiceSections(d.V0, d.V1, sections);
                 var pts = Enumerable.Range(0, count + 1).Select(i => t0 + (t1 - t0) * i / count).ToList();
                 List<double>? values = null;
-                // logarithmic scale, automatic division: the runtime labels linear steps (0, 200, ..., 1000 for 1..1000)
-                // at their logarithmic positions; values below the scale begin sit at the begin (164 Screen_R8)
-                if (d.Log && f.Name.LocalName == "autoMeasure" && t0 == 0 && Math.Abs(t1 - d.Length) < 1e-6)
+                // scale that is not linear: the runtime labels linear steps (0, 200, ..., 1000 for 1..1000) at their
+                // scaled positions; values below the scale begin sit at the begin (164 Screen_R8; division with count:
+                // steps of span / count, runtime 2026-11-25)
+                if (d.NonLinear && t0 == 0 && Math.Abs(t1 - d.Length) < 1e-6)
                 {
-                    var step = NiceStep(d.V0, d.V1, sections);
+                    var division = f.Name.LocalName == "division";
+                    var step = division ? Math.Abs(d.V1 - d.V0) / count : NiceStep(d.V0, d.V1, sections);
                     values = [];
-                    for (var v = Math.Floor(Math.Min(d.V0, d.V1) / step) * step; v <= Math.Max(d.V0, d.V1) + step * 1e-9; v += step)
-                        values.Add(v);
+                    // a division counts from the scale begin (1, 200.8, ..., 1000), the automatic one from a step multiple
+                    var first = division ? Math.Min(d.V0, d.V1) : Math.Floor(Math.Min(d.V0, d.V1) / step) * step;
+                    for (var i = 0; first + i * step <= Math.Max(d.V0, d.V1) + step * 1e-9; i++)
+                        values.Add(first + i * step);
                     pts = values.Select(v => Math.Clamp(d.At(v), 0, d.Length)).ToList();
                     count = pts.Count - 1;
                 }
