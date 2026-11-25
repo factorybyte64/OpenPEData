@@ -11,6 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 using Microsoft.Win32;
 
 namespace OpenPEData.Viewer;
@@ -49,6 +50,8 @@ public sealed class AnalysisContext
     public Action<NodeKind>? Navigate { get; set; }
     /// <summary>Text for the status bar.</summary>
     public Action<string>? Status { get; set; }
+    /// <summary>The project node of the tree (HMI screens for the screen export).</summary>
+    public TreeNode? Root { get; init; }
 }
 
 /// <summary>The OpenPEData views at the top level of the tree next to the project: overview, project-wide lists of
@@ -443,12 +446,199 @@ public static class AnalysisViews
                     { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping }), new UTF8Encoding(false));
                 return dlg.FileName;
             }));
+        var screens = HmiScreens(ctx.Root).ToList();
+        if (screens.Count > 0)
+        {
+            string? note = null;
+            var options = ScreenExportOptions(screens, out var getOptions);
+            // progress, shown when the export takes longer than half a second
+            var bar = new ProgressBar { Height = 6, Margin = new Thickness(0, 8, 0, 2) };
+            var barText = new TextBlock { Foreground = Res("Muted"), TextTrimming = TextTrimming.CharacterEllipsis };
+            var progress = new StackPanel { Visibility = Visibility.Collapsed, Children = { bar, barText } };
+            options.Children.Add(progress);
+            root.Children.Add(AsyncAction(ctx, "", "UI screens (PNG)",
+                "The HMI screens as images at 1:1, one file per screen and language (file name suffixed with the language). " +
+                "Drawn like the preview, in the selected display mode.",
+                "Choose folder…", async () =>
+                {
+                    var (hmis, langs, subfolders) = getOptions();
+                    var selected = screens.Where(s => hmis.Contains(s.Hmi)).ToList();
+                    if (selected.Count == 0)
+                        throw new InvalidOperationException("Select at least one HMI.");
+                    var dlg = new OpenFolderDialog { Title = "Folder for the screen images" };
+                    if (dlg.ShowDialog() != true) return null;
+                    var watch = Stopwatch.StartNew();
+                    int written;
+                    List<string> failed;
+                    try
+                    {
+                        (written, failed) = await ExportScreens(selected, langs, subfolders, dlg.FolderName, (done, total, current) =>
+                        {
+                            if (watch.ElapsedMilliseconds < 500) return;
+                            progress.Visibility = Visibility.Visible;
+                            bar.Maximum = total;
+                            bar.Value = done;
+                            barText.Text = $"{done} of {total}: {current}";
+                        });
+                    }
+                    finally
+                    {
+                        progress.Visibility = Visibility.Collapsed;
+                    }
+                    note = (written == 1 ? "1 image" : $"{written} images") + (failed.Count > 0 ? $", {failed.Count} not drawn: " + string.Join(", ", failed.Take(10)) +
+                        (failed.Count > 10 ? ", …" : "") : "");
+                    return dlg.FolderName;
+                }, () => note, options));
+        }
         return new ScrollViewer { Content = root, VerticalScrollBarVisibility = ScrollBarVisibility.Auto };
+    }
+
+    /// <summary>The screens of all HMIs in the tree: HMI node, folder path below "Screens", screen node.</summary>
+    private static IEnumerable<(TreeNode Hmi, string[] Folders, TreeNode Screen)> HmiScreens(TreeNode? root)
+    {
+        if (root == null) yield break;
+        foreach (var hmi in Descendants(root).Where(n => n.Kind == NodeKind.Hmi && n.Data != null))
+            foreach (var screens in hmi.Children.Where(c => c.Kind == NodeKind.ScreensFolder))
+                foreach (var s in Descendants(screens).Where(n => n.Kind == NodeKind.Screen && n.Data is JsonObject))
+                {
+                    var folders = new List<string>();
+                    for (var p = s.Parent; p != null && p != screens; p = p.Parent) folders.Insert(0, p.Name);
+                    yield return (hmi, folders.ToArray(), s);
+                }
+    }
+
+    private static IEnumerable<TreeNode> Descendants(TreeNode n)
+    {
+        foreach (var c in n.Children)
+        {
+            yield return c;
+            foreach (var d in Descendants(c)) yield return d;
+        }
+    }
+
+    /// <summary>Enabled runtime languages of an HMI in their order (parser runtimeLanguages).</summary>
+    private static List<string> HmiLanguages(JsonNode? hmi) => TreeBuilder.Arr(hmi?["runtimeLanguages"])
+        .Where(l => l["enable"] is not JsonValue en || !en.TryGetValue<bool>(out var b) || b)
+        .OrderBy(l => l["order"] is JsonValue o && o.TryGetValue<int>(out var i) ? i : int.MaxValue)
+        .Select(l => TreeBuilder.Str(l["language"])).OfType<string>().Where(s => s.Length > 0).Distinct().ToList();
+
+    /// <summary>Options of the screen export: HMIs, languages, "Create subfolders"; <paramref name="get"/> reads the
+    /// current choice.</summary>
+    private static StackPanel ScreenExportOptions(List<(TreeNode Hmi, string[] Folders, TreeNode Screen)> screens,
+        out Func<(HashSet<TreeNode> Hmis, List<string> Langs, bool Subfolders)> get)
+    {
+        var panel = new StackPanel { Margin = new Thickness(0, 8, 0, 0) };
+        WrapPanel Row(string label)
+        {
+            var row = new WrapPanel { Margin = new Thickness(0, 2, 0, 4) };
+            row.Children.Add(new TextBlock { Text = label, Width = 80, VerticalAlignment = VerticalAlignment.Center });
+            panel.Children.Add(row);
+            return row;
+        }
+        var hmiRow = Row("HMIs");
+        var hmiBoxes = new List<(CheckBox Box, TreeNode Hmi)>();
+        foreach (var g in screens.GroupBy(s => s.Hmi))
+        {
+            var cb = new CheckBox { Content = new TextBlock { Text = $"{g.Key.Name} ({g.Count()})" }, IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
+            hmiRow.Children.Add(cb);
+            hmiBoxes.Add((cb, g.Key));
+        }
+        var langs = screens.Select(s => s.Hmi).Distinct().SelectMany(h => HmiLanguages(h.Data)).Distinct().ToList();
+        if (langs.Count == 0 && ScreenRenderer.Language is { } cur) langs.Add(cur);
+        var langBoxes = new List<(CheckBox Box, string Lang)>();
+        if (langs.Count > 0)
+        {
+            var langRow = Row("Languages");
+            foreach (var l in langs)
+            {
+                var cb = new CheckBox { Content = new TextBlock { Text = l }, IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
+                langRow.Children.Add(cb);
+                langBoxes.Add((cb, l));
+            }
+        }
+        var sub = new CheckBox { Content = "Create subfolders (one per HMI and screen folder)", IsChecked = true,
+            Margin = new Thickness(80, 2, 0, 0) };
+        panel.Children.Add(sub);
+        get = () =>
+        {
+            var chosen = langBoxes.Where(b => b.Box.IsChecked == true).Select(b => b.Lang).ToList();
+            if (langBoxes.Count > 0 && chosen.Count == 0) throw new InvalidOperationException("Select at least one language.");
+            return (hmiBoxes.Where(b => b.Box.IsChecked == true).Select(b => b.Hmi).ToHashSet(), chosen, sub.IsChecked == true);
+        };
+        return panel;
+    }
+
+    /// <summary>Draws the screens with the screen renderer and writes them as PNG, one file per language
+    /// (screen_language.png). With subfolders into folder\HMI\screen folders\, otherwise all files into the folder
+    /// (HMI_screen_language.png when screens of several HMIs are written). A screen that cannot be drawn is listed and
+    /// skipped. <paramref name="progress"/> gets images done, images in total and the current screen; the dispatcher
+    /// is given time after each image so that the window stays painted.</summary>
+    private static async Task<(int Written, List<string> Failed)> ExportScreens(
+        List<(TreeNode Hmi, string[] Folders, TreeNode Screen)> screens, List<string> langs, bool subfolders, string folder,
+        Action<int, int, string> progress)
+    {
+        var written = 0;
+        var failed = new List<string>();
+        var language = ScreenRenderer.Language;
+        var severalHmis = screens.Select(s => s.Hmi).Distinct().Count() > 1;
+        try
+        {
+            List<string?> LangsOf(TreeNode hmi)
+            {
+                var own = HmiLanguages(hmi.Data);
+                return langs.Count == 0 ? [language] : langs.Where(l => own.Count == 0 || own.Contains(l)).Cast<string?>().ToList();
+            }
+            var groups = screens.GroupBy(s => s.Hmi).ToList();
+            var total = groups.Sum(g => g.Count() * LangsOf(g.Key).Count);
+            var done = 0;
+            foreach (var g in groups)
+            {
+                // text lists, graphic lists, recipes and alarms of the HMI the screens belong to
+                TreeBuilder.UseHmi(g.Key.Data!);
+                // the selected languages this HMI has (the selected ones when the project names none)
+                foreach (var lang in LangsOf(g.Key))
+                {
+                    ScreenRenderer.Language = lang;
+                    foreach (var (hmi, folders, node) in g)
+                    {
+                        var screen = (JsonObject)node.Data!;
+                        try
+                        {
+                            var dir = subfolders ? Path.Combine([folder, SafeName(hmi.Name), .. folders.Select(SafeName)]) : folder;
+                            var name = (!subfolders && severalHmis ? hmi.Name + "_" : "") + node.Name + (lang != null ? "_" + lang : "");
+                            Directory.CreateDirectory(dir);
+                            var bmp = ScreenRenderer.ToBitmap(ScreenRenderer.Render(screen, TreeBuilder.Arr(screen["items"])));
+                            ScreenRenderer.SavePng(bmp, Path.Combine(dir, SafeName(name) + ".png"));
+                            written++;
+                        }
+                        catch (Exception ex) when (ex is not IOException and not UnauthorizedAccessException)
+                        {
+                            failed.Add($"{hmi.Name}/{node.Name}" + (lang != null ? $" ({lang})" : ""));
+                        }
+                        progress(++done, total, $"{hmi.Name}/{node.Name}" + (lang != null ? $" ({lang})" : ""));
+                        await Dispatcher.Yield(DispatcherPriority.Background);
+                    }
+                }
+            }
+        }
+        finally
+        {
+            ScreenRenderer.Language = language;
+            if (TreeBuilder.LastHmi is { } last) TreeBuilder.UseHmi(last);
+        }
+        return (written, failed);
     }
 
     /// <summary>A card of the export view: icon, title, text, a button that writes a file (returns its path or null when
     /// cancelled), and the result line with "Show in Explorer".</summary>
-    private static UIElement Action(AnalysisContext ctx, string glyph, string title, string text, string button, Func<string?> run)
+    private static UIElement Action(AnalysisContext ctx, string glyph, string title, string text, string button, Func<string?> run) =>
+        AsyncAction(ctx, glyph, title, text, button, () => Task.FromResult(run()));
+
+    /// <summary>A card of the export view whose button runs <paramref name="run"/> asynchronously (the window is
+    /// disabled meanwhile); <paramref name="note"/> is added to the result line, <paramref name="options"/> below the
+    /// text.</summary>
+    private static UIElement AsyncAction(AnalysisContext ctx, string glyph, string title, string text, string button,
+        Func<Task<string?>> run, Func<string?>? note = null, UIElement? options = null)
     {
         var grid = new Grid();
         grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
@@ -459,20 +649,24 @@ public static class AnalysisViews
         var body = new StackPanel();
         body.Children.Add(new TextBlock { Text = title, FontWeight = FontWeights.SemiBold, FontSize = 14 });
         body.Children.Add(new TextBlock { Text = text, Foreground = Res("Muted"), TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 3, 0, 0) });
+        if (options != null) body.Children.Add(options);
         var result = new TextBlock { Margin = new Thickness(0, 6, 0, 0), TextWrapping = TextWrapping.Wrap, Visibility = Visibility.Collapsed };
         body.Children.Add(result);
         var b = new Button { Content = button, Padding = new Thickness(14, 5, 14, 5), MinWidth = 130, Margin = new Thickness(16, 0, 0, 0),
             VerticalAlignment = VerticalAlignment.Center };
-        b.Click += (_, _) =>
+        b.Click += async (_, _) =>
         {
+            var window = Window.GetWindow(b);
             try
             {
                 Mouse.OverrideCursor = Cursors.Wait;
-                var file = run();
+                if (window != null) window.IsEnabled = false;
+                var file = await run();
                 if (file == null) return;
                 result.Inlines.Clear();
                 result.Foreground = Res("Muted");
-                result.Inlines.Add(new System.Windows.Documents.Run("Saved: " + file + "  "));
+                var extra = note?.Invoke();
+                result.Inlines.Add(new System.Windows.Documents.Run("Saved: " + file + (extra != null ? $" ({extra})" : "") + "  "));
                 var link = new System.Windows.Documents.Hyperlink(new System.Windows.Documents.Run("Show in Explorer"));
                 link.Click += (_, _) => Process.Start(new ProcessStartInfo("explorer.exe", $"/select,\"{file}\"") { UseShellExecute = true });
                 result.Inlines.Add(link);
@@ -487,6 +681,7 @@ public static class AnalysisViews
             }
             finally
             {
+                if (window != null) window.IsEnabled = true;
                 Mouse.OverrideCursor = null;
             }
         };

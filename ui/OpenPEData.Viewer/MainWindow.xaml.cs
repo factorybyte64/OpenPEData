@@ -286,6 +286,7 @@ public partial class MainWindow : Window
                 ParserMessages = string.IsNullOrWhiteSpace(res.StdErr) ? null : res.StdErr.Trim(),
                 Navigate = kind => { if (RootNode(kind) is { } n) n.IsSelected = true; },
                 Status = text => SetBusy(false, text),
+                Root = _root,
             };
             _top.Clear();
             _top.Add(_root);

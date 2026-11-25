@@ -139,6 +139,7 @@ public static class TreeBuilder
     /// "Libraries", tab "Plant objects"); see <see cref="LibraryNode"/> and <see cref="PlantObjectsNode"/>.</summary>
     public static TreeNode Build(JsonNode root, string fileName)
     {
+        LastHmi = null;
         ScreenRenderer.SetGraphics(root["project"]?["graphics"], root["library"]);
         ScreenRenderer.SetLibraryTextLists(root["library"]);
         ScreenRenderer.SetFaceplates(root["faceplates"]);
@@ -387,6 +388,19 @@ public static class TreeBuilder
         return n;
     }
 
+    /// <summary>The HMI whose text lists, graphic lists, recipes and alarms the screen renderer uses after the tree
+    /// was built (the last one added).</summary>
+    public static JsonNode? LastHmi { get; private set; }
+
+    /// <summary>Gives the screen renderer the text lists, graphic lists, recipes and alarms of an HMI.</summary>
+    public static void UseHmi(JsonNode hmi)
+    {
+        ScreenRenderer.SetTextLists(hmi["textLists"]);
+        ScreenRenderer.SetGraphicLists(hmi["graphicLists"]);
+        ScreenRenderer.SetRecipes(hmi["recipes"]);
+        ScreenRenderer.SetAlarms(hmi);
+    }
+
     /// <summary>The HMI (WinCC Unified) with its children in the order of the TIA Portal V21 project tree: Device
     /// configuration (added with the station), Runtime settings, Screens, HMI tags, Connections, HMI alarms, Logs,
     /// Scripts, Cycles, Text and graphic lists. Nodes without data in the project are left out.</summary>
@@ -408,10 +422,8 @@ public static class TreeBuilder
             n.Add(new TreeNode("Runtime settings", NodeKind.PlcSection, data, (rows.Count - 1).ToString()));
         }
 
-        ScreenRenderer.SetTextLists(hmi["textLists"]);
-        ScreenRenderer.SetGraphicLists(hmi["graphicLists"]);
-        ScreenRenderer.SetRecipes(hmi["recipes"]);
-        ScreenRenderer.SetAlarms(hmi);
+        UseHmi(hmi);
+        LastHmi = hmi;
         var screens = n.Add(new TreeNode("Screens", NodeKind.ScreensFolder, hmi));
         var sf = new Folders(screens, NodeKind.ScreensFolder);
         foreach (var s in ByName(hmi["screens"]))
