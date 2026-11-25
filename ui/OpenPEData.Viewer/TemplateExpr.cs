@@ -35,7 +35,7 @@ public sealed class TemplateScope
             "ParamProps" => Param,
             "SysProps" => new Dictionary<string, object?> { ["HasFocus"] = false },
             "Layout" => new Dictionary<string, object?> { ["ActualWidth"] = Width, ["ActualHeight"] = Height },
-            _ when parts[0].StartsWith("Hmi") && parts.Length == 2 => parts[1],  // enum literal
+            _ when parts[0].StartsWith("Hmi") && parts.Length == 2 => HmiEnums.Literal(parts[0], parts[1]),  // enum literal
             _ => null,
         };
         for (var i = 1; i < parts.Length && cur != null && !(parts[0].StartsWith("Hmi") && parts[0] != "HmiProps"); i++)
@@ -48,7 +48,64 @@ public sealed class TemplateScope
                 _ => null,
             };
         }
+        // enum properties of the item carry their names ("Lines", "Low, High"); the templates also calculate with them
+        // (ThresholdIndicators % 2, ge( ..., HmiThresholdIndicator.Markers ))
+        if (parts[0] == "HmiProps" && parts.Length > 1 && cur is string name) return HmiEnums.Property(parts[^1], name) ?? cur;
         return cur;
+    }
+}
+
+/// <summary>Value of an enum in a template expression: the name as Openness shows it and its number. Compares with a
+/// name by name, with a number by number; calculates with the number.</summary>
+public sealed record EnumValue(string Name, double Value)
+{
+    public override string ToString() => Name;
+}
+
+/// <summary>WinCC Unified enum types (embedded table of the library: property -> enum type -> names and values).</summary>
+public static class HmiEnums
+{
+    private static readonly Lazy<(Dictionary<string, string> Props, Dictionary<string, (bool Flags, Dictionary<string, double> Values)> Types)> Table = new(Load);
+
+    private static (Dictionary<string, string>, Dictionary<string, (bool, Dictionary<string, double>)>) Load()
+    {
+        var props = new Dictionary<string, string>();
+        var types = new Dictionary<string, (bool, Dictionary<string, double>)>();
+        try
+        {
+            var asm = typeof(TiaProject).Assembly;
+            var res = asm.GetManifestResourceNames().Where(n => n.EndsWith("unified_enums.json", StringComparison.Ordinal)).Order().LastOrDefault();
+            using var st = res != null ? asm.GetManifestResourceStream(res) : null;
+            if (st == null || JsonNode.Parse(st) is not JsonObject root) return (props, types);
+            foreach (var (k, v) in root["properties"] as JsonObject ?? new JsonObject())
+                if (v?.ToString() is { } t) props[k] = t;
+            foreach (var (k, v) in root["enums"] as JsonObject ?? new JsonObject())
+            {
+                var vals = new Dictionary<string, double>();
+                foreach (var (n, x) in v?["values"] as JsonObject ?? new JsonObject())
+                    if (x is JsonValue xv && xv.TryGetValue<double>(out var d)) vals[n] = d;
+                types[k] = (v?["flags"] is JsonValue f && f.TryGetValue<bool>(out var fl) && fl, vals);
+            }
+        }
+        catch (Exception) { }
+        return (props, types);
+    }
+
+    /// <summary>Hmi&lt;Enum&gt;.&lt;Name&gt;: an EnumValue when the type is known, otherwise the name.</summary>
+    public static object Literal(string type, string name) =>
+        Table.Value.Types.TryGetValue(type, out var t) && t.Values.TryGetValue(name, out var v) ? new EnumValue(name, v) : name;
+
+    /// <summary>The enum value of a property holding a name ("Markers", flags "Low, High"), or null.</summary>
+    public static EnumValue? Property(string property, string name)
+    {
+        if (!Table.Value.Props.TryGetValue(property, out var type) || !Table.Value.Types.TryGetValue(type, out var t)) return null;
+        if (t.Values.TryGetValue(name, out var v)) return new EnumValue(name, v);
+        if (!t.Flags) return null;
+        double sum = 0;
+        foreach (var part in name.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries))
+            if (t.Values.TryGetValue(part, out var pv)) sum += pv;
+            else return null;
+        return new EnumValue(name, sum);
     }
 }
 
@@ -104,6 +161,7 @@ public static class TemplateExpr
     {
         double d => d,
         bool b => b ? 1 : 0,
+        EnumValue e => e.Value,
         string str when str.StartsWith("0x", StringComparison.OrdinalIgnoreCase)
                         && ulong.TryParse(str[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var u) => u,
         string str when double.TryParse(str, NumberStyles.Float, CultureInfo.InvariantCulture, out var d) => d,
@@ -115,6 +173,7 @@ public static class TemplateExpr
         null => false,
         bool b => b,
         double d => d != 0 && !double.IsNaN(d),
+        EnumValue e => e.Value != 0,
         string str => str.Length > 0 && str != "false",
         _ => true,
     };
@@ -133,6 +192,14 @@ public static class TemplateExpr
 
     private static bool Equal(object? a, object? b)
     {
+        if (a is EnumValue || b is EnumValue)
+        {
+            if (a is null || b is null) return false;
+            var other = a is EnumValue ? b : a;
+            return other is double or bool or EnumValue && !(a is EnumValue ea && b is EnumValue eb && ea.Name != eb.Name)
+                ? Math.Abs(Num(a) - Num(b)) < 1e-9
+                : Str(a) == Str(b);
+        }
         if (a is string sa && b is string sb) return sa == sb;
         if (a == null || b == null) return a == null && b == null || Str(a ?? b) == "";
         if (a is string || b is string) return Str(a) == Str(b);
@@ -166,7 +233,10 @@ public static class TemplateExpr
             {
                 var f = A(0);
                 if (f == null || Str(f) == "") return false;
-                if (a.Count < 2 || A(1) is not string flag) return true;
+                if (A(1) is EnumValue fe && f is EnumValue or double)
+                    return fe.Value == 0 ? Num(f) == 0 : ((long)Num(f) & (long)fe.Value) == (long)fe.Value;
+                if (a.Count < 2 || A(1) is not (string or EnumValue)) return true;
+                var flag = Str(A(1));
                 if (f is double d) return d != 0;
                 return Str(f).Split(',').Any(x => x.Trim() == flag);
             }
