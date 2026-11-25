@@ -42,6 +42,25 @@ public static class Program
         Eq("rgba(145,146,153,0.502)", Eval($"Converter.RGBA(Converter.Darker({half}, 0.4))"), $"{mode}: RGBA of the darker half transparent color");
     }
 
+    /// <summary>Enum properties carry their names; the bar template calculates and compares with them
+    /// (ThresholdIndicators % 2, ge( ..., HmiThresholdIndicator.Markers ), has( PeakIndicators, ... )).</summary>
+    static void EnumArithmetic()
+    {
+        object? E(string expr, JsonObject props) => TemplateExpr.Eval(expr, new TemplateScope { Hmi = props });
+        var lines = new JsonObject { ["ThresholdIndicators"] = "Lines", ["PeakIndicators"] = "Low, High", ["BarMode"] = "UnicolorStatic",
+            ["StraightScale"] = new JsonObject { ["ScaleMode"] = "None" } };
+        Eq(true, E("eq( HmiProps.ThresholdIndicators % 2, HmiThresholdIndicator.Lines )", lines), "enum: Lines draws threshold lines");
+        Eq(false, E("ge( HmiProps.ThresholdIndicators, HmiThresholdIndicator.Markers )", lines), "enum: Lines draws no markers");
+        Eq(true, E("ge( HmiProps.ThresholdIndicators, HmiThresholdIndicator.Markers )", new JsonObject { ["ThresholdIndicators"] = "Markers" }), "enum: Markers");
+        Eq(true, E("has( HmiProps.PeakIndicators, HmiPeakIndicator.High )", lines), "enum: flags Low, High has High");
+        Eq(false, E("has( HmiProps.PeakIndicators, HmiPeakIndicator.High )", new JsonObject { ["PeakIndicators"] = "Low" }), "enum: Low has no High");
+        Eq(true, E("HmiProps.BarMode == HmiBarMode.UnicolorStatic", lines), "enum: compare with a literal");
+        Eq(false, E("HmiProps.BarMode == HmiBarMode.Unicolor", lines), "enum: other literal");
+        Eq(true, E("HmiProps.BarMode == 'UnicolorStatic'", lines), "enum: compare with a name");
+        Eq(false, E("has( HmiProps.StraightScale.ScaleMode, HmiScaleMode.Labels )", lines), "enum: ScaleMode None has no labels");
+        Eq("UnicolorStatic", TemplateExpr.Str(E("HmiProps.BarMode", lines)), "enum: text is the name");
+    }
+
     /// <summary>Release list of the updater: drafts and non-version tags are left out, pre-releases recognized,
     /// newest version first; the offered update skips pre-releases (unless wanted), releases without update package
     /// and the skipped version, but offers a newer one than the skipped version.</summary>
@@ -374,6 +393,7 @@ public static class Program
         {
             ScreenRenderer.RuntimeVisibility = saved;
         }
+        EnumArithmetic();
         UpdaterReleases();
         ClassicRenderCompare();
         AnalysisLists();

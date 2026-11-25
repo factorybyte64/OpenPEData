@@ -34,7 +34,8 @@ public static partial class TemplateRenderer
             "end-surcharge" => Length + SurEnd,
             "scale-begin" => 0,
             "scale-end" => Length,
-            _ => F(V1) == F(V0) ? 0 : (F(TemplateExpr.Num(v)) - F(V0)) / (F(V1) - F(V0)) * Length,
+            // a value outside the scale stops at the end of the surcharge: bar and indicator stay inside the dial
+            _ => F(V1) == F(V0) ? 0 : Math.Clamp((F(TemplateExpr.Num(v)) - F(V0)) / (F(V1) - F(V0)) * Length, -SurBegin, Length + SurEnd),
         };
 
         /// <summary>Value at position t (inverse of At).</summary>

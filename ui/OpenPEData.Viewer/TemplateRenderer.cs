@@ -53,6 +53,13 @@ public static partial class TemplateRenderer
             props["ProcessValue"] = 0;
         }
         props = WithThresholdValues(props);
+        // peak indicators show the lowest / highest value since the start: with a static value that value itself
+        if (props["PeakIndicators"] != null && props["ComputedMinPeakValue"] == null)
+        {
+            props = (JsonObject)props.DeepClone();
+            props["ComputedMinPeakValue"] = props["ProcessValue"]?.DeepClone();
+            props["ComputedMaxPeakValue"] = props["ProcessValue"]?.DeepClone();
+        }
         var scope = new TemplateScope { Hmi = props, Width = w, Height = h };
         var counter = 0;
         var root = new XElement(Svg + "svg", new XAttribute("width", Fmt(w)), new XAttribute("height", Fmt(h)),
