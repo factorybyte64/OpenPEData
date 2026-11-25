@@ -33,7 +33,15 @@ internal sealed class Hmi
         ["050c"] = ("Screen", "ref"),
         ["07"] = ("Visible", "bool"),
         ["0409"] = ("WindowFlags", "flags"),
-        ["7502"] = ("BarMode", "barmode"),
+        ["7502"] = ("BarMode", "enum"),
+        // HmiBar, one property set per item with Openness (2026-11-25)
+        ["2509"] = ("PeakIndicators", "flags"), ["0e09"] = ("ThresholdIndicators", "flags"),
+        ["1109"] = ("ProcessValueIndicatorMode", "enum"), ["1103"] = ("RelativeToOrigin", "bool"),
+        ["7c02"] = ("OriginValue", "double"), ["7b02"] = ("ShowTrendIndicator", "bool"),
+        ["71"] = ("AlternateBackColor", "color"), ["68"] = ("AlternateBorderColor", "color"),
+        ["5338"] = ("NormalRangeColor", "color"), ["52"] = ("ScaleBackColor", "color"), ["1309"] = ("ScaleForeColor", "color"),
+        ["1209"] = ("ProcessValueIndicatorBackColor", "color"), ["1009"] = ("ProcessValueIndicatorForeColor", "color"),
+        ["0603"] = ("TrendIndicatorColor", "color"),
         ["0d"] = ("Opacity", "float"),
         ["7a08"] = ("HorizontalTextAlignment", "enum"), ["7908"] = ("VerticalTextAlignment", "enum"),
         ["7f08"] = ("IOFieldType", "enum"),
@@ -41,8 +49,6 @@ internal sealed class Hmi
         ["0a"] = ("RotationAngle", "int"),
         ["56"] = ("ResourceList", "ref"),
     }.ToFrozenDictionary();
-
-    static readonly Dictionary<long, string> BarModes = new() { [0] = "Segmented", [2] = "SegmentedStatic" };
 
     static readonly Dictionary<string, (string Name, string? Kind)> DynamicOnlyNames = new()
     {
@@ -105,12 +111,20 @@ internal sealed class Hmi
     };
 
     static readonly Dictionary<long, string> Orientations = new() { [0] = "Horizontal", [1] = "Vertical" };
-    static readonly Dictionary<long, string> ScalingTypes = new() { [0] = "Linear", [1] = "Logarithmic" };
+    // stored values; 3 is unused (Openness Tangent = 3 is stored as 4)
+    static readonly Dictionary<long, string> ScalingTypes = new()
+    {
+        [0] = "Linear", [1] = "Logarithmic", [2] = "NegativeLogarithmic", [4] = "Tangent", [5] = "Quadratic", [6] = "Cubic",
+    };
     static readonly Dictionary<long, string> ThresholdModes = new() { [1] = "Upper", [2] = "Lower", [3] = "Normal", [4] = "Minimum", [5] = "Maximum" };
 
     static readonly (string Key, string Name, (string Raw, string M)[] Members)[] ItemParts =
     [
-        ("0x2338", "StraightScale", [("0x2273", "BeginValue"), ("0x2274", "EndValue"), ("0x232d", "ScalingType"), ("0x3869", "Orientation")]),
+        ("0x2338", "StraightScale", [("0x2273", "BeginValue"), ("0x2274", "EndValue"), ("0x232d", "ScalingType"), ("0x3869", "Orientation"),
+            ("0x0278", "ScaleMode"), ("0x0307", "AutoScaling"), ("0x005a", "DivisionCount"), ("0x005c", "SubDivisionCount"),
+            ("0x0909", "LabelColor"), ("0x026d", "TickColor"), ("0x0243 OutputFormat", "OutputFormat")]),
+        ("0x0926", "Label", [("0x0007 Visible", "Visible"), ("0x0223 ForeColor", "ForeColor")]),
+        ("0x091d", "Title", [("0x0007 Visible", "Visible"), ("0x0223 ForeColor", "ForeColor")]),
         ("0x2337", "CurvedScale", [("0x2273", "BeginValue"), ("0x2274", "EndValue"), ("0x232d", "ScalingType")]),
         ("0x094d", "Padding", [("0x0063 Left", "Left"), ("0x0064 Top", "Top"), ("0x094b", "Right"), ("0x094c", "Bottom")]),
         ("0x0002", "Content", [("0x087a HorizontalTextAlignment", "HorizontalTextAlignment")]),
@@ -146,26 +160,21 @@ internal sealed class Hmi
                 if (!part.ContainsKey(raw))
                     continue;
                 vals[mm] = EnumMembers.TryGetValue(mm, out var em) ? Lookup(em, part[raw])
-                    : mm.EndsWith("TextAlignment", StringComparison.Ordinal) ? Styles.EnumName(mm, part[raw]) : part[raw];
+                    : mm.EndsWith("TextAlignment", StringComparison.Ordinal) || mm == "ScaleMode" ? Styles.EnumName(mm, part[raw])
+                    : mm.EndsWith("Color", StringComparison.Ordinal) && Py.IsInt(part[raw]) && part[raw] is not bool ? Fmt08X(part[raw])
+                    : part[raw];
             }
+            // fonts of the part: Label/Title Font (0x021c), StraightScale LabelFont (0x091b)
+            foreach (var (fk, fname) in new[] { ("0x021c", "Font"), ("0x091b", "LabelFont") })
+                if (part.FirstOrDefault(kv => kv.Key is string ks && ks.StartsWith(fk, StringComparison.Ordinal)).Value is PyDict pf
+                    && FontOf(p, k, pf) is { } pfont)
+                    vals[fname] = pfont;
             if (vals.Count > 0)
                 o[name] = vals;
         }
-        var fpart = parts.FirstOrDefault(kv => kv.Key is string ks && ks.StartsWith("0x021c", StringComparison.Ordinal)).Value;
-        var flName = fpart is PyDict fd ? fd.Get("0x054e FontList") : null;
-        if (Py.Bool(flName))
-        {
-            var fl = p.Targets(k, "ExpandoReferences").FirstOrDefault(t => Py.Eq(p.Name(t), flName));
-            var item = fl is not null ? p.Targets(fl, "ExpandoReferences").FirstOrDefault() : null;
-            if (fl is not null && item is null)
-                item = p.Targets(fl).FirstOrDefault(t => (p.TypeName(t) ?? "").EndsWith("HmiFontItemData", StringComparison.Ordinal));
-            if (item is not null && Py.Bool(p.Name(item)))
-            {
-                var font = StyleFonts(PyDict.Of("Description", "f"), PyDict.Of("f", p.Name(item)));
-                if (font is PyDict fdd && fdd.ContainsKey("Name"))
-                    o["Font"] = font;
-            }
-        }
+        if (parts.FirstOrDefault(kv => kv.Key is string ks && ks.StartsWith("0x021c", StringComparison.Ordinal)).Value is PyDict fd
+            && FontOf(p, k, fd) is { } font)
+            o["Font"] = font;
         if (parts.Get("0x0915") is List<object?> th)
         {
             o["Thresholds"] = th.OfType<PyDict>().Select(e => (object?)PyDict.Of(
@@ -174,6 +183,21 @@ internal sealed class Hmi
                 "Enable", Py.Bool(e.Get("_#ESEnable")))).ToList();
         }
         return o;
+    }
+
+    /// <summary>A font part {0x054e FontList: name} of item k -> {Name, Size, Weight} from its font item.</summary>
+    static PyDict? FontOf(Project p, string k, PyDict fpart)
+    {
+        var flName = fpart.Get("0x054e FontList");
+        if (!Py.Bool(flName))
+            return null;
+        var fl = p.Targets(k, "ExpandoReferences").FirstOrDefault(t => Py.Eq(p.Name(t), flName));
+        var item = fl is not null ? p.Targets(fl, "ExpandoReferences").FirstOrDefault() : null;
+        if (fl is not null && item is null)
+            item = p.Targets(fl).FirstOrDefault(t => (p.TypeName(t) ?? "").EndsWith("HmiFontItemData", StringComparison.Ordinal));
+        if (item is null || !Py.Bool(p.Name(item)))
+            return null;
+        return StyleFonts(PyDict.Of("Description", "f"), PyDict.Of("f", p.Name(item))) is PyDict f && f.ContainsKey("Name") ? f : null;
     }
 
     /// <summary>"0x%08X" % v.</summary>
@@ -730,6 +754,12 @@ internal sealed class Hmi
                 outd[prop.Name] = (long)Bin.AsI32(off);
                 continue;
             }
+            // a static ProcessValue with decimals (50.5) is a double at the offset: type code 8
+            if (prop.Name == "ProcessValue" && nc.Code == 8)
+            {
+                outd[prop.Name] = Bin.F64(b, p0);
+                continue;
+            }
             try
             {
                 switch (prop.Kind)
@@ -747,8 +777,8 @@ internal sealed class Hmi
                     case "flags":
                         outd[prop.Name] = Styles.EnumName(prop.Name, (long)off);
                         break;
-                    case "barmode":
-                        outd[prop.Name] = BarModes.TryGetValue(off, out var bm) ? bm : (long)off;
+                    case "double":
+                        outd[prop.Name] = Bin.F64(b, p0);
                         break;
                     case "color":
                     {
@@ -1096,6 +1126,35 @@ internal sealed class Hmi
 
     public PyDict References(string k) => p.Sets(k).Set("IReferenceExpandoAttributes");
 
+    /// <summary>Text of the Label and Title parts (HmiBar): the part member Text names a text reference of the item, as
+    /// the Text property of a button does.</summary>
+    void PartTexts(string k, PyDict refs, PyDict props)
+    {
+        var ex = p.Sets(k).Set("IPropertyExpandoAttributes");
+        foreach (var (raw, name) in new[] { ("\x26\x09", "Label"), ("\x1d\x09", "Title") })
+        {
+            if (ex.Get(raw) is not byte[] b)
+                continue;
+            object? part;
+            try
+            {
+                part = Faceplates.DecodeMap(b);
+            }
+            catch (Exception e) when (PyCatch.Any(e))
+            {
+                continue;
+            }
+            if (part is not PyDict pd || pd.Get("\x4f\x02") is not string rn || !refs.ContainsKey(rn))
+                continue;
+            if (ResolveText(refs, Py.T("ref", Py.Utf8Bytes(rn)), k) is PyDict t && t.Count > 0)
+            {
+                if (props.Get(name) is not PyDict target)
+                    props[name] = target = new PyDict();
+                target["Text"] = t;
+            }
+        }
+    }
+
     static string RefName(PyTuple r) => Py.Utf8((byte[])r[1]!);
 
     /// <summary>Reference property whose value indexes the item's links (Graphic, Screen, ResourceList).</summary>
@@ -1392,6 +1451,7 @@ internal sealed class Hmi
                 props["Widget"] = widget;
             foreach (var (pname, pval) in ItemPartsOf(p, k))
                 props[pname] = pval;
+            PartTexts(k, refs, props);
             var scripts = p.Targets(k, "EmbeddedScriptChildren").Select(e =>
             {
                 var s = new PyDict(Script(e));
