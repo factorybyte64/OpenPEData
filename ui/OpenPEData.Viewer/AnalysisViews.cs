@@ -516,7 +516,7 @@ public static class AnalysisViews
         var hmiBoxes = new List<(CheckBox Box, TreeNode Hmi)>();
         foreach (var g in screens.GroupBy(s => s.Hmi))
         {
-            var cb = new CheckBox { Content = $"{g.Key.Name} ({g.Count()})", IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
+            var cb = new CheckBox { Content = new TextBlock { Text = $"{g.Key.Name} ({g.Count()})" }, IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
             hmiRow.Children.Add(cb);
             hmiBoxes.Add((cb, g.Key));
         }
@@ -528,7 +528,7 @@ public static class AnalysisViews
             var langRow = Row("Languages");
             foreach (var l in langs)
             {
-                var cb = new CheckBox { Content = l, IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
+                var cb = new CheckBox { Content = new TextBlock { Text = l }, IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
                 langRow.Children.Add(cb);
                 langBoxes.Add((cb, l));
             }
