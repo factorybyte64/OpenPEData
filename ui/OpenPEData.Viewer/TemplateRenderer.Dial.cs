@@ -8,7 +8,8 @@ namespace OpenPEData.Viewer;
 /// <summary>hmi-element:arcDial and hmi-element:straightDial (scales of gauge, clock, bar, slider) expanded into plain
 /// SVG: hmi-feature:scale (begin/end value, maximum-sections, type: scaling type, extend both), range (begin/end
 /// value, also begin-surcharge, end-surcharge, scale-begin, scale-end) with ribbons, division (count, nested) and
-/// autoMeasure with ticks and labels, marker with ticks and poleMarkers, thresholds (markers and lines; not yet the ribbons of the segmented bar modes). Semantics derived from the templates and
+/// autoMeasure with ticks and labels, marker with ticks and poleMarkers, thresholds (markers and lines; the ribbons of the segmented bar modes come from the template ranges, checked
+/// against the runtime with all thresholds on 0). Semantics derived from the templates and
 /// calibrated against the runtime (164, 2026-10-31): offsets are measured from the dial line along the outward
 /// normal (arc: away from the centre); a tick runs from offset to offset + length; a label sits with its centre at
 /// the offset.</summary>
@@ -31,8 +32,8 @@ public static partial class TemplateRenderer
         static double L(double v) => Math.Log10(Math.Max(v, 1e-12));
 
         /// <summary>Share of the scale (0 at the begin, 1 at the end) of a value. Runtime 2026-11-25, bar 0..100 and
-        /// 1..1000: Quadratic u², Cubic u³ (u = linear share), Logarithmic log, NegativeLogarithmic the mirrored log
-        /// (value 100 of 1..1000 near the begin).</summary>
+        /// 1..1000: Quadratic u², Cubic u³ (u = linear share), Tangent symmetric around the middle, Logarithmic log,
+        /// NegativeLogarithmic the mirrored log (value 100 of 1..1000 near the begin).</summary>
         public double Share(double v)
         {
             if (V1 == V0) return 0;
@@ -45,6 +46,10 @@ public static partial class TemplateRenderer
                     return (L(V1) - L(V1 + V0 - v)) / (L(V1) - L(V0));
                 case "Quadratic": return u * Math.Abs(u);
                 case "Cubic": return u * u * u;
+                // Tangent: stretched around the middle, compressed towards both ends, 0.5 + atan(4w) / (2 atan 4)
+                // with w = 2u - 1 (runtime 2026-11-25, bar 0..100 at 10, 20, ..., 90: 2, 5.5, 12, 24.5, 50, 75, 88,
+                // 94, 98 %)
+                case "Tangent": return 0.5 + Math.Atan(4 * (2 * u - 1)) / (2 * Math.Atan(4));
                 default: return u;
             }
         }
@@ -74,6 +79,7 @@ public static partial class TemplateRenderer
                 "NegativeLogarithmic" when V0 > 0 && V1 > 0 => V1 + V0 - Math.Pow(10, L(V1) - (L(V1) - L(V0)) * s),
                 "Quadratic" => Lin(Math.Sign(s) * Math.Sqrt(Math.Abs(s))),
                 "Cubic" => Lin(Math.Cbrt(s)),
+                "Tangent" => Lin((Math.Tan((2 * s - 1) * Math.Atan(4)) / 4 + 1) / 2),
                 _ => Lin(s),
             };
         }
