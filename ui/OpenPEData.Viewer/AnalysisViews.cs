@@ -49,6 +49,8 @@ public sealed class AnalysisContext
     public Action<NodeKind>? Navigate { get; set; }
     /// <summary>Text for the status bar.</summary>
     public Action<string>? Status { get; set; }
+    /// <summary>The project node of the tree (HMI screens for the screen export).</summary>
+    public TreeNode? Root { get; init; }
 }
 
 /// <summary>The OpenPEData views at the top level of the tree next to the project: overview, project-wide lists of
@@ -443,12 +445,91 @@ public static class AnalysisViews
                     { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping }), new UTF8Encoding(false));
                 return dlg.FileName;
             }));
+        var screens = HmiScreens(ctx.Root).ToList();
+        if (screens.Count > 0)
+        {
+            string? note = null;
+            root.Children.Add(Action(ctx, "", "UI screens (PNG)",
+                $"All {screens.Count} HMI screens as images at 1:1, one folder per HMI with the screen folders of the project. " +
+                "Drawn like the preview, in the selected language and display mode.",
+                "Choose folder…", () =>
+                {
+                    var dlg = new OpenFolderDialog { Title = "Folder for the screen images" };
+                    if (dlg.ShowDialog() != true) return null;
+                    var (folder, written, failed) = ExportScreens(screens, Path.Combine(dlg.FolderName, SafeName(ctx.ProjectName) + "_screens"));
+                    note = $"{written} images" + (failed.Count > 0 ? $", {failed.Count} not drawn: " + string.Join(", ", failed.Take(10)) +
+                        (failed.Count > 10 ? ", …" : "") : "");
+                    return folder;
+                }, () => note));
+        }
         return new ScrollViewer { Content = root, VerticalScrollBarVisibility = ScrollBarVisibility.Auto };
+    }
+
+    /// <summary>The screens of all HMIs in the tree: HMI node, folder path below "Screens", screen node.</summary>
+    private static IEnumerable<(TreeNode Hmi, string[] Folders, TreeNode Screen)> HmiScreens(TreeNode? root)
+    {
+        if (root == null) yield break;
+        foreach (var hmi in Descendants(root).Where(n => n.Kind == NodeKind.Hmi && n.Data != null))
+            foreach (var screens in hmi.Children.Where(c => c.Kind == NodeKind.ScreensFolder))
+                foreach (var s in Descendants(screens).Where(n => n.Kind == NodeKind.Screen && n.Data is JsonObject))
+                {
+                    var folders = new List<string>();
+                    for (var p = s.Parent; p != null && p != screens; p = p.Parent) folders.Insert(0, p.Name);
+                    yield return (hmi, folders.ToArray(), s);
+                }
+    }
+
+    private static IEnumerable<TreeNode> Descendants(TreeNode n)
+    {
+        foreach (var c in n.Children)
+        {
+            yield return c;
+            foreach (var d in Descendants(c)) yield return d;
+        }
+    }
+
+    /// <summary>Draws the screens with the screen renderer and writes them as PNG into
+    /// folder\HMI\screen folders\screen.png. A screen that cannot be drawn is listed and skipped.</summary>
+    private static (string Folder, int Written, List<string> Failed) ExportScreens(
+        List<(TreeNode Hmi, string[] Folders, TreeNode Screen)> screens, string folder)
+    {
+        var written = 0;
+        var failed = new List<string>();
+        try
+        {
+            foreach (var g in screens.GroupBy(s => s.Hmi))
+            {
+                // text lists, graphic lists, recipes and alarms of the HMI the screens belong to
+                TreeBuilder.UseHmi(g.Key.Data!);
+                foreach (var (hmi, folders, node) in g)
+                {
+                    var screen = (JsonObject)node.Data!;
+                    try
+                    {
+                        var dir = Path.Combine([folder, SafeName(hmi.Name), .. folders.Select(SafeName)]);
+                        Directory.CreateDirectory(dir);
+                        var bmp = ScreenRenderer.ToBitmap(ScreenRenderer.Render(screen, TreeBuilder.Arr(screen["items"])));
+                        ScreenRenderer.SavePng(bmp, Path.Combine(dir, SafeName(node.Name) + ".png"));
+                        written++;
+                    }
+                    catch (Exception ex) when (ex is not IOException and not UnauthorizedAccessException)
+                    {
+                        failed.Add($"{hmi.Name}/{node.Name}");
+                    }
+                }
+            }
+        }
+        finally
+        {
+            if (TreeBuilder.LastHmi is { } last) TreeBuilder.UseHmi(last);
+        }
+        return (folder, written, failed);
     }
 
     /// <summary>A card of the export view: icon, title, text, a button that writes a file (returns its path or null when
     /// cancelled), and the result line with "Show in Explorer".</summary>
-    private static UIElement Action(AnalysisContext ctx, string glyph, string title, string text, string button, Func<string?> run)
+    private static UIElement Action(AnalysisContext ctx, string glyph, string title, string text, string button, Func<string?> run,
+        Func<string?>? note = null)
     {
         var grid = new Grid();
         grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
@@ -472,7 +553,8 @@ public static class AnalysisViews
                 if (file == null) return;
                 result.Inlines.Clear();
                 result.Foreground = Res("Muted");
-                result.Inlines.Add(new System.Windows.Documents.Run("Saved: " + file + "  "));
+                var extra = note?.Invoke();
+                result.Inlines.Add(new System.Windows.Documents.Run("Saved: " + file + (extra != null ? $" ({extra})" : "") + "  "));
                 var link = new System.Windows.Documents.Hyperlink(new System.Windows.Documents.Run("Show in Explorer"));
                 link.Click += (_, _) => Process.Start(new ProcessStartInfo("explorer.exe", $"/select,\"{file}\"") { UseShellExecute = true });
                 result.Inlines.Add(link);

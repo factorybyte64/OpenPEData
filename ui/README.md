@@ -4,7 +4,7 @@ Windows viewer (WPF, .NET 10) for TIA Portal projects and global libraries. It u
 
 - Project tree in the order of TIA Portal, details of the selected object, HMI screen preview
 - **Overview**: key figures, devices, integrity check, cross references
-- **Export**: project report (HTML), all lists as CSV, parser result as JSON
+- **Export**: project report (HTML), all lists as CSV, parser result as JSON, HMI screens as PNG
 
 ## Run
 
