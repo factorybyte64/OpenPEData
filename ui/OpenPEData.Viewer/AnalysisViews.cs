@@ -449,18 +449,23 @@ public static class AnalysisViews
         if (screens.Count > 0)
         {
             string? note = null;
+            var options = ScreenExportOptions(screens, out var getOptions);
             root.Children.Add(Action(ctx, "", "UI screens (PNG)",
-                (screens.Count == 1 ? "The HMI screen" : $"All {screens.Count} HMI screens") + " as images at 1:1, one folder per HMI with the screen folders of the project. " +
-                "Drawn like the preview, in the selected language and display mode.",
+                "The HMI screens as images at 1:1, one file per screen and language (file name suffixed with the language). " +
+                "Drawn like the preview, in the selected display mode.",
                 "Choose folder…", () =>
                 {
+                    var (hmis, langs, subfolders) = getOptions();
+                    var selected = screens.Where(s => hmis.Contains(s.Hmi)).ToList();
+                    if (selected.Count == 0)
+                        throw new InvalidOperationException("Select at least one HMI.");
                     var dlg = new OpenFolderDialog { Title = "Folder for the screen images" };
                     if (dlg.ShowDialog() != true) return null;
-                    var (folder, written, failed) = ExportScreens(screens, Path.Combine(dlg.FolderName, SafeName(ctx.ProjectName) + "_screens"));
+                    var (written, failed) = ExportScreens(selected, langs, subfolders, dlg.FolderName);
                     note = (written == 1 ? "1 image" : $"{written} images") + (failed.Count > 0 ? $", {failed.Count} not drawn: " + string.Join(", ", failed.Take(10)) +
                         (failed.Count > 10 ? ", …" : "") : "");
-                    return folder;
-                }, () => note));
+                    return dlg.FolderName;
+                }, () => note, options));
         }
         return new ScrollViewer { Content = root, VerticalScrollBarVisibility = ScrollBarVisibility.Auto };
     }
@@ -488,48 +493,114 @@ public static class AnalysisViews
         }
     }
 
-    /// <summary>Draws the screens with the screen renderer and writes them as PNG into
-    /// folder\HMI\screen folders\screen.png. A screen that cannot be drawn is listed and skipped.</summary>
-    private static (string Folder, int Written, List<string> Failed) ExportScreens(
-        List<(TreeNode Hmi, string[] Folders, TreeNode Screen)> screens, string folder)
+    /// <summary>Enabled runtime languages of an HMI in their order (parser runtimeLanguages).</summary>
+    private static List<string> HmiLanguages(JsonNode? hmi) => TreeBuilder.Arr(hmi?["runtimeLanguages"])
+        .Where(l => l["enable"] is not JsonValue en || !en.TryGetValue<bool>(out var b) || b)
+        .OrderBy(l => l["order"] is JsonValue o && o.TryGetValue<int>(out var i) ? i : int.MaxValue)
+        .Select(l => TreeBuilder.Str(l["language"])).OfType<string>().Where(s => s.Length > 0).Distinct().ToList();
+
+    /// <summary>Options of the screen export: HMIs, languages, "Create subfolders"; <paramref name="get"/> reads the
+    /// current choice.</summary>
+    private static UIElement ScreenExportOptions(List<(TreeNode Hmi, string[] Folders, TreeNode Screen)> screens,
+        out Func<(HashSet<TreeNode> Hmis, List<string> Langs, bool Subfolders)> get)
+    {
+        var panel = new StackPanel { Margin = new Thickness(0, 8, 0, 0) };
+        WrapPanel Row(string label)
+        {
+            var row = new WrapPanel { Margin = new Thickness(0, 2, 0, 4) };
+            row.Children.Add(new TextBlock { Text = label, Width = 80, VerticalAlignment = VerticalAlignment.Center });
+            panel.Children.Add(row);
+            return row;
+        }
+        var hmiRow = Row("HMIs");
+        var hmiBoxes = new List<(CheckBox Box, TreeNode Hmi)>();
+        foreach (var g in screens.GroupBy(s => s.Hmi))
+        {
+            var cb = new CheckBox { Content = $"{g.Key.Name} ({g.Count()})", IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
+            hmiRow.Children.Add(cb);
+            hmiBoxes.Add((cb, g.Key));
+        }
+        var langs = screens.Select(s => s.Hmi).Distinct().SelectMany(h => HmiLanguages(h.Data)).Distinct().ToList();
+        if (langs.Count == 0 && ScreenRenderer.Language is { } cur) langs.Add(cur);
+        var langBoxes = new List<(CheckBox Box, string Lang)>();
+        if (langs.Count > 0)
+        {
+            var langRow = Row("Languages");
+            foreach (var l in langs)
+            {
+                var cb = new CheckBox { Content = l, IsChecked = true, Margin = new Thickness(0, 2, 16, 2) };
+                langRow.Children.Add(cb);
+                langBoxes.Add((cb, l));
+            }
+        }
+        var sub = new CheckBox { Content = "Create subfolders (one per HMI and screen folder)", IsChecked = true,
+            Margin = new Thickness(80, 2, 0, 0) };
+        panel.Children.Add(sub);
+        get = () =>
+        {
+            var chosen = langBoxes.Where(b => b.Box.IsChecked == true).Select(b => b.Lang).ToList();
+            if (langBoxes.Count > 0 && chosen.Count == 0) throw new InvalidOperationException("Select at least one language.");
+            return (hmiBoxes.Where(b => b.Box.IsChecked == true).Select(b => b.Hmi).ToHashSet(), chosen, sub.IsChecked == true);
+        };
+        return panel;
+    }
+
+    /// <summary>Draws the screens with the screen renderer and writes them as PNG, one file per language
+    /// (screen_language.png). With subfolders into folder\HMI\screen folders\, otherwise all files into the folder
+    /// (HMI_screen_language.png when screens of several HMIs are written). A screen that cannot be drawn is listed and
+    /// skipped.</summary>
+    private static (int Written, List<string> Failed) ExportScreens(
+        List<(TreeNode Hmi, string[] Folders, TreeNode Screen)> screens, List<string> langs, bool subfolders, string folder)
     {
         var written = 0;
         var failed = new List<string>();
+        var language = ScreenRenderer.Language;
+        var severalHmis = screens.Select(s => s.Hmi).Distinct().Count() > 1;
         try
         {
             foreach (var g in screens.GroupBy(s => s.Hmi))
             {
                 // text lists, graphic lists, recipes and alarms of the HMI the screens belong to
                 TreeBuilder.UseHmi(g.Key.Data!);
-                foreach (var (hmi, folders, node) in g)
+                // the selected languages this HMI has (the selected ones when the project names none)
+                var own = HmiLanguages(g.Key.Data);
+                List<string?> hmiLangs = langs.Count == 0 ? [language]
+                    : langs.Where(l => own.Count == 0 || own.Contains(l)).Cast<string?>().ToList();
+                foreach (var lang in hmiLangs)
                 {
-                    var screen = (JsonObject)node.Data!;
-                    try
+                    ScreenRenderer.Language = lang;
+                    foreach (var (hmi, folders, node) in g)
                     {
-                        var dir = Path.Combine([folder, SafeName(hmi.Name), .. folders.Select(SafeName)]);
-                        Directory.CreateDirectory(dir);
-                        var bmp = ScreenRenderer.ToBitmap(ScreenRenderer.Render(screen, TreeBuilder.Arr(screen["items"])));
-                        ScreenRenderer.SavePng(bmp, Path.Combine(dir, SafeName(node.Name) + ".png"));
-                        written++;
-                    }
-                    catch (Exception ex) when (ex is not IOException and not UnauthorizedAccessException)
-                    {
-                        failed.Add($"{hmi.Name}/{node.Name}");
+                        var screen = (JsonObject)node.Data!;
+                        try
+                        {
+                            var dir = subfolders ? Path.Combine([folder, SafeName(hmi.Name), .. folders.Select(SafeName)]) : folder;
+                            var name = (!subfolders && severalHmis ? hmi.Name + "_" : "") + node.Name + (lang != null ? "_" + lang : "");
+                            Directory.CreateDirectory(dir);
+                            var bmp = ScreenRenderer.ToBitmap(ScreenRenderer.Render(screen, TreeBuilder.Arr(screen["items"])));
+                            ScreenRenderer.SavePng(bmp, Path.Combine(dir, SafeName(name) + ".png"));
+                            written++;
+                        }
+                        catch (Exception ex) when (ex is not IOException and not UnauthorizedAccessException)
+                        {
+                            failed.Add($"{hmi.Name}/{node.Name}" + (lang != null ? $" ({lang})" : ""));
+                        }
                     }
                 }
             }
         }
         finally
         {
+            ScreenRenderer.Language = language;
             if (TreeBuilder.LastHmi is { } last) TreeBuilder.UseHmi(last);
         }
-        return (folder, written, failed);
+        return (written, failed);
     }
 
     /// <summary>A card of the export view: icon, title, text, a button that writes a file (returns its path or null when
     /// cancelled), and the result line with "Show in Explorer".</summary>
     private static UIElement Action(AnalysisContext ctx, string glyph, string title, string text, string button, Func<string?> run,
-        Func<string?>? note = null)
+        Func<string?>? note = null, UIElement? options = null)
     {
         var grid = new Grid();
         grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
@@ -540,6 +611,7 @@ public static class AnalysisViews
         var body = new StackPanel();
         body.Children.Add(new TextBlock { Text = title, FontWeight = FontWeights.SemiBold, FontSize = 14 });
         body.Children.Add(new TextBlock { Text = text, Foreground = Res("Muted"), TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 3, 0, 0) });
+        if (options != null) body.Children.Add(options);
         var result = new TextBlock { Margin = new Thickness(0, 6, 0, 0), TextWrapping = TextWrapping.Wrap, Visibility = Visibility.Collapsed };
         body.Children.Add(result);
         var b = new Button { Content = button, Padding = new Thickness(14, 5, 14, 5), MinWidth = 130, Margin = new Thickness(16, 0, 0, 0),
