@@ -450,14 +450,14 @@ public static class AnalysisViews
         {
             string? note = null;
             root.Children.Add(Action(ctx, "", "UI screens (PNG)",
-                $"All {screens.Count} HMI screens as images at 1:1, one folder per HMI with the screen folders of the project. " +
+                (screens.Count == 1 ? "The HMI screen" : $"All {screens.Count} HMI screens") + " as images at 1:1, one folder per HMI with the screen folders of the project. " +
                 "Drawn like the preview, in the selected language and display mode.",
                 "Choose folder…", () =>
                 {
                     var dlg = new OpenFolderDialog { Title = "Folder for the screen images" };
                     if (dlg.ShowDialog() != true) return null;
                     var (folder, written, failed) = ExportScreens(screens, Path.Combine(dlg.FolderName, SafeName(ctx.ProjectName) + "_screens"));
-                    note = $"{written} images" + (failed.Count > 0 ? $", {failed.Count} not drawn: " + string.Join(", ", failed.Take(10)) +
+                    note = (written == 1 ? "1 image" : $"{written} images") + (failed.Count > 0 ? $", {failed.Count} not drawn: " + string.Join(", ", failed.Take(10)) +
                         (failed.Count > 10 ? ", …" : "") : "");
                     return folder;
                 }, () => note));
